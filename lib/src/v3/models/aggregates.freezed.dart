@@ -12,7 +12,7 @@ part of 'aggregates.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PersonAggregates _$PersonAggregatesFromJson(Map<String, dynamic> json) {
   return _PersonAggregates.fromJson(json);
@@ -24,8 +24,12 @@ mixin _$PersonAggregates {
   int get postCount => throw _privateConstructorUsedError;
   int get commentCount => throw _privateConstructorUsedError;
 
+  /// Serializes this PersonAggregates to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PersonAggregates
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PersonAggregatesCopyWith<PersonAggregates> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$PersonAggregatesCopyWithImpl<$Res, $Val extends PersonAggregates>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PersonAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -74,24 +80,26 @@ class _$PersonAggregatesCopyWithImpl<$Res, $Val extends PersonAggregates>
 }
 
 /// @nodoc
-abstract class _$$_PersonAggregatesCopyWith<$Res>
+abstract class _$$PersonAggregatesImplCopyWith<$Res>
     implements $PersonAggregatesCopyWith<$Res> {
-  factory _$$_PersonAggregatesCopyWith(
-          _$_PersonAggregates value, $Res Function(_$_PersonAggregates) then) =
-      __$$_PersonAggregatesCopyWithImpl<$Res>;
+  factory _$$PersonAggregatesImplCopyWith(_$PersonAggregatesImpl value,
+          $Res Function(_$PersonAggregatesImpl) then) =
+      __$$PersonAggregatesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int personId, int postCount, int commentCount});
 }
 
 /// @nodoc
-class __$$_PersonAggregatesCopyWithImpl<$Res>
-    extends _$PersonAggregatesCopyWithImpl<$Res, _$_PersonAggregates>
-    implements _$$_PersonAggregatesCopyWith<$Res> {
-  __$$_PersonAggregatesCopyWithImpl(
-      _$_PersonAggregates _value, $Res Function(_$_PersonAggregates) _then)
+class __$$PersonAggregatesImplCopyWithImpl<$Res>
+    extends _$PersonAggregatesCopyWithImpl<$Res, _$PersonAggregatesImpl>
+    implements _$$PersonAggregatesImplCopyWith<$Res> {
+  __$$PersonAggregatesImplCopyWithImpl(_$PersonAggregatesImpl _value,
+      $Res Function(_$PersonAggregatesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PersonAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -99,7 +107,7 @@ class __$$_PersonAggregatesCopyWithImpl<$Res>
     Object? postCount = null,
     Object? commentCount = null,
   }) {
-    return _then(_$_PersonAggregates(
+    return _then(_$PersonAggregatesImpl(
       personId: null == personId
           ? _value.personId
           : personId // ignore: cast_nullable_to_non_nullable
@@ -119,15 +127,15 @@ class __$$_PersonAggregatesCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_PersonAggregates extends _PersonAggregates {
-  const _$_PersonAggregates(
+class _$PersonAggregatesImpl extends _PersonAggregates {
+  const _$PersonAggregatesImpl(
       {required this.personId,
       required this.postCount,
       required this.commentCount})
       : super._();
 
-  factory _$_PersonAggregates.fromJson(Map<String, dynamic> json) =>
-      _$$_PersonAggregatesFromJson(json);
+  factory _$PersonAggregatesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PersonAggregatesImplFromJson(json);
 
   @override
   final int personId;
@@ -142,10 +150,10 @@ class _$_PersonAggregates extends _PersonAggregates {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PersonAggregates &&
+            other is _$PersonAggregatesImpl &&
             (identical(other.personId, personId) ||
                 other.personId == personId) &&
             (identical(other.postCount, postCount) ||
@@ -154,20 +162,23 @@ class _$_PersonAggregates extends _PersonAggregates {
                 other.commentCount == commentCount));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, personId, postCount, commentCount);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PersonAggregates
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PersonAggregatesCopyWith<_$_PersonAggregates> get copyWith =>
-      __$$_PersonAggregatesCopyWithImpl<_$_PersonAggregates>(this, _$identity);
+  _$$PersonAggregatesImplCopyWith<_$PersonAggregatesImpl> get copyWith =>
+      __$$PersonAggregatesImplCopyWithImpl<_$PersonAggregatesImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PersonAggregatesToJson(
+    return _$$PersonAggregatesImplToJson(
       this,
     );
   }
@@ -177,11 +188,11 @@ abstract class _PersonAggregates extends PersonAggregates {
   const factory _PersonAggregates(
       {required final int personId,
       required final int postCount,
-      required final int commentCount}) = _$_PersonAggregates;
+      required final int commentCount}) = _$PersonAggregatesImpl;
   const _PersonAggregates._() : super._();
 
   factory _PersonAggregates.fromJson(Map<String, dynamic> json) =
-      _$_PersonAggregates.fromJson;
+      _$PersonAggregatesImpl.fromJson;
 
   @override
   int get personId;
@@ -189,9 +200,12 @@ abstract class _PersonAggregates extends PersonAggregates {
   int get postCount;
   @override
   int get commentCount;
+
+  /// Create a copy of PersonAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_PersonAggregatesCopyWith<_$_PersonAggregates> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$PersonAggregatesImplCopyWith<_$PersonAggregatesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -211,8 +225,12 @@ mixin _$SiteAggregates {
   int get usersActiveMonth => throw _privateConstructorUsedError;
   int get usersActiveHalfYear => throw _privateConstructorUsedError;
 
+  /// Serializes this SiteAggregates to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SiteAggregates
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SiteAggregatesCopyWith<SiteAggregates> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -245,6 +263,8 @@ class _$SiteAggregatesCopyWithImpl<$Res, $Val extends SiteAggregates>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SiteAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -300,11 +320,11 @@ class _$SiteAggregatesCopyWithImpl<$Res, $Val extends SiteAggregates>
 }
 
 /// @nodoc
-abstract class _$$_SiteAggregatesCopyWith<$Res>
+abstract class _$$SiteAggregatesImplCopyWith<$Res>
     implements $SiteAggregatesCopyWith<$Res> {
-  factory _$$_SiteAggregatesCopyWith(
-          _$_SiteAggregates value, $Res Function(_$_SiteAggregates) then) =
-      __$$_SiteAggregatesCopyWithImpl<$Res>;
+  factory _$$SiteAggregatesImplCopyWith(_$SiteAggregatesImpl value,
+          $Res Function(_$SiteAggregatesImpl) then) =
+      __$$SiteAggregatesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -320,13 +340,15 @@ abstract class _$$_SiteAggregatesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SiteAggregatesCopyWithImpl<$Res>
-    extends _$SiteAggregatesCopyWithImpl<$Res, _$_SiteAggregates>
-    implements _$$_SiteAggregatesCopyWith<$Res> {
-  __$$_SiteAggregatesCopyWithImpl(
-      _$_SiteAggregates _value, $Res Function(_$_SiteAggregates) _then)
+class __$$SiteAggregatesImplCopyWithImpl<$Res>
+    extends _$SiteAggregatesCopyWithImpl<$Res, _$SiteAggregatesImpl>
+    implements _$$SiteAggregatesImplCopyWith<$Res> {
+  __$$SiteAggregatesImplCopyWithImpl(
+      _$SiteAggregatesImpl _value, $Res Function(_$SiteAggregatesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SiteAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -340,7 +362,7 @@ class __$$_SiteAggregatesCopyWithImpl<$Res>
     Object? usersActiveMonth = null,
     Object? usersActiveHalfYear = null,
   }) {
-    return _then(_$_SiteAggregates(
+    return _then(_$SiteAggregatesImpl(
       siteId: null == siteId
           ? _value.siteId
           : siteId // ignore: cast_nullable_to_non_nullable
@@ -384,8 +406,8 @@ class __$$_SiteAggregatesCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_SiteAggregates extends _SiteAggregates {
-  const _$_SiteAggregates(
+class _$SiteAggregatesImpl extends _SiteAggregates {
+  const _$SiteAggregatesImpl(
       {required this.siteId,
       required this.users,
       required this.posts,
@@ -397,8 +419,8 @@ class _$_SiteAggregates extends _SiteAggregates {
       required this.usersActiveHalfYear})
       : super._();
 
-  factory _$_SiteAggregates.fromJson(Map<String, dynamic> json) =>
-      _$$_SiteAggregatesFromJson(json);
+  factory _$SiteAggregatesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SiteAggregatesImplFromJson(json);
 
   @override
   final int siteId;
@@ -425,10 +447,10 @@ class _$_SiteAggregates extends _SiteAggregates {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SiteAggregates &&
+            other is _$SiteAggregatesImpl &&
             (identical(other.siteId, siteId) || other.siteId == siteId) &&
             (identical(other.users, users) || other.users == users) &&
             (identical(other.posts, posts) || other.posts == posts) &&
@@ -446,7 +468,7 @@ class _$_SiteAggregates extends _SiteAggregates {
                 other.usersActiveHalfYear == usersActiveHalfYear));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -460,15 +482,18 @@ class _$_SiteAggregates extends _SiteAggregates {
       usersActiveMonth,
       usersActiveHalfYear);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SiteAggregates
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SiteAggregatesCopyWith<_$_SiteAggregates> get copyWith =>
-      __$$_SiteAggregatesCopyWithImpl<_$_SiteAggregates>(this, _$identity);
+  _$$SiteAggregatesImplCopyWith<_$SiteAggregatesImpl> get copyWith =>
+      __$$SiteAggregatesImplCopyWithImpl<_$SiteAggregatesImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SiteAggregatesToJson(
+    return _$$SiteAggregatesImplToJson(
       this,
     );
   }
@@ -484,11 +509,11 @@ abstract class _SiteAggregates extends SiteAggregates {
       required final int usersActiveDay,
       required final int usersActiveWeek,
       required final int usersActiveMonth,
-      required final int usersActiveHalfYear}) = _$_SiteAggregates;
+      required final int usersActiveHalfYear}) = _$SiteAggregatesImpl;
   const _SiteAggregates._() : super._();
 
   factory _SiteAggregates.fromJson(Map<String, dynamic> json) =
-      _$_SiteAggregates.fromJson;
+      _$SiteAggregatesImpl.fromJson;
 
   @override
   int get siteId;
@@ -508,9 +533,12 @@ abstract class _SiteAggregates extends SiteAggregates {
   int get usersActiveMonth;
   @override
   int get usersActiveHalfYear;
+
+  /// Create a copy of SiteAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_SiteAggregatesCopyWith<_$_SiteAggregates> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SiteAggregatesImplCopyWith<_$SiteAggregatesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -526,8 +554,12 @@ mixin _$PostAggregates {
   int get upvotes => throw _privateConstructorUsedError;
   int get downvotes => throw _privateConstructorUsedError;
 
+  /// Serializes this PostAggregates to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PostAggregates
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PostAggregatesCopyWith<PostAggregates> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -551,6 +583,8 @@ class _$PostAggregatesCopyWithImpl<$Res, $Val extends PostAggregates>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PostAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -586,24 +620,26 @@ class _$PostAggregatesCopyWithImpl<$Res, $Val extends PostAggregates>
 }
 
 /// @nodoc
-abstract class _$$_PostAggregatesCopyWith<$Res>
+abstract class _$$PostAggregatesImplCopyWith<$Res>
     implements $PostAggregatesCopyWith<$Res> {
-  factory _$$_PostAggregatesCopyWith(
-          _$_PostAggregates value, $Res Function(_$_PostAggregates) then) =
-      __$$_PostAggregatesCopyWithImpl<$Res>;
+  factory _$$PostAggregatesImplCopyWith(_$PostAggregatesImpl value,
+          $Res Function(_$PostAggregatesImpl) then) =
+      __$$PostAggregatesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int postId, int comments, int score, int upvotes, int downvotes});
 }
 
 /// @nodoc
-class __$$_PostAggregatesCopyWithImpl<$Res>
-    extends _$PostAggregatesCopyWithImpl<$Res, _$_PostAggregates>
-    implements _$$_PostAggregatesCopyWith<$Res> {
-  __$$_PostAggregatesCopyWithImpl(
-      _$_PostAggregates _value, $Res Function(_$_PostAggregates) _then)
+class __$$PostAggregatesImplCopyWithImpl<$Res>
+    extends _$PostAggregatesCopyWithImpl<$Res, _$PostAggregatesImpl>
+    implements _$$PostAggregatesImplCopyWith<$Res> {
+  __$$PostAggregatesImplCopyWithImpl(
+      _$PostAggregatesImpl _value, $Res Function(_$PostAggregatesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PostAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -613,7 +649,7 @@ class __$$_PostAggregatesCopyWithImpl<$Res>
     Object? upvotes = null,
     Object? downvotes = null,
   }) {
-    return _then(_$_PostAggregates(
+    return _then(_$PostAggregatesImpl(
       postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
@@ -641,8 +677,8 @@ class __$$_PostAggregatesCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_PostAggregates extends _PostAggregates {
-  const _$_PostAggregates(
+class _$PostAggregatesImpl extends _PostAggregates {
+  const _$PostAggregatesImpl(
       {required this.postId,
       required this.comments,
       required this.score,
@@ -650,8 +686,8 @@ class _$_PostAggregates extends _PostAggregates {
       required this.downvotes})
       : super._();
 
-  factory _$_PostAggregates.fromJson(Map<String, dynamic> json) =>
-      _$$_PostAggregatesFromJson(json);
+  factory _$PostAggregatesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PostAggregatesImplFromJson(json);
 
   @override
   final int postId;
@@ -670,10 +706,10 @@ class _$_PostAggregates extends _PostAggregates {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PostAggregates &&
+            other is _$PostAggregatesImpl &&
             (identical(other.postId, postId) || other.postId == postId) &&
             (identical(other.comments, comments) ||
                 other.comments == comments) &&
@@ -683,20 +719,23 @@ class _$_PostAggregates extends _PostAggregates {
                 other.downvotes == downvotes));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, postId, comments, score, upvotes, downvotes);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PostAggregates
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PostAggregatesCopyWith<_$_PostAggregates> get copyWith =>
-      __$$_PostAggregatesCopyWithImpl<_$_PostAggregates>(this, _$identity);
+  _$$PostAggregatesImplCopyWith<_$PostAggregatesImpl> get copyWith =>
+      __$$PostAggregatesImplCopyWithImpl<_$PostAggregatesImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PostAggregatesToJson(
+    return _$$PostAggregatesImplToJson(
       this,
     );
   }
@@ -708,11 +747,11 @@ abstract class _PostAggregates extends PostAggregates {
       required final int comments,
       required final int score,
       required final int upvotes,
-      required final int downvotes}) = _$_PostAggregates;
+      required final int downvotes}) = _$PostAggregatesImpl;
   const _PostAggregates._() : super._();
 
   factory _PostAggregates.fromJson(Map<String, dynamic> json) =
-      _$_PostAggregates.fromJson;
+      _$PostAggregatesImpl.fromJson;
 
   @override
   int get postId;
@@ -724,9 +763,12 @@ abstract class _PostAggregates extends PostAggregates {
   int get upvotes;
   @override
   int get downvotes;
+
+  /// Create a copy of PostAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_PostAggregatesCopyWith<_$_PostAggregates> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$PostAggregatesImplCopyWith<_$PostAggregatesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -746,8 +788,12 @@ mixin _$CommunityAggregates {
   int get usersActiveHalfYear => throw _privateConstructorUsedError;
   int? get hotRank => throw _privateConstructorUsedError;
 
+  /// Serializes this CommunityAggregates to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CommunityAggregates
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CommunityAggregatesCopyWith<CommunityAggregates> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -780,6 +826,8 @@ class _$CommunityAggregatesCopyWithImpl<$Res, $Val extends CommunityAggregates>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CommunityAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -835,11 +883,11 @@ class _$CommunityAggregatesCopyWithImpl<$Res, $Val extends CommunityAggregates>
 }
 
 /// @nodoc
-abstract class _$$_CommunityAggregatesCopyWith<$Res>
+abstract class _$$CommunityAggregatesImplCopyWith<$Res>
     implements $CommunityAggregatesCopyWith<$Res> {
-  factory _$$_CommunityAggregatesCopyWith(_$_CommunityAggregates value,
-          $Res Function(_$_CommunityAggregates) then) =
-      __$$_CommunityAggregatesCopyWithImpl<$Res>;
+  factory _$$CommunityAggregatesImplCopyWith(_$CommunityAggregatesImpl value,
+          $Res Function(_$CommunityAggregatesImpl) then) =
+      __$$CommunityAggregatesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -855,13 +903,15 @@ abstract class _$$_CommunityAggregatesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CommunityAggregatesCopyWithImpl<$Res>
-    extends _$CommunityAggregatesCopyWithImpl<$Res, _$_CommunityAggregates>
-    implements _$$_CommunityAggregatesCopyWith<$Res> {
-  __$$_CommunityAggregatesCopyWithImpl(_$_CommunityAggregates _value,
-      $Res Function(_$_CommunityAggregates) _then)
+class __$$CommunityAggregatesImplCopyWithImpl<$Res>
+    extends _$CommunityAggregatesCopyWithImpl<$Res, _$CommunityAggregatesImpl>
+    implements _$$CommunityAggregatesImplCopyWith<$Res> {
+  __$$CommunityAggregatesImplCopyWithImpl(_$CommunityAggregatesImpl _value,
+      $Res Function(_$CommunityAggregatesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CommunityAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -875,7 +925,7 @@ class __$$_CommunityAggregatesCopyWithImpl<$Res>
     Object? usersActiveHalfYear = null,
     Object? hotRank = freezed,
   }) {
-    return _then(_$_CommunityAggregates(
+    return _then(_$CommunityAggregatesImpl(
       communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -919,8 +969,8 @@ class __$$_CommunityAggregatesCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_CommunityAggregates extends _CommunityAggregates {
-  const _$_CommunityAggregates(
+class _$CommunityAggregatesImpl extends _CommunityAggregates {
+  const _$CommunityAggregatesImpl(
       {required this.communityId,
       required this.subscribers,
       required this.posts,
@@ -932,8 +982,8 @@ class _$_CommunityAggregates extends _CommunityAggregates {
       this.hotRank})
       : super._();
 
-  factory _$_CommunityAggregates.fromJson(Map<String, dynamic> json) =>
-      _$$_CommunityAggregatesFromJson(json);
+  factory _$CommunityAggregatesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CommunityAggregatesImplFromJson(json);
 
   @override
   final int communityId;
@@ -960,10 +1010,10 @@ class _$_CommunityAggregates extends _CommunityAggregates {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CommunityAggregates &&
+            other is _$CommunityAggregatesImpl &&
             (identical(other.communityId, communityId) ||
                 other.communityId == communityId) &&
             (identical(other.subscribers, subscribers) ||
@@ -982,7 +1032,7 @@ class _$_CommunityAggregates extends _CommunityAggregates {
             (identical(other.hotRank, hotRank) || other.hotRank == hotRank));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -996,16 +1046,18 @@ class _$_CommunityAggregates extends _CommunityAggregates {
       usersActiveHalfYear,
       hotRank);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CommunityAggregates
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CommunityAggregatesCopyWith<_$_CommunityAggregates> get copyWith =>
-      __$$_CommunityAggregatesCopyWithImpl<_$_CommunityAggregates>(
+  _$$CommunityAggregatesImplCopyWith<_$CommunityAggregatesImpl> get copyWith =>
+      __$$CommunityAggregatesImplCopyWithImpl<_$CommunityAggregatesImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunityAggregatesToJson(
+    return _$$CommunityAggregatesImplToJson(
       this,
     );
   }
@@ -1021,11 +1073,11 @@ abstract class _CommunityAggregates extends CommunityAggregates {
       required final int usersActiveWeek,
       required final int usersActiveMonth,
       required final int usersActiveHalfYear,
-      final int? hotRank}) = _$_CommunityAggregates;
+      final int? hotRank}) = _$CommunityAggregatesImpl;
   const _CommunityAggregates._() : super._();
 
   factory _CommunityAggregates.fromJson(Map<String, dynamic> json) =
-      _$_CommunityAggregates.fromJson;
+      _$CommunityAggregatesImpl.fromJson;
 
   @override
   int get communityId;
@@ -1045,9 +1097,12 @@ abstract class _CommunityAggregates extends CommunityAggregates {
   int get usersActiveHalfYear;
   @override
   int? get hotRank;
+
+  /// Create a copy of CommunityAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_CommunityAggregatesCopyWith<_$_CommunityAggregates> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$CommunityAggregatesImplCopyWith<_$CommunityAggregatesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1064,8 +1119,12 @@ mixin _$CommentAggregates {
   int? get childCount => throw _privateConstructorUsedError;
   int? get hotRank => throw _privateConstructorUsedError;
 
+  /// Serializes this CommentAggregates to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CommentAggregates
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CommentAggregatesCopyWith<CommentAggregates> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1095,6 +1154,8 @@ class _$CommentAggregatesCopyWithImpl<$Res, $Val extends CommentAggregates>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CommentAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1135,11 +1196,11 @@ class _$CommentAggregatesCopyWithImpl<$Res, $Val extends CommentAggregates>
 }
 
 /// @nodoc
-abstract class _$$_CommentAggregatesCopyWith<$Res>
+abstract class _$$CommentAggregatesImplCopyWith<$Res>
     implements $CommentAggregatesCopyWith<$Res> {
-  factory _$$_CommentAggregatesCopyWith(_$_CommentAggregates value,
-          $Res Function(_$_CommentAggregates) then) =
-      __$$_CommentAggregatesCopyWithImpl<$Res>;
+  factory _$$CommentAggregatesImplCopyWith(_$CommentAggregatesImpl value,
+          $Res Function(_$CommentAggregatesImpl) then) =
+      __$$CommentAggregatesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1152,13 +1213,15 @@ abstract class _$$_CommentAggregatesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CommentAggregatesCopyWithImpl<$Res>
-    extends _$CommentAggregatesCopyWithImpl<$Res, _$_CommentAggregates>
-    implements _$$_CommentAggregatesCopyWith<$Res> {
-  __$$_CommentAggregatesCopyWithImpl(
-      _$_CommentAggregates _value, $Res Function(_$_CommentAggregates) _then)
+class __$$CommentAggregatesImplCopyWithImpl<$Res>
+    extends _$CommentAggregatesCopyWithImpl<$Res, _$CommentAggregatesImpl>
+    implements _$$CommentAggregatesImplCopyWith<$Res> {
+  __$$CommentAggregatesImplCopyWithImpl(_$CommentAggregatesImpl _value,
+      $Res Function(_$CommentAggregatesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CommentAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1169,7 +1232,7 @@ class __$$_CommentAggregatesCopyWithImpl<$Res>
     Object? childCount = freezed,
     Object? hotRank = freezed,
   }) {
-    return _then(_$_CommentAggregates(
+    return _then(_$CommentAggregatesImpl(
       commentId: null == commentId
           ? _value.commentId
           : commentId // ignore: cast_nullable_to_non_nullable
@@ -1201,8 +1264,8 @@ class __$$_CommentAggregatesCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_CommentAggregates extends _CommentAggregates {
-  const _$_CommentAggregates(
+class _$CommentAggregatesImpl extends _CommentAggregates {
+  const _$CommentAggregatesImpl(
       {required this.commentId,
       required this.score,
       required this.upvotes,
@@ -1211,8 +1274,8 @@ class _$_CommentAggregates extends _CommentAggregates {
       this.hotRank})
       : super._();
 
-  factory _$_CommentAggregates.fromJson(Map<String, dynamic> json) =>
-      _$$_CommentAggregatesFromJson(json);
+  factory _$CommentAggregatesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CommentAggregatesImplFromJson(json);
 
   @override
   final int commentId;
@@ -1233,10 +1296,10 @@ class _$_CommentAggregates extends _CommentAggregates {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CommentAggregates &&
+            other is _$CommentAggregatesImpl &&
             (identical(other.commentId, commentId) ||
                 other.commentId == commentId) &&
             (identical(other.score, score) || other.score == score) &&
@@ -1248,21 +1311,23 @@ class _$_CommentAggregates extends _CommentAggregates {
             (identical(other.hotRank, hotRank) || other.hotRank == hotRank));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, commentId, score, upvotes, downvotes, childCount, hotRank);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CommentAggregates
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CommentAggregatesCopyWith<_$_CommentAggregates> get copyWith =>
-      __$$_CommentAggregatesCopyWithImpl<_$_CommentAggregates>(
+  _$$CommentAggregatesImplCopyWith<_$CommentAggregatesImpl> get copyWith =>
+      __$$CommentAggregatesImplCopyWithImpl<_$CommentAggregatesImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommentAggregatesToJson(
+    return _$$CommentAggregatesImplToJson(
       this,
     );
   }
@@ -1275,11 +1340,11 @@ abstract class _CommentAggregates extends CommentAggregates {
       required final int upvotes,
       required final int downvotes,
       final int? childCount,
-      final int? hotRank}) = _$_CommentAggregates;
+      final int? hotRank}) = _$CommentAggregatesImpl;
   const _CommentAggregates._() : super._();
 
   factory _CommentAggregates.fromJson(Map<String, dynamic> json) =
-      _$_CommentAggregates.fromJson;
+      _$CommentAggregatesImpl.fromJson;
 
   @override
   int get commentId;
@@ -1293,8 +1358,11 @@ abstract class _CommentAggregates extends CommentAggregates {
   int? get childCount;
   @override
   int? get hotRank;
+
+  /// Create a copy of CommentAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_CommentAggregatesCopyWith<_$_CommentAggregates> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$CommentAggregatesImplCopyWith<_$CommentAggregatesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

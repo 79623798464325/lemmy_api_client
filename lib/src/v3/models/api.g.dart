@@ -6,8 +6,9 @@ part of 'api.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_FullCommunityView _$$_FullCommunityViewFromJson(Map<String, dynamic> json) =>
-    _$_FullCommunityView(
+_$FullCommunityViewImpl _$$FullCommunityViewImplFromJson(
+        Map<String, dynamic> json) =>
+    _$FullCommunityViewImpl(
       communityView: CommunityView.fromJson(
           json['community_view'] as Map<String, dynamic>),
       site: json['site'] == null
@@ -20,8 +21,8 @@ _$_FullCommunityView _$$_FullCommunityViewFromJson(Map<String, dynamic> json) =>
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_FullCommunityViewToJson(
-        _$_FullCommunityView instance) =>
+Map<String, dynamic> _$$FullCommunityViewImplToJson(
+        _$FullCommunityViewImpl instance) =>
     <String, dynamic>{
       'community_view': instance.communityView.toJson(),
       'site': instance.site?.toJson(),
@@ -29,8 +30,8 @@ Map<String, dynamic> _$$_FullCommunityViewToJson(
       'instance_host': instance.instanceHost,
     };
 
-_$_FullPostView _$$_FullPostViewFromJson(Map<String, dynamic> json) =>
-    _$_FullPostView(
+_$FullPostViewImpl _$$FullPostViewImplFromJson(Map<String, dynamic> json) =>
+    _$FullPostViewImpl(
       postView: PostView.fromJson(json['post_view'] as Map<String, dynamic>),
       communityView: CommunityView.fromJson(
           json['community_view'] as Map<String, dynamic>),
@@ -41,7 +42,7 @@ _$_FullPostView _$$_FullPostViewFromJson(Map<String, dynamic> json) =>
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_FullPostViewToJson(_$_FullPostView instance) =>
+Map<String, dynamic> _$$FullPostViewImplToJson(_$FullPostViewImpl instance) =>
     <String, dynamic>{
       'post_view': instance.postView.toJson(),
       'community_view': instance.communityView.toJson(),
@@ -49,8 +50,8 @@ Map<String, dynamic> _$$_FullPostViewToJson(_$_FullPostView instance) =>
       'instance_host': instance.instanceHost,
     };
 
-_$_SearchResults _$$_SearchResultsFromJson(Map<String, dynamic> json) =>
-    _$_SearchResults(
+_$SearchResultsImpl _$$SearchResultsImplFromJson(Map<String, dynamic> json) =>
+    _$SearchResultsImpl(
       type: SearchType.fromJson(json['type_'] as String),
       comments: (json['comments'] as List<dynamic>)
           .map((e) => CommentView.fromJson(e as Map<String, dynamic>))
@@ -67,7 +68,7 @@ _$_SearchResults _$$_SearchResultsFromJson(Map<String, dynamic> json) =>
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_SearchResultsToJson(_$_SearchResults instance) =>
+Map<String, dynamic> _$$SearchResultsImplToJson(_$SearchResultsImpl instance) =>
     <String, dynamic>{
       'type_': instance.type.toJson(),
       'comments': instance.comments.map((e) => e.toJson()).toList(),
@@ -77,7 +78,7 @@ Map<String, dynamic> _$$_SearchResultsToJson(_$_SearchResults instance) =>
       'instance_host': instance.instanceHost,
     };
 
-_$_Modlog _$$_ModlogFromJson(Map<String, dynamic> json) => _$_Modlog(
+_$ModlogImpl _$$ModlogImplFromJson(Map<String, dynamic> json) => _$ModlogImpl(
       removedPosts: (json['removed_posts'] as List<dynamic>)
           .map((e) => ModRemovePostView.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -115,7 +116,8 @@ _$_Modlog _$$_ModlogFromJson(Map<String, dynamic> json) => _$_Modlog(
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_ModlogToJson(_$_Modlog instance) => <String, dynamic>{
+Map<String, dynamic> _$$ModlogImplToJson(_$ModlogImpl instance) =>
+    <String, dynamic>{
       'removed_posts': instance.removedPosts.map((e) => e.toJson()).toList(),
       'locked_posts': instance.lockedPosts.map((e) => e.toJson()).toList(),
       'stickied_posts': instance.stickiedPosts.map((e) => e.toJson()).toList(),
@@ -134,18 +136,20 @@ Map<String, dynamic> _$$_ModlogToJson(_$_Modlog instance) => <String, dynamic>{
       'instance_host': instance.instanceHost,
     };
 
-_$_FullCommentView _$$_FullCommentViewFromJson(Map<String, dynamic> json) =>
-    _$_FullCommentView(
+_$FullCommentViewImpl _$$FullCommentViewImplFromJson(
+        Map<String, dynamic> json) =>
+    _$FullCommentViewImpl(
       commentView:
           CommentView.fromJson(json['comment_view'] as Map<String, dynamic>),
       recipientIds: (json['recipient_ids'] as List<dynamic>)
-          .map((e) => e as int)
+          .map((e) => (e as num).toInt())
           .toList(),
       formId: json['form_id'] as String?,
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_FullCommentViewToJson(_$_FullCommentView instance) =>
+Map<String, dynamic> _$$FullCommentViewImplToJson(
+        _$FullCommentViewImpl instance) =>
     <String, dynamic>{
       'comment_view': instance.commentView.toJson(),
       'recipient_ids': instance.recipientIds,
@@ -153,8 +157,8 @@ Map<String, dynamic> _$$_FullCommentViewToJson(_$_FullCommentView instance) =>
       'instance_host': instance.instanceHost,
     };
 
-_$_FullSiteView _$$_FullSiteViewFromJson(Map<String, dynamic> json) =>
-    _$_FullSiteView(
+_$FullSiteViewImpl _$$FullSiteViewImplFromJson(Map<String, dynamic> json) =>
+    _$FullSiteViewImpl(
       siteView: json['site_view'] == null
           ? null
           : SiteView.fromJson(json['site_view'] as Map<String, dynamic>),
@@ -172,7 +176,7 @@ _$_FullSiteView _$$_FullSiteViewFromJson(Map<String, dynamic> json) =>
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_FullSiteViewToJson(_$_FullSiteView instance) =>
+Map<String, dynamic> _$$FullSiteViewImplToJson(_$FullSiteViewImpl instance) =>
     <String, dynamic>{
       'site_view': instance.siteView?.toJson(),
       'admins': instance.admins.map((e) => e.toJson()).toList(),
@@ -182,8 +186,8 @@ Map<String, dynamic> _$$_FullSiteViewToJson(_$_FullSiteView instance) =>
       'instance_host': instance.instanceHost,
     };
 
-_$_MyUserInfo _$$_MyUserInfoFromJson(Map<String, dynamic> json) =>
-    _$_MyUserInfo(
+_$MyUserInfoImpl _$$MyUserInfoImplFromJson(Map<String, dynamic> json) =>
+    _$MyUserInfoImpl(
       localUserView: LocalUserSettingsView.fromJson(
           json['local_user_view'] as Map<String, dynamic>),
       follows: (json['follows'] as List<dynamic>)
@@ -202,7 +206,7 @@ _$_MyUserInfo _$$_MyUserInfoFromJson(Map<String, dynamic> json) =>
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_MyUserInfoToJson(_$_MyUserInfo instance) =>
+Map<String, dynamic> _$$MyUserInfoImplToJson(_$MyUserInfoImpl instance) =>
     <String, dynamic>{
       'local_user_view': instance.localUserView.toJson(),
       'follows': instance.follows.map((e) => e.toJson()).toList(),
@@ -213,9 +217,9 @@ Map<String, dynamic> _$$_MyUserInfoToJson(_$_MyUserInfo instance) =>
       'instance_host': instance.instanceHost,
     };
 
-_$_FederatedInstances _$$_FederatedInstancesFromJson(
+_$FederatedInstancesImpl _$$FederatedInstancesImplFromJson(
         Map<String, dynamic> json) =>
-    _$_FederatedInstances(
+    _$FederatedInstancesImpl(
       linked:
           (json['linked'] as List<dynamic>).map((e) => e as String).toList(),
       allowed:
@@ -225,8 +229,8 @@ _$_FederatedInstances _$$_FederatedInstancesFromJson(
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_FederatedInstancesToJson(
-        _$_FederatedInstances instance) =>
+Map<String, dynamic> _$$FederatedInstancesImplToJson(
+        _$FederatedInstancesImpl instance) =>
     <String, dynamic>{
       'linked': instance.linked,
       'allowed': instance.allowed,
@@ -234,21 +238,22 @@ Map<String, dynamic> _$$_FederatedInstancesToJson(
       'instance_host': instance.instanceHost,
     };
 
-_$_Captcha _$$_CaptchaFromJson(Map<String, dynamic> json) => _$_Captcha(
+_$CaptchaImpl _$$CaptchaImplFromJson(Map<String, dynamic> json) =>
+    _$CaptchaImpl(
       png: json['png'] as String,
       wav: json['wav'] as String?,
       uuid: json['uuid'] as String,
     );
 
-Map<String, dynamic> _$$_CaptchaToJson(_$_Captcha instance) =>
+Map<String, dynamic> _$$CaptchaImplToJson(_$CaptchaImpl instance) =>
     <String, dynamic>{
       'png': instance.png,
       'wav': instance.wav,
       'uuid': instance.uuid,
     };
 
-_$_FullPersonView _$$_FullPersonViewFromJson(Map<String, dynamic> json) =>
-    _$_FullPersonView(
+_$FullPersonViewImpl _$$FullPersonViewImplFromJson(Map<String, dynamic> json) =>
+    _$FullPersonViewImpl(
       personView:
           PersonViewSafe.fromJson(json['person_view'] as Map<String, dynamic>),
       moderates: (json['moderates'] as List<dynamic>)
@@ -264,7 +269,8 @@ _$_FullPersonView _$$_FullPersonViewFromJson(Map<String, dynamic> json) =>
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_FullPersonViewToJson(_$_FullPersonView instance) =>
+Map<String, dynamic> _$$FullPersonViewImplToJson(
+        _$FullPersonViewImpl instance) =>
     <String, dynamic>{
       'person_view': instance.personView.toJson(),
       'moderates': instance.moderates.map((e) => e.toJson()).toList(),
@@ -273,41 +279,41 @@ Map<String, dynamic> _$$_FullPersonViewToJson(_$_FullPersonView instance) =>
       'instance_host': instance.instanceHost,
     };
 
-_$_BannedCommunityUser _$$_BannedCommunityUserFromJson(
+_$BannedCommunityUserImpl _$$BannedCommunityUserImplFromJson(
         Map<String, dynamic> json) =>
-    _$_BannedCommunityUser(
+    _$BannedCommunityUserImpl(
       personView:
           PersonViewSafe.fromJson(json['person_view'] as Map<String, dynamic>),
       banned: json['banned'] as bool,
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_BannedCommunityUserToJson(
-        _$_BannedCommunityUser instance) =>
+Map<String, dynamic> _$$BannedCommunityUserImplToJson(
+        _$BannedCommunityUserImpl instance) =>
     <String, dynamic>{
       'person_view': instance.personView.toJson(),
       'banned': instance.banned,
       'instance_host': instance.instanceHost,
     };
 
-_$_BannedPerson _$$_BannedPersonFromJson(Map<String, dynamic> json) =>
-    _$_BannedPerson(
+_$BannedPersonImpl _$$BannedPersonImplFromJson(Map<String, dynamic> json) =>
+    _$BannedPersonImpl(
       personView:
           PersonViewSafe.fromJson(json['person_view'] as Map<String, dynamic>),
       banned: json['banned'] as bool,
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_BannedPersonToJson(_$_BannedPerson instance) =>
+Map<String, dynamic> _$$BannedPersonImplToJson(_$BannedPersonImpl instance) =>
     <String, dynamic>{
       'person_view': instance.personView.toJson(),
       'banned': instance.banned,
       'instance_host': instance.instanceHost,
     };
 
-_$_ResolveObjectResponse _$$_ResolveObjectResponseFromJson(
+_$ResolveObjectResponseImpl _$$ResolveObjectResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ResolveObjectResponse(
+    _$ResolveObjectResponseImpl(
       comment: json['comment'] == null
           ? null
           : CommentView.fromJson(json['comment'] as Map<String, dynamic>),
@@ -323,8 +329,8 @@ _$_ResolveObjectResponse _$$_ResolveObjectResponseFromJson(
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_ResolveObjectResponseToJson(
-        _$_ResolveObjectResponse instance) =>
+Map<String, dynamic> _$$ResolveObjectResponseImplToJson(
+        _$ResolveObjectResponseImpl instance) =>
     <String, dynamic>{
       'comment': instance.comment?.toJson(),
       'post': instance.post?.toJson(),
@@ -333,8 +339,8 @@ Map<String, dynamic> _$$_ResolveObjectResponseToJson(
       'instance_host': instance.instanceHost,
     };
 
-_$_SiteMetadata _$$_SiteMetadataFromJson(Map<String, dynamic> json) =>
-    _$_SiteMetadata(
+_$SiteMetadataImpl _$$SiteMetadataImplFromJson(Map<String, dynamic> json) =>
+    _$SiteMetadataImpl(
       title: json['title'] as String?,
       description: json['description'] as String?,
       image: json['image'] as String?,
@@ -342,7 +348,7 @@ _$_SiteMetadata _$$_SiteMetadataFromJson(Map<String, dynamic> json) =>
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_SiteMetadataToJson(_$_SiteMetadata instance) =>
+Map<String, dynamic> _$$SiteMetadataImplToJson(_$SiteMetadataImpl instance) =>
     <String, dynamic>{
       'title': instance.title,
       'description': instance.description,
@@ -351,45 +357,47 @@ Map<String, dynamic> _$$_SiteMetadataToJson(_$_SiteMetadata instance) =>
       'instance_host': instance.instanceHost,
     };
 
-_$_BlockedPerson _$$_BlockedPersonFromJson(Map<String, dynamic> json) =>
-    _$_BlockedPerson(
+_$BlockedPersonImpl _$$BlockedPersonImplFromJson(Map<String, dynamic> json) =>
+    _$BlockedPersonImpl(
       personView:
           PersonViewSafe.fromJson(json['person_view'] as Map<String, dynamic>),
       blocked: json['blocked'] as bool,
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_BlockedPersonToJson(_$_BlockedPerson instance) =>
+Map<String, dynamic> _$$BlockedPersonImplToJson(_$BlockedPersonImpl instance) =>
     <String, dynamic>{
       'person_view': instance.personView.toJson(),
       'blocked': instance.blocked,
       'instance_host': instance.instanceHost,
     };
 
-_$_BlockedCommunity _$$_BlockedCommunityFromJson(Map<String, dynamic> json) =>
-    _$_BlockedCommunity(
+_$BlockedCommunityImpl _$$BlockedCommunityImplFromJson(
+        Map<String, dynamic> json) =>
+    _$BlockedCommunityImpl(
       communityView: CommunityView.fromJson(
           json['community_view'] as Map<String, dynamic>),
       blocked: json['blocked'] as bool,
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_BlockedCommunityToJson(_$_BlockedCommunity instance) =>
+Map<String, dynamic> _$$BlockedCommunityImplToJson(
+        _$BlockedCommunityImpl instance) =>
     <String, dynamic>{
       'community_view': instance.communityView.toJson(),
       'blocked': instance.blocked,
       'instance_host': instance.instanceHost,
     };
 
-_$_ReportCount _$$_ReportCountFromJson(Map<String, dynamic> json) =>
-    _$_ReportCount(
-      communityId: json['community_id'] as int?,
-      commentReports: json['comment_reports'] as int,
-      postReports: json['post_reports'] as int,
+_$ReportCountImpl _$$ReportCountImplFromJson(Map<String, dynamic> json) =>
+    _$ReportCountImpl(
+      communityId: (json['community_id'] as num?)?.toInt(),
+      commentReports: (json['comment_reports'] as num).toInt(),
+      postReports: (json['post_reports'] as num).toInt(),
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_ReportCountToJson(_$_ReportCount instance) =>
+Map<String, dynamic> _$$ReportCountImplToJson(_$ReportCountImpl instance) =>
     <String, dynamic>{
       'community_id': instance.communityId,
       'comment_reports': instance.commentReports,
@@ -397,15 +405,15 @@ Map<String, dynamic> _$$_ReportCountToJson(_$_ReportCount instance) =>
       'instance_host': instance.instanceHost,
     };
 
-_$_UnreadCount _$$_UnreadCountFromJson(Map<String, dynamic> json) =>
-    _$_UnreadCount(
-      replies: json['replies'] as int,
-      mentions: json['mentions'] as int,
-      privateMessages: json['private_messages'] as int,
+_$UnreadCountImpl _$$UnreadCountImplFromJson(Map<String, dynamic> json) =>
+    _$UnreadCountImpl(
+      replies: (json['replies'] as num).toInt(),
+      mentions: (json['mentions'] as num).toInt(),
+      privateMessages: (json['private_messages'] as num).toInt(),
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_UnreadCountToJson(_$_UnreadCount instance) =>
+Map<String, dynamic> _$$UnreadCountImplToJson(_$UnreadCountImpl instance) =>
     <String, dynamic>{
       'replies': instance.replies,
       'mentions': instance.mentions,
@@ -413,15 +421,15 @@ Map<String, dynamic> _$$_UnreadCountToJson(_$_UnreadCount instance) =>
       'instance_host': instance.instanceHost,
     };
 
-_$_LoginResponse _$$_LoginResponseFromJson(Map<String, dynamic> json) =>
-    _$_LoginResponse(
+_$LoginResponseImpl _$$LoginResponseImplFromJson(Map<String, dynamic> json) =>
+    _$LoginResponseImpl(
       jwt: json['jwt'] == null ? null : Jwt.fromJson(json['jwt'] as String),
       verifyEmailSent: json['verify_email_sent'] as bool,
       registrationCreated: json['registration_created'] as bool,
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_LoginResponseToJson(_$_LoginResponse instance) =>
+Map<String, dynamic> _$$LoginResponseImplToJson(_$LoginResponseImpl instance) =>
     <String, dynamic>{
       'jwt': instance.jwt?.toJson(),
       'verify_email_sent': instance.verifyEmailSent,

@@ -6,34 +6,37 @@ part of 'aggregates.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PersonAggregates _$$_PersonAggregatesFromJson(Map<String, dynamic> json) =>
-    _$_PersonAggregates(
-      personId: json['person_id'] as int,
-      postCount: json['post_count'] as int,
-      commentCount: json['comment_count'] as int,
+_$PersonAggregatesImpl _$$PersonAggregatesImplFromJson(
+        Map<String, dynamic> json) =>
+    _$PersonAggregatesImpl(
+      personId: (json['person_id'] as num).toInt(),
+      postCount: (json['post_count'] as num).toInt(),
+      commentCount: (json['comment_count'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$_PersonAggregatesToJson(_$_PersonAggregates instance) =>
+Map<String, dynamic> _$$PersonAggregatesImplToJson(
+        _$PersonAggregatesImpl instance) =>
     <String, dynamic>{
       'person_id': instance.personId,
       'post_count': instance.postCount,
       'comment_count': instance.commentCount,
     };
 
-_$_SiteAggregates _$$_SiteAggregatesFromJson(Map<String, dynamic> json) =>
-    _$_SiteAggregates(
-      siteId: json['site_id'] as int,
-      users: json['users'] as int,
-      posts: json['posts'] as int,
-      comments: json['comments'] as int,
-      communities: json['communities'] as int,
-      usersActiveDay: json['users_active_day'] as int,
-      usersActiveWeek: json['users_active_week'] as int,
-      usersActiveMonth: json['users_active_month'] as int,
-      usersActiveHalfYear: json['users_active_half_year'] as int,
+_$SiteAggregatesImpl _$$SiteAggregatesImplFromJson(Map<String, dynamic> json) =>
+    _$SiteAggregatesImpl(
+      siteId: (json['site_id'] as num).toInt(),
+      users: (json['users'] as num).toInt(),
+      posts: (json['posts'] as num).toInt(),
+      comments: (json['comments'] as num).toInt(),
+      communities: (json['communities'] as num).toInt(),
+      usersActiveDay: (json['users_active_day'] as num).toInt(),
+      usersActiveWeek: (json['users_active_week'] as num).toInt(),
+      usersActiveMonth: (json['users_active_month'] as num).toInt(),
+      usersActiveHalfYear: (json['users_active_half_year'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$_SiteAggregatesToJson(_$_SiteAggregates instance) =>
+Map<String, dynamic> _$$SiteAggregatesImplToJson(
+        _$SiteAggregatesImpl instance) =>
     <String, dynamic>{
       'site_id': instance.siteId,
       'users': instance.users,
@@ -46,16 +49,17 @@ Map<String, dynamic> _$$_SiteAggregatesToJson(_$_SiteAggregates instance) =>
       'users_active_half_year': instance.usersActiveHalfYear,
     };
 
-_$_PostAggregates _$$_PostAggregatesFromJson(Map<String, dynamic> json) =>
-    _$_PostAggregates(
-      postId: json['post_id'] as int,
-      comments: json['comments'] as int,
-      score: json['score'] as int,
-      upvotes: json['upvotes'] as int,
-      downvotes: json['downvotes'] as int,
+_$PostAggregatesImpl _$$PostAggregatesImplFromJson(Map<String, dynamic> json) =>
+    _$PostAggregatesImpl(
+      postId: (json['post_id'] as num).toInt(),
+      comments: (json['comments'] as num).toInt(),
+      score: (json['score'] as num).toInt(),
+      upvotes: (json['upvotes'] as num).toInt(),
+      downvotes: (json['downvotes'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$_PostAggregatesToJson(_$_PostAggregates instance) =>
+Map<String, dynamic> _$$PostAggregatesImplToJson(
+        _$PostAggregatesImpl instance) =>
     <String, dynamic>{
       'post_id': instance.postId,
       'comments': instance.comments,
@@ -64,22 +68,22 @@ Map<String, dynamic> _$$_PostAggregatesToJson(_$_PostAggregates instance) =>
       'downvotes': instance.downvotes,
     };
 
-_$_CommunityAggregates _$$_CommunityAggregatesFromJson(
+_$CommunityAggregatesImpl _$$CommunityAggregatesImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CommunityAggregates(
-      communityId: json['community_id'] as int,
-      subscribers: json['subscribers'] as int,
-      posts: json['posts'] as int,
-      comments: json['comments'] as int,
-      usersActiveDay: json['users_active_day'] as int,
-      usersActiveWeek: json['users_active_week'] as int,
-      usersActiveMonth: json['users_active_month'] as int,
-      usersActiveHalfYear: json['users_active_half_year'] as int,
-      hotRank: json['hot_rank'] as int?,
+    _$CommunityAggregatesImpl(
+      communityId: (json['community_id'] as num).toInt(),
+      subscribers: (json['subscribers'] as num).toInt(),
+      posts: (json['posts'] as num).toInt(),
+      comments: (json['comments'] as num).toInt(),
+      usersActiveDay: (json['users_active_day'] as num).toInt(),
+      usersActiveWeek: (json['users_active_week'] as num).toInt(),
+      usersActiveMonth: (json['users_active_month'] as num).toInt(),
+      usersActiveHalfYear: (json['users_active_half_year'] as num).toInt(),
+      hotRank: (json['hot_rank'] as num?)?.toInt(),
     );
 
-Map<String, dynamic> _$$_CommunityAggregatesToJson(
-        _$_CommunityAggregates instance) =>
+Map<String, dynamic> _$$CommunityAggregatesImplToJson(
+        _$CommunityAggregatesImpl instance) =>
     <String, dynamic>{
       'community_id': instance.communityId,
       'subscribers': instance.subscribers,
@@ -92,18 +96,19 @@ Map<String, dynamic> _$$_CommunityAggregatesToJson(
       'hot_rank': instance.hotRank,
     };
 
-_$_CommentAggregates _$$_CommentAggregatesFromJson(Map<String, dynamic> json) =>
-    _$_CommentAggregates(
-      commentId: json['comment_id'] as int,
-      score: json['score'] as int,
-      upvotes: json['upvotes'] as int,
-      downvotes: json['downvotes'] as int,
-      childCount: json['child_count'] as int?,
-      hotRank: json['hot_rank'] as int?,
+_$CommentAggregatesImpl _$$CommentAggregatesImplFromJson(
+        Map<String, dynamic> json) =>
+    _$CommentAggregatesImpl(
+      commentId: (json['comment_id'] as num).toInt(),
+      score: (json['score'] as num).toInt(),
+      upvotes: (json['upvotes'] as num).toInt(),
+      downvotes: (json['downvotes'] as num).toInt(),
+      childCount: (json['child_count'] as num?)?.toInt(),
+      hotRank: (json['hot_rank'] as num?)?.toInt(),
     );
 
-Map<String, dynamic> _$$_CommentAggregatesToJson(
-        _$_CommentAggregates instance) =>
+Map<String, dynamic> _$$CommentAggregatesImplToJson(
+        _$CommentAggregatesImpl instance) =>
     <String, dynamic>{
       'comment_id': instance.commentId,
       'score': instance.score,
