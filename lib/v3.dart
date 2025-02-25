@@ -2,6 +2,7 @@ export 'src/enums.dart';
 export 'src/exceptions.dart';
 export 'src/v3/api/comment.dart';
 export 'src/v3/api/community.dart';
+export 'src/v3/api/modlog.dart';
 export 'src/v3/api/person.dart';
 export 'src/v3/api/post.dart';
 export 'src/v3/api/site.dart';
