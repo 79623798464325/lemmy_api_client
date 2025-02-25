@@ -1,19 +1,19 @@
 name: lemmy_api_client2
-version: 0.52.0
+version: 0.53.0
 homepage: https://github.com/79623798464325/lemmy_api_client
 description: Fork of a Future-based http client for the Lemmy API. Provides an easy interface and statically typed responses.
 
 environment:
-  sdk: '>=2.17.0 <4.0.0'
+  sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
-  json_annotation: ^4.8.1
+  json_annotation: ^4.9.0
   http: ^1.2.2
-  freezed_annotation: ^2.0.1
+  freezed_annotation: ^2.4.4
   web_socket_channel: ^2.0.0
 
 dev_dependencies:
   build_runner: ^2.1.4
-  freezed: ^2.0.2
+  freezed: ^2.5.8
   json_serializable: ^6.3.0
   test: ^1.16.8

@@ -25,54 +25,20 @@ _$SearchImpl _$$SearchImplFromJson(Map<String, dynamic> json) => _$SearchImpl(
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$SearchImplToJson(_$SearchImpl instance) {
-  final val = <String, dynamic>{
-    'q': instance.q,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('type_', instance.type?.toJson());
-  writeNotNull('listing_type', instance.listingType?.toJson());
-  writeNotNull('community_id', instance.communityId);
-  writeNotNull('community_name', instance.communityName);
-  writeNotNull('sort', instance.sort?.toJson());
-  writeNotNull('page', instance.page);
-  writeNotNull('limit', instance.limit);
-  writeNotNull('creator_id', instance.creatorId);
-  writeNotNull('auth', instance.auth);
-  return val;
-}
-
-_$GetModlogImpl _$$GetModlogImplFromJson(Map<String, dynamic> json) =>
-    _$GetModlogImpl(
-      modPersonId: (json['mod_person_id'] as num?)?.toInt(),
-      communityId: (json['community_id'] as num?)?.toInt(),
-      page: (json['page'] as num?)?.toInt(),
-      limit: (json['limit'] as num?)?.toInt(),
-      auth: json['auth'] as String?,
-    );
-
-Map<String, dynamic> _$$GetModlogImplToJson(_$GetModlogImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('mod_person_id', instance.modPersonId);
-  writeNotNull('community_id', instance.communityId);
-  writeNotNull('page', instance.page);
-  writeNotNull('limit', instance.limit);
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+Map<String, dynamic> _$$SearchImplToJson(_$SearchImpl instance) =>
+    <String, dynamic>{
+      'q': instance.q,
+      if (instance.type?.toJson() case final value?) 'type_': value,
+      if (instance.listingType?.toJson() case final value?)
+        'listing_type': value,
+      if (instance.communityId case final value?) 'community_id': value,
+      if (instance.communityName case final value?) 'community_name': value,
+      if (instance.sort?.toJson() case final value?) 'sort': value,
+      if (instance.page case final value?) 'page': value,
+      if (instance.limit case final value?) 'limit': value,
+      if (instance.creatorId case final value?) 'creator_id': value,
+      if (instance.auth case final value?) 'auth': value,
+    };
 
 _$CreateSiteImpl _$$CreateSiteImplFromJson(Map<String, dynamic> json) =>
     _$CreateSiteImpl(
@@ -94,34 +60,29 @@ _$CreateSiteImpl _$$CreateSiteImplFromJson(Map<String, dynamic> json) =>
       defaultTheme: json['default_theme'] as String?,
     );
 
-Map<String, dynamic> _$$CreateSiteImplToJson(_$CreateSiteImpl instance) {
-  final val = <String, dynamic>{
-    'name': instance.name,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('sidebar', instance.sidebar);
-  writeNotNull('description', instance.description);
-  writeNotNull('icon', instance.icon);
-  writeNotNull('banner', instance.banner);
-  writeNotNull('enable_downvotes', instance.enableDownvotes);
-  writeNotNull('open_registration', instance.openRegistration);
-  writeNotNull('enable_nsfw', instance.enableNsfw);
-  writeNotNull(
-      'community_creation_admin_only', instance.communityCreationAdminOnly);
-  writeNotNull('require_email_verification', instance.requireEmailVerification);
-  writeNotNull('require_application', instance.requireApplication);
-  writeNotNull('application_question', instance.applicationQuestion);
-  writeNotNull('private_instance', instance.privateInstance);
-  val['auth'] = instance.auth;
-  writeNotNull('default_theme', instance.defaultTheme);
-  return val;
-}
+Map<String, dynamic> _$$CreateSiteImplToJson(_$CreateSiteImpl instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      if (instance.sidebar case final value?) 'sidebar': value,
+      if (instance.description case final value?) 'description': value,
+      if (instance.icon case final value?) 'icon': value,
+      if (instance.banner case final value?) 'banner': value,
+      if (instance.enableDownvotes case final value?) 'enable_downvotes': value,
+      if (instance.openRegistration case final value?)
+        'open_registration': value,
+      if (instance.enableNsfw case final value?) 'enable_nsfw': value,
+      if (instance.communityCreationAdminOnly case final value?)
+        'community_creation_admin_only': value,
+      if (instance.requireEmailVerification case final value?)
+        'require_email_verification': value,
+      if (instance.requireApplication case final value?)
+        'require_application': value,
+      if (instance.applicationQuestion case final value?)
+        'application_question': value,
+      if (instance.privateInstance case final value?) 'private_instance': value,
+      'auth': instance.auth,
+      if (instance.defaultTheme case final value?) 'default_theme': value,
+    };
 
 _$EditSiteImpl _$$EditSiteImplFromJson(Map<String, dynamic> json) =>
     _$EditSiteImpl(
@@ -143,51 +104,39 @@ _$EditSiteImpl _$$EditSiteImplFromJson(Map<String, dynamic> json) =>
       defaultTheme: json['default_theme'] as String?,
     );
 
-Map<String, dynamic> _$$EditSiteImplToJson(_$EditSiteImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('name', instance.name);
-  writeNotNull('sidebar', instance.sidebar);
-  writeNotNull('description', instance.description);
-  writeNotNull('icon', instance.icon);
-  writeNotNull('banner', instance.banner);
-  writeNotNull('enable_downvotes', instance.enableDownvotes);
-  writeNotNull('open_registration', instance.openRegistration);
-  writeNotNull('enable_nsfw', instance.enableNsfw);
-  writeNotNull(
-      'community_creation_admin_only', instance.communityCreationAdminOnly);
-  writeNotNull('require_email_verification', instance.requireEmailVerification);
-  writeNotNull('require_application', instance.requireApplication);
-  writeNotNull('application_question', instance.applicationQuestion);
-  writeNotNull('private_instance', instance.privateInstance);
-  val['auth'] = instance.auth;
-  writeNotNull('default_theme', instance.defaultTheme);
-  return val;
-}
+Map<String, dynamic> _$$EditSiteImplToJson(_$EditSiteImpl instance) =>
+    <String, dynamic>{
+      if (instance.name case final value?) 'name': value,
+      if (instance.sidebar case final value?) 'sidebar': value,
+      if (instance.description case final value?) 'description': value,
+      if (instance.icon case final value?) 'icon': value,
+      if (instance.banner case final value?) 'banner': value,
+      if (instance.enableDownvotes case final value?) 'enable_downvotes': value,
+      if (instance.openRegistration case final value?)
+        'open_registration': value,
+      if (instance.enableNsfw case final value?) 'enable_nsfw': value,
+      if (instance.communityCreationAdminOnly case final value?)
+        'community_creation_admin_only': value,
+      if (instance.requireEmailVerification case final value?)
+        'require_email_verification': value,
+      if (instance.requireApplication case final value?)
+        'require_application': value,
+      if (instance.applicationQuestion case final value?)
+        'application_question': value,
+      if (instance.privateInstance case final value?) 'private_instance': value,
+      'auth': instance.auth,
+      if (instance.defaultTheme case final value?) 'default_theme': value,
+    };
 
 _$GetSiteImpl _$$GetSiteImplFromJson(Map<String, dynamic> json) =>
     _$GetSiteImpl(
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$GetSiteImplToJson(_$GetSiteImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+Map<String, dynamic> _$$GetSiteImplToJson(_$GetSiteImpl instance) =>
+    <String, dynamic>{
+      if (instance.auth case final value?) 'auth': value,
+    };
 
 _$LeaveAdminImpl _$$LeaveAdminImplFromJson(Map<String, dynamic> json) =>
     _$LeaveAdminImpl(
@@ -228,20 +177,11 @@ _$ResolveObjectImpl _$$ResolveObjectImplFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$ResolveObjectImplToJson(_$ResolveObjectImpl instance) {
-  final val = <String, dynamic>{
-    'q': instance.q,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+Map<String, dynamic> _$$ResolveObjectImplToJson(_$ResolveObjectImpl instance) =>
+    <String, dynamic>{
+      'q': instance.q,
+      if (instance.auth case final value?) 'auth': value,
+    };
 
 _$GetUnreadRegistrationApplicationCountImpl
     _$$GetUnreadRegistrationApplicationCountImplFromJson(
@@ -266,21 +206,13 @@ _$ListRegistrationApplicationsImpl _$$ListRegistrationApplicationsImplFromJson(
     );
 
 Map<String, dynamic> _$$ListRegistrationApplicationsImplToJson(
-    _$ListRegistrationApplicationsImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('unread_only', instance.unreadOnly);
-  writeNotNull('page', instance.page);
-  writeNotNull('limit', instance.limit);
-  val['auth'] = instance.auth;
-  return val;
-}
+        _$ListRegistrationApplicationsImpl instance) =>
+    <String, dynamic>{
+      if (instance.unreadOnly case final value?) 'unread_only': value,
+      if (instance.page case final value?) 'page': value,
+      if (instance.limit case final value?) 'limit': value,
+      'auth': instance.auth,
+    };
 
 _$ApproveRegistrationApplicationImpl
     _$$ApproveRegistrationApplicationImplFromJson(Map<String, dynamic> json) =>
@@ -292,19 +224,10 @@ _$ApproveRegistrationApplicationImpl
         );
 
 Map<String, dynamic> _$$ApproveRegistrationApplicationImplToJson(
-    _$ApproveRegistrationApplicationImpl instance) {
-  final val = <String, dynamic>{
-    'id': instance.id,
-    'approve': instance.approve,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('deny_reason', instance.denyReason);
-  val['auth'] = instance.auth;
-  return val;
-}
+        _$ApproveRegistrationApplicationImpl instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'approve': instance.approve,
+      if (instance.denyReason case final value?) 'deny_reason': value,
+      'auth': instance.auth,
+    };

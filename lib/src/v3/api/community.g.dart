@@ -13,20 +13,12 @@ _$GetCommunityImpl _$$GetCommunityImplFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$GetCommunityImplToJson(_$GetCommunityImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull('name', instance.name);
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+Map<String, dynamic> _$$GetCommunityImplToJson(_$GetCommunityImpl instance) =>
+    <String, dynamic>{
+      if (instance.id case final value?) 'id': value,
+      if (instance.name case final value?) 'name': value,
+      if (instance.auth case final value?) 'auth': value,
+    };
 
 _$CreateCommunityImpl _$$CreateCommunityImplFromJson(
         Map<String, dynamic> json) =>
@@ -41,25 +33,16 @@ _$CreateCommunityImpl _$$CreateCommunityImplFromJson(
     );
 
 Map<String, dynamic> _$$CreateCommunityImplToJson(
-    _$CreateCommunityImpl instance) {
-  final val = <String, dynamic>{
-    'name': instance.name,
-    'title': instance.title,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('description', instance.description);
-  writeNotNull('icon', instance.icon);
-  writeNotNull('banner', instance.banner);
-  writeNotNull('nsfw', instance.nsfw);
-  val['auth'] = instance.auth;
-  return val;
-}
+        _$CreateCommunityImpl instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'title': instance.title,
+      if (instance.description case final value?) 'description': value,
+      if (instance.icon case final value?) 'icon': value,
+      if (instance.banner case final value?) 'banner': value,
+      if (instance.nsfw case final value?) 'nsfw': value,
+      'auth': instance.auth,
+    };
 
 _$ListCommunitiesImpl _$$ListCommunitiesImplFromJson(
         Map<String, dynamic> json) =>
@@ -77,23 +60,15 @@ _$ListCommunitiesImpl _$$ListCommunitiesImplFromJson(
     );
 
 Map<String, dynamic> _$$ListCommunitiesImplToJson(
-    _$ListCommunitiesImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('type_', instance.type?.toJson());
-  writeNotNull('sort', instance.sort?.toJson());
-  writeNotNull('show_nsfw', instance.showNsfw);
-  writeNotNull('page', instance.page);
-  writeNotNull('limit', instance.limit);
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+        _$ListCommunitiesImpl instance) =>
+    <String, dynamic>{
+      if (instance.type?.toJson() case final value?) 'type_': value,
+      if (instance.sort?.toJson() case final value?) 'sort': value,
+      if (instance.showNsfw case final value?) 'show_nsfw': value,
+      if (instance.page case final value?) 'page': value,
+      if (instance.limit case final value?) 'limit': value,
+      if (instance.auth case final value?) 'auth': value,
+    };
 
 _$BanFromCommunityImpl _$$BanFromCommunityImplFromJson(
         Map<String, dynamic> json) =>
@@ -108,25 +83,16 @@ _$BanFromCommunityImpl _$$BanFromCommunityImplFromJson(
     );
 
 Map<String, dynamic> _$$BanFromCommunityImplToJson(
-    _$BanFromCommunityImpl instance) {
-  final val = <String, dynamic>{
-    'community_id': instance.communityId,
-    'person_id': instance.personId,
-    'ban': instance.ban,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('remove_data', instance.removeData);
-  writeNotNull('reason', instance.reason);
-  writeNotNull('expires', instance.expires);
-  val['auth'] = instance.auth;
-  return val;
-}
+        _$BanFromCommunityImpl instance) =>
+    <String, dynamic>{
+      'community_id': instance.communityId,
+      'person_id': instance.personId,
+      'ban': instance.ban,
+      if (instance.removeData case final value?) 'remove_data': value,
+      if (instance.reason case final value?) 'reason': value,
+      if (instance.expires case final value?) 'expires': value,
+      'auth': instance.auth,
+    };
 
 _$AddModToCommunityImpl _$$AddModToCommunityImplFromJson(
         Map<String, dynamic> json) =>
@@ -157,25 +123,16 @@ _$EditCommunityImpl _$$EditCommunityImplFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String,
     );
 
-Map<String, dynamic> _$$EditCommunityImplToJson(_$EditCommunityImpl instance) {
-  final val = <String, dynamic>{
-    'community_id': instance.communityId,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('title', instance.title);
-  writeNotNull('description', instance.description);
-  writeNotNull('icon', instance.icon);
-  writeNotNull('banner', instance.banner);
-  writeNotNull('nsfw', instance.nsfw);
-  val['auth'] = instance.auth;
-  return val;
-}
+Map<String, dynamic> _$$EditCommunityImplToJson(_$EditCommunityImpl instance) =>
+    <String, dynamic>{
+      'community_id': instance.communityId,
+      if (instance.title case final value?) 'title': value,
+      if (instance.description case final value?) 'description': value,
+      if (instance.icon case final value?) 'icon': value,
+      if (instance.banner case final value?) 'banner': value,
+      if (instance.nsfw case final value?) 'nsfw': value,
+      'auth': instance.auth,
+    };
 
 _$DeleteCommunityImpl _$$DeleteCommunityImplFromJson(
         Map<String, dynamic> json) =>
@@ -204,23 +161,14 @@ _$RemoveCommunityImpl _$$RemoveCommunityImplFromJson(
     );
 
 Map<String, dynamic> _$$RemoveCommunityImplToJson(
-    _$RemoveCommunityImpl instance) {
-  final val = <String, dynamic>{
-    'community_id': instance.communityId,
-    'removed': instance.removed,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('reason', instance.reason);
-  writeNotNull('expires', instance.expires);
-  val['auth'] = instance.auth;
-  return val;
-}
+        _$RemoveCommunityImpl instance) =>
+    <String, dynamic>{
+      'community_id': instance.communityId,
+      'removed': instance.removed,
+      if (instance.reason case final value?) 'reason': value,
+      if (instance.expires case final value?) 'expires': value,
+      'auth': instance.auth,
+    };
 
 _$FollowCommunityImpl _$$FollowCommunityImplFromJson(
         Map<String, dynamic> json) =>

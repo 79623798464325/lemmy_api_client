@@ -12,21 +12,12 @@ _$LoginImpl _$$LoginImplFromJson(Map<String, dynamic> json) => _$LoginImpl(
       totp2faToken: json['totp_2fa_token'] as String?,
     );
 
-Map<String, dynamic> _$$LoginImplToJson(_$LoginImpl instance) {
-  final val = <String, dynamic>{
-    'username_or_email': instance.usernameOrEmail,
-    'password': instance.password,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('totp_2fa_token', instance.totp2faToken);
-  return val;
-}
+Map<String, dynamic> _$$LoginImplToJson(_$LoginImpl instance) =>
+    <String, dynamic>{
+      'username_or_email': instance.usernameOrEmail,
+      'password': instance.password,
+      if (instance.totp2faToken case final value?) 'totp_2fa_token': value,
+    };
 
 _$RegisterImpl _$$RegisterImplFromJson(Map<String, dynamic> json) =>
     _$RegisterImpl(
@@ -41,27 +32,18 @@ _$RegisterImpl _$$RegisterImplFromJson(Map<String, dynamic> json) =>
       answer: json['answer'] as String?,
     );
 
-Map<String, dynamic> _$$RegisterImplToJson(_$RegisterImpl instance) {
-  final val = <String, dynamic>{
-    'username': instance.username,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('email', instance.email);
-  val['password'] = instance.password;
-  val['password_verify'] = instance.passwordVerify;
-  val['show_nsfw'] = instance.showNsfw;
-  writeNotNull('captcha_uuid', instance.captchaUuid);
-  writeNotNull('captcha_answer', instance.captchaAnswer);
-  writeNotNull('honeypot', instance.honeypot);
-  writeNotNull('answer', instance.answer);
-  return val;
-}
+Map<String, dynamic> _$$RegisterImplToJson(_$RegisterImpl instance) =>
+    <String, dynamic>{
+      'username': instance.username,
+      if (instance.email case final value?) 'email': value,
+      'password': instance.password,
+      'password_verify': instance.passwordVerify,
+      'show_nsfw': instance.showNsfw,
+      if (instance.captchaUuid case final value?) 'captcha_uuid': value,
+      if (instance.captchaAnswer case final value?) 'captcha_answer': value,
+      if (instance.honeypot case final value?) 'honeypot': value,
+      if (instance.answer case final value?) 'answer': value,
+    };
 
 _$GetCaptchaImpl _$$GetCaptchaImplFromJson(Map<String, dynamic> json) =>
     _$GetCaptchaImpl();
@@ -97,39 +79,35 @@ _$SaveUserSettingsImpl _$$SaveUserSettingsImplFromJson(
     );
 
 Map<String, dynamic> _$$SaveUserSettingsImplToJson(
-    _$SaveUserSettingsImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('show_nsfw', instance.showNsfw);
-  writeNotNull('theme', instance.theme);
-  writeNotNull('default_sort_type', sortTypeToIndex(instance.defaultSortType));
-  writeNotNull('default_listing_type',
-      postListingTypeToIndex(instance.defaultListingType));
-  writeNotNull('interface_language', instance.interfaceLanguage);
-  writeNotNull('avatar', instance.avatar);
-  writeNotNull('banner', instance.banner);
-  writeNotNull('display_name', instance.displayName);
-  writeNotNull('email', instance.email);
-  writeNotNull('bio', instance.bio);
-  writeNotNull('matrix_user_id', instance.matrixUserId);
-  writeNotNull('show_avatars', instance.showAvatars);
-  writeNotNull('show_scores', instance.showScores);
-  writeNotNull(
-      'send_notifications_to_email', instance.sendNotificationsToEmail);
-  writeNotNull('show_read_posts', instance.showReadPosts);
-  writeNotNull('bot_account', instance.botAccount);
-  writeNotNull('show_bot_accounts', instance.showBotAccounts);
-  writeNotNull('show_new_post_notifs', instance.showNewPostNotifs);
-  writeNotNull('generate_totp2fa', instance.generateTotp2fa);
-  val['auth'] = instance.auth;
-  return val;
-}
+        _$SaveUserSettingsImpl instance) =>
+    <String, dynamic>{
+      if (instance.showNsfw case final value?) 'show_nsfw': value,
+      if (instance.theme case final value?) 'theme': value,
+      if (sortTypeToIndex(instance.defaultSortType) case final value?)
+        'default_sort_type': value,
+      if (postListingTypeToIndex(instance.defaultListingType) case final value?)
+        'default_listing_type': value,
+      if (instance.interfaceLanguage case final value?)
+        'interface_language': value,
+      if (instance.avatar case final value?) 'avatar': value,
+      if (instance.banner case final value?) 'banner': value,
+      if (instance.displayName case final value?) 'display_name': value,
+      if (instance.email case final value?) 'email': value,
+      if (instance.bio case final value?) 'bio': value,
+      if (instance.matrixUserId case final value?) 'matrix_user_id': value,
+      if (instance.showAvatars case final value?) 'show_avatars': value,
+      if (instance.showScores case final value?) 'show_scores': value,
+      if (instance.sendNotificationsToEmail case final value?)
+        'send_notifications_to_email': value,
+      if (instance.showReadPosts case final value?) 'show_read_posts': value,
+      if (instance.botAccount case final value?) 'bot_account': value,
+      if (instance.showBotAccounts case final value?)
+        'show_bot_accounts': value,
+      if (instance.showNewPostNotifs case final value?)
+        'show_new_post_notifs': value,
+      if (instance.generateTotp2fa case final value?) 'generate_totp2fa': value,
+      'auth': instance.auth,
+    };
 
 _$ChangePasswordImpl _$$ChangePasswordImplFromJson(Map<String, dynamic> json) =>
     _$ChangePasswordImpl(
@@ -164,25 +142,17 @@ _$GetPersonDetailsImpl _$$GetPersonDetailsImplFromJson(
     );
 
 Map<String, dynamic> _$$GetPersonDetailsImplToJson(
-    _$GetPersonDetailsImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('person_id', instance.personId);
-  writeNotNull('username', instance.username);
-  writeNotNull('sort', instance.sort?.toJson());
-  writeNotNull('page', instance.page);
-  writeNotNull('limit', instance.limit);
-  writeNotNull('community_id', instance.communityId);
-  writeNotNull('saved_only', instance.savedOnly);
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+        _$GetPersonDetailsImpl instance) =>
+    <String, dynamic>{
+      if (instance.personId case final value?) 'person_id': value,
+      if (instance.username case final value?) 'username': value,
+      if (instance.sort?.toJson() case final value?) 'sort': value,
+      if (instance.page case final value?) 'page': value,
+      if (instance.limit case final value?) 'limit': value,
+      if (instance.communityId case final value?) 'community_id': value,
+      if (instance.savedOnly case final value?) 'saved_only': value,
+      if (instance.auth case final value?) 'auth': value,
+    };
 
 _$MarkAllAsReadImpl _$$MarkAllAsReadImplFromJson(Map<String, dynamic> json) =>
     _$MarkAllAsReadImpl(
@@ -218,24 +188,15 @@ _$BanPersonImpl _$$BanPersonImplFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String,
     );
 
-Map<String, dynamic> _$$BanPersonImplToJson(_$BanPersonImpl instance) {
-  final val = <String, dynamic>{
-    'person_id': instance.personId,
-    'ban': instance.ban,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('remove_data', instance.removeData);
-  writeNotNull('reason', instance.reason);
-  writeNotNull('expires', instance.expires);
-  val['auth'] = instance.auth;
-  return val;
-}
+Map<String, dynamic> _$$BanPersonImplToJson(_$BanPersonImpl instance) =>
+    <String, dynamic>{
+      'person_id': instance.personId,
+      'ban': instance.ban,
+      if (instance.removeData case final value?) 'remove_data': value,
+      if (instance.reason case final value?) 'reason': value,
+      if (instance.expires case final value?) 'expires': value,
+      'auth': instance.auth,
+    };
 
 _$GetRepliesImpl _$$GetRepliesImplFromJson(Map<String, dynamic> json) =>
     _$GetRepliesImpl(
@@ -248,22 +209,14 @@ _$GetRepliesImpl _$$GetRepliesImplFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String,
     );
 
-Map<String, dynamic> _$$GetRepliesImplToJson(_$GetRepliesImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('sort', instance.sort?.toJson());
-  writeNotNull('page', instance.page);
-  writeNotNull('limit', instance.limit);
-  writeNotNull('unread_only', instance.unreadOnly);
-  val['auth'] = instance.auth;
-  return val;
-}
+Map<String, dynamic> _$$GetRepliesImplToJson(_$GetRepliesImpl instance) =>
+    <String, dynamic>{
+      if (instance.sort?.toJson() case final value?) 'sort': value,
+      if (instance.page case final value?) 'page': value,
+      if (instance.limit case final value?) 'limit': value,
+      if (instance.unreadOnly case final value?) 'unread_only': value,
+      'auth': instance.auth,
+    };
 
 _$GetPersonMentionsImpl _$$GetPersonMentionsImplFromJson(
         Map<String, dynamic> json) =>
@@ -278,22 +231,14 @@ _$GetPersonMentionsImpl _$$GetPersonMentionsImplFromJson(
     );
 
 Map<String, dynamic> _$$GetPersonMentionsImplToJson(
-    _$GetPersonMentionsImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('sort', instance.sort?.toJson());
-  writeNotNull('page', instance.page);
-  writeNotNull('limit', instance.limit);
-  writeNotNull('unread_only', instance.unreadOnly);
-  val['auth'] = instance.auth;
-  return val;
-}
+        _$GetPersonMentionsImpl instance) =>
+    <String, dynamic>{
+      if (instance.sort?.toJson() case final value?) 'sort': value,
+      if (instance.page case final value?) 'page': value,
+      if (instance.limit case final value?) 'limit': value,
+      if (instance.unreadOnly case final value?) 'unread_only': value,
+      'auth': instance.auth,
+    };
 
 _$MarkPersonMentionAsReadImpl _$$MarkPersonMentionAsReadImplFromJson(
         Map<String, dynamic> json) =>
@@ -422,21 +367,13 @@ _$GetPrivateMessagesImpl _$$GetPrivateMessagesImplFromJson(
     );
 
 Map<String, dynamic> _$$GetPrivateMessagesImplToJson(
-    _$GetPrivateMessagesImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('unread_only', instance.unreadOnly);
-  writeNotNull('page', instance.page);
-  writeNotNull('limit', instance.limit);
-  val['auth'] = instance.auth;
-  return val;
-}
+        _$GetPrivateMessagesImpl instance) =>
+    <String, dynamic>{
+      if (instance.unreadOnly case final value?) 'unread_only': value,
+      if (instance.page case final value?) 'page': value,
+      if (instance.limit case final value?) 'limit': value,
+      'auth': instance.auth,
+    };
 
 _$BlockPersonImpl _$$BlockPersonImplFromJson(Map<String, dynamic> json) =>
     _$BlockPersonImpl(
@@ -470,19 +407,11 @@ _$GetReportCountImpl _$$GetReportCountImplFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$$GetReportCountImplToJson(
-    _$GetReportCountImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('community_id', instance.communityId);
-  val['auth'] = instance.auth;
-  return val;
-}
+        _$GetReportCountImpl instance) =>
+    <String, dynamic>{
+      if (instance.communityId case final value?) 'community_id': value,
+      'auth': instance.auth,
+    };
 
 _$GetBannedPersonsImpl _$$GetBannedPersonsImplFromJson(
         Map<String, dynamic> json) =>

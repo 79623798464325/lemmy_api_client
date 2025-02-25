@@ -12,20 +12,11 @@ _$GetPostImpl _$$GetPostImplFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$GetPostImplToJson(_$GetPostImpl instance) {
-  final val = <String, dynamic>{
-    'id': instance.id,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+Map<String, dynamic> _$$GetPostImplToJson(_$GetPostImpl instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      if (instance.auth case final value?) 'auth': value,
+    };
 
 _$CreatePostImpl _$$CreatePostImplFromJson(Map<String, dynamic> json) =>
     _$CreatePostImpl(
@@ -38,25 +29,16 @@ _$CreatePostImpl _$$CreatePostImplFromJson(Map<String, dynamic> json) =>
       honeypot: json['honeypot'] as String?,
     );
 
-Map<String, dynamic> _$$CreatePostImplToJson(_$CreatePostImpl instance) {
-  final val = <String, dynamic>{
-    'name': instance.name,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('url', instance.url);
-  writeNotNull('body', instance.body);
-  writeNotNull('nsfw', instance.nsfw);
-  val['community_id'] = instance.communityId;
-  val['auth'] = instance.auth;
-  writeNotNull('honeypot', instance.honeypot);
-  return val;
-}
+Map<String, dynamic> _$$CreatePostImplToJson(_$CreatePostImpl instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      if (instance.url case final value?) 'url': value,
+      if (instance.body case final value?) 'body': value,
+      if (instance.nsfw case final value?) 'nsfw': value,
+      'community_id': instance.communityId,
+      'auth': instance.auth,
+      if (instance.honeypot case final value?) 'honeypot': value,
+    };
 
 _$GetPostsImpl _$$GetPostsImplFromJson(Map<String, dynamic> json) =>
     _$GetPostsImpl(
@@ -74,25 +56,17 @@ _$GetPostsImpl _$$GetPostsImplFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$GetPostsImplToJson(_$GetPostsImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('type_', instance.type?.toJson());
-  writeNotNull('sort', instance.sort?.toJson());
-  writeNotNull('page', instance.page);
-  writeNotNull('limit', instance.limit);
-  writeNotNull('community_id', instance.communityId);
-  writeNotNull('community_name', instance.communityName);
-  writeNotNull('saved_only', instance.savedOnly);
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+Map<String, dynamic> _$$GetPostsImplToJson(_$GetPostsImpl instance) =>
+    <String, dynamic>{
+      if (instance.type?.toJson() case final value?) 'type_': value,
+      if (instance.sort?.toJson() case final value?) 'sort': value,
+      if (instance.page case final value?) 'page': value,
+      if (instance.limit case final value?) 'limit': value,
+      if (instance.communityId case final value?) 'community_id': value,
+      if (instance.communityName case final value?) 'community_name': value,
+      if (instance.savedOnly case final value?) 'saved_only': value,
+      if (instance.auth case final value?) 'auth': value,
+    };
 
 _$CreatePostLikeImpl _$$CreatePostLikeImplFromJson(Map<String, dynamic> json) =>
     _$CreatePostLikeImpl(
@@ -119,24 +93,15 @@ _$EditPostImpl _$$EditPostImplFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String,
     );
 
-Map<String, dynamic> _$$EditPostImplToJson(_$EditPostImpl instance) {
-  final val = <String, dynamic>{
-    'post_id': instance.postId,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('name', instance.name);
-  writeNotNull('url', instance.url);
-  writeNotNull('body', instance.body);
-  writeNotNull('nsfw', instance.nsfw);
-  val['auth'] = instance.auth;
-  return val;
-}
+Map<String, dynamic> _$$EditPostImplToJson(_$EditPostImpl instance) =>
+    <String, dynamic>{
+      'post_id': instance.postId,
+      if (instance.name case final value?) 'name': value,
+      if (instance.url case final value?) 'url': value,
+      if (instance.body case final value?) 'body': value,
+      if (instance.nsfw case final value?) 'nsfw': value,
+      'auth': instance.auth,
+    };
 
 _$DeletePostImpl _$$DeletePostImplFromJson(Map<String, dynamic> json) =>
     _$DeletePostImpl(
@@ -160,22 +125,13 @@ _$RemovePostImpl _$$RemovePostImplFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String,
     );
 
-Map<String, dynamic> _$$RemovePostImplToJson(_$RemovePostImpl instance) {
-  final val = <String, dynamic>{
-    'post_id': instance.postId,
-    'removed': instance.removed,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('reason', instance.reason);
-  val['auth'] = instance.auth;
-  return val;
-}
+Map<String, dynamic> _$$RemovePostImplToJson(_$RemovePostImpl instance) =>
+    <String, dynamic>{
+      'post_id': instance.postId,
+      'removed': instance.removed,
+      if (instance.reason case final value?) 'reason': value,
+      'auth': instance.auth,
+    };
 
 _$LockPostImpl _$$LockPostImplFromJson(Map<String, dynamic> json) =>
     _$LockPostImpl(
@@ -274,22 +230,14 @@ _$ListPostReportsImpl _$$ListPostReportsImplFromJson(
     );
 
 Map<String, dynamic> _$$ListPostReportsImplToJson(
-    _$ListPostReportsImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('page', instance.page);
-  writeNotNull('limit', instance.limit);
-  writeNotNull('community_id', instance.communityId);
-  writeNotNull('unresolved_only', instance.unresolvedOnly);
-  val['auth'] = instance.auth;
-  return val;
-}
+        _$ListPostReportsImpl instance) =>
+    <String, dynamic>{
+      if (instance.page case final value?) 'page': value,
+      if (instance.limit case final value?) 'limit': value,
+      if (instance.communityId case final value?) 'community_id': value,
+      if (instance.unresolvedOnly case final value?) 'unresolved_only': value,
+      'auth': instance.auth,
+    };
 
 _$MarkPostAsReadImpl _$$MarkPostAsReadImplFromJson(Map<String, dynamic> json) =>
     _$MarkPostAsReadImpl(

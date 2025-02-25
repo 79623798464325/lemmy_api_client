@@ -41,30 +41,6 @@ class Search with _$Search implements LemmyApiQuery<SearchResults> {
 }
 
 @freezed
-class GetModlog with _$GetModlog implements LemmyApiQuery<Modlog> {
-  @apiSerde
-  const factory GetModlog({
-    int? modPersonId,
-    int? communityId,
-    int? page,
-    int? limit,
-    String? auth,
-  }) = _GetModlog;
-
-  const GetModlog._();
-
-  factory GetModlog.fromJson(Map<String, dynamic> json) =>
-      _$GetModlogFromJson(json);
-
-  final path = '/modlog';
-
-  final httpMethod = HttpMethod.get;
-
-  @override
-  Modlog responseFactory(Map<String, dynamic> json) => Modlog.fromJson(json);
-}
-
-@freezed
 class CreateSite with _$CreateSite implements LemmyApiQuery<SiteView> {
   @apiSerde
   const factory CreateSite({
