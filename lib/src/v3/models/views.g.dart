@@ -8,7 +8,7 @@ part of 'views.dart';
 
 _$PersonViewSafeImpl _$$PersonViewSafeImplFromJson(Map<String, dynamic> json) =>
     _$PersonViewSafeImpl(
-      person: PersonSafe.fromJson(json['person'] as Map<String, dynamic>),
+      person: Person.fromJson(json['person'] as Map<String, dynamic>),
       counts: PersonAggregates.fromJson(json['counts'] as Map<String, dynamic>),
       instanceHost: json['instance_host'] as String,
     );
@@ -27,11 +27,11 @@ _$PersonMentionViewImpl _$$PersonMentionViewImplFromJson(
       personMention: PersonMention.fromJson(
           json['person_mention'] as Map<String, dynamic>),
       comment: Comment.fromJson(json['comment'] as Map<String, dynamic>),
-      creator: PersonSafe.fromJson(json['creator'] as Map<String, dynamic>),
+      creator: Person.fromJson(json['creator'] as Map<String, dynamic>),
       post: Post.fromJson(json['post'] as Map<String, dynamic>),
       community:
           CommunitySafe.fromJson(json['community'] as Map<String, dynamic>),
-      recipient: PersonSafe.fromJson(json['recipient'] as Map<String, dynamic>),
+      recipient: Person.fromJson(json['recipient'] as Map<String, dynamic>),
       counts:
           CommentAggregates.fromJson(json['counts'] as Map<String, dynamic>),
       creatorBannedFromCommunity: json['creator_banned_from_community'] as bool,
@@ -67,7 +67,7 @@ _$LocalUserSettingsViewImpl _$$LocalUserSettingsViewImplFromJson(
     _$LocalUserSettingsViewImpl(
       localUser: LocalUserSettings.fromJson(
           json['local_user'] as Map<String, dynamic>),
-      person: PersonSafe.fromJson(json['person'] as Map<String, dynamic>),
+      person: Person.fromJson(json['person'] as Map<String, dynamic>),
       counts: PersonAggregates.fromJson(json['counts'] as Map<String, dynamic>),
       instanceHost: json['instance_host'] as String,
     );
@@ -100,8 +100,8 @@ _$PrivateMessageViewImpl _$$PrivateMessageViewImplFromJson(
     _$PrivateMessageViewImpl(
       privateMessage: PrivateMessage.fromJson(
           json['private_message'] as Map<String, dynamic>),
-      creator: PersonSafe.fromJson(json['creator'] as Map<String, dynamic>),
-      recipient: PersonSafe.fromJson(json['recipient'] as Map<String, dynamic>),
+      creator: Person.fromJson(json['creator'] as Map<String, dynamic>),
+      recipient: Person.fromJson(json['recipient'] as Map<String, dynamic>),
       instanceHost: json['instance_host'] as String,
     );
 
@@ -117,14 +117,19 @@ Map<String, dynamic> _$$PrivateMessageViewImplToJson(
 _$PostViewImpl _$$PostViewImplFromJson(Map<String, dynamic> json) =>
     _$PostViewImpl(
       post: Post.fromJson(json['post'] as Map<String, dynamic>),
-      creator: PersonSafe.fromJson(json['creator'] as Map<String, dynamic>),
+      creator: Person.fromJson(json['creator'] as Map<String, dynamic>),
       community:
           CommunitySafe.fromJson(json['community'] as Map<String, dynamic>),
+      imageDetails: json['image_details'] == null
+          ? null
+          : ImageDetails.fromJson(
+              json['image_details'] as Map<String, dynamic>),
       creatorBannedFromCommunity: json['creator_banned_from_community'] as bool,
       counts: PostAggregates.fromJson(json['counts'] as Map<String, dynamic>),
       subscribed: json['subscribed'] as String,
       saved: json['saved'] as bool,
       read: json['read'] as bool,
+      hidden: json['hidden'] as bool?,
       creatorBlocked: json['creator_blocked'] as bool,
       myVote: json['my_vote'] == null
           ? null
@@ -138,11 +143,13 @@ Map<String, dynamic> _$$PostViewImplToJson(_$PostViewImpl instance) =>
       'post': instance.post.toJson(),
       'creator': instance.creator.toJson(),
       'community': instance.community.toJson(),
+      'image_details': instance.imageDetails?.toJson(),
       'creator_banned_from_community': instance.creatorBannedFromCommunity,
       'counts': instance.counts.toJson(),
       'subscribed': instance.subscribed,
       'saved': instance.saved,
       'read': instance.read,
+      'hidden': instance.hidden,
       'creator_blocked': instance.creatorBlocked,
       'my_vote': instance.myVote?.toJson(),
       'unread_comments': instance.unreadComments,
@@ -156,9 +163,9 @@ _$PostReportViewImpl _$$PostReportViewImplFromJson(Map<String, dynamic> json) =>
       post: Post.fromJson(json['post'] as Map<String, dynamic>),
       community:
           CommunitySafe.fromJson(json['community'] as Map<String, dynamic>),
-      creator: PersonSafe.fromJson(json['creator'] as Map<String, dynamic>),
+      creator: Person.fromJson(json['creator'] as Map<String, dynamic>),
       postCreator:
-          PersonSafe.fromJson(json['post_creator'] as Map<String, dynamic>),
+          Person.fromJson(json['post_creator'] as Map<String, dynamic>),
       creatorBannedFromCommunity: json['creator_banned_from_community'] as bool,
       myVote: json['my_vote'] == null
           ? null
@@ -166,7 +173,7 @@ _$PostReportViewImpl _$$PostReportViewImplFromJson(Map<String, dynamic> json) =>
       counts: PostAggregates.fromJson(json['counts'] as Map<String, dynamic>),
       resolver: json['resolver'] == null
           ? null
-          : PersonSafe.fromJson(json['resolver'] as Map<String, dynamic>),
+          : Person.fromJson(json['resolver'] as Map<String, dynamic>),
       instanceHost: json['instance_host'] as String,
     );
 
@@ -188,7 +195,7 @@ Map<String, dynamic> _$$PostReportViewImplToJson(
 _$CommentViewImpl _$$CommentViewImplFromJson(Map<String, dynamic> json) =>
     _$CommentViewImpl(
       comment: Comment.fromJson(json['comment'] as Map<String, dynamic>),
-      creator: PersonSafe.fromJson(json['creator'] as Map<String, dynamic>),
+      creator: Person.fromJson(json['creator'] as Map<String, dynamic>),
       post: Post.fromJson(json['post'] as Map<String, dynamic>),
       community:
           CommunitySafe.fromJson(json['community'] as Map<String, dynamic>),
@@ -225,11 +232,11 @@ _$CommentReplyViewImpl _$$CommentReplyViewImplFromJson(
       commentReply:
           CommentReply.fromJson(json['comment_reply'] as Map<String, dynamic>),
       comment: Comment.fromJson(json['comment'] as Map<String, dynamic>),
-      creator: PersonSafe.fromJson(json['creator'] as Map<String, dynamic>),
+      creator: Person.fromJson(json['creator'] as Map<String, dynamic>),
       post: Post.fromJson(json['post'] as Map<String, dynamic>),
       community:
           CommunitySafe.fromJson(json['community'] as Map<String, dynamic>),
-      recipient: PersonSafe.fromJson(json['recipient'] as Map<String, dynamic>),
+      recipient: Person.fromJson(json['recipient'] as Map<String, dynamic>),
       counts:
           CommentAggregates.fromJson(json['counts'] as Map<String, dynamic>),
       creatorBannedFromCommunity: json['creator_banned_from_community'] as bool,
@@ -269,9 +276,9 @@ _$CommentReportViewImpl _$$CommentReportViewImplFromJson(
       post: Post.fromJson(json['post'] as Map<String, dynamic>),
       community:
           CommunitySafe.fromJson(json['community'] as Map<String, dynamic>),
-      creator: PersonSafe.fromJson(json['creator'] as Map<String, dynamic>),
+      creator: Person.fromJson(json['creator'] as Map<String, dynamic>),
       commentCreator:
-          PersonSafe.fromJson(json['comment_creator'] as Map<String, dynamic>),
+          Person.fromJson(json['comment_creator'] as Map<String, dynamic>),
       creatorBannedFromCommunity: json['creator_banned_from_community'] as bool,
       myVote: json['my_vote'] == null
           ? null
@@ -280,7 +287,7 @@ _$CommentReportViewImpl _$$CommentReportViewImplFromJson(
           CommentAggregates.fromJson(json['counts'] as Map<String, dynamic>),
       resolver: json['resolver'] == null
           ? null
-          : PersonSafe.fromJson(json['resolver'] as Map<String, dynamic>),
+          : Person.fromJson(json['resolver'] as Map<String, dynamic>),
       instanceHost: json['instance_host'] as String,
     );
 
@@ -305,11 +312,11 @@ _$ModAddCommunityViewImpl _$$ModAddCommunityViewImplFromJson(
     _$ModAddCommunityViewImpl(
       modAddCommunity: ModAddCommunity.fromJson(
           json['mod_add_community'] as Map<String, dynamic>),
-      moderator: PersonSafe.fromJson(json['moderator'] as Map<String, dynamic>),
+      moderator: Person.fromJson(json['moderator'] as Map<String, dynamic>),
       community:
           CommunitySafe.fromJson(json['community'] as Map<String, dynamic>),
       moddedPerson:
-          PersonSafe.fromJson(json['modded_person'] as Map<String, dynamic>),
+          Person.fromJson(json['modded_person'] as Map<String, dynamic>),
       instanceHost: json['instance_host'] as String,
     );
 
@@ -328,11 +335,11 @@ _$ModTransferCommunityViewImpl _$$ModTransferCommunityViewImplFromJson(
     _$ModTransferCommunityViewImpl(
       modTransferCommunity: ModTransferCommunity.fromJson(
           json['mod_transfer_community'] as Map<String, dynamic>),
-      moderator: PersonSafe.fromJson(json['moderator'] as Map<String, dynamic>),
+      moderator: Person.fromJson(json['moderator'] as Map<String, dynamic>),
       community:
           CommunitySafe.fromJson(json['community'] as Map<String, dynamic>),
       moddedPerson:
-          PersonSafe.fromJson(json['modded_person'] as Map<String, dynamic>),
+          Person.fromJson(json['modded_person'] as Map<String, dynamic>),
       instanceHost: json['instance_host'] as String,
     );
 
@@ -349,9 +356,9 @@ Map<String, dynamic> _$$ModTransferCommunityViewImplToJson(
 _$ModAddViewImpl _$$ModAddViewImplFromJson(Map<String, dynamic> json) =>
     _$ModAddViewImpl(
       modAdd: ModAdd.fromJson(json['mod_add'] as Map<String, dynamic>),
-      moderator: PersonSafe.fromJson(json['moderator'] as Map<String, dynamic>),
+      moderator: Person.fromJson(json['moderator'] as Map<String, dynamic>),
       moddedPerson:
-          PersonSafe.fromJson(json['modded_person'] as Map<String, dynamic>),
+          Person.fromJson(json['modded_person'] as Map<String, dynamic>),
       instanceHost: json['instance_host'] as String,
     );
 
@@ -363,16 +370,109 @@ Map<String, dynamic> _$$ModAddViewImplToJson(_$ModAddViewImpl instance) =>
       'instance_host': instance.instanceHost,
     };
 
+_$AdminPurgePersonViewImpl _$$AdminPurgePersonViewImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AdminPurgePersonViewImpl(
+      adminPurgePerson: AdminPurgePerson.fromJson(
+          json['admin_purge_person'] as Map<String, dynamic>),
+      admin: json['admin'] == null
+          ? null
+          : Person.fromJson(json['admin'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$AdminPurgePersonViewImplToJson(
+        _$AdminPurgePersonViewImpl instance) =>
+    <String, dynamic>{
+      'admin_purge_person': instance.adminPurgePerson.toJson(),
+      'admin': instance.admin?.toJson(),
+    };
+
+_$AdminPurgePostViewImpl _$$AdminPurgePostViewImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AdminPurgePostViewImpl(
+      adminPurgePost: AdminPurgePost.fromJson(
+          json['admin_purge_post'] as Map<String, dynamic>),
+      admin: json['admin'] == null
+          ? null
+          : Person.fromJson(json['admin'] as Map<String, dynamic>),
+      community:
+          CommunitySafe.fromJson(json['community'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$AdminPurgePostViewImplToJson(
+        _$AdminPurgePostViewImpl instance) =>
+    <String, dynamic>{
+      'admin_purge_post': instance.adminPurgePost.toJson(),
+      'admin': instance.admin?.toJson(),
+      'community': instance.community.toJson(),
+    };
+
+_$AdminPurgeCommunityViewImpl _$$AdminPurgeCommunityViewImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AdminPurgeCommunityViewImpl(
+      adminPurgeCommunity: AdminPurgeCommunity.fromJson(
+          json['admin_purge_community'] as Map<String, dynamic>),
+      admin: json['admin'] == null
+          ? null
+          : Person.fromJson(json['admin'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$AdminPurgeCommunityViewImplToJson(
+        _$AdminPurgeCommunityViewImpl instance) =>
+    <String, dynamic>{
+      'admin_purge_community': instance.adminPurgeCommunity.toJson(),
+      'admin': instance.admin?.toJson(),
+    };
+
+_$AdminPurgeCommentViewImpl _$$AdminPurgeCommentViewImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AdminPurgeCommentViewImpl(
+      adminPurgeComment: AdminPurgeComment.fromJson(
+          json['admin_purge_comment'] as Map<String, dynamic>),
+      admin: json['admin'] == null
+          ? null
+          : Person.fromJson(json['admin'] as Map<String, dynamic>),
+      post: Post.fromJson(json['post'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$AdminPurgeCommentViewImplToJson(
+        _$AdminPurgeCommentViewImpl instance) =>
+    <String, dynamic>{
+      'admin_purge_comment': instance.adminPurgeComment.toJson(),
+      'admin': instance.admin?.toJson(),
+      'post': instance.post.toJson(),
+    };
+
+_$ModHideCommunityViewImpl _$$ModHideCommunityViewImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ModHideCommunityViewImpl(
+      modHideCommunity: ModHideCommunity.fromJson(
+          json['mod_hide_community'] as Map<String, dynamic>),
+      admin: json['admin'] == null
+          ? null
+          : Person.fromJson(json['admin'] as Map<String, dynamic>),
+      community:
+          CommunitySafe.fromJson(json['community'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$ModHideCommunityViewImplToJson(
+        _$ModHideCommunityViewImpl instance) =>
+    <String, dynamic>{
+      'mod_hide_community': instance.modHideCommunity.toJson(),
+      'admin': instance.admin?.toJson(),
+      'community': instance.community.toJson(),
+    };
+
 _$ModBanFromCommunityViewImpl _$$ModBanFromCommunityViewImplFromJson(
         Map<String, dynamic> json) =>
     _$ModBanFromCommunityViewImpl(
       modBanFromCommunity: ModBanFromCommunity.fromJson(
           json['mod_ban_from_community'] as Map<String, dynamic>),
-      moderator: PersonSafe.fromJson(json['moderator'] as Map<String, dynamic>),
+      moderator: Person.fromJson(json['moderator'] as Map<String, dynamic>),
       community:
           CommunitySafe.fromJson(json['community'] as Map<String, dynamic>),
       bannedPerson:
-          PersonSafe.fromJson(json['banned_person'] as Map<String, dynamic>),
+          Person.fromJson(json['banned_person'] as Map<String, dynamic>),
       instanceHost: json['instance_host'] as String,
     );
 
@@ -389,9 +489,9 @@ Map<String, dynamic> _$$ModBanFromCommunityViewImplToJson(
 _$ModBanViewImpl _$$ModBanViewImplFromJson(Map<String, dynamic> json) =>
     _$ModBanViewImpl(
       modBan: ModBan.fromJson(json['mod_ban'] as Map<String, dynamic>),
-      moderator: PersonSafe.fromJson(json['moderator'] as Map<String, dynamic>),
+      moderator: Person.fromJson(json['moderator'] as Map<String, dynamic>),
       bannedPerson:
-          PersonSafe.fromJson(json['banned_person'] as Map<String, dynamic>),
+          Person.fromJson(json['banned_person'] as Map<String, dynamic>),
       instanceHost: json['instance_host'] as String,
     );
 
@@ -408,7 +508,7 @@ _$ModLockPostViewImpl _$$ModLockPostViewImplFromJson(
     _$ModLockPostViewImpl(
       modLockPost:
           ModLockPost.fromJson(json['mod_lock_post'] as Map<String, dynamic>),
-      moderator: PersonSafe.fromJson(json['moderator'] as Map<String, dynamic>),
+      moderator: Person.fromJson(json['moderator'] as Map<String, dynamic>),
       post: Post.fromJson(json['post'] as Map<String, dynamic>),
       community:
           CommunitySafe.fromJson(json['community'] as Map<String, dynamic>),
@@ -425,14 +525,57 @@ Map<String, dynamic> _$$ModLockPostViewImplToJson(
       'instance_host': instance.instanceHost,
     };
 
+_$ModFeaturePostViewImpl _$$ModFeaturePostViewImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ModFeaturePostViewImpl(
+      modFeaturePost: ModFeaturePost.fromJson(
+          json['mod_feature_post'] as Map<String, dynamic>),
+      moderator: json['moderator'] == null
+          ? null
+          : Person.fromJson(json['moderator'] as Map<String, dynamic>),
+      post: Post.fromJson(json['post'] as Map<String, dynamic>),
+      community:
+          CommunitySafe.fromJson(json['community'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$ModFeaturePostViewImplToJson(
+        _$ModFeaturePostViewImpl instance) =>
+    <String, dynamic>{
+      'mod_feature_post': instance.modFeaturePost.toJson(),
+      'moderator': instance.moderator?.toJson(),
+      'post': instance.post.toJson(),
+      'community': instance.community.toJson(),
+    };
+
+_$ModFeaturePostImpl _$$ModFeaturePostImplFromJson(Map<String, dynamic> json) =>
+    _$ModFeaturePostImpl(
+      id: (json['id'] as num).toInt(),
+      modPersonId: (json['mod_person_id'] as num).toInt(),
+      postId: (json['post_id'] as num).toInt(),
+      featured: json['featured'] as bool,
+      when: json['when_'] as String,
+      isFeaturedCommunity: json['is_featured_community'] as bool,
+    );
+
+Map<String, dynamic> _$$ModFeaturePostImplToJson(
+        _$ModFeaturePostImpl instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'mod_person_id': instance.modPersonId,
+      'post_id': instance.postId,
+      'featured': instance.featured,
+      'when_': instance.when,
+      'is_featured_community': instance.isFeaturedCommunity,
+    };
+
 _$ModRemoveCommentViewImpl _$$ModRemoveCommentViewImplFromJson(
         Map<String, dynamic> json) =>
     _$ModRemoveCommentViewImpl(
       modRemoveComment: ModRemoveComment.fromJson(
           json['mod_remove_comment'] as Map<String, dynamic>),
-      moderator: PersonSafe.fromJson(json['moderator'] as Map<String, dynamic>),
+      moderator: Person.fromJson(json['moderator'] as Map<String, dynamic>),
       comment: Comment.fromJson(json['comment'] as Map<String, dynamic>),
-      commenter: PersonSafe.fromJson(json['commenter'] as Map<String, dynamic>),
+      commenter: Person.fromJson(json['commenter'] as Map<String, dynamic>),
       post: Post.fromJson(json['post'] as Map<String, dynamic>),
       community:
           CommunitySafe.fromJson(json['community'] as Map<String, dynamic>),
@@ -456,7 +599,7 @@ _$ModRemoveCommunityViewImpl _$$ModRemoveCommunityViewImplFromJson(
     _$ModRemoveCommunityViewImpl(
       modRemoveCommunity: ModRemoveCommunity.fromJson(
           json['mod_remove_community'] as Map<String, dynamic>),
-      moderator: PersonSafe.fromJson(json['moderator'] as Map<String, dynamic>),
+      moderator: Person.fromJson(json['moderator'] as Map<String, dynamic>),
       community:
           CommunitySafe.fromJson(json['community'] as Map<String, dynamic>),
       instanceHost: json['instance_host'] as String,
@@ -476,7 +619,7 @@ _$ModRemovePostViewImpl _$$ModRemovePostViewImplFromJson(
     _$ModRemovePostViewImpl(
       modRemovePost: ModRemovePost.fromJson(
           json['mod_remove_post'] as Map<String, dynamic>),
-      moderator: PersonSafe.fromJson(json['moderator'] as Map<String, dynamic>),
+      moderator: Person.fromJson(json['moderator'] as Map<String, dynamic>),
       post: Post.fromJson(json['post'] as Map<String, dynamic>),
       community:
           CommunitySafe.fromJson(json['community'] as Map<String, dynamic>),
@@ -498,7 +641,7 @@ _$ModStickyPostViewImpl _$$ModStickyPostViewImplFromJson(
     _$ModStickyPostViewImpl(
       modStickyPost: ModStickyPost.fromJson(
           json['mod_sticky_post'] as Map<String, dynamic>),
-      moderator: PersonSafe.fromJson(json['moderator'] as Map<String, dynamic>),
+      moderator: Person.fromJson(json['moderator'] as Map<String, dynamic>),
       post: Post.fromJson(json['post'] as Map<String, dynamic>),
       community:
           CommunitySafe.fromJson(json['community'] as Map<String, dynamic>),
@@ -520,7 +663,7 @@ _$CommunityFollowerViewImpl _$$CommunityFollowerViewImplFromJson(
     _$CommunityFollowerViewImpl(
       community:
           CommunitySafe.fromJson(json['community'] as Map<String, dynamic>),
-      follower: PersonSafe.fromJson(json['follower'] as Map<String, dynamic>),
+      follower: Person.fromJson(json['follower'] as Map<String, dynamic>),
       instanceHost: json['instance_host'] as String,
     );
 
@@ -537,7 +680,7 @@ _$CommunityModeratorViewImpl _$$CommunityModeratorViewImplFromJson(
     _$CommunityModeratorViewImpl(
       community:
           CommunitySafe.fromJson(json['community'] as Map<String, dynamic>),
-      moderator: PersonSafe.fromJson(json['moderator'] as Map<String, dynamic>),
+      moderator: Person.fromJson(json['moderator'] as Map<String, dynamic>),
       instanceHost: json['instance_host'] as String,
     );
 
@@ -552,8 +695,8 @@ Map<String, dynamic> _$$CommunityModeratorViewImplToJson(
 _$PersonBlockViewImpl _$$PersonBlockViewImplFromJson(
         Map<String, dynamic> json) =>
     _$PersonBlockViewImpl(
-      person: PersonSafe.fromJson(json['person'] as Map<String, dynamic>),
-      target: PersonSafe.fromJson(json['target'] as Map<String, dynamic>),
+      person: Person.fromJson(json['person'] as Map<String, dynamic>),
+      target: Person.fromJson(json['target'] as Map<String, dynamic>),
       instanceHost: json['instance_host'] as String,
     );
 
@@ -568,7 +711,7 @@ Map<String, dynamic> _$$PersonBlockViewImplToJson(
 _$CommunityBlockViewImpl _$$CommunityBlockViewImplFromJson(
         Map<String, dynamic> json) =>
     _$CommunityBlockViewImpl(
-      person: PersonSafe.fromJson(json['person'] as Map<String, dynamic>),
+      person: Person.fromJson(json['person'] as Map<String, dynamic>),
       community:
           CommunitySafe.fromJson(json['community'] as Map<String, dynamic>),
       instanceHost: json['instance_host'] as String,
@@ -587,7 +730,7 @@ _$CommunityPersonBanViewImpl _$$CommunityPersonBanViewImplFromJson(
     _$CommunityPersonBanViewImpl(
       community:
           CommunitySafe.fromJson(json['community'] as Map<String, dynamic>),
-      person: PersonSafe.fromJson(json['person'] as Map<String, dynamic>),
+      person: Person.fromJson(json['person'] as Map<String, dynamic>),
       instanceHost: json['instance_host'] as String,
     );
 
@@ -626,10 +769,10 @@ _$RegistrationApplicationViewImpl _$$RegistrationApplicationViewImplFromJson(
           json['registration_application'] as Map<String, dynamic>),
       creatorLocalUser: LocalUserSettings.fromJson(
           json['creator_local_user'] as Map<String, dynamic>),
-      creator: PersonSafe.fromJson(json['creator'] as Map<String, dynamic>),
+      creator: Person.fromJson(json['creator'] as Map<String, dynamic>),
       admin: json['admin'] == null
           ? null
-          : PersonSafe.fromJson(json['admin'] as Map<String, dynamic>),
+          : Person.fromJson(json['admin'] as Map<String, dynamic>),
       instanceHost: json['instance_host'] as String,
     );
 

@@ -188,6 +188,8 @@ mixin _$CreatePost {
   String? get url => throw _privateConstructorUsedError;
   String? get body => throw _privateConstructorUsedError;
   bool? get nsfw => throw _privateConstructorUsedError;
+  String? get altText => throw _privateConstructorUsedError;
+  String? get customThumbnail => throw _privateConstructorUsedError;
   int get communityId => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
   String? get honeypot => throw _privateConstructorUsedError;
@@ -213,6 +215,8 @@ abstract class $CreatePostCopyWith<$Res> {
       String? url,
       String? body,
       bool? nsfw,
+      String? altText,
+      String? customThumbnail,
       int communityId,
       String auth,
       String? honeypot});
@@ -237,6 +241,8 @@ class _$CreatePostCopyWithImpl<$Res, $Val extends CreatePost>
     Object? url = freezed,
     Object? body = freezed,
     Object? nsfw = freezed,
+    Object? altText = freezed,
+    Object? customThumbnail = freezed,
     Object? communityId = null,
     Object? auth = null,
     Object? honeypot = freezed,
@@ -258,6 +264,14 @@ class _$CreatePostCopyWithImpl<$Res, $Val extends CreatePost>
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
               as bool?,
+      altText: freezed == altText
+          ? _value.altText
+          : altText // ignore: cast_nullable_to_non_nullable
+              as String?,
+      customThumbnail: freezed == customThumbnail
+          ? _value.customThumbnail
+          : customThumbnail // ignore: cast_nullable_to_non_nullable
+              as String?,
       communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -287,6 +301,8 @@ abstract class _$$CreatePostImplCopyWith<$Res>
       String? url,
       String? body,
       bool? nsfw,
+      String? altText,
+      String? customThumbnail,
       int communityId,
       String auth,
       String? honeypot});
@@ -309,6 +325,8 @@ class __$$CreatePostImplCopyWithImpl<$Res>
     Object? url = freezed,
     Object? body = freezed,
     Object? nsfw = freezed,
+    Object? altText = freezed,
+    Object? customThumbnail = freezed,
     Object? communityId = null,
     Object? auth = null,
     Object? honeypot = freezed,
@@ -330,6 +348,14 @@ class __$$CreatePostImplCopyWithImpl<$Res>
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
               as bool?,
+      altText: freezed == altText
+          ? _value.altText
+          : altText // ignore: cast_nullable_to_non_nullable
+              as String?,
+      customThumbnail: freezed == customThumbnail
+          ? _value.customThumbnail
+          : customThumbnail // ignore: cast_nullable_to_non_nullable
+              as String?,
       communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -355,6 +381,8 @@ class _$CreatePostImpl extends _CreatePost {
       this.url,
       this.body,
       this.nsfw,
+      this.altText,
+      this.customThumbnail,
       required this.communityId,
       required this.auth,
       this.honeypot})
@@ -372,6 +400,10 @@ class _$CreatePostImpl extends _CreatePost {
   @override
   final bool? nsfw;
   @override
+  final String? altText;
+  @override
+  final String? customThumbnail;
+  @override
   final int communityId;
   @override
   final String auth;
@@ -380,7 +412,7 @@ class _$CreatePostImpl extends _CreatePost {
 
   @override
   String toString() {
-    return 'CreatePost(name: $name, url: $url, body: $body, nsfw: $nsfw, communityId: $communityId, auth: $auth, honeypot: $honeypot)';
+    return 'CreatePost(name: $name, url: $url, body: $body, nsfw: $nsfw, altText: $altText, customThumbnail: $customThumbnail, communityId: $communityId, auth: $auth, honeypot: $honeypot)';
   }
 
   @override
@@ -392,6 +424,9 @@ class _$CreatePostImpl extends _CreatePost {
             (identical(other.url, url) || other.url == url) &&
             (identical(other.body, body) || other.body == body) &&
             (identical(other.nsfw, nsfw) || other.nsfw == nsfw) &&
+            (identical(other.altText, altText) || other.altText == altText) &&
+            (identical(other.customThumbnail, customThumbnail) ||
+                other.customThumbnail == customThumbnail) &&
             (identical(other.communityId, communityId) ||
                 other.communityId == communityId) &&
             (identical(other.auth, auth) || other.auth == auth) &&
@@ -401,8 +436,8 @@ class _$CreatePostImpl extends _CreatePost {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, name, url, body, nsfw, communityId, auth, honeypot);
+  int get hashCode => Object.hash(runtimeType, name, url, body, nsfw, altText,
+      customThumbnail, communityId, auth, honeypot);
 
   /// Create a copy of CreatePost
   /// with the given fields replaced by the non-null parameter values.
@@ -426,6 +461,8 @@ abstract class _CreatePost extends CreatePost {
       final String? url,
       final String? body,
       final bool? nsfw,
+      final String? altText,
+      final String? customThumbnail,
       required final int communityId,
       required final String auth,
       final String? honeypot}) = _$CreatePostImpl;
@@ -442,6 +479,10 @@ abstract class _CreatePost extends CreatePost {
   String? get body;
   @override
   bool? get nsfw;
+  @override
+  String? get altText;
+  @override
+  String? get customThumbnail;
   @override
   int get communityId;
   @override
@@ -472,6 +513,17 @@ mixin _$GetPosts {
   String? get communityName => throw _privateConstructorUsedError;
   bool? get savedOnly => throw _privateConstructorUsedError;
   String? get auth => throw _privateConstructorUsedError;
+  bool? get likedOnly =>
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
+  bool? get dislikedOnly =>
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
+  bool? get showHidden =>
+      throw _privateConstructorUsedError; // v0.19.4 (optional)
+  bool? get showRead =>
+      throw _privateConstructorUsedError; // v0.19.6 (optional)
+  bool? get showNsfw =>
+      throw _privateConstructorUsedError; // v0.19.6 (optional)
+  String? get pageCursor => throw _privateConstructorUsedError;
 
   /// Serializes this GetPosts to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -496,7 +548,13 @@ abstract class $GetPostsCopyWith<$Res> {
       int? communityId,
       String? communityName,
       bool? savedOnly,
-      String? auth});
+      String? auth,
+      bool? likedOnly,
+      bool? dislikedOnly,
+      bool? showHidden,
+      bool? showRead,
+      bool? showNsfw,
+      String? pageCursor});
 }
 
 /// @nodoc
@@ -522,6 +580,12 @@ class _$GetPostsCopyWithImpl<$Res, $Val extends GetPosts>
     Object? communityName = freezed,
     Object? savedOnly = freezed,
     Object? auth = freezed,
+    Object? likedOnly = freezed,
+    Object? dislikedOnly = freezed,
+    Object? showHidden = freezed,
+    Object? showRead = freezed,
+    Object? showNsfw = freezed,
+    Object? pageCursor = freezed,
   }) {
     return _then(_value.copyWith(
       type: freezed == type
@@ -556,6 +620,30 @@ class _$GetPostsCopyWithImpl<$Res, $Val extends GetPosts>
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
+      likedOnly: freezed == likedOnly
+          ? _value.likedOnly
+          : likedOnly // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      dislikedOnly: freezed == dislikedOnly
+          ? _value.dislikedOnly
+          : dislikedOnly // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      showHidden: freezed == showHidden
+          ? _value.showHidden
+          : showHidden // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      showRead: freezed == showRead
+          ? _value.showRead
+          : showRead // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      showNsfw: freezed == showNsfw
+          ? _value.showNsfw
+          : showNsfw // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      pageCursor: freezed == pageCursor
+          ? _value.pageCursor
+          : pageCursor // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -576,7 +664,13 @@ abstract class _$$GetPostsImplCopyWith<$Res>
       int? communityId,
       String? communityName,
       bool? savedOnly,
-      String? auth});
+      String? auth,
+      bool? likedOnly,
+      bool? dislikedOnly,
+      bool? showHidden,
+      bool? showRead,
+      bool? showNsfw,
+      String? pageCursor});
 }
 
 /// @nodoc
@@ -600,6 +694,12 @@ class __$$GetPostsImplCopyWithImpl<$Res>
     Object? communityName = freezed,
     Object? savedOnly = freezed,
     Object? auth = freezed,
+    Object? likedOnly = freezed,
+    Object? dislikedOnly = freezed,
+    Object? showHidden = freezed,
+    Object? showRead = freezed,
+    Object? showNsfw = freezed,
+    Object? pageCursor = freezed,
   }) {
     return _then(_$GetPostsImpl(
       type: freezed == type
@@ -634,6 +734,30 @@ class __$$GetPostsImplCopyWithImpl<$Res>
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
+      likedOnly: freezed == likedOnly
+          ? _value.likedOnly
+          : likedOnly // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      dislikedOnly: freezed == dislikedOnly
+          ? _value.dislikedOnly
+          : dislikedOnly // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      showHidden: freezed == showHidden
+          ? _value.showHidden
+          : showHidden // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      showRead: freezed == showRead
+          ? _value.showRead
+          : showRead // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      showNsfw: freezed == showNsfw
+          ? _value.showNsfw
+          : showNsfw // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      pageCursor: freezed == pageCursor
+          ? _value.pageCursor
+          : pageCursor // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -650,7 +774,13 @@ class _$GetPostsImpl extends _GetPosts {
       this.communityId,
       this.communityName,
       this.savedOnly,
-      this.auth})
+      this.auth,
+      this.likedOnly,
+      this.dislikedOnly,
+      this.showHidden,
+      this.showRead,
+      this.showNsfw,
+      this.pageCursor})
       : super._();
 
   factory _$GetPostsImpl.fromJson(Map<String, dynamic> json) =>
@@ -673,10 +803,27 @@ class _$GetPostsImpl extends _GetPosts {
   final bool? savedOnly;
   @override
   final String? auth;
+  @override
+  final bool? likedOnly;
+// v0.19.0 (optional)
+  @override
+  final bool? dislikedOnly;
+// v0.19.0 (optional)
+  @override
+  final bool? showHidden;
+// v0.19.4 (optional)
+  @override
+  final bool? showRead;
+// v0.19.6 (optional)
+  @override
+  final bool? showNsfw;
+// v0.19.6 (optional)
+  @override
+  final String? pageCursor;
 
   @override
   String toString() {
-    return 'GetPosts(type: $type, sort: $sort, page: $page, limit: $limit, communityId: $communityId, communityName: $communityName, savedOnly: $savedOnly, auth: $auth)';
+    return 'GetPosts(type: $type, sort: $sort, page: $page, limit: $limit, communityId: $communityId, communityName: $communityName, savedOnly: $savedOnly, auth: $auth, likedOnly: $likedOnly, dislikedOnly: $dislikedOnly, showHidden: $showHidden, showRead: $showRead, showNsfw: $showNsfw, pageCursor: $pageCursor)';
   }
 
   @override
@@ -694,13 +841,39 @@ class _$GetPostsImpl extends _GetPosts {
                 other.communityName == communityName) &&
             (identical(other.savedOnly, savedOnly) ||
                 other.savedOnly == savedOnly) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            (identical(other.auth, auth) || other.auth == auth) &&
+            (identical(other.likedOnly, likedOnly) ||
+                other.likedOnly == likedOnly) &&
+            (identical(other.dislikedOnly, dislikedOnly) ||
+                other.dislikedOnly == dislikedOnly) &&
+            (identical(other.showHidden, showHidden) ||
+                other.showHidden == showHidden) &&
+            (identical(other.showRead, showRead) ||
+                other.showRead == showRead) &&
+            (identical(other.showNsfw, showNsfw) ||
+                other.showNsfw == showNsfw) &&
+            (identical(other.pageCursor, pageCursor) ||
+                other.pageCursor == pageCursor));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, type, sort, page, limit,
-      communityId, communityName, savedOnly, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      type,
+      sort,
+      page,
+      limit,
+      communityId,
+      communityName,
+      savedOnly,
+      auth,
+      likedOnly,
+      dislikedOnly,
+      showHidden,
+      showRead,
+      showNsfw,
+      pageCursor);
 
   /// Create a copy of GetPosts
   /// with the given fields replaced by the non-null parameter values.
@@ -727,7 +900,13 @@ abstract class _GetPosts extends GetPosts {
       final int? communityId,
       final String? communityName,
       final bool? savedOnly,
-      final String? auth}) = _$GetPostsImpl;
+      final String? auth,
+      final bool? likedOnly,
+      final bool? dislikedOnly,
+      final bool? showHidden,
+      final bool? showRead,
+      final bool? showNsfw,
+      final String? pageCursor}) = _$GetPostsImpl;
   const _GetPosts._() : super._();
 
   factory _GetPosts.fromJson(Map<String, dynamic> json) =
@@ -750,6 +929,18 @@ abstract class _GetPosts extends GetPosts {
   bool? get savedOnly;
   @override
   String? get auth;
+  @override
+  bool? get likedOnly; // v0.19.0 (optional)
+  @override
+  bool? get dislikedOnly; // v0.19.0 (optional)
+  @override
+  bool? get showHidden; // v0.19.4 (optional)
+  @override
+  bool? get showRead; // v0.19.6 (optional)
+  @override
+  bool? get showNsfw; // v0.19.6 (optional)
+  @override
+  String? get pageCursor;
 
   /// Create a copy of GetPosts
   /// with the given fields replaced by the non-null parameter values.
@@ -958,6 +1149,8 @@ mixin _$EditPost {
   String? get name => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
   String? get body => throw _privateConstructorUsedError;
+  String? get altText => throw _privateConstructorUsedError;
+  String? get customThumbnail => throw _privateConstructorUsedError;
   bool? get nsfw => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
@@ -981,6 +1174,8 @@ abstract class $EditPostCopyWith<$Res> {
       String? name,
       String? url,
       String? body,
+      String? altText,
+      String? customThumbnail,
       bool? nsfw,
       String auth});
 }
@@ -1004,6 +1199,8 @@ class _$EditPostCopyWithImpl<$Res, $Val extends EditPost>
     Object? name = freezed,
     Object? url = freezed,
     Object? body = freezed,
+    Object? altText = freezed,
+    Object? customThumbnail = freezed,
     Object? nsfw = freezed,
     Object? auth = null,
   }) {
@@ -1023,6 +1220,14 @@ class _$EditPostCopyWithImpl<$Res, $Val extends EditPost>
       body: freezed == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
+              as String?,
+      altText: freezed == altText
+          ? _value.altText
+          : altText // ignore: cast_nullable_to_non_nullable
+              as String?,
+      customThumbnail: freezed == customThumbnail
+          ? _value.customThumbnail
+          : customThumbnail // ignore: cast_nullable_to_non_nullable
               as String?,
       nsfw: freezed == nsfw
           ? _value.nsfw
@@ -1049,6 +1254,8 @@ abstract class _$$EditPostImplCopyWith<$Res>
       String? name,
       String? url,
       String? body,
+      String? altText,
+      String? customThumbnail,
       bool? nsfw,
       String auth});
 }
@@ -1070,6 +1277,8 @@ class __$$EditPostImplCopyWithImpl<$Res>
     Object? name = freezed,
     Object? url = freezed,
     Object? body = freezed,
+    Object? altText = freezed,
+    Object? customThumbnail = freezed,
     Object? nsfw = freezed,
     Object? auth = null,
   }) {
@@ -1089,6 +1298,14 @@ class __$$EditPostImplCopyWithImpl<$Res>
       body: freezed == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
+              as String?,
+      altText: freezed == altText
+          ? _value.altText
+          : altText // ignore: cast_nullable_to_non_nullable
+              as String?,
+      customThumbnail: freezed == customThumbnail
+          ? _value.customThumbnail
+          : customThumbnail // ignore: cast_nullable_to_non_nullable
               as String?,
       nsfw: freezed == nsfw
           ? _value.nsfw
@@ -1111,6 +1328,8 @@ class _$EditPostImpl extends _EditPost {
       this.name,
       this.url,
       this.body,
+      this.altText,
+      this.customThumbnail,
       this.nsfw,
       required this.auth})
       : super._();
@@ -1127,13 +1346,17 @@ class _$EditPostImpl extends _EditPost {
   @override
   final String? body;
   @override
+  final String? altText;
+  @override
+  final String? customThumbnail;
+  @override
   final bool? nsfw;
   @override
   final String auth;
 
   @override
   String toString() {
-    return 'EditPost(postId: $postId, name: $name, url: $url, body: $body, nsfw: $nsfw, auth: $auth)';
+    return 'EditPost(postId: $postId, name: $name, url: $url, body: $body, altText: $altText, customThumbnail: $customThumbnail, nsfw: $nsfw, auth: $auth)';
   }
 
   @override
@@ -1145,14 +1368,17 @@ class _$EditPostImpl extends _EditPost {
             (identical(other.name, name) || other.name == name) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.body, body) || other.body == body) &&
+            (identical(other.altText, altText) || other.altText == altText) &&
+            (identical(other.customThumbnail, customThumbnail) ||
+                other.customThumbnail == customThumbnail) &&
             (identical(other.nsfw, nsfw) || other.nsfw == nsfw) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, postId, name, url, body, nsfw, auth);
+  int get hashCode => Object.hash(runtimeType, postId, name, url, body, altText,
+      customThumbnail, nsfw, auth);
 
   /// Create a copy of EditPost
   /// with the given fields replaced by the non-null parameter values.
@@ -1176,6 +1402,8 @@ abstract class _EditPost extends EditPost {
       final String? name,
       final String? url,
       final String? body,
+      final String? altText,
+      final String? customThumbnail,
       final bool? nsfw,
       required final String auth}) = _$EditPostImpl;
   const _EditPost._() : super._();
@@ -1191,6 +1419,10 @@ abstract class _EditPost extends EditPost {
   String? get url;
   @override
   String? get body;
+  @override
+  String? get altText;
+  @override
+  String? get customThumbnail;
   @override
   bool? get nsfw;
   @override
@@ -2943,6 +3175,8 @@ MarkPostAsRead _$MarkPostAsReadFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$MarkPostAsRead {
   int get postId => throw _privateConstructorUsedError;
+  List<int>? get postIds =>
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
   bool get read => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
@@ -2962,7 +3196,7 @@ abstract class $MarkPostAsReadCopyWith<$Res> {
           MarkPostAsRead value, $Res Function(MarkPostAsRead) then) =
       _$MarkPostAsReadCopyWithImpl<$Res, MarkPostAsRead>;
   @useResult
-  $Res call({int postId, bool read, String auth});
+  $Res call({int postId, List<int>? postIds, bool read, String auth});
 }
 
 /// @nodoc
@@ -2981,6 +3215,7 @@ class _$MarkPostAsReadCopyWithImpl<$Res, $Val extends MarkPostAsRead>
   @override
   $Res call({
     Object? postId = null,
+    Object? postIds = freezed,
     Object? read = null,
     Object? auth = null,
   }) {
@@ -2989,6 +3224,10 @@ class _$MarkPostAsReadCopyWithImpl<$Res, $Val extends MarkPostAsRead>
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
+      postIds: freezed == postIds
+          ? _value.postIds
+          : postIds // ignore: cast_nullable_to_non_nullable
+              as List<int>?,
       read: null == read
           ? _value.read
           : read // ignore: cast_nullable_to_non_nullable
@@ -3009,7 +3248,7 @@ abstract class _$$MarkPostAsReadImplCopyWith<$Res>
       __$$MarkPostAsReadImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int postId, bool read, String auth});
+  $Res call({int postId, List<int>? postIds, bool read, String auth});
 }
 
 /// @nodoc
@@ -3026,6 +3265,7 @@ class __$$MarkPostAsReadImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? postId = null,
+    Object? postIds = freezed,
     Object? read = null,
     Object? auth = null,
   }) {
@@ -3034,6 +3274,10 @@ class __$$MarkPostAsReadImplCopyWithImpl<$Res>
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
+      postIds: freezed == postIds
+          ? _value._postIds
+          : postIds // ignore: cast_nullable_to_non_nullable
+              as List<int>?,
       read: null == read
           ? _value.read
           : read // ignore: cast_nullable_to_non_nullable
@@ -3051,14 +3295,29 @@ class __$$MarkPostAsReadImplCopyWithImpl<$Res>
 @apiSerde
 class _$MarkPostAsReadImpl extends _MarkPostAsRead {
   const _$MarkPostAsReadImpl(
-      {required this.postId, required this.read, required this.auth})
-      : super._();
+      {required this.postId,
+      final List<int>? postIds,
+      required this.read,
+      required this.auth})
+      : _postIds = postIds,
+        super._();
 
   factory _$MarkPostAsReadImpl.fromJson(Map<String, dynamic> json) =>
       _$$MarkPostAsReadImplFromJson(json);
 
   @override
   final int postId;
+  final List<int>? _postIds;
+  @override
+  List<int>? get postIds {
+    final value = _postIds;
+    if (value == null) return null;
+    if (_postIds is EqualUnmodifiableListView) return _postIds;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+// v0.19.0 (optional)
   @override
   final bool read;
   @override
@@ -3066,7 +3325,7 @@ class _$MarkPostAsReadImpl extends _MarkPostAsRead {
 
   @override
   String toString() {
-    return 'MarkPostAsRead(postId: $postId, read: $read, auth: $auth)';
+    return 'MarkPostAsRead(postId: $postId, postIds: $postIds, read: $read, auth: $auth)';
   }
 
   @override
@@ -3075,13 +3334,15 @@ class _$MarkPostAsReadImpl extends _MarkPostAsRead {
         (other.runtimeType == runtimeType &&
             other is _$MarkPostAsReadImpl &&
             (identical(other.postId, postId) || other.postId == postId) &&
+            const DeepCollectionEquality().equals(other._postIds, _postIds) &&
             (identical(other.read, read) || other.read == read) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, postId, read, auth);
+  int get hashCode => Object.hash(runtimeType, postId,
+      const DeepCollectionEquality().hash(_postIds), read, auth);
 
   /// Create a copy of MarkPostAsRead
   /// with the given fields replaced by the non-null parameter values.
@@ -3103,6 +3364,7 @@ class _$MarkPostAsReadImpl extends _MarkPostAsRead {
 abstract class _MarkPostAsRead extends MarkPostAsRead {
   const factory _MarkPostAsRead(
       {required final int postId,
+      final List<int>? postIds,
       required final bool read,
       required final String auth}) = _$MarkPostAsReadImpl;
   const _MarkPostAsRead._() : super._();
@@ -3113,6 +3375,8 @@ abstract class _MarkPostAsRead extends MarkPostAsRead {
   @override
   int get postId;
   @override
+  List<int>? get postIds; // v0.19.0 (optional)
+  @override
   bool get read;
   @override
   String get auth;
@@ -3122,5 +3386,203 @@ abstract class _MarkPostAsRead extends MarkPostAsRead {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MarkPostAsReadImplCopyWith<_$MarkPostAsReadImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+HidePost _$HidePostFromJson(Map<String, dynamic> json) {
+  return _HidePost.fromJson(json);
+}
+
+/// @nodoc
+mixin _$HidePost {
+  List<int> get postIds =>
+      throw _privateConstructorUsedError; // v0.19.4 (required)
+  bool get hide => throw _privateConstructorUsedError; // v0.19.4 (required)
+  String? get auth => throw _privateConstructorUsedError;
+
+  /// Serializes this HidePost to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of HidePost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $HidePostCopyWith<HidePost> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $HidePostCopyWith<$Res> {
+  factory $HidePostCopyWith(HidePost value, $Res Function(HidePost) then) =
+      _$HidePostCopyWithImpl<$Res, HidePost>;
+  @useResult
+  $Res call({List<int> postIds, bool hide, String? auth});
+}
+
+/// @nodoc
+class _$HidePostCopyWithImpl<$Res, $Val extends HidePost>
+    implements $HidePostCopyWith<$Res> {
+  _$HidePostCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of HidePost
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? postIds = null,
+    Object? hide = null,
+    Object? auth = freezed,
+  }) {
+    return _then(_value.copyWith(
+      postIds: null == postIds
+          ? _value.postIds
+          : postIds // ignore: cast_nullable_to_non_nullable
+              as List<int>,
+      hide: null == hide
+          ? _value.hide
+          : hide // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: freezed == auth
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$HidePostImplCopyWith<$Res>
+    implements $HidePostCopyWith<$Res> {
+  factory _$$HidePostImplCopyWith(
+          _$HidePostImpl value, $Res Function(_$HidePostImpl) then) =
+      __$$HidePostImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({List<int> postIds, bool hide, String? auth});
+}
+
+/// @nodoc
+class __$$HidePostImplCopyWithImpl<$Res>
+    extends _$HidePostCopyWithImpl<$Res, _$HidePostImpl>
+    implements _$$HidePostImplCopyWith<$Res> {
+  __$$HidePostImplCopyWithImpl(
+      _$HidePostImpl _value, $Res Function(_$HidePostImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HidePost
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? postIds = null,
+    Object? hide = null,
+    Object? auth = freezed,
+  }) {
+    return _then(_$HidePostImpl(
+      postIds: null == postIds
+          ? _value._postIds
+          : postIds // ignore: cast_nullable_to_non_nullable
+              as List<int>,
+      hide: null == hide
+          ? _value.hide
+          : hide // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: freezed == auth
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+@apiSerde
+class _$HidePostImpl extends _HidePost {
+  const _$HidePostImpl(
+      {required final List<int> postIds, required this.hide, this.auth})
+      : _postIds = postIds,
+        super._();
+
+  factory _$HidePostImpl.fromJson(Map<String, dynamic> json) =>
+      _$$HidePostImplFromJson(json);
+
+  final List<int> _postIds;
+  @override
+  List<int> get postIds {
+    if (_postIds is EqualUnmodifiableListView) return _postIds;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_postIds);
+  }
+
+// v0.19.4 (required)
+  @override
+  final bool hide;
+// v0.19.4 (required)
+  @override
+  final String? auth;
+
+  @override
+  String toString() {
+    return 'HidePost(postIds: $postIds, hide: $hide, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$HidePostImpl &&
+            const DeepCollectionEquality().equals(other._postIds, _postIds) &&
+            (identical(other.hide, hide) || other.hide == hide) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_postIds), hide, auth);
+
+  /// Create a copy of HidePost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$HidePostImplCopyWith<_$HidePostImpl> get copyWith =>
+      __$$HidePostImplCopyWithImpl<_$HidePostImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$HidePostImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _HidePost extends HidePost {
+  const factory _HidePost(
+      {required final List<int> postIds,
+      required final bool hide,
+      final String? auth}) = _$HidePostImpl;
+  const _HidePost._() : super._();
+
+  factory _HidePost.fromJson(Map<String, dynamic> json) =
+      _$HidePostImpl.fromJson;
+
+  @override
+  List<int> get postIds; // v0.19.4 (required)
+  @override
+  bool get hide; // v0.19.4 (required)
+  @override
+  String? get auth;
+
+  /// Create a copy of HidePost
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$HidePostImplCopyWith<_$HidePostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

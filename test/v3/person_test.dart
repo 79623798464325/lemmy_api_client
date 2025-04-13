@@ -1,3 +1,4 @@
+import 'package:lemmy_api_client2/src/v3/api/private_message/private_message.dart';
 import 'package:lemmy_api_client2/v3.dart';
 import 'package:test/test.dart';
 

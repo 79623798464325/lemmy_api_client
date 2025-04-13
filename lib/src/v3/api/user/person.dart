@@ -2,24 +2,30 @@
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../enums.dart';
-import '../../utils/serde.dart';
-import '../../utils/workaround_settings_index.dart';
-import '../models/api.dart';
-import '../models/jwt.dart';
-import '../models/views.dart';
-import '../query.dart';
+import '../../../enums.dart';
+import '../../../utils/serde.dart';
+import '../../../utils/workaround_settings_index.dart';
+import '../../models/api.dart';
+import '../../models/jwt.dart';
+import '../../models/user/success_response.dart';
+import '../../models/user/update_totp_response.dart';
+import '../../models/views.dart';
+import '../../query.dart';
 
 part 'person.freezed.dart';
 part 'person.g.dart';
 
+/// Log into lemmy.
+///
+/// `HTTP.POST /user/login`
 @freezed
 class Login with _$Login implements LemmyApiQuery<LoginResponse> {
   @apiSerde
-  const factory Login(
-      {required String usernameOrEmail,
-      required String password,
-      @JsonKey(name: 'totp_2fa_token') String? totp2faToken}) = _Login;
+  const factory Login({
+    required String usernameOrEmail, // v0.18.0
+    required String password, // v0.18.0
+    @JsonKey(name: 'totp_2fa_token') String? totp2faToken, // v0.18.0
+  }) = _Login;
 
   const Login._();
   factory Login.fromJson(Map<String, dynamic> json) => _$LoginFromJson(json);
@@ -31,6 +37,143 @@ class Login with _$Login implements LemmyApiQuery<LoginResponse> {
   @override
   LoginResponse responseFactory(Map<String, dynamic> json) =>
       LoginResponse.fromJson(json);
+}
+
+/// Only available in lemmy v0.19.0 and above
+///
+/// Log out of lemmy.
+///
+/// `HTTP.POST /user/logout`
+@freezed
+class Logout with _$Logout implements LemmyApiQuery<SuccessResponse> {
+  @apiSerde
+  const factory Logout() = _Logout;
+
+  const Logout._();
+  factory Logout.fromJson(Map<String, dynamic> json) => _$LogoutFromJson(json);
+
+  final path = '/user/logout';
+
+  final httpMethod = HttpMethod.post;
+
+  @override
+  SuccessResponse responseFactory(Map<String, dynamic> json) =>
+      SuccessResponse.fromJson(json);
+}
+
+/// Only available in lemmy v0.19.0 and above
+///
+/// Export a backup of your user settings, including your saved content,
+/// followed communities, and blocks.
+///
+/// `HTTP.GET /user/export_settings`
+///
+@freezed
+class ExportSettings
+    with _$ExportSettings
+    implements LemmyApiQuery<dynamic>, LemmyApiAuthenticatedQuery {
+  @apiSerde
+  const factory ExportSettings({String? auth}) = _ExportSettings;
+
+  const ExportSettings._();
+  factory ExportSettings.fromJson(Map<String, dynamic> json) =>
+      _$ExportSettingsFromJson(json);
+
+  final path = '/user/export_settings';
+
+  final httpMethod = HttpMethod.get;
+
+  @override
+  dynamic responseFactory(Map<String, dynamic> json) => json;
+}
+
+/// Only available in lemmy v0.19.0 and above
+///
+/// Import a backup of your user settings.
+///
+/// `HTTP.POST /user/import_settings`
+@freezed
+class ImportSettings
+    with _$ImportSettings
+    implements
+        LemmyApiQuery<SuccessResponse>,
+        LemmyApiAuthenticatedQuery,
+        PassthroughParameter {
+  @apiSerde
+  const factory ImportSettings({String? auth, dynamic data}) = _ImportSettings;
+
+  const ImportSettings._();
+  factory ImportSettings.fromJson(Map<String, dynamic> json) =>
+      _$ImportSettingsFromJson(json);
+
+  final path = '/user/import_settings';
+
+  final httpMethod = HttpMethod.post;
+
+  @override
+  SuccessResponse responseFactory(Map<String, dynamic> json) =>
+      SuccessResponse.fromJson(json);
+
+  @override
+  String get parameter => 'data';
+}
+
+/// Only available in lemmy v0.19.0 and above
+///
+/// Returns an error message if your auth token is invalid
+///
+/// `HTTP.GET /user/validate_auth`
+@freezed
+class ValidateAuth
+    with _$ValidateAuth
+    implements LemmyApiQuery<SuccessResponse>, LemmyApiAuthenticatedQuery {
+  @apiSerde
+  const factory ValidateAuth({String? auth}) = _ValidateAuth;
+
+  const ValidateAuth._();
+  factory ValidateAuth.fromJson(Map<String, dynamic> json) =>
+      _$ValidateAuthFromJson(json);
+
+  final path = '/user/validate_auth';
+
+  final httpMethod = HttpMethod.get;
+
+  @override
+  SuccessResponse responseFactory(Map<String, dynamic> json) =>
+      SuccessResponse.fromJson(json);
+}
+
+/// Only available in lemmy v0.19.0 and above
+///
+/// Enable / Disable TOTP / two-factor authentication.
+///
+/// To enable, you need to first call `/user/totp/generate` and then pass a valid token to this.
+///
+/// Disabling is only possible if 2FA was previously enabled. Again it is necessary to pass a valid token.
+///
+/// `HTTP.POST /user/totp/update`
+@freezed
+class UpdateTotp
+    with _$UpdateTotp
+    implements LemmyApiQuery<UpdateTotpResponse>, LemmyApiAuthenticatedQuery {
+  @apiSerde
+  const factory UpdateTotp({
+    String? auth,
+    required String totpToken, // v0.19.0 (required)
+    required bool enabled, // v0.19.0 (required)
+  }) = _UpdateTotp;
+
+  const UpdateTotp._();
+  factory UpdateTotp.fromJson(Map<String, dynamic> json) =>
+      _$UpdateTotpFromJson(json);
+
+  final path = '/user/totp/update';
+
+  final httpMethod = HttpMethod.post;
+
+  @override
+  UpdateTotpResponse responseFactory(Map<String, dynamic> json) =>
+      UpdateTotpResponse.fromJson(json);
 }
 
 @freezed
@@ -380,129 +523,6 @@ class PasswordChange with _$PasswordChange implements LemmyApiQuery<Jwt> {
 
   @override
   Jwt responseFactory(Map<String, dynamic> json) => Jwt.fromJson(json['jwt']);
-}
-
-@freezed
-class CreatePrivateMessage
-    with _$CreatePrivateMessage
-    implements LemmyApiQuery<PrivateMessageView> {
-  @apiSerde
-  const factory CreatePrivateMessage({
-    required String content,
-    required int recipientId,
-    required String auth,
-  }) = _CreatePrivateMessage;
-
-  const CreatePrivateMessage._();
-  factory CreatePrivateMessage.fromJson(Map<String, dynamic> json) =>
-      _$CreatePrivateMessageFromJson(json);
-
-  final path = '/private_message';
-
-  final httpMethod = HttpMethod.post;
-
-  @override
-  PrivateMessageView responseFactory(Map<String, dynamic> json) =>
-      PrivateMessageView.fromJson(json['private_message_view']);
-}
-
-@freezed
-class EditPrivateMessage
-    with _$EditPrivateMessage
-    implements LemmyApiQuery<PrivateMessageView> {
-  @apiSerde
-  const factory EditPrivateMessage({
-    required int privateMessageId,
-    required String content,
-    required String auth,
-  }) = _EditPrivateMessage;
-
-  const EditPrivateMessage._();
-  factory EditPrivateMessage.fromJson(Map<String, dynamic> json) =>
-      _$EditPrivateMessageFromJson(json);
-
-  final path = '/private_message';
-
-  final httpMethod = HttpMethod.put;
-
-  @override
-  PrivateMessageView responseFactory(Map<String, dynamic> json) =>
-      PrivateMessageView.fromJson(json['private_message_view']);
-}
-
-@freezed
-class DeletePrivateMessage
-    with _$DeletePrivateMessage
-    implements LemmyApiQuery<PrivateMessageView> {
-  @apiSerde
-  const factory DeletePrivateMessage({
-    required int privateMessageId,
-    required bool deleted,
-    required String auth,
-  }) = _DeletePrivateMessage;
-
-  const DeletePrivateMessage._();
-  factory DeletePrivateMessage.fromJson(Map<String, dynamic> json) =>
-      _$DeletePrivateMessageFromJson(json);
-
-  final path = '/private_message/delete';
-
-  final httpMethod = HttpMethod.post;
-
-  @override
-  PrivateMessageView responseFactory(Map<String, dynamic> json) =>
-      PrivateMessageView.fromJson(json['private_message_view']);
-}
-
-@freezed
-class MarkPrivateMessageAsRead
-    with _$MarkPrivateMessageAsRead
-    implements LemmyApiQuery<PrivateMessageView> {
-  @apiSerde
-  const factory MarkPrivateMessageAsRead({
-    required int privateMessageId,
-    required bool read,
-    required String auth,
-  }) = _MarkPrivateMessageAsRead;
-
-  const MarkPrivateMessageAsRead._();
-  factory MarkPrivateMessageAsRead.fromJson(Map<String, dynamic> json) =>
-      _$MarkPrivateMessageAsReadFromJson(json);
-
-  final path = '/private_message/mark_as_read';
-
-  final httpMethod = HttpMethod.post;
-
-  @override
-  PrivateMessageView responseFactory(Map<String, dynamic> json) =>
-      PrivateMessageView.fromJson(json['private_message_view']);
-}
-
-@freezed
-class GetPrivateMessages
-    with _$GetPrivateMessages
-    implements LemmyApiQuery<List<PrivateMessageView>> {
-  @apiSerde
-  const factory GetPrivateMessages({
-    bool? unreadOnly,
-    int? page,
-    int? limit,
-    required String auth,
-  }) = _GetPrivateMessages;
-
-  const GetPrivateMessages._();
-  factory GetPrivateMessages.fromJson(Map<String, dynamic> json) =>
-      _$GetPrivateMessagesFromJson(json);
-
-  final path = '/private_message/list';
-
-  final httpMethod = HttpMethod.get;
-
-  @override
-  List<PrivateMessageView> responseFactory(Map<String, dynamic> json) =>
-      (json['private_messages'] as List)
-          .map((dynamic e) => PrivateMessageView.fromJson(e))
-          .toList();
 }
 
 @freezed

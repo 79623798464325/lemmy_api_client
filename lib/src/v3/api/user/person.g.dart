@@ -19,6 +19,59 @@ Map<String, dynamic> _$$LoginImplToJson(_$LoginImpl instance) =>
       if (instance.totp2faToken case final value?) 'totp_2fa_token': value,
     };
 
+_$LogoutImpl _$$LogoutImplFromJson(Map<String, dynamic> json) => _$LogoutImpl();
+
+Map<String, dynamic> _$$LogoutImplToJson(_$LogoutImpl instance) =>
+    <String, dynamic>{};
+
+_$ExportSettingsImpl _$$ExportSettingsImplFromJson(Map<String, dynamic> json) =>
+    _$ExportSettingsImpl(
+      auth: json['auth'] as String?,
+    );
+
+Map<String, dynamic> _$$ExportSettingsImplToJson(
+        _$ExportSettingsImpl instance) =>
+    <String, dynamic>{
+      if (instance.auth case final value?) 'auth': value,
+    };
+
+_$ImportSettingsImpl _$$ImportSettingsImplFromJson(Map<String, dynamic> json) =>
+    _$ImportSettingsImpl(
+      auth: json['auth'] as String?,
+      data: json['data'],
+    );
+
+Map<String, dynamic> _$$ImportSettingsImplToJson(
+        _$ImportSettingsImpl instance) =>
+    <String, dynamic>{
+      if (instance.auth case final value?) 'auth': value,
+      if (instance.data case final value?) 'data': value,
+    };
+
+_$ValidateAuthImpl _$$ValidateAuthImplFromJson(Map<String, dynamic> json) =>
+    _$ValidateAuthImpl(
+      auth: json['auth'] as String?,
+    );
+
+Map<String, dynamic> _$$ValidateAuthImplToJson(_$ValidateAuthImpl instance) =>
+    <String, dynamic>{
+      if (instance.auth case final value?) 'auth': value,
+    };
+
+_$UpdateTotpImpl _$$UpdateTotpImplFromJson(Map<String, dynamic> json) =>
+    _$UpdateTotpImpl(
+      auth: json['auth'] as String?,
+      totpToken: json['totp_token'] as String,
+      enabled: json['enabled'] as bool,
+    );
+
+Map<String, dynamic> _$$UpdateTotpImplToJson(_$UpdateTotpImpl instance) =>
+    <String, dynamic>{
+      if (instance.auth case final value?) 'auth': value,
+      'totp_token': instance.totpToken,
+      'enabled': instance.enabled,
+    };
+
 _$RegisterImpl _$$RegisterImplFromJson(Map<String, dynamic> json) =>
     _$RegisterImpl(
       username: json['username'] as String,
@@ -291,88 +344,6 @@ Map<String, dynamic> _$$PasswordChangeImplToJson(
       'token': instance.token,
       'password': instance.password,
       'password_verify': instance.passwordVerify,
-    };
-
-_$CreatePrivateMessageImpl _$$CreatePrivateMessageImplFromJson(
-        Map<String, dynamic> json) =>
-    _$CreatePrivateMessageImpl(
-      content: json['content'] as String,
-      recipientId: (json['recipient_id'] as num).toInt(),
-      auth: json['auth'] as String,
-    );
-
-Map<String, dynamic> _$$CreatePrivateMessageImplToJson(
-        _$CreatePrivateMessageImpl instance) =>
-    <String, dynamic>{
-      'content': instance.content,
-      'recipient_id': instance.recipientId,
-      'auth': instance.auth,
-    };
-
-_$EditPrivateMessageImpl _$$EditPrivateMessageImplFromJson(
-        Map<String, dynamic> json) =>
-    _$EditPrivateMessageImpl(
-      privateMessageId: (json['private_message_id'] as num).toInt(),
-      content: json['content'] as String,
-      auth: json['auth'] as String,
-    );
-
-Map<String, dynamic> _$$EditPrivateMessageImplToJson(
-        _$EditPrivateMessageImpl instance) =>
-    <String, dynamic>{
-      'private_message_id': instance.privateMessageId,
-      'content': instance.content,
-      'auth': instance.auth,
-    };
-
-_$DeletePrivateMessageImpl _$$DeletePrivateMessageImplFromJson(
-        Map<String, dynamic> json) =>
-    _$DeletePrivateMessageImpl(
-      privateMessageId: (json['private_message_id'] as num).toInt(),
-      deleted: json['deleted'] as bool,
-      auth: json['auth'] as String,
-    );
-
-Map<String, dynamic> _$$DeletePrivateMessageImplToJson(
-        _$DeletePrivateMessageImpl instance) =>
-    <String, dynamic>{
-      'private_message_id': instance.privateMessageId,
-      'deleted': instance.deleted,
-      'auth': instance.auth,
-    };
-
-_$MarkPrivateMessageAsReadImpl _$$MarkPrivateMessageAsReadImplFromJson(
-        Map<String, dynamic> json) =>
-    _$MarkPrivateMessageAsReadImpl(
-      privateMessageId: (json['private_message_id'] as num).toInt(),
-      read: json['read'] as bool,
-      auth: json['auth'] as String,
-    );
-
-Map<String, dynamic> _$$MarkPrivateMessageAsReadImplToJson(
-        _$MarkPrivateMessageAsReadImpl instance) =>
-    <String, dynamic>{
-      'private_message_id': instance.privateMessageId,
-      'read': instance.read,
-      'auth': instance.auth,
-    };
-
-_$GetPrivateMessagesImpl _$$GetPrivateMessagesImplFromJson(
-        Map<String, dynamic> json) =>
-    _$GetPrivateMessagesImpl(
-      unreadOnly: json['unread_only'] as bool?,
-      page: (json['page'] as num?)?.toInt(),
-      limit: (json['limit'] as num?)?.toInt(),
-      auth: json['auth'] as String,
-    );
-
-Map<String, dynamic> _$$GetPrivateMessagesImplToJson(
-        _$GetPrivateMessagesImpl instance) =>
-    <String, dynamic>{
-      if (instance.unreadOnly case final value?) 'unread_only': value,
-      if (instance.page case final value?) 'page': value,
-      if (instance.limit case final value?) 'limit': value,
-      'auth': instance.auth,
     };
 
 _$BlockPersonImpl _$$BlockPersonImplFromJson(Map<String, dynamic> json) =>

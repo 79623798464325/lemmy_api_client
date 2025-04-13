@@ -20,7 +20,7 @@ PersonViewSafe _$PersonViewSafeFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PersonViewSafe {
-  PersonSafe get person => throw _privateConstructorUsedError;
+  Person get person => throw _privateConstructorUsedError;
   PersonAggregates get counts => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
@@ -40,9 +40,9 @@ abstract class $PersonViewSafeCopyWith<$Res> {
           PersonViewSafe value, $Res Function(PersonViewSafe) then) =
       _$PersonViewSafeCopyWithImpl<$Res, PersonViewSafe>;
   @useResult
-  $Res call({PersonSafe person, PersonAggregates counts, String instanceHost});
+  $Res call({Person person, PersonAggregates counts, String instanceHost});
 
-  $PersonSafeCopyWith<$Res> get person;
+  $PersonCopyWith<$Res> get person;
   $PersonAggregatesCopyWith<$Res> get counts;
 }
 
@@ -69,7 +69,7 @@ class _$PersonViewSafeCopyWithImpl<$Res, $Val extends PersonViewSafe>
       person: null == person
           ? _value.person
           : person // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       counts: null == counts
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
@@ -85,8 +85,8 @@ class _$PersonViewSafeCopyWithImpl<$Res, $Val extends PersonViewSafe>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get person {
-    return $PersonSafeCopyWith<$Res>(_value.person, (value) {
+  $PersonCopyWith<$Res> get person {
+    return $PersonCopyWith<$Res>(_value.person, (value) {
       return _then(_value.copyWith(person: value) as $Val);
     });
   }
@@ -110,10 +110,10 @@ abstract class _$$PersonViewSafeImplCopyWith<$Res>
       __$$PersonViewSafeImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({PersonSafe person, PersonAggregates counts, String instanceHost});
+  $Res call({Person person, PersonAggregates counts, String instanceHost});
 
   @override
-  $PersonSafeCopyWith<$Res> get person;
+  $PersonCopyWith<$Res> get person;
   @override
   $PersonAggregatesCopyWith<$Res> get counts;
 }
@@ -139,7 +139,7 @@ class __$$PersonViewSafeImplCopyWithImpl<$Res>
       person: null == person
           ? _value.person
           : person // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       counts: null == counts
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
@@ -164,7 +164,7 @@ class _$PersonViewSafeImpl extends _PersonViewSafe {
       _$$PersonViewSafeImplFromJson(json);
 
   @override
-  final PersonSafe person;
+  final Person person;
   @override
   final PersonAggregates counts;
   @override
@@ -209,7 +209,7 @@ class _$PersonViewSafeImpl extends _PersonViewSafe {
 
 abstract class _PersonViewSafe extends PersonViewSafe {
   const factory _PersonViewSafe(
-      {required final PersonSafe person,
+      {required final Person person,
       required final PersonAggregates counts,
       required final String instanceHost}) = _$PersonViewSafeImpl;
   const _PersonViewSafe._() : super._();
@@ -218,7 +218,7 @@ abstract class _PersonViewSafe extends PersonViewSafe {
       _$PersonViewSafeImpl.fromJson;
 
   @override
-  PersonSafe get person;
+  Person get person;
   @override
   PersonAggregates get counts;
   @override
@@ -240,10 +240,10 @@ PersonMentionView _$PersonMentionViewFromJson(Map<String, dynamic> json) {
 mixin _$PersonMentionView {
   PersonMention get personMention => throw _privateConstructorUsedError;
   Comment get comment => throw _privateConstructorUsedError;
-  PersonSafe get creator => throw _privateConstructorUsedError;
+  Person get creator => throw _privateConstructorUsedError;
   Post get post => throw _privateConstructorUsedError;
   CommunitySafe get community => throw _privateConstructorUsedError;
-  PersonSafe get recipient => throw _privateConstructorUsedError;
+  Person get recipient => throw _privateConstructorUsedError;
   CommentAggregates get counts => throw _privateConstructorUsedError;
   bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
   String get subscribed => throw _privateConstructorUsedError;
@@ -271,10 +271,10 @@ abstract class $PersonMentionViewCopyWith<$Res> {
   $Res call(
       {PersonMention personMention,
       Comment comment,
-      PersonSafe creator,
+      Person creator,
       Post post,
       CommunitySafe community,
-      PersonSafe recipient,
+      Person recipient,
       CommentAggregates counts,
       bool creatorBannedFromCommunity,
       String subscribed,
@@ -285,10 +285,10 @@ abstract class $PersonMentionViewCopyWith<$Res> {
 
   $PersonMentionCopyWith<$Res> get personMention;
   $CommentCopyWith<$Res> get comment;
-  $PersonSafeCopyWith<$Res> get creator;
+  $PersonCopyWith<$Res> get creator;
   $PostCopyWith<$Res> get post;
   $CommunitySafeCopyWith<$Res> get community;
-  $PersonSafeCopyWith<$Res> get recipient;
+  $PersonCopyWith<$Res> get recipient;
   $CommentAggregatesCopyWith<$Res> get counts;
 }
 
@@ -333,7 +333,7 @@ class _$PersonMentionViewCopyWithImpl<$Res, $Val extends PersonMentionView>
       creator: null == creator
           ? _value.creator
           : creator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       post: null == post
           ? _value.post
           : post // ignore: cast_nullable_to_non_nullable
@@ -345,7 +345,7 @@ class _$PersonMentionViewCopyWithImpl<$Res, $Val extends PersonMentionView>
       recipient: null == recipient
           ? _value.recipient
           : recipient // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       counts: null == counts
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
@@ -401,8 +401,8 @@ class _$PersonMentionViewCopyWithImpl<$Res, $Val extends PersonMentionView>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get creator {
-    return $PersonSafeCopyWith<$Res>(_value.creator, (value) {
+  $PersonCopyWith<$Res> get creator {
+    return $PersonCopyWith<$Res>(_value.creator, (value) {
       return _then(_value.copyWith(creator: value) as $Val);
     });
   }
@@ -431,8 +431,8 @@ class _$PersonMentionViewCopyWithImpl<$Res, $Val extends PersonMentionView>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get recipient {
-    return $PersonSafeCopyWith<$Res>(_value.recipient, (value) {
+  $PersonCopyWith<$Res> get recipient {
+    return $PersonCopyWith<$Res>(_value.recipient, (value) {
       return _then(_value.copyWith(recipient: value) as $Val);
     });
   }
@@ -459,10 +459,10 @@ abstract class _$$PersonMentionViewImplCopyWith<$Res>
   $Res call(
       {PersonMention personMention,
       Comment comment,
-      PersonSafe creator,
+      Person creator,
       Post post,
       CommunitySafe community,
-      PersonSafe recipient,
+      Person recipient,
       CommentAggregates counts,
       bool creatorBannedFromCommunity,
       String subscribed,
@@ -476,13 +476,13 @@ abstract class _$$PersonMentionViewImplCopyWith<$Res>
   @override
   $CommentCopyWith<$Res> get comment;
   @override
-  $PersonSafeCopyWith<$Res> get creator;
+  $PersonCopyWith<$Res> get creator;
   @override
   $PostCopyWith<$Res> get post;
   @override
   $CommunitySafeCopyWith<$Res> get community;
   @override
-  $PersonSafeCopyWith<$Res> get recipient;
+  $PersonCopyWith<$Res> get recipient;
   @override
   $CommentAggregatesCopyWith<$Res> get counts;
 }
@@ -526,7 +526,7 @@ class __$$PersonMentionViewImplCopyWithImpl<$Res>
       creator: null == creator
           ? _value.creator
           : creator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       post: null == post
           ? _value.post
           : post // ignore: cast_nullable_to_non_nullable
@@ -538,7 +538,7 @@ class __$$PersonMentionViewImplCopyWithImpl<$Res>
       recipient: null == recipient
           ? _value.recipient
           : recipient // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       counts: null == counts
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
@@ -599,13 +599,13 @@ class _$PersonMentionViewImpl extends _PersonMentionView {
   @override
   final Comment comment;
   @override
-  final PersonSafe creator;
+  final Person creator;
   @override
   final Post post;
   @override
   final CommunitySafe community;
   @override
-  final PersonSafe recipient;
+  final Person recipient;
   @override
   final CommentAggregates counts;
   @override
@@ -694,10 +694,10 @@ abstract class _PersonMentionView extends PersonMentionView {
   const factory _PersonMentionView(
       {required final PersonMention personMention,
       required final Comment comment,
-      required final PersonSafe creator,
+      required final Person creator,
       required final Post post,
       required final CommunitySafe community,
-      required final PersonSafe recipient,
+      required final Person recipient,
       required final CommentAggregates counts,
       required final bool creatorBannedFromCommunity,
       required final String subscribed,
@@ -715,13 +715,13 @@ abstract class _PersonMentionView extends PersonMentionView {
   @override
   Comment get comment;
   @override
-  PersonSafe get creator;
+  Person get creator;
   @override
   Post get post;
   @override
   CommunitySafe get community;
   @override
-  PersonSafe get recipient;
+  Person get recipient;
   @override
   CommentAggregates get counts;
   @override
@@ -753,7 +753,7 @@ LocalUserSettingsView _$LocalUserSettingsViewFromJson(
 /// @nodoc
 mixin _$LocalUserSettingsView {
   LocalUserSettings get localUser => throw _privateConstructorUsedError;
-  PersonSafe get person => throw _privateConstructorUsedError;
+  Person get person => throw _privateConstructorUsedError;
   PersonAggregates get counts => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
@@ -775,12 +775,12 @@ abstract class $LocalUserSettingsViewCopyWith<$Res> {
   @useResult
   $Res call(
       {LocalUserSettings localUser,
-      PersonSafe person,
+      Person person,
       PersonAggregates counts,
       String instanceHost});
 
   $LocalUserSettingsCopyWith<$Res> get localUser;
-  $PersonSafeCopyWith<$Res> get person;
+  $PersonCopyWith<$Res> get person;
   $PersonAggregatesCopyWith<$Res> get counts;
 }
 
@@ -813,7 +813,7 @@ class _$LocalUserSettingsViewCopyWithImpl<$Res,
       person: null == person
           ? _value.person
           : person // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       counts: null == counts
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
@@ -839,8 +839,8 @@ class _$LocalUserSettingsViewCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get person {
-    return $PersonSafeCopyWith<$Res>(_value.person, (value) {
+  $PersonCopyWith<$Res> get person {
+    return $PersonCopyWith<$Res>(_value.person, (value) {
       return _then(_value.copyWith(person: value) as $Val);
     });
   }
@@ -867,14 +867,14 @@ abstract class _$$LocalUserSettingsViewImplCopyWith<$Res>
   @useResult
   $Res call(
       {LocalUserSettings localUser,
-      PersonSafe person,
+      Person person,
       PersonAggregates counts,
       String instanceHost});
 
   @override
   $LocalUserSettingsCopyWith<$Res> get localUser;
   @override
-  $PersonSafeCopyWith<$Res> get person;
+  $PersonCopyWith<$Res> get person;
   @override
   $PersonAggregatesCopyWith<$Res> get counts;
 }
@@ -906,7 +906,7 @@ class __$$LocalUserSettingsViewImplCopyWithImpl<$Res>
       person: null == person
           ? _value.person
           : person // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       counts: null == counts
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
@@ -936,7 +936,7 @@ class _$LocalUserSettingsViewImpl extends _LocalUserSettingsView {
   @override
   final LocalUserSettings localUser;
   @override
-  final PersonSafe person;
+  final Person person;
   @override
   final PersonAggregates counts;
   @override
@@ -985,7 +985,7 @@ class _$LocalUserSettingsViewImpl extends _LocalUserSettingsView {
 abstract class _LocalUserSettingsView extends LocalUserSettingsView {
   const factory _LocalUserSettingsView(
       {required final LocalUserSettings localUser,
-      required final PersonSafe person,
+      required final Person person,
       required final PersonAggregates counts,
       required final String instanceHost}) = _$LocalUserSettingsViewImpl;
   const _LocalUserSettingsView._() : super._();
@@ -996,7 +996,7 @@ abstract class _LocalUserSettingsView extends LocalUserSettingsView {
   @override
   LocalUserSettings get localUser;
   @override
-  PersonSafe get person;
+  Person get person;
   @override
   PersonAggregates get counts;
   @override
@@ -1233,8 +1233,8 @@ PrivateMessageView _$PrivateMessageViewFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$PrivateMessageView {
   PrivateMessage get privateMessage => throw _privateConstructorUsedError;
-  PersonSafe get creator => throw _privateConstructorUsedError;
-  PersonSafe get recipient => throw _privateConstructorUsedError;
+  Person get creator => throw _privateConstructorUsedError;
+  Person get recipient => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
   /// Serializes this PrivateMessageView to a JSON map.
@@ -1255,13 +1255,13 @@ abstract class $PrivateMessageViewCopyWith<$Res> {
   @useResult
   $Res call(
       {PrivateMessage privateMessage,
-      PersonSafe creator,
-      PersonSafe recipient,
+      Person creator,
+      Person recipient,
       String instanceHost});
 
   $PrivateMessageCopyWith<$Res> get privateMessage;
-  $PersonSafeCopyWith<$Res> get creator;
-  $PersonSafeCopyWith<$Res> get recipient;
+  $PersonCopyWith<$Res> get creator;
+  $PersonCopyWith<$Res> get recipient;
 }
 
 /// @nodoc
@@ -1292,11 +1292,11 @@ class _$PrivateMessageViewCopyWithImpl<$Res, $Val extends PrivateMessageView>
       creator: null == creator
           ? _value.creator
           : creator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       recipient: null == recipient
           ? _value.recipient
           : recipient // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -1318,8 +1318,8 @@ class _$PrivateMessageViewCopyWithImpl<$Res, $Val extends PrivateMessageView>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get creator {
-    return $PersonSafeCopyWith<$Res>(_value.creator, (value) {
+  $PersonCopyWith<$Res> get creator {
+    return $PersonCopyWith<$Res>(_value.creator, (value) {
       return _then(_value.copyWith(creator: value) as $Val);
     });
   }
@@ -1328,8 +1328,8 @@ class _$PrivateMessageViewCopyWithImpl<$Res, $Val extends PrivateMessageView>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get recipient {
-    return $PersonSafeCopyWith<$Res>(_value.recipient, (value) {
+  $PersonCopyWith<$Res> get recipient {
+    return $PersonCopyWith<$Res>(_value.recipient, (value) {
       return _then(_value.copyWith(recipient: value) as $Val);
     });
   }
@@ -1345,16 +1345,16 @@ abstract class _$$PrivateMessageViewImplCopyWith<$Res>
   @useResult
   $Res call(
       {PrivateMessage privateMessage,
-      PersonSafe creator,
-      PersonSafe recipient,
+      Person creator,
+      Person recipient,
       String instanceHost});
 
   @override
   $PrivateMessageCopyWith<$Res> get privateMessage;
   @override
-  $PersonSafeCopyWith<$Res> get creator;
+  $PersonCopyWith<$Res> get creator;
   @override
-  $PersonSafeCopyWith<$Res> get recipient;
+  $PersonCopyWith<$Res> get recipient;
 }
 
 /// @nodoc
@@ -1383,11 +1383,11 @@ class __$$PrivateMessageViewImplCopyWithImpl<$Res>
       creator: null == creator
           ? _value.creator
           : creator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       recipient: null == recipient
           ? _value.recipient
           : recipient // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -1413,9 +1413,9 @@ class _$PrivateMessageViewImpl extends _PrivateMessageView {
   @override
   final PrivateMessage privateMessage;
   @override
-  final PersonSafe creator;
+  final Person creator;
   @override
-  final PersonSafe recipient;
+  final Person recipient;
   @override
   final String instanceHost;
 
@@ -1463,8 +1463,8 @@ class _$PrivateMessageViewImpl extends _PrivateMessageView {
 abstract class _PrivateMessageView extends PrivateMessageView {
   const factory _PrivateMessageView(
       {required final PrivateMessage privateMessage,
-      required final PersonSafe creator,
-      required final PersonSafe recipient,
+      required final Person creator,
+      required final Person recipient,
       required final String instanceHost}) = _$PrivateMessageViewImpl;
   const _PrivateMessageView._() : super._();
 
@@ -1474,9 +1474,9 @@ abstract class _PrivateMessageView extends PrivateMessageView {
   @override
   PrivateMessage get privateMessage;
   @override
-  PersonSafe get creator;
+  Person get creator;
   @override
-  PersonSafe get recipient;
+  Person get recipient;
   @override
   String get instanceHost;
 
@@ -1495,13 +1495,15 @@ PostView _$PostViewFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$PostView {
   Post get post => throw _privateConstructorUsedError;
-  PersonSafe get creator => throw _privateConstructorUsedError;
+  Person get creator => throw _privateConstructorUsedError;
   CommunitySafe get community => throw _privateConstructorUsedError;
+  ImageDetails? get imageDetails => throw _privateConstructorUsedError;
   bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
   PostAggregates get counts => throw _privateConstructorUsedError;
   String get subscribed => throw _privateConstructorUsedError;
   bool get saved => throw _privateConstructorUsedError;
   bool get read => throw _privateConstructorUsedError;
+  bool? get hidden => throw _privateConstructorUsedError;
   bool get creatorBlocked => throw _privateConstructorUsedError;
   VoteType? get myVote => throw _privateConstructorUsedError;
   int get unreadComments => throw _privateConstructorUsedError;
@@ -1524,21 +1526,24 @@ abstract class $PostViewCopyWith<$Res> {
   @useResult
   $Res call(
       {Post post,
-      PersonSafe creator,
+      Person creator,
       CommunitySafe community,
+      ImageDetails? imageDetails,
       bool creatorBannedFromCommunity,
       PostAggregates counts,
       String subscribed,
       bool saved,
       bool read,
+      bool? hidden,
       bool creatorBlocked,
       VoteType? myVote,
       int unreadComments,
       String instanceHost});
 
   $PostCopyWith<$Res> get post;
-  $PersonSafeCopyWith<$Res> get creator;
+  $PersonCopyWith<$Res> get creator;
   $CommunitySafeCopyWith<$Res> get community;
+  $ImageDetailsCopyWith<$Res>? get imageDetails;
   $PostAggregatesCopyWith<$Res> get counts;
 }
 
@@ -1560,11 +1565,13 @@ class _$PostViewCopyWithImpl<$Res, $Val extends PostView>
     Object? post = null,
     Object? creator = null,
     Object? community = null,
+    Object? imageDetails = freezed,
     Object? creatorBannedFromCommunity = null,
     Object? counts = null,
     Object? subscribed = null,
     Object? saved = null,
     Object? read = null,
+    Object? hidden = freezed,
     Object? creatorBlocked = null,
     Object? myVote = freezed,
     Object? unreadComments = null,
@@ -1578,11 +1585,15 @@ class _$PostViewCopyWithImpl<$Res, $Val extends PostView>
       creator: null == creator
           ? _value.creator
           : creator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       community: null == community
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
               as CommunitySafe,
+      imageDetails: freezed == imageDetails
+          ? _value.imageDetails
+          : imageDetails // ignore: cast_nullable_to_non_nullable
+              as ImageDetails?,
       creatorBannedFromCommunity: null == creatorBannedFromCommunity
           ? _value.creatorBannedFromCommunity
           : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
@@ -1603,6 +1614,10 @@ class _$PostViewCopyWithImpl<$Res, $Val extends PostView>
           ? _value.read
           : read // ignore: cast_nullable_to_non_nullable
               as bool,
+      hidden: freezed == hidden
+          ? _value.hidden
+          : hidden // ignore: cast_nullable_to_non_nullable
+              as bool?,
       creatorBlocked: null == creatorBlocked
           ? _value.creatorBlocked
           : creatorBlocked // ignore: cast_nullable_to_non_nullable
@@ -1636,8 +1651,8 @@ class _$PostViewCopyWithImpl<$Res, $Val extends PostView>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get creator {
-    return $PersonSafeCopyWith<$Res>(_value.creator, (value) {
+  $PersonCopyWith<$Res> get creator {
+    return $PersonCopyWith<$Res>(_value.creator, (value) {
       return _then(_value.copyWith(creator: value) as $Val);
     });
   }
@@ -1649,6 +1664,20 @@ class _$PostViewCopyWithImpl<$Res, $Val extends PostView>
   $CommunitySafeCopyWith<$Res> get community {
     return $CommunitySafeCopyWith<$Res>(_value.community, (value) {
       return _then(_value.copyWith(community: value) as $Val);
+    });
+  }
+
+  /// Create a copy of PostView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $ImageDetailsCopyWith<$Res>? get imageDetails {
+    if (_value.imageDetails == null) {
+      return null;
+    }
+
+    return $ImageDetailsCopyWith<$Res>(_value.imageDetails!, (value) {
+      return _then(_value.copyWith(imageDetails: value) as $Val);
     });
   }
 
@@ -1673,13 +1702,15 @@ abstract class _$$PostViewImplCopyWith<$Res>
   @useResult
   $Res call(
       {Post post,
-      PersonSafe creator,
+      Person creator,
       CommunitySafe community,
+      ImageDetails? imageDetails,
       bool creatorBannedFromCommunity,
       PostAggregates counts,
       String subscribed,
       bool saved,
       bool read,
+      bool? hidden,
       bool creatorBlocked,
       VoteType? myVote,
       int unreadComments,
@@ -1688,9 +1719,11 @@ abstract class _$$PostViewImplCopyWith<$Res>
   @override
   $PostCopyWith<$Res> get post;
   @override
-  $PersonSafeCopyWith<$Res> get creator;
+  $PersonCopyWith<$Res> get creator;
   @override
   $CommunitySafeCopyWith<$Res> get community;
+  @override
+  $ImageDetailsCopyWith<$Res>? get imageDetails;
   @override
   $PostAggregatesCopyWith<$Res> get counts;
 }
@@ -1711,11 +1744,13 @@ class __$$PostViewImplCopyWithImpl<$Res>
     Object? post = null,
     Object? creator = null,
     Object? community = null,
+    Object? imageDetails = freezed,
     Object? creatorBannedFromCommunity = null,
     Object? counts = null,
     Object? subscribed = null,
     Object? saved = null,
     Object? read = null,
+    Object? hidden = freezed,
     Object? creatorBlocked = null,
     Object? myVote = freezed,
     Object? unreadComments = null,
@@ -1729,11 +1764,15 @@ class __$$PostViewImplCopyWithImpl<$Res>
       creator: null == creator
           ? _value.creator
           : creator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       community: null == community
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
               as CommunitySafe,
+      imageDetails: freezed == imageDetails
+          ? _value.imageDetails
+          : imageDetails // ignore: cast_nullable_to_non_nullable
+              as ImageDetails?,
       creatorBannedFromCommunity: null == creatorBannedFromCommunity
           ? _value.creatorBannedFromCommunity
           : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
@@ -1754,6 +1793,10 @@ class __$$PostViewImplCopyWithImpl<$Res>
           ? _value.read
           : read // ignore: cast_nullable_to_non_nullable
               as bool,
+      hidden: freezed == hidden
+          ? _value.hidden
+          : hidden // ignore: cast_nullable_to_non_nullable
+              as bool?,
       creatorBlocked: null == creatorBlocked
           ? _value.creatorBlocked
           : creatorBlocked // ignore: cast_nullable_to_non_nullable
@@ -1782,11 +1825,13 @@ class _$PostViewImpl extends _PostView {
       {required this.post,
       required this.creator,
       required this.community,
+      this.imageDetails,
       required this.creatorBannedFromCommunity,
       required this.counts,
       required this.subscribed,
       required this.saved,
       required this.read,
+      this.hidden,
       required this.creatorBlocked,
       this.myVote,
       required this.unreadComments,
@@ -1799,9 +1844,11 @@ class _$PostViewImpl extends _PostView {
   @override
   final Post post;
   @override
-  final PersonSafe creator;
+  final Person creator;
   @override
   final CommunitySafe community;
+  @override
+  final ImageDetails? imageDetails;
   @override
   final bool creatorBannedFromCommunity;
   @override
@@ -1813,6 +1860,8 @@ class _$PostViewImpl extends _PostView {
   @override
   final bool read;
   @override
+  final bool? hidden;
+  @override
   final bool creatorBlocked;
   @override
   final VoteType? myVote;
@@ -1823,7 +1872,7 @@ class _$PostViewImpl extends _PostView {
 
   @override
   String toString() {
-    return 'PostView(post: $post, creator: $creator, community: $community, creatorBannedFromCommunity: $creatorBannedFromCommunity, counts: $counts, subscribed: $subscribed, saved: $saved, read: $read, creatorBlocked: $creatorBlocked, myVote: $myVote, unreadComments: $unreadComments, instanceHost: $instanceHost)';
+    return 'PostView(post: $post, creator: $creator, community: $community, imageDetails: $imageDetails, creatorBannedFromCommunity: $creatorBannedFromCommunity, counts: $counts, subscribed: $subscribed, saved: $saved, read: $read, hidden: $hidden, creatorBlocked: $creatorBlocked, myVote: $myVote, unreadComments: $unreadComments, instanceHost: $instanceHost)';
   }
 
   @override
@@ -1835,6 +1884,8 @@ class _$PostViewImpl extends _PostView {
             (identical(other.creator, creator) || other.creator == creator) &&
             (identical(other.community, community) ||
                 other.community == community) &&
+            (identical(other.imageDetails, imageDetails) ||
+                other.imageDetails == imageDetails) &&
             (identical(other.creatorBannedFromCommunity,
                     creatorBannedFromCommunity) ||
                 other.creatorBannedFromCommunity ==
@@ -1844,6 +1895,7 @@ class _$PostViewImpl extends _PostView {
                 other.subscribed == subscribed) &&
             (identical(other.saved, saved) || other.saved == saved) &&
             (identical(other.read, read) || other.read == read) &&
+            (identical(other.hidden, hidden) || other.hidden == hidden) &&
             (identical(other.creatorBlocked, creatorBlocked) ||
                 other.creatorBlocked == creatorBlocked) &&
             (identical(other.myVote, myVote) || other.myVote == myVote) &&
@@ -1860,11 +1912,13 @@ class _$PostViewImpl extends _PostView {
       post,
       creator,
       community,
+      imageDetails,
       creatorBannedFromCommunity,
       counts,
       subscribed,
       saved,
       read,
+      hidden,
       creatorBlocked,
       myVote,
       unreadComments,
@@ -1889,13 +1943,15 @@ class _$PostViewImpl extends _PostView {
 abstract class _PostView extends PostView {
   const factory _PostView(
       {required final Post post,
-      required final PersonSafe creator,
+      required final Person creator,
       required final CommunitySafe community,
+      final ImageDetails? imageDetails,
       required final bool creatorBannedFromCommunity,
       required final PostAggregates counts,
       required final String subscribed,
       required final bool saved,
       required final bool read,
+      final bool? hidden,
       required final bool creatorBlocked,
       final VoteType? myVote,
       required final int unreadComments,
@@ -1908,9 +1964,11 @@ abstract class _PostView extends PostView {
   @override
   Post get post;
   @override
-  PersonSafe get creator;
+  Person get creator;
   @override
   CommunitySafe get community;
+  @override
+  ImageDetails? get imageDetails;
   @override
   bool get creatorBannedFromCommunity;
   @override
@@ -1921,6 +1979,8 @@ abstract class _PostView extends PostView {
   bool get saved;
   @override
   bool get read;
+  @override
+  bool? get hidden;
   @override
   bool get creatorBlocked;
   @override
@@ -1947,12 +2007,12 @@ mixin _$PostReportView {
   PostReport get postReport => throw _privateConstructorUsedError;
   Post get post => throw _privateConstructorUsedError;
   CommunitySafe get community => throw _privateConstructorUsedError;
-  PersonSafe get creator => throw _privateConstructorUsedError;
-  PersonSafe get postCreator => throw _privateConstructorUsedError;
+  Person get creator => throw _privateConstructorUsedError;
+  Person get postCreator => throw _privateConstructorUsedError;
   bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
   VoteType? get myVote => throw _privateConstructorUsedError;
   PostAggregates get counts => throw _privateConstructorUsedError;
-  PersonSafe? get resolver => throw _privateConstructorUsedError;
+  Person? get resolver => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
   /// Serializes this PostReportView to a JSON map.
@@ -1975,21 +2035,21 @@ abstract class $PostReportViewCopyWith<$Res> {
       {PostReport postReport,
       Post post,
       CommunitySafe community,
-      PersonSafe creator,
-      PersonSafe postCreator,
+      Person creator,
+      Person postCreator,
       bool creatorBannedFromCommunity,
       VoteType? myVote,
       PostAggregates counts,
-      PersonSafe? resolver,
+      Person? resolver,
       String instanceHost});
 
   $PostReportCopyWith<$Res> get postReport;
   $PostCopyWith<$Res> get post;
   $CommunitySafeCopyWith<$Res> get community;
-  $PersonSafeCopyWith<$Res> get creator;
-  $PersonSafeCopyWith<$Res> get postCreator;
+  $PersonCopyWith<$Res> get creator;
+  $PersonCopyWith<$Res> get postCreator;
   $PostAggregatesCopyWith<$Res> get counts;
-  $PersonSafeCopyWith<$Res>? get resolver;
+  $PersonCopyWith<$Res>? get resolver;
 }
 
 /// @nodoc
@@ -2034,11 +2094,11 @@ class _$PostReportViewCopyWithImpl<$Res, $Val extends PostReportView>
       creator: null == creator
           ? _value.creator
           : creator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       postCreator: null == postCreator
           ? _value.postCreator
           : postCreator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       creatorBannedFromCommunity: null == creatorBannedFromCommunity
           ? _value.creatorBannedFromCommunity
           : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
@@ -2054,7 +2114,7 @@ class _$PostReportViewCopyWithImpl<$Res, $Val extends PostReportView>
       resolver: freezed == resolver
           ? _value.resolver
           : resolver // ignore: cast_nullable_to_non_nullable
-              as PersonSafe?,
+              as Person?,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -2096,8 +2156,8 @@ class _$PostReportViewCopyWithImpl<$Res, $Val extends PostReportView>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get creator {
-    return $PersonSafeCopyWith<$Res>(_value.creator, (value) {
+  $PersonCopyWith<$Res> get creator {
+    return $PersonCopyWith<$Res>(_value.creator, (value) {
       return _then(_value.copyWith(creator: value) as $Val);
     });
   }
@@ -2106,8 +2166,8 @@ class _$PostReportViewCopyWithImpl<$Res, $Val extends PostReportView>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get postCreator {
-    return $PersonSafeCopyWith<$Res>(_value.postCreator, (value) {
+  $PersonCopyWith<$Res> get postCreator {
+    return $PersonCopyWith<$Res>(_value.postCreator, (value) {
       return _then(_value.copyWith(postCreator: value) as $Val);
     });
   }
@@ -2126,12 +2186,12 @@ class _$PostReportViewCopyWithImpl<$Res, $Val extends PostReportView>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res>? get resolver {
+  $PersonCopyWith<$Res>? get resolver {
     if (_value.resolver == null) {
       return null;
     }
 
-    return $PersonSafeCopyWith<$Res>(_value.resolver!, (value) {
+    return $PersonCopyWith<$Res>(_value.resolver!, (value) {
       return _then(_value.copyWith(resolver: value) as $Val);
     });
   }
@@ -2149,12 +2209,12 @@ abstract class _$$PostReportViewImplCopyWith<$Res>
       {PostReport postReport,
       Post post,
       CommunitySafe community,
-      PersonSafe creator,
-      PersonSafe postCreator,
+      Person creator,
+      Person postCreator,
       bool creatorBannedFromCommunity,
       VoteType? myVote,
       PostAggregates counts,
-      PersonSafe? resolver,
+      Person? resolver,
       String instanceHost});
 
   @override
@@ -2164,13 +2224,13 @@ abstract class _$$PostReportViewImplCopyWith<$Res>
   @override
   $CommunitySafeCopyWith<$Res> get community;
   @override
-  $PersonSafeCopyWith<$Res> get creator;
+  $PersonCopyWith<$Res> get creator;
   @override
-  $PersonSafeCopyWith<$Res> get postCreator;
+  $PersonCopyWith<$Res> get postCreator;
   @override
   $PostAggregatesCopyWith<$Res> get counts;
   @override
-  $PersonSafeCopyWith<$Res>? get resolver;
+  $PersonCopyWith<$Res>? get resolver;
 }
 
 /// @nodoc
@@ -2213,11 +2273,11 @@ class __$$PostReportViewImplCopyWithImpl<$Res>
       creator: null == creator
           ? _value.creator
           : creator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       postCreator: null == postCreator
           ? _value.postCreator
           : postCreator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       creatorBannedFromCommunity: null == creatorBannedFromCommunity
           ? _value.creatorBannedFromCommunity
           : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
@@ -2233,7 +2293,7 @@ class __$$PostReportViewImplCopyWithImpl<$Res>
       resolver: freezed == resolver
           ? _value.resolver
           : resolver // ignore: cast_nullable_to_non_nullable
-              as PersonSafe?,
+              as Person?,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -2269,9 +2329,9 @@ class _$PostReportViewImpl extends _PostReportView {
   @override
   final CommunitySafe community;
   @override
-  final PersonSafe creator;
+  final Person creator;
   @override
-  final PersonSafe postCreator;
+  final Person postCreator;
   @override
   final bool creatorBannedFromCommunity;
   @override
@@ -2279,7 +2339,7 @@ class _$PostReportViewImpl extends _PostReportView {
   @override
   final PostAggregates counts;
   @override
-  final PersonSafe? resolver;
+  final Person? resolver;
   @override
   final String instanceHost;
 
@@ -2350,12 +2410,12 @@ abstract class _PostReportView extends PostReportView {
       {required final PostReport postReport,
       required final Post post,
       required final CommunitySafe community,
-      required final PersonSafe creator,
-      required final PersonSafe postCreator,
+      required final Person creator,
+      required final Person postCreator,
       required final bool creatorBannedFromCommunity,
       final VoteType? myVote,
       required final PostAggregates counts,
-      final PersonSafe? resolver,
+      final Person? resolver,
       required final String instanceHost}) = _$PostReportViewImpl;
   const _PostReportView._() : super._();
 
@@ -2369,9 +2429,9 @@ abstract class _PostReportView extends PostReportView {
   @override
   CommunitySafe get community;
   @override
-  PersonSafe get creator;
+  Person get creator;
   @override
-  PersonSafe get postCreator;
+  Person get postCreator;
   @override
   bool get creatorBannedFromCommunity;
   @override
@@ -2379,7 +2439,7 @@ abstract class _PostReportView extends PostReportView {
   @override
   PostAggregates get counts;
   @override
-  PersonSafe? get resolver;
+  Person? get resolver;
   @override
   String get instanceHost;
 
@@ -2398,7 +2458,7 @@ CommentView _$CommentViewFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$CommentView {
   Comment get comment => throw _privateConstructorUsedError;
-  PersonSafe get creator => throw _privateConstructorUsedError;
+  Person get creator => throw _privateConstructorUsedError;
   Post get post => throw _privateConstructorUsedError;
   CommunitySafe get community => throw _privateConstructorUsedError;
   CommentAggregates get counts => throw _privateConstructorUsedError;
@@ -2427,7 +2487,7 @@ abstract class $CommentViewCopyWith<$Res> {
   @useResult
   $Res call(
       {Comment comment,
-      PersonSafe creator,
+      Person creator,
       Post post,
       CommunitySafe community,
       CommentAggregates counts,
@@ -2439,7 +2499,7 @@ abstract class $CommentViewCopyWith<$Res> {
       String instanceHost});
 
   $CommentCopyWith<$Res> get comment;
-  $PersonSafeCopyWith<$Res> get creator;
+  $PersonCopyWith<$Res> get creator;
   $PostCopyWith<$Res> get post;
   $CommunitySafeCopyWith<$Res> get community;
   $CommentAggregatesCopyWith<$Res> get counts;
@@ -2480,7 +2540,7 @@ class _$CommentViewCopyWithImpl<$Res, $Val extends CommentView>
       creator: null == creator
           ? _value.creator
           : creator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       post: null == post
           ? _value.post
           : post // ignore: cast_nullable_to_non_nullable
@@ -2534,8 +2594,8 @@ class _$CommentViewCopyWithImpl<$Res, $Val extends CommentView>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get creator {
-    return $PersonSafeCopyWith<$Res>(_value.creator, (value) {
+  $PersonCopyWith<$Res> get creator {
+    return $PersonCopyWith<$Res>(_value.creator, (value) {
       return _then(_value.copyWith(creator: value) as $Val);
     });
   }
@@ -2581,7 +2641,7 @@ abstract class _$$CommentViewImplCopyWith<$Res>
   @useResult
   $Res call(
       {Comment comment,
-      PersonSafe creator,
+      Person creator,
       Post post,
       CommunitySafe community,
       CommentAggregates counts,
@@ -2595,7 +2655,7 @@ abstract class _$$CommentViewImplCopyWith<$Res>
   @override
   $CommentCopyWith<$Res> get comment;
   @override
-  $PersonSafeCopyWith<$Res> get creator;
+  $PersonCopyWith<$Res> get creator;
   @override
   $PostCopyWith<$Res> get post;
   @override
@@ -2637,7 +2697,7 @@ class __$$CommentViewImplCopyWithImpl<$Res>
       creator: null == creator
           ? _value.creator
           : creator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       post: null == post
           ? _value.post
           : post // ignore: cast_nullable_to_non_nullable
@@ -2702,7 +2762,7 @@ class _$CommentViewImpl extends _CommentView {
   @override
   final Comment comment;
   @override
-  final PersonSafe creator;
+  final Person creator;
   @override
   final Post post;
   @override
@@ -2787,7 +2847,7 @@ class _$CommentViewImpl extends _CommentView {
 abstract class _CommentView extends CommentView {
   const factory _CommentView(
       {required final Comment comment,
-      required final PersonSafe creator,
+      required final Person creator,
       required final Post post,
       required final CommunitySafe community,
       required final CommentAggregates counts,
@@ -2805,7 +2865,7 @@ abstract class _CommentView extends CommentView {
   @override
   Comment get comment;
   @override
-  PersonSafe get creator;
+  Person get creator;
   @override
   Post get post;
   @override
@@ -2841,10 +2901,10 @@ CommentReplyView _$CommentReplyViewFromJson(Map<String, dynamic> json) {
 mixin _$CommentReplyView {
   CommentReply get commentReply => throw _privateConstructorUsedError;
   Comment get comment => throw _privateConstructorUsedError;
-  PersonSafe get creator => throw _privateConstructorUsedError;
+  Person get creator => throw _privateConstructorUsedError;
   Post get post => throw _privateConstructorUsedError;
   CommunitySafe get community => throw _privateConstructorUsedError;
-  PersonSafe get recipient => throw _privateConstructorUsedError;
+  Person get recipient => throw _privateConstructorUsedError;
   CommentAggregates get counts => throw _privateConstructorUsedError;
   bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
   String get subscribed => throw _privateConstructorUsedError;
@@ -2872,10 +2932,10 @@ abstract class $CommentReplyViewCopyWith<$Res> {
   $Res call(
       {CommentReply commentReply,
       Comment comment,
-      PersonSafe creator,
+      Person creator,
       Post post,
       CommunitySafe community,
-      PersonSafe recipient,
+      Person recipient,
       CommentAggregates counts,
       bool creatorBannedFromCommunity,
       String subscribed,
@@ -2886,10 +2946,10 @@ abstract class $CommentReplyViewCopyWith<$Res> {
 
   $CommentReplyCopyWith<$Res> get commentReply;
   $CommentCopyWith<$Res> get comment;
-  $PersonSafeCopyWith<$Res> get creator;
+  $PersonCopyWith<$Res> get creator;
   $PostCopyWith<$Res> get post;
   $CommunitySafeCopyWith<$Res> get community;
-  $PersonSafeCopyWith<$Res> get recipient;
+  $PersonCopyWith<$Res> get recipient;
   $CommentAggregatesCopyWith<$Res> get counts;
 }
 
@@ -2934,7 +2994,7 @@ class _$CommentReplyViewCopyWithImpl<$Res, $Val extends CommentReplyView>
       creator: null == creator
           ? _value.creator
           : creator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       post: null == post
           ? _value.post
           : post // ignore: cast_nullable_to_non_nullable
@@ -2946,7 +3006,7 @@ class _$CommentReplyViewCopyWithImpl<$Res, $Val extends CommentReplyView>
       recipient: null == recipient
           ? _value.recipient
           : recipient // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       counts: null == counts
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
@@ -3002,8 +3062,8 @@ class _$CommentReplyViewCopyWithImpl<$Res, $Val extends CommentReplyView>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get creator {
-    return $PersonSafeCopyWith<$Res>(_value.creator, (value) {
+  $PersonCopyWith<$Res> get creator {
+    return $PersonCopyWith<$Res>(_value.creator, (value) {
       return _then(_value.copyWith(creator: value) as $Val);
     });
   }
@@ -3032,8 +3092,8 @@ class _$CommentReplyViewCopyWithImpl<$Res, $Val extends CommentReplyView>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get recipient {
-    return $PersonSafeCopyWith<$Res>(_value.recipient, (value) {
+  $PersonCopyWith<$Res> get recipient {
+    return $PersonCopyWith<$Res>(_value.recipient, (value) {
       return _then(_value.copyWith(recipient: value) as $Val);
     });
   }
@@ -3060,10 +3120,10 @@ abstract class _$$CommentReplyViewImplCopyWith<$Res>
   $Res call(
       {CommentReply commentReply,
       Comment comment,
-      PersonSafe creator,
+      Person creator,
       Post post,
       CommunitySafe community,
-      PersonSafe recipient,
+      Person recipient,
       CommentAggregates counts,
       bool creatorBannedFromCommunity,
       String subscribed,
@@ -3077,13 +3137,13 @@ abstract class _$$CommentReplyViewImplCopyWith<$Res>
   @override
   $CommentCopyWith<$Res> get comment;
   @override
-  $PersonSafeCopyWith<$Res> get creator;
+  $PersonCopyWith<$Res> get creator;
   @override
   $PostCopyWith<$Res> get post;
   @override
   $CommunitySafeCopyWith<$Res> get community;
   @override
-  $PersonSafeCopyWith<$Res> get recipient;
+  $PersonCopyWith<$Res> get recipient;
   @override
   $CommentAggregatesCopyWith<$Res> get counts;
 }
@@ -3127,7 +3187,7 @@ class __$$CommentReplyViewImplCopyWithImpl<$Res>
       creator: null == creator
           ? _value.creator
           : creator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       post: null == post
           ? _value.post
           : post // ignore: cast_nullable_to_non_nullable
@@ -3139,7 +3199,7 @@ class __$$CommentReplyViewImplCopyWithImpl<$Res>
       recipient: null == recipient
           ? _value.recipient
           : recipient // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       counts: null == counts
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
@@ -3200,13 +3260,13 @@ class _$CommentReplyViewImpl extends _CommentReplyView {
   @override
   final Comment comment;
   @override
-  final PersonSafe creator;
+  final Person creator;
   @override
   final Post post;
   @override
   final CommunitySafe community;
   @override
-  final PersonSafe recipient;
+  final Person recipient;
   @override
   final CommentAggregates counts;
   @override
@@ -3295,10 +3355,10 @@ abstract class _CommentReplyView extends CommentReplyView {
   const factory _CommentReplyView(
       {required final CommentReply commentReply,
       required final Comment comment,
-      required final PersonSafe creator,
+      required final Person creator,
       required final Post post,
       required final CommunitySafe community,
-      required final PersonSafe recipient,
+      required final Person recipient,
       required final CommentAggregates counts,
       required final bool creatorBannedFromCommunity,
       required final String subscribed,
@@ -3316,13 +3376,13 @@ abstract class _CommentReplyView extends CommentReplyView {
   @override
   Comment get comment;
   @override
-  PersonSafe get creator;
+  Person get creator;
   @override
   Post get post;
   @override
   CommunitySafe get community;
   @override
-  PersonSafe get recipient;
+  Person get recipient;
   @override
   CommentAggregates get counts;
   @override
@@ -3356,12 +3416,12 @@ mixin _$CommentReportView {
   Comment get comment => throw _privateConstructorUsedError;
   Post get post => throw _privateConstructorUsedError;
   CommunitySafe get community => throw _privateConstructorUsedError;
-  PersonSafe get creator => throw _privateConstructorUsedError;
-  PersonSafe get commentCreator => throw _privateConstructorUsedError;
+  Person get creator => throw _privateConstructorUsedError;
+  Person get commentCreator => throw _privateConstructorUsedError;
   bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
   VoteType? get myVote => throw _privateConstructorUsedError;
   CommentAggregates get counts => throw _privateConstructorUsedError;
-  PersonSafe? get resolver => throw _privateConstructorUsedError;
+  Person? get resolver => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
   /// Serializes this CommentReportView to a JSON map.
@@ -3385,22 +3445,22 @@ abstract class $CommentReportViewCopyWith<$Res> {
       Comment comment,
       Post post,
       CommunitySafe community,
-      PersonSafe creator,
-      PersonSafe commentCreator,
+      Person creator,
+      Person commentCreator,
       bool creatorBannedFromCommunity,
       VoteType? myVote,
       CommentAggregates counts,
-      PersonSafe? resolver,
+      Person? resolver,
       String instanceHost});
 
   $CommentReportCopyWith<$Res> get commentReport;
   $CommentCopyWith<$Res> get comment;
   $PostCopyWith<$Res> get post;
   $CommunitySafeCopyWith<$Res> get community;
-  $PersonSafeCopyWith<$Res> get creator;
-  $PersonSafeCopyWith<$Res> get commentCreator;
+  $PersonCopyWith<$Res> get creator;
+  $PersonCopyWith<$Res> get commentCreator;
   $CommentAggregatesCopyWith<$Res> get counts;
-  $PersonSafeCopyWith<$Res>? get resolver;
+  $PersonCopyWith<$Res>? get resolver;
 }
 
 /// @nodoc
@@ -3450,11 +3510,11 @@ class _$CommentReportViewCopyWithImpl<$Res, $Val extends CommentReportView>
       creator: null == creator
           ? _value.creator
           : creator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       commentCreator: null == commentCreator
           ? _value.commentCreator
           : commentCreator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       creatorBannedFromCommunity: null == creatorBannedFromCommunity
           ? _value.creatorBannedFromCommunity
           : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
@@ -3470,7 +3530,7 @@ class _$CommentReportViewCopyWithImpl<$Res, $Val extends CommentReportView>
       resolver: freezed == resolver
           ? _value.resolver
           : resolver // ignore: cast_nullable_to_non_nullable
-              as PersonSafe?,
+              as Person?,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -3522,8 +3582,8 @@ class _$CommentReportViewCopyWithImpl<$Res, $Val extends CommentReportView>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get creator {
-    return $PersonSafeCopyWith<$Res>(_value.creator, (value) {
+  $PersonCopyWith<$Res> get creator {
+    return $PersonCopyWith<$Res>(_value.creator, (value) {
       return _then(_value.copyWith(creator: value) as $Val);
     });
   }
@@ -3532,8 +3592,8 @@ class _$CommentReportViewCopyWithImpl<$Res, $Val extends CommentReportView>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get commentCreator {
-    return $PersonSafeCopyWith<$Res>(_value.commentCreator, (value) {
+  $PersonCopyWith<$Res> get commentCreator {
+    return $PersonCopyWith<$Res>(_value.commentCreator, (value) {
       return _then(_value.copyWith(commentCreator: value) as $Val);
     });
   }
@@ -3552,12 +3612,12 @@ class _$CommentReportViewCopyWithImpl<$Res, $Val extends CommentReportView>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res>? get resolver {
+  $PersonCopyWith<$Res>? get resolver {
     if (_value.resolver == null) {
       return null;
     }
 
-    return $PersonSafeCopyWith<$Res>(_value.resolver!, (value) {
+    return $PersonCopyWith<$Res>(_value.resolver!, (value) {
       return _then(_value.copyWith(resolver: value) as $Val);
     });
   }
@@ -3576,12 +3636,12 @@ abstract class _$$CommentReportViewImplCopyWith<$Res>
       Comment comment,
       Post post,
       CommunitySafe community,
-      PersonSafe creator,
-      PersonSafe commentCreator,
+      Person creator,
+      Person commentCreator,
       bool creatorBannedFromCommunity,
       VoteType? myVote,
       CommentAggregates counts,
-      PersonSafe? resolver,
+      Person? resolver,
       String instanceHost});
 
   @override
@@ -3593,13 +3653,13 @@ abstract class _$$CommentReportViewImplCopyWith<$Res>
   @override
   $CommunitySafeCopyWith<$Res> get community;
   @override
-  $PersonSafeCopyWith<$Res> get creator;
+  $PersonCopyWith<$Res> get creator;
   @override
-  $PersonSafeCopyWith<$Res> get commentCreator;
+  $PersonCopyWith<$Res> get commentCreator;
   @override
   $CommentAggregatesCopyWith<$Res> get counts;
   @override
-  $PersonSafeCopyWith<$Res>? get resolver;
+  $PersonCopyWith<$Res>? get resolver;
 }
 
 /// @nodoc
@@ -3647,11 +3707,11 @@ class __$$CommentReportViewImplCopyWithImpl<$Res>
       creator: null == creator
           ? _value.creator
           : creator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       commentCreator: null == commentCreator
           ? _value.commentCreator
           : commentCreator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       creatorBannedFromCommunity: null == creatorBannedFromCommunity
           ? _value.creatorBannedFromCommunity
           : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
@@ -3667,7 +3727,7 @@ class __$$CommentReportViewImplCopyWithImpl<$Res>
       resolver: freezed == resolver
           ? _value.resolver
           : resolver // ignore: cast_nullable_to_non_nullable
-              as PersonSafe?,
+              as Person?,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -3706,9 +3766,9 @@ class _$CommentReportViewImpl extends _CommentReportView {
   @override
   final CommunitySafe community;
   @override
-  final PersonSafe creator;
+  final Person creator;
   @override
-  final PersonSafe commentCreator;
+  final Person commentCreator;
   @override
   final bool creatorBannedFromCommunity;
   @override
@@ -3716,7 +3776,7 @@ class _$CommentReportViewImpl extends _CommentReportView {
   @override
   final CommentAggregates counts;
   @override
-  final PersonSafe? resolver;
+  final Person? resolver;
   @override
   final String instanceHost;
 
@@ -3790,12 +3850,12 @@ abstract class _CommentReportView extends CommentReportView {
       required final Comment comment,
       required final Post post,
       required final CommunitySafe community,
-      required final PersonSafe creator,
-      required final PersonSafe commentCreator,
+      required final Person creator,
+      required final Person commentCreator,
       required final bool creatorBannedFromCommunity,
       final VoteType? myVote,
       required final CommentAggregates counts,
-      final PersonSafe? resolver,
+      final Person? resolver,
       required final String instanceHost}) = _$CommentReportViewImpl;
   const _CommentReportView._() : super._();
 
@@ -3811,9 +3871,9 @@ abstract class _CommentReportView extends CommentReportView {
   @override
   CommunitySafe get community;
   @override
-  PersonSafe get creator;
+  Person get creator;
   @override
-  PersonSafe get commentCreator;
+  Person get commentCreator;
   @override
   bool get creatorBannedFromCommunity;
   @override
@@ -3821,7 +3881,7 @@ abstract class _CommentReportView extends CommentReportView {
   @override
   CommentAggregates get counts;
   @override
-  PersonSafe? get resolver;
+  Person? get resolver;
   @override
   String get instanceHost;
 
@@ -3840,9 +3900,9 @@ ModAddCommunityView _$ModAddCommunityViewFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ModAddCommunityView {
   ModAddCommunity get modAddCommunity => throw _privateConstructorUsedError;
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  Person get moderator => throw _privateConstructorUsedError;
   CommunitySafe get community => throw _privateConstructorUsedError;
-  PersonSafe get moddedPerson => throw _privateConstructorUsedError;
+  Person get moddedPerson => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
   /// Serializes this ModAddCommunityView to a JSON map.
@@ -3863,15 +3923,15 @@ abstract class $ModAddCommunityViewCopyWith<$Res> {
   @useResult
   $Res call(
       {ModAddCommunity modAddCommunity,
-      PersonSafe moderator,
+      Person moderator,
       CommunitySafe community,
-      PersonSafe moddedPerson,
+      Person moddedPerson,
       String instanceHost});
 
   $ModAddCommunityCopyWith<$Res> get modAddCommunity;
-  $PersonSafeCopyWith<$Res> get moderator;
+  $PersonCopyWith<$Res> get moderator;
   $CommunitySafeCopyWith<$Res> get community;
-  $PersonSafeCopyWith<$Res> get moddedPerson;
+  $PersonCopyWith<$Res> get moddedPerson;
 }
 
 /// @nodoc
@@ -3903,7 +3963,7 @@ class _$ModAddCommunityViewCopyWithImpl<$Res, $Val extends ModAddCommunityView>
       moderator: null == moderator
           ? _value.moderator
           : moderator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       community: null == community
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
@@ -3911,7 +3971,7 @@ class _$ModAddCommunityViewCopyWithImpl<$Res, $Val extends ModAddCommunityView>
       moddedPerson: null == moddedPerson
           ? _value.moddedPerson
           : moddedPerson // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -3933,8 +3993,8 @@ class _$ModAddCommunityViewCopyWithImpl<$Res, $Val extends ModAddCommunityView>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get moderator {
-    return $PersonSafeCopyWith<$Res>(_value.moderator, (value) {
+  $PersonCopyWith<$Res> get moderator {
+    return $PersonCopyWith<$Res>(_value.moderator, (value) {
       return _then(_value.copyWith(moderator: value) as $Val);
     });
   }
@@ -3953,8 +4013,8 @@ class _$ModAddCommunityViewCopyWithImpl<$Res, $Val extends ModAddCommunityView>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get moddedPerson {
-    return $PersonSafeCopyWith<$Res>(_value.moddedPerson, (value) {
+  $PersonCopyWith<$Res> get moddedPerson {
+    return $PersonCopyWith<$Res>(_value.moddedPerson, (value) {
       return _then(_value.copyWith(moddedPerson: value) as $Val);
     });
   }
@@ -3970,19 +4030,19 @@ abstract class _$$ModAddCommunityViewImplCopyWith<$Res>
   @useResult
   $Res call(
       {ModAddCommunity modAddCommunity,
-      PersonSafe moderator,
+      Person moderator,
       CommunitySafe community,
-      PersonSafe moddedPerson,
+      Person moddedPerson,
       String instanceHost});
 
   @override
   $ModAddCommunityCopyWith<$Res> get modAddCommunity;
   @override
-  $PersonSafeCopyWith<$Res> get moderator;
+  $PersonCopyWith<$Res> get moderator;
   @override
   $CommunitySafeCopyWith<$Res> get community;
   @override
-  $PersonSafeCopyWith<$Res> get moddedPerson;
+  $PersonCopyWith<$Res> get moddedPerson;
 }
 
 /// @nodoc
@@ -4012,7 +4072,7 @@ class __$$ModAddCommunityViewImplCopyWithImpl<$Res>
       moderator: null == moderator
           ? _value.moderator
           : moderator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       community: null == community
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
@@ -4020,7 +4080,7 @@ class __$$ModAddCommunityViewImplCopyWithImpl<$Res>
       moddedPerson: null == moddedPerson
           ? _value.moddedPerson
           : moddedPerson // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -4047,11 +4107,11 @@ class _$ModAddCommunityViewImpl extends _ModAddCommunityView {
   @override
   final ModAddCommunity modAddCommunity;
   @override
-  final PersonSafe moderator;
+  final Person moderator;
   @override
   final CommunitySafe community;
   @override
-  final PersonSafe moddedPerson;
+  final Person moddedPerson;
   @override
   final String instanceHost;
 
@@ -4102,9 +4162,9 @@ class _$ModAddCommunityViewImpl extends _ModAddCommunityView {
 abstract class _ModAddCommunityView extends ModAddCommunityView {
   const factory _ModAddCommunityView(
       {required final ModAddCommunity modAddCommunity,
-      required final PersonSafe moderator,
+      required final Person moderator,
       required final CommunitySafe community,
-      required final PersonSafe moddedPerson,
+      required final Person moddedPerson,
       required final String instanceHost}) = _$ModAddCommunityViewImpl;
   const _ModAddCommunityView._() : super._();
 
@@ -4114,11 +4174,11 @@ abstract class _ModAddCommunityView extends ModAddCommunityView {
   @override
   ModAddCommunity get modAddCommunity;
   @override
-  PersonSafe get moderator;
+  Person get moderator;
   @override
   CommunitySafe get community;
   @override
-  PersonSafe get moddedPerson;
+  Person get moddedPerson;
   @override
   String get instanceHost;
 
@@ -4139,9 +4199,9 @@ ModTransferCommunityView _$ModTransferCommunityViewFromJson(
 mixin _$ModTransferCommunityView {
   ModTransferCommunity get modTransferCommunity =>
       throw _privateConstructorUsedError;
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  Person get moderator => throw _privateConstructorUsedError;
   CommunitySafe get community => throw _privateConstructorUsedError;
-  PersonSafe get moddedPerson => throw _privateConstructorUsedError;
+  Person get moddedPerson => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
   /// Serializes this ModTransferCommunityView to a JSON map.
@@ -4162,15 +4222,15 @@ abstract class $ModTransferCommunityViewCopyWith<$Res> {
   @useResult
   $Res call(
       {ModTransferCommunity modTransferCommunity,
-      PersonSafe moderator,
+      Person moderator,
       CommunitySafe community,
-      PersonSafe moddedPerson,
+      Person moddedPerson,
       String instanceHost});
 
   $ModTransferCommunityCopyWith<$Res> get modTransferCommunity;
-  $PersonSafeCopyWith<$Res> get moderator;
+  $PersonCopyWith<$Res> get moderator;
   $CommunitySafeCopyWith<$Res> get community;
-  $PersonSafeCopyWith<$Res> get moddedPerson;
+  $PersonCopyWith<$Res> get moddedPerson;
 }
 
 /// @nodoc
@@ -4203,7 +4263,7 @@ class _$ModTransferCommunityViewCopyWithImpl<$Res,
       moderator: null == moderator
           ? _value.moderator
           : moderator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       community: null == community
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
@@ -4211,7 +4271,7 @@ class _$ModTransferCommunityViewCopyWithImpl<$Res,
       moddedPerson: null == moddedPerson
           ? _value.moddedPerson
           : moddedPerson // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -4234,8 +4294,8 @@ class _$ModTransferCommunityViewCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get moderator {
-    return $PersonSafeCopyWith<$Res>(_value.moderator, (value) {
+  $PersonCopyWith<$Res> get moderator {
+    return $PersonCopyWith<$Res>(_value.moderator, (value) {
       return _then(_value.copyWith(moderator: value) as $Val);
     });
   }
@@ -4254,8 +4314,8 @@ class _$ModTransferCommunityViewCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get moddedPerson {
-    return $PersonSafeCopyWith<$Res>(_value.moddedPerson, (value) {
+  $PersonCopyWith<$Res> get moddedPerson {
+    return $PersonCopyWith<$Res>(_value.moddedPerson, (value) {
       return _then(_value.copyWith(moddedPerson: value) as $Val);
     });
   }
@@ -4272,19 +4332,19 @@ abstract class _$$ModTransferCommunityViewImplCopyWith<$Res>
   @useResult
   $Res call(
       {ModTransferCommunity modTransferCommunity,
-      PersonSafe moderator,
+      Person moderator,
       CommunitySafe community,
-      PersonSafe moddedPerson,
+      Person moddedPerson,
       String instanceHost});
 
   @override
   $ModTransferCommunityCopyWith<$Res> get modTransferCommunity;
   @override
-  $PersonSafeCopyWith<$Res> get moderator;
+  $PersonCopyWith<$Res> get moderator;
   @override
   $CommunitySafeCopyWith<$Res> get community;
   @override
-  $PersonSafeCopyWith<$Res> get moddedPerson;
+  $PersonCopyWith<$Res> get moddedPerson;
 }
 
 /// @nodoc
@@ -4316,7 +4376,7 @@ class __$$ModTransferCommunityViewImplCopyWithImpl<$Res>
       moderator: null == moderator
           ? _value.moderator
           : moderator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       community: null == community
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
@@ -4324,7 +4384,7 @@ class __$$ModTransferCommunityViewImplCopyWithImpl<$Res>
       moddedPerson: null == moddedPerson
           ? _value.moddedPerson
           : moddedPerson // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -4351,11 +4411,11 @@ class _$ModTransferCommunityViewImpl extends _ModTransferCommunityView {
   @override
   final ModTransferCommunity modTransferCommunity;
   @override
-  final PersonSafe moderator;
+  final Person moderator;
   @override
   final CommunitySafe community;
   @override
-  final PersonSafe moddedPerson;
+  final Person moddedPerson;
   @override
   final String instanceHost;
 
@@ -4406,9 +4466,9 @@ class _$ModTransferCommunityViewImpl extends _ModTransferCommunityView {
 abstract class _ModTransferCommunityView extends ModTransferCommunityView {
   const factory _ModTransferCommunityView(
       {required final ModTransferCommunity modTransferCommunity,
-      required final PersonSafe moderator,
+      required final Person moderator,
       required final CommunitySafe community,
-      required final PersonSafe moddedPerson,
+      required final Person moddedPerson,
       required final String instanceHost}) = _$ModTransferCommunityViewImpl;
   const _ModTransferCommunityView._() : super._();
 
@@ -4418,11 +4478,11 @@ abstract class _ModTransferCommunityView extends ModTransferCommunityView {
   @override
   ModTransferCommunity get modTransferCommunity;
   @override
-  PersonSafe get moderator;
+  Person get moderator;
   @override
   CommunitySafe get community;
   @override
-  PersonSafe get moddedPerson;
+  Person get moddedPerson;
   @override
   String get instanceHost;
 
@@ -4441,8 +4501,8 @@ ModAddView _$ModAddViewFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ModAddView {
   ModAdd get modAdd => throw _privateConstructorUsedError;
-  PersonSafe get moderator => throw _privateConstructorUsedError;
-  PersonSafe get moddedPerson => throw _privateConstructorUsedError;
+  Person get moderator => throw _privateConstructorUsedError;
+  Person get moddedPerson => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
   /// Serializes this ModAddView to a JSON map.
@@ -4463,13 +4523,13 @@ abstract class $ModAddViewCopyWith<$Res> {
   @useResult
   $Res call(
       {ModAdd modAdd,
-      PersonSafe moderator,
-      PersonSafe moddedPerson,
+      Person moderator,
+      Person moddedPerson,
       String instanceHost});
 
   $ModAddCopyWith<$Res> get modAdd;
-  $PersonSafeCopyWith<$Res> get moderator;
-  $PersonSafeCopyWith<$Res> get moddedPerson;
+  $PersonCopyWith<$Res> get moderator;
+  $PersonCopyWith<$Res> get moddedPerson;
 }
 
 /// @nodoc
@@ -4500,11 +4560,11 @@ class _$ModAddViewCopyWithImpl<$Res, $Val extends ModAddView>
       moderator: null == moderator
           ? _value.moderator
           : moderator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       moddedPerson: null == moddedPerson
           ? _value.moddedPerson
           : moddedPerson // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -4526,8 +4586,8 @@ class _$ModAddViewCopyWithImpl<$Res, $Val extends ModAddView>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get moderator {
-    return $PersonSafeCopyWith<$Res>(_value.moderator, (value) {
+  $PersonCopyWith<$Res> get moderator {
+    return $PersonCopyWith<$Res>(_value.moderator, (value) {
       return _then(_value.copyWith(moderator: value) as $Val);
     });
   }
@@ -4536,8 +4596,8 @@ class _$ModAddViewCopyWithImpl<$Res, $Val extends ModAddView>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get moddedPerson {
-    return $PersonSafeCopyWith<$Res>(_value.moddedPerson, (value) {
+  $PersonCopyWith<$Res> get moddedPerson {
+    return $PersonCopyWith<$Res>(_value.moddedPerson, (value) {
       return _then(_value.copyWith(moddedPerson: value) as $Val);
     });
   }
@@ -4553,16 +4613,16 @@ abstract class _$$ModAddViewImplCopyWith<$Res>
   @useResult
   $Res call(
       {ModAdd modAdd,
-      PersonSafe moderator,
-      PersonSafe moddedPerson,
+      Person moderator,
+      Person moddedPerson,
       String instanceHost});
 
   @override
   $ModAddCopyWith<$Res> get modAdd;
   @override
-  $PersonSafeCopyWith<$Res> get moderator;
+  $PersonCopyWith<$Res> get moderator;
   @override
-  $PersonSafeCopyWith<$Res> get moddedPerson;
+  $PersonCopyWith<$Res> get moddedPerson;
 }
 
 /// @nodoc
@@ -4591,11 +4651,11 @@ class __$$ModAddViewImplCopyWithImpl<$Res>
       moderator: null == moderator
           ? _value.moderator
           : moderator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       moddedPerson: null == moddedPerson
           ? _value.moddedPerson
           : moddedPerson // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -4621,9 +4681,9 @@ class _$ModAddViewImpl extends _ModAddView {
   @override
   final ModAdd modAdd;
   @override
-  final PersonSafe moderator;
+  final Person moderator;
   @override
-  final PersonSafe moddedPerson;
+  final Person moddedPerson;
   @override
   final String instanceHost;
 
@@ -4670,8 +4730,8 @@ class _$ModAddViewImpl extends _ModAddView {
 abstract class _ModAddView extends ModAddView {
   const factory _ModAddView(
       {required final ModAdd modAdd,
-      required final PersonSafe moderator,
-      required final PersonSafe moddedPerson,
+      required final Person moderator,
+      required final Person moddedPerson,
       required final String instanceHost}) = _$ModAddViewImpl;
   const _ModAddView._() : super._();
 
@@ -4681,9 +4741,9 @@ abstract class _ModAddView extends ModAddView {
   @override
   ModAdd get modAdd;
   @override
-  PersonSafe get moderator;
+  Person get moderator;
   @override
-  PersonSafe get moddedPerson;
+  Person get moddedPerson;
   @override
   String get instanceHost;
 
@@ -4695,6 +4755,1159 @@ abstract class _ModAddView extends ModAddView {
       throw _privateConstructorUsedError;
 }
 
+AdminPurgePersonView _$AdminPurgePersonViewFromJson(Map<String, dynamic> json) {
+  return _AdminPurgePersonView.fromJson(json);
+}
+
+/// @nodoc
+mixin _$AdminPurgePersonView {
+  AdminPurgePerson get adminPurgePerson =>
+      throw _privateConstructorUsedError; // v0.18.0
+  Person? get admin => throw _privateConstructorUsedError;
+
+  /// Serializes this AdminPurgePersonView to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of AdminPurgePersonView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $AdminPurgePersonViewCopyWith<AdminPurgePersonView> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $AdminPurgePersonViewCopyWith<$Res> {
+  factory $AdminPurgePersonViewCopyWith(AdminPurgePersonView value,
+          $Res Function(AdminPurgePersonView) then) =
+      _$AdminPurgePersonViewCopyWithImpl<$Res, AdminPurgePersonView>;
+  @useResult
+  $Res call({AdminPurgePerson adminPurgePerson, Person? admin});
+
+  $AdminPurgePersonCopyWith<$Res> get adminPurgePerson;
+  $PersonCopyWith<$Res>? get admin;
+}
+
+/// @nodoc
+class _$AdminPurgePersonViewCopyWithImpl<$Res,
+        $Val extends AdminPurgePersonView>
+    implements $AdminPurgePersonViewCopyWith<$Res> {
+  _$AdminPurgePersonViewCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of AdminPurgePersonView
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? adminPurgePerson = null,
+    Object? admin = freezed,
+  }) {
+    return _then(_value.copyWith(
+      adminPurgePerson: null == adminPurgePerson
+          ? _value.adminPurgePerson
+          : adminPurgePerson // ignore: cast_nullable_to_non_nullable
+              as AdminPurgePerson,
+      admin: freezed == admin
+          ? _value.admin
+          : admin // ignore: cast_nullable_to_non_nullable
+              as Person?,
+    ) as $Val);
+  }
+
+  /// Create a copy of AdminPurgePersonView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $AdminPurgePersonCopyWith<$Res> get adminPurgePerson {
+    return $AdminPurgePersonCopyWith<$Res>(_value.adminPurgePerson, (value) {
+      return _then(_value.copyWith(adminPurgePerson: value) as $Val);
+    });
+  }
+
+  /// Create a copy of AdminPurgePersonView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $PersonCopyWith<$Res>? get admin {
+    if (_value.admin == null) {
+      return null;
+    }
+
+    return $PersonCopyWith<$Res>(_value.admin!, (value) {
+      return _then(_value.copyWith(admin: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$AdminPurgePersonViewImplCopyWith<$Res>
+    implements $AdminPurgePersonViewCopyWith<$Res> {
+  factory _$$AdminPurgePersonViewImplCopyWith(_$AdminPurgePersonViewImpl value,
+          $Res Function(_$AdminPurgePersonViewImpl) then) =
+      __$$AdminPurgePersonViewImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({AdminPurgePerson adminPurgePerson, Person? admin});
+
+  @override
+  $AdminPurgePersonCopyWith<$Res> get adminPurgePerson;
+  @override
+  $PersonCopyWith<$Res>? get admin;
+}
+
+/// @nodoc
+class __$$AdminPurgePersonViewImplCopyWithImpl<$Res>
+    extends _$AdminPurgePersonViewCopyWithImpl<$Res, _$AdminPurgePersonViewImpl>
+    implements _$$AdminPurgePersonViewImplCopyWith<$Res> {
+  __$$AdminPurgePersonViewImplCopyWithImpl(_$AdminPurgePersonViewImpl _value,
+      $Res Function(_$AdminPurgePersonViewImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AdminPurgePersonView
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? adminPurgePerson = null,
+    Object? admin = freezed,
+  }) {
+    return _then(_$AdminPurgePersonViewImpl(
+      adminPurgePerson: null == adminPurgePerson
+          ? _value.adminPurgePerson
+          : adminPurgePerson // ignore: cast_nullable_to_non_nullable
+              as AdminPurgePerson,
+      admin: freezed == admin
+          ? _value.admin
+          : admin // ignore: cast_nullable_to_non_nullable
+              as Person?,
+    ));
+  }
+}
+
+/// @nodoc
+
+@modelSerde
+class _$AdminPurgePersonViewImpl extends _AdminPurgePersonView {
+  const _$AdminPurgePersonViewImpl({required this.adminPurgePerson, this.admin})
+      : super._();
+
+  factory _$AdminPurgePersonViewImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AdminPurgePersonViewImplFromJson(json);
+
+  @override
+  final AdminPurgePerson adminPurgePerson;
+// v0.18.0
+  @override
+  final Person? admin;
+
+  @override
+  String toString() {
+    return 'AdminPurgePersonView(adminPurgePerson: $adminPurgePerson, admin: $admin)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AdminPurgePersonViewImpl &&
+            (identical(other.adminPurgePerson, adminPurgePerson) ||
+                other.adminPurgePerson == adminPurgePerson) &&
+            (identical(other.admin, admin) || other.admin == admin));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, adminPurgePerson, admin);
+
+  /// Create a copy of AdminPurgePersonView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AdminPurgePersonViewImplCopyWith<_$AdminPurgePersonViewImpl>
+      get copyWith =>
+          __$$AdminPurgePersonViewImplCopyWithImpl<_$AdminPurgePersonViewImpl>(
+              this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$AdminPurgePersonViewImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _AdminPurgePersonView extends AdminPurgePersonView {
+  const factory _AdminPurgePersonView(
+      {required final AdminPurgePerson adminPurgePerson,
+      final Person? admin}) = _$AdminPurgePersonViewImpl;
+  const _AdminPurgePersonView._() : super._();
+
+  factory _AdminPurgePersonView.fromJson(Map<String, dynamic> json) =
+      _$AdminPurgePersonViewImpl.fromJson;
+
+  @override
+  AdminPurgePerson get adminPurgePerson; // v0.18.0
+  @override
+  Person? get admin;
+
+  /// Create a copy of AdminPurgePersonView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AdminPurgePersonViewImplCopyWith<_$AdminPurgePersonViewImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+AdminPurgePostView _$AdminPurgePostViewFromJson(Map<String, dynamic> json) {
+  return _AdminPurgePostView.fromJson(json);
+}
+
+/// @nodoc
+mixin _$AdminPurgePostView {
+  AdminPurgePost get adminPurgePost =>
+      throw _privateConstructorUsedError; // v0.18.0
+  Person? get admin => throw _privateConstructorUsedError; // v0.18.0
+  CommunitySafe get community => throw _privateConstructorUsedError;
+
+  /// Serializes this AdminPurgePostView to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of AdminPurgePostView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $AdminPurgePostViewCopyWith<AdminPurgePostView> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $AdminPurgePostViewCopyWith<$Res> {
+  factory $AdminPurgePostViewCopyWith(
+          AdminPurgePostView value, $Res Function(AdminPurgePostView) then) =
+      _$AdminPurgePostViewCopyWithImpl<$Res, AdminPurgePostView>;
+  @useResult
+  $Res call(
+      {AdminPurgePost adminPurgePost, Person? admin, CommunitySafe community});
+
+  $AdminPurgePostCopyWith<$Res> get adminPurgePost;
+  $PersonCopyWith<$Res>? get admin;
+  $CommunitySafeCopyWith<$Res> get community;
+}
+
+/// @nodoc
+class _$AdminPurgePostViewCopyWithImpl<$Res, $Val extends AdminPurgePostView>
+    implements $AdminPurgePostViewCopyWith<$Res> {
+  _$AdminPurgePostViewCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of AdminPurgePostView
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? adminPurgePost = null,
+    Object? admin = freezed,
+    Object? community = null,
+  }) {
+    return _then(_value.copyWith(
+      adminPurgePost: null == adminPurgePost
+          ? _value.adminPurgePost
+          : adminPurgePost // ignore: cast_nullable_to_non_nullable
+              as AdminPurgePost,
+      admin: freezed == admin
+          ? _value.admin
+          : admin // ignore: cast_nullable_to_non_nullable
+              as Person?,
+      community: null == community
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+    ) as $Val);
+  }
+
+  /// Create a copy of AdminPurgePostView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $AdminPurgePostCopyWith<$Res> get adminPurgePost {
+    return $AdminPurgePostCopyWith<$Res>(_value.adminPurgePost, (value) {
+      return _then(_value.copyWith(adminPurgePost: value) as $Val);
+    });
+  }
+
+  /// Create a copy of AdminPurgePostView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $PersonCopyWith<$Res>? get admin {
+    if (_value.admin == null) {
+      return null;
+    }
+
+    return $PersonCopyWith<$Res>(_value.admin!, (value) {
+      return _then(_value.copyWith(admin: value) as $Val);
+    });
+  }
+
+  /// Create a copy of AdminPurgePostView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CommunitySafeCopyWith<$Res> get community {
+    return $CommunitySafeCopyWith<$Res>(_value.community, (value) {
+      return _then(_value.copyWith(community: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$AdminPurgePostViewImplCopyWith<$Res>
+    implements $AdminPurgePostViewCopyWith<$Res> {
+  factory _$$AdminPurgePostViewImplCopyWith(_$AdminPurgePostViewImpl value,
+          $Res Function(_$AdminPurgePostViewImpl) then) =
+      __$$AdminPurgePostViewImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {AdminPurgePost adminPurgePost, Person? admin, CommunitySafe community});
+
+  @override
+  $AdminPurgePostCopyWith<$Res> get adminPurgePost;
+  @override
+  $PersonCopyWith<$Res>? get admin;
+  @override
+  $CommunitySafeCopyWith<$Res> get community;
+}
+
+/// @nodoc
+class __$$AdminPurgePostViewImplCopyWithImpl<$Res>
+    extends _$AdminPurgePostViewCopyWithImpl<$Res, _$AdminPurgePostViewImpl>
+    implements _$$AdminPurgePostViewImplCopyWith<$Res> {
+  __$$AdminPurgePostViewImplCopyWithImpl(_$AdminPurgePostViewImpl _value,
+      $Res Function(_$AdminPurgePostViewImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AdminPurgePostView
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? adminPurgePost = null,
+    Object? admin = freezed,
+    Object? community = null,
+  }) {
+    return _then(_$AdminPurgePostViewImpl(
+      adminPurgePost: null == adminPurgePost
+          ? _value.adminPurgePost
+          : adminPurgePost // ignore: cast_nullable_to_non_nullable
+              as AdminPurgePost,
+      admin: freezed == admin
+          ? _value.admin
+          : admin // ignore: cast_nullable_to_non_nullable
+              as Person?,
+      community: null == community
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+    ));
+  }
+}
+
+/// @nodoc
+
+@modelSerde
+class _$AdminPurgePostViewImpl extends _AdminPurgePostView {
+  const _$AdminPurgePostViewImpl(
+      {required this.adminPurgePost, this.admin, required this.community})
+      : super._();
+
+  factory _$AdminPurgePostViewImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AdminPurgePostViewImplFromJson(json);
+
+  @override
+  final AdminPurgePost adminPurgePost;
+// v0.18.0
+  @override
+  final Person? admin;
+// v0.18.0
+  @override
+  final CommunitySafe community;
+
+  @override
+  String toString() {
+    return 'AdminPurgePostView(adminPurgePost: $adminPurgePost, admin: $admin, community: $community)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AdminPurgePostViewImpl &&
+            (identical(other.adminPurgePost, adminPurgePost) ||
+                other.adminPurgePost == adminPurgePost) &&
+            (identical(other.admin, admin) || other.admin == admin) &&
+            (identical(other.community, community) ||
+                other.community == community));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, adminPurgePost, admin, community);
+
+  /// Create a copy of AdminPurgePostView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AdminPurgePostViewImplCopyWith<_$AdminPurgePostViewImpl> get copyWith =>
+      __$$AdminPurgePostViewImplCopyWithImpl<_$AdminPurgePostViewImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$AdminPurgePostViewImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _AdminPurgePostView extends AdminPurgePostView {
+  const factory _AdminPurgePostView(
+      {required final AdminPurgePost adminPurgePost,
+      final Person? admin,
+      required final CommunitySafe community}) = _$AdminPurgePostViewImpl;
+  const _AdminPurgePostView._() : super._();
+
+  factory _AdminPurgePostView.fromJson(Map<String, dynamic> json) =
+      _$AdminPurgePostViewImpl.fromJson;
+
+  @override
+  AdminPurgePost get adminPurgePost; // v0.18.0
+  @override
+  Person? get admin; // v0.18.0
+  @override
+  CommunitySafe get community;
+
+  /// Create a copy of AdminPurgePostView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AdminPurgePostViewImplCopyWith<_$AdminPurgePostViewImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+AdminPurgeCommunityView _$AdminPurgeCommunityViewFromJson(
+    Map<String, dynamic> json) {
+  return _AdminPurgeCommunityView.fromJson(json);
+}
+
+/// @nodoc
+mixin _$AdminPurgeCommunityView {
+  AdminPurgeCommunity get adminPurgeCommunity =>
+      throw _privateConstructorUsedError; // v0.18.0
+  Person? get admin => throw _privateConstructorUsedError;
+
+  /// Serializes this AdminPurgeCommunityView to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of AdminPurgeCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $AdminPurgeCommunityViewCopyWith<AdminPurgeCommunityView> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $AdminPurgeCommunityViewCopyWith<$Res> {
+  factory $AdminPurgeCommunityViewCopyWith(AdminPurgeCommunityView value,
+          $Res Function(AdminPurgeCommunityView) then) =
+      _$AdminPurgeCommunityViewCopyWithImpl<$Res, AdminPurgeCommunityView>;
+  @useResult
+  $Res call({AdminPurgeCommunity adminPurgeCommunity, Person? admin});
+
+  $AdminPurgeCommunityCopyWith<$Res> get adminPurgeCommunity;
+  $PersonCopyWith<$Res>? get admin;
+}
+
+/// @nodoc
+class _$AdminPurgeCommunityViewCopyWithImpl<$Res,
+        $Val extends AdminPurgeCommunityView>
+    implements $AdminPurgeCommunityViewCopyWith<$Res> {
+  _$AdminPurgeCommunityViewCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of AdminPurgeCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? adminPurgeCommunity = null,
+    Object? admin = freezed,
+  }) {
+    return _then(_value.copyWith(
+      adminPurgeCommunity: null == adminPurgeCommunity
+          ? _value.adminPurgeCommunity
+          : adminPurgeCommunity // ignore: cast_nullable_to_non_nullable
+              as AdminPurgeCommunity,
+      admin: freezed == admin
+          ? _value.admin
+          : admin // ignore: cast_nullable_to_non_nullable
+              as Person?,
+    ) as $Val);
+  }
+
+  /// Create a copy of AdminPurgeCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $AdminPurgeCommunityCopyWith<$Res> get adminPurgeCommunity {
+    return $AdminPurgeCommunityCopyWith<$Res>(_value.adminPurgeCommunity,
+        (value) {
+      return _then(_value.copyWith(adminPurgeCommunity: value) as $Val);
+    });
+  }
+
+  /// Create a copy of AdminPurgeCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $PersonCopyWith<$Res>? get admin {
+    if (_value.admin == null) {
+      return null;
+    }
+
+    return $PersonCopyWith<$Res>(_value.admin!, (value) {
+      return _then(_value.copyWith(admin: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$AdminPurgeCommunityViewImplCopyWith<$Res>
+    implements $AdminPurgeCommunityViewCopyWith<$Res> {
+  factory _$$AdminPurgeCommunityViewImplCopyWith(
+          _$AdminPurgeCommunityViewImpl value,
+          $Res Function(_$AdminPurgeCommunityViewImpl) then) =
+      __$$AdminPurgeCommunityViewImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({AdminPurgeCommunity adminPurgeCommunity, Person? admin});
+
+  @override
+  $AdminPurgeCommunityCopyWith<$Res> get adminPurgeCommunity;
+  @override
+  $PersonCopyWith<$Res>? get admin;
+}
+
+/// @nodoc
+class __$$AdminPurgeCommunityViewImplCopyWithImpl<$Res>
+    extends _$AdminPurgeCommunityViewCopyWithImpl<$Res,
+        _$AdminPurgeCommunityViewImpl>
+    implements _$$AdminPurgeCommunityViewImplCopyWith<$Res> {
+  __$$AdminPurgeCommunityViewImplCopyWithImpl(
+      _$AdminPurgeCommunityViewImpl _value,
+      $Res Function(_$AdminPurgeCommunityViewImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AdminPurgeCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? adminPurgeCommunity = null,
+    Object? admin = freezed,
+  }) {
+    return _then(_$AdminPurgeCommunityViewImpl(
+      adminPurgeCommunity: null == adminPurgeCommunity
+          ? _value.adminPurgeCommunity
+          : adminPurgeCommunity // ignore: cast_nullable_to_non_nullable
+              as AdminPurgeCommunity,
+      admin: freezed == admin
+          ? _value.admin
+          : admin // ignore: cast_nullable_to_non_nullable
+              as Person?,
+    ));
+  }
+}
+
+/// @nodoc
+
+@modelSerde
+class _$AdminPurgeCommunityViewImpl extends _AdminPurgeCommunityView {
+  const _$AdminPurgeCommunityViewImpl(
+      {required this.adminPurgeCommunity, this.admin})
+      : super._();
+
+  factory _$AdminPurgeCommunityViewImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AdminPurgeCommunityViewImplFromJson(json);
+
+  @override
+  final AdminPurgeCommunity adminPurgeCommunity;
+// v0.18.0
+  @override
+  final Person? admin;
+
+  @override
+  String toString() {
+    return 'AdminPurgeCommunityView(adminPurgeCommunity: $adminPurgeCommunity, admin: $admin)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AdminPurgeCommunityViewImpl &&
+            (identical(other.adminPurgeCommunity, adminPurgeCommunity) ||
+                other.adminPurgeCommunity == adminPurgeCommunity) &&
+            (identical(other.admin, admin) || other.admin == admin));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, adminPurgeCommunity, admin);
+
+  /// Create a copy of AdminPurgeCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AdminPurgeCommunityViewImplCopyWith<_$AdminPurgeCommunityViewImpl>
+      get copyWith => __$$AdminPurgeCommunityViewImplCopyWithImpl<
+          _$AdminPurgeCommunityViewImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$AdminPurgeCommunityViewImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _AdminPurgeCommunityView extends AdminPurgeCommunityView {
+  const factory _AdminPurgeCommunityView(
+      {required final AdminPurgeCommunity adminPurgeCommunity,
+      final Person? admin}) = _$AdminPurgeCommunityViewImpl;
+  const _AdminPurgeCommunityView._() : super._();
+
+  factory _AdminPurgeCommunityView.fromJson(Map<String, dynamic> json) =
+      _$AdminPurgeCommunityViewImpl.fromJson;
+
+  @override
+  AdminPurgeCommunity get adminPurgeCommunity; // v0.18.0
+  @override
+  Person? get admin;
+
+  /// Create a copy of AdminPurgeCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AdminPurgeCommunityViewImplCopyWith<_$AdminPurgeCommunityViewImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+AdminPurgeCommentView _$AdminPurgeCommentViewFromJson(
+    Map<String, dynamic> json) {
+  return _AdminPurgeCommentView.fromJson(json);
+}
+
+/// @nodoc
+mixin _$AdminPurgeCommentView {
+  AdminPurgeComment get adminPurgeComment =>
+      throw _privateConstructorUsedError; // v0.18.0
+  Person? get admin => throw _privateConstructorUsedError; // v0.18.0
+  Post get post => throw _privateConstructorUsedError;
+
+  /// Serializes this AdminPurgeCommentView to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of AdminPurgeCommentView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $AdminPurgeCommentViewCopyWith<AdminPurgeCommentView> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $AdminPurgeCommentViewCopyWith<$Res> {
+  factory $AdminPurgeCommentViewCopyWith(AdminPurgeCommentView value,
+          $Res Function(AdminPurgeCommentView) then) =
+      _$AdminPurgeCommentViewCopyWithImpl<$Res, AdminPurgeCommentView>;
+  @useResult
+  $Res call({AdminPurgeComment adminPurgeComment, Person? admin, Post post});
+
+  $AdminPurgeCommentCopyWith<$Res> get adminPurgeComment;
+  $PersonCopyWith<$Res>? get admin;
+  $PostCopyWith<$Res> get post;
+}
+
+/// @nodoc
+class _$AdminPurgeCommentViewCopyWithImpl<$Res,
+        $Val extends AdminPurgeCommentView>
+    implements $AdminPurgeCommentViewCopyWith<$Res> {
+  _$AdminPurgeCommentViewCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of AdminPurgeCommentView
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? adminPurgeComment = null,
+    Object? admin = freezed,
+    Object? post = null,
+  }) {
+    return _then(_value.copyWith(
+      adminPurgeComment: null == adminPurgeComment
+          ? _value.adminPurgeComment
+          : adminPurgeComment // ignore: cast_nullable_to_non_nullable
+              as AdminPurgeComment,
+      admin: freezed == admin
+          ? _value.admin
+          : admin // ignore: cast_nullable_to_non_nullable
+              as Person?,
+      post: null == post
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+    ) as $Val);
+  }
+
+  /// Create a copy of AdminPurgeCommentView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $AdminPurgeCommentCopyWith<$Res> get adminPurgeComment {
+    return $AdminPurgeCommentCopyWith<$Res>(_value.adminPurgeComment, (value) {
+      return _then(_value.copyWith(adminPurgeComment: value) as $Val);
+    });
+  }
+
+  /// Create a copy of AdminPurgeCommentView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $PersonCopyWith<$Res>? get admin {
+    if (_value.admin == null) {
+      return null;
+    }
+
+    return $PersonCopyWith<$Res>(_value.admin!, (value) {
+      return _then(_value.copyWith(admin: value) as $Val);
+    });
+  }
+
+  /// Create a copy of AdminPurgeCommentView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $PostCopyWith<$Res> get post {
+    return $PostCopyWith<$Res>(_value.post, (value) {
+      return _then(_value.copyWith(post: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$AdminPurgeCommentViewImplCopyWith<$Res>
+    implements $AdminPurgeCommentViewCopyWith<$Res> {
+  factory _$$AdminPurgeCommentViewImplCopyWith(
+          _$AdminPurgeCommentViewImpl value,
+          $Res Function(_$AdminPurgeCommentViewImpl) then) =
+      __$$AdminPurgeCommentViewImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({AdminPurgeComment adminPurgeComment, Person? admin, Post post});
+
+  @override
+  $AdminPurgeCommentCopyWith<$Res> get adminPurgeComment;
+  @override
+  $PersonCopyWith<$Res>? get admin;
+  @override
+  $PostCopyWith<$Res> get post;
+}
+
+/// @nodoc
+class __$$AdminPurgeCommentViewImplCopyWithImpl<$Res>
+    extends _$AdminPurgeCommentViewCopyWithImpl<$Res,
+        _$AdminPurgeCommentViewImpl>
+    implements _$$AdminPurgeCommentViewImplCopyWith<$Res> {
+  __$$AdminPurgeCommentViewImplCopyWithImpl(_$AdminPurgeCommentViewImpl _value,
+      $Res Function(_$AdminPurgeCommentViewImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AdminPurgeCommentView
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? adminPurgeComment = null,
+    Object? admin = freezed,
+    Object? post = null,
+  }) {
+    return _then(_$AdminPurgeCommentViewImpl(
+      adminPurgeComment: null == adminPurgeComment
+          ? _value.adminPurgeComment
+          : adminPurgeComment // ignore: cast_nullable_to_non_nullable
+              as AdminPurgeComment,
+      admin: freezed == admin
+          ? _value.admin
+          : admin // ignore: cast_nullable_to_non_nullable
+              as Person?,
+      post: null == post
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+    ));
+  }
+}
+
+/// @nodoc
+
+@modelSerde
+class _$AdminPurgeCommentViewImpl extends _AdminPurgeCommentView {
+  const _$AdminPurgeCommentViewImpl(
+      {required this.adminPurgeComment, this.admin, required this.post})
+      : super._();
+
+  factory _$AdminPurgeCommentViewImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AdminPurgeCommentViewImplFromJson(json);
+
+  @override
+  final AdminPurgeComment adminPurgeComment;
+// v0.18.0
+  @override
+  final Person? admin;
+// v0.18.0
+  @override
+  final Post post;
+
+  @override
+  String toString() {
+    return 'AdminPurgeCommentView(adminPurgeComment: $adminPurgeComment, admin: $admin, post: $post)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AdminPurgeCommentViewImpl &&
+            (identical(other.adminPurgeComment, adminPurgeComment) ||
+                other.adminPurgeComment == adminPurgeComment) &&
+            (identical(other.admin, admin) || other.admin == admin) &&
+            (identical(other.post, post) || other.post == post));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, adminPurgeComment, admin, post);
+
+  /// Create a copy of AdminPurgeCommentView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AdminPurgeCommentViewImplCopyWith<_$AdminPurgeCommentViewImpl>
+      get copyWith => __$$AdminPurgeCommentViewImplCopyWithImpl<
+          _$AdminPurgeCommentViewImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$AdminPurgeCommentViewImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _AdminPurgeCommentView extends AdminPurgeCommentView {
+  const factory _AdminPurgeCommentView(
+      {required final AdminPurgeComment adminPurgeComment,
+      final Person? admin,
+      required final Post post}) = _$AdminPurgeCommentViewImpl;
+  const _AdminPurgeCommentView._() : super._();
+
+  factory _AdminPurgeCommentView.fromJson(Map<String, dynamic> json) =
+      _$AdminPurgeCommentViewImpl.fromJson;
+
+  @override
+  AdminPurgeComment get adminPurgeComment; // v0.18.0
+  @override
+  Person? get admin; // v0.18.0
+  @override
+  Post get post;
+
+  /// Create a copy of AdminPurgeCommentView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AdminPurgeCommentViewImplCopyWith<_$AdminPurgeCommentViewImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+ModHideCommunityView _$ModHideCommunityViewFromJson(Map<String, dynamic> json) {
+  return _ModHideCommunityView.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ModHideCommunityView {
+  ModHideCommunity get modHideCommunity =>
+      throw _privateConstructorUsedError; // v0.18.0
+  Person? get admin => throw _privateConstructorUsedError; // v0.18.0
+  CommunitySafe get community => throw _privateConstructorUsedError;
+
+  /// Serializes this ModHideCommunityView to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of ModHideCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $ModHideCommunityViewCopyWith<ModHideCommunityView> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ModHideCommunityViewCopyWith<$Res> {
+  factory $ModHideCommunityViewCopyWith(ModHideCommunityView value,
+          $Res Function(ModHideCommunityView) then) =
+      _$ModHideCommunityViewCopyWithImpl<$Res, ModHideCommunityView>;
+  @useResult
+  $Res call(
+      {ModHideCommunity modHideCommunity,
+      Person? admin,
+      CommunitySafe community});
+
+  $ModHideCommunityCopyWith<$Res> get modHideCommunity;
+  $PersonCopyWith<$Res>? get admin;
+  $CommunitySafeCopyWith<$Res> get community;
+}
+
+/// @nodoc
+class _$ModHideCommunityViewCopyWithImpl<$Res,
+        $Val extends ModHideCommunityView>
+    implements $ModHideCommunityViewCopyWith<$Res> {
+  _$ModHideCommunityViewCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of ModHideCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? modHideCommunity = null,
+    Object? admin = freezed,
+    Object? community = null,
+  }) {
+    return _then(_value.copyWith(
+      modHideCommunity: null == modHideCommunity
+          ? _value.modHideCommunity
+          : modHideCommunity // ignore: cast_nullable_to_non_nullable
+              as ModHideCommunity,
+      admin: freezed == admin
+          ? _value.admin
+          : admin // ignore: cast_nullable_to_non_nullable
+              as Person?,
+      community: null == community
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+    ) as $Val);
+  }
+
+  /// Create a copy of ModHideCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $ModHideCommunityCopyWith<$Res> get modHideCommunity {
+    return $ModHideCommunityCopyWith<$Res>(_value.modHideCommunity, (value) {
+      return _then(_value.copyWith(modHideCommunity: value) as $Val);
+    });
+  }
+
+  /// Create a copy of ModHideCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $PersonCopyWith<$Res>? get admin {
+    if (_value.admin == null) {
+      return null;
+    }
+
+    return $PersonCopyWith<$Res>(_value.admin!, (value) {
+      return _then(_value.copyWith(admin: value) as $Val);
+    });
+  }
+
+  /// Create a copy of ModHideCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CommunitySafeCopyWith<$Res> get community {
+    return $CommunitySafeCopyWith<$Res>(_value.community, (value) {
+      return _then(_value.copyWith(community: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$ModHideCommunityViewImplCopyWith<$Res>
+    implements $ModHideCommunityViewCopyWith<$Res> {
+  factory _$$ModHideCommunityViewImplCopyWith(_$ModHideCommunityViewImpl value,
+          $Res Function(_$ModHideCommunityViewImpl) then) =
+      __$$ModHideCommunityViewImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {ModHideCommunity modHideCommunity,
+      Person? admin,
+      CommunitySafe community});
+
+  @override
+  $ModHideCommunityCopyWith<$Res> get modHideCommunity;
+  @override
+  $PersonCopyWith<$Res>? get admin;
+  @override
+  $CommunitySafeCopyWith<$Res> get community;
+}
+
+/// @nodoc
+class __$$ModHideCommunityViewImplCopyWithImpl<$Res>
+    extends _$ModHideCommunityViewCopyWithImpl<$Res, _$ModHideCommunityViewImpl>
+    implements _$$ModHideCommunityViewImplCopyWith<$Res> {
+  __$$ModHideCommunityViewImplCopyWithImpl(_$ModHideCommunityViewImpl _value,
+      $Res Function(_$ModHideCommunityViewImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ModHideCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? modHideCommunity = null,
+    Object? admin = freezed,
+    Object? community = null,
+  }) {
+    return _then(_$ModHideCommunityViewImpl(
+      modHideCommunity: null == modHideCommunity
+          ? _value.modHideCommunity
+          : modHideCommunity // ignore: cast_nullable_to_non_nullable
+              as ModHideCommunity,
+      admin: freezed == admin
+          ? _value.admin
+          : admin // ignore: cast_nullable_to_non_nullable
+              as Person?,
+      community: null == community
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+    ));
+  }
+}
+
+/// @nodoc
+
+@modelSerde
+class _$ModHideCommunityViewImpl extends _ModHideCommunityView {
+  const _$ModHideCommunityViewImpl(
+      {required this.modHideCommunity, this.admin, required this.community})
+      : super._();
+
+  factory _$ModHideCommunityViewImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ModHideCommunityViewImplFromJson(json);
+
+  @override
+  final ModHideCommunity modHideCommunity;
+// v0.18.0
+  @override
+  final Person? admin;
+// v0.18.0
+  @override
+  final CommunitySafe community;
+
+  @override
+  String toString() {
+    return 'ModHideCommunityView(modHideCommunity: $modHideCommunity, admin: $admin, community: $community)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ModHideCommunityViewImpl &&
+            (identical(other.modHideCommunity, modHideCommunity) ||
+                other.modHideCommunity == modHideCommunity) &&
+            (identical(other.admin, admin) || other.admin == admin) &&
+            (identical(other.community, community) ||
+                other.community == community));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, modHideCommunity, admin, community);
+
+  /// Create a copy of ModHideCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ModHideCommunityViewImplCopyWith<_$ModHideCommunityViewImpl>
+      get copyWith =>
+          __$$ModHideCommunityViewImplCopyWithImpl<_$ModHideCommunityViewImpl>(
+              this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ModHideCommunityViewImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _ModHideCommunityView extends ModHideCommunityView {
+  const factory _ModHideCommunityView(
+      {required final ModHideCommunity modHideCommunity,
+      final Person? admin,
+      required final CommunitySafe community}) = _$ModHideCommunityViewImpl;
+  const _ModHideCommunityView._() : super._();
+
+  factory _ModHideCommunityView.fromJson(Map<String, dynamic> json) =
+      _$ModHideCommunityViewImpl.fromJson;
+
+  @override
+  ModHideCommunity get modHideCommunity; // v0.18.0
+  @override
+  Person? get admin; // v0.18.0
+  @override
+  CommunitySafe get community;
+
+  /// Create a copy of ModHideCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ModHideCommunityViewImplCopyWith<_$ModHideCommunityViewImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
 ModBanFromCommunityView _$ModBanFromCommunityViewFromJson(
     Map<String, dynamic> json) {
   return _ModBanFromCommunityView.fromJson(json);
@@ -4704,9 +5917,9 @@ ModBanFromCommunityView _$ModBanFromCommunityViewFromJson(
 mixin _$ModBanFromCommunityView {
   ModBanFromCommunity get modBanFromCommunity =>
       throw _privateConstructorUsedError;
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  Person get moderator => throw _privateConstructorUsedError;
   CommunitySafe get community => throw _privateConstructorUsedError;
-  PersonSafe get bannedPerson => throw _privateConstructorUsedError;
+  Person get bannedPerson => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
   /// Serializes this ModBanFromCommunityView to a JSON map.
@@ -4727,15 +5940,15 @@ abstract class $ModBanFromCommunityViewCopyWith<$Res> {
   @useResult
   $Res call(
       {ModBanFromCommunity modBanFromCommunity,
-      PersonSafe moderator,
+      Person moderator,
       CommunitySafe community,
-      PersonSafe bannedPerson,
+      Person bannedPerson,
       String instanceHost});
 
   $ModBanFromCommunityCopyWith<$Res> get modBanFromCommunity;
-  $PersonSafeCopyWith<$Res> get moderator;
+  $PersonCopyWith<$Res> get moderator;
   $CommunitySafeCopyWith<$Res> get community;
-  $PersonSafeCopyWith<$Res> get bannedPerson;
+  $PersonCopyWith<$Res> get bannedPerson;
 }
 
 /// @nodoc
@@ -4768,7 +5981,7 @@ class _$ModBanFromCommunityViewCopyWithImpl<$Res,
       moderator: null == moderator
           ? _value.moderator
           : moderator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       community: null == community
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
@@ -4776,7 +5989,7 @@ class _$ModBanFromCommunityViewCopyWithImpl<$Res,
       bannedPerson: null == bannedPerson
           ? _value.bannedPerson
           : bannedPerson // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -4799,8 +6012,8 @@ class _$ModBanFromCommunityViewCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get moderator {
-    return $PersonSafeCopyWith<$Res>(_value.moderator, (value) {
+  $PersonCopyWith<$Res> get moderator {
+    return $PersonCopyWith<$Res>(_value.moderator, (value) {
       return _then(_value.copyWith(moderator: value) as $Val);
     });
   }
@@ -4819,8 +6032,8 @@ class _$ModBanFromCommunityViewCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get bannedPerson {
-    return $PersonSafeCopyWith<$Res>(_value.bannedPerson, (value) {
+  $PersonCopyWith<$Res> get bannedPerson {
+    return $PersonCopyWith<$Res>(_value.bannedPerson, (value) {
       return _then(_value.copyWith(bannedPerson: value) as $Val);
     });
   }
@@ -4837,19 +6050,19 @@ abstract class _$$ModBanFromCommunityViewImplCopyWith<$Res>
   @useResult
   $Res call(
       {ModBanFromCommunity modBanFromCommunity,
-      PersonSafe moderator,
+      Person moderator,
       CommunitySafe community,
-      PersonSafe bannedPerson,
+      Person bannedPerson,
       String instanceHost});
 
   @override
   $ModBanFromCommunityCopyWith<$Res> get modBanFromCommunity;
   @override
-  $PersonSafeCopyWith<$Res> get moderator;
+  $PersonCopyWith<$Res> get moderator;
   @override
   $CommunitySafeCopyWith<$Res> get community;
   @override
-  $PersonSafeCopyWith<$Res> get bannedPerson;
+  $PersonCopyWith<$Res> get bannedPerson;
 }
 
 /// @nodoc
@@ -4881,7 +6094,7 @@ class __$$ModBanFromCommunityViewImplCopyWithImpl<$Res>
       moderator: null == moderator
           ? _value.moderator
           : moderator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       community: null == community
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
@@ -4889,7 +6102,7 @@ class __$$ModBanFromCommunityViewImplCopyWithImpl<$Res>
       bannedPerson: null == bannedPerson
           ? _value.bannedPerson
           : bannedPerson // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -4916,11 +6129,11 @@ class _$ModBanFromCommunityViewImpl extends _ModBanFromCommunityView {
   @override
   final ModBanFromCommunity modBanFromCommunity;
   @override
-  final PersonSafe moderator;
+  final Person moderator;
   @override
   final CommunitySafe community;
   @override
-  final PersonSafe bannedPerson;
+  final Person bannedPerson;
   @override
   final String instanceHost;
 
@@ -4971,9 +6184,9 @@ class _$ModBanFromCommunityViewImpl extends _ModBanFromCommunityView {
 abstract class _ModBanFromCommunityView extends ModBanFromCommunityView {
   const factory _ModBanFromCommunityView(
       {required final ModBanFromCommunity modBanFromCommunity,
-      required final PersonSafe moderator,
+      required final Person moderator,
       required final CommunitySafe community,
-      required final PersonSafe bannedPerson,
+      required final Person bannedPerson,
       required final String instanceHost}) = _$ModBanFromCommunityViewImpl;
   const _ModBanFromCommunityView._() : super._();
 
@@ -4983,11 +6196,11 @@ abstract class _ModBanFromCommunityView extends ModBanFromCommunityView {
   @override
   ModBanFromCommunity get modBanFromCommunity;
   @override
-  PersonSafe get moderator;
+  Person get moderator;
   @override
   CommunitySafe get community;
   @override
-  PersonSafe get bannedPerson;
+  Person get bannedPerson;
   @override
   String get instanceHost;
 
@@ -5006,8 +6219,8 @@ ModBanView _$ModBanViewFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ModBanView {
   ModBan get modBan => throw _privateConstructorUsedError;
-  PersonSafe get moderator => throw _privateConstructorUsedError;
-  PersonSafe get bannedPerson => throw _privateConstructorUsedError;
+  Person get moderator => throw _privateConstructorUsedError;
+  Person get bannedPerson => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
   /// Serializes this ModBanView to a JSON map.
@@ -5028,13 +6241,13 @@ abstract class $ModBanViewCopyWith<$Res> {
   @useResult
   $Res call(
       {ModBan modBan,
-      PersonSafe moderator,
-      PersonSafe bannedPerson,
+      Person moderator,
+      Person bannedPerson,
       String instanceHost});
 
   $ModBanCopyWith<$Res> get modBan;
-  $PersonSafeCopyWith<$Res> get moderator;
-  $PersonSafeCopyWith<$Res> get bannedPerson;
+  $PersonCopyWith<$Res> get moderator;
+  $PersonCopyWith<$Res> get bannedPerson;
 }
 
 /// @nodoc
@@ -5065,11 +6278,11 @@ class _$ModBanViewCopyWithImpl<$Res, $Val extends ModBanView>
       moderator: null == moderator
           ? _value.moderator
           : moderator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       bannedPerson: null == bannedPerson
           ? _value.bannedPerson
           : bannedPerson // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -5091,8 +6304,8 @@ class _$ModBanViewCopyWithImpl<$Res, $Val extends ModBanView>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get moderator {
-    return $PersonSafeCopyWith<$Res>(_value.moderator, (value) {
+  $PersonCopyWith<$Res> get moderator {
+    return $PersonCopyWith<$Res>(_value.moderator, (value) {
       return _then(_value.copyWith(moderator: value) as $Val);
     });
   }
@@ -5101,8 +6314,8 @@ class _$ModBanViewCopyWithImpl<$Res, $Val extends ModBanView>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get bannedPerson {
-    return $PersonSafeCopyWith<$Res>(_value.bannedPerson, (value) {
+  $PersonCopyWith<$Res> get bannedPerson {
+    return $PersonCopyWith<$Res>(_value.bannedPerson, (value) {
       return _then(_value.copyWith(bannedPerson: value) as $Val);
     });
   }
@@ -5118,16 +6331,16 @@ abstract class _$$ModBanViewImplCopyWith<$Res>
   @useResult
   $Res call(
       {ModBan modBan,
-      PersonSafe moderator,
-      PersonSafe bannedPerson,
+      Person moderator,
+      Person bannedPerson,
       String instanceHost});
 
   @override
   $ModBanCopyWith<$Res> get modBan;
   @override
-  $PersonSafeCopyWith<$Res> get moderator;
+  $PersonCopyWith<$Res> get moderator;
   @override
-  $PersonSafeCopyWith<$Res> get bannedPerson;
+  $PersonCopyWith<$Res> get bannedPerson;
 }
 
 /// @nodoc
@@ -5156,11 +6369,11 @@ class __$$ModBanViewImplCopyWithImpl<$Res>
       moderator: null == moderator
           ? _value.moderator
           : moderator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       bannedPerson: null == bannedPerson
           ? _value.bannedPerson
           : bannedPerson // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -5186,9 +6399,9 @@ class _$ModBanViewImpl extends _ModBanView {
   @override
   final ModBan modBan;
   @override
-  final PersonSafe moderator;
+  final Person moderator;
   @override
-  final PersonSafe bannedPerson;
+  final Person bannedPerson;
   @override
   final String instanceHost;
 
@@ -5235,8 +6448,8 @@ class _$ModBanViewImpl extends _ModBanView {
 abstract class _ModBanView extends ModBanView {
   const factory _ModBanView(
       {required final ModBan modBan,
-      required final PersonSafe moderator,
-      required final PersonSafe bannedPerson,
+      required final Person moderator,
+      required final Person bannedPerson,
       required final String instanceHost}) = _$ModBanViewImpl;
   const _ModBanView._() : super._();
 
@@ -5246,9 +6459,9 @@ abstract class _ModBanView extends ModBanView {
   @override
   ModBan get modBan;
   @override
-  PersonSafe get moderator;
+  Person get moderator;
   @override
-  PersonSafe get bannedPerson;
+  Person get bannedPerson;
   @override
   String get instanceHost;
 
@@ -5267,7 +6480,7 @@ ModLockPostView _$ModLockPostViewFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ModLockPostView {
   ModLockPost get modLockPost => throw _privateConstructorUsedError;
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  Person get moderator => throw _privateConstructorUsedError;
   Post get post => throw _privateConstructorUsedError;
   CommunitySafe get community => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
@@ -5290,13 +6503,13 @@ abstract class $ModLockPostViewCopyWith<$Res> {
   @useResult
   $Res call(
       {ModLockPost modLockPost,
-      PersonSafe moderator,
+      Person moderator,
       Post post,
       CommunitySafe community,
       String instanceHost});
 
   $ModLockPostCopyWith<$Res> get modLockPost;
-  $PersonSafeCopyWith<$Res> get moderator;
+  $PersonCopyWith<$Res> get moderator;
   $PostCopyWith<$Res> get post;
   $CommunitySafeCopyWith<$Res> get community;
 }
@@ -5330,7 +6543,7 @@ class _$ModLockPostViewCopyWithImpl<$Res, $Val extends ModLockPostView>
       moderator: null == moderator
           ? _value.moderator
           : moderator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       post: null == post
           ? _value.post
           : post // ignore: cast_nullable_to_non_nullable
@@ -5360,8 +6573,8 @@ class _$ModLockPostViewCopyWithImpl<$Res, $Val extends ModLockPostView>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get moderator {
-    return $PersonSafeCopyWith<$Res>(_value.moderator, (value) {
+  $PersonCopyWith<$Res> get moderator {
+    return $PersonCopyWith<$Res>(_value.moderator, (value) {
       return _then(_value.copyWith(moderator: value) as $Val);
     });
   }
@@ -5397,7 +6610,7 @@ abstract class _$$ModLockPostViewImplCopyWith<$Res>
   @useResult
   $Res call(
       {ModLockPost modLockPost,
-      PersonSafe moderator,
+      Person moderator,
       Post post,
       CommunitySafe community,
       String instanceHost});
@@ -5405,7 +6618,7 @@ abstract class _$$ModLockPostViewImplCopyWith<$Res>
   @override
   $ModLockPostCopyWith<$Res> get modLockPost;
   @override
-  $PersonSafeCopyWith<$Res> get moderator;
+  $PersonCopyWith<$Res> get moderator;
   @override
   $PostCopyWith<$Res> get post;
   @override
@@ -5439,7 +6652,7 @@ class __$$ModLockPostViewImplCopyWithImpl<$Res>
       moderator: null == moderator
           ? _value.moderator
           : moderator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       post: null == post
           ? _value.post
           : post // ignore: cast_nullable_to_non_nullable
@@ -5474,7 +6687,7 @@ class _$ModLockPostViewImpl extends _ModLockPostView {
   @override
   final ModLockPost modLockPost;
   @override
-  final PersonSafe moderator;
+  final Person moderator;
   @override
   final Post post;
   @override
@@ -5528,7 +6741,7 @@ class _$ModLockPostViewImpl extends _ModLockPostView {
 abstract class _ModLockPostView extends ModLockPostView {
   const factory _ModLockPostView(
       {required final ModLockPost modLockPost,
-      required final PersonSafe moderator,
+      required final Person moderator,
       required final Post post,
       required final CommunitySafe community,
       required final String instanceHost}) = _$ModLockPostViewImpl;
@@ -5540,7 +6753,7 @@ abstract class _ModLockPostView extends ModLockPostView {
   @override
   ModLockPost get modLockPost;
   @override
-  PersonSafe get moderator;
+  Person get moderator;
   @override
   Post get post;
   @override
@@ -5556,6 +6769,558 @@ abstract class _ModLockPostView extends ModLockPostView {
       throw _privateConstructorUsedError;
 }
 
+ModFeaturePostView _$ModFeaturePostViewFromJson(Map<String, dynamic> json) {
+  return _ModFeaturePostView.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ModFeaturePostView {
+  ModFeaturePost get modFeaturePost =>
+      throw _privateConstructorUsedError; // v0.18.0
+  Person? get moderator => throw _privateConstructorUsedError; // v0.18.0
+  Post get post => throw _privateConstructorUsedError; // v0.18.0
+  CommunitySafe get community => throw _privateConstructorUsedError;
+
+  /// Serializes this ModFeaturePostView to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of ModFeaturePostView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $ModFeaturePostViewCopyWith<ModFeaturePostView> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ModFeaturePostViewCopyWith<$Res> {
+  factory $ModFeaturePostViewCopyWith(
+          ModFeaturePostView value, $Res Function(ModFeaturePostView) then) =
+      _$ModFeaturePostViewCopyWithImpl<$Res, ModFeaturePostView>;
+  @useResult
+  $Res call(
+      {ModFeaturePost modFeaturePost,
+      Person? moderator,
+      Post post,
+      CommunitySafe community});
+
+  $ModFeaturePostCopyWith<$Res> get modFeaturePost;
+  $PersonCopyWith<$Res>? get moderator;
+  $PostCopyWith<$Res> get post;
+  $CommunitySafeCopyWith<$Res> get community;
+}
+
+/// @nodoc
+class _$ModFeaturePostViewCopyWithImpl<$Res, $Val extends ModFeaturePostView>
+    implements $ModFeaturePostViewCopyWith<$Res> {
+  _$ModFeaturePostViewCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of ModFeaturePostView
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? modFeaturePost = null,
+    Object? moderator = freezed,
+    Object? post = null,
+    Object? community = null,
+  }) {
+    return _then(_value.copyWith(
+      modFeaturePost: null == modFeaturePost
+          ? _value.modFeaturePost
+          : modFeaturePost // ignore: cast_nullable_to_non_nullable
+              as ModFeaturePost,
+      moderator: freezed == moderator
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as Person?,
+      post: null == post
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: null == community
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+    ) as $Val);
+  }
+
+  /// Create a copy of ModFeaturePostView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $ModFeaturePostCopyWith<$Res> get modFeaturePost {
+    return $ModFeaturePostCopyWith<$Res>(_value.modFeaturePost, (value) {
+      return _then(_value.copyWith(modFeaturePost: value) as $Val);
+    });
+  }
+
+  /// Create a copy of ModFeaturePostView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $PersonCopyWith<$Res>? get moderator {
+    if (_value.moderator == null) {
+      return null;
+    }
+
+    return $PersonCopyWith<$Res>(_value.moderator!, (value) {
+      return _then(_value.copyWith(moderator: value) as $Val);
+    });
+  }
+
+  /// Create a copy of ModFeaturePostView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $PostCopyWith<$Res> get post {
+    return $PostCopyWith<$Res>(_value.post, (value) {
+      return _then(_value.copyWith(post: value) as $Val);
+    });
+  }
+
+  /// Create a copy of ModFeaturePostView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CommunitySafeCopyWith<$Res> get community {
+    return $CommunitySafeCopyWith<$Res>(_value.community, (value) {
+      return _then(_value.copyWith(community: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$ModFeaturePostViewImplCopyWith<$Res>
+    implements $ModFeaturePostViewCopyWith<$Res> {
+  factory _$$ModFeaturePostViewImplCopyWith(_$ModFeaturePostViewImpl value,
+          $Res Function(_$ModFeaturePostViewImpl) then) =
+      __$$ModFeaturePostViewImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {ModFeaturePost modFeaturePost,
+      Person? moderator,
+      Post post,
+      CommunitySafe community});
+
+  @override
+  $ModFeaturePostCopyWith<$Res> get modFeaturePost;
+  @override
+  $PersonCopyWith<$Res>? get moderator;
+  @override
+  $PostCopyWith<$Res> get post;
+  @override
+  $CommunitySafeCopyWith<$Res> get community;
+}
+
+/// @nodoc
+class __$$ModFeaturePostViewImplCopyWithImpl<$Res>
+    extends _$ModFeaturePostViewCopyWithImpl<$Res, _$ModFeaturePostViewImpl>
+    implements _$$ModFeaturePostViewImplCopyWith<$Res> {
+  __$$ModFeaturePostViewImplCopyWithImpl(_$ModFeaturePostViewImpl _value,
+      $Res Function(_$ModFeaturePostViewImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ModFeaturePostView
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? modFeaturePost = null,
+    Object? moderator = freezed,
+    Object? post = null,
+    Object? community = null,
+  }) {
+    return _then(_$ModFeaturePostViewImpl(
+      modFeaturePost: null == modFeaturePost
+          ? _value.modFeaturePost
+          : modFeaturePost // ignore: cast_nullable_to_non_nullable
+              as ModFeaturePost,
+      moderator: freezed == moderator
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as Person?,
+      post: null == post
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: null == community
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+    ));
+  }
+}
+
+/// @nodoc
+
+@modelSerde
+class _$ModFeaturePostViewImpl extends _ModFeaturePostView {
+  const _$ModFeaturePostViewImpl(
+      {required this.modFeaturePost,
+      this.moderator,
+      required this.post,
+      required this.community})
+      : super._();
+
+  factory _$ModFeaturePostViewImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ModFeaturePostViewImplFromJson(json);
+
+  @override
+  final ModFeaturePost modFeaturePost;
+// v0.18.0
+  @override
+  final Person? moderator;
+// v0.18.0
+  @override
+  final Post post;
+// v0.18.0
+  @override
+  final CommunitySafe community;
+
+  @override
+  String toString() {
+    return 'ModFeaturePostView(modFeaturePost: $modFeaturePost, moderator: $moderator, post: $post, community: $community)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ModFeaturePostViewImpl &&
+            (identical(other.modFeaturePost, modFeaturePost) ||
+                other.modFeaturePost == modFeaturePost) &&
+            (identical(other.moderator, moderator) ||
+                other.moderator == moderator) &&
+            (identical(other.post, post) || other.post == post) &&
+            (identical(other.community, community) ||
+                other.community == community));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, modFeaturePost, moderator, post, community);
+
+  /// Create a copy of ModFeaturePostView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ModFeaturePostViewImplCopyWith<_$ModFeaturePostViewImpl> get copyWith =>
+      __$$ModFeaturePostViewImplCopyWithImpl<_$ModFeaturePostViewImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ModFeaturePostViewImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _ModFeaturePostView extends ModFeaturePostView {
+  const factory _ModFeaturePostView(
+      {required final ModFeaturePost modFeaturePost,
+      final Person? moderator,
+      required final Post post,
+      required final CommunitySafe community}) = _$ModFeaturePostViewImpl;
+  const _ModFeaturePostView._() : super._();
+
+  factory _ModFeaturePostView.fromJson(Map<String, dynamic> json) =
+      _$ModFeaturePostViewImpl.fromJson;
+
+  @override
+  ModFeaturePost get modFeaturePost; // v0.18.0
+  @override
+  Person? get moderator; // v0.18.0
+  @override
+  Post get post; // v0.18.0
+  @override
+  CommunitySafe get community;
+
+  /// Create a copy of ModFeaturePostView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ModFeaturePostViewImplCopyWith<_$ModFeaturePostViewImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ModFeaturePost _$ModFeaturePostFromJson(Map<String, dynamic> json) {
+  return _ModFeaturePost.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ModFeaturePost {
+  int get id => throw _privateConstructorUsedError; // v0.18.0
+  int get modPersonId => throw _privateConstructorUsedError; // v0.18.0
+  int get postId => throw _privateConstructorUsedError; // v0.18.0
+  bool get featured => throw _privateConstructorUsedError; // v0.18.0
+  @JsonKey(name: 'when_')
+  String get when => throw _privateConstructorUsedError; // v0.18.0
+  bool get isFeaturedCommunity => throw _privateConstructorUsedError;
+
+  /// Serializes this ModFeaturePost to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of ModFeaturePost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $ModFeaturePostCopyWith<ModFeaturePost> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ModFeaturePostCopyWith<$Res> {
+  factory $ModFeaturePostCopyWith(
+          ModFeaturePost value, $Res Function(ModFeaturePost) then) =
+      _$ModFeaturePostCopyWithImpl<$Res, ModFeaturePost>;
+  @useResult
+  $Res call(
+      {int id,
+      int modPersonId,
+      int postId,
+      bool featured,
+      @JsonKey(name: 'when_') String when,
+      bool isFeaturedCommunity});
+}
+
+/// @nodoc
+class _$ModFeaturePostCopyWithImpl<$Res, $Val extends ModFeaturePost>
+    implements $ModFeaturePostCopyWith<$Res> {
+  _$ModFeaturePostCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of ModFeaturePost
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? modPersonId = null,
+    Object? postId = null,
+    Object? featured = null,
+    Object? when = null,
+    Object? isFeaturedCommunity = null,
+  }) {
+    return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      modPersonId: null == modPersonId
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
+              as int,
+      postId: null == postId
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
+      featured: null == featured
+          ? _value.featured
+          : featured // ignore: cast_nullable_to_non_nullable
+              as bool,
+      when: null == when
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as String,
+      isFeaturedCommunity: null == isFeaturedCommunity
+          ? _value.isFeaturedCommunity
+          : isFeaturedCommunity // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$ModFeaturePostImplCopyWith<$Res>
+    implements $ModFeaturePostCopyWith<$Res> {
+  factory _$$ModFeaturePostImplCopyWith(_$ModFeaturePostImpl value,
+          $Res Function(_$ModFeaturePostImpl) then) =
+      __$$ModFeaturePostImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {int id,
+      int modPersonId,
+      int postId,
+      bool featured,
+      @JsonKey(name: 'when_') String when,
+      bool isFeaturedCommunity});
+}
+
+/// @nodoc
+class __$$ModFeaturePostImplCopyWithImpl<$Res>
+    extends _$ModFeaturePostCopyWithImpl<$Res, _$ModFeaturePostImpl>
+    implements _$$ModFeaturePostImplCopyWith<$Res> {
+  __$$ModFeaturePostImplCopyWithImpl(
+      _$ModFeaturePostImpl _value, $Res Function(_$ModFeaturePostImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ModFeaturePost
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? modPersonId = null,
+    Object? postId = null,
+    Object? featured = null,
+    Object? when = null,
+    Object? isFeaturedCommunity = null,
+  }) {
+    return _then(_$ModFeaturePostImpl(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      modPersonId: null == modPersonId
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
+              as int,
+      postId: null == postId
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
+      featured: null == featured
+          ? _value.featured
+          : featured // ignore: cast_nullable_to_non_nullable
+              as bool,
+      when: null == when
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as String,
+      isFeaturedCommunity: null == isFeaturedCommunity
+          ? _value.isFeaturedCommunity
+          : isFeaturedCommunity // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+@modelSerde
+class _$ModFeaturePostImpl extends _ModFeaturePost {
+  const _$ModFeaturePostImpl(
+      {required this.id,
+      required this.modPersonId,
+      required this.postId,
+      required this.featured,
+      @JsonKey(name: 'when_') required this.when,
+      required this.isFeaturedCommunity})
+      : super._();
+
+  factory _$ModFeaturePostImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ModFeaturePostImplFromJson(json);
+
+  @override
+  final int id;
+// v0.18.0
+  @override
+  final int modPersonId;
+// v0.18.0
+  @override
+  final int postId;
+// v0.18.0
+  @override
+  final bool featured;
+// v0.18.0
+  @override
+  @JsonKey(name: 'when_')
+  final String when;
+// v0.18.0
+  @override
+  final bool isFeaturedCommunity;
+
+  @override
+  String toString() {
+    return 'ModFeaturePost(id: $id, modPersonId: $modPersonId, postId: $postId, featured: $featured, when: $when, isFeaturedCommunity: $isFeaturedCommunity)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ModFeaturePostImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.modPersonId, modPersonId) ||
+                other.modPersonId == modPersonId) &&
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.featured, featured) ||
+                other.featured == featured) &&
+            (identical(other.when, when) || other.when == when) &&
+            (identical(other.isFeaturedCommunity, isFeaturedCommunity) ||
+                other.isFeaturedCommunity == isFeaturedCommunity));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, id, modPersonId, postId,
+      featured, when, isFeaturedCommunity);
+
+  /// Create a copy of ModFeaturePost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ModFeaturePostImplCopyWith<_$ModFeaturePostImpl> get copyWith =>
+      __$$ModFeaturePostImplCopyWithImpl<_$ModFeaturePostImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ModFeaturePostImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _ModFeaturePost extends ModFeaturePost {
+  const factory _ModFeaturePost(
+      {required final int id,
+      required final int modPersonId,
+      required final int postId,
+      required final bool featured,
+      @JsonKey(name: 'when_') required final String when,
+      required final bool isFeaturedCommunity}) = _$ModFeaturePostImpl;
+  const _ModFeaturePost._() : super._();
+
+  factory _ModFeaturePost.fromJson(Map<String, dynamic> json) =
+      _$ModFeaturePostImpl.fromJson;
+
+  @override
+  int get id; // v0.18.0
+  @override
+  int get modPersonId; // v0.18.0
+  @override
+  int get postId; // v0.18.0
+  @override
+  bool get featured; // v0.18.0
+  @override
+  @JsonKey(name: 'when_')
+  String get when; // v0.18.0
+  @override
+  bool get isFeaturedCommunity;
+
+  /// Create a copy of ModFeaturePost
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ModFeaturePostImplCopyWith<_$ModFeaturePostImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 ModRemoveCommentView _$ModRemoveCommentViewFromJson(Map<String, dynamic> json) {
   return _ModRemoveCommentView.fromJson(json);
 }
@@ -5563,9 +7328,9 @@ ModRemoveCommentView _$ModRemoveCommentViewFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ModRemoveCommentView {
   ModRemoveComment get modRemoveComment => throw _privateConstructorUsedError;
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  Person get moderator => throw _privateConstructorUsedError;
   Comment get comment => throw _privateConstructorUsedError;
-  PersonSafe get commenter => throw _privateConstructorUsedError;
+  Person get commenter => throw _privateConstructorUsedError;
   Post get post => throw _privateConstructorUsedError;
   CommunitySafe get community => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
@@ -5588,17 +7353,17 @@ abstract class $ModRemoveCommentViewCopyWith<$Res> {
   @useResult
   $Res call(
       {ModRemoveComment modRemoveComment,
-      PersonSafe moderator,
+      Person moderator,
       Comment comment,
-      PersonSafe commenter,
+      Person commenter,
       Post post,
       CommunitySafe community,
       String instanceHost});
 
   $ModRemoveCommentCopyWith<$Res> get modRemoveComment;
-  $PersonSafeCopyWith<$Res> get moderator;
+  $PersonCopyWith<$Res> get moderator;
   $CommentCopyWith<$Res> get comment;
-  $PersonSafeCopyWith<$Res> get commenter;
+  $PersonCopyWith<$Res> get commenter;
   $PostCopyWith<$Res> get post;
   $CommunitySafeCopyWith<$Res> get community;
 }
@@ -5635,7 +7400,7 @@ class _$ModRemoveCommentViewCopyWithImpl<$Res,
       moderator: null == moderator
           ? _value.moderator
           : moderator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       comment: null == comment
           ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
@@ -5643,7 +7408,7 @@ class _$ModRemoveCommentViewCopyWithImpl<$Res,
       commenter: null == commenter
           ? _value.commenter
           : commenter // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       post: null == post
           ? _value.post
           : post // ignore: cast_nullable_to_non_nullable
@@ -5673,8 +7438,8 @@ class _$ModRemoveCommentViewCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get moderator {
-    return $PersonSafeCopyWith<$Res>(_value.moderator, (value) {
+  $PersonCopyWith<$Res> get moderator {
+    return $PersonCopyWith<$Res>(_value.moderator, (value) {
       return _then(_value.copyWith(moderator: value) as $Val);
     });
   }
@@ -5693,8 +7458,8 @@ class _$ModRemoveCommentViewCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get commenter {
-    return $PersonSafeCopyWith<$Res>(_value.commenter, (value) {
+  $PersonCopyWith<$Res> get commenter {
+    return $PersonCopyWith<$Res>(_value.commenter, (value) {
       return _then(_value.copyWith(commenter: value) as $Val);
     });
   }
@@ -5730,9 +7495,9 @@ abstract class _$$ModRemoveCommentViewImplCopyWith<$Res>
   @useResult
   $Res call(
       {ModRemoveComment modRemoveComment,
-      PersonSafe moderator,
+      Person moderator,
       Comment comment,
-      PersonSafe commenter,
+      Person commenter,
       Post post,
       CommunitySafe community,
       String instanceHost});
@@ -5740,11 +7505,11 @@ abstract class _$$ModRemoveCommentViewImplCopyWith<$Res>
   @override
   $ModRemoveCommentCopyWith<$Res> get modRemoveComment;
   @override
-  $PersonSafeCopyWith<$Res> get moderator;
+  $PersonCopyWith<$Res> get moderator;
   @override
   $CommentCopyWith<$Res> get comment;
   @override
-  $PersonSafeCopyWith<$Res> get commenter;
+  $PersonCopyWith<$Res> get commenter;
   @override
   $PostCopyWith<$Res> get post;
   @override
@@ -5780,7 +7545,7 @@ class __$$ModRemoveCommentViewImplCopyWithImpl<$Res>
       moderator: null == moderator
           ? _value.moderator
           : moderator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       comment: null == comment
           ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
@@ -5788,7 +7553,7 @@ class __$$ModRemoveCommentViewImplCopyWithImpl<$Res>
       commenter: null == commenter
           ? _value.commenter
           : commenter // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       post: null == post
           ? _value.post
           : post // ignore: cast_nullable_to_non_nullable
@@ -5825,11 +7590,11 @@ class _$ModRemoveCommentViewImpl extends _ModRemoveCommentView {
   @override
   final ModRemoveComment modRemoveComment;
   @override
-  final PersonSafe moderator;
+  final Person moderator;
   @override
   final Comment comment;
   @override
-  final PersonSafe commenter;
+  final Person commenter;
   @override
   final Post post;
   @override
@@ -5887,9 +7652,9 @@ class _$ModRemoveCommentViewImpl extends _ModRemoveCommentView {
 abstract class _ModRemoveCommentView extends ModRemoveCommentView {
   const factory _ModRemoveCommentView(
       {required final ModRemoveComment modRemoveComment,
-      required final PersonSafe moderator,
+      required final Person moderator,
       required final Comment comment,
-      required final PersonSafe commenter,
+      required final Person commenter,
       required final Post post,
       required final CommunitySafe community,
       required final String instanceHost}) = _$ModRemoveCommentViewImpl;
@@ -5901,11 +7666,11 @@ abstract class _ModRemoveCommentView extends ModRemoveCommentView {
   @override
   ModRemoveComment get modRemoveComment;
   @override
-  PersonSafe get moderator;
+  Person get moderator;
   @override
   Comment get comment;
   @override
-  PersonSafe get commenter;
+  Person get commenter;
   @override
   Post get post;
   @override
@@ -5930,7 +7695,7 @@ ModRemoveCommunityView _$ModRemoveCommunityViewFromJson(
 mixin _$ModRemoveCommunityView {
   ModRemoveCommunity get modRemoveCommunity =>
       throw _privateConstructorUsedError;
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  Person get moderator => throw _privateConstructorUsedError;
   CommunitySafe get community => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
@@ -5952,12 +7717,12 @@ abstract class $ModRemoveCommunityViewCopyWith<$Res> {
   @useResult
   $Res call(
       {ModRemoveCommunity modRemoveCommunity,
-      PersonSafe moderator,
+      Person moderator,
       CommunitySafe community,
       String instanceHost});
 
   $ModRemoveCommunityCopyWith<$Res> get modRemoveCommunity;
-  $PersonSafeCopyWith<$Res> get moderator;
+  $PersonCopyWith<$Res> get moderator;
   $CommunitySafeCopyWith<$Res> get community;
 }
 
@@ -5990,7 +7755,7 @@ class _$ModRemoveCommunityViewCopyWithImpl<$Res,
       moderator: null == moderator
           ? _value.moderator
           : moderator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       community: null == community
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
@@ -6017,8 +7782,8 @@ class _$ModRemoveCommunityViewCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get moderator {
-    return $PersonSafeCopyWith<$Res>(_value.moderator, (value) {
+  $PersonCopyWith<$Res> get moderator {
+    return $PersonCopyWith<$Res>(_value.moderator, (value) {
       return _then(_value.copyWith(moderator: value) as $Val);
     });
   }
@@ -6045,14 +7810,14 @@ abstract class _$$ModRemoveCommunityViewImplCopyWith<$Res>
   @useResult
   $Res call(
       {ModRemoveCommunity modRemoveCommunity,
-      PersonSafe moderator,
+      Person moderator,
       CommunitySafe community,
       String instanceHost});
 
   @override
   $ModRemoveCommunityCopyWith<$Res> get modRemoveCommunity;
   @override
-  $PersonSafeCopyWith<$Res> get moderator;
+  $PersonCopyWith<$Res> get moderator;
   @override
   $CommunitySafeCopyWith<$Res> get community;
 }
@@ -6085,7 +7850,7 @@ class __$$ModRemoveCommunityViewImplCopyWithImpl<$Res>
       moderator: null == moderator
           ? _value.moderator
           : moderator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       community: null == community
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
@@ -6115,7 +7880,7 @@ class _$ModRemoveCommunityViewImpl extends _ModRemoveCommunityView {
   @override
   final ModRemoveCommunity modRemoveCommunity;
   @override
-  final PersonSafe moderator;
+  final Person moderator;
   @override
   final CommunitySafe community;
   @override
@@ -6166,7 +7931,7 @@ class _$ModRemoveCommunityViewImpl extends _ModRemoveCommunityView {
 abstract class _ModRemoveCommunityView extends ModRemoveCommunityView {
   const factory _ModRemoveCommunityView(
       {required final ModRemoveCommunity modRemoveCommunity,
-      required final PersonSafe moderator,
+      required final Person moderator,
       required final CommunitySafe community,
       required final String instanceHost}) = _$ModRemoveCommunityViewImpl;
   const _ModRemoveCommunityView._() : super._();
@@ -6177,7 +7942,7 @@ abstract class _ModRemoveCommunityView extends ModRemoveCommunityView {
   @override
   ModRemoveCommunity get modRemoveCommunity;
   @override
-  PersonSafe get moderator;
+  Person get moderator;
   @override
   CommunitySafe get community;
   @override
@@ -6198,7 +7963,7 @@ ModRemovePostView _$ModRemovePostViewFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ModRemovePostView {
   ModRemovePost get modRemovePost => throw _privateConstructorUsedError;
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  Person get moderator => throw _privateConstructorUsedError;
   Post get post => throw _privateConstructorUsedError;
   CommunitySafe get community => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
@@ -6221,13 +7986,13 @@ abstract class $ModRemovePostViewCopyWith<$Res> {
   @useResult
   $Res call(
       {ModRemovePost modRemovePost,
-      PersonSafe moderator,
+      Person moderator,
       Post post,
       CommunitySafe community,
       String instanceHost});
 
   $ModRemovePostCopyWith<$Res> get modRemovePost;
-  $PersonSafeCopyWith<$Res> get moderator;
+  $PersonCopyWith<$Res> get moderator;
   $PostCopyWith<$Res> get post;
   $CommunitySafeCopyWith<$Res> get community;
 }
@@ -6261,7 +8026,7 @@ class _$ModRemovePostViewCopyWithImpl<$Res, $Val extends ModRemovePostView>
       moderator: null == moderator
           ? _value.moderator
           : moderator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       post: null == post
           ? _value.post
           : post // ignore: cast_nullable_to_non_nullable
@@ -6291,8 +8056,8 @@ class _$ModRemovePostViewCopyWithImpl<$Res, $Val extends ModRemovePostView>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get moderator {
-    return $PersonSafeCopyWith<$Res>(_value.moderator, (value) {
+  $PersonCopyWith<$Res> get moderator {
+    return $PersonCopyWith<$Res>(_value.moderator, (value) {
       return _then(_value.copyWith(moderator: value) as $Val);
     });
   }
@@ -6328,7 +8093,7 @@ abstract class _$$ModRemovePostViewImplCopyWith<$Res>
   @useResult
   $Res call(
       {ModRemovePost modRemovePost,
-      PersonSafe moderator,
+      Person moderator,
       Post post,
       CommunitySafe community,
       String instanceHost});
@@ -6336,7 +8101,7 @@ abstract class _$$ModRemovePostViewImplCopyWith<$Res>
   @override
   $ModRemovePostCopyWith<$Res> get modRemovePost;
   @override
-  $PersonSafeCopyWith<$Res> get moderator;
+  $PersonCopyWith<$Res> get moderator;
   @override
   $PostCopyWith<$Res> get post;
   @override
@@ -6370,7 +8135,7 @@ class __$$ModRemovePostViewImplCopyWithImpl<$Res>
       moderator: null == moderator
           ? _value.moderator
           : moderator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       post: null == post
           ? _value.post
           : post // ignore: cast_nullable_to_non_nullable
@@ -6405,7 +8170,7 @@ class _$ModRemovePostViewImpl extends _ModRemovePostView {
   @override
   final ModRemovePost modRemovePost;
   @override
-  final PersonSafe moderator;
+  final Person moderator;
   @override
   final Post post;
   @override
@@ -6459,7 +8224,7 @@ class _$ModRemovePostViewImpl extends _ModRemovePostView {
 abstract class _ModRemovePostView extends ModRemovePostView {
   const factory _ModRemovePostView(
       {required final ModRemovePost modRemovePost,
-      required final PersonSafe moderator,
+      required final Person moderator,
       required final Post post,
       required final CommunitySafe community,
       required final String instanceHost}) = _$ModRemovePostViewImpl;
@@ -6471,7 +8236,7 @@ abstract class _ModRemovePostView extends ModRemovePostView {
   @override
   ModRemovePost get modRemovePost;
   @override
-  PersonSafe get moderator;
+  Person get moderator;
   @override
   Post get post;
   @override
@@ -6494,7 +8259,7 @@ ModStickyPostView _$ModStickyPostViewFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ModStickyPostView {
   ModStickyPost get modStickyPost => throw _privateConstructorUsedError;
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  Person get moderator => throw _privateConstructorUsedError;
   Post get post => throw _privateConstructorUsedError;
   CommunitySafe get community => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
@@ -6517,13 +8282,13 @@ abstract class $ModStickyPostViewCopyWith<$Res> {
   @useResult
   $Res call(
       {ModStickyPost modStickyPost,
-      PersonSafe moderator,
+      Person moderator,
       Post post,
       CommunitySafe community,
       String instanceHost});
 
   $ModStickyPostCopyWith<$Res> get modStickyPost;
-  $PersonSafeCopyWith<$Res> get moderator;
+  $PersonCopyWith<$Res> get moderator;
   $PostCopyWith<$Res> get post;
   $CommunitySafeCopyWith<$Res> get community;
 }
@@ -6557,7 +8322,7 @@ class _$ModStickyPostViewCopyWithImpl<$Res, $Val extends ModStickyPostView>
       moderator: null == moderator
           ? _value.moderator
           : moderator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       post: null == post
           ? _value.post
           : post // ignore: cast_nullable_to_non_nullable
@@ -6587,8 +8352,8 @@ class _$ModStickyPostViewCopyWithImpl<$Res, $Val extends ModStickyPostView>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get moderator {
-    return $PersonSafeCopyWith<$Res>(_value.moderator, (value) {
+  $PersonCopyWith<$Res> get moderator {
+    return $PersonCopyWith<$Res>(_value.moderator, (value) {
       return _then(_value.copyWith(moderator: value) as $Val);
     });
   }
@@ -6624,7 +8389,7 @@ abstract class _$$ModStickyPostViewImplCopyWith<$Res>
   @useResult
   $Res call(
       {ModStickyPost modStickyPost,
-      PersonSafe moderator,
+      Person moderator,
       Post post,
       CommunitySafe community,
       String instanceHost});
@@ -6632,7 +8397,7 @@ abstract class _$$ModStickyPostViewImplCopyWith<$Res>
   @override
   $ModStickyPostCopyWith<$Res> get modStickyPost;
   @override
-  $PersonSafeCopyWith<$Res> get moderator;
+  $PersonCopyWith<$Res> get moderator;
   @override
   $PostCopyWith<$Res> get post;
   @override
@@ -6666,7 +8431,7 @@ class __$$ModStickyPostViewImplCopyWithImpl<$Res>
       moderator: null == moderator
           ? _value.moderator
           : moderator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       post: null == post
           ? _value.post
           : post // ignore: cast_nullable_to_non_nullable
@@ -6701,7 +8466,7 @@ class _$ModStickyPostViewImpl extends _ModStickyPostView {
   @override
   final ModStickyPost modStickyPost;
   @override
-  final PersonSafe moderator;
+  final Person moderator;
   @override
   final Post post;
   @override
@@ -6755,7 +8520,7 @@ class _$ModStickyPostViewImpl extends _ModStickyPostView {
 abstract class _ModStickyPostView extends ModStickyPostView {
   const factory _ModStickyPostView(
       {required final ModStickyPost modStickyPost,
-      required final PersonSafe moderator,
+      required final Person moderator,
       required final Post post,
       required final CommunitySafe community,
       required final String instanceHost}) = _$ModStickyPostViewImpl;
@@ -6767,7 +8532,7 @@ abstract class _ModStickyPostView extends ModStickyPostView {
   @override
   ModStickyPost get modStickyPost;
   @override
-  PersonSafe get moderator;
+  Person get moderator;
   @override
   Post get post;
   @override
@@ -6791,7 +8556,7 @@ CommunityFollowerView _$CommunityFollowerViewFromJson(
 /// @nodoc
 mixin _$CommunityFollowerView {
   CommunitySafe get community => throw _privateConstructorUsedError;
-  PersonSafe get follower => throw _privateConstructorUsedError;
+  Person get follower => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
   /// Serializes this CommunityFollowerView to a JSON map.
@@ -6810,11 +8575,10 @@ abstract class $CommunityFollowerViewCopyWith<$Res> {
           $Res Function(CommunityFollowerView) then) =
       _$CommunityFollowerViewCopyWithImpl<$Res, CommunityFollowerView>;
   @useResult
-  $Res call(
-      {CommunitySafe community, PersonSafe follower, String instanceHost});
+  $Res call({CommunitySafe community, Person follower, String instanceHost});
 
   $CommunitySafeCopyWith<$Res> get community;
-  $PersonSafeCopyWith<$Res> get follower;
+  $PersonCopyWith<$Res> get follower;
 }
 
 /// @nodoc
@@ -6845,7 +8609,7 @@ class _$CommunityFollowerViewCopyWithImpl<$Res,
       follower: null == follower
           ? _value.follower
           : follower // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -6867,8 +8631,8 @@ class _$CommunityFollowerViewCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get follower {
-    return $PersonSafeCopyWith<$Res>(_value.follower, (value) {
+  $PersonCopyWith<$Res> get follower {
+    return $PersonCopyWith<$Res>(_value.follower, (value) {
       return _then(_value.copyWith(follower: value) as $Val);
     });
   }
@@ -6883,13 +8647,12 @@ abstract class _$$CommunityFollowerViewImplCopyWith<$Res>
       __$$CommunityFollowerViewImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {CommunitySafe community, PersonSafe follower, String instanceHost});
+  $Res call({CommunitySafe community, Person follower, String instanceHost});
 
   @override
   $CommunitySafeCopyWith<$Res> get community;
   @override
-  $PersonSafeCopyWith<$Res> get follower;
+  $PersonCopyWith<$Res> get follower;
 }
 
 /// @nodoc
@@ -6918,7 +8681,7 @@ class __$$CommunityFollowerViewImplCopyWithImpl<$Res>
       follower: null == follower
           ? _value.follower
           : follower // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -6943,7 +8706,7 @@ class _$CommunityFollowerViewImpl extends _CommunityFollowerView {
   @override
   final CommunitySafe community;
   @override
-  final PersonSafe follower;
+  final Person follower;
   @override
   final String instanceHost;
 
@@ -6990,7 +8753,7 @@ class _$CommunityFollowerViewImpl extends _CommunityFollowerView {
 abstract class _CommunityFollowerView extends CommunityFollowerView {
   const factory _CommunityFollowerView(
       {required final CommunitySafe community,
-      required final PersonSafe follower,
+      required final Person follower,
       required final String instanceHost}) = _$CommunityFollowerViewImpl;
   const _CommunityFollowerView._() : super._();
 
@@ -7000,7 +8763,7 @@ abstract class _CommunityFollowerView extends CommunityFollowerView {
   @override
   CommunitySafe get community;
   @override
-  PersonSafe get follower;
+  Person get follower;
   @override
   String get instanceHost;
 
@@ -7020,7 +8783,7 @@ CommunityModeratorView _$CommunityModeratorViewFromJson(
 /// @nodoc
 mixin _$CommunityModeratorView {
   CommunitySafe get community => throw _privateConstructorUsedError;
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  Person get moderator => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
   /// Serializes this CommunityModeratorView to a JSON map.
@@ -7039,11 +8802,10 @@ abstract class $CommunityModeratorViewCopyWith<$Res> {
           $Res Function(CommunityModeratorView) then) =
       _$CommunityModeratorViewCopyWithImpl<$Res, CommunityModeratorView>;
   @useResult
-  $Res call(
-      {CommunitySafe community, PersonSafe moderator, String instanceHost});
+  $Res call({CommunitySafe community, Person moderator, String instanceHost});
 
   $CommunitySafeCopyWith<$Res> get community;
-  $PersonSafeCopyWith<$Res> get moderator;
+  $PersonCopyWith<$Res> get moderator;
 }
 
 /// @nodoc
@@ -7074,7 +8836,7 @@ class _$CommunityModeratorViewCopyWithImpl<$Res,
       moderator: null == moderator
           ? _value.moderator
           : moderator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -7096,8 +8858,8 @@ class _$CommunityModeratorViewCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get moderator {
-    return $PersonSafeCopyWith<$Res>(_value.moderator, (value) {
+  $PersonCopyWith<$Res> get moderator {
+    return $PersonCopyWith<$Res>(_value.moderator, (value) {
       return _then(_value.copyWith(moderator: value) as $Val);
     });
   }
@@ -7112,13 +8874,12 @@ abstract class _$$CommunityModeratorViewImplCopyWith<$Res>
       __$$CommunityModeratorViewImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {CommunitySafe community, PersonSafe moderator, String instanceHost});
+  $Res call({CommunitySafe community, Person moderator, String instanceHost});
 
   @override
   $CommunitySafeCopyWith<$Res> get community;
   @override
-  $PersonSafeCopyWith<$Res> get moderator;
+  $PersonCopyWith<$Res> get moderator;
 }
 
 /// @nodoc
@@ -7148,7 +8909,7 @@ class __$$CommunityModeratorViewImplCopyWithImpl<$Res>
       moderator: null == moderator
           ? _value.moderator
           : moderator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -7173,7 +8934,7 @@ class _$CommunityModeratorViewImpl extends _CommunityModeratorView {
   @override
   final CommunitySafe community;
   @override
-  final PersonSafe moderator;
+  final Person moderator;
   @override
   final String instanceHost;
 
@@ -7220,7 +8981,7 @@ class _$CommunityModeratorViewImpl extends _CommunityModeratorView {
 abstract class _CommunityModeratorView extends CommunityModeratorView {
   const factory _CommunityModeratorView(
       {required final CommunitySafe community,
-      required final PersonSafe moderator,
+      required final Person moderator,
       required final String instanceHost}) = _$CommunityModeratorViewImpl;
   const _CommunityModeratorView._() : super._();
 
@@ -7230,7 +8991,7 @@ abstract class _CommunityModeratorView extends CommunityModeratorView {
   @override
   CommunitySafe get community;
   @override
-  PersonSafe get moderator;
+  Person get moderator;
   @override
   String get instanceHost;
 
@@ -7248,8 +9009,8 @@ PersonBlockView _$PersonBlockViewFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PersonBlockView {
-  PersonSafe get person => throw _privateConstructorUsedError;
-  PersonSafe get target => throw _privateConstructorUsedError;
+  Person get person => throw _privateConstructorUsedError;
+  Person get target => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
   /// Serializes this PersonBlockView to a JSON map.
@@ -7268,10 +9029,10 @@ abstract class $PersonBlockViewCopyWith<$Res> {
           PersonBlockView value, $Res Function(PersonBlockView) then) =
       _$PersonBlockViewCopyWithImpl<$Res, PersonBlockView>;
   @useResult
-  $Res call({PersonSafe person, PersonSafe target, String instanceHost});
+  $Res call({Person person, Person target, String instanceHost});
 
-  $PersonSafeCopyWith<$Res> get person;
-  $PersonSafeCopyWith<$Res> get target;
+  $PersonCopyWith<$Res> get person;
+  $PersonCopyWith<$Res> get target;
 }
 
 /// @nodoc
@@ -7297,11 +9058,11 @@ class _$PersonBlockViewCopyWithImpl<$Res, $Val extends PersonBlockView>
       person: null == person
           ? _value.person
           : person // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       target: null == target
           ? _value.target
           : target // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -7313,8 +9074,8 @@ class _$PersonBlockViewCopyWithImpl<$Res, $Val extends PersonBlockView>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get person {
-    return $PersonSafeCopyWith<$Res>(_value.person, (value) {
+  $PersonCopyWith<$Res> get person {
+    return $PersonCopyWith<$Res>(_value.person, (value) {
       return _then(_value.copyWith(person: value) as $Val);
     });
   }
@@ -7323,8 +9084,8 @@ class _$PersonBlockViewCopyWithImpl<$Res, $Val extends PersonBlockView>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get target {
-    return $PersonSafeCopyWith<$Res>(_value.target, (value) {
+  $PersonCopyWith<$Res> get target {
+    return $PersonCopyWith<$Res>(_value.target, (value) {
       return _then(_value.copyWith(target: value) as $Val);
     });
   }
@@ -7338,12 +9099,12 @@ abstract class _$$PersonBlockViewImplCopyWith<$Res>
       __$$PersonBlockViewImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({PersonSafe person, PersonSafe target, String instanceHost});
+  $Res call({Person person, Person target, String instanceHost});
 
   @override
-  $PersonSafeCopyWith<$Res> get person;
+  $PersonCopyWith<$Res> get person;
   @override
-  $PersonSafeCopyWith<$Res> get target;
+  $PersonCopyWith<$Res> get target;
 }
 
 /// @nodoc
@@ -7367,11 +9128,11 @@ class __$$PersonBlockViewImplCopyWithImpl<$Res>
       person: null == person
           ? _value.person
           : person // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       target: null == target
           ? _value.target
           : target // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -7392,9 +9153,9 @@ class _$PersonBlockViewImpl extends _PersonBlockView {
       _$$PersonBlockViewImplFromJson(json);
 
   @override
-  final PersonSafe person;
+  final Person person;
   @override
-  final PersonSafe target;
+  final Person target;
   @override
   final String instanceHost;
 
@@ -7437,8 +9198,8 @@ class _$PersonBlockViewImpl extends _PersonBlockView {
 
 abstract class _PersonBlockView extends PersonBlockView {
   const factory _PersonBlockView(
-      {required final PersonSafe person,
-      required final PersonSafe target,
+      {required final Person person,
+      required final Person target,
       required final String instanceHost}) = _$PersonBlockViewImpl;
   const _PersonBlockView._() : super._();
 
@@ -7446,9 +9207,9 @@ abstract class _PersonBlockView extends PersonBlockView {
       _$PersonBlockViewImpl.fromJson;
 
   @override
-  PersonSafe get person;
+  Person get person;
   @override
-  PersonSafe get target;
+  Person get target;
   @override
   String get instanceHost;
 
@@ -7466,7 +9227,7 @@ CommunityBlockView _$CommunityBlockViewFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CommunityBlockView {
-  PersonSafe get person => throw _privateConstructorUsedError;
+  Person get person => throw _privateConstructorUsedError;
   CommunitySafe get community => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
@@ -7486,9 +9247,9 @@ abstract class $CommunityBlockViewCopyWith<$Res> {
           CommunityBlockView value, $Res Function(CommunityBlockView) then) =
       _$CommunityBlockViewCopyWithImpl<$Res, CommunityBlockView>;
   @useResult
-  $Res call({PersonSafe person, CommunitySafe community, String instanceHost});
+  $Res call({Person person, CommunitySafe community, String instanceHost});
 
-  $PersonSafeCopyWith<$Res> get person;
+  $PersonCopyWith<$Res> get person;
   $CommunitySafeCopyWith<$Res> get community;
 }
 
@@ -7515,7 +9276,7 @@ class _$CommunityBlockViewCopyWithImpl<$Res, $Val extends CommunityBlockView>
       person: null == person
           ? _value.person
           : person // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       community: null == community
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
@@ -7531,8 +9292,8 @@ class _$CommunityBlockViewCopyWithImpl<$Res, $Val extends CommunityBlockView>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get person {
-    return $PersonSafeCopyWith<$Res>(_value.person, (value) {
+  $PersonCopyWith<$Res> get person {
+    return $PersonCopyWith<$Res>(_value.person, (value) {
       return _then(_value.copyWith(person: value) as $Val);
     });
   }
@@ -7556,10 +9317,10 @@ abstract class _$$CommunityBlockViewImplCopyWith<$Res>
       __$$CommunityBlockViewImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({PersonSafe person, CommunitySafe community, String instanceHost});
+  $Res call({Person person, CommunitySafe community, String instanceHost});
 
   @override
-  $PersonSafeCopyWith<$Res> get person;
+  $PersonCopyWith<$Res> get person;
   @override
   $CommunitySafeCopyWith<$Res> get community;
 }
@@ -7585,7 +9346,7 @@ class __$$CommunityBlockViewImplCopyWithImpl<$Res>
       person: null == person
           ? _value.person
           : person // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       community: null == community
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
@@ -7612,7 +9373,7 @@ class _$CommunityBlockViewImpl extends _CommunityBlockView {
       _$$CommunityBlockViewImplFromJson(json);
 
   @override
-  final PersonSafe person;
+  final Person person;
   @override
   final CommunitySafe community;
   @override
@@ -7658,7 +9419,7 @@ class _$CommunityBlockViewImpl extends _CommunityBlockView {
 
 abstract class _CommunityBlockView extends CommunityBlockView {
   const factory _CommunityBlockView(
-      {required final PersonSafe person,
+      {required final Person person,
       required final CommunitySafe community,
       required final String instanceHost}) = _$CommunityBlockViewImpl;
   const _CommunityBlockView._() : super._();
@@ -7667,7 +9428,7 @@ abstract class _CommunityBlockView extends CommunityBlockView {
       _$CommunityBlockViewImpl.fromJson;
 
   @override
-  PersonSafe get person;
+  Person get person;
   @override
   CommunitySafe get community;
   @override
@@ -7689,7 +9450,7 @@ CommunityPersonBanView _$CommunityPersonBanViewFromJson(
 /// @nodoc
 mixin _$CommunityPersonBanView {
   CommunitySafe get community => throw _privateConstructorUsedError;
-  PersonSafe get person => throw _privateConstructorUsedError;
+  Person get person => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
   /// Serializes this CommunityPersonBanView to a JSON map.
@@ -7708,10 +9469,10 @@ abstract class $CommunityPersonBanViewCopyWith<$Res> {
           $Res Function(CommunityPersonBanView) then) =
       _$CommunityPersonBanViewCopyWithImpl<$Res, CommunityPersonBanView>;
   @useResult
-  $Res call({CommunitySafe community, PersonSafe person, String instanceHost});
+  $Res call({CommunitySafe community, Person person, String instanceHost});
 
   $CommunitySafeCopyWith<$Res> get community;
-  $PersonSafeCopyWith<$Res> get person;
+  $PersonCopyWith<$Res> get person;
 }
 
 /// @nodoc
@@ -7742,7 +9503,7 @@ class _$CommunityPersonBanViewCopyWithImpl<$Res,
       person: null == person
           ? _value.person
           : person // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -7764,8 +9525,8 @@ class _$CommunityPersonBanViewCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get person {
-    return $PersonSafeCopyWith<$Res>(_value.person, (value) {
+  $PersonCopyWith<$Res> get person {
+    return $PersonCopyWith<$Res>(_value.person, (value) {
       return _then(_value.copyWith(person: value) as $Val);
     });
   }
@@ -7780,12 +9541,12 @@ abstract class _$$CommunityPersonBanViewImplCopyWith<$Res>
       __$$CommunityPersonBanViewImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({CommunitySafe community, PersonSafe person, String instanceHost});
+  $Res call({CommunitySafe community, Person person, String instanceHost});
 
   @override
   $CommunitySafeCopyWith<$Res> get community;
   @override
-  $PersonSafeCopyWith<$Res> get person;
+  $PersonCopyWith<$Res> get person;
 }
 
 /// @nodoc
@@ -7815,7 +9576,7 @@ class __$$CommunityPersonBanViewImplCopyWithImpl<$Res>
       person: null == person
           ? _value.person
           : person // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -7840,7 +9601,7 @@ class _$CommunityPersonBanViewImpl extends _CommunityPersonBanView {
   @override
   final CommunitySafe community;
   @override
-  final PersonSafe person;
+  final Person person;
   @override
   final String instanceHost;
 
@@ -7885,7 +9646,7 @@ class _$CommunityPersonBanViewImpl extends _CommunityPersonBanView {
 abstract class _CommunityPersonBanView extends CommunityPersonBanView {
   const factory _CommunityPersonBanView(
       {required final CommunitySafe community,
-      required final PersonSafe person,
+      required final Person person,
       required final String instanceHost}) = _$CommunityPersonBanViewImpl;
   const _CommunityPersonBanView._() : super._();
 
@@ -7895,7 +9656,7 @@ abstract class _CommunityPersonBanView extends CommunityPersonBanView {
   @override
   CommunitySafe get community;
   @override
-  PersonSafe get person;
+  Person get person;
   @override
   String get instanceHost;
 
@@ -8185,8 +9946,8 @@ mixin _$RegistrationApplicationView {
   RegistrationApplication get registrationApplication =>
       throw _privateConstructorUsedError;
   LocalUserSettings get creatorLocalUser => throw _privateConstructorUsedError;
-  PersonSafe get creator => throw _privateConstructorUsedError;
-  PersonSafe? get admin => throw _privateConstructorUsedError;
+  Person get creator => throw _privateConstructorUsedError;
+  Person? get admin => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
   /// Serializes this RegistrationApplicationView to a JSON map.
@@ -8210,14 +9971,14 @@ abstract class $RegistrationApplicationViewCopyWith<$Res> {
   $Res call(
       {RegistrationApplication registrationApplication,
       LocalUserSettings creatorLocalUser,
-      PersonSafe creator,
-      PersonSafe? admin,
+      Person creator,
+      Person? admin,
       String instanceHost});
 
   $RegistrationApplicationCopyWith<$Res> get registrationApplication;
   $LocalUserSettingsCopyWith<$Res> get creatorLocalUser;
-  $PersonSafeCopyWith<$Res> get creator;
-  $PersonSafeCopyWith<$Res>? get admin;
+  $PersonCopyWith<$Res> get creator;
+  $PersonCopyWith<$Res>? get admin;
 }
 
 /// @nodoc
@@ -8254,11 +10015,11 @@ class _$RegistrationApplicationViewCopyWithImpl<$Res,
       creator: null == creator
           ? _value.creator
           : creator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       admin: freezed == admin
           ? _value.admin
           : admin // ignore: cast_nullable_to_non_nullable
-              as PersonSafe?,
+              as Person?,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -8291,8 +10052,8 @@ class _$RegistrationApplicationViewCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res> get creator {
-    return $PersonSafeCopyWith<$Res>(_value.creator, (value) {
+  $PersonCopyWith<$Res> get creator {
+    return $PersonCopyWith<$Res>(_value.creator, (value) {
       return _then(_value.copyWith(creator: value) as $Val);
     });
   }
@@ -8301,12 +10062,12 @@ class _$RegistrationApplicationViewCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $PersonSafeCopyWith<$Res>? get admin {
+  $PersonCopyWith<$Res>? get admin {
     if (_value.admin == null) {
       return null;
     }
 
-    return $PersonSafeCopyWith<$Res>(_value.admin!, (value) {
+    return $PersonCopyWith<$Res>(_value.admin!, (value) {
       return _then(_value.copyWith(admin: value) as $Val);
     });
   }
@@ -8324,8 +10085,8 @@ abstract class _$$RegistrationApplicationViewImplCopyWith<$Res>
   $Res call(
       {RegistrationApplication registrationApplication,
       LocalUserSettings creatorLocalUser,
-      PersonSafe creator,
-      PersonSafe? admin,
+      Person creator,
+      Person? admin,
       String instanceHost});
 
   @override
@@ -8333,9 +10094,9 @@ abstract class _$$RegistrationApplicationViewImplCopyWith<$Res>
   @override
   $LocalUserSettingsCopyWith<$Res> get creatorLocalUser;
   @override
-  $PersonSafeCopyWith<$Res> get creator;
+  $PersonCopyWith<$Res> get creator;
   @override
-  $PersonSafeCopyWith<$Res>? get admin;
+  $PersonCopyWith<$Res>? get admin;
 }
 
 /// @nodoc
@@ -8371,11 +10132,11 @@ class __$$RegistrationApplicationViewImplCopyWithImpl<$Res>
       creator: null == creator
           ? _value.creator
           : creator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
+              as Person,
       admin: freezed == admin
           ? _value.admin
           : admin // ignore: cast_nullable_to_non_nullable
-              as PersonSafe?,
+              as Person?,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -8405,9 +10166,9 @@ class _$RegistrationApplicationViewImpl extends _RegistrationApplicationView {
   @override
   final LocalUserSettings creatorLocalUser;
   @override
-  final PersonSafe creator;
+  final Person creator;
   @override
-  final PersonSafe? admin;
+  final Person? admin;
   @override
   final String instanceHost;
 
@@ -8459,8 +10220,8 @@ abstract class _RegistrationApplicationView
   const factory _RegistrationApplicationView(
       {required final RegistrationApplication registrationApplication,
       required final LocalUserSettings creatorLocalUser,
-      required final PersonSafe creator,
-      final PersonSafe? admin,
+      required final Person creator,
+      final Person? admin,
       required final String instanceHost}) = _$RegistrationApplicationViewImpl;
   const _RegistrationApplicationView._() : super._();
 
@@ -8472,9 +10233,9 @@ abstract class _RegistrationApplicationView
   @override
   LocalUserSettings get creatorLocalUser;
   @override
-  PersonSafe get creator;
+  Person get creator;
   @override
-  PersonSafe? get admin;
+  Person? get admin;
   @override
   String get instanceHost;
 

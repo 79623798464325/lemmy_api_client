@@ -24,6 +24,8 @@ _$CreatePostImpl _$$CreatePostImplFromJson(Map<String, dynamic> json) =>
       url: json['url'] as String?,
       body: json['body'] as String?,
       nsfw: json['nsfw'] as bool?,
+      altText: json['alt_text'] as String?,
+      customThumbnail: json['custom_thumbnail'] as String?,
       communityId: (json['community_id'] as num).toInt(),
       auth: json['auth'] as String,
       honeypot: json['honeypot'] as String?,
@@ -35,6 +37,8 @@ Map<String, dynamic> _$$CreatePostImplToJson(_$CreatePostImpl instance) =>
       if (instance.url case final value?) 'url': value,
       if (instance.body case final value?) 'body': value,
       if (instance.nsfw case final value?) 'nsfw': value,
+      if (instance.altText case final value?) 'alt_text': value,
+      if (instance.customThumbnail case final value?) 'custom_thumbnail': value,
       'community_id': instance.communityId,
       'auth': instance.auth,
       if (instance.honeypot case final value?) 'honeypot': value,
@@ -54,6 +58,12 @@ _$GetPostsImpl _$$GetPostsImplFromJson(Map<String, dynamic> json) =>
       communityName: json['community_name'] as String?,
       savedOnly: json['saved_only'] as bool?,
       auth: json['auth'] as String?,
+      likedOnly: json['liked_only'] as bool?,
+      dislikedOnly: json['disliked_only'] as bool?,
+      showHidden: json['show_hidden'] as bool?,
+      showRead: json['show_read'] as bool?,
+      showNsfw: json['show_nsfw'] as bool?,
+      pageCursor: json['page_cursor'] as String?,
     );
 
 Map<String, dynamic> _$$GetPostsImplToJson(_$GetPostsImpl instance) =>
@@ -66,6 +76,12 @@ Map<String, dynamic> _$$GetPostsImplToJson(_$GetPostsImpl instance) =>
       if (instance.communityName case final value?) 'community_name': value,
       if (instance.savedOnly case final value?) 'saved_only': value,
       if (instance.auth case final value?) 'auth': value,
+      if (instance.likedOnly case final value?) 'liked_only': value,
+      if (instance.dislikedOnly case final value?) 'disliked_only': value,
+      if (instance.showHidden case final value?) 'show_hidden': value,
+      if (instance.showRead case final value?) 'show_read': value,
+      if (instance.showNsfw case final value?) 'show_nsfw': value,
+      if (instance.pageCursor case final value?) 'page_cursor': value,
     };
 
 _$CreatePostLikeImpl _$$CreatePostLikeImplFromJson(Map<String, dynamic> json) =>
@@ -89,6 +105,8 @@ _$EditPostImpl _$$EditPostImplFromJson(Map<String, dynamic> json) =>
       name: json['name'] as String?,
       url: json['url'] as String?,
       body: json['body'] as String?,
+      altText: json['alt_text'] as String?,
+      customThumbnail: json['custom_thumbnail'] as String?,
       nsfw: json['nsfw'] as bool?,
       auth: json['auth'] as String,
     );
@@ -99,6 +117,8 @@ Map<String, dynamic> _$$EditPostImplToJson(_$EditPostImpl instance) =>
       if (instance.name case final value?) 'name': value,
       if (instance.url case final value?) 'url': value,
       if (instance.body case final value?) 'body': value,
+      if (instance.altText case final value?) 'alt_text': value,
+      if (instance.customThumbnail case final value?) 'custom_thumbnail': value,
       if (instance.nsfw case final value?) 'nsfw': value,
       'auth': instance.auth,
     };
@@ -242,6 +262,9 @@ Map<String, dynamic> _$$ListPostReportsImplToJson(
 _$MarkPostAsReadImpl _$$MarkPostAsReadImplFromJson(Map<String, dynamic> json) =>
     _$MarkPostAsReadImpl(
       postId: (json['post_id'] as num).toInt(),
+      postIds: (json['post_ids'] as List<dynamic>?)
+          ?.map((e) => (e as num).toInt())
+          .toList(),
       read: json['read'] as bool,
       auth: json['auth'] as String,
     );
@@ -250,6 +273,23 @@ Map<String, dynamic> _$$MarkPostAsReadImplToJson(
         _$MarkPostAsReadImpl instance) =>
     <String, dynamic>{
       'post_id': instance.postId,
+      if (instance.postIds case final value?) 'post_ids': value,
       'read': instance.read,
       'auth': instance.auth,
+    };
+
+_$HidePostImpl _$$HidePostImplFromJson(Map<String, dynamic> json) =>
+    _$HidePostImpl(
+      postIds: (json['post_ids'] as List<dynamic>)
+          .map((e) => (e as num).toInt())
+          .toList(),
+      hide: json['hide'] as bool,
+      auth: json['auth'] as String?,
+    );
+
+Map<String, dynamic> _$$HidePostImplToJson(_$HidePostImpl instance) =>
+    <String, dynamic>{
+      'post_ids': instance.postIds,
+      'hide': instance.hide,
+      if (instance.auth case final value?) 'auth': value,
     };

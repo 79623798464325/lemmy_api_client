@@ -39,6 +39,9 @@ _$FullPostViewImpl _$$FullPostViewImplFromJson(Map<String, dynamic> json) =>
           .map(
               (e) => CommunityModeratorView.fromJson(e as Map<String, dynamic>))
           .toList(),
+      crossPosts: (json['cross_posts'] as List<dynamic>)
+          .map((e) => PostView.fromJson(e as Map<String, dynamic>))
+          .toList(),
       instanceHost: json['instance_host'] as String,
     );
 
@@ -47,6 +50,7 @@ Map<String, dynamic> _$$FullPostViewImplToJson(_$FullPostViewImpl instance) =>
       'post_view': instance.postView.toJson(),
       'community_view': instance.communityView.toJson(),
       'moderators': instance.moderators.map((e) => e.toJson()).toList(),
+      'cross_posts': instance.crossPosts.map((e) => e.toJson()).toList(),
       'instance_host': instance.instanceHost,
     };
 
@@ -85,8 +89,8 @@ _$ModlogImpl _$$ModlogImplFromJson(Map<String, dynamic> json) => _$ModlogImpl(
       lockedPosts: (json['locked_posts'] as List<dynamic>)
           .map((e) => ModLockPostView.fromJson(e as Map<String, dynamic>))
           .toList(),
-      stickiedPosts: (json['stickied_posts'] as List<dynamic>)
-          .map((e) => ModStickyPostView.fromJson(e as Map<String, dynamic>))
+      featuredPosts: (json['featured_posts'] as List<dynamic>)
+          .map((e) => ModFeaturePostView.fromJson(e as Map<String, dynamic>))
           .toList(),
       removedComments: (json['removed_comments'] as List<dynamic>)
           .map((e) => ModRemoveCommentView.fromJson(e as Map<String, dynamic>))
@@ -113,14 +117,30 @@ _$ModlogImpl _$$ModlogImplFromJson(Map<String, dynamic> json) => _$ModlogImpl(
       added: (json['added'] as List<dynamic>)
           .map((e) => ModAddView.fromJson(e as Map<String, dynamic>))
           .toList(),
-      instanceHost: json['instance_host'] as String,
+      adminPurgedPersons: (json['admin_purged_persons'] as List<dynamic>)
+          .map((e) => AdminPurgePersonView.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      adminPurgedCommunities:
+          (json['admin_purged_communities'] as List<dynamic>)
+              .map((e) =>
+                  AdminPurgeCommunityView.fromJson(e as Map<String, dynamic>))
+              .toList(),
+      adminPurgedPosts: (json['admin_purged_posts'] as List<dynamic>)
+          .map((e) => AdminPurgePostView.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      adminPurgedComments: (json['admin_purged_comments'] as List<dynamic>)
+          .map((e) => AdminPurgeCommentView.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      hiddenCommunities: (json['hidden_communities'] as List<dynamic>)
+          .map((e) => ModHideCommunityView.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$$ModlogImplToJson(_$ModlogImpl instance) =>
     <String, dynamic>{
       'removed_posts': instance.removedPosts.map((e) => e.toJson()).toList(),
       'locked_posts': instance.lockedPosts.map((e) => e.toJson()).toList(),
-      'stickied_posts': instance.stickiedPosts.map((e) => e.toJson()).toList(),
+      'featured_posts': instance.featuredPosts.map((e) => e.toJson()).toList(),
       'removed_comments':
           instance.removedComments.map((e) => e.toJson()).toList(),
       'removed_communities':
@@ -133,7 +153,16 @@ Map<String, dynamic> _$$ModlogImplToJson(_$ModlogImpl instance) =>
       'transferred_to_community':
           instance.transferredToCommunity.map((e) => e.toJson()).toList(),
       'added': instance.added.map((e) => e.toJson()).toList(),
-      'instance_host': instance.instanceHost,
+      'admin_purged_persons':
+          instance.adminPurgedPersons.map((e) => e.toJson()).toList(),
+      'admin_purged_communities':
+          instance.adminPurgedCommunities.map((e) => e.toJson()).toList(),
+      'admin_purged_posts':
+          instance.adminPurgedPosts.map((e) => e.toJson()).toList(),
+      'admin_purged_comments':
+          instance.adminPurgedComments.map((e) => e.toJson()).toList(),
+      'hidden_communities':
+          instance.hiddenCommunities.map((e) => e.toJson()).toList(),
     };
 
 _$FullCommentViewImpl _$$FullCommentViewImplFromJson(

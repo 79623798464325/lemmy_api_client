@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-PersonSafe _$PersonSafeFromJson(Map<String, dynamic> json) {
+Person _$PersonFromJson(Map<String, dynamic> json) {
   return _PersonSafe.fromJson(json);
 }
 
 /// @nodoc
-mixin _$PersonSafe {
+mixin _$Person {
   int get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String? get displayName => throw _privateConstructorUsedError;
@@ -37,21 +37,19 @@ mixin _$PersonSafe {
   DateTime? get banExpires => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
-  /// Serializes this PersonSafe to a JSON map.
+  /// Serializes this Person to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-  /// Create a copy of PersonSafe
+  /// Create a copy of Person
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $PersonSafeCopyWith<PersonSafe> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PersonCopyWith<Person> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $PersonSafeCopyWith<$Res> {
-  factory $PersonSafeCopyWith(
-          PersonSafe value, $Res Function(PersonSafe) then) =
-      _$PersonSafeCopyWithImpl<$Res, PersonSafe>;
+abstract class $PersonCopyWith<$Res> {
+  factory $PersonCopyWith(Person value, $Res Function(Person) then) =
+      _$PersonCopyWithImpl<$Res, Person>;
   @useResult
   $Res call(
       {int id,
@@ -73,16 +71,16 @@ abstract class $PersonSafeCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PersonSafeCopyWithImpl<$Res, $Val extends PersonSafe>
-    implements $PersonSafeCopyWith<$Res> {
-  _$PersonSafeCopyWithImpl(this._value, this._then);
+class _$PersonCopyWithImpl<$Res, $Val extends Person>
+    implements $PersonCopyWith<$Res> {
+  _$PersonCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of PersonSafe
+  /// Create a copy of Person
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -175,7 +173,7 @@ class _$PersonSafeCopyWithImpl<$Res, $Val extends PersonSafe>
 
 /// @nodoc
 abstract class _$$PersonSafeImplCopyWith<$Res>
-    implements $PersonSafeCopyWith<$Res> {
+    implements $PersonCopyWith<$Res> {
   factory _$$PersonSafeImplCopyWith(
           _$PersonSafeImpl value, $Res Function(_$PersonSafeImpl) then) =
       __$$PersonSafeImplCopyWithImpl<$Res>;
@@ -202,13 +200,13 @@ abstract class _$$PersonSafeImplCopyWith<$Res>
 
 /// @nodoc
 class __$$PersonSafeImplCopyWithImpl<$Res>
-    extends _$PersonSafeCopyWithImpl<$Res, _$PersonSafeImpl>
+    extends _$PersonCopyWithImpl<$Res, _$PersonSafeImpl>
     implements _$$PersonSafeImplCopyWith<$Res> {
   __$$PersonSafeImplCopyWithImpl(
       _$PersonSafeImpl _value, $Res Function(_$PersonSafeImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of PersonSafe
+  /// Create a copy of Person
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -360,7 +358,7 @@ class _$PersonSafeImpl extends _PersonSafe {
 
   @override
   String toString() {
-    return 'PersonSafe(id: $id, name: $name, displayName: $displayName, avatar: $avatar, banned: $banned, published: $published, updated: $updated, actorId: $actorId, bio: $bio, local: $local, banner: $banner, deleted: $deleted, matrixUserId: $matrixUserId, botAccount: $botAccount, banExpires: $banExpires, instanceHost: $instanceHost)';
+    return 'Person(id: $id, name: $name, displayName: $displayName, avatar: $avatar, banned: $banned, published: $published, updated: $updated, actorId: $actorId, bio: $bio, local: $local, banner: $banner, deleted: $deleted, matrixUserId: $matrixUserId, botAccount: $botAccount, banExpires: $banExpires, instanceHost: $instanceHost)';
   }
 
   @override
@@ -413,7 +411,7 @@ class _$PersonSafeImpl extends _PersonSafe {
       banExpires,
       instanceHost);
 
-  /// Create a copy of PersonSafe
+  /// Create a copy of Person
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -429,7 +427,7 @@ class _$PersonSafeImpl extends _PersonSafe {
   }
 }
 
-abstract class _PersonSafe extends PersonSafe {
+abstract class _PersonSafe extends Person {
   const factory _PersonSafe(
       {required final int id,
       required final String name,
@@ -485,7 +483,7 @@ abstract class _PersonSafe extends PersonSafe {
   @override
   String get instanceHost;
 
-  /// Create a copy of PersonSafe
+  /// Create a copy of Person
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -2161,634 +2159,6 @@ abstract class _PostReport extends PostReport {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PostReportImplCopyWith<_$PostReportImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-Post _$PostFromJson(Map<String, dynamic> json) {
-  return _Post.fromJson(json);
-}
-
-/// @nodoc
-mixin _$Post {
-  int get id => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  String? get url => throw _privateConstructorUsedError;
-  String? get body => throw _privateConstructorUsedError;
-  int get creatorId => throw _privateConstructorUsedError;
-  int get communityId => throw _privateConstructorUsedError;
-  bool get removed => throw _privateConstructorUsedError;
-  bool get locked => throw _privateConstructorUsedError;
-  DateTime get published => throw _privateConstructorUsedError;
-  DateTime? get updated => throw _privateConstructorUsedError;
-  bool get deleted => throw _privateConstructorUsedError;
-  bool get nsfw => throw _privateConstructorUsedError;
-  bool? get stickied => throw _privateConstructorUsedError;
-  String? get embedTitle => throw _privateConstructorUsedError;
-  String? get embedDescription => throw _privateConstructorUsedError;
-  String? get embedVideoUrl => throw _privateConstructorUsedError;
-  String? get thumbnailUrl => throw _privateConstructorUsedError;
-  String get apId => throw _privateConstructorUsedError;
-  bool get local => throw _privateConstructorUsedError;
-  int get languageId => throw _privateConstructorUsedError;
-  bool get featuredCommunity => throw _privateConstructorUsedError;
-  bool get featuredLocal => throw _privateConstructorUsedError;
-  String get instanceHost => throw _privateConstructorUsedError;
-
-  /// Serializes this Post to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Post
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $PostCopyWith<Post> get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $PostCopyWith<$Res> {
-  factory $PostCopyWith(Post value, $Res Function(Post) then) =
-      _$PostCopyWithImpl<$Res, Post>;
-  @useResult
-  $Res call(
-      {int id,
-      String name,
-      String? url,
-      String? body,
-      int creatorId,
-      int communityId,
-      bool removed,
-      bool locked,
-      DateTime published,
-      DateTime? updated,
-      bool deleted,
-      bool nsfw,
-      bool? stickied,
-      String? embedTitle,
-      String? embedDescription,
-      String? embedVideoUrl,
-      String? thumbnailUrl,
-      String apId,
-      bool local,
-      int languageId,
-      bool featuredCommunity,
-      bool featuredLocal,
-      String instanceHost});
-}
-
-/// @nodoc
-class _$PostCopyWithImpl<$Res, $Val extends Post>
-    implements $PostCopyWith<$Res> {
-  _$PostCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of Post
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? name = null,
-    Object? url = freezed,
-    Object? body = freezed,
-    Object? creatorId = null,
-    Object? communityId = null,
-    Object? removed = null,
-    Object? locked = null,
-    Object? published = null,
-    Object? updated = freezed,
-    Object? deleted = null,
-    Object? nsfw = null,
-    Object? stickied = freezed,
-    Object? embedTitle = freezed,
-    Object? embedDescription = freezed,
-    Object? embedVideoUrl = freezed,
-    Object? thumbnailUrl = freezed,
-    Object? apId = null,
-    Object? local = null,
-    Object? languageId = null,
-    Object? featuredCommunity = null,
-    Object? featuredLocal = null,
-    Object? instanceHost = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-      body: freezed == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as String?,
-      creatorId: null == creatorId
-          ? _value.creatorId
-          : creatorId // ignore: cast_nullable_to_non_nullable
-              as int,
-      communityId: null == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int,
-      removed: null == removed
-          ? _value.removed
-          : removed // ignore: cast_nullable_to_non_nullable
-              as bool,
-      locked: null == locked
-          ? _value.locked
-          : locked // ignore: cast_nullable_to_non_nullable
-              as bool,
-      published: null == published
-          ? _value.published
-          : published // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updated: freezed == updated
-          ? _value.updated
-          : updated // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      deleted: null == deleted
-          ? _value.deleted
-          : deleted // ignore: cast_nullable_to_non_nullable
-              as bool,
-      nsfw: null == nsfw
-          ? _value.nsfw
-          : nsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
-      stickied: freezed == stickied
-          ? _value.stickied
-          : stickied // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      embedTitle: freezed == embedTitle
-          ? _value.embedTitle
-          : embedTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      embedDescription: freezed == embedDescription
-          ? _value.embedDescription
-          : embedDescription // ignore: cast_nullable_to_non_nullable
-              as String?,
-      embedVideoUrl: freezed == embedVideoUrl
-          ? _value.embedVideoUrl
-          : embedVideoUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnailUrl: freezed == thumbnailUrl
-          ? _value.thumbnailUrl
-          : thumbnailUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      apId: null == apId
-          ? _value.apId
-          : apId // ignore: cast_nullable_to_non_nullable
-              as String,
-      local: null == local
-          ? _value.local
-          : local // ignore: cast_nullable_to_non_nullable
-              as bool,
-      languageId: null == languageId
-          ? _value.languageId
-          : languageId // ignore: cast_nullable_to_non_nullable
-              as int,
-      featuredCommunity: null == featuredCommunity
-          ? _value.featuredCommunity
-          : featuredCommunity // ignore: cast_nullable_to_non_nullable
-              as bool,
-      featuredLocal: null == featuredLocal
-          ? _value.featuredLocal
-          : featuredLocal // ignore: cast_nullable_to_non_nullable
-              as bool,
-      instanceHost: null == instanceHost
-          ? _value.instanceHost
-          : instanceHost // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$PostImplCopyWith<$Res> implements $PostCopyWith<$Res> {
-  factory _$$PostImplCopyWith(
-          _$PostImpl value, $Res Function(_$PostImpl) then) =
-      __$$PostImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {int id,
-      String name,
-      String? url,
-      String? body,
-      int creatorId,
-      int communityId,
-      bool removed,
-      bool locked,
-      DateTime published,
-      DateTime? updated,
-      bool deleted,
-      bool nsfw,
-      bool? stickied,
-      String? embedTitle,
-      String? embedDescription,
-      String? embedVideoUrl,
-      String? thumbnailUrl,
-      String apId,
-      bool local,
-      int languageId,
-      bool featuredCommunity,
-      bool featuredLocal,
-      String instanceHost});
-}
-
-/// @nodoc
-class __$$PostImplCopyWithImpl<$Res>
-    extends _$PostCopyWithImpl<$Res, _$PostImpl>
-    implements _$$PostImplCopyWith<$Res> {
-  __$$PostImplCopyWithImpl(_$PostImpl _value, $Res Function(_$PostImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of Post
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? name = null,
-    Object? url = freezed,
-    Object? body = freezed,
-    Object? creatorId = null,
-    Object? communityId = null,
-    Object? removed = null,
-    Object? locked = null,
-    Object? published = null,
-    Object? updated = freezed,
-    Object? deleted = null,
-    Object? nsfw = null,
-    Object? stickied = freezed,
-    Object? embedTitle = freezed,
-    Object? embedDescription = freezed,
-    Object? embedVideoUrl = freezed,
-    Object? thumbnailUrl = freezed,
-    Object? apId = null,
-    Object? local = null,
-    Object? languageId = null,
-    Object? featuredCommunity = null,
-    Object? featuredLocal = null,
-    Object? instanceHost = null,
-  }) {
-    return _then(_$PostImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-      body: freezed == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as String?,
-      creatorId: null == creatorId
-          ? _value.creatorId
-          : creatorId // ignore: cast_nullable_to_non_nullable
-              as int,
-      communityId: null == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int,
-      removed: null == removed
-          ? _value.removed
-          : removed // ignore: cast_nullable_to_non_nullable
-              as bool,
-      locked: null == locked
-          ? _value.locked
-          : locked // ignore: cast_nullable_to_non_nullable
-              as bool,
-      published: null == published
-          ? _value.published
-          : published // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updated: freezed == updated
-          ? _value.updated
-          : updated // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      deleted: null == deleted
-          ? _value.deleted
-          : deleted // ignore: cast_nullable_to_non_nullable
-              as bool,
-      nsfw: null == nsfw
-          ? _value.nsfw
-          : nsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
-      stickied: freezed == stickied
-          ? _value.stickied
-          : stickied // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      embedTitle: freezed == embedTitle
-          ? _value.embedTitle
-          : embedTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      embedDescription: freezed == embedDescription
-          ? _value.embedDescription
-          : embedDescription // ignore: cast_nullable_to_non_nullable
-              as String?,
-      embedVideoUrl: freezed == embedVideoUrl
-          ? _value.embedVideoUrl
-          : embedVideoUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnailUrl: freezed == thumbnailUrl
-          ? _value.thumbnailUrl
-          : thumbnailUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      apId: null == apId
-          ? _value.apId
-          : apId // ignore: cast_nullable_to_non_nullable
-              as String,
-      local: null == local
-          ? _value.local
-          : local // ignore: cast_nullable_to_non_nullable
-              as bool,
-      languageId: null == languageId
-          ? _value.languageId
-          : languageId // ignore: cast_nullable_to_non_nullable
-              as int,
-      featuredCommunity: null == featuredCommunity
-          ? _value.featuredCommunity
-          : featuredCommunity // ignore: cast_nullable_to_non_nullable
-              as bool,
-      featuredLocal: null == featuredLocal
-          ? _value.featuredLocal
-          : featuredLocal // ignore: cast_nullable_to_non_nullable
-              as bool,
-      instanceHost: null == instanceHost
-          ? _value.instanceHost
-          : instanceHost // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-@modelSerde
-class _$PostImpl extends _Post {
-  const _$PostImpl(
-      {required this.id,
-      required this.name,
-      this.url,
-      this.body,
-      required this.creatorId,
-      required this.communityId,
-      required this.removed,
-      required this.locked,
-      required this.published,
-      this.updated,
-      required this.deleted,
-      required this.nsfw,
-      this.stickied,
-      this.embedTitle,
-      this.embedDescription,
-      this.embedVideoUrl,
-      this.thumbnailUrl,
-      required this.apId,
-      required this.local,
-      required this.languageId,
-      required this.featuredCommunity,
-      required this.featuredLocal,
-      required this.instanceHost})
-      : super._();
-
-  factory _$PostImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PostImplFromJson(json);
-
-  @override
-  final int id;
-  @override
-  final String name;
-  @override
-  final String? url;
-  @override
-  final String? body;
-  @override
-  final int creatorId;
-  @override
-  final int communityId;
-  @override
-  final bool removed;
-  @override
-  final bool locked;
-  @override
-  final DateTime published;
-  @override
-  final DateTime? updated;
-  @override
-  final bool deleted;
-  @override
-  final bool nsfw;
-  @override
-  final bool? stickied;
-  @override
-  final String? embedTitle;
-  @override
-  final String? embedDescription;
-  @override
-  final String? embedVideoUrl;
-  @override
-  final String? thumbnailUrl;
-  @override
-  final String apId;
-  @override
-  final bool local;
-  @override
-  final int languageId;
-  @override
-  final bool featuredCommunity;
-  @override
-  final bool featuredLocal;
-  @override
-  final String instanceHost;
-
-  @override
-  String toString() {
-    return 'Post(id: $id, name: $name, url: $url, body: $body, creatorId: $creatorId, communityId: $communityId, removed: $removed, locked: $locked, published: $published, updated: $updated, deleted: $deleted, nsfw: $nsfw, stickied: $stickied, embedTitle: $embedTitle, embedDescription: $embedDescription, embedVideoUrl: $embedVideoUrl, thumbnailUrl: $thumbnailUrl, apId: $apId, local: $local, languageId: $languageId, featuredCommunity: $featuredCommunity, featuredLocal: $featuredLocal, instanceHost: $instanceHost)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$PostImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.url, url) || other.url == url) &&
-            (identical(other.body, body) || other.body == body) &&
-            (identical(other.creatorId, creatorId) ||
-                other.creatorId == creatorId) &&
-            (identical(other.communityId, communityId) ||
-                other.communityId == communityId) &&
-            (identical(other.removed, removed) || other.removed == removed) &&
-            (identical(other.locked, locked) || other.locked == locked) &&
-            (identical(other.published, published) ||
-                other.published == published) &&
-            (identical(other.updated, updated) || other.updated == updated) &&
-            (identical(other.deleted, deleted) || other.deleted == deleted) &&
-            (identical(other.nsfw, nsfw) || other.nsfw == nsfw) &&
-            (identical(other.stickied, stickied) ||
-                other.stickied == stickied) &&
-            (identical(other.embedTitle, embedTitle) ||
-                other.embedTitle == embedTitle) &&
-            (identical(other.embedDescription, embedDescription) ||
-                other.embedDescription == embedDescription) &&
-            (identical(other.embedVideoUrl, embedVideoUrl) ||
-                other.embedVideoUrl == embedVideoUrl) &&
-            (identical(other.thumbnailUrl, thumbnailUrl) ||
-                other.thumbnailUrl == thumbnailUrl) &&
-            (identical(other.apId, apId) || other.apId == apId) &&
-            (identical(other.local, local) || other.local == local) &&
-            (identical(other.languageId, languageId) ||
-                other.languageId == languageId) &&
-            (identical(other.featuredCommunity, featuredCommunity) ||
-                other.featuredCommunity == featuredCommunity) &&
-            (identical(other.featuredLocal, featuredLocal) ||
-                other.featuredLocal == featuredLocal) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hashAll([
-        runtimeType,
-        id,
-        name,
-        url,
-        body,
-        creatorId,
-        communityId,
-        removed,
-        locked,
-        published,
-        updated,
-        deleted,
-        nsfw,
-        stickied,
-        embedTitle,
-        embedDescription,
-        embedVideoUrl,
-        thumbnailUrl,
-        apId,
-        local,
-        languageId,
-        featuredCommunity,
-        featuredLocal,
-        instanceHost
-      ]);
-
-  /// Create a copy of Post
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$PostImplCopyWith<_$PostImpl> get copyWith =>
-      __$$PostImplCopyWithImpl<_$PostImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$PostImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _Post extends Post {
-  const factory _Post(
-      {required final int id,
-      required final String name,
-      final String? url,
-      final String? body,
-      required final int creatorId,
-      required final int communityId,
-      required final bool removed,
-      required final bool locked,
-      required final DateTime published,
-      final DateTime? updated,
-      required final bool deleted,
-      required final bool nsfw,
-      final bool? stickied,
-      final String? embedTitle,
-      final String? embedDescription,
-      final String? embedVideoUrl,
-      final String? thumbnailUrl,
-      required final String apId,
-      required final bool local,
-      required final int languageId,
-      required final bool featuredCommunity,
-      required final bool featuredLocal,
-      required final String instanceHost}) = _$PostImpl;
-  const _Post._() : super._();
-
-  factory _Post.fromJson(Map<String, dynamic> json) = _$PostImpl.fromJson;
-
-  @override
-  int get id;
-  @override
-  String get name;
-  @override
-  String? get url;
-  @override
-  String? get body;
-  @override
-  int get creatorId;
-  @override
-  int get communityId;
-  @override
-  bool get removed;
-  @override
-  bool get locked;
-  @override
-  DateTime get published;
-  @override
-  DateTime? get updated;
-  @override
-  bool get deleted;
-  @override
-  bool get nsfw;
-  @override
-  bool? get stickied;
-  @override
-  String? get embedTitle;
-  @override
-  String? get embedDescription;
-  @override
-  String? get embedVideoUrl;
-  @override
-  String? get thumbnailUrl;
-  @override
-  String get apId;
-  @override
-  bool get local;
-  @override
-  int get languageId;
-  @override
-  bool get featuredCommunity;
-  @override
-  bool get featuredLocal;
-  @override
-  String get instanceHost;
-
-  /// Create a copy of Post
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PostImplCopyWith<_$PostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

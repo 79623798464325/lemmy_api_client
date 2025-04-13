@@ -9,9 +9,9 @@ part 'source.freezed.dart';
 part 'source.g.dart';
 
 @freezed
-class PersonSafe with _$PersonSafe {
+class Person with _$Person {
   @modelSerde
-  const factory PersonSafe({
+  const factory Person({
     required int id,
     required String name,
     String? displayName,
@@ -30,9 +30,8 @@ class PersonSafe with _$PersonSafe {
     required String instanceHost,
   }) = _PersonSafe;
 
-  const PersonSafe._();
-  factory PersonSafe.fromJson(Map<String, dynamic> json) =>
-      _$PersonSafeFromJson(json);
+  const Person._();
+  factory Person.fromJson(Map<String, dynamic> json) => _$PersonFromJson(json);
 }
 
 @freezed
@@ -132,39 +131,6 @@ class PostReport with _$PostReport {
   const PostReport._();
   factory PostReport.fromJson(Map<String, dynamic> json) =>
       _$PostReportFromJson(json);
-}
-
-@freezed
-class Post with _$Post {
-  @modelSerde
-  const factory Post({
-    required int id,
-    required String name,
-    String? url,
-    String? body,
-    required int creatorId,
-    required int communityId,
-    required bool removed,
-    required bool locked,
-    required DateTime published,
-    DateTime? updated,
-    required bool deleted,
-    required bool nsfw,
-    bool? stickied,
-    String? embedTitle,
-    String? embedDescription,
-    String? embedVideoUrl,
-    String? thumbnailUrl,
-    required String apId,
-    required bool local,
-    required int languageId,
-    required bool featuredCommunity,
-    required bool featuredLocal,
-    required String instanceHost,
-  }) = _Post;
-
-  const Post._();
-  factory Post.fromJson(Map<String, dynamic> json) => _$PostFromJson(json);
 }
 
 @freezed

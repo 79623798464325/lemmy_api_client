@@ -285,6 +285,7 @@ mixin _$FullPostView {
   CommunityView get communityView => throw _privateConstructorUsedError;
   List<CommunityModeratorView> get moderators =>
       throw _privateConstructorUsedError;
+  List<PostView> get crossPosts => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
   /// Serializes this FullPostView to a JSON map.
@@ -307,6 +308,7 @@ abstract class $FullPostViewCopyWith<$Res> {
       {PostView postView,
       CommunityView communityView,
       List<CommunityModeratorView> moderators,
+      List<PostView> crossPosts,
       String instanceHost});
 
   $PostViewCopyWith<$Res> get postView;
@@ -331,6 +333,7 @@ class _$FullPostViewCopyWithImpl<$Res, $Val extends FullPostView>
     Object? postView = null,
     Object? communityView = null,
     Object? moderators = null,
+    Object? crossPosts = null,
     Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
@@ -346,6 +349,10 @@ class _$FullPostViewCopyWithImpl<$Res, $Val extends FullPostView>
           ? _value.moderators
           : moderators // ignore: cast_nullable_to_non_nullable
               as List<CommunityModeratorView>,
+      crossPosts: null == crossPosts
+          ? _value.crossPosts
+          : crossPosts // ignore: cast_nullable_to_non_nullable
+              as List<PostView>,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -386,6 +393,7 @@ abstract class _$$FullPostViewImplCopyWith<$Res>
       {PostView postView,
       CommunityView communityView,
       List<CommunityModeratorView> moderators,
+      List<PostView> crossPosts,
       String instanceHost});
 
   @override
@@ -410,6 +418,7 @@ class __$$FullPostViewImplCopyWithImpl<$Res>
     Object? postView = null,
     Object? communityView = null,
     Object? moderators = null,
+    Object? crossPosts = null,
     Object? instanceHost = null,
   }) {
     return _then(_$FullPostViewImpl(
@@ -425,6 +434,10 @@ class __$$FullPostViewImplCopyWithImpl<$Res>
           ? _value._moderators
           : moderators // ignore: cast_nullable_to_non_nullable
               as List<CommunityModeratorView>,
+      crossPosts: null == crossPosts
+          ? _value._crossPosts
+          : crossPosts // ignore: cast_nullable_to_non_nullable
+              as List<PostView>,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -441,8 +454,10 @@ class _$FullPostViewImpl extends _FullPostView {
       {required this.postView,
       required this.communityView,
       required final List<CommunityModeratorView> moderators,
+      required final List<PostView> crossPosts,
       required this.instanceHost})
       : _moderators = moderators,
+        _crossPosts = crossPosts,
         super._();
 
   factory _$FullPostViewImpl.fromJson(Map<String, dynamic> json) =>
@@ -460,12 +475,20 @@ class _$FullPostViewImpl extends _FullPostView {
     return EqualUnmodifiableListView(_moderators);
   }
 
+  final List<PostView> _crossPosts;
+  @override
+  List<PostView> get crossPosts {
+    if (_crossPosts is EqualUnmodifiableListView) return _crossPosts;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_crossPosts);
+  }
+
   @override
   final String instanceHost;
 
   @override
   String toString() {
-    return 'FullPostView(postView: $postView, communityView: $communityView, moderators: $moderators, instanceHost: $instanceHost)';
+    return 'FullPostView(postView: $postView, communityView: $communityView, moderators: $moderators, crossPosts: $crossPosts, instanceHost: $instanceHost)';
   }
 
   @override
@@ -479,14 +502,21 @@ class _$FullPostViewImpl extends _FullPostView {
                 other.communityView == communityView) &&
             const DeepCollectionEquality()
                 .equals(other._moderators, _moderators) &&
+            const DeepCollectionEquality()
+                .equals(other._crossPosts, _crossPosts) &&
             (identical(other.instanceHost, instanceHost) ||
                 other.instanceHost == instanceHost));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, postView, communityView,
-      const DeepCollectionEquality().hash(_moderators), instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      postView,
+      communityView,
+      const DeepCollectionEquality().hash(_moderators),
+      const DeepCollectionEquality().hash(_crossPosts),
+      instanceHost);
 
   /// Create a copy of FullPostView
   /// with the given fields replaced by the non-null parameter values.
@@ -509,6 +539,7 @@ abstract class _FullPostView extends FullPostView {
       {required final PostView postView,
       required final CommunityView communityView,
       required final List<CommunityModeratorView> moderators,
+      required final List<PostView> crossPosts,
       required final String instanceHost}) = _$FullPostViewImpl;
   const _FullPostView._() : super._();
 
@@ -521,6 +552,8 @@ abstract class _FullPostView extends FullPostView {
   CommunityView get communityView;
   @override
   List<CommunityModeratorView> get moderators;
+  @override
+  List<PostView> get crossPosts;
   @override
   String get instanceHost;
 
@@ -835,23 +868,33 @@ Modlog _$ModlogFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Modlog {
   List<ModRemovePostView> get removedPosts =>
-      throw _privateConstructorUsedError;
-  List<ModLockPostView> get lockedPosts => throw _privateConstructorUsedError;
-  List<ModStickyPostView> get stickiedPosts =>
-      throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.18.0
+  List<ModLockPostView> get lockedPosts =>
+      throw _privateConstructorUsedError; // v0.18.0
+  List<ModFeaturePostView> get featuredPosts =>
+      throw _privateConstructorUsedError; // v0.18.0
   List<ModRemoveCommentView> get removedComments =>
-      throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.18.0
   List<ModRemoveCommunityView> get removedCommunities =>
-      throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.18.0
   List<ModBanFromCommunityView> get bannedFromCommunity =>
-      throw _privateConstructorUsedError;
-  List<ModBanView> get banned => throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.18.0
+  List<ModBanView> get banned => throw _privateConstructorUsedError; // v0.18.0
   List<ModAddCommunityView> get addedToCommunity =>
-      throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.18.0
   List<ModTransferCommunityView> get transferredToCommunity =>
+      throw _privateConstructorUsedError; // v0.18.0
+  List<ModAddView> get added => throw _privateConstructorUsedError; // v0.18.0
+  List<AdminPurgePersonView> get adminPurgedPersons =>
+      throw _privateConstructorUsedError; // v0.18.0
+  List<AdminPurgeCommunityView> get adminPurgedCommunities =>
+      throw _privateConstructorUsedError; // v0.18.0
+  List<AdminPurgePostView> get adminPurgedPosts =>
+      throw _privateConstructorUsedError; // v0.18.0
+  List<AdminPurgeCommentView> get adminPurgedComments =>
+      throw _privateConstructorUsedError; // v0.18.0
+  List<ModHideCommunityView> get hiddenCommunities =>
       throw _privateConstructorUsedError;
-  List<ModAddView> get added => throw _privateConstructorUsedError;
-  String get instanceHost => throw _privateConstructorUsedError;
 
   /// Serializes this Modlog to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -870,7 +913,7 @@ abstract class $ModlogCopyWith<$Res> {
   $Res call(
       {List<ModRemovePostView> removedPosts,
       List<ModLockPostView> lockedPosts,
-      List<ModStickyPostView> stickiedPosts,
+      List<ModFeaturePostView> featuredPosts,
       List<ModRemoveCommentView> removedComments,
       List<ModRemoveCommunityView> removedCommunities,
       List<ModBanFromCommunityView> bannedFromCommunity,
@@ -878,7 +921,11 @@ abstract class $ModlogCopyWith<$Res> {
       List<ModAddCommunityView> addedToCommunity,
       List<ModTransferCommunityView> transferredToCommunity,
       List<ModAddView> added,
-      String instanceHost});
+      List<AdminPurgePersonView> adminPurgedPersons,
+      List<AdminPurgeCommunityView> adminPurgedCommunities,
+      List<AdminPurgePostView> adminPurgedPosts,
+      List<AdminPurgeCommentView> adminPurgedComments,
+      List<ModHideCommunityView> hiddenCommunities});
 }
 
 /// @nodoc
@@ -898,7 +945,7 @@ class _$ModlogCopyWithImpl<$Res, $Val extends Modlog>
   $Res call({
     Object? removedPosts = null,
     Object? lockedPosts = null,
-    Object? stickiedPosts = null,
+    Object? featuredPosts = null,
     Object? removedComments = null,
     Object? removedCommunities = null,
     Object? bannedFromCommunity = null,
@@ -906,7 +953,11 @@ class _$ModlogCopyWithImpl<$Res, $Val extends Modlog>
     Object? addedToCommunity = null,
     Object? transferredToCommunity = null,
     Object? added = null,
-    Object? instanceHost = null,
+    Object? adminPurgedPersons = null,
+    Object? adminPurgedCommunities = null,
+    Object? adminPurgedPosts = null,
+    Object? adminPurgedComments = null,
+    Object? hiddenCommunities = null,
   }) {
     return _then(_value.copyWith(
       removedPosts: null == removedPosts
@@ -917,10 +968,10 @@ class _$ModlogCopyWithImpl<$Res, $Val extends Modlog>
           ? _value.lockedPosts
           : lockedPosts // ignore: cast_nullable_to_non_nullable
               as List<ModLockPostView>,
-      stickiedPosts: null == stickiedPosts
-          ? _value.stickiedPosts
-          : stickiedPosts // ignore: cast_nullable_to_non_nullable
-              as List<ModStickyPostView>,
+      featuredPosts: null == featuredPosts
+          ? _value.featuredPosts
+          : featuredPosts // ignore: cast_nullable_to_non_nullable
+              as List<ModFeaturePostView>,
       removedComments: null == removedComments
           ? _value.removedComments
           : removedComments // ignore: cast_nullable_to_non_nullable
@@ -949,10 +1000,26 @@ class _$ModlogCopyWithImpl<$Res, $Val extends Modlog>
           ? _value.added
           : added // ignore: cast_nullable_to_non_nullable
               as List<ModAddView>,
-      instanceHost: null == instanceHost
-          ? _value.instanceHost
-          : instanceHost // ignore: cast_nullable_to_non_nullable
-              as String,
+      adminPurgedPersons: null == adminPurgedPersons
+          ? _value.adminPurgedPersons
+          : adminPurgedPersons // ignore: cast_nullable_to_non_nullable
+              as List<AdminPurgePersonView>,
+      adminPurgedCommunities: null == adminPurgedCommunities
+          ? _value.adminPurgedCommunities
+          : adminPurgedCommunities // ignore: cast_nullable_to_non_nullable
+              as List<AdminPurgeCommunityView>,
+      adminPurgedPosts: null == adminPurgedPosts
+          ? _value.adminPurgedPosts
+          : adminPurgedPosts // ignore: cast_nullable_to_non_nullable
+              as List<AdminPurgePostView>,
+      adminPurgedComments: null == adminPurgedComments
+          ? _value.adminPurgedComments
+          : adminPurgedComments // ignore: cast_nullable_to_non_nullable
+              as List<AdminPurgeCommentView>,
+      hiddenCommunities: null == hiddenCommunities
+          ? _value.hiddenCommunities
+          : hiddenCommunities // ignore: cast_nullable_to_non_nullable
+              as List<ModHideCommunityView>,
     ) as $Val);
   }
 }
@@ -967,7 +1034,7 @@ abstract class _$$ModlogImplCopyWith<$Res> implements $ModlogCopyWith<$Res> {
   $Res call(
       {List<ModRemovePostView> removedPosts,
       List<ModLockPostView> lockedPosts,
-      List<ModStickyPostView> stickiedPosts,
+      List<ModFeaturePostView> featuredPosts,
       List<ModRemoveCommentView> removedComments,
       List<ModRemoveCommunityView> removedCommunities,
       List<ModBanFromCommunityView> bannedFromCommunity,
@@ -975,7 +1042,11 @@ abstract class _$$ModlogImplCopyWith<$Res> implements $ModlogCopyWith<$Res> {
       List<ModAddCommunityView> addedToCommunity,
       List<ModTransferCommunityView> transferredToCommunity,
       List<ModAddView> added,
-      String instanceHost});
+      List<AdminPurgePersonView> adminPurgedPersons,
+      List<AdminPurgeCommunityView> adminPurgedCommunities,
+      List<AdminPurgePostView> adminPurgedPosts,
+      List<AdminPurgeCommentView> adminPurgedComments,
+      List<ModHideCommunityView> hiddenCommunities});
 }
 
 /// @nodoc
@@ -993,7 +1064,7 @@ class __$$ModlogImplCopyWithImpl<$Res>
   $Res call({
     Object? removedPosts = null,
     Object? lockedPosts = null,
-    Object? stickiedPosts = null,
+    Object? featuredPosts = null,
     Object? removedComments = null,
     Object? removedCommunities = null,
     Object? bannedFromCommunity = null,
@@ -1001,7 +1072,11 @@ class __$$ModlogImplCopyWithImpl<$Res>
     Object? addedToCommunity = null,
     Object? transferredToCommunity = null,
     Object? added = null,
-    Object? instanceHost = null,
+    Object? adminPurgedPersons = null,
+    Object? adminPurgedCommunities = null,
+    Object? adminPurgedPosts = null,
+    Object? adminPurgedComments = null,
+    Object? hiddenCommunities = null,
   }) {
     return _then(_$ModlogImpl(
       removedPosts: null == removedPosts
@@ -1012,10 +1087,10 @@ class __$$ModlogImplCopyWithImpl<$Res>
           ? _value._lockedPosts
           : lockedPosts // ignore: cast_nullable_to_non_nullable
               as List<ModLockPostView>,
-      stickiedPosts: null == stickiedPosts
-          ? _value._stickiedPosts
-          : stickiedPosts // ignore: cast_nullable_to_non_nullable
-              as List<ModStickyPostView>,
+      featuredPosts: null == featuredPosts
+          ? _value._featuredPosts
+          : featuredPosts // ignore: cast_nullable_to_non_nullable
+              as List<ModFeaturePostView>,
       removedComments: null == removedComments
           ? _value._removedComments
           : removedComments // ignore: cast_nullable_to_non_nullable
@@ -1044,10 +1119,26 @@ class __$$ModlogImplCopyWithImpl<$Res>
           ? _value._added
           : added // ignore: cast_nullable_to_non_nullable
               as List<ModAddView>,
-      instanceHost: null == instanceHost
-          ? _value.instanceHost
-          : instanceHost // ignore: cast_nullable_to_non_nullable
-              as String,
+      adminPurgedPersons: null == adminPurgedPersons
+          ? _value._adminPurgedPersons
+          : adminPurgedPersons // ignore: cast_nullable_to_non_nullable
+              as List<AdminPurgePersonView>,
+      adminPurgedCommunities: null == adminPurgedCommunities
+          ? _value._adminPurgedCommunities
+          : adminPurgedCommunities // ignore: cast_nullable_to_non_nullable
+              as List<AdminPurgeCommunityView>,
+      adminPurgedPosts: null == adminPurgedPosts
+          ? _value._adminPurgedPosts
+          : adminPurgedPosts // ignore: cast_nullable_to_non_nullable
+              as List<AdminPurgePostView>,
+      adminPurgedComments: null == adminPurgedComments
+          ? _value._adminPurgedComments
+          : adminPurgedComments // ignore: cast_nullable_to_non_nullable
+              as List<AdminPurgeCommentView>,
+      hiddenCommunities: null == hiddenCommunities
+          ? _value._hiddenCommunities
+          : hiddenCommunities // ignore: cast_nullable_to_non_nullable
+              as List<ModHideCommunityView>,
     ));
   }
 }
@@ -1059,7 +1150,7 @@ class _$ModlogImpl extends _Modlog {
   const _$ModlogImpl(
       {required final List<ModRemovePostView> removedPosts,
       required final List<ModLockPostView> lockedPosts,
-      required final List<ModStickyPostView> stickiedPosts,
+      required final List<ModFeaturePostView> featuredPosts,
       required final List<ModRemoveCommentView> removedComments,
       required final List<ModRemoveCommunityView> removedCommunities,
       required final List<ModBanFromCommunityView> bannedFromCommunity,
@@ -1067,10 +1158,14 @@ class _$ModlogImpl extends _Modlog {
       required final List<ModAddCommunityView> addedToCommunity,
       required final List<ModTransferCommunityView> transferredToCommunity,
       required final List<ModAddView> added,
-      required this.instanceHost})
+      required final List<AdminPurgePersonView> adminPurgedPersons,
+      required final List<AdminPurgeCommunityView> adminPurgedCommunities,
+      required final List<AdminPurgePostView> adminPurgedPosts,
+      required final List<AdminPurgeCommentView> adminPurgedComments,
+      required final List<ModHideCommunityView> hiddenCommunities})
       : _removedPosts = removedPosts,
         _lockedPosts = lockedPosts,
-        _stickiedPosts = stickiedPosts,
+        _featuredPosts = featuredPosts,
         _removedComments = removedComments,
         _removedCommunities = removedCommunities,
         _bannedFromCommunity = bannedFromCommunity,
@@ -1078,6 +1173,11 @@ class _$ModlogImpl extends _Modlog {
         _addedToCommunity = addedToCommunity,
         _transferredToCommunity = transferredToCommunity,
         _added = added,
+        _adminPurgedPersons = adminPurgedPersons,
+        _adminPurgedCommunities = adminPurgedCommunities,
+        _adminPurgedPosts = adminPurgedPosts,
+        _adminPurgedComments = adminPurgedComments,
+        _hiddenCommunities = hiddenCommunities,
         super._();
 
   factory _$ModlogImpl.fromJson(Map<String, dynamic> json) =>
@@ -1091,7 +1191,9 @@ class _$ModlogImpl extends _Modlog {
     return EqualUnmodifiableListView(_removedPosts);
   }
 
+// v0.18.0
   final List<ModLockPostView> _lockedPosts;
+// v0.18.0
   @override
   List<ModLockPostView> get lockedPosts {
     if (_lockedPosts is EqualUnmodifiableListView) return _lockedPosts;
@@ -1099,15 +1201,19 @@ class _$ModlogImpl extends _Modlog {
     return EqualUnmodifiableListView(_lockedPosts);
   }
 
-  final List<ModStickyPostView> _stickiedPosts;
+// v0.18.0
+  final List<ModFeaturePostView> _featuredPosts;
+// v0.18.0
   @override
-  List<ModStickyPostView> get stickiedPosts {
-    if (_stickiedPosts is EqualUnmodifiableListView) return _stickiedPosts;
+  List<ModFeaturePostView> get featuredPosts {
+    if (_featuredPosts is EqualUnmodifiableListView) return _featuredPosts;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_stickiedPosts);
+    return EqualUnmodifiableListView(_featuredPosts);
   }
 
+// v0.18.0
   final List<ModRemoveCommentView> _removedComments;
+// v0.18.0
   @override
   List<ModRemoveCommentView> get removedComments {
     if (_removedComments is EqualUnmodifiableListView) return _removedComments;
@@ -1115,7 +1221,9 @@ class _$ModlogImpl extends _Modlog {
     return EqualUnmodifiableListView(_removedComments);
   }
 
+// v0.18.0
   final List<ModRemoveCommunityView> _removedCommunities;
+// v0.18.0
   @override
   List<ModRemoveCommunityView> get removedCommunities {
     if (_removedCommunities is EqualUnmodifiableListView)
@@ -1124,7 +1232,9 @@ class _$ModlogImpl extends _Modlog {
     return EqualUnmodifiableListView(_removedCommunities);
   }
 
+// v0.18.0
   final List<ModBanFromCommunityView> _bannedFromCommunity;
+// v0.18.0
   @override
   List<ModBanFromCommunityView> get bannedFromCommunity {
     if (_bannedFromCommunity is EqualUnmodifiableListView)
@@ -1133,7 +1243,9 @@ class _$ModlogImpl extends _Modlog {
     return EqualUnmodifiableListView(_bannedFromCommunity);
   }
 
+// v0.18.0
   final List<ModBanView> _banned;
+// v0.18.0
   @override
   List<ModBanView> get banned {
     if (_banned is EqualUnmodifiableListView) return _banned;
@@ -1141,7 +1253,9 @@ class _$ModlogImpl extends _Modlog {
     return EqualUnmodifiableListView(_banned);
   }
 
+// v0.18.0
   final List<ModAddCommunityView> _addedToCommunity;
+// v0.18.0
   @override
   List<ModAddCommunityView> get addedToCommunity {
     if (_addedToCommunity is EqualUnmodifiableListView)
@@ -1150,7 +1264,9 @@ class _$ModlogImpl extends _Modlog {
     return EqualUnmodifiableListView(_addedToCommunity);
   }
 
+// v0.18.0
   final List<ModTransferCommunityView> _transferredToCommunity;
+// v0.18.0
   @override
   List<ModTransferCommunityView> get transferredToCommunity {
     if (_transferredToCommunity is EqualUnmodifiableListView)
@@ -1159,7 +1275,9 @@ class _$ModlogImpl extends _Modlog {
     return EqualUnmodifiableListView(_transferredToCommunity);
   }
 
+// v0.18.0
   final List<ModAddView> _added;
+// v0.18.0
   @override
   List<ModAddView> get added {
     if (_added is EqualUnmodifiableListView) return _added;
@@ -1167,12 +1285,64 @@ class _$ModlogImpl extends _Modlog {
     return EqualUnmodifiableListView(_added);
   }
 
+// v0.18.0
+  final List<AdminPurgePersonView> _adminPurgedPersons;
+// v0.18.0
   @override
-  final String instanceHost;
+  List<AdminPurgePersonView> get adminPurgedPersons {
+    if (_adminPurgedPersons is EqualUnmodifiableListView)
+      return _adminPurgedPersons;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_adminPurgedPersons);
+  }
+
+// v0.18.0
+  final List<AdminPurgeCommunityView> _adminPurgedCommunities;
+// v0.18.0
+  @override
+  List<AdminPurgeCommunityView> get adminPurgedCommunities {
+    if (_adminPurgedCommunities is EqualUnmodifiableListView)
+      return _adminPurgedCommunities;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_adminPurgedCommunities);
+  }
+
+// v0.18.0
+  final List<AdminPurgePostView> _adminPurgedPosts;
+// v0.18.0
+  @override
+  List<AdminPurgePostView> get adminPurgedPosts {
+    if (_adminPurgedPosts is EqualUnmodifiableListView)
+      return _adminPurgedPosts;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_adminPurgedPosts);
+  }
+
+// v0.18.0
+  final List<AdminPurgeCommentView> _adminPurgedComments;
+// v0.18.0
+  @override
+  List<AdminPurgeCommentView> get adminPurgedComments {
+    if (_adminPurgedComments is EqualUnmodifiableListView)
+      return _adminPurgedComments;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_adminPurgedComments);
+  }
+
+// v0.18.0
+  final List<ModHideCommunityView> _hiddenCommunities;
+// v0.18.0
+  @override
+  List<ModHideCommunityView> get hiddenCommunities {
+    if (_hiddenCommunities is EqualUnmodifiableListView)
+      return _hiddenCommunities;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_hiddenCommunities);
+  }
 
   @override
   String toString() {
-    return 'Modlog(removedPosts: $removedPosts, lockedPosts: $lockedPosts, stickiedPosts: $stickiedPosts, removedComments: $removedComments, removedCommunities: $removedCommunities, bannedFromCommunity: $bannedFromCommunity, banned: $banned, addedToCommunity: $addedToCommunity, transferredToCommunity: $transferredToCommunity, added: $added, instanceHost: $instanceHost)';
+    return 'Modlog(removedPosts: $removedPosts, lockedPosts: $lockedPosts, featuredPosts: $featuredPosts, removedComments: $removedComments, removedCommunities: $removedCommunities, bannedFromCommunity: $bannedFromCommunity, banned: $banned, addedToCommunity: $addedToCommunity, transferredToCommunity: $transferredToCommunity, added: $added, adminPurgedPersons: $adminPurgedPersons, adminPurgedCommunities: $adminPurgedCommunities, adminPurgedPosts: $adminPurgedPosts, adminPurgedComments: $adminPurgedComments, hiddenCommunities: $hiddenCommunities)';
   }
 
   @override
@@ -1185,7 +1355,7 @@ class _$ModlogImpl extends _Modlog {
             const DeepCollectionEquality()
                 .equals(other._lockedPosts, _lockedPosts) &&
             const DeepCollectionEquality()
-                .equals(other._stickiedPosts, _stickiedPosts) &&
+                .equals(other._featuredPosts, _featuredPosts) &&
             const DeepCollectionEquality()
                 .equals(other._removedComments, _removedComments) &&
             const DeepCollectionEquality()
@@ -1198,8 +1368,16 @@ class _$ModlogImpl extends _Modlog {
             const DeepCollectionEquality().equals(
                 other._transferredToCommunity, _transferredToCommunity) &&
             const DeepCollectionEquality().equals(other._added, _added) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality()
+                .equals(other._adminPurgedPersons, _adminPurgedPersons) &&
+            const DeepCollectionEquality().equals(
+                other._adminPurgedCommunities, _adminPurgedCommunities) &&
+            const DeepCollectionEquality()
+                .equals(other._adminPurgedPosts, _adminPurgedPosts) &&
+            const DeepCollectionEquality()
+                .equals(other._adminPurgedComments, _adminPurgedComments) &&
+            const DeepCollectionEquality()
+                .equals(other._hiddenCommunities, _hiddenCommunities));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -1208,7 +1386,7 @@ class _$ModlogImpl extends _Modlog {
       runtimeType,
       const DeepCollectionEquality().hash(_removedPosts),
       const DeepCollectionEquality().hash(_lockedPosts),
-      const DeepCollectionEquality().hash(_stickiedPosts),
+      const DeepCollectionEquality().hash(_featuredPosts),
       const DeepCollectionEquality().hash(_removedComments),
       const DeepCollectionEquality().hash(_removedCommunities),
       const DeepCollectionEquality().hash(_bannedFromCommunity),
@@ -1216,7 +1394,11 @@ class _$ModlogImpl extends _Modlog {
       const DeepCollectionEquality().hash(_addedToCommunity),
       const DeepCollectionEquality().hash(_transferredToCommunity),
       const DeepCollectionEquality().hash(_added),
-      instanceHost);
+      const DeepCollectionEquality().hash(_adminPurgedPersons),
+      const DeepCollectionEquality().hash(_adminPurgedCommunities),
+      const DeepCollectionEquality().hash(_adminPurgedPosts),
+      const DeepCollectionEquality().hash(_adminPurgedComments),
+      const DeepCollectionEquality().hash(_hiddenCommunities));
 
   /// Create a copy of Modlog
   /// with the given fields replaced by the non-null parameter values.
@@ -1236,43 +1418,56 @@ class _$ModlogImpl extends _Modlog {
 
 abstract class _Modlog extends Modlog {
   const factory _Modlog(
-      {required final List<ModRemovePostView> removedPosts,
-      required final List<ModLockPostView> lockedPosts,
-      required final List<ModStickyPostView> stickiedPosts,
-      required final List<ModRemoveCommentView> removedComments,
-      required final List<ModRemoveCommunityView> removedCommunities,
-      required final List<ModBanFromCommunityView> bannedFromCommunity,
-      required final List<ModBanView> banned,
-      required final List<ModAddCommunityView> addedToCommunity,
-      required final List<ModTransferCommunityView> transferredToCommunity,
-      required final List<ModAddView> added,
-      required final String instanceHost}) = _$ModlogImpl;
+          {required final List<ModRemovePostView> removedPosts,
+          required final List<ModLockPostView> lockedPosts,
+          required final List<ModFeaturePostView> featuredPosts,
+          required final List<ModRemoveCommentView> removedComments,
+          required final List<ModRemoveCommunityView> removedCommunities,
+          required final List<ModBanFromCommunityView> bannedFromCommunity,
+          required final List<ModBanView> banned,
+          required final List<ModAddCommunityView> addedToCommunity,
+          required final List<ModTransferCommunityView> transferredToCommunity,
+          required final List<ModAddView> added,
+          required final List<AdminPurgePersonView> adminPurgedPersons,
+          required final List<AdminPurgeCommunityView> adminPurgedCommunities,
+          required final List<AdminPurgePostView> adminPurgedPosts,
+          required final List<AdminPurgeCommentView> adminPurgedComments,
+          required final List<ModHideCommunityView> hiddenCommunities}) =
+      _$ModlogImpl;
   const _Modlog._() : super._();
 
   factory _Modlog.fromJson(Map<String, dynamic> json) = _$ModlogImpl.fromJson;
 
   @override
-  List<ModRemovePostView> get removedPosts;
+  List<ModRemovePostView> get removedPosts; // v0.18.0
   @override
-  List<ModLockPostView> get lockedPosts;
+  List<ModLockPostView> get lockedPosts; // v0.18.0
   @override
-  List<ModStickyPostView> get stickiedPosts;
+  List<ModFeaturePostView> get featuredPosts; // v0.18.0
   @override
-  List<ModRemoveCommentView> get removedComments;
+  List<ModRemoveCommentView> get removedComments; // v0.18.0
   @override
-  List<ModRemoveCommunityView> get removedCommunities;
+  List<ModRemoveCommunityView> get removedCommunities; // v0.18.0
   @override
-  List<ModBanFromCommunityView> get bannedFromCommunity;
+  List<ModBanFromCommunityView> get bannedFromCommunity; // v0.18.0
   @override
-  List<ModBanView> get banned;
+  List<ModBanView> get banned; // v0.18.0
   @override
-  List<ModAddCommunityView> get addedToCommunity;
+  List<ModAddCommunityView> get addedToCommunity; // v0.18.0
   @override
-  List<ModTransferCommunityView> get transferredToCommunity;
+  List<ModTransferCommunityView> get transferredToCommunity; // v0.18.0
   @override
-  List<ModAddView> get added;
+  List<ModAddView> get added; // v0.18.0
   @override
-  String get instanceHost;
+  List<AdminPurgePersonView> get adminPurgedPersons; // v0.18.0
+  @override
+  List<AdminPurgeCommunityView> get adminPurgedCommunities; // v0.18.0
+  @override
+  List<AdminPurgePostView> get adminPurgedPosts; // v0.18.0
+  @override
+  List<AdminPurgeCommentView> get adminPurgedComments; // v0.18.0
+  @override
+  List<ModHideCommunityView> get hiddenCommunities;
 
   /// Create a copy of Modlog
   /// with the given fields replaced by the non-null parameter values.

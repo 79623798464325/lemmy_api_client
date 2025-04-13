@@ -20,16 +20,15 @@ GetModlog _$GetModlogFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetModlog {
-  int? get modPersonId => throw _privateConstructorUsedError; // v0.18.0
-  int? get communityId => throw _privateConstructorUsedError; // v0.18.0
-  int? get page => throw _privateConstructorUsedError; // v0.18.0
-  int? get limit => throw _privateConstructorUsedError; // v0.18.0
+  int? get modPersonId => throw _privateConstructorUsedError;
+  int? get communityId => throw _privateConstructorUsedError;
+  int? get page => throw _privateConstructorUsedError;
+  int? get limit => throw _privateConstructorUsedError;
   @JsonKey(name: 'type_')
-  ModlogActionType? get type => throw _privateConstructorUsedError; // v0.18.0
-  int? get otherPersonId => throw _privateConstructorUsedError; // v0.18.0
-  int? get postId => throw _privateConstructorUsedError; // v0.19.4 (optional)
-  int? get commentId =>
-      throw _privateConstructorUsedError; // v0.19.4 (optional)
+  ModlogActionType? get type => throw _privateConstructorUsedError;
+  int? get otherPersonId => throw _privateConstructorUsedError;
+  int? get postId => throw _privateConstructorUsedError;
+  int? get commentId => throw _privateConstructorUsedError;
   String? get auth => throw _privateConstructorUsedError;
 
   /// Serializes this GetModlog to a JSON map.
@@ -230,29 +229,21 @@ class _$GetModlogImpl extends _GetModlog {
 
   @override
   final int? modPersonId;
-// v0.18.0
   @override
   final int? communityId;
-// v0.18.0
   @override
   final int? page;
-// v0.18.0
   @override
   final int? limit;
-// v0.18.0
   @override
   @JsonKey(name: 'type_')
   final ModlogActionType? type;
-// v0.18.0
   @override
   final int? otherPersonId;
-// v0.18.0
   @override
   final int? postId;
-// v0.19.4 (optional)
   @override
   final int? commentId;
-// v0.19.4 (optional)
   @override
   final String? auth;
 
@@ -319,22 +310,22 @@ abstract class _GetModlog extends GetModlog {
       _$GetModlogImpl.fromJson;
 
   @override
-  int? get modPersonId; // v0.18.0
+  int? get modPersonId;
   @override
-  int? get communityId; // v0.18.0
+  int? get communityId;
   @override
-  int? get page; // v0.18.0
+  int? get page;
   @override
-  int? get limit; // v0.18.0
+  int? get limit;
   @override
   @JsonKey(name: 'type_')
-  ModlogActionType? get type; // v0.18.0
+  ModlogActionType? get type;
   @override
-  int? get otherPersonId; // v0.18.0
+  int? get otherPersonId;
   @override
-  int? get postId; // v0.19.4 (optional)
+  int? get postId;
   @override
-  int? get commentId; // v0.19.4 (optional)
+  int? get commentId;
   @override
   String? get auth;
 

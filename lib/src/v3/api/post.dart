@@ -5,6 +5,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../enums.dart';
 import '../../utils/serde.dart';
 import '../models/api.dart';
+import '../models/post/get_posts_response.dart';
+import '../models/user/success_response.dart';
 import '../models/views.dart';
 import '../query.dart';
 
@@ -40,6 +42,8 @@ class CreatePost with _$CreatePost implements LemmyApiQuery<PostView> {
     String? url,
     String? body,
     bool? nsfw,
+    String? altText,
+    String? customThumbnail,
     required int communityId,
     required String auth,
     String? honeypot,
@@ -59,7 +63,7 @@ class CreatePost with _$CreatePost implements LemmyApiQuery<PostView> {
 }
 
 @freezed
-class GetPosts with _$GetPosts implements LemmyApiQuery<List<PostView>> {
+class GetPosts with _$GetPosts implements LemmyApiQuery<GetPostsResponse> {
   @apiSerde
   const factory GetPosts({
     @JsonKey(name: 'type_') PostListingType? type,
@@ -70,6 +74,12 @@ class GetPosts with _$GetPosts implements LemmyApiQuery<List<PostView>> {
     String? communityName,
     bool? savedOnly,
     String? auth,
+    bool? likedOnly, // v0.19.0 (optional)
+    bool? dislikedOnly, // v0.19.0 (optional)
+    bool? showHidden, // v0.19.4 (optional)
+    bool? showRead, // v0.19.6 (optional)
+    bool? showNsfw, // v0.19.6 (optional)
+    String? pageCursor, // v0.19.0 (optional)
   }) = _GetPosts;
 
   const GetPosts._();
@@ -81,8 +91,8 @@ class GetPosts with _$GetPosts implements LemmyApiQuery<List<PostView>> {
   final httpMethod = HttpMethod.get;
 
   @override
-  List<PostView> responseFactory(Map<String, dynamic> json) =>
-      (json['posts'] as List).map((dynamic e) => PostView.fromJson(e)).toList();
+  GetPostsResponse responseFactory(Map<String, dynamic> json) =>
+      GetPostsResponse.fromJson(json);
 }
 
 @freezed
@@ -115,6 +125,8 @@ class EditPost with _$EditPost implements LemmyApiQuery<PostView> {
     String? name,
     String? url,
     String? body,
+    String? altText,
+    String? customThumbnail,
     bool? nsfw,
     required String auth,
   }) = _EditPost;
@@ -346,6 +358,7 @@ class MarkPostAsRead with _$MarkPostAsRead implements LemmyApiQuery<PostView> {
   @apiSerde
   const factory MarkPostAsRead({
     required int postId,
+    List<int>? postIds, // v0.19.0 (optional)
     required bool read,
     required String auth,
   }) = _MarkPostAsRead;
@@ -361,4 +374,31 @@ class MarkPostAsRead with _$MarkPostAsRead implements LemmyApiQuery<PostView> {
   @override
   PostView responseFactory(Map<String, dynamic> json) =>
       PostView.fromJson(json['post_view']);
+}
+
+/// Only available in lemmy v0.19.4 and above
+///
+/// Hide a post from list views.
+///
+/// `HTTP.POST /post/hide`
+@freezed
+class HidePost with _$HidePost implements LemmyApiQuery<SuccessResponse> {
+  @apiSerde
+  const factory HidePost({
+    required List<int> postIds, // v0.19.4 (required)
+    required bool hide, // v0.19.4 (required)
+    String? auth,
+  }) = _HidePost;
+
+  const HidePost._();
+  factory HidePost.fromJson(Map<String, dynamic> json) =>
+      _$HidePostFromJson(json);
+
+  final path = '/post/hide';
+
+  final httpMethod = HttpMethod.post;
+
+  @override
+  SuccessResponse responseFactory(Map<String, dynamic> json) =>
+      SuccessResponse.fromJson(json);
 }

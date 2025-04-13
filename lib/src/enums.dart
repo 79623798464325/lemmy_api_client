@@ -30,7 +30,8 @@ enum VoteType {
 enum PostListingType {
   all('All'),
   local('Local'),
-  subscribed('Subscribed');
+  subscribed('Subscribed'),
+  moderatorView('ModeratorView');
 
   final String value;
   const PostListingType(this.value);

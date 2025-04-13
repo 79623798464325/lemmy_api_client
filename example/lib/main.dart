@@ -8,8 +8,8 @@ Future<void> main() async {
   final response =
       await lemmy.run(const Login(usernameOrEmail: 'asd', password: 'ads'));
 
-  final messages = await lemmy
-      .run(GetPrivateMessages(unreadOnly: true, auth: response.jwt!.raw));
+  // final messages = await lemmy
+  //     .run(GetPrivateMessages(unreadOnly: true, auth: response.jwt!.raw));
 
-  print(messages);
+  // print(messages);
 }

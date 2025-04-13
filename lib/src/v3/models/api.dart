@@ -29,6 +29,7 @@ class FullPostView with _$FullPostView {
     required PostView postView,
     required CommunityView communityView,
     required List<CommunityModeratorView> moderators,
+    required List<PostView> crossPosts,
     required String instanceHost,
   }) = _FullPostView;
 
@@ -59,17 +60,21 @@ class SearchResults with _$SearchResults {
 class Modlog with _$Modlog {
   @modelSerde
   const factory Modlog({
-    required List<ModRemovePostView> removedPosts,
-    required List<ModLockPostView> lockedPosts,
-    required List<ModStickyPostView> stickiedPosts,
-    required List<ModRemoveCommentView> removedComments,
-    required List<ModRemoveCommunityView> removedCommunities,
-    required List<ModBanFromCommunityView> bannedFromCommunity,
-    required List<ModBanView> banned,
-    required List<ModAddCommunityView> addedToCommunity,
-    required List<ModTransferCommunityView> transferredToCommunity,
-    required List<ModAddView> added,
-    required String instanceHost,
+    required List<ModRemovePostView> removedPosts, // v0.18.0
+    required List<ModLockPostView> lockedPosts, // v0.18.0
+    required List<ModFeaturePostView> featuredPosts, // v0.18.0
+    required List<ModRemoveCommentView> removedComments, // v0.18.0
+    required List<ModRemoveCommunityView> removedCommunities, // v0.18.0
+    required List<ModBanFromCommunityView> bannedFromCommunity, // v0.18.0
+    required List<ModBanView> banned, // v0.18.0
+    required List<ModAddCommunityView> addedToCommunity, // v0.18.0
+    required List<ModTransferCommunityView> transferredToCommunity, // v0.18.0
+    required List<ModAddView> added, // v0.18.0
+    required List<AdminPurgePersonView> adminPurgedPersons, // v0.18.0
+    required List<AdminPurgeCommunityView> adminPurgedCommunities, // v0.18.0
+    required List<AdminPurgePostView> adminPurgedPosts, // v0.18.0
+    required List<AdminPurgeCommentView> adminPurgedComments, // v0.18.0
+    required List<ModHideCommunityView> hiddenCommunities, // v0.18.0
   }) = _Modlog;
 
   const Modlog._();
