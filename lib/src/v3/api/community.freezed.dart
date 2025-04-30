@@ -12,7 +12,8 @@ part of 'community.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 GetCommunity _$GetCommunityFromJson(Map<String, dynamic> json) {
   return _GetCommunity.fromJson(json);
@@ -37,8 +38,9 @@ mixin _$GetCommunity {
 /// @nodoc
 abstract class $GetCommunityCopyWith<$Res> {
   factory $GetCommunityCopyWith(
-          GetCommunity value, $Res Function(GetCommunity) then) =
-      _$GetCommunityCopyWithImpl<$Res, GetCommunity>;
+    GetCommunity value,
+    $Res Function(GetCommunity) then,
+  ) = _$GetCommunityCopyWithImpl<$Res, GetCommunity>;
   @useResult
   $Res call({int? id, String? name, String? auth});
 }
@@ -62,20 +64,26 @@ class _$GetCommunityCopyWithImpl<$Res, $Val extends GetCommunity>
     Object? name = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                freezed == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            name:
+                freezed == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -83,8 +91,9 @@ class _$GetCommunityCopyWithImpl<$Res, $Val extends GetCommunity>
 abstract class _$$GetCommunityImplCopyWith<$Res>
     implements $GetCommunityCopyWith<$Res> {
   factory _$$GetCommunityImplCopyWith(
-          _$GetCommunityImpl value, $Res Function(_$GetCommunityImpl) then) =
-      __$$GetCommunityImplCopyWithImpl<$Res>;
+    _$GetCommunityImpl value,
+    $Res Function(_$GetCommunityImpl) then,
+  ) = __$$GetCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? id, String? name, String? auth});
@@ -95,8 +104,9 @@ class __$$GetCommunityImplCopyWithImpl<$Res>
     extends _$GetCommunityCopyWithImpl<$Res, _$GetCommunityImpl>
     implements _$$GetCommunityImplCopyWith<$Res> {
   __$$GetCommunityImplCopyWithImpl(
-      _$GetCommunityImpl _value, $Res Function(_$GetCommunityImpl) _then)
-      : super(_value, _then);
+    _$GetCommunityImpl _value,
+    $Res Function(_$GetCommunityImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of GetCommunity
   /// with the given fields replaced by the non-null parameter values.
@@ -107,20 +117,25 @@ class __$$GetCommunityImplCopyWithImpl<$Res>
     Object? name = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_$GetCommunityImpl(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$GetCommunityImpl(
+        id:
+            freezed == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        name:
+            freezed == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -169,17 +184,16 @@ class _$GetCommunityImpl extends _GetCommunity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetCommunityImplToJson(
-      this,
-    );
+    return _$$GetCommunityImplToJson(this);
   }
 }
 
 abstract class _GetCommunity extends GetCommunity {
-  const factory _GetCommunity(
-      {final int? id,
-      final String? name,
-      final String? auth}) = _$GetCommunityImpl;
+  const factory _GetCommunity({
+    final int? id,
+    final String? name,
+    final String? auth,
+  }) = _$GetCommunityImpl;
   const _GetCommunity._() : super._();
 
   factory _GetCommunity.fromJson(Map<String, dynamic> json) =
@@ -227,17 +241,19 @@ mixin _$CreateCommunity {
 /// @nodoc
 abstract class $CreateCommunityCopyWith<$Res> {
   factory $CreateCommunityCopyWith(
-          CreateCommunity value, $Res Function(CreateCommunity) then) =
-      _$CreateCommunityCopyWithImpl<$Res, CreateCommunity>;
+    CreateCommunity value,
+    $Res Function(CreateCommunity) then,
+  ) = _$CreateCommunityCopyWithImpl<$Res, CreateCommunity>;
   @useResult
-  $Res call(
-      {String name,
-      String title,
-      String? description,
-      String? icon,
-      String? banner,
-      bool? nsfw,
-      String auth});
+  $Res call({
+    String name,
+    String title,
+    String? description,
+    String? icon,
+    String? banner,
+    bool? nsfw,
+    String auth,
+  });
 }
 
 /// @nodoc
@@ -263,55 +279,67 @@ class _$CreateCommunityCopyWithImpl<$Res, $Val extends CreateCommunity>
     Object? nsfw = freezed,
     Object? auth = null,
   }) {
-    return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      icon: freezed == icon
-          ? _value.icon
-          : icon // ignore: cast_nullable_to_non_nullable
-              as String?,
-      banner: freezed == banner
-          ? _value.banner
-          : banner // ignore: cast_nullable_to_non_nullable
-              as String?,
-      nsfw: freezed == nsfw
-          ? _value.nsfw
-          : nsfw // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            title:
+                null == title
+                    ? _value.title
+                    : title // ignore: cast_nullable_to_non_nullable
+                        as String,
+            description:
+                freezed == description
+                    ? _value.description
+                    : description // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            icon:
+                freezed == icon
+                    ? _value.icon
+                    : icon // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            banner:
+                freezed == banner
+                    ? _value.banner
+                    : banner // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            nsfw:
+                freezed == nsfw
+                    ? _value.nsfw
+                    : nsfw // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$CreateCommunityImplCopyWith<$Res>
     implements $CreateCommunityCopyWith<$Res> {
-  factory _$$CreateCommunityImplCopyWith(_$CreateCommunityImpl value,
-          $Res Function(_$CreateCommunityImpl) then) =
-      __$$CreateCommunityImplCopyWithImpl<$Res>;
+  factory _$$CreateCommunityImplCopyWith(
+    _$CreateCommunityImpl value,
+    $Res Function(_$CreateCommunityImpl) then,
+  ) = __$$CreateCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String name,
-      String title,
-      String? description,
-      String? icon,
-      String? banner,
-      bool? nsfw,
-      String auth});
+  $Res call({
+    String name,
+    String title,
+    String? description,
+    String? icon,
+    String? banner,
+    bool? nsfw,
+    String auth,
+  });
 }
 
 /// @nodoc
@@ -319,8 +347,9 @@ class __$$CreateCommunityImplCopyWithImpl<$Res>
     extends _$CreateCommunityCopyWithImpl<$Res, _$CreateCommunityImpl>
     implements _$$CreateCommunityImplCopyWith<$Res> {
   __$$CreateCommunityImplCopyWithImpl(
-      _$CreateCommunityImpl _value, $Res Function(_$CreateCommunityImpl) _then)
-      : super(_value, _then);
+    _$CreateCommunityImpl _value,
+    $Res Function(_$CreateCommunityImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of CreateCommunity
   /// with the given fields replaced by the non-null parameter values.
@@ -335,36 +364,45 @@ class __$$CreateCommunityImplCopyWithImpl<$Res>
     Object? nsfw = freezed,
     Object? auth = null,
   }) {
-    return _then(_$CreateCommunityImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      icon: freezed == icon
-          ? _value.icon
-          : icon // ignore: cast_nullable_to_non_nullable
-              as String?,
-      banner: freezed == banner
-          ? _value.banner
-          : banner // ignore: cast_nullable_to_non_nullable
-              as String?,
-      nsfw: freezed == nsfw
-          ? _value.nsfw
-          : nsfw // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$CreateCommunityImpl(
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        title:
+            null == title
+                ? _value.title
+                : title // ignore: cast_nullable_to_non_nullable
+                    as String,
+        description:
+            freezed == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        icon:
+            freezed == icon
+                ? _value.icon
+                : icon // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        banner:
+            freezed == banner
+                ? _value.banner
+                : banner // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        nsfw:
+            freezed == nsfw
+                ? _value.nsfw
+                : nsfw // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -372,15 +410,15 @@ class __$$CreateCommunityImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$CreateCommunityImpl extends _CreateCommunity {
-  const _$CreateCommunityImpl(
-      {required this.name,
-      required this.title,
-      this.description,
-      this.icon,
-      this.banner,
-      this.nsfw,
-      required this.auth})
-      : super._();
+  const _$CreateCommunityImpl({
+    required this.name,
+    required this.title,
+    this.description,
+    this.icon,
+    this.banner,
+    this.nsfw,
+    required this.auth,
+  }) : super._();
 
   factory _$CreateCommunityImpl.fromJson(Map<String, dynamic> json) =>
       _$$CreateCommunityImplFromJson(json);
@@ -423,7 +461,15 @@ class _$CreateCommunityImpl extends _CreateCommunity {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType, name, title, description, icon, banner, nsfw, auth);
+    runtimeType,
+    name,
+    title,
+    description,
+    icon,
+    banner,
+    nsfw,
+    auth,
+  );
 
   /// Create a copy of CreateCommunity
   /// with the given fields replaced by the non-null parameter values.
@@ -432,25 +478,26 @@ class _$CreateCommunityImpl extends _CreateCommunity {
   @pragma('vm:prefer-inline')
   _$$CreateCommunityImplCopyWith<_$CreateCommunityImpl> get copyWith =>
       __$$CreateCommunityImplCopyWithImpl<_$CreateCommunityImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CreateCommunityImplToJson(
-      this,
-    );
+    return _$$CreateCommunityImplToJson(this);
   }
 }
 
 abstract class _CreateCommunity extends CreateCommunity {
-  const factory _CreateCommunity(
-      {required final String name,
-      required final String title,
-      final String? description,
-      final String? icon,
-      final String? banner,
-      final bool? nsfw,
-      required final String auth}) = _$CreateCommunityImpl;
+  const factory _CreateCommunity({
+    required final String name,
+    required final String title,
+    final String? description,
+    final String? icon,
+    final String? banner,
+    final bool? nsfw,
+    required final String auth,
+  }) = _$CreateCommunityImpl;
   const _CreateCommunity._() : super._();
 
   factory _CreateCommunity.fromJson(Map<String, dynamic> json) =
@@ -486,7 +533,7 @@ ListCommunities _$ListCommunitiesFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ListCommunities {
   @JsonKey(name: 'type_')
-  PostListingType? get type => throw _privateConstructorUsedError;
+  ListingType? get type => throw _privateConstructorUsedError;
   SortType? get sort => throw _privateConstructorUsedError;
   bool? get showNsfw => throw _privateConstructorUsedError;
   int? get page => throw _privateConstructorUsedError;
@@ -506,16 +553,18 @@ mixin _$ListCommunities {
 /// @nodoc
 abstract class $ListCommunitiesCopyWith<$Res> {
   factory $ListCommunitiesCopyWith(
-          ListCommunities value, $Res Function(ListCommunities) then) =
-      _$ListCommunitiesCopyWithImpl<$Res, ListCommunities>;
+    ListCommunities value,
+    $Res Function(ListCommunities) then,
+  ) = _$ListCommunitiesCopyWithImpl<$Res, ListCommunities>;
   @useResult
-  $Res call(
-      {@JsonKey(name: 'type_') PostListingType? type,
-      SortType? sort,
-      bool? showNsfw,
-      int? page,
-      int? limit,
-      String? auth});
+  $Res call({
+    @JsonKey(name: 'type_') ListingType? type,
+    SortType? sort,
+    bool? showNsfw,
+    int? page,
+    int? limit,
+    String? auth,
+  });
 }
 
 /// @nodoc
@@ -540,50 +589,61 @@ class _$ListCommunitiesCopyWithImpl<$Res, $Val extends ListCommunities>
     Object? limit = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_value.copyWith(
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as PostListingType?,
-      sort: freezed == sort
-          ? _value.sort
-          : sort // ignore: cast_nullable_to_non_nullable
-              as SortType?,
-      showNsfw: freezed == showNsfw
-          ? _value.showNsfw
-          : showNsfw // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      page: freezed == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as int?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            type:
+                freezed == type
+                    ? _value.type
+                    : type // ignore: cast_nullable_to_non_nullable
+                        as ListingType?,
+            sort:
+                freezed == sort
+                    ? _value.sort
+                    : sort // ignore: cast_nullable_to_non_nullable
+                        as SortType?,
+            showNsfw:
+                freezed == showNsfw
+                    ? _value.showNsfw
+                    : showNsfw // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            page:
+                freezed == page
+                    ? _value.page
+                    : page // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$ListCommunitiesImplCopyWith<$Res>
     implements $ListCommunitiesCopyWith<$Res> {
-  factory _$$ListCommunitiesImplCopyWith(_$ListCommunitiesImpl value,
-          $Res Function(_$ListCommunitiesImpl) then) =
-      __$$ListCommunitiesImplCopyWithImpl<$Res>;
+  factory _$$ListCommunitiesImplCopyWith(
+    _$ListCommunitiesImpl value,
+    $Res Function(_$ListCommunitiesImpl) then,
+  ) = __$$ListCommunitiesImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {@JsonKey(name: 'type_') PostListingType? type,
-      SortType? sort,
-      bool? showNsfw,
-      int? page,
-      int? limit,
-      String? auth});
+  $Res call({
+    @JsonKey(name: 'type_') ListingType? type,
+    SortType? sort,
+    bool? showNsfw,
+    int? page,
+    int? limit,
+    String? auth,
+  });
 }
 
 /// @nodoc
@@ -591,8 +651,9 @@ class __$$ListCommunitiesImplCopyWithImpl<$Res>
     extends _$ListCommunitiesCopyWithImpl<$Res, _$ListCommunitiesImpl>
     implements _$$ListCommunitiesImplCopyWith<$Res> {
   __$$ListCommunitiesImplCopyWithImpl(
-      _$ListCommunitiesImpl _value, $Res Function(_$ListCommunitiesImpl) _then)
-      : super(_value, _then);
+    _$ListCommunitiesImpl _value,
+    $Res Function(_$ListCommunitiesImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ListCommunities
   /// with the given fields replaced by the non-null parameter values.
@@ -606,32 +667,40 @@ class __$$ListCommunitiesImplCopyWithImpl<$Res>
     Object? limit = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_$ListCommunitiesImpl(
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as PostListingType?,
-      sort: freezed == sort
-          ? _value.sort
-          : sort // ignore: cast_nullable_to_non_nullable
-              as SortType?,
-      showNsfw: freezed == showNsfw
-          ? _value.showNsfw
-          : showNsfw // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      page: freezed == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as int?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$ListCommunitiesImpl(
+        type:
+            freezed == type
+                ? _value.type
+                : type // ignore: cast_nullable_to_non_nullable
+                    as ListingType?,
+        sort:
+            freezed == sort
+                ? _value.sort
+                : sort // ignore: cast_nullable_to_non_nullable
+                    as SortType?,
+        showNsfw:
+            freezed == showNsfw
+                ? _value.showNsfw
+                : showNsfw // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        page:
+            freezed == page
+                ? _value.page
+                : page // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -639,21 +708,21 @@ class __$$ListCommunitiesImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$ListCommunitiesImpl extends _ListCommunities {
-  const _$ListCommunitiesImpl(
-      {@JsonKey(name: 'type_') this.type,
-      this.sort,
-      this.showNsfw,
-      this.page,
-      this.limit,
-      this.auth})
-      : super._();
+  const _$ListCommunitiesImpl({
+    @JsonKey(name: 'type_') this.type,
+    this.sort,
+    this.showNsfw,
+    this.page,
+    this.limit,
+    this.auth,
+  }) : super._();
 
   factory _$ListCommunitiesImpl.fromJson(Map<String, dynamic> json) =>
       _$$ListCommunitiesImplFromJson(json);
 
   @override
   @JsonKey(name: 'type_')
-  final PostListingType? type;
+  final ListingType? type;
   @override
   final SortType? sort;
   @override
@@ -696,24 +765,25 @@ class _$ListCommunitiesImpl extends _ListCommunities {
   @pragma('vm:prefer-inline')
   _$$ListCommunitiesImplCopyWith<_$ListCommunitiesImpl> get copyWith =>
       __$$ListCommunitiesImplCopyWithImpl<_$ListCommunitiesImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ListCommunitiesImplToJson(
-      this,
-    );
+    return _$$ListCommunitiesImplToJson(this);
   }
 }
 
 abstract class _ListCommunities extends ListCommunities {
-  const factory _ListCommunities(
-      {@JsonKey(name: 'type_') final PostListingType? type,
-      final SortType? sort,
-      final bool? showNsfw,
-      final int? page,
-      final int? limit,
-      final String? auth}) = _$ListCommunitiesImpl;
+  const factory _ListCommunities({
+    @JsonKey(name: 'type_') final ListingType? type,
+    final SortType? sort,
+    final bool? showNsfw,
+    final int? page,
+    final int? limit,
+    final String? auth,
+  }) = _$ListCommunitiesImpl;
   const _ListCommunities._() : super._();
 
   factory _ListCommunities.fromJson(Map<String, dynamic> json) =
@@ -721,7 +791,7 @@ abstract class _ListCommunities extends ListCommunities {
 
   @override
   @JsonKey(name: 'type_')
-  PostListingType? get type;
+  ListingType? get type;
   @override
   SortType? get sort;
   @override
@@ -768,17 +838,19 @@ mixin _$BanFromCommunity {
 /// @nodoc
 abstract class $BanFromCommunityCopyWith<$Res> {
   factory $BanFromCommunityCopyWith(
-          BanFromCommunity value, $Res Function(BanFromCommunity) then) =
-      _$BanFromCommunityCopyWithImpl<$Res, BanFromCommunity>;
+    BanFromCommunity value,
+    $Res Function(BanFromCommunity) then,
+  ) = _$BanFromCommunityCopyWithImpl<$Res, BanFromCommunity>;
   @useResult
-  $Res call(
-      {int communityId,
-      int personId,
-      bool ban,
-      bool? removeData,
-      String? reason,
-      int? expires,
-      String auth});
+  $Res call({
+    int communityId,
+    int personId,
+    bool ban,
+    bool? removeData,
+    String? reason,
+    int? expires,
+    String auth,
+  });
 }
 
 /// @nodoc
@@ -804,64 +876,77 @@ class _$BanFromCommunityCopyWithImpl<$Res, $Val extends BanFromCommunity>
     Object? expires = freezed,
     Object? auth = null,
   }) {
-    return _then(_value.copyWith(
-      communityId: null == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int,
-      personId: null == personId
-          ? _value.personId
-          : personId // ignore: cast_nullable_to_non_nullable
-              as int,
-      ban: null == ban
-          ? _value.ban
-          : ban // ignore: cast_nullable_to_non_nullable
-              as bool,
-      removeData: freezed == removeData
-          ? _value.removeData
-          : removeData // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      reason: freezed == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String?,
-      expires: freezed == expires
-          ? _value.expires
-          : expires // ignore: cast_nullable_to_non_nullable
-              as int?,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            communityId:
+                null == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            personId:
+                null == personId
+                    ? _value.personId
+                    : personId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            ban:
+                null == ban
+                    ? _value.ban
+                    : ban // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            removeData:
+                freezed == removeData
+                    ? _value.removeData
+                    : removeData // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            reason:
+                freezed == reason
+                    ? _value.reason
+                    : reason // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            expires:
+                freezed == expires
+                    ? _value.expires
+                    : expires // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$BanFromCommunityImplCopyWith<$Res>
     implements $BanFromCommunityCopyWith<$Res> {
-  factory _$$BanFromCommunityImplCopyWith(_$BanFromCommunityImpl value,
-          $Res Function(_$BanFromCommunityImpl) then) =
-      __$$BanFromCommunityImplCopyWithImpl<$Res>;
+  factory _$$BanFromCommunityImplCopyWith(
+    _$BanFromCommunityImpl value,
+    $Res Function(_$BanFromCommunityImpl) then,
+  ) = __$$BanFromCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int communityId,
-      int personId,
-      bool ban,
-      bool? removeData,
-      String? reason,
-      int? expires,
-      String auth});
+  $Res call({
+    int communityId,
+    int personId,
+    bool ban,
+    bool? removeData,
+    String? reason,
+    int? expires,
+    String auth,
+  });
 }
 
 /// @nodoc
 class __$$BanFromCommunityImplCopyWithImpl<$Res>
     extends _$BanFromCommunityCopyWithImpl<$Res, _$BanFromCommunityImpl>
     implements _$$BanFromCommunityImplCopyWith<$Res> {
-  __$$BanFromCommunityImplCopyWithImpl(_$BanFromCommunityImpl _value,
-      $Res Function(_$BanFromCommunityImpl) _then)
-      : super(_value, _then);
+  __$$BanFromCommunityImplCopyWithImpl(
+    _$BanFromCommunityImpl _value,
+    $Res Function(_$BanFromCommunityImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of BanFromCommunity
   /// with the given fields replaced by the non-null parameter values.
@@ -876,36 +961,45 @@ class __$$BanFromCommunityImplCopyWithImpl<$Res>
     Object? expires = freezed,
     Object? auth = null,
   }) {
-    return _then(_$BanFromCommunityImpl(
-      communityId: null == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int,
-      personId: null == personId
-          ? _value.personId
-          : personId // ignore: cast_nullable_to_non_nullable
-              as int,
-      ban: null == ban
-          ? _value.ban
-          : ban // ignore: cast_nullable_to_non_nullable
-              as bool,
-      removeData: freezed == removeData
-          ? _value.removeData
-          : removeData // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      reason: freezed == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String?,
-      expires: freezed == expires
-          ? _value.expires
-          : expires // ignore: cast_nullable_to_non_nullable
-              as int?,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$BanFromCommunityImpl(
+        communityId:
+            null == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        personId:
+            null == personId
+                ? _value.personId
+                : personId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        ban:
+            null == ban
+                ? _value.ban
+                : ban // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        removeData:
+            freezed == removeData
+                ? _value.removeData
+                : removeData // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        reason:
+            freezed == reason
+                ? _value.reason
+                : reason // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        expires:
+            freezed == expires
+                ? _value.expires
+                : expires // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -913,15 +1007,15 @@ class __$$BanFromCommunityImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$BanFromCommunityImpl extends _BanFromCommunity {
-  const _$BanFromCommunityImpl(
-      {required this.communityId,
-      required this.personId,
-      required this.ban,
-      this.removeData,
-      this.reason,
-      this.expires,
-      required this.auth})
-      : super._();
+  const _$BanFromCommunityImpl({
+    required this.communityId,
+    required this.personId,
+    required this.ban,
+    this.removeData,
+    this.reason,
+    this.expires,
+    required this.auth,
+  }) : super._();
 
   factory _$BanFromCommunityImpl.fromJson(Map<String, dynamic> json) =>
       _$$BanFromCommunityImplFromJson(json);
@@ -965,8 +1059,16 @@ class _$BanFromCommunityImpl extends _BanFromCommunity {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, communityId, personId, ban,
-      removeData, reason, expires, auth);
+  int get hashCode => Object.hash(
+    runtimeType,
+    communityId,
+    personId,
+    ban,
+    removeData,
+    reason,
+    expires,
+    auth,
+  );
 
   /// Create a copy of BanFromCommunity
   /// with the given fields replaced by the non-null parameter values.
@@ -975,25 +1077,26 @@ class _$BanFromCommunityImpl extends _BanFromCommunity {
   @pragma('vm:prefer-inline')
   _$$BanFromCommunityImplCopyWith<_$BanFromCommunityImpl> get copyWith =>
       __$$BanFromCommunityImplCopyWithImpl<_$BanFromCommunityImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$BanFromCommunityImplToJson(
-      this,
-    );
+    return _$$BanFromCommunityImplToJson(this);
   }
 }
 
 abstract class _BanFromCommunity extends BanFromCommunity {
-  const factory _BanFromCommunity(
-      {required final int communityId,
-      required final int personId,
-      required final bool ban,
-      final bool? removeData,
-      final String? reason,
-      final int? expires,
-      required final String auth}) = _$BanFromCommunityImpl;
+  const factory _BanFromCommunity({
+    required final int communityId,
+    required final int personId,
+    required final bool ban,
+    final bool? removeData,
+    final String? reason,
+    final int? expires,
+    required final String auth,
+  }) = _$BanFromCommunityImpl;
   const _BanFromCommunity._() : super._();
 
   factory _BanFromCommunity.fromJson(Map<String, dynamic> json) =
@@ -1046,8 +1149,9 @@ mixin _$AddModToCommunity {
 /// @nodoc
 abstract class $AddModToCommunityCopyWith<$Res> {
   factory $AddModToCommunityCopyWith(
-          AddModToCommunity value, $Res Function(AddModToCommunity) then) =
-      _$AddModToCommunityCopyWithImpl<$Res, AddModToCommunity>;
+    AddModToCommunity value,
+    $Res Function(AddModToCommunity) then,
+  ) = _$AddModToCommunityCopyWithImpl<$Res, AddModToCommunity>;
   @useResult
   $Res call({int communityId, int personId, bool added, String auth});
 }
@@ -1072,33 +1176,41 @@ class _$AddModToCommunityCopyWithImpl<$Res, $Val extends AddModToCommunity>
     Object? added = null,
     Object? auth = null,
   }) {
-    return _then(_value.copyWith(
-      communityId: null == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int,
-      personId: null == personId
-          ? _value.personId
-          : personId // ignore: cast_nullable_to_non_nullable
-              as int,
-      added: null == added
-          ? _value.added
-          : added // ignore: cast_nullable_to_non_nullable
-              as bool,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            communityId:
+                null == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            personId:
+                null == personId
+                    ? _value.personId
+                    : personId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            added:
+                null == added
+                    ? _value.added
+                    : added // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$AddModToCommunityImplCopyWith<$Res>
     implements $AddModToCommunityCopyWith<$Res> {
-  factory _$$AddModToCommunityImplCopyWith(_$AddModToCommunityImpl value,
-          $Res Function(_$AddModToCommunityImpl) then) =
-      __$$AddModToCommunityImplCopyWithImpl<$Res>;
+  factory _$$AddModToCommunityImplCopyWith(
+    _$AddModToCommunityImpl value,
+    $Res Function(_$AddModToCommunityImpl) then,
+  ) = __$$AddModToCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int communityId, int personId, bool added, String auth});
@@ -1108,9 +1220,10 @@ abstract class _$$AddModToCommunityImplCopyWith<$Res>
 class __$$AddModToCommunityImplCopyWithImpl<$Res>
     extends _$AddModToCommunityCopyWithImpl<$Res, _$AddModToCommunityImpl>
     implements _$$AddModToCommunityImplCopyWith<$Res> {
-  __$$AddModToCommunityImplCopyWithImpl(_$AddModToCommunityImpl _value,
-      $Res Function(_$AddModToCommunityImpl) _then)
-      : super(_value, _then);
+  __$$AddModToCommunityImplCopyWithImpl(
+    _$AddModToCommunityImpl _value,
+    $Res Function(_$AddModToCommunityImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of AddModToCommunity
   /// with the given fields replaced by the non-null parameter values.
@@ -1122,24 +1235,30 @@ class __$$AddModToCommunityImplCopyWithImpl<$Res>
     Object? added = null,
     Object? auth = null,
   }) {
-    return _then(_$AddModToCommunityImpl(
-      communityId: null == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int,
-      personId: null == personId
-          ? _value.personId
-          : personId // ignore: cast_nullable_to_non_nullable
-              as int,
-      added: null == added
-          ? _value.added
-          : added // ignore: cast_nullable_to_non_nullable
-              as bool,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$AddModToCommunityImpl(
+        communityId:
+            null == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        personId:
+            null == personId
+                ? _value.personId
+                : personId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        added:
+            null == added
+                ? _value.added
+                : added // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -1147,12 +1266,12 @@ class __$$AddModToCommunityImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$AddModToCommunityImpl extends _AddModToCommunity {
-  const _$AddModToCommunityImpl(
-      {required this.communityId,
-      required this.personId,
-      required this.added,
-      required this.auth})
-      : super._();
+  const _$AddModToCommunityImpl({
+    required this.communityId,
+    required this.personId,
+    required this.added,
+    required this.auth,
+  }) : super._();
 
   factory _$AddModToCommunityImpl.fromJson(Map<String, dynamic> json) =>
       _$$AddModToCommunityImplFromJson(json);
@@ -1196,22 +1315,23 @@ class _$AddModToCommunityImpl extends _AddModToCommunity {
   @pragma('vm:prefer-inline')
   _$$AddModToCommunityImplCopyWith<_$AddModToCommunityImpl> get copyWith =>
       __$$AddModToCommunityImplCopyWithImpl<_$AddModToCommunityImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AddModToCommunityImplToJson(
-      this,
-    );
+    return _$$AddModToCommunityImplToJson(this);
   }
 }
 
 abstract class _AddModToCommunity extends AddModToCommunity {
-  const factory _AddModToCommunity(
-      {required final int communityId,
-      required final int personId,
-      required final bool added,
-      required final String auth}) = _$AddModToCommunityImpl;
+  const factory _AddModToCommunity({
+    required final int communityId,
+    required final int personId,
+    required final bool added,
+    required final String auth,
+  }) = _$AddModToCommunityImpl;
   const _AddModToCommunity._() : super._();
 
   factory _AddModToCommunity.fromJson(Map<String, dynamic> json) =
@@ -1261,17 +1381,19 @@ mixin _$EditCommunity {
 /// @nodoc
 abstract class $EditCommunityCopyWith<$Res> {
   factory $EditCommunityCopyWith(
-          EditCommunity value, $Res Function(EditCommunity) then) =
-      _$EditCommunityCopyWithImpl<$Res, EditCommunity>;
+    EditCommunity value,
+    $Res Function(EditCommunity) then,
+  ) = _$EditCommunityCopyWithImpl<$Res, EditCommunity>;
   @useResult
-  $Res call(
-      {int communityId,
-      String? title,
-      String? description,
-      String? icon,
-      String? banner,
-      bool? nsfw,
-      String auth});
+  $Res call({
+    int communityId,
+    String? title,
+    String? description,
+    String? icon,
+    String? banner,
+    bool? nsfw,
+    String auth,
+  });
 }
 
 /// @nodoc
@@ -1297,36 +1419,46 @@ class _$EditCommunityCopyWithImpl<$Res, $Val extends EditCommunity>
     Object? nsfw = freezed,
     Object? auth = null,
   }) {
-    return _then(_value.copyWith(
-      communityId: null == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int,
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      icon: freezed == icon
-          ? _value.icon
-          : icon // ignore: cast_nullable_to_non_nullable
-              as String?,
-      banner: freezed == banner
-          ? _value.banner
-          : banner // ignore: cast_nullable_to_non_nullable
-              as String?,
-      nsfw: freezed == nsfw
-          ? _value.nsfw
-          : nsfw // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            communityId:
+                null == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            title:
+                freezed == title
+                    ? _value.title
+                    : title // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            description:
+                freezed == description
+                    ? _value.description
+                    : description // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            icon:
+                freezed == icon
+                    ? _value.icon
+                    : icon // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            banner:
+                freezed == banner
+                    ? _value.banner
+                    : banner // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            nsfw:
+                freezed == nsfw
+                    ? _value.nsfw
+                    : nsfw // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -1334,18 +1466,20 @@ class _$EditCommunityCopyWithImpl<$Res, $Val extends EditCommunity>
 abstract class _$$EditCommunityImplCopyWith<$Res>
     implements $EditCommunityCopyWith<$Res> {
   factory _$$EditCommunityImplCopyWith(
-          _$EditCommunityImpl value, $Res Function(_$EditCommunityImpl) then) =
-      __$$EditCommunityImplCopyWithImpl<$Res>;
+    _$EditCommunityImpl value,
+    $Res Function(_$EditCommunityImpl) then,
+  ) = __$$EditCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int communityId,
-      String? title,
-      String? description,
-      String? icon,
-      String? banner,
-      bool? nsfw,
-      String auth});
+  $Res call({
+    int communityId,
+    String? title,
+    String? description,
+    String? icon,
+    String? banner,
+    bool? nsfw,
+    String auth,
+  });
 }
 
 /// @nodoc
@@ -1353,8 +1487,9 @@ class __$$EditCommunityImplCopyWithImpl<$Res>
     extends _$EditCommunityCopyWithImpl<$Res, _$EditCommunityImpl>
     implements _$$EditCommunityImplCopyWith<$Res> {
   __$$EditCommunityImplCopyWithImpl(
-      _$EditCommunityImpl _value, $Res Function(_$EditCommunityImpl) _then)
-      : super(_value, _then);
+    _$EditCommunityImpl _value,
+    $Res Function(_$EditCommunityImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of EditCommunity
   /// with the given fields replaced by the non-null parameter values.
@@ -1369,36 +1504,45 @@ class __$$EditCommunityImplCopyWithImpl<$Res>
     Object? nsfw = freezed,
     Object? auth = null,
   }) {
-    return _then(_$EditCommunityImpl(
-      communityId: null == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int,
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      icon: freezed == icon
-          ? _value.icon
-          : icon // ignore: cast_nullable_to_non_nullable
-              as String?,
-      banner: freezed == banner
-          ? _value.banner
-          : banner // ignore: cast_nullable_to_non_nullable
-              as String?,
-      nsfw: freezed == nsfw
-          ? _value.nsfw
-          : nsfw // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$EditCommunityImpl(
+        communityId:
+            null == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        title:
+            freezed == title
+                ? _value.title
+                : title // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        description:
+            freezed == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        icon:
+            freezed == icon
+                ? _value.icon
+                : icon // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        banner:
+            freezed == banner
+                ? _value.banner
+                : banner // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        nsfw:
+            freezed == nsfw
+                ? _value.nsfw
+                : nsfw // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -1406,15 +1550,15 @@ class __$$EditCommunityImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$EditCommunityImpl extends _EditCommunity {
-  const _$EditCommunityImpl(
-      {required this.communityId,
-      this.title,
-      this.description,
-      this.icon,
-      this.banner,
-      this.nsfw,
-      required this.auth})
-      : super._();
+  const _$EditCommunityImpl({
+    required this.communityId,
+    this.title,
+    this.description,
+    this.icon,
+    this.banner,
+    this.nsfw,
+    required this.auth,
+  }) : super._();
 
   factory _$EditCommunityImpl.fromJson(Map<String, dynamic> json) =>
       _$$EditCommunityImplFromJson(json);
@@ -1458,7 +1602,15 @@ class _$EditCommunityImpl extends _EditCommunity {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType, communityId, title, description, icon, banner, nsfw, auth);
+    runtimeType,
+    communityId,
+    title,
+    description,
+    icon,
+    banner,
+    nsfw,
+    auth,
+  );
 
   /// Create a copy of EditCommunity
   /// with the given fields replaced by the non-null parameter values.
@@ -1470,21 +1622,20 @@ class _$EditCommunityImpl extends _EditCommunity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$EditCommunityImplToJson(
-      this,
-    );
+    return _$$EditCommunityImplToJson(this);
   }
 }
 
 abstract class _EditCommunity extends EditCommunity {
-  const factory _EditCommunity(
-      {required final int communityId,
-      final String? title,
-      final String? description,
-      final String? icon,
-      final String? banner,
-      final bool? nsfw,
-      required final String auth}) = _$EditCommunityImpl;
+  const factory _EditCommunity({
+    required final int communityId,
+    final String? title,
+    final String? description,
+    final String? icon,
+    final String? banner,
+    final bool? nsfw,
+    required final String auth,
+  }) = _$EditCommunityImpl;
   const _EditCommunity._() : super._();
 
   factory _EditCommunity.fromJson(Map<String, dynamic> json) =
@@ -1536,8 +1687,9 @@ mixin _$DeleteCommunity {
 /// @nodoc
 abstract class $DeleteCommunityCopyWith<$Res> {
   factory $DeleteCommunityCopyWith(
-          DeleteCommunity value, $Res Function(DeleteCommunity) then) =
-      _$DeleteCommunityCopyWithImpl<$Res, DeleteCommunity>;
+    DeleteCommunity value,
+    $Res Function(DeleteCommunity) then,
+  ) = _$DeleteCommunityCopyWithImpl<$Res, DeleteCommunity>;
   @useResult
   $Res call({int communityId, bool deleted, String auth});
 }
@@ -1561,29 +1713,36 @@ class _$DeleteCommunityCopyWithImpl<$Res, $Val extends DeleteCommunity>
     Object? deleted = null,
     Object? auth = null,
   }) {
-    return _then(_value.copyWith(
-      communityId: null == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int,
-      deleted: null == deleted
-          ? _value.deleted
-          : deleted // ignore: cast_nullable_to_non_nullable
-              as bool,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            communityId:
+                null == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            deleted:
+                null == deleted
+                    ? _value.deleted
+                    : deleted // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$DeleteCommunityImplCopyWith<$Res>
     implements $DeleteCommunityCopyWith<$Res> {
-  factory _$$DeleteCommunityImplCopyWith(_$DeleteCommunityImpl value,
-          $Res Function(_$DeleteCommunityImpl) then) =
-      __$$DeleteCommunityImplCopyWithImpl<$Res>;
+  factory _$$DeleteCommunityImplCopyWith(
+    _$DeleteCommunityImpl value,
+    $Res Function(_$DeleteCommunityImpl) then,
+  ) = __$$DeleteCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int communityId, bool deleted, String auth});
@@ -1594,8 +1753,9 @@ class __$$DeleteCommunityImplCopyWithImpl<$Res>
     extends _$DeleteCommunityCopyWithImpl<$Res, _$DeleteCommunityImpl>
     implements _$$DeleteCommunityImplCopyWith<$Res> {
   __$$DeleteCommunityImplCopyWithImpl(
-      _$DeleteCommunityImpl _value, $Res Function(_$DeleteCommunityImpl) _then)
-      : super(_value, _then);
+    _$DeleteCommunityImpl _value,
+    $Res Function(_$DeleteCommunityImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of DeleteCommunity
   /// with the given fields replaced by the non-null parameter values.
@@ -1606,20 +1766,25 @@ class __$$DeleteCommunityImplCopyWithImpl<$Res>
     Object? deleted = null,
     Object? auth = null,
   }) {
-    return _then(_$DeleteCommunityImpl(
-      communityId: null == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int,
-      deleted: null == deleted
-          ? _value.deleted
-          : deleted // ignore: cast_nullable_to_non_nullable
-              as bool,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$DeleteCommunityImpl(
+        communityId:
+            null == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        deleted:
+            null == deleted
+                ? _value.deleted
+                : deleted // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -1627,9 +1792,11 @@ class __$$DeleteCommunityImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$DeleteCommunityImpl extends _DeleteCommunity {
-  const _$DeleteCommunityImpl(
-      {required this.communityId, required this.deleted, required this.auth})
-      : super._();
+  const _$DeleteCommunityImpl({
+    required this.communityId,
+    required this.deleted,
+    required this.auth,
+  }) : super._();
 
   factory _$DeleteCommunityImpl.fromJson(Map<String, dynamic> json) =>
       _$$DeleteCommunityImplFromJson(json);
@@ -1668,21 +1835,22 @@ class _$DeleteCommunityImpl extends _DeleteCommunity {
   @pragma('vm:prefer-inline')
   _$$DeleteCommunityImplCopyWith<_$DeleteCommunityImpl> get copyWith =>
       __$$DeleteCommunityImplCopyWithImpl<_$DeleteCommunityImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DeleteCommunityImplToJson(
-      this,
-    );
+    return _$$DeleteCommunityImplToJson(this);
   }
 }
 
 abstract class _DeleteCommunity extends DeleteCommunity {
-  const factory _DeleteCommunity(
-      {required final int communityId,
-      required final bool deleted,
-      required final String auth}) = _$DeleteCommunityImpl;
+  const factory _DeleteCommunity({
+    required final int communityId,
+    required final bool deleted,
+    required final String auth,
+  }) = _$DeleteCommunityImpl;
   const _DeleteCommunity._() : super._();
 
   factory _DeleteCommunity.fromJson(Map<String, dynamic> json) =
@@ -1728,15 +1896,17 @@ mixin _$RemoveCommunity {
 /// @nodoc
 abstract class $RemoveCommunityCopyWith<$Res> {
   factory $RemoveCommunityCopyWith(
-          RemoveCommunity value, $Res Function(RemoveCommunity) then) =
-      _$RemoveCommunityCopyWithImpl<$Res, RemoveCommunity>;
+    RemoveCommunity value,
+    $Res Function(RemoveCommunity) then,
+  ) = _$RemoveCommunityCopyWithImpl<$Res, RemoveCommunity>;
   @useResult
-  $Res call(
-      {int communityId,
-      bool removed,
-      String? reason,
-      int? expires,
-      String auth});
+  $Res call({
+    int communityId,
+    bool removed,
+    String? reason,
+    int? expires,
+    String auth,
+  });
 }
 
 /// @nodoc
@@ -1760,45 +1930,55 @@ class _$RemoveCommunityCopyWithImpl<$Res, $Val extends RemoveCommunity>
     Object? expires = freezed,
     Object? auth = null,
   }) {
-    return _then(_value.copyWith(
-      communityId: null == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int,
-      removed: null == removed
-          ? _value.removed
-          : removed // ignore: cast_nullable_to_non_nullable
-              as bool,
-      reason: freezed == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String?,
-      expires: freezed == expires
-          ? _value.expires
-          : expires // ignore: cast_nullable_to_non_nullable
-              as int?,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            communityId:
+                null == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            removed:
+                null == removed
+                    ? _value.removed
+                    : removed // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            reason:
+                freezed == reason
+                    ? _value.reason
+                    : reason // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            expires:
+                freezed == expires
+                    ? _value.expires
+                    : expires // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$RemoveCommunityImplCopyWith<$Res>
     implements $RemoveCommunityCopyWith<$Res> {
-  factory _$$RemoveCommunityImplCopyWith(_$RemoveCommunityImpl value,
-          $Res Function(_$RemoveCommunityImpl) then) =
-      __$$RemoveCommunityImplCopyWithImpl<$Res>;
+  factory _$$RemoveCommunityImplCopyWith(
+    _$RemoveCommunityImpl value,
+    $Res Function(_$RemoveCommunityImpl) then,
+  ) = __$$RemoveCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int communityId,
-      bool removed,
-      String? reason,
-      int? expires,
-      String auth});
+  $Res call({
+    int communityId,
+    bool removed,
+    String? reason,
+    int? expires,
+    String auth,
+  });
 }
 
 /// @nodoc
@@ -1806,8 +1986,9 @@ class __$$RemoveCommunityImplCopyWithImpl<$Res>
     extends _$RemoveCommunityCopyWithImpl<$Res, _$RemoveCommunityImpl>
     implements _$$RemoveCommunityImplCopyWith<$Res> {
   __$$RemoveCommunityImplCopyWithImpl(
-      _$RemoveCommunityImpl _value, $Res Function(_$RemoveCommunityImpl) _then)
-      : super(_value, _then);
+    _$RemoveCommunityImpl _value,
+    $Res Function(_$RemoveCommunityImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of RemoveCommunity
   /// with the given fields replaced by the non-null parameter values.
@@ -1820,28 +2001,35 @@ class __$$RemoveCommunityImplCopyWithImpl<$Res>
     Object? expires = freezed,
     Object? auth = null,
   }) {
-    return _then(_$RemoveCommunityImpl(
-      communityId: null == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int,
-      removed: null == removed
-          ? _value.removed
-          : removed // ignore: cast_nullable_to_non_nullable
-              as bool,
-      reason: freezed == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String?,
-      expires: freezed == expires
-          ? _value.expires
-          : expires // ignore: cast_nullable_to_non_nullable
-              as int?,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$RemoveCommunityImpl(
+        communityId:
+            null == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        removed:
+            null == removed
+                ? _value.removed
+                : removed // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        reason:
+            freezed == reason
+                ? _value.reason
+                : reason // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        expires:
+            freezed == expires
+                ? _value.expires
+                : expires // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -1849,13 +2037,13 @@ class __$$RemoveCommunityImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$RemoveCommunityImpl extends _RemoveCommunity {
-  const _$RemoveCommunityImpl(
-      {required this.communityId,
-      required this.removed,
-      this.reason,
-      this.expires,
-      required this.auth})
-      : super._();
+  const _$RemoveCommunityImpl({
+    required this.communityId,
+    required this.removed,
+    this.reason,
+    this.expires,
+    required this.auth,
+  }) : super._();
 
   factory _$RemoveCommunityImpl.fromJson(Map<String, dynamic> json) =>
       _$$RemoveCommunityImplFromJson(json);
@@ -1901,23 +2089,24 @@ class _$RemoveCommunityImpl extends _RemoveCommunity {
   @pragma('vm:prefer-inline')
   _$$RemoveCommunityImplCopyWith<_$RemoveCommunityImpl> get copyWith =>
       __$$RemoveCommunityImplCopyWithImpl<_$RemoveCommunityImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RemoveCommunityImplToJson(
-      this,
-    );
+    return _$$RemoveCommunityImplToJson(this);
   }
 }
 
 abstract class _RemoveCommunity extends RemoveCommunity {
-  const factory _RemoveCommunity(
-      {required final int communityId,
-      required final bool removed,
-      final String? reason,
-      final int? expires,
-      required final String auth}) = _$RemoveCommunityImpl;
+  const factory _RemoveCommunity({
+    required final int communityId,
+    required final bool removed,
+    final String? reason,
+    final int? expires,
+    required final String auth,
+  }) = _$RemoveCommunityImpl;
   const _RemoveCommunity._() : super._();
 
   factory _RemoveCommunity.fromJson(Map<String, dynamic> json) =
@@ -1965,8 +2154,9 @@ mixin _$FollowCommunity {
 /// @nodoc
 abstract class $FollowCommunityCopyWith<$Res> {
   factory $FollowCommunityCopyWith(
-          FollowCommunity value, $Res Function(FollowCommunity) then) =
-      _$FollowCommunityCopyWithImpl<$Res, FollowCommunity>;
+    FollowCommunity value,
+    $Res Function(FollowCommunity) then,
+  ) = _$FollowCommunityCopyWithImpl<$Res, FollowCommunity>;
   @useResult
   $Res call({int communityId, bool follow, String auth});
 }
@@ -1990,29 +2180,36 @@ class _$FollowCommunityCopyWithImpl<$Res, $Val extends FollowCommunity>
     Object? follow = null,
     Object? auth = null,
   }) {
-    return _then(_value.copyWith(
-      communityId: null == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int,
-      follow: null == follow
-          ? _value.follow
-          : follow // ignore: cast_nullable_to_non_nullable
-              as bool,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            communityId:
+                null == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            follow:
+                null == follow
+                    ? _value.follow
+                    : follow // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$FollowCommunityImplCopyWith<$Res>
     implements $FollowCommunityCopyWith<$Res> {
-  factory _$$FollowCommunityImplCopyWith(_$FollowCommunityImpl value,
-          $Res Function(_$FollowCommunityImpl) then) =
-      __$$FollowCommunityImplCopyWithImpl<$Res>;
+  factory _$$FollowCommunityImplCopyWith(
+    _$FollowCommunityImpl value,
+    $Res Function(_$FollowCommunityImpl) then,
+  ) = __$$FollowCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int communityId, bool follow, String auth});
@@ -2023,8 +2220,9 @@ class __$$FollowCommunityImplCopyWithImpl<$Res>
     extends _$FollowCommunityCopyWithImpl<$Res, _$FollowCommunityImpl>
     implements _$$FollowCommunityImplCopyWith<$Res> {
   __$$FollowCommunityImplCopyWithImpl(
-      _$FollowCommunityImpl _value, $Res Function(_$FollowCommunityImpl) _then)
-      : super(_value, _then);
+    _$FollowCommunityImpl _value,
+    $Res Function(_$FollowCommunityImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of FollowCommunity
   /// with the given fields replaced by the non-null parameter values.
@@ -2035,20 +2233,25 @@ class __$$FollowCommunityImplCopyWithImpl<$Res>
     Object? follow = null,
     Object? auth = null,
   }) {
-    return _then(_$FollowCommunityImpl(
-      communityId: null == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int,
-      follow: null == follow
-          ? _value.follow
-          : follow // ignore: cast_nullable_to_non_nullable
-              as bool,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$FollowCommunityImpl(
+        communityId:
+            null == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        follow:
+            null == follow
+                ? _value.follow
+                : follow // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -2056,9 +2259,11 @@ class __$$FollowCommunityImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$FollowCommunityImpl extends _FollowCommunity {
-  const _$FollowCommunityImpl(
-      {required this.communityId, required this.follow, required this.auth})
-      : super._();
+  const _$FollowCommunityImpl({
+    required this.communityId,
+    required this.follow,
+    required this.auth,
+  }) : super._();
 
   factory _$FollowCommunityImpl.fromJson(Map<String, dynamic> json) =>
       _$$FollowCommunityImplFromJson(json);
@@ -2097,21 +2302,22 @@ class _$FollowCommunityImpl extends _FollowCommunity {
   @pragma('vm:prefer-inline')
   _$$FollowCommunityImplCopyWith<_$FollowCommunityImpl> get copyWith =>
       __$$FollowCommunityImplCopyWithImpl<_$FollowCommunityImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FollowCommunityImplToJson(
-      this,
-    );
+    return _$$FollowCommunityImplToJson(this);
   }
 }
 
 abstract class _FollowCommunity extends FollowCommunity {
-  const factory _FollowCommunity(
-      {required final int communityId,
-      required final bool follow,
-      required final String auth}) = _$FollowCommunityImpl;
+  const factory _FollowCommunity({
+    required final int communityId,
+    required final bool follow,
+    required final String auth,
+  }) = _$FollowCommunityImpl;
   const _FollowCommunity._() : super._();
 
   factory _FollowCommunity.fromJson(Map<String, dynamic> json) =
@@ -2155,8 +2361,9 @@ mixin _$TransferCommunity {
 /// @nodoc
 abstract class $TransferCommunityCopyWith<$Res> {
   factory $TransferCommunityCopyWith(
-          TransferCommunity value, $Res Function(TransferCommunity) then) =
-      _$TransferCommunityCopyWithImpl<$Res, TransferCommunity>;
+    TransferCommunity value,
+    $Res Function(TransferCommunity) then,
+  ) = _$TransferCommunityCopyWithImpl<$Res, TransferCommunity>;
   @useResult
   $Res call({int communityId, int personId, String auth});
 }
@@ -2180,29 +2387,36 @@ class _$TransferCommunityCopyWithImpl<$Res, $Val extends TransferCommunity>
     Object? personId = null,
     Object? auth = null,
   }) {
-    return _then(_value.copyWith(
-      communityId: null == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int,
-      personId: null == personId
-          ? _value.personId
-          : personId // ignore: cast_nullable_to_non_nullable
-              as int,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            communityId:
+                null == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            personId:
+                null == personId
+                    ? _value.personId
+                    : personId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$TransferCommunityImplCopyWith<$Res>
     implements $TransferCommunityCopyWith<$Res> {
-  factory _$$TransferCommunityImplCopyWith(_$TransferCommunityImpl value,
-          $Res Function(_$TransferCommunityImpl) then) =
-      __$$TransferCommunityImplCopyWithImpl<$Res>;
+  factory _$$TransferCommunityImplCopyWith(
+    _$TransferCommunityImpl value,
+    $Res Function(_$TransferCommunityImpl) then,
+  ) = __$$TransferCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int communityId, int personId, String auth});
@@ -2212,9 +2426,10 @@ abstract class _$$TransferCommunityImplCopyWith<$Res>
 class __$$TransferCommunityImplCopyWithImpl<$Res>
     extends _$TransferCommunityCopyWithImpl<$Res, _$TransferCommunityImpl>
     implements _$$TransferCommunityImplCopyWith<$Res> {
-  __$$TransferCommunityImplCopyWithImpl(_$TransferCommunityImpl _value,
-      $Res Function(_$TransferCommunityImpl) _then)
-      : super(_value, _then);
+  __$$TransferCommunityImplCopyWithImpl(
+    _$TransferCommunityImpl _value,
+    $Res Function(_$TransferCommunityImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of TransferCommunity
   /// with the given fields replaced by the non-null parameter values.
@@ -2225,20 +2440,25 @@ class __$$TransferCommunityImplCopyWithImpl<$Res>
     Object? personId = null,
     Object? auth = null,
   }) {
-    return _then(_$TransferCommunityImpl(
-      communityId: null == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int,
-      personId: null == personId
-          ? _value.personId
-          : personId // ignore: cast_nullable_to_non_nullable
-              as int,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$TransferCommunityImpl(
+        communityId:
+            null == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        personId:
+            null == personId
+                ? _value.personId
+                : personId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -2246,9 +2466,11 @@ class __$$TransferCommunityImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$TransferCommunityImpl extends _TransferCommunity {
-  const _$TransferCommunityImpl(
-      {required this.communityId, required this.personId, required this.auth})
-      : super._();
+  const _$TransferCommunityImpl({
+    required this.communityId,
+    required this.personId,
+    required this.auth,
+  }) : super._();
 
   factory _$TransferCommunityImpl.fromJson(Map<String, dynamic> json) =>
       _$$TransferCommunityImplFromJson(json);
@@ -2288,21 +2510,22 @@ class _$TransferCommunityImpl extends _TransferCommunity {
   @pragma('vm:prefer-inline')
   _$$TransferCommunityImplCopyWith<_$TransferCommunityImpl> get copyWith =>
       __$$TransferCommunityImplCopyWithImpl<_$TransferCommunityImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$TransferCommunityImplToJson(
-      this,
-    );
+    return _$$TransferCommunityImplToJson(this);
   }
 }
 
 abstract class _TransferCommunity extends TransferCommunity {
-  const factory _TransferCommunity(
-      {required final int communityId,
-      required final int personId,
-      required final String auth}) = _$TransferCommunityImpl;
+  const factory _TransferCommunity({
+    required final int communityId,
+    required final int personId,
+    required final String auth,
+  }) = _$TransferCommunityImpl;
   const _TransferCommunity._() : super._();
 
   factory _TransferCommunity.fromJson(Map<String, dynamic> json) =
@@ -2346,8 +2569,9 @@ mixin _$BlockCommunity {
 /// @nodoc
 abstract class $BlockCommunityCopyWith<$Res> {
   factory $BlockCommunityCopyWith(
-          BlockCommunity value, $Res Function(BlockCommunity) then) =
-      _$BlockCommunityCopyWithImpl<$Res, BlockCommunity>;
+    BlockCommunity value,
+    $Res Function(BlockCommunity) then,
+  ) = _$BlockCommunityCopyWithImpl<$Res, BlockCommunity>;
   @useResult
   $Res call({int communityId, bool block, String auth});
 }
@@ -2371,29 +2595,36 @@ class _$BlockCommunityCopyWithImpl<$Res, $Val extends BlockCommunity>
     Object? block = null,
     Object? auth = null,
   }) {
-    return _then(_value.copyWith(
-      communityId: null == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int,
-      block: null == block
-          ? _value.block
-          : block // ignore: cast_nullable_to_non_nullable
-              as bool,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            communityId:
+                null == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            block:
+                null == block
+                    ? _value.block
+                    : block // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$BlockCommunityImplCopyWith<$Res>
     implements $BlockCommunityCopyWith<$Res> {
-  factory _$$BlockCommunityImplCopyWith(_$BlockCommunityImpl value,
-          $Res Function(_$BlockCommunityImpl) then) =
-      __$$BlockCommunityImplCopyWithImpl<$Res>;
+  factory _$$BlockCommunityImplCopyWith(
+    _$BlockCommunityImpl value,
+    $Res Function(_$BlockCommunityImpl) then,
+  ) = __$$BlockCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int communityId, bool block, String auth});
@@ -2404,8 +2635,9 @@ class __$$BlockCommunityImplCopyWithImpl<$Res>
     extends _$BlockCommunityCopyWithImpl<$Res, _$BlockCommunityImpl>
     implements _$$BlockCommunityImplCopyWith<$Res> {
   __$$BlockCommunityImplCopyWithImpl(
-      _$BlockCommunityImpl _value, $Res Function(_$BlockCommunityImpl) _then)
-      : super(_value, _then);
+    _$BlockCommunityImpl _value,
+    $Res Function(_$BlockCommunityImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of BlockCommunity
   /// with the given fields replaced by the non-null parameter values.
@@ -2416,20 +2648,25 @@ class __$$BlockCommunityImplCopyWithImpl<$Res>
     Object? block = null,
     Object? auth = null,
   }) {
-    return _then(_$BlockCommunityImpl(
-      communityId: null == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int,
-      block: null == block
-          ? _value.block
-          : block // ignore: cast_nullable_to_non_nullable
-              as bool,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$BlockCommunityImpl(
+        communityId:
+            null == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        block:
+            null == block
+                ? _value.block
+                : block // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -2437,9 +2674,11 @@ class __$$BlockCommunityImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$BlockCommunityImpl extends _BlockCommunity {
-  const _$BlockCommunityImpl(
-      {required this.communityId, required this.block, required this.auth})
-      : super._();
+  const _$BlockCommunityImpl({
+    required this.communityId,
+    required this.block,
+    required this.auth,
+  }) : super._();
 
   factory _$BlockCommunityImpl.fromJson(Map<String, dynamic> json) =>
       _$$BlockCommunityImplFromJson(json);
@@ -2478,21 +2717,22 @@ class _$BlockCommunityImpl extends _BlockCommunity {
   @pragma('vm:prefer-inline')
   _$$BlockCommunityImplCopyWith<_$BlockCommunityImpl> get copyWith =>
       __$$BlockCommunityImplCopyWithImpl<_$BlockCommunityImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$BlockCommunityImplToJson(
-      this,
-    );
+    return _$$BlockCommunityImplToJson(this);
   }
 }
 
 abstract class _BlockCommunity extends BlockCommunity {
-  const factory _BlockCommunity(
-      {required final int communityId,
-      required final bool block,
-      required final String auth}) = _$BlockCommunityImpl;
+  const factory _BlockCommunity({
+    required final int communityId,
+    required final bool block,
+    required final String auth,
+  }) = _$BlockCommunityImpl;
   const _BlockCommunity._() : super._();
 
   factory _BlockCommunity.fromJson(Map<String, dynamic> json) =

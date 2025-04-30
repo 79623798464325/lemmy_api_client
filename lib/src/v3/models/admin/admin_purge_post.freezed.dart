@@ -12,7 +12,8 @@ part of 'admin_purge_post.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 AdminPurgePost _$AdminPurgePostFromJson(Map<String, dynamic> json) {
   return _AdminPurgePost.fromJson(json);
@@ -40,15 +41,17 @@ mixin _$AdminPurgePost {
 /// @nodoc
 abstract class $AdminPurgePostCopyWith<$Res> {
   factory $AdminPurgePostCopyWith(
-          AdminPurgePost value, $Res Function(AdminPurgePost) then) =
-      _$AdminPurgePostCopyWithImpl<$Res, AdminPurgePost>;
+    AdminPurgePost value,
+    $Res Function(AdminPurgePost) then,
+  ) = _$AdminPurgePostCopyWithImpl<$Res, AdminPurgePost>;
   @useResult
-  $Res call(
-      {int id,
-      int adminPersonId,
-      int communityId,
-      String? reason,
-      @JsonKey(name: 'when_') String when});
+  $Res call({
+    int id,
+    int adminPersonId,
+    int communityId,
+    String? reason,
+    @JsonKey(name: 'when_') String when,
+  });
 }
 
 /// @nodoc
@@ -72,45 +75,55 @@ class _$AdminPurgePostCopyWithImpl<$Res, $Val extends AdminPurgePost>
     Object? reason = freezed,
     Object? when = null,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      adminPersonId: null == adminPersonId
-          ? _value.adminPersonId
-          : adminPersonId // ignore: cast_nullable_to_non_nullable
-              as int,
-      communityId: null == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int,
-      reason: freezed == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String?,
-      when: null == when
-          ? _value.when
-          : when // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as int,
+            adminPersonId:
+                null == adminPersonId
+                    ? _value.adminPersonId
+                    : adminPersonId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            communityId:
+                null == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            reason:
+                freezed == reason
+                    ? _value.reason
+                    : reason // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            when:
+                null == when
+                    ? _value.when
+                    : when // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$AdminPurgePostImplCopyWith<$Res>
     implements $AdminPurgePostCopyWith<$Res> {
-  factory _$$AdminPurgePostImplCopyWith(_$AdminPurgePostImpl value,
-          $Res Function(_$AdminPurgePostImpl) then) =
-      __$$AdminPurgePostImplCopyWithImpl<$Res>;
+  factory _$$AdminPurgePostImplCopyWith(
+    _$AdminPurgePostImpl value,
+    $Res Function(_$AdminPurgePostImpl) then,
+  ) = __$$AdminPurgePostImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int id,
-      int adminPersonId,
-      int communityId,
-      String? reason,
-      @JsonKey(name: 'when_') String when});
+  $Res call({
+    int id,
+    int adminPersonId,
+    int communityId,
+    String? reason,
+    @JsonKey(name: 'when_') String when,
+  });
 }
 
 /// @nodoc
@@ -118,8 +131,9 @@ class __$$AdminPurgePostImplCopyWithImpl<$Res>
     extends _$AdminPurgePostCopyWithImpl<$Res, _$AdminPurgePostImpl>
     implements _$$AdminPurgePostImplCopyWith<$Res> {
   __$$AdminPurgePostImplCopyWithImpl(
-      _$AdminPurgePostImpl _value, $Res Function(_$AdminPurgePostImpl) _then)
-      : super(_value, _then);
+    _$AdminPurgePostImpl _value,
+    $Res Function(_$AdminPurgePostImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of AdminPurgePost
   /// with the given fields replaced by the non-null parameter values.
@@ -132,28 +146,35 @@ class __$$AdminPurgePostImplCopyWithImpl<$Res>
     Object? reason = freezed,
     Object? when = null,
   }) {
-    return _then(_$AdminPurgePostImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      adminPersonId: null == adminPersonId
-          ? _value.adminPersonId
-          : adminPersonId // ignore: cast_nullable_to_non_nullable
-              as int,
-      communityId: null == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int,
-      reason: freezed == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String?,
-      when: null == when
-          ? _value.when
-          : when // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$AdminPurgePostImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as int,
+        adminPersonId:
+            null == adminPersonId
+                ? _value.adminPersonId
+                : adminPersonId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        communityId:
+            null == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        reason:
+            freezed == reason
+                ? _value.reason
+                : reason // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        when:
+            null == when
+                ? _value.when
+                : when // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -161,29 +182,29 @@ class __$$AdminPurgePostImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$AdminPurgePostImpl extends _AdminPurgePost {
-  const _$AdminPurgePostImpl(
-      {required this.id,
-      required this.adminPersonId,
-      required this.communityId,
-      this.reason,
-      @JsonKey(name: 'when_') required this.when})
-      : super._();
+  const _$AdminPurgePostImpl({
+    required this.id,
+    required this.adminPersonId,
+    required this.communityId,
+    this.reason,
+    @JsonKey(name: 'when_') required this.when,
+  }) : super._();
 
   factory _$AdminPurgePostImpl.fromJson(Map<String, dynamic> json) =>
       _$$AdminPurgePostImplFromJson(json);
 
   @override
   final int id;
-// v0.18.0
+  // v0.18.0
   @override
   final int adminPersonId;
-// v0.18.0
+  // v0.18.0
   @override
   final int communityId;
-// v0.18.0
+  // v0.18.0
   @override
   final String? reason;
-// v0.18.0
+  // v0.18.0
   @override
   @JsonKey(name: 'when_')
   final String when;
@@ -219,24 +240,24 @@ class _$AdminPurgePostImpl extends _AdminPurgePost {
   @pragma('vm:prefer-inline')
   _$$AdminPurgePostImplCopyWith<_$AdminPurgePostImpl> get copyWith =>
       __$$AdminPurgePostImplCopyWithImpl<_$AdminPurgePostImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AdminPurgePostImplToJson(
-      this,
-    );
+    return _$$AdminPurgePostImplToJson(this);
   }
 }
 
 abstract class _AdminPurgePost extends AdminPurgePost {
-  const factory _AdminPurgePost(
-          {required final int id,
-          required final int adminPersonId,
-          required final int communityId,
-          final String? reason,
-          @JsonKey(name: 'when_') required final String when}) =
-      _$AdminPurgePostImpl;
+  const factory _AdminPurgePost({
+    required final int id,
+    required final int adminPersonId,
+    required final int communityId,
+    final String? reason,
+    @JsonKey(name: 'when_') required final String when,
+  }) = _$AdminPurgePostImpl;
   const _AdminPurgePost._() : super._();
 
   factory _AdminPurgePost.fromJson(Map<String, dynamic> json) =

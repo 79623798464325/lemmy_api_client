@@ -1,4 +1,4 @@
-import 'package:lemmy_api_client2/src/v3/api/comment.dart';
+import 'package:lemmy_api_client2/src/v3/api/comment/comment.dart';
 import 'package:lemmy_api_client2/v3.dart';
 import 'package:test/test.dart';
 
@@ -10,38 +10,11 @@ void main() {
       group('CreateComment', () {});
 
       group('EditComment', () {
-        test(
-          'correctly edits',
-          () => run(
-            EditComment(
-              content: 'content',
-              commentId: goodMyCommentId,
-              auth: goodAuth,
-            ),
-          ),
-        );
+        test('correctly edits', () => run(EditComment(content: 'content', commentId: goodMyCommentId, auth: goodAuth)));
 
-        test(
-          'bad auth',
-          () => lemmyThrows(
-            const EditComment(
-              content: 'content',
-              commentId: goodMyCommentId,
-              auth: badAuth,
-            ),
-          ),
-        );
+        test('bad auth', () => lemmyThrows(const EditComment(content: 'content', commentId: goodMyCommentId, auth: badAuth)));
 
-        test(
-          'not my comment',
-          () => lemmyThrows(
-            EditComment(
-              content: 'content',
-              commentId: badMyCommentId,
-              auth: goodAuth,
-            ),
-          ),
-        );
+        test('not my comment', () => lemmyThrows(EditComment(content: 'content', commentId: badMyCommentId, auth: goodAuth)));
       });
 
       group('DeleteComment', () {});
@@ -51,62 +24,17 @@ void main() {
       group('MarkCommentAsRead', () {});
 
       group('SaveComment', () {
-        test(
-          'correctly saves',
-          () => run(
-            SaveComment(
-              commentId: goodCommentId,
-              save: true,
-              auth: goodAuth,
-            ),
-          ),
-        );
+        test('correctly saves', () => run(SaveComment(commentId: goodCommentId, save: true, auth: goodAuth)));
 
-        test(
-          'bad auth',
-          () => lemmyThrows(
-            const SaveComment(
-              commentId: goodCommentId,
-              save: true,
-              auth: badAuth,
-            ),
-          ),
-        );
+        test('bad auth', () => lemmyThrows(const SaveComment(commentId: goodCommentId, save: true, auth: badAuth)));
 
-        test(
-          'bad commentId',
-          () => lemmyThrows(
-            SaveComment(
-              commentId: badCommentId,
-              save: true,
-              auth: goodAuth,
-            ),
-          ),
-        );
+        test('bad commentId', () => lemmyThrows(SaveComment(commentId: badCommentId, save: true, auth: goodAuth)));
       });
 
       group('CreateCommentLike', () {
-        test(
-          'correctly likes',
-          () => run(
-            CreateCommentLike(
-              commentId: goodCommentId,
-              score: VoteType.up,
-              auth: goodAuth,
-            ),
-          ),
-        );
+        test('correctly likes', () => run(CreateCommentLike(commentId: goodCommentId, score: 1, auth: goodAuth)));
 
-        test(
-          'bad auth',
-          () => lemmyThrows(
-            const CreateCommentLike(
-              commentId: goodCommentId,
-              score: VoteType.up,
-              auth: badAuth,
-            ),
-          ),
-        );
+        test('bad auth', () => lemmyThrows(const CreateCommentLike(commentId: goodCommentId, score: 1, auth: badAuth)));
 
         // test(
         //   'bad commentId',
@@ -119,18 +47,7 @@ void main() {
       });
 
       group('GetComments', () {
-        test(
-          'correctly fetches',
-          () => run(
-            GetComments(
-              type: CommentListingType.all,
-              sort: CommentSortType.hot,
-              communityName: goodCommunityName,
-              savedOnly: false,
-              auth: goodAuth,
-            ),
-          ),
-        );
+        test('correctly fetches', () => run(GetComments(type: ListingType.all, sort: CommentSortType.hot, communityName: goodCommunityName, savedOnly: false, auth: goodAuth)));
 
         // test(
         //   'bad community id',
@@ -150,83 +67,25 @@ void main() {
         //   )),
         // );
 
-        test(
-          'bad token',
-          () => lemmyThrows(
-            const GetComments(
-              type: CommentListingType.all,
-              sort: CommentSortType.hot,
-              savedOnly: false,
-              auth: badAuth,
-            ),
-          ),
-        );
+        test('bad token', () => lemmyThrows(const GetComments(type: ListingType.all, sort: CommentSortType.hot, savedOnly: false, auth: badAuth)));
       });
 
       group('CreateCommentReport', () {
-        test(
-          'bad auth',
-          () => lemmyThrows(
-            const CreateCommentReport(
-              commentId: badCommentId,
-              reason: '',
-              auth: badAuth,
-            ),
-          ),
-        );
+        test('bad auth', () => lemmyThrows(const CreateCommentReport(commentId: badCommentId, reason: '', auth: badAuth)));
 
-        test(
-          'bad commentId',
-          () => lemmyThrows(
-            CreateCommentReport(
-              commentId: badCommentId,
-              reason: '',
-              auth: goodAuth,
-            ),
-          ),
-        );
+        test('bad commentId', () => lemmyThrows(CreateCommentReport(commentId: badCommentId, reason: '', auth: goodAuth)));
       });
 
       group('ResolveCommentReport', () {
-        test(
-          'bad auth',
-          () => lemmyThrows(
-            const ResolveCommentReport(
-              reportId: 0,
-              resolved: true,
-              auth: badAuth,
-            ),
-          ),
-        );
+        test('bad auth', () => lemmyThrows(const ResolveCommentReport(reportId: 0, resolved: true, auth: badAuth)));
       });
 
       group('ListCommentReports', () {
-        test(
-          'correctly fetches',
-          () => run(
-            ListCommentReports(
-              communityId: goodCommunityId,
-              auth: goodAuth,
-            ),
-          ),
-        );
+        test('correctly fetches', () => run(ListCommentReports(communityId: goodCommunityId, auth: goodAuth)));
 
-        test(
-          'bad auth',
-          () => lemmyThrows(
-            const ListCommentReports(auth: badAuth),
-          ),
-        );
+        test('bad auth', () => lemmyThrows(const ListCommentReports(auth: badAuth)));
 
-        test(
-          'bad communityId',
-          () => lemmyThrows(
-            const ListCommentReports(
-              communityId: badCommunityId,
-              auth: badAuth,
-            ),
-          ),
-        );
+        test('bad communityId', () => lemmyThrows(const ListCommentReports(communityId: badCommunityId, auth: badAuth)));
       });
     });
   });

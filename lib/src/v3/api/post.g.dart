@@ -46,17 +46,14 @@ Map<String, dynamic> _$$CreatePostImplToJson(_$CreatePostImpl instance) =>
 
 _$GetPostsImpl _$$GetPostsImplFromJson(Map<String, dynamic> json) =>
     _$GetPostsImpl(
-      type: json['type_'] == null
-          ? null
-          : PostListingType.fromJson(json['type_'] as String),
-      sort: json['sort'] == null
-          ? null
-          : SortType.fromJson(json['sort'] as String),
+      type: json['type_'] == null ? null : ListingType.fromJson(json['type_']),
+      sort: json['sort'] == null ? null : SortType.fromJson(json['sort']),
       page: (json['page'] as num?)?.toInt(),
       limit: (json['limit'] as num?)?.toInt(),
       communityId: (json['community_id'] as num?)?.toInt(),
       communityName: json['community_name'] as String?,
       savedOnly: json['saved_only'] as bool?,
+      moderatorView: json['moderator_view'] as bool?,
       auth: json['auth'] as String?,
       likedOnly: json['liked_only'] as bool?,
       dislikedOnly: json['disliked_only'] as bool?,
@@ -75,6 +72,7 @@ Map<String, dynamic> _$$GetPostsImplToJson(_$GetPostsImpl instance) =>
       if (instance.communityId case final value?) 'community_id': value,
       if (instance.communityName case final value?) 'community_name': value,
       if (instance.savedOnly case final value?) 'saved_only': value,
+      if (instance.moderatorView case final value?) 'moderator_view': value,
       if (instance.auth case final value?) 'auth': value,
       if (instance.likedOnly case final value?) 'liked_only': value,
       if (instance.dislikedOnly case final value?) 'disliked_only': value,
@@ -87,17 +85,17 @@ Map<String, dynamic> _$$GetPostsImplToJson(_$GetPostsImpl instance) =>
 _$CreatePostLikeImpl _$$CreatePostLikeImplFromJson(Map<String, dynamic> json) =>
     _$CreatePostLikeImpl(
       postId: (json['post_id'] as num).toInt(),
-      score: VoteType.fromJson((json['score'] as num).toInt()),
+      score: json['score'] as num,
       auth: json['auth'] as String,
     );
 
 Map<String, dynamic> _$$CreatePostLikeImplToJson(
-        _$CreatePostLikeImpl instance) =>
-    <String, dynamic>{
-      'post_id': instance.postId,
-      'score': instance.score.toJson(),
-      'auth': instance.auth,
-    };
+  _$CreatePostLikeImpl instance,
+) => <String, dynamic>{
+  'post_id': instance.postId,
+  'score': instance.score,
+  'auth': instance.auth,
+};
 
 _$EditPostImpl _$$EditPostImplFromJson(Map<String, dynamic> json) =>
     _$EditPostImpl(
@@ -196,93 +194,91 @@ Map<String, dynamic> _$$SavePostImplToJson(_$SavePostImpl instance) =>
     };
 
 _$GetSiteMetadataImpl _$$GetSiteMetadataImplFromJson(
-        Map<String, dynamic> json) =>
-    _$GetSiteMetadataImpl(
-      url: json['url'] as String,
-    );
+  Map<String, dynamic> json,
+) => _$GetSiteMetadataImpl(url: json['url'] as String);
 
 Map<String, dynamic> _$$GetSiteMetadataImplToJson(
-        _$GetSiteMetadataImpl instance) =>
-    <String, dynamic>{
-      'url': instance.url,
-    };
+  _$GetSiteMetadataImpl instance,
+) => <String, dynamic>{'url': instance.url};
 
 _$CreatePostReportImpl _$$CreatePostReportImplFromJson(
-        Map<String, dynamic> json) =>
-    _$CreatePostReportImpl(
-      postId: (json['post_id'] as num).toInt(),
-      reason: json['reason'] as String,
-      auth: json['auth'] as String,
-    );
+  Map<String, dynamic> json,
+) => _$CreatePostReportImpl(
+  postId: (json['post_id'] as num).toInt(),
+  reason: json['reason'] as String,
+  auth: json['auth'] as String,
+);
 
 Map<String, dynamic> _$$CreatePostReportImplToJson(
-        _$CreatePostReportImpl instance) =>
-    <String, dynamic>{
-      'post_id': instance.postId,
-      'reason': instance.reason,
-      'auth': instance.auth,
-    };
+  _$CreatePostReportImpl instance,
+) => <String, dynamic>{
+  'post_id': instance.postId,
+  'reason': instance.reason,
+  'auth': instance.auth,
+};
 
 _$ResolvePostReportImpl _$$ResolvePostReportImplFromJson(
-        Map<String, dynamic> json) =>
-    _$ResolvePostReportImpl(
-      reportId: (json['report_id'] as num).toInt(),
-      resolved: json['resolved'] as bool,
-      auth: json['auth'] as String,
-    );
+  Map<String, dynamic> json,
+) => _$ResolvePostReportImpl(
+  reportId: (json['report_id'] as num).toInt(),
+  resolved: json['resolved'] as bool,
+  auth: json['auth'] as String,
+);
 
 Map<String, dynamic> _$$ResolvePostReportImplToJson(
-        _$ResolvePostReportImpl instance) =>
-    <String, dynamic>{
-      'report_id': instance.reportId,
-      'resolved': instance.resolved,
-      'auth': instance.auth,
-    };
+  _$ResolvePostReportImpl instance,
+) => <String, dynamic>{
+  'report_id': instance.reportId,
+  'resolved': instance.resolved,
+  'auth': instance.auth,
+};
 
 _$ListPostReportsImpl _$$ListPostReportsImplFromJson(
-        Map<String, dynamic> json) =>
-    _$ListPostReportsImpl(
-      page: (json['page'] as num?)?.toInt(),
-      limit: (json['limit'] as num?)?.toInt(),
-      communityId: (json['community_id'] as num?)?.toInt(),
-      unresolvedOnly: json['unresolved_only'] as bool?,
-      auth: json['auth'] as String,
-    );
+  Map<String, dynamic> json,
+) => _$ListPostReportsImpl(
+  page: (json['page'] as num?)?.toInt(),
+  limit: (json['limit'] as num?)?.toInt(),
+  communityId: (json['community_id'] as num?)?.toInt(),
+  unresolvedOnly: json['unresolved_only'] as bool?,
+  auth: json['auth'] as String,
+);
 
 Map<String, dynamic> _$$ListPostReportsImplToJson(
-        _$ListPostReportsImpl instance) =>
-    <String, dynamic>{
-      if (instance.page case final value?) 'page': value,
-      if (instance.limit case final value?) 'limit': value,
-      if (instance.communityId case final value?) 'community_id': value,
-      if (instance.unresolvedOnly case final value?) 'unresolved_only': value,
-      'auth': instance.auth,
-    };
+  _$ListPostReportsImpl instance,
+) => <String, dynamic>{
+  if (instance.page case final value?) 'page': value,
+  if (instance.limit case final value?) 'limit': value,
+  if (instance.communityId case final value?) 'community_id': value,
+  if (instance.unresolvedOnly case final value?) 'unresolved_only': value,
+  'auth': instance.auth,
+};
 
 _$MarkPostAsReadImpl _$$MarkPostAsReadImplFromJson(Map<String, dynamic> json) =>
     _$MarkPostAsReadImpl(
-      postId: (json['post_id'] as num).toInt(),
-      postIds: (json['post_ids'] as List<dynamic>?)
-          ?.map((e) => (e as num).toInt())
-          .toList(),
+      postId: (json['post_id'] as num?)?.toInt(),
+      postIds:
+          (json['post_ids'] as List<dynamic>?)
+              ?.map((e) => (e as num).toInt())
+              .toList(),
       read: json['read'] as bool,
-      auth: json['auth'] as String,
+      auth: json['auth'] as String?,
     );
 
 Map<String, dynamic> _$$MarkPostAsReadImplToJson(
-        _$MarkPostAsReadImpl instance) =>
-    <String, dynamic>{
-      'post_id': instance.postId,
-      if (instance.postIds case final value?) 'post_ids': value,
-      'read': instance.read,
-      'auth': instance.auth,
-    };
+  _$MarkPostAsReadImpl instance,
+) => <String, dynamic>{
+  if (instance.postId case final value?) 'post_id': value,
+  if (instance.postIds case final value?) 'post_ids': value,
+  'read': instance.read,
+  if (instance.auth case final value?) 'auth': value,
+};
 
 _$HidePostImpl _$$HidePostImplFromJson(Map<String, dynamic> json) =>
     _$HidePostImpl(
-      postIds: (json['post_ids'] as List<dynamic>)
-          .map((e) => (e as num).toInt())
-          .toList(),
+      postIds:
+          (json['post_ids'] as List<dynamic>)
+              .map((e) => (e as num).toInt())
+              .toList(),
       hide: json['hide'] as bool,
       auth: json['auth'] as String?,
     );

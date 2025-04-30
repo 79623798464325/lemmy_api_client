@@ -12,10 +12,7 @@ void main() {
       group('Register', () {});
 
       group('GetCaptcha', () {
-        test(
-          'correctly fetches',
-          () => run(const GetCaptcha()),
-        );
+        test('correctly fetches', () => run(const GetCaptcha()));
       });
 
       group('SaveUserSettings', () {
@@ -26,7 +23,7 @@ void main() {
               showNsfw: true,
               theme: 'browser',
               defaultSortType: SortType.active,
-              defaultListingType: PostListingType.all,
+              defaultListingType: ListingType.all,
               interfaceLanguage: 'browser',
               showAvatars: true,
               sendNotificationsToEmail: true,
@@ -42,7 +39,7 @@ void main() {
               showNsfw: true,
               theme: 'browser',
               defaultSortType: SortType.active,
-              defaultListingType: PostListingType.all,
+              defaultListingType: ListingType.all,
               interfaceLanguage: 'browser',
               showAvatars: true,
               sendNotificationsToEmail: true,
@@ -53,43 +50,13 @@ void main() {
       });
 
       group('ChangePassword', () {
-        test(
-          'bad auth',
-          () => lemmyThrows(
-            const ChangePassword(
-              newPassword: '',
-              newPasswordVerify: '',
-              oldPassword: '',
-              auth: badAuth,
-            ),
-          ),
-        );
+        test('bad auth', () => lemmyThrows(const ChangePassword(newPassword: '', newPasswordVerify: '', oldPassword: '', auth: badAuth)));
       });
 
       group('GetPersonDetails', () {
-        test(
-          'correctly fetches',
-          () => run(
-            GetPersonDetails(
-              savedOnly: false,
-              sort: SortType.active,
-              username: goodUsername,
-              auth: goodAuth,
-            ),
-          ),
-        );
+        test('correctly fetches', () => run(GetPersonDetails(savedOnly: false, sort: SortType.active, username: goodUsername, auth: goodAuth)));
 
-        test(
-          'bad auth',
-          () => lemmyThrows(
-            const GetPersonDetails(
-              savedOnly: false,
-              sort: SortType.active,
-              username: goodUsername,
-              auth: badAuth,
-            ),
-          ),
-        );
+        test('bad auth', () => lemmyThrows(const GetPersonDetails(savedOnly: false, sort: SortType.active, username: goodUsername, auth: badAuth)));
 
         // test(
         //   'no person passed',
@@ -99,17 +66,7 @@ void main() {
         //   )),
         // );
 
-        test(
-          'bad username',
-          () => lemmyThrows(
-            GetPersonDetails(
-              savedOnly: false,
-              sort: SortType.active,
-              username: badUsername,
-              auth: goodAuth,
-            ),
-          ),
-        );
+        test('bad username', () => lemmyThrows(GetPersonDetails(savedOnly: false, sort: SortType.active, username: badUsername, auth: goodAuth)));
 
         // test(
         //   'bad personId',
@@ -123,15 +80,9 @@ void main() {
       });
 
       group('MarkAllAsRead', () {
-        test(
-          'correctly fetches',
-          () => run(MarkAllAsRead(auth: goodAuth)),
-        );
+        test('correctly fetches', () => run(MarkAllAsRead(auth: goodAuth)));
 
-        test(
-          'bad auth',
-          () => lemmyThrows(const MarkAllAsRead(auth: badAuth)),
-        );
+        test('bad auth', () => lemmyThrows(const MarkAllAsRead(auth: badAuth)));
       });
 
       group('AddAdmin', () {});
@@ -139,51 +90,15 @@ void main() {
       group('BanPerson', () {});
 
       group('GetReplies', () {
-        test(
-          'correctly fetches',
-          () => run(
-            GetReplies(
-              sort: CommentSortType.hot,
-              unreadOnly: true,
-              auth: goodAuth,
-            ),
-          ),
-        );
+        test('correctly fetches', () => run(GetReplies(sort: CommentSortType.hot, unreadOnly: true, auth: goodAuth)));
 
-        test(
-          'bad auth',
-          () => lemmyThrows(
-            const GetReplies(
-              sort: CommentSortType.hot,
-              unreadOnly: true,
-              auth: badAuth,
-            ),
-          ),
-        );
+        test('bad auth', () => lemmyThrows(const GetReplies(sort: CommentSortType.hot, unreadOnly: true, auth: badAuth)));
       });
 
       group('GetPersonMentions', () {
-        test(
-          'correctly fetches',
-          () => run(
-            GetPersonMentions(
-              sort: CommentSortType.hot,
-              unreadOnly: true,
-              auth: goodAuth,
-            ),
-          ),
-        );
+        test('correctly fetches', () => run(GetPersonMentions(sort: CommentSortType.hot, unreadOnly: true, auth: goodAuth)));
 
-        test(
-          'bad auth',
-          () => lemmyThrows(
-            const GetPersonMentions(
-              sort: CommentSortType.hot,
-              unreadOnly: true,
-              auth: badAuth,
-            ),
-          ),
-        );
+        test('bad auth', () => lemmyThrows(const GetPersonMentions(sort: CommentSortType.hot, unreadOnly: true, auth: badAuth)));
       });
 
       group('MarkPersonMentionAsRead', () {});
@@ -203,84 +118,25 @@ void main() {
       group('MarkPrivateMessageAsRead', () {});
 
       group('GetPrivateMessages', () {
-        test(
-          'correctly fetches',
-          () => run(
-            GetPrivateMessages(
-              unreadOnly: true,
-              auth: goodAuth,
-            ),
-          ),
-        );
+        test('correctly fetches', () => run(GetPrivateMessages(unreadOnly: true, auth: goodAuth)));
 
-        test(
-          'bad auth',
-          () => lemmyThrows(
-            const GetPrivateMessages(
-              unreadOnly: true,
-              auth: badAuth,
-            ),
-          ),
-        );
+        test('bad auth', () => lemmyThrows(const GetPrivateMessages(unreadOnly: true, auth: badAuth)));
       });
 
       group('GetReportCount', () {
-        test(
-          'correctly fetches',
-          () => run(
-            GetReportCount(
-              communityId: goodCommunityId,
-              auth: goodAuth,
-            ),
-          ),
-        );
-        test(
-          'bad auth',
-          () => lemmyThrows(
-            const GetReportCount(
-              auth: badAuth,
-            ),
-          ),
-        );
+        test('correctly fetches', () => run(GetReportCount(communityId: goodCommunityId, auth: goodAuth)));
+        test('bad auth', () => lemmyThrows(const GetReportCount(auth: badAuth)));
       });
 
       group('GetUnreadCount', () {
-        test(
-          'correctly fetches',
-          () => run(
-            GetUnreadCount(auth: goodAuth),
-          ),
-        );
+        test('correctly fetches', () => run(GetUnreadCount(auth: goodAuth)));
 
-        test(
-          'bad auth',
-          () => lemmyThrows(
-            const GetUnreadCount(auth: badAuth),
-          ),
-        );
+        test('bad auth', () => lemmyThrows(const GetUnreadCount(auth: badAuth)));
       });
 
       group('BlockPerson', () {
-        test(
-          'correctly fetches',
-          () => run(
-            BlockPerson(
-              personId: goodPersonId,
-              block: false,
-              auth: goodAuth,
-            ),
-          ),
-        );
-        test(
-          'bad auth',
-          () => lemmyThrows(
-            const BlockPerson(
-              personId: goodPersonId,
-              block: false,
-              auth: badAuth,
-            ),
-          ),
-        );
+        test('correctly fetches', () => run(BlockPerson(personId: goodPersonId, block: false, auth: goodAuth)));
+        test('bad auth', () => lemmyThrows(const BlockPerson(personId: goodPersonId, block: false, auth: badAuth)));
         // test(
         //   'bad person id',
         //   () => lemmyThrows(BlockPerson(
@@ -292,21 +148,11 @@ void main() {
       });
 
       group('GetBannedPersons', () {
-        test(
-          'bad auth',
-          () => lemmyThrows(
-            const GetBannedPersons(auth: badAuth),
-          ),
-        );
+        test('bad auth', () => lemmyThrows(const GetBannedPersons(auth: badAuth)));
       });
 
       group('VerifyEmail', () {
-        test(
-          'bad token',
-          () => lemmyThrows(
-            const VerifyEmail(token: ''),
-          ),
-        );
+        test('bad token', () => lemmyThrows(const VerifyEmail(token: '')));
       });
     });
   });

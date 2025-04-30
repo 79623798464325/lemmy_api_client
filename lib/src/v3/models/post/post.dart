@@ -1,6 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-
-import '../../../utils/serde.dart';
+import 'package:lemmy_api_client2/src/utils/utils.dart';
 
 part 'post.freezed.dart';
 part 'post.g.dart';

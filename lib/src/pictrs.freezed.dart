@@ -12,7 +12,8 @@ part of 'pictrs.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 PictrsUploadFile _$PictrsUploadFileFromJson(Map<String, dynamic> json) {
   return _PictrsUploadFile.fromJson(json);
@@ -36,8 +37,9 @@ mixin _$PictrsUploadFile {
 /// @nodoc
 abstract class $PictrsUploadFileCopyWith<$Res> {
   factory $PictrsUploadFileCopyWith(
-          PictrsUploadFile value, $Res Function(PictrsUploadFile) then) =
-      _$PictrsUploadFileCopyWithImpl<$Res, PictrsUploadFile>;
+    PictrsUploadFile value,
+    $Res Function(PictrsUploadFile) then,
+  ) = _$PictrsUploadFileCopyWithImpl<$Res, PictrsUploadFile>;
   @useResult
   $Res call({String deleteToken, String file});
 }
@@ -56,29 +58,32 @@ class _$PictrsUploadFileCopyWithImpl<$Res, $Val extends PictrsUploadFile>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? deleteToken = null,
-    Object? file = null,
-  }) {
-    return _then(_value.copyWith(
-      deleteToken: null == deleteToken
-          ? _value.deleteToken
-          : deleteToken // ignore: cast_nullable_to_non_nullable
-              as String,
-      file: null == file
-          ? _value.file
-          : file // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? deleteToken = null, Object? file = null}) {
+    return _then(
+      _value.copyWith(
+            deleteToken:
+                null == deleteToken
+                    ? _value.deleteToken
+                    : deleteToken // ignore: cast_nullable_to_non_nullable
+                        as String,
+            file:
+                null == file
+                    ? _value.file
+                    : file // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$PictrsUploadFileImplCopyWith<$Res>
     implements $PictrsUploadFileCopyWith<$Res> {
-  factory _$$PictrsUploadFileImplCopyWith(_$PictrsUploadFileImpl value,
-          $Res Function(_$PictrsUploadFileImpl) then) =
-      __$$PictrsUploadFileImplCopyWithImpl<$Res>;
+  factory _$$PictrsUploadFileImplCopyWith(
+    _$PictrsUploadFileImpl value,
+    $Res Function(_$PictrsUploadFileImpl) then,
+  ) = __$$PictrsUploadFileImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String deleteToken, String file});
@@ -88,28 +93,30 @@ abstract class _$$PictrsUploadFileImplCopyWith<$Res>
 class __$$PictrsUploadFileImplCopyWithImpl<$Res>
     extends _$PictrsUploadFileCopyWithImpl<$Res, _$PictrsUploadFileImpl>
     implements _$$PictrsUploadFileImplCopyWith<$Res> {
-  __$$PictrsUploadFileImplCopyWithImpl(_$PictrsUploadFileImpl _value,
-      $Res Function(_$PictrsUploadFileImpl) _then)
-      : super(_value, _then);
+  __$$PictrsUploadFileImplCopyWithImpl(
+    _$PictrsUploadFileImpl _value,
+    $Res Function(_$PictrsUploadFileImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of PictrsUploadFile
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? deleteToken = null,
-    Object? file = null,
-  }) {
-    return _then(_$PictrsUploadFileImpl(
-      deleteToken: null == deleteToken
-          ? _value.deleteToken
-          : deleteToken // ignore: cast_nullable_to_non_nullable
-              as String,
-      file: null == file
-          ? _value.file
-          : file // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? deleteToken = null, Object? file = null}) {
+    return _then(
+      _$PictrsUploadFileImpl(
+        deleteToken:
+            null == deleteToken
+                ? _value.deleteToken
+                : deleteToken // ignore: cast_nullable_to_non_nullable
+                    as String,
+        file:
+            null == file
+                ? _value.file
+                : file // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -118,7 +125,7 @@ class __$$PictrsUploadFileImplCopyWithImpl<$Res>
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$PictrsUploadFileImpl extends _PictrsUploadFile {
   const _$PictrsUploadFileImpl({required this.deleteToken, required this.file})
-      : super._();
+    : super._();
 
   factory _$PictrsUploadFileImpl.fromJson(Map<String, dynamic> json) =>
       _$$PictrsUploadFileImplFromJson(json);
@@ -154,20 +161,21 @@ class _$PictrsUploadFileImpl extends _PictrsUploadFile {
   @pragma('vm:prefer-inline')
   _$$PictrsUploadFileImplCopyWith<_$PictrsUploadFileImpl> get copyWith =>
       __$$PictrsUploadFileImplCopyWithImpl<_$PictrsUploadFileImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PictrsUploadFileImplToJson(
-      this,
-    );
+    return _$$PictrsUploadFileImplToJson(this);
   }
 }
 
 abstract class _PictrsUploadFile extends PictrsUploadFile {
-  const factory _PictrsUploadFile(
-      {required final String deleteToken,
-      required final String file}) = _$PictrsUploadFileImpl;
+  const factory _PictrsUploadFile({
+    required final String deleteToken,
+    required final String file,
+  }) = _$PictrsUploadFileImpl;
   const _PictrsUploadFile._() : super._();
 
   factory _PictrsUploadFile.fromJson(Map<String, dynamic> json) =
@@ -209,8 +217,9 @@ mixin _$PictrsUpload {
 /// @nodoc
 abstract class $PictrsUploadCopyWith<$Res> {
   factory $PictrsUploadCopyWith(
-          PictrsUpload value, $Res Function(PictrsUpload) then) =
-      _$PictrsUploadCopyWithImpl<$Res, PictrsUpload>;
+    PictrsUpload value,
+    $Res Function(PictrsUpload) then,
+  ) = _$PictrsUploadCopyWithImpl<$Res, PictrsUpload>;
   @useResult
   $Res call({String msg, List<PictrsUploadFile> files, String instanceHost});
 }
@@ -234,20 +243,26 @@ class _$PictrsUploadCopyWithImpl<$Res, $Val extends PictrsUpload>
     Object? files = null,
     Object? instanceHost = null,
   }) {
-    return _then(_value.copyWith(
-      msg: null == msg
-          ? _value.msg
-          : msg // ignore: cast_nullable_to_non_nullable
-              as String,
-      files: null == files
-          ? _value.files
-          : files // ignore: cast_nullable_to_non_nullable
-              as List<PictrsUploadFile>,
-      instanceHost: null == instanceHost
-          ? _value.instanceHost
-          : instanceHost // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            msg:
+                null == msg
+                    ? _value.msg
+                    : msg // ignore: cast_nullable_to_non_nullable
+                        as String,
+            files:
+                null == files
+                    ? _value.files
+                    : files // ignore: cast_nullable_to_non_nullable
+                        as List<PictrsUploadFile>,
+            instanceHost:
+                null == instanceHost
+                    ? _value.instanceHost
+                    : instanceHost // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -255,8 +270,9 @@ class _$PictrsUploadCopyWithImpl<$Res, $Val extends PictrsUpload>
 abstract class _$$PictrsUploadImplCopyWith<$Res>
     implements $PictrsUploadCopyWith<$Res> {
   factory _$$PictrsUploadImplCopyWith(
-          _$PictrsUploadImpl value, $Res Function(_$PictrsUploadImpl) then) =
-      __$$PictrsUploadImplCopyWithImpl<$Res>;
+    _$PictrsUploadImpl value,
+    $Res Function(_$PictrsUploadImpl) then,
+  ) = __$$PictrsUploadImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String msg, List<PictrsUploadFile> files, String instanceHost});
@@ -267,8 +283,9 @@ class __$$PictrsUploadImplCopyWithImpl<$Res>
     extends _$PictrsUploadCopyWithImpl<$Res, _$PictrsUploadImpl>
     implements _$$PictrsUploadImplCopyWith<$Res> {
   __$$PictrsUploadImplCopyWithImpl(
-      _$PictrsUploadImpl _value, $Res Function(_$PictrsUploadImpl) _then)
-      : super(_value, _then);
+    _$PictrsUploadImpl _value,
+    $Res Function(_$PictrsUploadImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of PictrsUpload
   /// with the given fields replaced by the non-null parameter values.
@@ -279,20 +296,25 @@ class __$$PictrsUploadImplCopyWithImpl<$Res>
     Object? files = null,
     Object? instanceHost = null,
   }) {
-    return _then(_$PictrsUploadImpl(
-      msg: null == msg
-          ? _value.msg
-          : msg // ignore: cast_nullable_to_non_nullable
-              as String,
-      files: null == files
-          ? _value._files
-          : files // ignore: cast_nullable_to_non_nullable
-              as List<PictrsUploadFile>,
-      instanceHost: null == instanceHost
-          ? _value.instanceHost
-          : instanceHost // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$PictrsUploadImpl(
+        msg:
+            null == msg
+                ? _value.msg
+                : msg // ignore: cast_nullable_to_non_nullable
+                    as String,
+        files:
+            null == files
+                ? _value._files
+                : files // ignore: cast_nullable_to_non_nullable
+                    as List<PictrsUploadFile>,
+        instanceHost:
+            null == instanceHost
+                ? _value.instanceHost
+                : instanceHost // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -300,12 +322,12 @@ class __$$PictrsUploadImplCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$PictrsUploadImpl extends _PictrsUpload {
-  const _$PictrsUploadImpl(
-      {required this.msg,
-      required final List<PictrsUploadFile> files,
-      required this.instanceHost})
-      : _files = files,
-        super._();
+  const _$PictrsUploadImpl({
+    required this.msg,
+    required final List<PictrsUploadFile> files,
+    required this.instanceHost,
+  }) : _files = files,
+       super._();
 
   factory _$PictrsUploadImpl.fromJson(Map<String, dynamic> json) =>
       _$$PictrsUploadImplFromJson(json);
@@ -341,8 +363,12 @@ class _$PictrsUploadImpl extends _PictrsUpload {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, msg,
-      const DeepCollectionEquality().hash(_files), instanceHost);
+  int get hashCode => Object.hash(
+    runtimeType,
+    msg,
+    const DeepCollectionEquality().hash(_files),
+    instanceHost,
+  );
 
   /// Create a copy of PictrsUpload
   /// with the given fields replaced by the non-null parameter values.
@@ -354,17 +380,16 @@ class _$PictrsUploadImpl extends _PictrsUpload {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PictrsUploadImplToJson(
-      this,
-    );
+    return _$$PictrsUploadImplToJson(this);
   }
 }
 
 abstract class _PictrsUpload extends PictrsUpload {
-  const factory _PictrsUpload(
-      {required final String msg,
-      required final List<PictrsUploadFile> files,
-      required final String instanceHost}) = _$PictrsUploadImpl;
+  const factory _PictrsUpload({
+    required final String msg,
+    required final List<PictrsUploadFile> files,
+    required final String instanceHost,
+  }) = _$PictrsUploadImpl;
   const _PictrsUpload._() : super._();
 
   factory _PictrsUpload.fromJson(Map<String, dynamic> json) =

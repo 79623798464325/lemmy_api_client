@@ -12,7 +12,8 @@ part of 'admin_purge_community.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 AdminPurgeCommunity _$AdminPurgeCommunityFromJson(Map<String, dynamic> json) {
   return _AdminPurgeCommunity.fromJson(json);
@@ -39,14 +40,16 @@ mixin _$AdminPurgeCommunity {
 /// @nodoc
 abstract class $AdminPurgeCommunityCopyWith<$Res> {
   factory $AdminPurgeCommunityCopyWith(
-          AdminPurgeCommunity value, $Res Function(AdminPurgeCommunity) then) =
-      _$AdminPurgeCommunityCopyWithImpl<$Res, AdminPurgeCommunity>;
+    AdminPurgeCommunity value,
+    $Res Function(AdminPurgeCommunity) then,
+  ) = _$AdminPurgeCommunityCopyWithImpl<$Res, AdminPurgeCommunity>;
   @useResult
-  $Res call(
-      {int id,
-      int adminPersonId,
-      String? reason,
-      @JsonKey(name: 'when_') String when});
+  $Res call({
+    int id,
+    int adminPersonId,
+    String? reason,
+    @JsonKey(name: 'when_') String when,
+  });
 }
 
 /// @nodoc
@@ -69,49 +72,59 @@ class _$AdminPurgeCommunityCopyWithImpl<$Res, $Val extends AdminPurgeCommunity>
     Object? reason = freezed,
     Object? when = null,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      adminPersonId: null == adminPersonId
-          ? _value.adminPersonId
-          : adminPersonId // ignore: cast_nullable_to_non_nullable
-              as int,
-      reason: freezed == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String?,
-      when: null == when
-          ? _value.when
-          : when // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as int,
+            adminPersonId:
+                null == adminPersonId
+                    ? _value.adminPersonId
+                    : adminPersonId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            reason:
+                freezed == reason
+                    ? _value.reason
+                    : reason // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            when:
+                null == when
+                    ? _value.when
+                    : when // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$AdminPurgeCommunityImplCopyWith<$Res>
     implements $AdminPurgeCommunityCopyWith<$Res> {
-  factory _$$AdminPurgeCommunityImplCopyWith(_$AdminPurgeCommunityImpl value,
-          $Res Function(_$AdminPurgeCommunityImpl) then) =
-      __$$AdminPurgeCommunityImplCopyWithImpl<$Res>;
+  factory _$$AdminPurgeCommunityImplCopyWith(
+    _$AdminPurgeCommunityImpl value,
+    $Res Function(_$AdminPurgeCommunityImpl) then,
+  ) = __$$AdminPurgeCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int id,
-      int adminPersonId,
-      String? reason,
-      @JsonKey(name: 'when_') String when});
+  $Res call({
+    int id,
+    int adminPersonId,
+    String? reason,
+    @JsonKey(name: 'when_') String when,
+  });
 }
 
 /// @nodoc
 class __$$AdminPurgeCommunityImplCopyWithImpl<$Res>
     extends _$AdminPurgeCommunityCopyWithImpl<$Res, _$AdminPurgeCommunityImpl>
     implements _$$AdminPurgeCommunityImplCopyWith<$Res> {
-  __$$AdminPurgeCommunityImplCopyWithImpl(_$AdminPurgeCommunityImpl _value,
-      $Res Function(_$AdminPurgeCommunityImpl) _then)
-      : super(_value, _then);
+  __$$AdminPurgeCommunityImplCopyWithImpl(
+    _$AdminPurgeCommunityImpl _value,
+    $Res Function(_$AdminPurgeCommunityImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of AdminPurgeCommunity
   /// with the given fields replaced by the non-null parameter values.
@@ -123,24 +136,30 @@ class __$$AdminPurgeCommunityImplCopyWithImpl<$Res>
     Object? reason = freezed,
     Object? when = null,
   }) {
-    return _then(_$AdminPurgeCommunityImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      adminPersonId: null == adminPersonId
-          ? _value.adminPersonId
-          : adminPersonId // ignore: cast_nullable_to_non_nullable
-              as int,
-      reason: freezed == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String?,
-      when: null == when
-          ? _value.when
-          : when // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$AdminPurgeCommunityImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as int,
+        adminPersonId:
+            null == adminPersonId
+                ? _value.adminPersonId
+                : adminPersonId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        reason:
+            freezed == reason
+                ? _value.reason
+                : reason // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        when:
+            null == when
+                ? _value.when
+                : when // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -148,25 +167,25 @@ class __$$AdminPurgeCommunityImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$AdminPurgeCommunityImpl extends _AdminPurgeCommunity {
-  const _$AdminPurgeCommunityImpl(
-      {required this.id,
-      required this.adminPersonId,
-      this.reason,
-      @JsonKey(name: 'when_') required this.when})
-      : super._();
+  const _$AdminPurgeCommunityImpl({
+    required this.id,
+    required this.adminPersonId,
+    this.reason,
+    @JsonKey(name: 'when_') required this.when,
+  }) : super._();
 
   factory _$AdminPurgeCommunityImpl.fromJson(Map<String, dynamic> json) =>
       _$$AdminPurgeCommunityImplFromJson(json);
 
   @override
   final int id;
-// v0.18.0
+  // v0.18.0
   @override
   final int adminPersonId;
-// v0.18.0
+  // v0.18.0
   @override
   final String? reason;
-// v0.18.0
+  // v0.18.0
   @override
   @JsonKey(name: 'when_')
   final String when;
@@ -199,23 +218,23 @@ class _$AdminPurgeCommunityImpl extends _AdminPurgeCommunity {
   @pragma('vm:prefer-inline')
   _$$AdminPurgeCommunityImplCopyWith<_$AdminPurgeCommunityImpl> get copyWith =>
       __$$AdminPurgeCommunityImplCopyWithImpl<_$AdminPurgeCommunityImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AdminPurgeCommunityImplToJson(
-      this,
-    );
+    return _$$AdminPurgeCommunityImplToJson(this);
   }
 }
 
 abstract class _AdminPurgeCommunity extends AdminPurgeCommunity {
-  const factory _AdminPurgeCommunity(
-          {required final int id,
-          required final int adminPersonId,
-          final String? reason,
-          @JsonKey(name: 'when_') required final String when}) =
-      _$AdminPurgeCommunityImpl;
+  const factory _AdminPurgeCommunity({
+    required final int id,
+    required final int adminPersonId,
+    final String? reason,
+    @JsonKey(name: 'when_') required final String when,
+  }) = _$AdminPurgeCommunityImpl;
   const _AdminPurgeCommunity._() : super._();
 
   factory _AdminPurgeCommunity.fromJson(Map<String, dynamic> json) =

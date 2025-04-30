@@ -12,7 +12,8 @@ part of 'post.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 Post _$PostFromJson(Map<String, dynamic> json) {
   return _Post.fromJson(json);
@@ -60,32 +61,33 @@ abstract class $PostCopyWith<$Res> {
   factory $PostCopyWith(Post value, $Res Function(Post) then) =
       _$PostCopyWithImpl<$Res, Post>;
   @useResult
-  $Res call(
-      {int id,
-      String name,
-      String? url,
-      String? body,
-      int creatorId,
-      int communityId,
-      bool removed,
-      bool locked,
-      DateTime published,
-      DateTime? updated,
-      bool deleted,
-      bool nsfw,
-      bool? stickied,
-      String? embedTitle,
-      String? embedDescription,
-      String? embedVideoUrl,
-      String? thumbnailUrl,
-      String apId,
-      bool local,
-      int languageId,
-      bool featuredCommunity,
-      bool featuredLocal,
-      String instanceHost,
-      String? urlContentType,
-      String? altText});
+  $Res call({
+    int id,
+    String name,
+    String? url,
+    String? body,
+    int creatorId,
+    int communityId,
+    bool removed,
+    bool locked,
+    DateTime published,
+    DateTime? updated,
+    bool deleted,
+    bool nsfw,
+    bool? stickied,
+    String? embedTitle,
+    String? embedDescription,
+    String? embedVideoUrl,
+    String? thumbnailUrl,
+    String apId,
+    bool local,
+    int languageId,
+    bool featuredCommunity,
+    bool featuredLocal,
+    String instanceHost,
+    String? urlContentType,
+    String? altText,
+  });
 }
 
 /// @nodoc
@@ -129,144 +131,174 @@ class _$PostCopyWithImpl<$Res, $Val extends Post>
     Object? urlContentType = freezed,
     Object? altText = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-      body: freezed == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as String?,
-      creatorId: null == creatorId
-          ? _value.creatorId
-          : creatorId // ignore: cast_nullable_to_non_nullable
-              as int,
-      communityId: null == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int,
-      removed: null == removed
-          ? _value.removed
-          : removed // ignore: cast_nullable_to_non_nullable
-              as bool,
-      locked: null == locked
-          ? _value.locked
-          : locked // ignore: cast_nullable_to_non_nullable
-              as bool,
-      published: null == published
-          ? _value.published
-          : published // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updated: freezed == updated
-          ? _value.updated
-          : updated // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      deleted: null == deleted
-          ? _value.deleted
-          : deleted // ignore: cast_nullable_to_non_nullable
-              as bool,
-      nsfw: null == nsfw
-          ? _value.nsfw
-          : nsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
-      stickied: freezed == stickied
-          ? _value.stickied
-          : stickied // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      embedTitle: freezed == embedTitle
-          ? _value.embedTitle
-          : embedTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      embedDescription: freezed == embedDescription
-          ? _value.embedDescription
-          : embedDescription // ignore: cast_nullable_to_non_nullable
-              as String?,
-      embedVideoUrl: freezed == embedVideoUrl
-          ? _value.embedVideoUrl
-          : embedVideoUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnailUrl: freezed == thumbnailUrl
-          ? _value.thumbnailUrl
-          : thumbnailUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      apId: null == apId
-          ? _value.apId
-          : apId // ignore: cast_nullable_to_non_nullable
-              as String,
-      local: null == local
-          ? _value.local
-          : local // ignore: cast_nullable_to_non_nullable
-              as bool,
-      languageId: null == languageId
-          ? _value.languageId
-          : languageId // ignore: cast_nullable_to_non_nullable
-              as int,
-      featuredCommunity: null == featuredCommunity
-          ? _value.featuredCommunity
-          : featuredCommunity // ignore: cast_nullable_to_non_nullable
-              as bool,
-      featuredLocal: null == featuredLocal
-          ? _value.featuredLocal
-          : featuredLocal // ignore: cast_nullable_to_non_nullable
-              as bool,
-      instanceHost: null == instanceHost
-          ? _value.instanceHost
-          : instanceHost // ignore: cast_nullable_to_non_nullable
-              as String,
-      urlContentType: freezed == urlContentType
-          ? _value.urlContentType
-          : urlContentType // ignore: cast_nullable_to_non_nullable
-              as String?,
-      altText: freezed == altText
-          ? _value.altText
-          : altText // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as int,
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            url:
+                freezed == url
+                    ? _value.url
+                    : url // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            body:
+                freezed == body
+                    ? _value.body
+                    : body // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            creatorId:
+                null == creatorId
+                    ? _value.creatorId
+                    : creatorId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            communityId:
+                null == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            removed:
+                null == removed
+                    ? _value.removed
+                    : removed // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            locked:
+                null == locked
+                    ? _value.locked
+                    : locked // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            published:
+                null == published
+                    ? _value.published
+                    : published // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            updated:
+                freezed == updated
+                    ? _value.updated
+                    : updated // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            deleted:
+                null == deleted
+                    ? _value.deleted
+                    : deleted // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            nsfw:
+                null == nsfw
+                    ? _value.nsfw
+                    : nsfw // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            stickied:
+                freezed == stickied
+                    ? _value.stickied
+                    : stickied // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            embedTitle:
+                freezed == embedTitle
+                    ? _value.embedTitle
+                    : embedTitle // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            embedDescription:
+                freezed == embedDescription
+                    ? _value.embedDescription
+                    : embedDescription // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            embedVideoUrl:
+                freezed == embedVideoUrl
+                    ? _value.embedVideoUrl
+                    : embedVideoUrl // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            thumbnailUrl:
+                freezed == thumbnailUrl
+                    ? _value.thumbnailUrl
+                    : thumbnailUrl // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            apId:
+                null == apId
+                    ? _value.apId
+                    : apId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            local:
+                null == local
+                    ? _value.local
+                    : local // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            languageId:
+                null == languageId
+                    ? _value.languageId
+                    : languageId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            featuredCommunity:
+                null == featuredCommunity
+                    ? _value.featuredCommunity
+                    : featuredCommunity // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            featuredLocal:
+                null == featuredLocal
+                    ? _value.featuredLocal
+                    : featuredLocal // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            instanceHost:
+                null == instanceHost
+                    ? _value.instanceHost
+                    : instanceHost // ignore: cast_nullable_to_non_nullable
+                        as String,
+            urlContentType:
+                freezed == urlContentType
+                    ? _value.urlContentType
+                    : urlContentType // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            altText:
+                freezed == altText
+                    ? _value.altText
+                    : altText // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$PostImplCopyWith<$Res> implements $PostCopyWith<$Res> {
   factory _$$PostImplCopyWith(
-          _$PostImpl value, $Res Function(_$PostImpl) then) =
-      __$$PostImplCopyWithImpl<$Res>;
+    _$PostImpl value,
+    $Res Function(_$PostImpl) then,
+  ) = __$$PostImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int id,
-      String name,
-      String? url,
-      String? body,
-      int creatorId,
-      int communityId,
-      bool removed,
-      bool locked,
-      DateTime published,
-      DateTime? updated,
-      bool deleted,
-      bool nsfw,
-      bool? stickied,
-      String? embedTitle,
-      String? embedDescription,
-      String? embedVideoUrl,
-      String? thumbnailUrl,
-      String apId,
-      bool local,
-      int languageId,
-      bool featuredCommunity,
-      bool featuredLocal,
-      String instanceHost,
-      String? urlContentType,
-      String? altText});
+  $Res call({
+    int id,
+    String name,
+    String? url,
+    String? body,
+    int creatorId,
+    int communityId,
+    bool removed,
+    bool locked,
+    DateTime published,
+    DateTime? updated,
+    bool deleted,
+    bool nsfw,
+    bool? stickied,
+    String? embedTitle,
+    String? embedDescription,
+    String? embedVideoUrl,
+    String? thumbnailUrl,
+    String apId,
+    bool local,
+    int languageId,
+    bool featuredCommunity,
+    bool featuredLocal,
+    String instanceHost,
+    String? urlContentType,
+    String? altText,
+  });
 }
 
 /// @nodoc
@@ -274,7 +306,7 @@ class __$$PostImplCopyWithImpl<$Res>
     extends _$PostCopyWithImpl<$Res, _$PostImpl>
     implements _$$PostImplCopyWith<$Res> {
   __$$PostImplCopyWithImpl(_$PostImpl _value, $Res Function(_$PostImpl) _then)
-      : super(_value, _then);
+    : super(_value, _then);
 
   /// Create a copy of Post
   /// with the given fields replaced by the non-null parameter values.
@@ -307,108 +339,135 @@ class __$$PostImplCopyWithImpl<$Res>
     Object? urlContentType = freezed,
     Object? altText = freezed,
   }) {
-    return _then(_$PostImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-      body: freezed == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as String?,
-      creatorId: null == creatorId
-          ? _value.creatorId
-          : creatorId // ignore: cast_nullable_to_non_nullable
-              as int,
-      communityId: null == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int,
-      removed: null == removed
-          ? _value.removed
-          : removed // ignore: cast_nullable_to_non_nullable
-              as bool,
-      locked: null == locked
-          ? _value.locked
-          : locked // ignore: cast_nullable_to_non_nullable
-              as bool,
-      published: null == published
-          ? _value.published
-          : published // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updated: freezed == updated
-          ? _value.updated
-          : updated // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      deleted: null == deleted
-          ? _value.deleted
-          : deleted // ignore: cast_nullable_to_non_nullable
-              as bool,
-      nsfw: null == nsfw
-          ? _value.nsfw
-          : nsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
-      stickied: freezed == stickied
-          ? _value.stickied
-          : stickied // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      embedTitle: freezed == embedTitle
-          ? _value.embedTitle
-          : embedTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      embedDescription: freezed == embedDescription
-          ? _value.embedDescription
-          : embedDescription // ignore: cast_nullable_to_non_nullable
-              as String?,
-      embedVideoUrl: freezed == embedVideoUrl
-          ? _value.embedVideoUrl
-          : embedVideoUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnailUrl: freezed == thumbnailUrl
-          ? _value.thumbnailUrl
-          : thumbnailUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      apId: null == apId
-          ? _value.apId
-          : apId // ignore: cast_nullable_to_non_nullable
-              as String,
-      local: null == local
-          ? _value.local
-          : local // ignore: cast_nullable_to_non_nullable
-              as bool,
-      languageId: null == languageId
-          ? _value.languageId
-          : languageId // ignore: cast_nullable_to_non_nullable
-              as int,
-      featuredCommunity: null == featuredCommunity
-          ? _value.featuredCommunity
-          : featuredCommunity // ignore: cast_nullable_to_non_nullable
-              as bool,
-      featuredLocal: null == featuredLocal
-          ? _value.featuredLocal
-          : featuredLocal // ignore: cast_nullable_to_non_nullable
-              as bool,
-      instanceHost: null == instanceHost
-          ? _value.instanceHost
-          : instanceHost // ignore: cast_nullable_to_non_nullable
-              as String,
-      urlContentType: freezed == urlContentType
-          ? _value.urlContentType
-          : urlContentType // ignore: cast_nullable_to_non_nullable
-              as String?,
-      altText: freezed == altText
-          ? _value.altText
-          : altText // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$PostImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as int,
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        url:
+            freezed == url
+                ? _value.url
+                : url // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        body:
+            freezed == body
+                ? _value.body
+                : body // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        creatorId:
+            null == creatorId
+                ? _value.creatorId
+                : creatorId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        communityId:
+            null == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        removed:
+            null == removed
+                ? _value.removed
+                : removed // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        locked:
+            null == locked
+                ? _value.locked
+                : locked // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        published:
+            null == published
+                ? _value.published
+                : published // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        updated:
+            freezed == updated
+                ? _value.updated
+                : updated // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        deleted:
+            null == deleted
+                ? _value.deleted
+                : deleted // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        nsfw:
+            null == nsfw
+                ? _value.nsfw
+                : nsfw // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        stickied:
+            freezed == stickied
+                ? _value.stickied
+                : stickied // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        embedTitle:
+            freezed == embedTitle
+                ? _value.embedTitle
+                : embedTitle // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        embedDescription:
+            freezed == embedDescription
+                ? _value.embedDescription
+                : embedDescription // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        embedVideoUrl:
+            freezed == embedVideoUrl
+                ? _value.embedVideoUrl
+                : embedVideoUrl // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        thumbnailUrl:
+            freezed == thumbnailUrl
+                ? _value.thumbnailUrl
+                : thumbnailUrl // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        apId:
+            null == apId
+                ? _value.apId
+                : apId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        local:
+            null == local
+                ? _value.local
+                : local // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        languageId:
+            null == languageId
+                ? _value.languageId
+                : languageId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        featuredCommunity:
+            null == featuredCommunity
+                ? _value.featuredCommunity
+                : featuredCommunity // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        featuredLocal:
+            null == featuredLocal
+                ? _value.featuredLocal
+                : featuredLocal // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        instanceHost:
+            null == instanceHost
+                ? _value.instanceHost
+                : instanceHost // ignore: cast_nullable_to_non_nullable
+                    as String,
+        urlContentType:
+            freezed == urlContentType
+                ? _value.urlContentType
+                : urlContentType // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        altText:
+            freezed == altText
+                ? _value.altText
+                : altText // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -416,33 +475,33 @@ class __$$PostImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$PostImpl extends _Post {
-  const _$PostImpl(
-      {required this.id,
-      required this.name,
-      this.url,
-      this.body,
-      required this.creatorId,
-      required this.communityId,
-      required this.removed,
-      required this.locked,
-      required this.published,
-      this.updated,
-      required this.deleted,
-      required this.nsfw,
-      this.stickied,
-      this.embedTitle,
-      this.embedDescription,
-      this.embedVideoUrl,
-      this.thumbnailUrl,
-      required this.apId,
-      required this.local,
-      required this.languageId,
-      required this.featuredCommunity,
-      required this.featuredLocal,
-      required this.instanceHost,
-      this.urlContentType,
-      this.altText})
-      : super._();
+  const _$PostImpl({
+    required this.id,
+    required this.name,
+    this.url,
+    this.body,
+    required this.creatorId,
+    required this.communityId,
+    required this.removed,
+    required this.locked,
+    required this.published,
+    this.updated,
+    required this.deleted,
+    required this.nsfw,
+    this.stickied,
+    this.embedTitle,
+    this.embedDescription,
+    this.embedVideoUrl,
+    this.thumbnailUrl,
+    required this.apId,
+    required this.local,
+    required this.languageId,
+    required this.featuredCommunity,
+    required this.featuredLocal,
+    required this.instanceHost,
+    this.urlContentType,
+    this.altText,
+  }) : super._();
 
   factory _$PostImpl.fromJson(Map<String, dynamic> json) =>
       _$$PostImplFromJson(json);
@@ -551,33 +610,33 @@ class _$PostImpl extends _Post {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
-        runtimeType,
-        id,
-        name,
-        url,
-        body,
-        creatorId,
-        communityId,
-        removed,
-        locked,
-        published,
-        updated,
-        deleted,
-        nsfw,
-        stickied,
-        embedTitle,
-        embedDescription,
-        embedVideoUrl,
-        thumbnailUrl,
-        apId,
-        local,
-        languageId,
-        featuredCommunity,
-        featuredLocal,
-        instanceHost,
-        urlContentType,
-        altText
-      ]);
+    runtimeType,
+    id,
+    name,
+    url,
+    body,
+    creatorId,
+    communityId,
+    removed,
+    locked,
+    published,
+    updated,
+    deleted,
+    nsfw,
+    stickied,
+    embedTitle,
+    embedDescription,
+    embedVideoUrl,
+    thumbnailUrl,
+    apId,
+    local,
+    languageId,
+    featuredCommunity,
+    featuredLocal,
+    instanceHost,
+    urlContentType,
+    altText,
+  ]);
 
   /// Create a copy of Post
   /// with the given fields replaced by the non-null parameter values.
@@ -589,39 +648,38 @@ class _$PostImpl extends _Post {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PostImplToJson(
-      this,
-    );
+    return _$$PostImplToJson(this);
   }
 }
 
 abstract class _Post extends Post {
-  const factory _Post(
-      {required final int id,
-      required final String name,
-      final String? url,
-      final String? body,
-      required final int creatorId,
-      required final int communityId,
-      required final bool removed,
-      required final bool locked,
-      required final DateTime published,
-      final DateTime? updated,
-      required final bool deleted,
-      required final bool nsfw,
-      final bool? stickied,
-      final String? embedTitle,
-      final String? embedDescription,
-      final String? embedVideoUrl,
-      final String? thumbnailUrl,
-      required final String apId,
-      required final bool local,
-      required final int languageId,
-      required final bool featuredCommunity,
-      required final bool featuredLocal,
-      required final String instanceHost,
-      final String? urlContentType,
-      final String? altText}) = _$PostImpl;
+  const factory _Post({
+    required final int id,
+    required final String name,
+    final String? url,
+    final String? body,
+    required final int creatorId,
+    required final int communityId,
+    required final bool removed,
+    required final bool locked,
+    required final DateTime published,
+    final DateTime? updated,
+    required final bool deleted,
+    required final bool nsfw,
+    final bool? stickied,
+    final String? embedTitle,
+    final String? embedDescription,
+    final String? embedVideoUrl,
+    final String? thumbnailUrl,
+    required final String apId,
+    required final bool local,
+    required final int languageId,
+    required final bool featuredCommunity,
+    required final bool featuredLocal,
+    required final String instanceHost,
+    final String? urlContentType,
+    final String? altText,
+  }) = _$PostImpl;
   const _Post._() : super._();
 
   factory _Post.fromJson(Map<String, dynamic> json) = _$PostImpl.fromJson;

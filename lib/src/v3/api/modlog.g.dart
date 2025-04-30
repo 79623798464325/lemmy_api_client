@@ -12,9 +12,10 @@ _$GetModlogImpl _$$GetModlogImplFromJson(Map<String, dynamic> json) =>
       communityId: (json['community_id'] as num?)?.toInt(),
       page: (json['page'] as num?)?.toInt(),
       limit: (json['limit'] as num?)?.toInt(),
-      type: json['type_'] == null
-          ? null
-          : ModlogActionType.fromJson(json['type_'] as String),
+      type:
+          json['type_'] == null
+              ? null
+              : ModlogActionType.fromJson(json['type_'] as String),
       otherPersonId: (json['other_person_id'] as num?)?.toInt(),
       postId: (json['post_id'] as num?)?.toInt(),
       commentId: (json['comment_id'] as num?)?.toInt(),

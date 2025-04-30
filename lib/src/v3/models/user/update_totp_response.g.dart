@@ -7,13 +7,9 @@ part of 'update_totp_response.dart';
 // **************************************************************************
 
 _$UpdateTotpResponseImpl _$$UpdateTotpResponseImplFromJson(
-        Map<String, dynamic> json) =>
-    _$UpdateTotpResponseImpl(
-      enabled: json['enabled'] as bool,
-    );
+  Map<String, dynamic> json,
+) => _$UpdateTotpResponseImpl(enabled: json['enabled'] as bool);
 
 Map<String, dynamic> _$$UpdateTotpResponseImplToJson(
-        _$UpdateTotpResponseImpl instance) =>
-    <String, dynamic>{
-      'enabled': instance.enabled,
-    };
+  _$UpdateTotpResponseImpl instance,
+) => <String, dynamic>{'enabled': instance.enabled};

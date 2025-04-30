@@ -1,16 +1,16 @@
 // ignore_for_file: unnecessary_lambdas
 
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:lemmy_api_client2/src/v3/enums/enums.dart';
 
-import '../../../enums.dart';
 import '../../../utils/serde.dart';
-import '../../../utils/workaround_settings_index.dart';
 import '../../models/api.dart';
 import '../../models/jwt.dart';
 import '../../models/user/success_response.dart';
 import '../../models/user/update_totp_response.dart';
 import '../../models/views.dart';
 import '../../query.dart';
+import '../../views/views.dart';
 
 part 'person.freezed.dart';
 part 'person.g.dart';
@@ -35,8 +35,7 @@ class Login with _$Login implements LemmyApiQuery<LoginResponse> {
   final httpMethod = HttpMethod.post;
 
   @override
-  LoginResponse responseFactory(Map<String, dynamic> json) =>
-      LoginResponse.fromJson(json);
+  LoginResponse responseFactory(Map<String, dynamic> json) => LoginResponse.fromJson(json);
 }
 
 /// Only available in lemmy v0.19.0 and above
@@ -57,8 +56,7 @@ class Logout with _$Logout implements LemmyApiQuery<SuccessResponse> {
   final httpMethod = HttpMethod.post;
 
   @override
-  SuccessResponse responseFactory(Map<String, dynamic> json) =>
-      SuccessResponse.fromJson(json);
+  SuccessResponse responseFactory(Map<String, dynamic> json) => SuccessResponse.fromJson(json);
 }
 
 /// Only available in lemmy v0.19.0 and above
@@ -69,15 +67,12 @@ class Logout with _$Logout implements LemmyApiQuery<SuccessResponse> {
 /// `HTTP.GET /user/export_settings`
 ///
 @freezed
-class ExportSettings
-    with _$ExportSettings
-    implements LemmyApiQuery<dynamic>, LemmyApiAuthenticatedQuery {
+class ExportSettings with _$ExportSettings implements LemmyApiQuery<dynamic>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory ExportSettings({String? auth}) = _ExportSettings;
 
   const ExportSettings._();
-  factory ExportSettings.fromJson(Map<String, dynamic> json) =>
-      _$ExportSettingsFromJson(json);
+  factory ExportSettings.fromJson(Map<String, dynamic> json) => _$ExportSettingsFromJson(json);
 
   final path = '/user/export_settings';
 
@@ -93,26 +88,19 @@ class ExportSettings
 ///
 /// `HTTP.POST /user/import_settings`
 @freezed
-class ImportSettings
-    with _$ImportSettings
-    implements
-        LemmyApiQuery<SuccessResponse>,
-        LemmyApiAuthenticatedQuery,
-        PassthroughParameter {
+class ImportSettings with _$ImportSettings implements LemmyApiQuery<SuccessResponse>, LemmyApiAuthenticatedQuery, PassthroughParameter {
   @apiSerde
   const factory ImportSettings({String? auth, dynamic data}) = _ImportSettings;
 
   const ImportSettings._();
-  factory ImportSettings.fromJson(Map<String, dynamic> json) =>
-      _$ImportSettingsFromJson(json);
+  factory ImportSettings.fromJson(Map<String, dynamic> json) => _$ImportSettingsFromJson(json);
 
   final path = '/user/import_settings';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  SuccessResponse responseFactory(Map<String, dynamic> json) =>
-      SuccessResponse.fromJson(json);
+  SuccessResponse responseFactory(Map<String, dynamic> json) => SuccessResponse.fromJson(json);
 
   @override
   String get parameter => 'data';
@@ -124,23 +112,19 @@ class ImportSettings
 ///
 /// `HTTP.GET /user/validate_auth`
 @freezed
-class ValidateAuth
-    with _$ValidateAuth
-    implements LemmyApiQuery<SuccessResponse>, LemmyApiAuthenticatedQuery {
+class ValidateAuth with _$ValidateAuth implements LemmyApiQuery<SuccessResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory ValidateAuth({String? auth}) = _ValidateAuth;
 
   const ValidateAuth._();
-  factory ValidateAuth.fromJson(Map<String, dynamic> json) =>
-      _$ValidateAuthFromJson(json);
+  factory ValidateAuth.fromJson(Map<String, dynamic> json) => _$ValidateAuthFromJson(json);
 
   final path = '/user/validate_auth';
 
   final httpMethod = HttpMethod.get;
 
   @override
-  SuccessResponse responseFactory(Map<String, dynamic> json) =>
-      SuccessResponse.fromJson(json);
+  SuccessResponse responseFactory(Map<String, dynamic> json) => SuccessResponse.fromJson(json);
 }
 
 /// Only available in lemmy v0.19.0 and above
@@ -153,9 +137,7 @@ class ValidateAuth
 ///
 /// `HTTP.POST /user/totp/update`
 @freezed
-class UpdateTotp
-    with _$UpdateTotp
-    implements LemmyApiQuery<UpdateTotpResponse>, LemmyApiAuthenticatedQuery {
+class UpdateTotp with _$UpdateTotp implements LemmyApiQuery<UpdateTotpResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory UpdateTotp({
     String? auth,
@@ -164,16 +146,14 @@ class UpdateTotp
   }) = _UpdateTotp;
 
   const UpdateTotp._();
-  factory UpdateTotp.fromJson(Map<String, dynamic> json) =>
-      _$UpdateTotpFromJson(json);
+  factory UpdateTotp.fromJson(Map<String, dynamic> json) => _$UpdateTotpFromJson(json);
 
   final path = '/user/totp/update';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  UpdateTotpResponse responseFactory(Map<String, dynamic> json) =>
-      UpdateTotpResponse.fromJson(json);
+  UpdateTotpResponse responseFactory(Map<String, dynamic> json) => UpdateTotpResponse.fromJson(json);
 }
 
 @freezed
@@ -192,8 +172,7 @@ class Register with _$Register implements LemmyApiQuery<Jwt> {
   }) = _Register;
 
   const Register._();
-  factory Register.fromJson(Map<String, dynamic> json) =>
-      _$RegisterFromJson(json);
+  factory Register.fromJson(Map<String, dynamic> json) => _$RegisterFromJson(json);
 
   final path = '/user/register';
 
@@ -209,49 +188,56 @@ class GetCaptcha with _$GetCaptcha implements LemmyApiQuery<Captcha> {
   const factory GetCaptcha() = _GetCaptcha;
 
   const GetCaptcha._();
-  factory GetCaptcha.fromJson(Map<String, dynamic> json) =>
-      _$GetCaptchaFromJson(json);
+  factory GetCaptcha.fromJson(Map<String, dynamic> json) => _$GetCaptchaFromJson(json);
 
   final path = '/user/get_captcha';
 
   final httpMethod = HttpMethod.get;
 
   @override
-  Captcha responseFactory(Map<String, dynamic> json) =>
-      Captcha.fromJson(json['ok']);
+  Captcha responseFactory(Map<String, dynamic> json) => Captcha.fromJson(json['ok']);
 }
 
 @freezed
 class SaveUserSettings with _$SaveUserSettings implements LemmyApiQuery<Jwt> {
   @apiSerde
   const factory SaveUserSettings({
-    bool? showNsfw,
-    String? theme,
-    @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-    SortType? defaultSortType,
-    @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-    PostListingType? defaultListingType,
-    String? interfaceLanguage,
-    String? avatar,
-    String? banner,
-    String? displayName,
-    String? email,
-    String? bio,
-    String? matrixUserId,
-    bool? showAvatars,
-    bool? showScores,
-    bool? sendNotificationsToEmail,
-    bool? showReadPosts,
-    bool? botAccount,
-    bool? showBotAccounts,
-    bool? showNewPostNotifs,
-    bool? generateTotp2fa,
-    required String auth,
+    bool? showNsfw, // v0.18.0
+    bool? blurNsfw, // v0.18.3
+    bool? autoExpand, // v0.18.3
+    String? theme, // v0.18.0
+    SortType? defaultSortType, // v0.18.0
+    ListingType? defaultListingType, // v0.18.0
+    String? interfaceLanguage, // v0.18.0
+    String? avatar, // v0.18.0
+    String? banner, // v0.18.0
+    String? displayName, // v0.18.0
+    String? email, // v0.18.0
+    String? bio, // v0.18.0
+    String? matrixUserId, // v0.18.0
+    bool? showAvatars, // v0.18.0
+    bool? sendNotificationsToEmail, // v0.18.0
+    bool? botAccount, // v0.18.0
+    bool? showBotAccounts, // v0.18.0
+    bool? showReadPosts, // v0.18.0
+    @deprecated bool? showNewPostNotifs, // v0.18.0 [deprecated in v0.19.0]
+    List<int>? discussionLanguages, // v0.18.0
+    @deprecated bool? generateTotp2fa, // v0.18.0 [deprecated in v0.19.0]
+    String? auth,
+    bool? openLinksInNewTab, // v0.18.1
+    bool? infiniteScrollEnabled, // v0.19.0 (optional)
+    String? postListingMode, // v0.19.0 (optional)
+    bool? enableKeyboardNavigation, // v0.19.0 (optional)
+    bool? enableAnimatedImages, // v0.19.0 (optional)
+    bool? collapseBotComments, // v0.19.0 (optional)
+    bool? showScores, // v0.18.0 (optional)
+    bool? showUpvotes, // v0.19.4 (optional)
+    bool? showDownvotes, // v0.19.4 (optional)
+    bool? showUpvotePercentage, // v0.19.4 (optional)
   }) = _SaveUserSettings;
 
   const SaveUserSettings._();
-  factory SaveUserSettings.fromJson(Map<String, dynamic> json) =>
-      _$SaveUserSettingsFromJson(json);
+  factory SaveUserSettings.fromJson(Map<String, dynamic> json) => _$SaveUserSettingsFromJson(json);
 
   final path = '/user/save_user_settings';
 
@@ -264,16 +250,10 @@ class SaveUserSettings with _$SaveUserSettings implements LemmyApiQuery<Jwt> {
 @freezed
 class ChangePassword with _$ChangePassword implements LemmyApiQuery<Jwt> {
   @apiSerde
-  const factory ChangePassword({
-    required String newPassword,
-    required String newPasswordVerify,
-    required String oldPassword,
-    required String auth,
-  }) = _ChangePassword;
+  const factory ChangePassword({required String newPassword, required String newPasswordVerify, required String oldPassword, required String auth}) = _ChangePassword;
 
   const ChangePassword._();
-  factory ChangePassword.fromJson(Map<String, dynamic> json) =>
-      _$ChangePasswordFromJson(json);
+  factory ChangePassword.fromJson(Map<String, dynamic> json) => _$ChangePasswordFromJson(json);
 
   final path = '/user/change_password';
 
@@ -284,198 +264,124 @@ class ChangePassword with _$ChangePassword implements LemmyApiQuery<Jwt> {
 }
 
 @freezed
-class GetPersonDetails
-    with _$GetPersonDetails
-    implements LemmyApiQuery<FullPersonView> {
+class GetPersonDetails with _$GetPersonDetails implements LemmyApiQuery<FullPersonView> {
   @apiSerde
-  const factory GetPersonDetails({
-    int? personId,
-    String? username,
-    SortType? sort,
-    int? page,
-    int? limit,
-    int? communityId,
-    bool? savedOnly,
-    String? auth,
-  }) = _GetPersonDetails;
+  const factory GetPersonDetails({int? personId, String? username, SortType? sort, int? page, int? limit, int? communityId, bool? savedOnly, String? auth}) = _GetPersonDetails;
 
   const GetPersonDetails._();
-  factory GetPersonDetails.fromJson(Map<String, dynamic> json) =>
-      _$GetPersonDetailsFromJson(json);
+  factory GetPersonDetails.fromJson(Map<String, dynamic> json) => _$GetPersonDetailsFromJson(json);
 
   final path = '/user';
 
   final httpMethod = HttpMethod.get;
 
   @override
-  FullPersonView responseFactory(Map<String, dynamic> json) =>
-      FullPersonView.fromJson(json);
+  FullPersonView responseFactory(Map<String, dynamic> json) => FullPersonView.fromJson(json);
 }
 
 @freezed
-class MarkAllAsRead
-    with _$MarkAllAsRead
-    implements LemmyApiQuery<List<CommentView>> {
+class MarkAllAsRead with _$MarkAllAsRead implements LemmyApiQuery<List<CommentView>> {
   @apiSerde
-  const factory MarkAllAsRead({
-    required String auth,
-  }) = _MarkAllAsRead;
+  const factory MarkAllAsRead({required String auth}) = _MarkAllAsRead;
 
   const MarkAllAsRead._();
-  factory MarkAllAsRead.fromJson(Map<String, dynamic> json) =>
-      _$MarkAllAsReadFromJson(json);
+  factory MarkAllAsRead.fromJson(Map<String, dynamic> json) => _$MarkAllAsReadFromJson(json);
 
   final path = '/user/mark_all_as_read';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  List<CommentView> responseFactory(Map<String, dynamic> json) =>
-      (json['replies'] as List)
-          .map((dynamic e) => CommentView.fromJson(e))
-          .toList();
+  List<CommentView> responseFactory(Map<String, dynamic> json) => (json['replies'] as List).map((dynamic e) => CommentView.fromJson(e)).toList();
 }
 
 @freezed
 class AddAdmin with _$AddAdmin implements LemmyApiQuery<List<PersonViewSafe>> {
   @apiSerde
-  const factory AddAdmin({
-    required int personId,
-    required bool added,
-    required String auth,
-  }) = _AddAdmin;
+  const factory AddAdmin({required int personId, required bool added, required String auth}) = _AddAdmin;
 
   const AddAdmin._();
-  factory AddAdmin.fromJson(Map<String, dynamic> json) =>
-      _$AddAdminFromJson(json);
+  factory AddAdmin.fromJson(Map<String, dynamic> json) => _$AddAdminFromJson(json);
 
   final path = '/admin/add';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  List<PersonViewSafe> responseFactory(Map<String, dynamic> json) =>
-      (json['admins'] as List)
-          .map((dynamic e) => PersonViewSafe.fromJson(e))
-          .toList();
+  List<PersonViewSafe> responseFactory(Map<String, dynamic> json) => (json['admins'] as List).map((dynamic e) => PersonViewSafe.fromJson(e)).toList();
 }
 
 @freezed
 class BanPerson with _$BanPerson implements LemmyApiQuery<BannedPerson> {
   @apiSerde
-  const factory BanPerson({
-    required int personId,
-    required bool ban,
-    bool? removeData,
-    String? reason,
-    int? expires,
-    required String auth,
-  }) = _BanPerson;
+  const factory BanPerson({required int personId, required bool ban, bool? removeData, String? reason, int? expires, required String auth}) = _BanPerson;
 
   const BanPerson._();
-  factory BanPerson.fromJson(Map<String, dynamic> json) =>
-      _$BanPersonFromJson(json);
+  factory BanPerson.fromJson(Map<String, dynamic> json) => _$BanPersonFromJson(json);
 
   final path = '/user/ban';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  BannedPerson responseFactory(Map<String, dynamic> json) =>
-      BannedPerson.fromJson(json);
+  BannedPerson responseFactory(Map<String, dynamic> json) => BannedPerson.fromJson(json);
 }
 
 @freezed
-class GetReplies
-    with _$GetReplies
-    implements LemmyApiQuery<List<CommentReplyView>> {
+class GetReplies with _$GetReplies implements LemmyApiQuery<List<CommentReplyView>> {
   @apiSerde
-  const factory GetReplies({
-    CommentSortType? sort,
-    int? page,
-    int? limit,
-    bool? unreadOnly,
-    required String auth,
-  }) = _GetReplies;
+  const factory GetReplies({CommentSortType? sort, int? page, int? limit, bool? unreadOnly, required String auth}) = _GetReplies;
 
   const GetReplies._();
-  factory GetReplies.fromJson(Map<String, dynamic> json) =>
-      _$GetRepliesFromJson(json);
+  factory GetReplies.fromJson(Map<String, dynamic> json) => _$GetRepliesFromJson(json);
 
   final path = '/user/replies';
 
   final httpMethod = HttpMethod.get;
 
   @override
-  List<CommentReplyView> responseFactory(Map<String, dynamic> json) =>
-      (json['replies'] as List)
-          .map((dynamic e) => CommentReplyView.fromJson(e))
-          .toList();
+  List<CommentReplyView> responseFactory(Map<String, dynamic> json) => (json['replies'] as List).map((dynamic e) => CommentReplyView.fromJson(e)).toList();
 }
 
 @freezed
-class GetPersonMentions
-    with _$GetPersonMentions
-    implements LemmyApiQuery<List<PersonMentionView>> {
+class GetPersonMentions with _$GetPersonMentions implements LemmyApiQuery<List<PersonMentionView>> {
   @apiSerde
-  const factory GetPersonMentions({
-    CommentSortType? sort,
-    int? page,
-    int? limit,
-    bool? unreadOnly,
-    required String auth,
-  }) = _GetPersonMentions;
+  const factory GetPersonMentions({CommentSortType? sort, int? page, int? limit, bool? unreadOnly, required String auth}) = _GetPersonMentions;
 
   const GetPersonMentions._();
-  factory GetPersonMentions.fromJson(Map<String, dynamic> json) =>
-      _$GetPersonMentionsFromJson(json);
+  factory GetPersonMentions.fromJson(Map<String, dynamic> json) => _$GetPersonMentionsFromJson(json);
 
   final path = '/user/mention';
 
   final httpMethod = HttpMethod.get;
 
   @override
-  List<PersonMentionView> responseFactory(Map<String, dynamic> json) =>
-      (json['mentions'] as List)
-          .map((dynamic e) => PersonMentionView.fromJson(e))
-          .toList();
+  List<PersonMentionView> responseFactory(Map<String, dynamic> json) => (json['mentions'] as List).map((dynamic e) => PersonMentionView.fromJson(e)).toList();
 }
 
 @freezed
-class MarkPersonMentionAsRead
-    with _$MarkPersonMentionAsRead
-    implements LemmyApiQuery<PersonMentionView> {
+class MarkPersonMentionAsRead with _$MarkPersonMentionAsRead implements LemmyApiQuery<PersonMentionView> {
   @apiSerde
-  const factory MarkPersonMentionAsRead({
-    required int personMentionId,
-    required bool read,
-    required String auth,
-  }) = _MarkPersonMentionAsRead;
+  const factory MarkPersonMentionAsRead({required int personMentionId, required bool read, required String auth}) = _MarkPersonMentionAsRead;
 
   const MarkPersonMentionAsRead._();
-  factory MarkPersonMentionAsRead.fromJson(Map<String, dynamic> json) =>
-      _$MarkPersonMentionAsReadFromJson(json);
+  factory MarkPersonMentionAsRead.fromJson(Map<String, dynamic> json) => _$MarkPersonMentionAsReadFromJson(json);
 
   final path = '/user/mention/mark_as_read';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  PersonMentionView responseFactory(Map<String, dynamic> json) =>
-      PersonMentionView.fromJson(json['person_mention_view']);
+  PersonMentionView responseFactory(Map<String, dynamic> json) => PersonMentionView.fromJson(json['person_mention_view']);
 }
 
 @freezed
 class DeleteAccount with _$DeleteAccount implements LemmyApiQuery<void> {
   @apiSerde
-  const factory DeleteAccount({
-    required String password,
-    required String auth,
-  }) = _DeleteAccount;
+  const factory DeleteAccount({required String password, required String auth}) = _DeleteAccount;
 
   const DeleteAccount._();
-  factory DeleteAccount.fromJson(Map<String, dynamic> json) =>
-      _$DeleteAccountFromJson(json);
+  factory DeleteAccount.fromJson(Map<String, dynamic> json) => _$DeleteAccountFromJson(json);
 
   final path = '/user/delete_account';
 
@@ -488,13 +394,10 @@ class DeleteAccount with _$DeleteAccount implements LemmyApiQuery<void> {
 @freezed
 class PasswordReset with _$PasswordReset implements LemmyApiQuery<Null> {
   @apiSerde
-  const factory PasswordReset({
-    required String email,
-  }) = _PasswordReset;
+  const factory PasswordReset({required String email}) = _PasswordReset;
 
   const PasswordReset._();
-  factory PasswordReset.fromJson(Map<String, dynamic> json) =>
-      _$PasswordResetFromJson(json);
+  factory PasswordReset.fromJson(Map<String, dynamic> json) => _$PasswordResetFromJson(json);
 
   final path = '/user/password_reset';
 
@@ -507,15 +410,10 @@ class PasswordReset with _$PasswordReset implements LemmyApiQuery<Null> {
 @freezed
 class PasswordChange with _$PasswordChange implements LemmyApiQuery<Jwt> {
   @apiSerde
-  const factory PasswordChange({
-    required String token,
-    required String password,
-    required String passwordVerify,
-  }) = _PasswordChange;
+  const factory PasswordChange({required String token, required String password, required String passwordVerify}) = _PasswordChange;
 
   const PasswordChange._();
-  factory PasswordChange.fromJson(Map<String, dynamic> json) =>
-      _$PasswordChangeFromJson(json);
+  factory PasswordChange.fromJson(Map<String, dynamic> json) => _$PasswordChangeFromJson(json);
 
   final path = '/user/password_change';
 
@@ -528,106 +426,76 @@ class PasswordChange with _$PasswordChange implements LemmyApiQuery<Jwt> {
 @freezed
 class BlockPerson with _$BlockPerson implements LemmyApiQuery<BlockedPerson> {
   @apiSerde
-  const factory BlockPerson({
-    required int personId,
-    required bool block,
-    required String auth,
-  }) = _BlockPerson;
+  const factory BlockPerson({required int personId, required bool block, required String auth}) = _BlockPerson;
 
   const BlockPerson._();
 
-  factory BlockPerson.fromJson(Map<String, dynamic> json) =>
-      _$BlockPersonFromJson(json);
+  factory BlockPerson.fromJson(Map<String, dynamic> json) => _$BlockPersonFromJson(json);
 
   final path = '/user/block';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  BlockedPerson responseFactory(Map<String, dynamic> json) =>
-      BlockedPerson.fromJson(json);
+  BlockedPerson responseFactory(Map<String, dynamic> json) => BlockedPerson.fromJson(json);
 }
 
 @freezed
-class GetUnreadCount
-    with _$GetUnreadCount
-    implements LemmyApiQuery<UnreadCount> {
+class GetUnreadCount with _$GetUnreadCount implements LemmyApiQuery<UnreadCount> {
   @apiSerde
-  const factory GetUnreadCount({
-    required String auth,
-  }) = _GetUnreadCount;
+  const factory GetUnreadCount({required String auth}) = _GetUnreadCount;
 
   const GetUnreadCount._();
 
-  factory GetUnreadCount.fromJson(Map<String, dynamic> json) =>
-      _$GetUnreadCountFromJson(json);
+  factory GetUnreadCount.fromJson(Map<String, dynamic> json) => _$GetUnreadCountFromJson(json);
 
   final path = '/user/unread_count';
 
   final httpMethod = HttpMethod.get;
 
   @override
-  UnreadCount responseFactory(Map<String, dynamic> json) =>
-      UnreadCount.fromJson(json);
+  UnreadCount responseFactory(Map<String, dynamic> json) => UnreadCount.fromJson(json);
 }
 
 @freezed
-class GetReportCount
-    with _$GetReportCount
-    implements LemmyApiQuery<ReportCount> {
+class GetReportCount with _$GetReportCount implements LemmyApiQuery<ReportCount> {
   @apiSerde
-  const factory GetReportCount({
-    int? communityId,
-    required String auth,
-  }) = _GetReportCount;
+  const factory GetReportCount({int? communityId, required String auth}) = _GetReportCount;
 
   const GetReportCount._();
-  factory GetReportCount.fromJson(Map<String, dynamic> json) =>
-      _$GetReportCountFromJson(json);
+  factory GetReportCount.fromJson(Map<String, dynamic> json) => _$GetReportCountFromJson(json);
 
   final path = '/user/report_count';
 
   final httpMethod = HttpMethod.get;
 
   @override
-  ReportCount responseFactory(Map<String, dynamic> json) =>
-      ReportCount.fromJson(json);
+  ReportCount responseFactory(Map<String, dynamic> json) => ReportCount.fromJson(json);
 }
 
 @freezed
-class GetBannedPersons
-    with _$GetBannedPersons
-    implements LemmyApiQuery<List<PersonViewSafe>> {
+class GetBannedPersons with _$GetBannedPersons implements LemmyApiQuery<List<PersonViewSafe>> {
   @apiSerde
-  const factory GetBannedPersons({
-    required String auth,
-  }) = _GetBannedPersons;
+  const factory GetBannedPersons({required String auth}) = _GetBannedPersons;
 
   const GetBannedPersons._();
-  factory GetBannedPersons.fromJson(Map<String, dynamic> json) =>
-      _$GetBannedPersonsFromJson(json);
+  factory GetBannedPersons.fromJson(Map<String, dynamic> json) => _$GetBannedPersonsFromJson(json);
 
   final path = '/user/banned';
 
   final httpMethod = HttpMethod.get;
 
   @override
-  List<PersonViewSafe> responseFactory(Map<String, dynamic> json) =>
-      (json['banned'] as List)
-          .map((dynamic e) => PersonViewSafe.fromJson(e))
-          .toList();
+  List<PersonViewSafe> responseFactory(Map<String, dynamic> json) => (json['banned'] as List).map((dynamic e) => PersonViewSafe.fromJson(e)).toList();
 }
 
 @freezed
 class VerifyEmail with _$VerifyEmail implements LemmyApiQuery<void> {
   @apiSerde
-  const factory VerifyEmail({
-    required String token,
-  }) = _VerifyEmail;
+  const factory VerifyEmail({required String token}) = _VerifyEmail;
 
   const VerifyEmail._();
-  factory VerifyEmail.fromJson(Map<String, dynamic> json) =>
-      _$VerifyEmailFromJson(json);
+  factory VerifyEmail.fromJson(Map<String, dynamic> json) => _$VerifyEmailFromJson(json);
 
   final path = '/user/verify_email';
 

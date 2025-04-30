@@ -12,7 +12,8 @@ part of 'update_totp_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 UpdateTotpResponse _$UpdateTotpResponseFromJson(Map<String, dynamic> json) {
   return _UpdateTotpResponse.fromJson(json);
@@ -35,8 +36,9 @@ mixin _$UpdateTotpResponse {
 /// @nodoc
 abstract class $UpdateTotpResponseCopyWith<$Res> {
   factory $UpdateTotpResponseCopyWith(
-          UpdateTotpResponse value, $Res Function(UpdateTotpResponse) then) =
-      _$UpdateTotpResponseCopyWithImpl<$Res, UpdateTotpResponse>;
+    UpdateTotpResponse value,
+    $Res Function(UpdateTotpResponse) then,
+  ) = _$UpdateTotpResponseCopyWithImpl<$Res, UpdateTotpResponse>;
   @useResult
   $Res call({bool enabled});
 }
@@ -55,24 +57,27 @@ class _$UpdateTotpResponseCopyWithImpl<$Res, $Val extends UpdateTotpResponse>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? enabled = null,
-  }) {
-    return _then(_value.copyWith(
-      enabled: null == enabled
-          ? _value.enabled
-          : enabled // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ) as $Val);
+  $Res call({Object? enabled = null}) {
+    return _then(
+      _value.copyWith(
+            enabled:
+                null == enabled
+                    ? _value.enabled
+                    : enabled // ignore: cast_nullable_to_non_nullable
+                        as bool,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$UpdateTotpResponseImplCopyWith<$Res>
     implements $UpdateTotpResponseCopyWith<$Res> {
-  factory _$$UpdateTotpResponseImplCopyWith(_$UpdateTotpResponseImpl value,
-          $Res Function(_$UpdateTotpResponseImpl) then) =
-      __$$UpdateTotpResponseImplCopyWithImpl<$Res>;
+  factory _$$UpdateTotpResponseImplCopyWith(
+    _$UpdateTotpResponseImpl value,
+    $Res Function(_$UpdateTotpResponseImpl) then,
+  ) = __$$UpdateTotpResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool enabled});
@@ -82,23 +87,25 @@ abstract class _$$UpdateTotpResponseImplCopyWith<$Res>
 class __$$UpdateTotpResponseImplCopyWithImpl<$Res>
     extends _$UpdateTotpResponseCopyWithImpl<$Res, _$UpdateTotpResponseImpl>
     implements _$$UpdateTotpResponseImplCopyWith<$Res> {
-  __$$UpdateTotpResponseImplCopyWithImpl(_$UpdateTotpResponseImpl _value,
-      $Res Function(_$UpdateTotpResponseImpl) _then)
-      : super(_value, _then);
+  __$$UpdateTotpResponseImplCopyWithImpl(
+    _$UpdateTotpResponseImpl _value,
+    $Res Function(_$UpdateTotpResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UpdateTotpResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? enabled = null,
-  }) {
-    return _then(_$UpdateTotpResponseImpl(
-      enabled: null == enabled
-          ? _value.enabled
-          : enabled // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
+  $Res call({Object? enabled = null}) {
+    return _then(
+      _$UpdateTotpResponseImpl(
+        enabled:
+            null == enabled
+                ? _value.enabled
+                : enabled // ignore: cast_nullable_to_non_nullable
+                    as bool,
+      ),
+    );
   }
 }
 
@@ -138,13 +145,13 @@ class _$UpdateTotpResponseImpl extends _UpdateTotpResponse {
   @pragma('vm:prefer-inline')
   _$$UpdateTotpResponseImplCopyWith<_$UpdateTotpResponseImpl> get copyWith =>
       __$$UpdateTotpResponseImplCopyWithImpl<_$UpdateTotpResponseImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UpdateTotpResponseImplToJson(
-      this,
-    );
+    return _$$UpdateTotpResponseImplToJson(this);
   }
 }
 

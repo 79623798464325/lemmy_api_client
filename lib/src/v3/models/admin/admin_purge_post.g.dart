@@ -16,11 +16,11 @@ _$AdminPurgePostImpl _$$AdminPurgePostImplFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$$AdminPurgePostImplToJson(
-        _$AdminPurgePostImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'admin_person_id': instance.adminPersonId,
-      'community_id': instance.communityId,
-      'reason': instance.reason,
-      'when_': instance.when,
-    };
+  _$AdminPurgePostImpl instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'admin_person_id': instance.adminPersonId,
+  'community_id': instance.communityId,
+  'reason': instance.reason,
+  'when_': instance.when,
+};

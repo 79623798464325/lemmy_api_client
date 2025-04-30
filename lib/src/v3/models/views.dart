@@ -1,6 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../enums.dart';
 import '../../utils/serde.dart';
 import 'admin/admin_purge_person.dart';
 import 'admin/admin_purge_comment.dart';
@@ -18,15 +17,10 @@ part 'views.g.dart';
 @freezed
 class PersonViewSafe with _$PersonViewSafe {
   @modelSerde
-  const factory PersonViewSafe({
-    required Person person,
-    required PersonAggregates counts,
-    required String instanceHost,
-  }) = _PersonViewSafe;
+  const factory PersonViewSafe({required Person person, required PersonAggregates counts, required String instanceHost}) = _PersonViewSafe;
 
   const PersonViewSafe._();
-  factory PersonViewSafe.fromJson(Map<String, dynamic> json) =>
-      _$PersonViewSafeFromJson(json);
+  factory PersonViewSafe.fromJson(Map<String, dynamic> json) => _$PersonViewSafeFromJson(json);
 }
 
 @freezed
@@ -44,57 +38,39 @@ class PersonMentionView with _$PersonMentionView {
     required String subscribed,
     required bool saved,
     required bool creatorBlocked,
-    VoteType? myVote,
+    num? myVote,
     required String instanceHost,
   }) = _PersonMentionView;
 
   const PersonMentionView._();
-  factory PersonMentionView.fromJson(Map<String, dynamic> json) =>
-      _$PersonMentionViewFromJson(json);
+  factory PersonMentionView.fromJson(Map<String, dynamic> json) => _$PersonMentionViewFromJson(json);
 }
 
 @freezed
 class LocalUserSettingsView with _$LocalUserSettingsView {
   @modelSerde
-  const factory LocalUserSettingsView({
-    required LocalUserSettings localUser,
-    required Person person,
-    required PersonAggregates counts,
-    required String instanceHost,
-  }) = _LocalUserSettingsView;
+  const factory LocalUserSettingsView({required LocalUserSettings localUser, required Person person, required PersonAggregates counts, required String instanceHost}) = _LocalUserSettingsView;
 
   const LocalUserSettingsView._();
-  factory LocalUserSettingsView.fromJson(Map<String, dynamic> json) =>
-      _$LocalUserSettingsViewFromJson(json);
+  factory LocalUserSettingsView.fromJson(Map<String, dynamic> json) => _$LocalUserSettingsViewFromJson(json);
 }
 
 @freezed
 class SiteView with _$SiteView {
   @modelSerde
-  const factory SiteView({
-    required Site site,
-    required SiteAggregates counts,
-    required String instanceHost,
-  }) = _SiteView;
+  const factory SiteView({required Site site, required SiteAggregates counts, required String instanceHost}) = _SiteView;
 
   const SiteView._();
-  factory SiteView.fromJson(Map<String, dynamic> json) =>
-      _$SiteViewFromJson(json);
+  factory SiteView.fromJson(Map<String, dynamic> json) => _$SiteViewFromJson(json);
 }
 
 @freezed
 class PrivateMessageView with _$PrivateMessageView {
   @modelSerde
-  const factory PrivateMessageView({
-    required PrivateMessage privateMessage,
-    required Person creator,
-    required Person recipient,
-    required String instanceHost,
-  }) = _PrivateMessageView;
+  const factory PrivateMessageView({required PrivateMessage privateMessage, required Person creator, required Person recipient, required String instanceHost}) = _PrivateMessageView;
 
   const PrivateMessageView._();
-  factory PrivateMessageView.fromJson(Map<String, dynamic> json) =>
-      _$PrivateMessageViewFromJson(json);
+  factory PrivateMessageView.fromJson(Map<String, dynamic> json) => _$PrivateMessageViewFromJson(json);
 }
 
 @freezed
@@ -112,14 +88,13 @@ class PostView with _$PostView {
     required bool read,
     bool? hidden,
     required bool creatorBlocked,
-    VoteType? myVote,
+    num? myVote,
     required int unreadComments,
     required String instanceHost,
   }) = _PostView;
 
   const PostView._();
-  factory PostView.fromJson(Map<String, dynamic> json) =>
-      _$PostViewFromJson(json);
+  factory PostView.fromJson(Map<String, dynamic> json) => _$PostViewFromJson(json);
 }
 
 @freezed
@@ -132,37 +107,14 @@ class PostReportView with _$PostReportView {
     required Person creator,
     required Person postCreator,
     required bool creatorBannedFromCommunity,
-    VoteType? myVote,
+    num? myVote,
     required PostAggregates counts,
     Person? resolver,
     required String instanceHost,
   }) = _PostReportView;
 
   const PostReportView._();
-  factory PostReportView.fromJson(Map<String, dynamic> json) =>
-      _$PostReportViewFromJson(json);
-}
-
-@freezed
-class CommentView with _$CommentView {
-  @modelSerde
-  const factory CommentView({
-    required Comment comment,
-    required Person creator,
-    required Post post,
-    required CommunitySafe community,
-    required CommentAggregates counts,
-    required bool creatorBannedFromCommunity,
-    required String subscribed,
-    required bool saved,
-    required bool creatorBlocked,
-    VoteType? myVote,
-    required String instanceHost,
-  }) = _CommentView;
-
-  const CommentView._();
-  factory CommentView.fromJson(Map<String, dynamic> json) =>
-      _$CommentViewFromJson(json);
+  factory PostReportView.fromJson(Map<String, dynamic> json) => _$PostReportViewFromJson(json);
 }
 
 @freezed
@@ -180,13 +132,12 @@ class CommentReplyView with _$CommentReplyView {
     required String subscribed,
     required bool saved,
     required bool creatorBlocked,
-    VoteType? myVote,
+    num? myVote,
     required String instanceHost,
   }) = _CommentReplyView;
 
   const CommentReplyView._();
-  factory CommentReplyView.fromJson(Map<String, dynamic> json) =>
-      _$CommentReplyViewFromJson(json);
+  factory CommentReplyView.fromJson(Map<String, dynamic> json) => _$CommentReplyViewFromJson(json);
 }
 
 @freezed
@@ -200,15 +151,14 @@ class CommentReportView with _$CommentReportView {
     required Person creator,
     required Person commentCreator,
     required bool creatorBannedFromCommunity,
-    VoteType? myVote,
+    num? myVote,
     required CommentAggregates counts,
     Person? resolver,
     required String instanceHost,
   }) = _CommentReportView;
 
   const CommentReportView._();
-  factory CommentReportView.fromJson(Map<String, dynamic> json) =>
-      _$CommentReportViewFromJson(json);
+  factory CommentReportView.fromJson(Map<String, dynamic> json) => _$CommentReportViewFromJson(json);
 }
 
 @freezed
@@ -223,8 +173,7 @@ class ModAddCommunityView with _$ModAddCommunityView {
   }) = _ModAddCommunityView;
 
   const ModAddCommunityView._();
-  factory ModAddCommunityView.fromJson(Map<String, dynamic> json) =>
-      _$ModAddCommunityViewFromJson(json);
+  factory ModAddCommunityView.fromJson(Map<String, dynamic> json) => _$ModAddCommunityViewFromJson(json);
 }
 
 @freezed
@@ -239,23 +188,16 @@ class ModTransferCommunityView with _$ModTransferCommunityView {
   }) = _ModTransferCommunityView;
 
   const ModTransferCommunityView._();
-  factory ModTransferCommunityView.fromJson(Map<String, dynamic> json) =>
-      _$ModTransferCommunityViewFromJson(json);
+  factory ModTransferCommunityView.fromJson(Map<String, dynamic> json) => _$ModTransferCommunityViewFromJson(json);
 }
 
 @freezed
 class ModAddView with _$ModAddView {
   @modelSerde
-  const factory ModAddView({
-    required ModAdd modAdd,
-    required Person moderator,
-    required Person moddedPerson,
-    required String instanceHost,
-  }) = _ModAddView;
+  const factory ModAddView({required ModAdd modAdd, required Person moderator, required Person moddedPerson, required String instanceHost}) = _ModAddView;
 
   const ModAddView._();
-  factory ModAddView.fromJson(Map<String, dynamic> json) =>
-      _$ModAddViewFromJson(json);
+  factory ModAddView.fromJson(Map<String, dynamic> json) => _$ModAddViewFromJson(json);
 }
 
 @freezed
@@ -267,8 +209,7 @@ class AdminPurgePersonView with _$AdminPurgePersonView {
   }) = _AdminPurgePersonView;
 
   const AdminPurgePersonView._();
-  factory AdminPurgePersonView.fromJson(Map<String, dynamic> json) =>
-      _$AdminPurgePersonViewFromJson(json);
+  factory AdminPurgePersonView.fromJson(Map<String, dynamic> json) => _$AdminPurgePersonViewFromJson(json);
 }
 
 @freezed
@@ -281,8 +222,7 @@ class AdminPurgePostView with _$AdminPurgePostView {
   }) = _AdminPurgePostView;
 
   const AdminPurgePostView._();
-  factory AdminPurgePostView.fromJson(Map<String, dynamic> json) =>
-      _$AdminPurgePostViewFromJson(json);
+  factory AdminPurgePostView.fromJson(Map<String, dynamic> json) => _$AdminPurgePostViewFromJson(json);
 }
 
 @freezed
@@ -294,8 +234,7 @@ class AdminPurgeCommunityView with _$AdminPurgeCommunityView {
   }) = _AdminPurgeCommunityView;
 
   const AdminPurgeCommunityView._();
-  factory AdminPurgeCommunityView.fromJson(Map<String, dynamic> json) =>
-      _$AdminPurgeCommunityViewFromJson(json);
+  factory AdminPurgeCommunityView.fromJson(Map<String, dynamic> json) => _$AdminPurgeCommunityViewFromJson(json);
 }
 
 @freezed
@@ -308,8 +247,7 @@ class AdminPurgeCommentView with _$AdminPurgeCommentView {
   }) = _AdminPurgeCommentView;
 
   const AdminPurgeCommentView._();
-  factory AdminPurgeCommentView.fromJson(Map<String, dynamic> json) =>
-      _$AdminPurgeCommentViewFromJson(json);
+  factory AdminPurgeCommentView.fromJson(Map<String, dynamic> json) => _$AdminPurgeCommentViewFromJson(json);
 }
 
 @freezed
@@ -322,8 +260,7 @@ class ModHideCommunityView with _$ModHideCommunityView {
   }) = _ModHideCommunityView;
 
   const ModHideCommunityView._();
-  factory ModHideCommunityView.fromJson(Map<String, dynamic> json) =>
-      _$ModHideCommunityViewFromJson(json);
+  factory ModHideCommunityView.fromJson(Map<String, dynamic> json) => _$ModHideCommunityViewFromJson(json);
 }
 
 @freezed
@@ -338,39 +275,25 @@ class ModBanFromCommunityView with _$ModBanFromCommunityView {
   }) = _ModBanFromCommunityView;
 
   const ModBanFromCommunityView._();
-  factory ModBanFromCommunityView.fromJson(Map<String, dynamic> json) =>
-      _$ModBanFromCommunityViewFromJson(json);
+  factory ModBanFromCommunityView.fromJson(Map<String, dynamic> json) => _$ModBanFromCommunityViewFromJson(json);
 }
 
 @freezed
 class ModBanView with _$ModBanView {
   @modelSerde
-  const factory ModBanView({
-    required ModBan modBan,
-    required Person moderator,
-    required Person bannedPerson,
-    required String instanceHost,
-  }) = _ModBanView;
+  const factory ModBanView({required ModBan modBan, required Person moderator, required Person bannedPerson, required String instanceHost}) = _ModBanView;
 
   const ModBanView._();
-  factory ModBanView.fromJson(Map<String, dynamic> json) =>
-      _$ModBanViewFromJson(json);
+  factory ModBanView.fromJson(Map<String, dynamic> json) => _$ModBanViewFromJson(json);
 }
 
 @freezed
 class ModLockPostView with _$ModLockPostView {
   @modelSerde
-  const factory ModLockPostView({
-    required ModLockPost modLockPost,
-    required Person moderator,
-    required Post post,
-    required CommunitySafe community,
-    required String instanceHost,
-  }) = _ModLockPostView;
+  const factory ModLockPostView({required ModLockPost modLockPost, required Person moderator, required Post post, required CommunitySafe community, required String instanceHost}) = _ModLockPostView;
 
   const ModLockPostView._();
-  factory ModLockPostView.fromJson(Map<String, dynamic> json) =>
-      _$ModLockPostViewFromJson(json);
+  factory ModLockPostView.fromJson(Map<String, dynamic> json) => _$ModLockPostViewFromJson(json);
 }
 
 @freezed
@@ -384,8 +307,7 @@ class ModFeaturePostView with _$ModFeaturePostView {
   }) = _ModFeaturePostView;
 
   const ModFeaturePostView._();
-  factory ModFeaturePostView.fromJson(Map<String, dynamic> json) =>
-      _$ModFeaturePostViewFromJson(json);
+  factory ModFeaturePostView.fromJson(Map<String, dynamic> json) => _$ModFeaturePostViewFromJson(json);
 }
 
 @freezed
@@ -401,8 +323,7 @@ class ModFeaturePost with _$ModFeaturePost {
   }) = _ModFeaturePost;
 
   const ModFeaturePost._();
-  factory ModFeaturePost.fromJson(Map<String, dynamic> json) =>
-      _$ModFeaturePostFromJson(json);
+  factory ModFeaturePost.fromJson(Map<String, dynamic> json) => _$ModFeaturePostFromJson(json);
 }
 
 @freezed
@@ -419,141 +340,92 @@ class ModRemoveCommentView with _$ModRemoveCommentView {
   }) = _ModRemoveCommentView;
 
   const ModRemoveCommentView._();
-  factory ModRemoveCommentView.fromJson(Map<String, dynamic> json) =>
-      _$ModRemoveCommentViewFromJson(json);
+  factory ModRemoveCommentView.fromJson(Map<String, dynamic> json) => _$ModRemoveCommentViewFromJson(json);
 }
 
 @freezed
 class ModRemoveCommunityView with _$ModRemoveCommunityView {
   @modelSerde
-  const factory ModRemoveCommunityView({
-    required ModRemoveCommunity modRemoveCommunity,
-    required Person moderator,
-    required CommunitySafe community,
-    required String instanceHost,
-  }) = _ModRemoveCommunityView;
+  const factory ModRemoveCommunityView({required ModRemoveCommunity modRemoveCommunity, required Person moderator, required CommunitySafe community, required String instanceHost}) =
+      _ModRemoveCommunityView;
 
   const ModRemoveCommunityView._();
-  factory ModRemoveCommunityView.fromJson(Map<String, dynamic> json) =>
-      _$ModRemoveCommunityViewFromJson(json);
+  factory ModRemoveCommunityView.fromJson(Map<String, dynamic> json) => _$ModRemoveCommunityViewFromJson(json);
 }
 
 @freezed
 class ModRemovePostView with _$ModRemovePostView {
   @modelSerde
-  const factory ModRemovePostView({
-    required ModRemovePost modRemovePost,
-    required Person moderator,
-    required Post post,
-    required CommunitySafe community,
-    required String instanceHost,
-  }) = _ModRemovePostView;
+  const factory ModRemovePostView({required ModRemovePost modRemovePost, required Person moderator, required Post post, required CommunitySafe community, required String instanceHost}) =
+      _ModRemovePostView;
 
   const ModRemovePostView._();
-  factory ModRemovePostView.fromJson(Map<String, dynamic> json) =>
-      _$ModRemovePostViewFromJson(json);
+  factory ModRemovePostView.fromJson(Map<String, dynamic> json) => _$ModRemovePostViewFromJson(json);
 }
 
 @freezed
 class ModStickyPostView with _$ModStickyPostView {
   @modelSerde
-  const factory ModStickyPostView({
-    required ModStickyPost modStickyPost,
-    required Person moderator,
-    required Post post,
-    required CommunitySafe community,
-    required String instanceHost,
-  }) = _ModStickyPostView;
+  const factory ModStickyPostView({required ModStickyPost modStickyPost, required Person moderator, required Post post, required CommunitySafe community, required String instanceHost}) =
+      _ModStickyPostView;
 
   const ModStickyPostView._();
-  factory ModStickyPostView.fromJson(Map<String, dynamic> json) =>
-      _$ModStickyPostViewFromJson(json);
+  factory ModStickyPostView.fromJson(Map<String, dynamic> json) => _$ModStickyPostViewFromJson(json);
 }
 
 @freezed
 class CommunityFollowerView with _$CommunityFollowerView {
   @modelSerde
-  const factory CommunityFollowerView({
-    required CommunitySafe community,
-    required Person follower,
-    required String instanceHost,
-  }) = _CommunityFollowerView;
+  const factory CommunityFollowerView({required CommunitySafe community, required Person follower, required String instanceHost}) = _CommunityFollowerView;
 
   const CommunityFollowerView._();
-  factory CommunityFollowerView.fromJson(Map<String, dynamic> json) =>
-      _$CommunityFollowerViewFromJson(json);
+  factory CommunityFollowerView.fromJson(Map<String, dynamic> json) => _$CommunityFollowerViewFromJson(json);
 }
 
 @freezed
 class CommunityModeratorView with _$CommunityModeratorView {
   @modelSerde
-  const factory CommunityModeratorView({
-    required CommunitySafe community,
-    required Person moderator,
-    required String instanceHost,
-  }) = _CommunityModeratorView;
+  const factory CommunityModeratorView({required CommunitySafe community, required Person moderator, required String instanceHost}) = _CommunityModeratorView;
 
   const CommunityModeratorView._();
-  factory CommunityModeratorView.fromJson(Map<String, dynamic> json) =>
-      _$CommunityModeratorViewFromJson(json);
+  factory CommunityModeratorView.fromJson(Map<String, dynamic> json) => _$CommunityModeratorViewFromJson(json);
 }
 
 @freezed
 class PersonBlockView with _$PersonBlockView {
   @modelSerde
-  const factory PersonBlockView({
-    required Person person,
-    required Person target,
-    required String instanceHost,
-  }) = _PersonBlockView;
+  const factory PersonBlockView({required Person person, required Person target, required String instanceHost}) = _PersonBlockView;
 
   const PersonBlockView._();
-  factory PersonBlockView.fromJson(Map<String, dynamic> json) =>
-      _$PersonBlockViewFromJson(json);
+  factory PersonBlockView.fromJson(Map<String, dynamic> json) => _$PersonBlockViewFromJson(json);
 }
 
 @freezed
 class CommunityBlockView with _$CommunityBlockView {
   @modelSerde
-  const factory CommunityBlockView({
-    required Person person,
-    required CommunitySafe community,
-    required String instanceHost,
-  }) = _CommunityBlockView;
+  const factory CommunityBlockView({required Person person, required CommunitySafe community, required String instanceHost}) = _CommunityBlockView;
 
   const CommunityBlockView._();
-  factory CommunityBlockView.fromJson(Map<String, dynamic> json) =>
-      _$CommunityBlockViewFromJson(json);
+  factory CommunityBlockView.fromJson(Map<String, dynamic> json) => _$CommunityBlockViewFromJson(json);
 }
 
 @freezed
 class CommunityPersonBanView with _$CommunityPersonBanView {
   @modelSerde
-  const factory CommunityPersonBanView({
-    required CommunitySafe community,
-    required Person person,
-    required String instanceHost,
-  }) = _CommunityPersonBanView;
+  const factory CommunityPersonBanView({required CommunitySafe community, required Person person, required String instanceHost}) = _CommunityPersonBanView;
 
   const CommunityPersonBanView._();
-  factory CommunityPersonBanView.fromJson(Map<String, dynamic> json) =>
-      _$CommunityPersonBanViewFromJson(json);
+  factory CommunityPersonBanView.fromJson(Map<String, dynamic> json) => _$CommunityPersonBanViewFromJson(json);
 }
 
 @freezed
 class CommunityView with _$CommunityView {
   @modelSerde
-  const factory CommunityView({
-    required CommunitySafe community,
-    required String subscribed,
-    required bool blocked,
-    required CommunityAggregates counts,
-    required String instanceHost,
-  }) = _CommunityView;
+  const factory CommunityView({required CommunitySafe community, required String subscribed, required bool blocked, required CommunityAggregates counts, required String instanceHost}) =
+      _CommunityView;
 
   const CommunityView._();
-  factory CommunityView.fromJson(Map<String, dynamic> json) =>
-      _$CommunityViewFromJson(json);
+  factory CommunityView.fromJson(Map<String, dynamic> json) => _$CommunityViewFromJson(json);
 }
 
 @freezed
@@ -568,6 +440,5 @@ class RegistrationApplicationView with _$RegistrationApplicationView {
   }) = _RegistrationApplicationView;
 
   const RegistrationApplicationView._();
-  factory RegistrationApplicationView.fromJson(Map<String, dynamic> json) =>
-      _$RegistrationApplicationViewFromJson(json);
+  factory RegistrationApplicationView.fromJson(Map<String, dynamic> json) => _$RegistrationApplicationViewFromJson(json);
 }

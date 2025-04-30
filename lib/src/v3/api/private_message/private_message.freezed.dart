@@ -12,7 +12,8 @@ part of 'private_message.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 GetPrivateMessages _$GetPrivateMessagesFromJson(Map<String, dynamic> json) {
   return _GetPrivateMessages.fromJson(json);
@@ -40,11 +41,17 @@ mixin _$GetPrivateMessages {
 /// @nodoc
 abstract class $GetPrivateMessagesCopyWith<$Res> {
   factory $GetPrivateMessagesCopyWith(
-          GetPrivateMessages value, $Res Function(GetPrivateMessages) then) =
-      _$GetPrivateMessagesCopyWithImpl<$Res, GetPrivateMessages>;
+    GetPrivateMessages value,
+    $Res Function(GetPrivateMessages) then,
+  ) = _$GetPrivateMessagesCopyWithImpl<$Res, GetPrivateMessages>;
   @useResult
-  $Res call(
-      {bool? unreadOnly, int? page, int? limit, int? creatorId, String? auth});
+  $Res call({
+    bool? unreadOnly,
+    int? page,
+    int? limit,
+    int? creatorId,
+    String? auth,
+  });
 }
 
 /// @nodoc
@@ -68,50 +75,65 @@ class _$GetPrivateMessagesCopyWithImpl<$Res, $Val extends GetPrivateMessages>
     Object? creatorId = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_value.copyWith(
-      unreadOnly: freezed == unreadOnly
-          ? _value.unreadOnly
-          : unreadOnly // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      page: freezed == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as int?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      creatorId: freezed == creatorId
-          ? _value.creatorId
-          : creatorId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            unreadOnly:
+                freezed == unreadOnly
+                    ? _value.unreadOnly
+                    : unreadOnly // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            page:
+                freezed == page
+                    ? _value.page
+                    : page // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            creatorId:
+                freezed == creatorId
+                    ? _value.creatorId
+                    : creatorId // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$GetPrivateMessagesImplCopyWith<$Res>
     implements $GetPrivateMessagesCopyWith<$Res> {
-  factory _$$GetPrivateMessagesImplCopyWith(_$GetPrivateMessagesImpl value,
-          $Res Function(_$GetPrivateMessagesImpl) then) =
-      __$$GetPrivateMessagesImplCopyWithImpl<$Res>;
+  factory _$$GetPrivateMessagesImplCopyWith(
+    _$GetPrivateMessagesImpl value,
+    $Res Function(_$GetPrivateMessagesImpl) then,
+  ) = __$$GetPrivateMessagesImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {bool? unreadOnly, int? page, int? limit, int? creatorId, String? auth});
+  $Res call({
+    bool? unreadOnly,
+    int? page,
+    int? limit,
+    int? creatorId,
+    String? auth,
+  });
 }
 
 /// @nodoc
 class __$$GetPrivateMessagesImplCopyWithImpl<$Res>
     extends _$GetPrivateMessagesCopyWithImpl<$Res, _$GetPrivateMessagesImpl>
     implements _$$GetPrivateMessagesImplCopyWith<$Res> {
-  __$$GetPrivateMessagesImplCopyWithImpl(_$GetPrivateMessagesImpl _value,
-      $Res Function(_$GetPrivateMessagesImpl) _then)
-      : super(_value, _then);
+  __$$GetPrivateMessagesImplCopyWithImpl(
+    _$GetPrivateMessagesImpl _value,
+    $Res Function(_$GetPrivateMessagesImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of GetPrivateMessages
   /// with the given fields replaced by the non-null parameter values.
@@ -124,28 +146,35 @@ class __$$GetPrivateMessagesImplCopyWithImpl<$Res>
     Object? creatorId = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_$GetPrivateMessagesImpl(
-      unreadOnly: freezed == unreadOnly
-          ? _value.unreadOnly
-          : unreadOnly // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      page: freezed == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as int?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      creatorId: freezed == creatorId
-          ? _value.creatorId
-          : creatorId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$GetPrivateMessagesImpl(
+        unreadOnly:
+            freezed == unreadOnly
+                ? _value.unreadOnly
+                : unreadOnly // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        page:
+            freezed == page
+                ? _value.page
+                : page // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        creatorId:
+            freezed == creatorId
+                ? _value.creatorId
+                : creatorId // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -153,25 +182,29 @@ class __$$GetPrivateMessagesImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$GetPrivateMessagesImpl extends _GetPrivateMessages {
-  const _$GetPrivateMessagesImpl(
-      {this.unreadOnly, this.page, this.limit, this.creatorId, this.auth})
-      : super._();
+  const _$GetPrivateMessagesImpl({
+    this.unreadOnly,
+    this.page,
+    this.limit,
+    this.creatorId,
+    this.auth,
+  }) : super._();
 
   factory _$GetPrivateMessagesImpl.fromJson(Map<String, dynamic> json) =>
       _$$GetPrivateMessagesImplFromJson(json);
 
   @override
   final bool? unreadOnly;
-// v0.18.0
+  // v0.18.0
   @override
   final int? page;
-// v0.18.0
+  // v0.18.0
   @override
   final int? limit;
-// v0.18.0
+  // v0.18.0
   @override
   final int? creatorId;
-// v0.19.0 (optional)
+  // v0.19.0 (optional)
   @override
   final String? auth;
 
@@ -206,23 +239,24 @@ class _$GetPrivateMessagesImpl extends _GetPrivateMessages {
   @pragma('vm:prefer-inline')
   _$$GetPrivateMessagesImplCopyWith<_$GetPrivateMessagesImpl> get copyWith =>
       __$$GetPrivateMessagesImplCopyWithImpl<_$GetPrivateMessagesImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetPrivateMessagesImplToJson(
-      this,
-    );
+    return _$$GetPrivateMessagesImplToJson(this);
   }
 }
 
 abstract class _GetPrivateMessages extends GetPrivateMessages {
-  const factory _GetPrivateMessages(
-      {final bool? unreadOnly,
-      final int? page,
-      final int? limit,
-      final int? creatorId,
-      final String? auth}) = _$GetPrivateMessagesImpl;
+  const factory _GetPrivateMessages({
+    final bool? unreadOnly,
+    final int? page,
+    final int? limit,
+    final int? creatorId,
+    final String? auth,
+  }) = _$GetPrivateMessagesImpl;
   const _GetPrivateMessages._() : super._();
 
   factory _GetPrivateMessages.fromJson(Map<String, dynamic> json) =
@@ -269,16 +303,19 @@ mixin _$CreatePrivateMessage {
 
 /// @nodoc
 abstract class $CreatePrivateMessageCopyWith<$Res> {
-  factory $CreatePrivateMessageCopyWith(CreatePrivateMessage value,
-          $Res Function(CreatePrivateMessage) then) =
-      _$CreatePrivateMessageCopyWithImpl<$Res, CreatePrivateMessage>;
+  factory $CreatePrivateMessageCopyWith(
+    CreatePrivateMessage value,
+    $Res Function(CreatePrivateMessage) then,
+  ) = _$CreatePrivateMessageCopyWithImpl<$Res, CreatePrivateMessage>;
   @useResult
   $Res call({String content, int recipientId, String auth});
 }
 
 /// @nodoc
-class _$CreatePrivateMessageCopyWithImpl<$Res,
-        $Val extends CreatePrivateMessage>
+class _$CreatePrivateMessageCopyWithImpl<
+  $Res,
+  $Val extends CreatePrivateMessage
+>
     implements $CreatePrivateMessageCopyWith<$Res> {
   _$CreatePrivateMessageCopyWithImpl(this._value, this._then);
 
@@ -296,29 +333,36 @@ class _$CreatePrivateMessageCopyWithImpl<$Res,
     Object? recipientId = null,
     Object? auth = null,
   }) {
-    return _then(_value.copyWith(
-      content: null == content
-          ? _value.content
-          : content // ignore: cast_nullable_to_non_nullable
-              as String,
-      recipientId: null == recipientId
-          ? _value.recipientId
-          : recipientId // ignore: cast_nullable_to_non_nullable
-              as int,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            content:
+                null == content
+                    ? _value.content
+                    : content // ignore: cast_nullable_to_non_nullable
+                        as String,
+            recipientId:
+                null == recipientId
+                    ? _value.recipientId
+                    : recipientId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$CreatePrivateMessageImplCopyWith<$Res>
     implements $CreatePrivateMessageCopyWith<$Res> {
-  factory _$$CreatePrivateMessageImplCopyWith(_$CreatePrivateMessageImpl value,
-          $Res Function(_$CreatePrivateMessageImpl) then) =
-      __$$CreatePrivateMessageImplCopyWithImpl<$Res>;
+  factory _$$CreatePrivateMessageImplCopyWith(
+    _$CreatePrivateMessageImpl value,
+    $Res Function(_$CreatePrivateMessageImpl) then,
+  ) = __$$CreatePrivateMessageImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String content, int recipientId, String auth});
@@ -328,9 +372,10 @@ abstract class _$$CreatePrivateMessageImplCopyWith<$Res>
 class __$$CreatePrivateMessageImplCopyWithImpl<$Res>
     extends _$CreatePrivateMessageCopyWithImpl<$Res, _$CreatePrivateMessageImpl>
     implements _$$CreatePrivateMessageImplCopyWith<$Res> {
-  __$$CreatePrivateMessageImplCopyWithImpl(_$CreatePrivateMessageImpl _value,
-      $Res Function(_$CreatePrivateMessageImpl) _then)
-      : super(_value, _then);
+  __$$CreatePrivateMessageImplCopyWithImpl(
+    _$CreatePrivateMessageImpl _value,
+    $Res Function(_$CreatePrivateMessageImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of CreatePrivateMessage
   /// with the given fields replaced by the non-null parameter values.
@@ -341,20 +386,25 @@ class __$$CreatePrivateMessageImplCopyWithImpl<$Res>
     Object? recipientId = null,
     Object? auth = null,
   }) {
-    return _then(_$CreatePrivateMessageImpl(
-      content: null == content
-          ? _value.content
-          : content // ignore: cast_nullable_to_non_nullable
-              as String,
-      recipientId: null == recipientId
-          ? _value.recipientId
-          : recipientId // ignore: cast_nullable_to_non_nullable
-              as int,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$CreatePrivateMessageImpl(
+        content:
+            null == content
+                ? _value.content
+                : content // ignore: cast_nullable_to_non_nullable
+                    as String,
+        recipientId:
+            null == recipientId
+                ? _value.recipientId
+                : recipientId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -362,9 +412,11 @@ class __$$CreatePrivateMessageImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$CreatePrivateMessageImpl extends _CreatePrivateMessage {
-  const _$CreatePrivateMessageImpl(
-      {required this.content, required this.recipientId, required this.auth})
-      : super._();
+  const _$CreatePrivateMessageImpl({
+    required this.content,
+    required this.recipientId,
+    required this.auth,
+  }) : super._();
 
   factory _$CreatePrivateMessageImpl.fromJson(Map<String, dynamic> json) =>
       _$$CreatePrivateMessageImplFromJson(json);
@@ -402,23 +454,24 @@ class _$CreatePrivateMessageImpl extends _CreatePrivateMessage {
   @override
   @pragma('vm:prefer-inline')
   _$$CreatePrivateMessageImplCopyWith<_$CreatePrivateMessageImpl>
-      get copyWith =>
-          __$$CreatePrivateMessageImplCopyWithImpl<_$CreatePrivateMessageImpl>(
-              this, _$identity);
+  get copyWith =>
+      __$$CreatePrivateMessageImplCopyWithImpl<_$CreatePrivateMessageImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CreatePrivateMessageImplToJson(
-      this,
-    );
+    return _$$CreatePrivateMessageImplToJson(this);
   }
 }
 
 abstract class _CreatePrivateMessage extends CreatePrivateMessage {
-  const factory _CreatePrivateMessage(
-      {required final String content,
-      required final int recipientId,
-      required final String auth}) = _$CreatePrivateMessageImpl;
+  const factory _CreatePrivateMessage({
+    required final String content,
+    required final int recipientId,
+    required final String auth,
+  }) = _$CreatePrivateMessageImpl;
   const _CreatePrivateMessage._() : super._();
 
   factory _CreatePrivateMessage.fromJson(Map<String, dynamic> json) =
@@ -436,7 +489,7 @@ abstract class _CreatePrivateMessage extends CreatePrivateMessage {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CreatePrivateMessageImplCopyWith<_$CreatePrivateMessageImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 EditPrivateMessage _$EditPrivateMessageFromJson(Map<String, dynamic> json) {
@@ -462,8 +515,9 @@ mixin _$EditPrivateMessage {
 /// @nodoc
 abstract class $EditPrivateMessageCopyWith<$Res> {
   factory $EditPrivateMessageCopyWith(
-          EditPrivateMessage value, $Res Function(EditPrivateMessage) then) =
-      _$EditPrivateMessageCopyWithImpl<$Res, EditPrivateMessage>;
+    EditPrivateMessage value,
+    $Res Function(EditPrivateMessage) then,
+  ) = _$EditPrivateMessageCopyWithImpl<$Res, EditPrivateMessage>;
   @useResult
   $Res call({int privateMessageId, String content, String? auth});
 }
@@ -487,29 +541,36 @@ class _$EditPrivateMessageCopyWithImpl<$Res, $Val extends EditPrivateMessage>
     Object? content = null,
     Object? auth = freezed,
   }) {
-    return _then(_value.copyWith(
-      privateMessageId: null == privateMessageId
-          ? _value.privateMessageId
-          : privateMessageId // ignore: cast_nullable_to_non_nullable
-              as int,
-      content: null == content
-          ? _value.content
-          : content // ignore: cast_nullable_to_non_nullable
-              as String,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            privateMessageId:
+                null == privateMessageId
+                    ? _value.privateMessageId
+                    : privateMessageId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            content:
+                null == content
+                    ? _value.content
+                    : content // ignore: cast_nullable_to_non_nullable
+                        as String,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$EditPrivateMessageImplCopyWith<$Res>
     implements $EditPrivateMessageCopyWith<$Res> {
-  factory _$$EditPrivateMessageImplCopyWith(_$EditPrivateMessageImpl value,
-          $Res Function(_$EditPrivateMessageImpl) then) =
-      __$$EditPrivateMessageImplCopyWithImpl<$Res>;
+  factory _$$EditPrivateMessageImplCopyWith(
+    _$EditPrivateMessageImpl value,
+    $Res Function(_$EditPrivateMessageImpl) then,
+  ) = __$$EditPrivateMessageImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int privateMessageId, String content, String? auth});
@@ -519,9 +580,10 @@ abstract class _$$EditPrivateMessageImplCopyWith<$Res>
 class __$$EditPrivateMessageImplCopyWithImpl<$Res>
     extends _$EditPrivateMessageCopyWithImpl<$Res, _$EditPrivateMessageImpl>
     implements _$$EditPrivateMessageImplCopyWith<$Res> {
-  __$$EditPrivateMessageImplCopyWithImpl(_$EditPrivateMessageImpl _value,
-      $Res Function(_$EditPrivateMessageImpl) _then)
-      : super(_value, _then);
+  __$$EditPrivateMessageImplCopyWithImpl(
+    _$EditPrivateMessageImpl _value,
+    $Res Function(_$EditPrivateMessageImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of EditPrivateMessage
   /// with the given fields replaced by the non-null parameter values.
@@ -532,20 +594,25 @@ class __$$EditPrivateMessageImplCopyWithImpl<$Res>
     Object? content = null,
     Object? auth = freezed,
   }) {
-    return _then(_$EditPrivateMessageImpl(
-      privateMessageId: null == privateMessageId
-          ? _value.privateMessageId
-          : privateMessageId // ignore: cast_nullable_to_non_nullable
-              as int,
-      content: null == content
-          ? _value.content
-          : content // ignore: cast_nullable_to_non_nullable
-              as String,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$EditPrivateMessageImpl(
+        privateMessageId:
+            null == privateMessageId
+                ? _value.privateMessageId
+                : privateMessageId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        content:
+            null == content
+                ? _value.content
+                : content // ignore: cast_nullable_to_non_nullable
+                    as String,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -553,19 +620,21 @@ class __$$EditPrivateMessageImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$EditPrivateMessageImpl extends _EditPrivateMessage {
-  const _$EditPrivateMessageImpl(
-      {required this.privateMessageId, required this.content, this.auth})
-      : super._();
+  const _$EditPrivateMessageImpl({
+    required this.privateMessageId,
+    required this.content,
+    this.auth,
+  }) : super._();
 
   factory _$EditPrivateMessageImpl.fromJson(Map<String, dynamic> json) =>
       _$$EditPrivateMessageImplFromJson(json);
 
   @override
   final int privateMessageId;
-// v0.18.0
+  // v0.18.0
   @override
   final String content;
-// v0.18.0
+  // v0.18.0
   @override
   final String? auth;
 
@@ -596,21 +665,22 @@ class _$EditPrivateMessageImpl extends _EditPrivateMessage {
   @pragma('vm:prefer-inline')
   _$$EditPrivateMessageImplCopyWith<_$EditPrivateMessageImpl> get copyWith =>
       __$$EditPrivateMessageImplCopyWithImpl<_$EditPrivateMessageImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$EditPrivateMessageImplToJson(
-      this,
-    );
+    return _$$EditPrivateMessageImplToJson(this);
   }
 }
 
 abstract class _EditPrivateMessage extends EditPrivateMessage {
-  const factory _EditPrivateMessage(
-      {required final int privateMessageId,
-      required final String content,
-      final String? auth}) = _$EditPrivateMessageImpl;
+  const factory _EditPrivateMessage({
+    required final int privateMessageId,
+    required final String content,
+    final String? auth,
+  }) = _$EditPrivateMessageImpl;
   const _EditPrivateMessage._() : super._();
 
   factory _EditPrivateMessage.fromJson(Map<String, dynamic> json) =
@@ -653,16 +723,19 @@ mixin _$DeletePrivateMessage {
 
 /// @nodoc
 abstract class $DeletePrivateMessageCopyWith<$Res> {
-  factory $DeletePrivateMessageCopyWith(DeletePrivateMessage value,
-          $Res Function(DeletePrivateMessage) then) =
-      _$DeletePrivateMessageCopyWithImpl<$Res, DeletePrivateMessage>;
+  factory $DeletePrivateMessageCopyWith(
+    DeletePrivateMessage value,
+    $Res Function(DeletePrivateMessage) then,
+  ) = _$DeletePrivateMessageCopyWithImpl<$Res, DeletePrivateMessage>;
   @useResult
   $Res call({int privateMessageId, bool deleted, String? auth});
 }
 
 /// @nodoc
-class _$DeletePrivateMessageCopyWithImpl<$Res,
-        $Val extends DeletePrivateMessage>
+class _$DeletePrivateMessageCopyWithImpl<
+  $Res,
+  $Val extends DeletePrivateMessage
+>
     implements $DeletePrivateMessageCopyWith<$Res> {
   _$DeletePrivateMessageCopyWithImpl(this._value, this._then);
 
@@ -680,29 +753,36 @@ class _$DeletePrivateMessageCopyWithImpl<$Res,
     Object? deleted = null,
     Object? auth = freezed,
   }) {
-    return _then(_value.copyWith(
-      privateMessageId: null == privateMessageId
-          ? _value.privateMessageId
-          : privateMessageId // ignore: cast_nullable_to_non_nullable
-              as int,
-      deleted: null == deleted
-          ? _value.deleted
-          : deleted // ignore: cast_nullable_to_non_nullable
-              as bool,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            privateMessageId:
+                null == privateMessageId
+                    ? _value.privateMessageId
+                    : privateMessageId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            deleted:
+                null == deleted
+                    ? _value.deleted
+                    : deleted // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$DeletePrivateMessageImplCopyWith<$Res>
     implements $DeletePrivateMessageCopyWith<$Res> {
-  factory _$$DeletePrivateMessageImplCopyWith(_$DeletePrivateMessageImpl value,
-          $Res Function(_$DeletePrivateMessageImpl) then) =
-      __$$DeletePrivateMessageImplCopyWithImpl<$Res>;
+  factory _$$DeletePrivateMessageImplCopyWith(
+    _$DeletePrivateMessageImpl value,
+    $Res Function(_$DeletePrivateMessageImpl) then,
+  ) = __$$DeletePrivateMessageImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int privateMessageId, bool deleted, String? auth});
@@ -712,9 +792,10 @@ abstract class _$$DeletePrivateMessageImplCopyWith<$Res>
 class __$$DeletePrivateMessageImplCopyWithImpl<$Res>
     extends _$DeletePrivateMessageCopyWithImpl<$Res, _$DeletePrivateMessageImpl>
     implements _$$DeletePrivateMessageImplCopyWith<$Res> {
-  __$$DeletePrivateMessageImplCopyWithImpl(_$DeletePrivateMessageImpl _value,
-      $Res Function(_$DeletePrivateMessageImpl) _then)
-      : super(_value, _then);
+  __$$DeletePrivateMessageImplCopyWithImpl(
+    _$DeletePrivateMessageImpl _value,
+    $Res Function(_$DeletePrivateMessageImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of DeletePrivateMessage
   /// with the given fields replaced by the non-null parameter values.
@@ -725,20 +806,25 @@ class __$$DeletePrivateMessageImplCopyWithImpl<$Res>
     Object? deleted = null,
     Object? auth = freezed,
   }) {
-    return _then(_$DeletePrivateMessageImpl(
-      privateMessageId: null == privateMessageId
-          ? _value.privateMessageId
-          : privateMessageId // ignore: cast_nullable_to_non_nullable
-              as int,
-      deleted: null == deleted
-          ? _value.deleted
-          : deleted // ignore: cast_nullable_to_non_nullable
-              as bool,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$DeletePrivateMessageImpl(
+        privateMessageId:
+            null == privateMessageId
+                ? _value.privateMessageId
+                : privateMessageId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        deleted:
+            null == deleted
+                ? _value.deleted
+                : deleted // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -746,19 +832,21 @@ class __$$DeletePrivateMessageImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$DeletePrivateMessageImpl extends _DeletePrivateMessage {
-  const _$DeletePrivateMessageImpl(
-      {required this.privateMessageId, required this.deleted, this.auth})
-      : super._();
+  const _$DeletePrivateMessageImpl({
+    required this.privateMessageId,
+    required this.deleted,
+    this.auth,
+  }) : super._();
 
   factory _$DeletePrivateMessageImpl.fromJson(Map<String, dynamic> json) =>
       _$$DeletePrivateMessageImplFromJson(json);
 
   @override
   final int privateMessageId;
-// v0.18.0
+  // v0.18.0
   @override
   final bool deleted;
-// v0.18.0
+  // v0.18.0
   @override
   final String? auth;
 
@@ -788,23 +876,24 @@ class _$DeletePrivateMessageImpl extends _DeletePrivateMessage {
   @override
   @pragma('vm:prefer-inline')
   _$$DeletePrivateMessageImplCopyWith<_$DeletePrivateMessageImpl>
-      get copyWith =>
-          __$$DeletePrivateMessageImplCopyWithImpl<_$DeletePrivateMessageImpl>(
-              this, _$identity);
+  get copyWith =>
+      __$$DeletePrivateMessageImplCopyWithImpl<_$DeletePrivateMessageImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DeletePrivateMessageImplToJson(
-      this,
-    );
+    return _$$DeletePrivateMessageImplToJson(this);
   }
 }
 
 abstract class _DeletePrivateMessage extends DeletePrivateMessage {
-  const factory _DeletePrivateMessage(
-      {required final int privateMessageId,
-      required final bool deleted,
-      final String? auth}) = _$DeletePrivateMessageImpl;
+  const factory _DeletePrivateMessage({
+    required final int privateMessageId,
+    required final bool deleted,
+    final String? auth,
+  }) = _$DeletePrivateMessageImpl;
   const _DeletePrivateMessage._() : super._();
 
   factory _DeletePrivateMessage.fromJson(Map<String, dynamic> json) =
@@ -822,11 +911,12 @@ abstract class _DeletePrivateMessage extends DeletePrivateMessage {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeletePrivateMessageImplCopyWith<_$DeletePrivateMessageImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 MarkPrivateMessageAsRead _$MarkPrivateMessageAsReadFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _MarkPrivateMessageAsRead.fromJson(json);
 }
 
@@ -848,16 +938,19 @@ mixin _$MarkPrivateMessageAsRead {
 
 /// @nodoc
 abstract class $MarkPrivateMessageAsReadCopyWith<$Res> {
-  factory $MarkPrivateMessageAsReadCopyWith(MarkPrivateMessageAsRead value,
-          $Res Function(MarkPrivateMessageAsRead) then) =
-      _$MarkPrivateMessageAsReadCopyWithImpl<$Res, MarkPrivateMessageAsRead>;
+  factory $MarkPrivateMessageAsReadCopyWith(
+    MarkPrivateMessageAsRead value,
+    $Res Function(MarkPrivateMessageAsRead) then,
+  ) = _$MarkPrivateMessageAsReadCopyWithImpl<$Res, MarkPrivateMessageAsRead>;
   @useResult
   $Res call({int privateMessageId, bool read, String? auth});
 }
 
 /// @nodoc
-class _$MarkPrivateMessageAsReadCopyWithImpl<$Res,
-        $Val extends MarkPrivateMessageAsRead>
+class _$MarkPrivateMessageAsReadCopyWithImpl<
+  $Res,
+  $Val extends MarkPrivateMessageAsRead
+>
     implements $MarkPrivateMessageAsReadCopyWith<$Res> {
   _$MarkPrivateMessageAsReadCopyWithImpl(this._value, this._then);
 
@@ -875,20 +968,26 @@ class _$MarkPrivateMessageAsReadCopyWithImpl<$Res,
     Object? read = null,
     Object? auth = freezed,
   }) {
-    return _then(_value.copyWith(
-      privateMessageId: null == privateMessageId
-          ? _value.privateMessageId
-          : privateMessageId // ignore: cast_nullable_to_non_nullable
-              as int,
-      read: null == read
-          ? _value.read
-          : read // ignore: cast_nullable_to_non_nullable
-              as bool,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            privateMessageId:
+                null == privateMessageId
+                    ? _value.privateMessageId
+                    : privateMessageId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            read:
+                null == read
+                    ? _value.read
+                    : read // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -896,9 +995,9 @@ class _$MarkPrivateMessageAsReadCopyWithImpl<$Res,
 abstract class _$$MarkPrivateMessageAsReadImplCopyWith<$Res>
     implements $MarkPrivateMessageAsReadCopyWith<$Res> {
   factory _$$MarkPrivateMessageAsReadImplCopyWith(
-          _$MarkPrivateMessageAsReadImpl value,
-          $Res Function(_$MarkPrivateMessageAsReadImpl) then) =
-      __$$MarkPrivateMessageAsReadImplCopyWithImpl<$Res>;
+    _$MarkPrivateMessageAsReadImpl value,
+    $Res Function(_$MarkPrivateMessageAsReadImpl) then,
+  ) = __$$MarkPrivateMessageAsReadImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int privateMessageId, bool read, String? auth});
@@ -906,13 +1005,16 @@ abstract class _$$MarkPrivateMessageAsReadImplCopyWith<$Res>
 
 /// @nodoc
 class __$$MarkPrivateMessageAsReadImplCopyWithImpl<$Res>
-    extends _$MarkPrivateMessageAsReadCopyWithImpl<$Res,
-        _$MarkPrivateMessageAsReadImpl>
+    extends
+        _$MarkPrivateMessageAsReadCopyWithImpl<
+          $Res,
+          _$MarkPrivateMessageAsReadImpl
+        >
     implements _$$MarkPrivateMessageAsReadImplCopyWith<$Res> {
   __$$MarkPrivateMessageAsReadImplCopyWithImpl(
-      _$MarkPrivateMessageAsReadImpl _value,
-      $Res Function(_$MarkPrivateMessageAsReadImpl) _then)
-      : super(_value, _then);
+    _$MarkPrivateMessageAsReadImpl _value,
+    $Res Function(_$MarkPrivateMessageAsReadImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of MarkPrivateMessageAsRead
   /// with the given fields replaced by the non-null parameter values.
@@ -923,20 +1025,25 @@ class __$$MarkPrivateMessageAsReadImplCopyWithImpl<$Res>
     Object? read = null,
     Object? auth = freezed,
   }) {
-    return _then(_$MarkPrivateMessageAsReadImpl(
-      privateMessageId: null == privateMessageId
-          ? _value.privateMessageId
-          : privateMessageId // ignore: cast_nullable_to_non_nullable
-              as int,
-      read: null == read
-          ? _value.read
-          : read // ignore: cast_nullable_to_non_nullable
-              as bool,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$MarkPrivateMessageAsReadImpl(
+        privateMessageId:
+            null == privateMessageId
+                ? _value.privateMessageId
+                : privateMessageId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        read:
+            null == read
+                ? _value.read
+                : read // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -944,19 +1051,21 @@ class __$$MarkPrivateMessageAsReadImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$MarkPrivateMessageAsReadImpl extends _MarkPrivateMessageAsRead {
-  const _$MarkPrivateMessageAsReadImpl(
-      {required this.privateMessageId, required this.read, this.auth})
-      : super._();
+  const _$MarkPrivateMessageAsReadImpl({
+    required this.privateMessageId,
+    required this.read,
+    this.auth,
+  }) : super._();
 
   factory _$MarkPrivateMessageAsReadImpl.fromJson(Map<String, dynamic> json) =>
       _$$MarkPrivateMessageAsReadImplFromJson(json);
 
   @override
   final int privateMessageId;
-// v0.18.0
+  // v0.18.0
   @override
   final bool read;
-// v0.18.0
+  // v0.18.0
   @override
   final String? auth;
 
@@ -986,22 +1095,22 @@ class _$MarkPrivateMessageAsReadImpl extends _MarkPrivateMessageAsRead {
   @override
   @pragma('vm:prefer-inline')
   _$$MarkPrivateMessageAsReadImplCopyWith<_$MarkPrivateMessageAsReadImpl>
-      get copyWith => __$$MarkPrivateMessageAsReadImplCopyWithImpl<
-          _$MarkPrivateMessageAsReadImpl>(this, _$identity);
+  get copyWith => __$$MarkPrivateMessageAsReadImplCopyWithImpl<
+    _$MarkPrivateMessageAsReadImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MarkPrivateMessageAsReadImplToJson(
-      this,
-    );
+    return _$$MarkPrivateMessageAsReadImplToJson(this);
   }
 }
 
 abstract class _MarkPrivateMessageAsRead extends MarkPrivateMessageAsRead {
-  const factory _MarkPrivateMessageAsRead(
-      {required final int privateMessageId,
-      required final bool read,
-      final String? auth}) = _$MarkPrivateMessageAsReadImpl;
+  const factory _MarkPrivateMessageAsRead({
+    required final int privateMessageId,
+    required final bool read,
+    final String? auth,
+  }) = _$MarkPrivateMessageAsReadImpl;
   const _MarkPrivateMessageAsRead._() : super._();
 
   factory _MarkPrivateMessageAsRead.fromJson(Map<String, dynamic> json) =
@@ -1019,11 +1128,12 @@ abstract class _MarkPrivateMessageAsRead extends MarkPrivateMessageAsRead {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MarkPrivateMessageAsReadImplCopyWith<_$MarkPrivateMessageAsReadImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 CreatePrivateMessageReport _$CreatePrivateMessageReportFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _CreatePrivateMessageReport.fromJson(json);
 }
 
@@ -1040,22 +1150,28 @@ mixin _$CreatePrivateMessageReport {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $CreatePrivateMessageReportCopyWith<CreatePrivateMessageReport>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CreatePrivateMessageReportCopyWith<$Res> {
-  factory $CreatePrivateMessageReportCopyWith(CreatePrivateMessageReport value,
-          $Res Function(CreatePrivateMessageReport) then) =
-      _$CreatePrivateMessageReportCopyWithImpl<$Res,
-          CreatePrivateMessageReport>;
+  factory $CreatePrivateMessageReportCopyWith(
+    CreatePrivateMessageReport value,
+    $Res Function(CreatePrivateMessageReport) then,
+  ) =
+      _$CreatePrivateMessageReportCopyWithImpl<
+        $Res,
+        CreatePrivateMessageReport
+      >;
   @useResult
   $Res call({int privateMessageId, String reason, String? auth});
 }
 
 /// @nodoc
-class _$CreatePrivateMessageReportCopyWithImpl<$Res,
-        $Val extends CreatePrivateMessageReport>
+class _$CreatePrivateMessageReportCopyWithImpl<
+  $Res,
+  $Val extends CreatePrivateMessageReport
+>
     implements $CreatePrivateMessageReportCopyWith<$Res> {
   _$CreatePrivateMessageReportCopyWithImpl(this._value, this._then);
 
@@ -1073,20 +1189,26 @@ class _$CreatePrivateMessageReportCopyWithImpl<$Res,
     Object? reason = null,
     Object? auth = freezed,
   }) {
-    return _then(_value.copyWith(
-      privateMessageId: null == privateMessageId
-          ? _value.privateMessageId
-          : privateMessageId // ignore: cast_nullable_to_non_nullable
-              as int,
-      reason: null == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            privateMessageId:
+                null == privateMessageId
+                    ? _value.privateMessageId
+                    : privateMessageId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            reason:
+                null == reason
+                    ? _value.reason
+                    : reason // ignore: cast_nullable_to_non_nullable
+                        as String,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -1094,9 +1216,9 @@ class _$CreatePrivateMessageReportCopyWithImpl<$Res,
 abstract class _$$CreatePrivateMessageReportImplCopyWith<$Res>
     implements $CreatePrivateMessageReportCopyWith<$Res> {
   factory _$$CreatePrivateMessageReportImplCopyWith(
-          _$CreatePrivateMessageReportImpl value,
-          $Res Function(_$CreatePrivateMessageReportImpl) then) =
-      __$$CreatePrivateMessageReportImplCopyWithImpl<$Res>;
+    _$CreatePrivateMessageReportImpl value,
+    $Res Function(_$CreatePrivateMessageReportImpl) then,
+  ) = __$$CreatePrivateMessageReportImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int privateMessageId, String reason, String? auth});
@@ -1104,13 +1226,16 @@ abstract class _$$CreatePrivateMessageReportImplCopyWith<$Res>
 
 /// @nodoc
 class __$$CreatePrivateMessageReportImplCopyWithImpl<$Res>
-    extends _$CreatePrivateMessageReportCopyWithImpl<$Res,
-        _$CreatePrivateMessageReportImpl>
+    extends
+        _$CreatePrivateMessageReportCopyWithImpl<
+          $Res,
+          _$CreatePrivateMessageReportImpl
+        >
     implements _$$CreatePrivateMessageReportImplCopyWith<$Res> {
   __$$CreatePrivateMessageReportImplCopyWithImpl(
-      _$CreatePrivateMessageReportImpl _value,
-      $Res Function(_$CreatePrivateMessageReportImpl) _then)
-      : super(_value, _then);
+    _$CreatePrivateMessageReportImpl _value,
+    $Res Function(_$CreatePrivateMessageReportImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of CreatePrivateMessageReport
   /// with the given fields replaced by the non-null parameter values.
@@ -1121,20 +1246,25 @@ class __$$CreatePrivateMessageReportImplCopyWithImpl<$Res>
     Object? reason = null,
     Object? auth = freezed,
   }) {
-    return _then(_$CreatePrivateMessageReportImpl(
-      privateMessageId: null == privateMessageId
-          ? _value.privateMessageId
-          : privateMessageId // ignore: cast_nullable_to_non_nullable
-              as int,
-      reason: null == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$CreatePrivateMessageReportImpl(
+        privateMessageId:
+            null == privateMessageId
+                ? _value.privateMessageId
+                : privateMessageId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        reason:
+            null == reason
+                ? _value.reason
+                : reason // ignore: cast_nullable_to_non_nullable
+                    as String,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -1142,20 +1272,22 @@ class __$$CreatePrivateMessageReportImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$CreatePrivateMessageReportImpl extends _CreatePrivateMessageReport {
-  const _$CreatePrivateMessageReportImpl(
-      {required this.privateMessageId, required this.reason, this.auth})
-      : super._();
+  const _$CreatePrivateMessageReportImpl({
+    required this.privateMessageId,
+    required this.reason,
+    this.auth,
+  }) : super._();
 
   factory _$CreatePrivateMessageReportImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$CreatePrivateMessageReportImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$CreatePrivateMessageReportImplFromJson(json);
 
   @override
   final int privateMessageId;
-// v0.18.0
+  // v0.18.0
   @override
   final String reason;
-// v0.18.0
+  // v0.18.0
   @override
   final String? auth;
 
@@ -1185,22 +1317,22 @@ class _$CreatePrivateMessageReportImpl extends _CreatePrivateMessageReport {
   @override
   @pragma('vm:prefer-inline')
   _$$CreatePrivateMessageReportImplCopyWith<_$CreatePrivateMessageReportImpl>
-      get copyWith => __$$CreatePrivateMessageReportImplCopyWithImpl<
-          _$CreatePrivateMessageReportImpl>(this, _$identity);
+  get copyWith => __$$CreatePrivateMessageReportImplCopyWithImpl<
+    _$CreatePrivateMessageReportImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CreatePrivateMessageReportImplToJson(
-      this,
-    );
+    return _$$CreatePrivateMessageReportImplToJson(this);
   }
 }
 
 abstract class _CreatePrivateMessageReport extends CreatePrivateMessageReport {
-  const factory _CreatePrivateMessageReport(
-      {required final int privateMessageId,
-      required final String reason,
-      final String? auth}) = _$CreatePrivateMessageReportImpl;
+  const factory _CreatePrivateMessageReport({
+    required final int privateMessageId,
+    required final String reason,
+    final String? auth,
+  }) = _$CreatePrivateMessageReportImpl;
   const _CreatePrivateMessageReport._() : super._();
 
   factory _CreatePrivateMessageReport.fromJson(Map<String, dynamic> json) =
@@ -1218,11 +1350,12 @@ abstract class _CreatePrivateMessageReport extends CreatePrivateMessageReport {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CreatePrivateMessageReportImplCopyWith<_$CreatePrivateMessageReportImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 ResolvePrivateMessageReport _$ResolvePrivateMessageReportFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _ResolvePrivateMessageReport.fromJson(json);
 }
 
@@ -1239,23 +1372,28 @@ mixin _$ResolvePrivateMessageReport {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   $ResolvePrivateMessageReportCopyWith<ResolvePrivateMessageReport>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ResolvePrivateMessageReportCopyWith<$Res> {
   factory $ResolvePrivateMessageReportCopyWith(
-          ResolvePrivateMessageReport value,
-          $Res Function(ResolvePrivateMessageReport) then) =
-      _$ResolvePrivateMessageReportCopyWithImpl<$Res,
-          ResolvePrivateMessageReport>;
+    ResolvePrivateMessageReport value,
+    $Res Function(ResolvePrivateMessageReport) then,
+  ) =
+      _$ResolvePrivateMessageReportCopyWithImpl<
+        $Res,
+        ResolvePrivateMessageReport
+      >;
   @useResult
   $Res call({int reportId, bool resolved, String? auth});
 }
 
 /// @nodoc
-class _$ResolvePrivateMessageReportCopyWithImpl<$Res,
-        $Val extends ResolvePrivateMessageReport>
+class _$ResolvePrivateMessageReportCopyWithImpl<
+  $Res,
+  $Val extends ResolvePrivateMessageReport
+>
     implements $ResolvePrivateMessageReportCopyWith<$Res> {
   _$ResolvePrivateMessageReportCopyWithImpl(this._value, this._then);
 
@@ -1273,20 +1411,26 @@ class _$ResolvePrivateMessageReportCopyWithImpl<$Res,
     Object? resolved = null,
     Object? auth = freezed,
   }) {
-    return _then(_value.copyWith(
-      reportId: null == reportId
-          ? _value.reportId
-          : reportId // ignore: cast_nullable_to_non_nullable
-              as int,
-      resolved: null == resolved
-          ? _value.resolved
-          : resolved // ignore: cast_nullable_to_non_nullable
-              as bool,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            reportId:
+                null == reportId
+                    ? _value.reportId
+                    : reportId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            resolved:
+                null == resolved
+                    ? _value.resolved
+                    : resolved // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -1294,9 +1438,9 @@ class _$ResolvePrivateMessageReportCopyWithImpl<$Res,
 abstract class _$$ResolvePrivateMessageReportImplCopyWith<$Res>
     implements $ResolvePrivateMessageReportCopyWith<$Res> {
   factory _$$ResolvePrivateMessageReportImplCopyWith(
-          _$ResolvePrivateMessageReportImpl value,
-          $Res Function(_$ResolvePrivateMessageReportImpl) then) =
-      __$$ResolvePrivateMessageReportImplCopyWithImpl<$Res>;
+    _$ResolvePrivateMessageReportImpl value,
+    $Res Function(_$ResolvePrivateMessageReportImpl) then,
+  ) = __$$ResolvePrivateMessageReportImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int reportId, bool resolved, String? auth});
@@ -1304,13 +1448,16 @@ abstract class _$$ResolvePrivateMessageReportImplCopyWith<$Res>
 
 /// @nodoc
 class __$$ResolvePrivateMessageReportImplCopyWithImpl<$Res>
-    extends _$ResolvePrivateMessageReportCopyWithImpl<$Res,
-        _$ResolvePrivateMessageReportImpl>
+    extends
+        _$ResolvePrivateMessageReportCopyWithImpl<
+          $Res,
+          _$ResolvePrivateMessageReportImpl
+        >
     implements _$$ResolvePrivateMessageReportImplCopyWith<$Res> {
   __$$ResolvePrivateMessageReportImplCopyWithImpl(
-      _$ResolvePrivateMessageReportImpl _value,
-      $Res Function(_$ResolvePrivateMessageReportImpl) _then)
-      : super(_value, _then);
+    _$ResolvePrivateMessageReportImpl _value,
+    $Res Function(_$ResolvePrivateMessageReportImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ResolvePrivateMessageReport
   /// with the given fields replaced by the non-null parameter values.
@@ -1321,20 +1468,25 @@ class __$$ResolvePrivateMessageReportImplCopyWithImpl<$Res>
     Object? resolved = null,
     Object? auth = freezed,
   }) {
-    return _then(_$ResolvePrivateMessageReportImpl(
-      reportId: null == reportId
-          ? _value.reportId
-          : reportId // ignore: cast_nullable_to_non_nullable
-              as int,
-      resolved: null == resolved
-          ? _value.resolved
-          : resolved // ignore: cast_nullable_to_non_nullable
-              as bool,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$ResolvePrivateMessageReportImpl(
+        reportId:
+            null == reportId
+                ? _value.reportId
+                : reportId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        resolved:
+            null == resolved
+                ? _value.resolved
+                : resolved // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -1342,20 +1494,22 @@ class __$$ResolvePrivateMessageReportImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$ResolvePrivateMessageReportImpl extends _ResolvePrivateMessageReport {
-  const _$ResolvePrivateMessageReportImpl(
-      {required this.reportId, required this.resolved, this.auth})
-      : super._();
+  const _$ResolvePrivateMessageReportImpl({
+    required this.reportId,
+    required this.resolved,
+    this.auth,
+  }) : super._();
 
   factory _$ResolvePrivateMessageReportImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$ResolvePrivateMessageReportImplFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$$ResolvePrivateMessageReportImplFromJson(json);
 
   @override
   final int reportId;
-// v0.18.0
+  // v0.18.0
   @override
   final bool resolved;
-// v0.18.0
+  // v0.18.0
   @override
   final String? auth;
 
@@ -1386,23 +1540,23 @@ class _$ResolvePrivateMessageReportImpl extends _ResolvePrivateMessageReport {
   @override
   @pragma('vm:prefer-inline')
   _$$ResolvePrivateMessageReportImplCopyWith<_$ResolvePrivateMessageReportImpl>
-      get copyWith => __$$ResolvePrivateMessageReportImplCopyWithImpl<
-          _$ResolvePrivateMessageReportImpl>(this, _$identity);
+  get copyWith => __$$ResolvePrivateMessageReportImplCopyWithImpl<
+    _$ResolvePrivateMessageReportImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ResolvePrivateMessageReportImplToJson(
-      this,
-    );
+    return _$$ResolvePrivateMessageReportImplToJson(this);
   }
 }
 
 abstract class _ResolvePrivateMessageReport
     extends ResolvePrivateMessageReport {
-  const factory _ResolvePrivateMessageReport(
-      {required final int reportId,
-      required final bool resolved,
-      final String? auth}) = _$ResolvePrivateMessageReportImpl;
+  const factory _ResolvePrivateMessageReport({
+    required final int reportId,
+    required final bool resolved,
+    final String? auth,
+  }) = _$ResolvePrivateMessageReportImpl;
   const _ResolvePrivateMessageReport._() : super._();
 
   factory _ResolvePrivateMessageReport.fromJson(Map<String, dynamic> json) =
@@ -1420,11 +1574,12 @@ abstract class _ResolvePrivateMessageReport
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ResolvePrivateMessageReportImplCopyWith<_$ResolvePrivateMessageReportImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 ListPrivateMessageReports _$ListPrivateMessageReportsFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _ListPrivateMessageReports.fromJson(json);
 }
 
@@ -1448,21 +1603,25 @@ mixin _$ListPrivateMessageReports {
 
 /// @nodoc
 abstract class $ListPrivateMessageReportsCopyWith<$Res> {
-  factory $ListPrivateMessageReportsCopyWith(ListPrivateMessageReports value,
-          $Res Function(ListPrivateMessageReports) then) =
-      _$ListPrivateMessageReportsCopyWithImpl<$Res, ListPrivateMessageReports>;
+  factory $ListPrivateMessageReportsCopyWith(
+    ListPrivateMessageReports value,
+    $Res Function(ListPrivateMessageReports) then,
+  ) = _$ListPrivateMessageReportsCopyWithImpl<$Res, ListPrivateMessageReports>;
   @useResult
-  $Res call(
-      {int? page,
-      int? limit,
-      bool? unresolvedOnly,
-      int? communityId,
-      String? auth});
+  $Res call({
+    int? page,
+    int? limit,
+    bool? unresolvedOnly,
+    int? communityId,
+    String? auth,
+  });
 }
 
 /// @nodoc
-class _$ListPrivateMessageReportsCopyWithImpl<$Res,
-        $Val extends ListPrivateMessageReports>
+class _$ListPrivateMessageReportsCopyWithImpl<
+  $Res,
+  $Val extends ListPrivateMessageReports
+>
     implements $ListPrivateMessageReportsCopyWith<$Res> {
   _$ListPrivateMessageReportsCopyWithImpl(this._value, this._then);
 
@@ -1482,28 +1641,36 @@ class _$ListPrivateMessageReportsCopyWithImpl<$Res,
     Object? communityId = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_value.copyWith(
-      page: freezed == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as int?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      unresolvedOnly: freezed == unresolvedOnly
-          ? _value.unresolvedOnly
-          : unresolvedOnly // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      communityId: freezed == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            page:
+                freezed == page
+                    ? _value.page
+                    : page // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            unresolvedOnly:
+                freezed == unresolvedOnly
+                    ? _value.unresolvedOnly
+                    : unresolvedOnly // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            communityId:
+                freezed == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -1511,28 +1678,32 @@ class _$ListPrivateMessageReportsCopyWithImpl<$Res,
 abstract class _$$ListPrivateMessageReportsImplCopyWith<$Res>
     implements $ListPrivateMessageReportsCopyWith<$Res> {
   factory _$$ListPrivateMessageReportsImplCopyWith(
-          _$ListPrivateMessageReportsImpl value,
-          $Res Function(_$ListPrivateMessageReportsImpl) then) =
-      __$$ListPrivateMessageReportsImplCopyWithImpl<$Res>;
+    _$ListPrivateMessageReportsImpl value,
+    $Res Function(_$ListPrivateMessageReportsImpl) then,
+  ) = __$$ListPrivateMessageReportsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int? page,
-      int? limit,
-      bool? unresolvedOnly,
-      int? communityId,
-      String? auth});
+  $Res call({
+    int? page,
+    int? limit,
+    bool? unresolvedOnly,
+    int? communityId,
+    String? auth,
+  });
 }
 
 /// @nodoc
 class __$$ListPrivateMessageReportsImplCopyWithImpl<$Res>
-    extends _$ListPrivateMessageReportsCopyWithImpl<$Res,
-        _$ListPrivateMessageReportsImpl>
+    extends
+        _$ListPrivateMessageReportsCopyWithImpl<
+          $Res,
+          _$ListPrivateMessageReportsImpl
+        >
     implements _$$ListPrivateMessageReportsImplCopyWith<$Res> {
   __$$ListPrivateMessageReportsImplCopyWithImpl(
-      _$ListPrivateMessageReportsImpl _value,
-      $Res Function(_$ListPrivateMessageReportsImpl) _then)
-      : super(_value, _then);
+    _$ListPrivateMessageReportsImpl _value,
+    $Res Function(_$ListPrivateMessageReportsImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ListPrivateMessageReports
   /// with the given fields replaced by the non-null parameter values.
@@ -1545,28 +1716,35 @@ class __$$ListPrivateMessageReportsImplCopyWithImpl<$Res>
     Object? communityId = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_$ListPrivateMessageReportsImpl(
-      page: freezed == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as int?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      unresolvedOnly: freezed == unresolvedOnly
-          ? _value.unresolvedOnly
-          : unresolvedOnly // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      communityId: freezed == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$ListPrivateMessageReportsImpl(
+        page:
+            freezed == page
+                ? _value.page
+                : page // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        unresolvedOnly:
+            freezed == unresolvedOnly
+                ? _value.unresolvedOnly
+                : unresolvedOnly // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        communityId:
+            freezed == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -1574,22 +1752,26 @@ class __$$ListPrivateMessageReportsImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$ListPrivateMessageReportsImpl extends _ListPrivateMessageReports {
-  const _$ListPrivateMessageReportsImpl(
-      {this.page, this.limit, this.unresolvedOnly, this.communityId, this.auth})
-      : super._();
+  const _$ListPrivateMessageReportsImpl({
+    this.page,
+    this.limit,
+    this.unresolvedOnly,
+    this.communityId,
+    this.auth,
+  }) : super._();
 
   factory _$ListPrivateMessageReportsImpl.fromJson(Map<String, dynamic> json) =>
       _$$ListPrivateMessageReportsImplFromJson(json);
 
   @override
   final int? page;
-// v0.18.0
+  // v0.18.0
   @override
   final int? limit;
-// v0.18.0
+  // v0.18.0
   @override
   final bool? unresolvedOnly;
-// v0.18.0
+  // v0.18.0
   @override
   final int? communityId;
   @override
@@ -1625,24 +1807,24 @@ class _$ListPrivateMessageReportsImpl extends _ListPrivateMessageReports {
   @override
   @pragma('vm:prefer-inline')
   _$$ListPrivateMessageReportsImplCopyWith<_$ListPrivateMessageReportsImpl>
-      get copyWith => __$$ListPrivateMessageReportsImplCopyWithImpl<
-          _$ListPrivateMessageReportsImpl>(this, _$identity);
+  get copyWith => __$$ListPrivateMessageReportsImplCopyWithImpl<
+    _$ListPrivateMessageReportsImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ListPrivateMessageReportsImplToJson(
-      this,
-    );
+    return _$$ListPrivateMessageReportsImplToJson(this);
   }
 }
 
 abstract class _ListPrivateMessageReports extends ListPrivateMessageReports {
-  const factory _ListPrivateMessageReports(
-      {final int? page,
-      final int? limit,
-      final bool? unresolvedOnly,
-      final int? communityId,
-      final String? auth}) = _$ListPrivateMessageReportsImpl;
+  const factory _ListPrivateMessageReports({
+    final int? page,
+    final int? limit,
+    final bool? unresolvedOnly,
+    final int? communityId,
+    final String? auth,
+  }) = _$ListPrivateMessageReportsImpl;
   const _ListPrivateMessageReports._() : super._();
 
   factory _ListPrivateMessageReports.fromJson(Map<String, dynamic> json) =
@@ -1664,5 +1846,5 @@ abstract class _ListPrivateMessageReports extends ListPrivateMessageReports {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ListPrivateMessageReportsImplCopyWith<_$ListPrivateMessageReportsImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

@@ -12,7 +12,8 @@ part of 'image_details.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ImageDetails _$ImageDetailsFromJson(Map<String, dynamic> json) {
   return _ImageDetails.fromJson(json);
@@ -38,8 +39,9 @@ mixin _$ImageDetails {
 /// @nodoc
 abstract class $ImageDetailsCopyWith<$Res> {
   factory $ImageDetailsCopyWith(
-          ImageDetails value, $Res Function(ImageDetails) then) =
-      _$ImageDetailsCopyWithImpl<$Res, ImageDetails>;
+    ImageDetails value,
+    $Res Function(ImageDetails) then,
+  ) = _$ImageDetailsCopyWithImpl<$Res, ImageDetails>;
   @useResult
   $Res call({String link, int width, int height, String contentType});
 }
@@ -64,24 +66,31 @@ class _$ImageDetailsCopyWithImpl<$Res, $Val extends ImageDetails>
     Object? height = null,
     Object? contentType = null,
   }) {
-    return _then(_value.copyWith(
-      link: null == link
-          ? _value.link
-          : link // ignore: cast_nullable_to_non_nullable
-              as String,
-      width: null == width
-          ? _value.width
-          : width // ignore: cast_nullable_to_non_nullable
-              as int,
-      height: null == height
-          ? _value.height
-          : height // ignore: cast_nullable_to_non_nullable
-              as int,
-      contentType: null == contentType
-          ? _value.contentType
-          : contentType // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            link:
+                null == link
+                    ? _value.link
+                    : link // ignore: cast_nullable_to_non_nullable
+                        as String,
+            width:
+                null == width
+                    ? _value.width
+                    : width // ignore: cast_nullable_to_non_nullable
+                        as int,
+            height:
+                null == height
+                    ? _value.height
+                    : height // ignore: cast_nullable_to_non_nullable
+                        as int,
+            contentType:
+                null == contentType
+                    ? _value.contentType
+                    : contentType // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -89,8 +98,9 @@ class _$ImageDetailsCopyWithImpl<$Res, $Val extends ImageDetails>
 abstract class _$$ImageDetailsImplCopyWith<$Res>
     implements $ImageDetailsCopyWith<$Res> {
   factory _$$ImageDetailsImplCopyWith(
-          _$ImageDetailsImpl value, $Res Function(_$ImageDetailsImpl) then) =
-      __$$ImageDetailsImplCopyWithImpl<$Res>;
+    _$ImageDetailsImpl value,
+    $Res Function(_$ImageDetailsImpl) then,
+  ) = __$$ImageDetailsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String link, int width, int height, String contentType});
@@ -101,8 +111,9 @@ class __$$ImageDetailsImplCopyWithImpl<$Res>
     extends _$ImageDetailsCopyWithImpl<$Res, _$ImageDetailsImpl>
     implements _$$ImageDetailsImplCopyWith<$Res> {
   __$$ImageDetailsImplCopyWithImpl(
-      _$ImageDetailsImpl _value, $Res Function(_$ImageDetailsImpl) _then)
-      : super(_value, _then);
+    _$ImageDetailsImpl _value,
+    $Res Function(_$ImageDetailsImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ImageDetails
   /// with the given fields replaced by the non-null parameter values.
@@ -114,24 +125,30 @@ class __$$ImageDetailsImplCopyWithImpl<$Res>
     Object? height = null,
     Object? contentType = null,
   }) {
-    return _then(_$ImageDetailsImpl(
-      link: null == link
-          ? _value.link
-          : link // ignore: cast_nullable_to_non_nullable
-              as String,
-      width: null == width
-          ? _value.width
-          : width // ignore: cast_nullable_to_non_nullable
-              as int,
-      height: null == height
-          ? _value.height
-          : height // ignore: cast_nullable_to_non_nullable
-              as int,
-      contentType: null == contentType
-          ? _value.contentType
-          : contentType // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$ImageDetailsImpl(
+        link:
+            null == link
+                ? _value.link
+                : link // ignore: cast_nullable_to_non_nullable
+                    as String,
+        width:
+            null == width
+                ? _value.width
+                : width // ignore: cast_nullable_to_non_nullable
+                    as int,
+        height:
+            null == height
+                ? _value.height
+                : height // ignore: cast_nullable_to_non_nullable
+                    as int,
+        contentType:
+            null == contentType
+                ? _value.contentType
+                : contentType // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -139,25 +156,25 @@ class __$$ImageDetailsImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$ImageDetailsImpl extends _ImageDetails {
-  const _$ImageDetailsImpl(
-      {required this.link,
-      required this.width,
-      required this.height,
-      required this.contentType})
-      : super._();
+  const _$ImageDetailsImpl({
+    required this.link,
+    required this.width,
+    required this.height,
+    required this.contentType,
+  }) : super._();
 
   factory _$ImageDetailsImpl.fromJson(Map<String, dynamic> json) =>
       _$$ImageDetailsImplFromJson(json);
 
   @override
   final String link;
-// v0.19.6 (required)
+  // v0.19.6 (required)
   @override
   final int width;
-// v0.19.6 (required)
+  // v0.19.6 (required)
   @override
   final int height;
-// v0.19.6 (required)
+  // v0.19.6 (required)
   @override
   final String contentType;
 
@@ -193,18 +210,17 @@ class _$ImageDetailsImpl extends _ImageDetails {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ImageDetailsImplToJson(
-      this,
-    );
+    return _$$ImageDetailsImplToJson(this);
   }
 }
 
 abstract class _ImageDetails extends ImageDetails {
-  const factory _ImageDetails(
-      {required final String link,
-      required final int width,
-      required final int height,
-      required final String contentType}) = _$ImageDetailsImpl;
+  const factory _ImageDetails({
+    required final String link,
+    required final int width,
+    required final int height,
+    required final String contentType,
+  }) = _$ImageDetailsImpl;
   const _ImageDetails._() : super._();
 
   factory _ImageDetails.fromJson(Map<String, dynamic> json) =

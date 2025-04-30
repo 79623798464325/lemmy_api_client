@@ -12,7 +12,8 @@ part of 'person.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 Login _$LoginFromJson(Map<String, dynamic> json) {
   return _Login.fromJson(json);
@@ -39,10 +40,11 @@ abstract class $LoginCopyWith<$Res> {
   factory $LoginCopyWith(Login value, $Res Function(Login) then) =
       _$LoginCopyWithImpl<$Res, Login>;
   @useResult
-  $Res call(
-      {String usernameOrEmail,
-      String password,
-      @JsonKey(name: 'totp_2fa_token') String? totp2faToken});
+  $Res call({
+    String usernameOrEmail,
+    String password,
+    @JsonKey(name: 'totp_2fa_token') String? totp2faToken,
+  });
 }
 
 /// @nodoc
@@ -64,34 +66,42 @@ class _$LoginCopyWithImpl<$Res, $Val extends Login>
     Object? password = null,
     Object? totp2faToken = freezed,
   }) {
-    return _then(_value.copyWith(
-      usernameOrEmail: null == usernameOrEmail
-          ? _value.usernameOrEmail
-          : usernameOrEmail // ignore: cast_nullable_to_non_nullable
-              as String,
-      password: null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String,
-      totp2faToken: freezed == totp2faToken
-          ? _value.totp2faToken
-          : totp2faToken // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            usernameOrEmail:
+                null == usernameOrEmail
+                    ? _value.usernameOrEmail
+                    : usernameOrEmail // ignore: cast_nullable_to_non_nullable
+                        as String,
+            password:
+                null == password
+                    ? _value.password
+                    : password // ignore: cast_nullable_to_non_nullable
+                        as String,
+            totp2faToken:
+                freezed == totp2faToken
+                    ? _value.totp2faToken
+                    : totp2faToken // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$LoginImplCopyWith<$Res> implements $LoginCopyWith<$Res> {
   factory _$$LoginImplCopyWith(
-          _$LoginImpl value, $Res Function(_$LoginImpl) then) =
-      __$$LoginImplCopyWithImpl<$Res>;
+    _$LoginImpl value,
+    $Res Function(_$LoginImpl) then,
+  ) = __$$LoginImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String usernameOrEmail,
-      String password,
-      @JsonKey(name: 'totp_2fa_token') String? totp2faToken});
+  $Res call({
+    String usernameOrEmail,
+    String password,
+    @JsonKey(name: 'totp_2fa_token') String? totp2faToken,
+  });
 }
 
 /// @nodoc
@@ -99,8 +109,9 @@ class __$$LoginImplCopyWithImpl<$Res>
     extends _$LoginCopyWithImpl<$Res, _$LoginImpl>
     implements _$$LoginImplCopyWith<$Res> {
   __$$LoginImplCopyWithImpl(
-      _$LoginImpl _value, $Res Function(_$LoginImpl) _then)
-      : super(_value, _then);
+    _$LoginImpl _value,
+    $Res Function(_$LoginImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of Login
   /// with the given fields replaced by the non-null parameter values.
@@ -111,20 +122,25 @@ class __$$LoginImplCopyWithImpl<$Res>
     Object? password = null,
     Object? totp2faToken = freezed,
   }) {
-    return _then(_$LoginImpl(
-      usernameOrEmail: null == usernameOrEmail
-          ? _value.usernameOrEmail
-          : usernameOrEmail // ignore: cast_nullable_to_non_nullable
-              as String,
-      password: null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String,
-      totp2faToken: freezed == totp2faToken
-          ? _value.totp2faToken
-          : totp2faToken // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$LoginImpl(
+        usernameOrEmail:
+            null == usernameOrEmail
+                ? _value.usernameOrEmail
+                : usernameOrEmail // ignore: cast_nullable_to_non_nullable
+                    as String,
+        password:
+            null == password
+                ? _value.password
+                : password // ignore: cast_nullable_to_non_nullable
+                    as String,
+        totp2faToken:
+            freezed == totp2faToken
+                ? _value.totp2faToken
+                : totp2faToken // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -132,21 +148,21 @@ class __$$LoginImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$LoginImpl extends _Login {
-  const _$LoginImpl(
-      {required this.usernameOrEmail,
-      required this.password,
-      @JsonKey(name: 'totp_2fa_token') this.totp2faToken})
-      : super._();
+  const _$LoginImpl({
+    required this.usernameOrEmail,
+    required this.password,
+    @JsonKey(name: 'totp_2fa_token') this.totp2faToken,
+  }) : super._();
 
   factory _$LoginImpl.fromJson(Map<String, dynamic> json) =>
       _$$LoginImplFromJson(json);
 
   @override
   final String usernameOrEmail;
-// v0.18.0
+  // v0.18.0
   @override
   final String password;
-// v0.18.0
+  // v0.18.0
   @override
   @JsonKey(name: 'totp_2fa_token')
   final String? totp2faToken;
@@ -184,18 +200,16 @@ class _$LoginImpl extends _Login {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$LoginImplToJson(
-      this,
-    );
+    return _$$LoginImplToJson(this);
   }
 }
 
 abstract class _Login extends Login {
-  const factory _Login(
-          {required final String usernameOrEmail,
-          required final String password,
-          @JsonKey(name: 'totp_2fa_token') final String? totp2faToken}) =
-      _$LoginImpl;
+  const factory _Login({
+    required final String usernameOrEmail,
+    required final String password,
+    @JsonKey(name: 'totp_2fa_token') final String? totp2faToken,
+  }) = _$LoginImpl;
   const _Login._() : super._();
 
   factory _Login.fromJson(Map<String, dynamic> json) = _$LoginImpl.fromJson;
@@ -249,8 +263,9 @@ class _$LogoutCopyWithImpl<$Res, $Val extends Logout>
 /// @nodoc
 abstract class _$$LogoutImplCopyWith<$Res> {
   factory _$$LogoutImplCopyWith(
-          _$LogoutImpl value, $Res Function(_$LogoutImpl) then) =
-      __$$LogoutImplCopyWithImpl<$Res>;
+    _$LogoutImpl value,
+    $Res Function(_$LogoutImpl) then,
+  ) = __$$LogoutImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -258,8 +273,9 @@ class __$$LogoutImplCopyWithImpl<$Res>
     extends _$LogoutCopyWithImpl<$Res, _$LogoutImpl>
     implements _$$LogoutImplCopyWith<$Res> {
   __$$LogoutImplCopyWithImpl(
-      _$LogoutImpl _value, $Res Function(_$LogoutImpl) _then)
-      : super(_value, _then);
+    _$LogoutImpl _value,
+    $Res Function(_$LogoutImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of Logout
   /// with the given fields replaced by the non-null parameter values.
@@ -291,9 +307,7 @@ class _$LogoutImpl extends _Logout {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$LogoutImplToJson(
-      this,
-    );
+    return _$$LogoutImplToJson(this);
   }
 }
 
@@ -325,8 +339,9 @@ mixin _$ExportSettings {
 /// @nodoc
 abstract class $ExportSettingsCopyWith<$Res> {
   factory $ExportSettingsCopyWith(
-          ExportSettings value, $Res Function(ExportSettings) then) =
-      _$ExportSettingsCopyWithImpl<$Res, ExportSettings>;
+    ExportSettings value,
+    $Res Function(ExportSettings) then,
+  ) = _$ExportSettingsCopyWithImpl<$Res, ExportSettings>;
   @useResult
   $Res call({String? auth});
 }
@@ -345,24 +360,27 @@ class _$ExportSettingsCopyWithImpl<$Res, $Val extends ExportSettings>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? auth = freezed,
-  }) {
-    return _then(_value.copyWith(
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  $Res call({Object? auth = freezed}) {
+    return _then(
+      _value.copyWith(
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$ExportSettingsImplCopyWith<$Res>
     implements $ExportSettingsCopyWith<$Res> {
-  factory _$$ExportSettingsImplCopyWith(_$ExportSettingsImpl value,
-          $Res Function(_$ExportSettingsImpl) then) =
-      __$$ExportSettingsImplCopyWithImpl<$Res>;
+  factory _$$ExportSettingsImplCopyWith(
+    _$ExportSettingsImpl value,
+    $Res Function(_$ExportSettingsImpl) then,
+  ) = __$$ExportSettingsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? auth});
@@ -373,22 +391,24 @@ class __$$ExportSettingsImplCopyWithImpl<$Res>
     extends _$ExportSettingsCopyWithImpl<$Res, _$ExportSettingsImpl>
     implements _$$ExportSettingsImplCopyWith<$Res> {
   __$$ExportSettingsImplCopyWithImpl(
-      _$ExportSettingsImpl _value, $Res Function(_$ExportSettingsImpl) _then)
-      : super(_value, _then);
+    _$ExportSettingsImpl _value,
+    $Res Function(_$ExportSettingsImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ExportSettings
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? auth = freezed,
-  }) {
-    return _then(_$ExportSettingsImpl(
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+  $Res call({Object? auth = freezed}) {
+    return _then(
+      _$ExportSettingsImpl(
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -428,13 +448,13 @@ class _$ExportSettingsImpl extends _ExportSettings {
   @pragma('vm:prefer-inline')
   _$$ExportSettingsImplCopyWith<_$ExportSettingsImpl> get copyWith =>
       __$$ExportSettingsImplCopyWithImpl<_$ExportSettingsImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ExportSettingsImplToJson(
-      this,
-    );
+    return _$$ExportSettingsImplToJson(this);
   }
 }
 
@@ -478,8 +498,9 @@ mixin _$ImportSettings {
 /// @nodoc
 abstract class $ImportSettingsCopyWith<$Res> {
   factory $ImportSettingsCopyWith(
-          ImportSettings value, $Res Function(ImportSettings) then) =
-      _$ImportSettingsCopyWithImpl<$Res, ImportSettings>;
+    ImportSettings value,
+    $Res Function(ImportSettings) then,
+  ) = _$ImportSettingsCopyWithImpl<$Res, ImportSettings>;
   @useResult
   $Res call({String? auth, dynamic data});
 }
@@ -498,29 +519,32 @@ class _$ImportSettingsCopyWithImpl<$Res, $Val extends ImportSettings>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? auth = freezed,
-    Object? data = freezed,
-  }) {
-    return _then(_value.copyWith(
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-      data: freezed == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-    ) as $Val);
+  $Res call({Object? auth = freezed, Object? data = freezed}) {
+    return _then(
+      _value.copyWith(
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            data:
+                freezed == data
+                    ? _value.data
+                    : data // ignore: cast_nullable_to_non_nullable
+                        as dynamic,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$ImportSettingsImplCopyWith<$Res>
     implements $ImportSettingsCopyWith<$Res> {
-  factory _$$ImportSettingsImplCopyWith(_$ImportSettingsImpl value,
-          $Res Function(_$ImportSettingsImpl) then) =
-      __$$ImportSettingsImplCopyWithImpl<$Res>;
+  factory _$$ImportSettingsImplCopyWith(
+    _$ImportSettingsImpl value,
+    $Res Function(_$ImportSettingsImpl) then,
+  ) = __$$ImportSettingsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? auth, dynamic data});
@@ -531,27 +555,29 @@ class __$$ImportSettingsImplCopyWithImpl<$Res>
     extends _$ImportSettingsCopyWithImpl<$Res, _$ImportSettingsImpl>
     implements _$$ImportSettingsImplCopyWith<$Res> {
   __$$ImportSettingsImplCopyWithImpl(
-      _$ImportSettingsImpl _value, $Res Function(_$ImportSettingsImpl) _then)
-      : super(_value, _then);
+    _$ImportSettingsImpl _value,
+    $Res Function(_$ImportSettingsImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ImportSettings
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? auth = freezed,
-    Object? data = freezed,
-  }) {
-    return _then(_$ImportSettingsImpl(
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-      data: freezed == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-    ));
+  $Res call({Object? auth = freezed, Object? data = freezed}) {
+    return _then(
+      _$ImportSettingsImpl(
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        data:
+            freezed == data
+                ? _value.data
+                : data // ignore: cast_nullable_to_non_nullable
+                    as dynamic,
+      ),
+    );
   }
 }
 
@@ -595,13 +621,13 @@ class _$ImportSettingsImpl extends _ImportSettings {
   @pragma('vm:prefer-inline')
   _$$ImportSettingsImplCopyWith<_$ImportSettingsImpl> get copyWith =>
       __$$ImportSettingsImplCopyWithImpl<_$ImportSettingsImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ImportSettingsImplToJson(
-      this,
-    );
+    return _$$ImportSettingsImplToJson(this);
   }
 }
 
@@ -647,8 +673,9 @@ mixin _$ValidateAuth {
 /// @nodoc
 abstract class $ValidateAuthCopyWith<$Res> {
   factory $ValidateAuthCopyWith(
-          ValidateAuth value, $Res Function(ValidateAuth) then) =
-      _$ValidateAuthCopyWithImpl<$Res, ValidateAuth>;
+    ValidateAuth value,
+    $Res Function(ValidateAuth) then,
+  ) = _$ValidateAuthCopyWithImpl<$Res, ValidateAuth>;
   @useResult
   $Res call({String? auth});
 }
@@ -667,15 +694,17 @@ class _$ValidateAuthCopyWithImpl<$Res, $Val extends ValidateAuth>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? auth = freezed,
-  }) {
-    return _then(_value.copyWith(
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  $Res call({Object? auth = freezed}) {
+    return _then(
+      _value.copyWith(
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -683,8 +712,9 @@ class _$ValidateAuthCopyWithImpl<$Res, $Val extends ValidateAuth>
 abstract class _$$ValidateAuthImplCopyWith<$Res>
     implements $ValidateAuthCopyWith<$Res> {
   factory _$$ValidateAuthImplCopyWith(
-          _$ValidateAuthImpl value, $Res Function(_$ValidateAuthImpl) then) =
-      __$$ValidateAuthImplCopyWithImpl<$Res>;
+    _$ValidateAuthImpl value,
+    $Res Function(_$ValidateAuthImpl) then,
+  ) = __$$ValidateAuthImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? auth});
@@ -695,22 +725,24 @@ class __$$ValidateAuthImplCopyWithImpl<$Res>
     extends _$ValidateAuthCopyWithImpl<$Res, _$ValidateAuthImpl>
     implements _$$ValidateAuthImplCopyWith<$Res> {
   __$$ValidateAuthImplCopyWithImpl(
-      _$ValidateAuthImpl _value, $Res Function(_$ValidateAuthImpl) _then)
-      : super(_value, _then);
+    _$ValidateAuthImpl _value,
+    $Res Function(_$ValidateAuthImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ValidateAuth
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? auth = freezed,
-  }) {
-    return _then(_$ValidateAuthImpl(
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+  $Res call({Object? auth = freezed}) {
+    return _then(
+      _$ValidateAuthImpl(
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -753,9 +785,7 @@ class _$ValidateAuthImpl extends _ValidateAuth {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ValidateAuthImplToJson(
-      this,
-    );
+    return _$$ValidateAuthImplToJson(this);
   }
 }
 
@@ -801,8 +831,9 @@ mixin _$UpdateTotp {
 /// @nodoc
 abstract class $UpdateTotpCopyWith<$Res> {
   factory $UpdateTotpCopyWith(
-          UpdateTotp value, $Res Function(UpdateTotp) then) =
-      _$UpdateTotpCopyWithImpl<$Res, UpdateTotp>;
+    UpdateTotp value,
+    $Res Function(UpdateTotp) then,
+  ) = _$UpdateTotpCopyWithImpl<$Res, UpdateTotp>;
   @useResult
   $Res call({String? auth, String totpToken, bool enabled});
 }
@@ -826,20 +857,26 @@ class _$UpdateTotpCopyWithImpl<$Res, $Val extends UpdateTotp>
     Object? totpToken = null,
     Object? enabled = null,
   }) {
-    return _then(_value.copyWith(
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-      totpToken: null == totpToken
-          ? _value.totpToken
-          : totpToken // ignore: cast_nullable_to_non_nullable
-              as String,
-      enabled: null == enabled
-          ? _value.enabled
-          : enabled // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            totpToken:
+                null == totpToken
+                    ? _value.totpToken
+                    : totpToken // ignore: cast_nullable_to_non_nullable
+                        as String,
+            enabled:
+                null == enabled
+                    ? _value.enabled
+                    : enabled // ignore: cast_nullable_to_non_nullable
+                        as bool,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -847,8 +884,9 @@ class _$UpdateTotpCopyWithImpl<$Res, $Val extends UpdateTotp>
 abstract class _$$UpdateTotpImplCopyWith<$Res>
     implements $UpdateTotpCopyWith<$Res> {
   factory _$$UpdateTotpImplCopyWith(
-          _$UpdateTotpImpl value, $Res Function(_$UpdateTotpImpl) then) =
-      __$$UpdateTotpImplCopyWithImpl<$Res>;
+    _$UpdateTotpImpl value,
+    $Res Function(_$UpdateTotpImpl) then,
+  ) = __$$UpdateTotpImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? auth, String totpToken, bool enabled});
@@ -859,8 +897,9 @@ class __$$UpdateTotpImplCopyWithImpl<$Res>
     extends _$UpdateTotpCopyWithImpl<$Res, _$UpdateTotpImpl>
     implements _$$UpdateTotpImplCopyWith<$Res> {
   __$$UpdateTotpImplCopyWithImpl(
-      _$UpdateTotpImpl _value, $Res Function(_$UpdateTotpImpl) _then)
-      : super(_value, _then);
+    _$UpdateTotpImpl _value,
+    $Res Function(_$UpdateTotpImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UpdateTotp
   /// with the given fields replaced by the non-null parameter values.
@@ -871,20 +910,25 @@ class __$$UpdateTotpImplCopyWithImpl<$Res>
     Object? totpToken = null,
     Object? enabled = null,
   }) {
-    return _then(_$UpdateTotpImpl(
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-      totpToken: null == totpToken
-          ? _value.totpToken
-          : totpToken // ignore: cast_nullable_to_non_nullable
-              as String,
-      enabled: null == enabled
-          ? _value.enabled
-          : enabled // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
+    return _then(
+      _$UpdateTotpImpl(
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        totpToken:
+            null == totpToken
+                ? _value.totpToken
+                : totpToken // ignore: cast_nullable_to_non_nullable
+                    as String,
+        enabled:
+            null == enabled
+                ? _value.enabled
+                : enabled // ignore: cast_nullable_to_non_nullable
+                    as bool,
+      ),
+    );
   }
 }
 
@@ -892,9 +936,11 @@ class __$$UpdateTotpImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$UpdateTotpImpl extends _UpdateTotp {
-  const _$UpdateTotpImpl(
-      {this.auth, required this.totpToken, required this.enabled})
-      : super._();
+  const _$UpdateTotpImpl({
+    this.auth,
+    required this.totpToken,
+    required this.enabled,
+  }) : super._();
 
   factory _$UpdateTotpImpl.fromJson(Map<String, dynamic> json) =>
       _$$UpdateTotpImplFromJson(json);
@@ -903,7 +949,7 @@ class _$UpdateTotpImpl extends _UpdateTotp {
   final String? auth;
   @override
   final String totpToken;
-// v0.19.0 (required)
+  // v0.19.0 (required)
   @override
   final bool enabled;
 
@@ -937,17 +983,16 @@ class _$UpdateTotpImpl extends _UpdateTotp {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UpdateTotpImplToJson(
-      this,
-    );
+    return _$$UpdateTotpImplToJson(this);
   }
 }
 
 abstract class _UpdateTotp extends UpdateTotp {
-  const factory _UpdateTotp(
-      {final String? auth,
-      required final String totpToken,
-      required final bool enabled}) = _$UpdateTotpImpl;
+  const factory _UpdateTotp({
+    final String? auth,
+    required final String totpToken,
+    required final bool enabled,
+  }) = _$UpdateTotpImpl;
   const _UpdateTotp._() : super._();
 
   factory _UpdateTotp.fromJson(Map<String, dynamic> json) =
@@ -999,16 +1044,17 @@ abstract class $RegisterCopyWith<$Res> {
   factory $RegisterCopyWith(Register value, $Res Function(Register) then) =
       _$RegisterCopyWithImpl<$Res, Register>;
   @useResult
-  $Res call(
-      {String username,
-      String? email,
-      String password,
-      String passwordVerify,
-      bool showNsfw,
-      String? captchaUuid,
-      String? captchaAnswer,
-      String? honeypot,
-      String? answer});
+  $Res call({
+    String username,
+    String? email,
+    String password,
+    String passwordVerify,
+    bool showNsfw,
+    String? captchaUuid,
+    String? captchaAnswer,
+    String? honeypot,
+    String? answer,
+  });
 }
 
 /// @nodoc
@@ -1036,44 +1082,56 @@ class _$RegisterCopyWithImpl<$Res, $Val extends Register>
     Object? honeypot = freezed,
     Object? answer = freezed,
   }) {
-    return _then(_value.copyWith(
-      username: null == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String,
-      email: freezed == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String?,
-      password: null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String,
-      passwordVerify: null == passwordVerify
-          ? _value.passwordVerify
-          : passwordVerify // ignore: cast_nullable_to_non_nullable
-              as String,
-      showNsfw: null == showNsfw
-          ? _value.showNsfw
-          : showNsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
-      captchaUuid: freezed == captchaUuid
-          ? _value.captchaUuid
-          : captchaUuid // ignore: cast_nullable_to_non_nullable
-              as String?,
-      captchaAnswer: freezed == captchaAnswer
-          ? _value.captchaAnswer
-          : captchaAnswer // ignore: cast_nullable_to_non_nullable
-              as String?,
-      honeypot: freezed == honeypot
-          ? _value.honeypot
-          : honeypot // ignore: cast_nullable_to_non_nullable
-              as String?,
-      answer: freezed == answer
-          ? _value.answer
-          : answer // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            username:
+                null == username
+                    ? _value.username
+                    : username // ignore: cast_nullable_to_non_nullable
+                        as String,
+            email:
+                freezed == email
+                    ? _value.email
+                    : email // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            password:
+                null == password
+                    ? _value.password
+                    : password // ignore: cast_nullable_to_non_nullable
+                        as String,
+            passwordVerify:
+                null == passwordVerify
+                    ? _value.passwordVerify
+                    : passwordVerify // ignore: cast_nullable_to_non_nullable
+                        as String,
+            showNsfw:
+                null == showNsfw
+                    ? _value.showNsfw
+                    : showNsfw // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            captchaUuid:
+                freezed == captchaUuid
+                    ? _value.captchaUuid
+                    : captchaUuid // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            captchaAnswer:
+                freezed == captchaAnswer
+                    ? _value.captchaAnswer
+                    : captchaAnswer // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            honeypot:
+                freezed == honeypot
+                    ? _value.honeypot
+                    : honeypot // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            answer:
+                freezed == answer
+                    ? _value.answer
+                    : answer // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -1081,20 +1139,22 @@ class _$RegisterCopyWithImpl<$Res, $Val extends Register>
 abstract class _$$RegisterImplCopyWith<$Res>
     implements $RegisterCopyWith<$Res> {
   factory _$$RegisterImplCopyWith(
-          _$RegisterImpl value, $Res Function(_$RegisterImpl) then) =
-      __$$RegisterImplCopyWithImpl<$Res>;
+    _$RegisterImpl value,
+    $Res Function(_$RegisterImpl) then,
+  ) = __$$RegisterImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String username,
-      String? email,
-      String password,
-      String passwordVerify,
-      bool showNsfw,
-      String? captchaUuid,
-      String? captchaAnswer,
-      String? honeypot,
-      String? answer});
+  $Res call({
+    String username,
+    String? email,
+    String password,
+    String passwordVerify,
+    bool showNsfw,
+    String? captchaUuid,
+    String? captchaAnswer,
+    String? honeypot,
+    String? answer,
+  });
 }
 
 /// @nodoc
@@ -1102,8 +1162,9 @@ class __$$RegisterImplCopyWithImpl<$Res>
     extends _$RegisterCopyWithImpl<$Res, _$RegisterImpl>
     implements _$$RegisterImplCopyWith<$Res> {
   __$$RegisterImplCopyWithImpl(
-      _$RegisterImpl _value, $Res Function(_$RegisterImpl) _then)
-      : super(_value, _then);
+    _$RegisterImpl _value,
+    $Res Function(_$RegisterImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of Register
   /// with the given fields replaced by the non-null parameter values.
@@ -1120,44 +1181,55 @@ class __$$RegisterImplCopyWithImpl<$Res>
     Object? honeypot = freezed,
     Object? answer = freezed,
   }) {
-    return _then(_$RegisterImpl(
-      username: null == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String,
-      email: freezed == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String?,
-      password: null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String,
-      passwordVerify: null == passwordVerify
-          ? _value.passwordVerify
-          : passwordVerify // ignore: cast_nullable_to_non_nullable
-              as String,
-      showNsfw: null == showNsfw
-          ? _value.showNsfw
-          : showNsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
-      captchaUuid: freezed == captchaUuid
-          ? _value.captchaUuid
-          : captchaUuid // ignore: cast_nullable_to_non_nullable
-              as String?,
-      captchaAnswer: freezed == captchaAnswer
-          ? _value.captchaAnswer
-          : captchaAnswer // ignore: cast_nullable_to_non_nullable
-              as String?,
-      honeypot: freezed == honeypot
-          ? _value.honeypot
-          : honeypot // ignore: cast_nullable_to_non_nullable
-              as String?,
-      answer: freezed == answer
-          ? _value.answer
-          : answer // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$RegisterImpl(
+        username:
+            null == username
+                ? _value.username
+                : username // ignore: cast_nullable_to_non_nullable
+                    as String,
+        email:
+            freezed == email
+                ? _value.email
+                : email // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        password:
+            null == password
+                ? _value.password
+                : password // ignore: cast_nullable_to_non_nullable
+                    as String,
+        passwordVerify:
+            null == passwordVerify
+                ? _value.passwordVerify
+                : passwordVerify // ignore: cast_nullable_to_non_nullable
+                    as String,
+        showNsfw:
+            null == showNsfw
+                ? _value.showNsfw
+                : showNsfw // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        captchaUuid:
+            freezed == captchaUuid
+                ? _value.captchaUuid
+                : captchaUuid // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        captchaAnswer:
+            freezed == captchaAnswer
+                ? _value.captchaAnswer
+                : captchaAnswer // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        honeypot:
+            freezed == honeypot
+                ? _value.honeypot
+                : honeypot // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        answer:
+            freezed == answer
+                ? _value.answer
+                : answer // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -1165,17 +1237,17 @@ class __$$RegisterImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$RegisterImpl extends _Register {
-  const _$RegisterImpl(
-      {required this.username,
-      this.email,
-      required this.password,
-      required this.passwordVerify,
-      required this.showNsfw,
-      this.captchaUuid,
-      this.captchaAnswer,
-      this.honeypot,
-      this.answer})
-      : super._();
+  const _$RegisterImpl({
+    required this.username,
+    this.email,
+    required this.password,
+    required this.passwordVerify,
+    required this.showNsfw,
+    this.captchaUuid,
+    this.captchaAnswer,
+    this.honeypot,
+    this.answer,
+  }) : super._();
 
   factory _$RegisterImpl.fromJson(Map<String, dynamic> json) =>
       _$$RegisterImplFromJson(json);
@@ -1229,8 +1301,18 @@ class _$RegisterImpl extends _Register {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, username, email, password,
-      passwordVerify, showNsfw, captchaUuid, captchaAnswer, honeypot, answer);
+  int get hashCode => Object.hash(
+    runtimeType,
+    username,
+    email,
+    password,
+    passwordVerify,
+    showNsfw,
+    captchaUuid,
+    captchaAnswer,
+    honeypot,
+    answer,
+  );
 
   /// Create a copy of Register
   /// with the given fields replaced by the non-null parameter values.
@@ -1242,23 +1324,22 @@ class _$RegisterImpl extends _Register {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RegisterImplToJson(
-      this,
-    );
+    return _$$RegisterImplToJson(this);
   }
 }
 
 abstract class _Register extends Register {
-  const factory _Register(
-      {required final String username,
-      final String? email,
-      required final String password,
-      required final String passwordVerify,
-      required final bool showNsfw,
-      final String? captchaUuid,
-      final String? captchaAnswer,
-      final String? honeypot,
-      final String? answer}) = _$RegisterImpl;
+  const factory _Register({
+    required final String username,
+    final String? email,
+    required final String password,
+    required final String passwordVerify,
+    required final bool showNsfw,
+    final String? captchaUuid,
+    final String? captchaAnswer,
+    final String? honeypot,
+    final String? answer,
+  }) = _$RegisterImpl;
   const _Register._() : super._();
 
   factory _Register.fromJson(Map<String, dynamic> json) =
@@ -1304,8 +1385,9 @@ mixin _$GetCaptcha {
 /// @nodoc
 abstract class $GetCaptchaCopyWith<$Res> {
   factory $GetCaptchaCopyWith(
-          GetCaptcha value, $Res Function(GetCaptcha) then) =
-      _$GetCaptchaCopyWithImpl<$Res, GetCaptcha>;
+    GetCaptcha value,
+    $Res Function(GetCaptcha) then,
+  ) = _$GetCaptchaCopyWithImpl<$Res, GetCaptcha>;
 }
 
 /// @nodoc
@@ -1325,8 +1407,9 @@ class _$GetCaptchaCopyWithImpl<$Res, $Val extends GetCaptcha>
 /// @nodoc
 abstract class _$$GetCaptchaImplCopyWith<$Res> {
   factory _$$GetCaptchaImplCopyWith(
-          _$GetCaptchaImpl value, $Res Function(_$GetCaptchaImpl) then) =
-      __$$GetCaptchaImplCopyWithImpl<$Res>;
+    _$GetCaptchaImpl value,
+    $Res Function(_$GetCaptchaImpl) then,
+  ) = __$$GetCaptchaImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -1334,8 +1417,9 @@ class __$$GetCaptchaImplCopyWithImpl<$Res>
     extends _$GetCaptchaCopyWithImpl<$Res, _$GetCaptchaImpl>
     implements _$$GetCaptchaImplCopyWith<$Res> {
   __$$GetCaptchaImplCopyWithImpl(
-      _$GetCaptchaImpl _value, $Res Function(_$GetCaptchaImpl) _then)
-      : super(_value, _then);
+    _$GetCaptchaImpl _value,
+    $Res Function(_$GetCaptchaImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of GetCaptcha
   /// with the given fields replaced by the non-null parameter values.
@@ -1367,9 +1451,7 @@ class _$GetCaptchaImpl extends _GetCaptcha {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetCaptchaImplToJson(
-      this,
-    );
+    return _$$GetCaptchaImplToJson(this);
   }
 }
 
@@ -1387,28 +1469,53 @@ SaveUserSettings _$SaveUserSettingsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SaveUserSettings {
-  bool? get showNsfw => throw _privateConstructorUsedError;
-  String? get theme => throw _privateConstructorUsedError;
-  @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-  SortType? get defaultSortType => throw _privateConstructorUsedError;
-  @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-  PostListingType? get defaultListingType => throw _privateConstructorUsedError;
-  String? get interfaceLanguage => throw _privateConstructorUsedError;
-  String? get avatar => throw _privateConstructorUsedError;
-  String? get banner => throw _privateConstructorUsedError;
-  String? get displayName => throw _privateConstructorUsedError;
-  String? get email => throw _privateConstructorUsedError;
-  String? get bio => throw _privateConstructorUsedError;
-  String? get matrixUserId => throw _privateConstructorUsedError;
-  bool? get showAvatars => throw _privateConstructorUsedError;
-  bool? get showScores => throw _privateConstructorUsedError;
-  bool? get sendNotificationsToEmail => throw _privateConstructorUsedError;
-  bool? get showReadPosts => throw _privateConstructorUsedError;
-  bool? get botAccount => throw _privateConstructorUsedError;
-  bool? get showBotAccounts => throw _privateConstructorUsedError;
-  bool? get showNewPostNotifs => throw _privateConstructorUsedError;
-  bool? get generateTotp2fa => throw _privateConstructorUsedError;
-  String get auth => throw _privateConstructorUsedError;
+  bool? get showNsfw => throw _privateConstructorUsedError; // v0.18.0
+  bool? get blurNsfw => throw _privateConstructorUsedError; // v0.18.3
+  bool? get autoExpand => throw _privateConstructorUsedError; // v0.18.3
+  String? get theme => throw _privateConstructorUsedError; // v0.18.0
+  SortType? get defaultSortType =>
+      throw _privateConstructorUsedError; // v0.18.0
+  ListingType? get defaultListingType =>
+      throw _privateConstructorUsedError; // v0.18.0
+  String? get interfaceLanguage =>
+      throw _privateConstructorUsedError; // v0.18.0
+  String? get avatar => throw _privateConstructorUsedError; // v0.18.0
+  String? get banner => throw _privateConstructorUsedError; // v0.18.0
+  String? get displayName => throw _privateConstructorUsedError; // v0.18.0
+  String? get email => throw _privateConstructorUsedError; // v0.18.0
+  String? get bio => throw _privateConstructorUsedError; // v0.18.0
+  String? get matrixUserId => throw _privateConstructorUsedError; // v0.18.0
+  bool? get showAvatars => throw _privateConstructorUsedError; // v0.18.0
+  bool? get sendNotificationsToEmail =>
+      throw _privateConstructorUsedError; // v0.18.0
+  bool? get botAccount => throw _privateConstructorUsedError; // v0.18.0
+  bool? get showBotAccounts => throw _privateConstructorUsedError; // v0.18.0
+  bool? get showReadPosts => throw _privateConstructorUsedError; // v0.18.0
+  @deprecated
+  bool? get showNewPostNotifs => throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
+  List<int>? get discussionLanguages =>
+      throw _privateConstructorUsedError; // v0.18.0
+  @deprecated
+  bool? get generateTotp2fa => throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
+  String? get auth => throw _privateConstructorUsedError;
+  bool? get openLinksInNewTab => throw _privateConstructorUsedError; // v0.18.1
+  bool? get infiniteScrollEnabled =>
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
+  String? get postListingMode =>
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
+  bool? get enableKeyboardNavigation =>
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
+  bool? get enableAnimatedImages =>
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
+  bool? get collapseBotComments =>
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
+  bool? get showScores =>
+      throw _privateConstructorUsedError; // v0.18.0 (optional)
+  bool? get showUpvotes =>
+      throw _privateConstructorUsedError; // v0.19.4 (optional)
+  bool? get showDownvotes =>
+      throw _privateConstructorUsedError; // v0.19.4 (optional)
+  bool? get showUpvotePercentage => throw _privateConstructorUsedError;
 
   /// Serializes this SaveUserSettings to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1423,33 +1530,44 @@ mixin _$SaveUserSettings {
 /// @nodoc
 abstract class $SaveUserSettingsCopyWith<$Res> {
   factory $SaveUserSettingsCopyWith(
-          SaveUserSettings value, $Res Function(SaveUserSettings) then) =
-      _$SaveUserSettingsCopyWithImpl<$Res, SaveUserSettings>;
+    SaveUserSettings value,
+    $Res Function(SaveUserSettings) then,
+  ) = _$SaveUserSettingsCopyWithImpl<$Res, SaveUserSettings>;
   @useResult
-  $Res call(
-      {bool? showNsfw,
-      String? theme,
-      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-      SortType? defaultSortType,
-      @JsonKey(
-          fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-      PostListingType? defaultListingType,
-      String? interfaceLanguage,
-      String? avatar,
-      String? banner,
-      String? displayName,
-      String? email,
-      String? bio,
-      String? matrixUserId,
-      bool? showAvatars,
-      bool? showScores,
-      bool? sendNotificationsToEmail,
-      bool? showReadPosts,
-      bool? botAccount,
-      bool? showBotAccounts,
-      bool? showNewPostNotifs,
-      bool? generateTotp2fa,
-      String auth});
+  $Res call({
+    bool? showNsfw,
+    bool? blurNsfw,
+    bool? autoExpand,
+    String? theme,
+    SortType? defaultSortType,
+    ListingType? defaultListingType,
+    String? interfaceLanguage,
+    String? avatar,
+    String? banner,
+    String? displayName,
+    String? email,
+    String? bio,
+    String? matrixUserId,
+    bool? showAvatars,
+    bool? sendNotificationsToEmail,
+    bool? botAccount,
+    bool? showBotAccounts,
+    bool? showReadPosts,
+    @deprecated bool? showNewPostNotifs,
+    List<int>? discussionLanguages,
+    @deprecated bool? generateTotp2fa,
+    String? auth,
+    bool? openLinksInNewTab,
+    bool? infiniteScrollEnabled,
+    String? postListingMode,
+    bool? enableKeyboardNavigation,
+    bool? enableAnimatedImages,
+    bool? collapseBotComments,
+    bool? showScores,
+    bool? showUpvotes,
+    bool? showDownvotes,
+    bool? showUpvotePercentage,
+  });
 }
 
 /// @nodoc
@@ -1468,6 +1586,8 @@ class _$SaveUserSettingsCopyWithImpl<$Res, $Val extends SaveUserSettings>
   @override
   $Res call({
     Object? showNsfw = freezed,
+    Object? blurNsfw = freezed,
+    Object? autoExpand = freezed,
     Object? theme = freezed,
     Object? defaultSortType = freezed,
     Object? defaultListingType = freezed,
@@ -1479,141 +1599,246 @@ class _$SaveUserSettingsCopyWithImpl<$Res, $Val extends SaveUserSettings>
     Object? bio = freezed,
     Object? matrixUserId = freezed,
     Object? showAvatars = freezed,
-    Object? showScores = freezed,
     Object? sendNotificationsToEmail = freezed,
-    Object? showReadPosts = freezed,
     Object? botAccount = freezed,
     Object? showBotAccounts = freezed,
+    Object? showReadPosts = freezed,
     Object? showNewPostNotifs = freezed,
+    Object? discussionLanguages = freezed,
     Object? generateTotp2fa = freezed,
-    Object? auth = null,
+    Object? auth = freezed,
+    Object? openLinksInNewTab = freezed,
+    Object? infiniteScrollEnabled = freezed,
+    Object? postListingMode = freezed,
+    Object? enableKeyboardNavigation = freezed,
+    Object? enableAnimatedImages = freezed,
+    Object? collapseBotComments = freezed,
+    Object? showScores = freezed,
+    Object? showUpvotes = freezed,
+    Object? showDownvotes = freezed,
+    Object? showUpvotePercentage = freezed,
   }) {
-    return _then(_value.copyWith(
-      showNsfw: freezed == showNsfw
-          ? _value.showNsfw
-          : showNsfw // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      theme: freezed == theme
-          ? _value.theme
-          : theme // ignore: cast_nullable_to_non_nullable
-              as String?,
-      defaultSortType: freezed == defaultSortType
-          ? _value.defaultSortType
-          : defaultSortType // ignore: cast_nullable_to_non_nullable
-              as SortType?,
-      defaultListingType: freezed == defaultListingType
-          ? _value.defaultListingType
-          : defaultListingType // ignore: cast_nullable_to_non_nullable
-              as PostListingType?,
-      interfaceLanguage: freezed == interfaceLanguage
-          ? _value.interfaceLanguage
-          : interfaceLanguage // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatar: freezed == avatar
-          ? _value.avatar
-          : avatar // ignore: cast_nullable_to_non_nullable
-              as String?,
-      banner: freezed == banner
-          ? _value.banner
-          : banner // ignore: cast_nullable_to_non_nullable
-              as String?,
-      displayName: freezed == displayName
-          ? _value.displayName
-          : displayName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      email: freezed == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String?,
-      bio: freezed == bio
-          ? _value.bio
-          : bio // ignore: cast_nullable_to_non_nullable
-              as String?,
-      matrixUserId: freezed == matrixUserId
-          ? _value.matrixUserId
-          : matrixUserId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      showAvatars: freezed == showAvatars
-          ? _value.showAvatars
-          : showAvatars // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      showScores: freezed == showScores
-          ? _value.showScores
-          : showScores // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      sendNotificationsToEmail: freezed == sendNotificationsToEmail
-          ? _value.sendNotificationsToEmail
-          : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      showReadPosts: freezed == showReadPosts
-          ? _value.showReadPosts
-          : showReadPosts // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      botAccount: freezed == botAccount
-          ? _value.botAccount
-          : botAccount // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      showBotAccounts: freezed == showBotAccounts
-          ? _value.showBotAccounts
-          : showBotAccounts // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      showNewPostNotifs: freezed == showNewPostNotifs
-          ? _value.showNewPostNotifs
-          : showNewPostNotifs // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      generateTotp2fa: freezed == generateTotp2fa
-          ? _value.generateTotp2fa
-          : generateTotp2fa // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            showNsfw:
+                freezed == showNsfw
+                    ? _value.showNsfw
+                    : showNsfw // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            blurNsfw:
+                freezed == blurNsfw
+                    ? _value.blurNsfw
+                    : blurNsfw // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            autoExpand:
+                freezed == autoExpand
+                    ? _value.autoExpand
+                    : autoExpand // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            theme:
+                freezed == theme
+                    ? _value.theme
+                    : theme // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            defaultSortType:
+                freezed == defaultSortType
+                    ? _value.defaultSortType
+                    : defaultSortType // ignore: cast_nullable_to_non_nullable
+                        as SortType?,
+            defaultListingType:
+                freezed == defaultListingType
+                    ? _value.defaultListingType
+                    : defaultListingType // ignore: cast_nullable_to_non_nullable
+                        as ListingType?,
+            interfaceLanguage:
+                freezed == interfaceLanguage
+                    ? _value.interfaceLanguage
+                    : interfaceLanguage // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            avatar:
+                freezed == avatar
+                    ? _value.avatar
+                    : avatar // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            banner:
+                freezed == banner
+                    ? _value.banner
+                    : banner // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            displayName:
+                freezed == displayName
+                    ? _value.displayName
+                    : displayName // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            email:
+                freezed == email
+                    ? _value.email
+                    : email // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            bio:
+                freezed == bio
+                    ? _value.bio
+                    : bio // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            matrixUserId:
+                freezed == matrixUserId
+                    ? _value.matrixUserId
+                    : matrixUserId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            showAvatars:
+                freezed == showAvatars
+                    ? _value.showAvatars
+                    : showAvatars // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            sendNotificationsToEmail:
+                freezed == sendNotificationsToEmail
+                    ? _value.sendNotificationsToEmail
+                    : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            botAccount:
+                freezed == botAccount
+                    ? _value.botAccount
+                    : botAccount // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            showBotAccounts:
+                freezed == showBotAccounts
+                    ? _value.showBotAccounts
+                    : showBotAccounts // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            showReadPosts:
+                freezed == showReadPosts
+                    ? _value.showReadPosts
+                    : showReadPosts // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            showNewPostNotifs:
+                freezed == showNewPostNotifs
+                    ? _value.showNewPostNotifs
+                    : showNewPostNotifs // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            discussionLanguages:
+                freezed == discussionLanguages
+                    ? _value.discussionLanguages
+                    : discussionLanguages // ignore: cast_nullable_to_non_nullable
+                        as List<int>?,
+            generateTotp2fa:
+                freezed == generateTotp2fa
+                    ? _value.generateTotp2fa
+                    : generateTotp2fa // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            openLinksInNewTab:
+                freezed == openLinksInNewTab
+                    ? _value.openLinksInNewTab
+                    : openLinksInNewTab // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            infiniteScrollEnabled:
+                freezed == infiniteScrollEnabled
+                    ? _value.infiniteScrollEnabled
+                    : infiniteScrollEnabled // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            postListingMode:
+                freezed == postListingMode
+                    ? _value.postListingMode
+                    : postListingMode // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            enableKeyboardNavigation:
+                freezed == enableKeyboardNavigation
+                    ? _value.enableKeyboardNavigation
+                    : enableKeyboardNavigation // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            enableAnimatedImages:
+                freezed == enableAnimatedImages
+                    ? _value.enableAnimatedImages
+                    : enableAnimatedImages // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            collapseBotComments:
+                freezed == collapseBotComments
+                    ? _value.collapseBotComments
+                    : collapseBotComments // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            showScores:
+                freezed == showScores
+                    ? _value.showScores
+                    : showScores // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            showUpvotes:
+                freezed == showUpvotes
+                    ? _value.showUpvotes
+                    : showUpvotes // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            showDownvotes:
+                freezed == showDownvotes
+                    ? _value.showDownvotes
+                    : showDownvotes // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            showUpvotePercentage:
+                freezed == showUpvotePercentage
+                    ? _value.showUpvotePercentage
+                    : showUpvotePercentage // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$SaveUserSettingsImplCopyWith<$Res>
     implements $SaveUserSettingsCopyWith<$Res> {
-  factory _$$SaveUserSettingsImplCopyWith(_$SaveUserSettingsImpl value,
-          $Res Function(_$SaveUserSettingsImpl) then) =
-      __$$SaveUserSettingsImplCopyWithImpl<$Res>;
+  factory _$$SaveUserSettingsImplCopyWith(
+    _$SaveUserSettingsImpl value,
+    $Res Function(_$SaveUserSettingsImpl) then,
+  ) = __$$SaveUserSettingsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {bool? showNsfw,
-      String? theme,
-      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-      SortType? defaultSortType,
-      @JsonKey(
-          fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-      PostListingType? defaultListingType,
-      String? interfaceLanguage,
-      String? avatar,
-      String? banner,
-      String? displayName,
-      String? email,
-      String? bio,
-      String? matrixUserId,
-      bool? showAvatars,
-      bool? showScores,
-      bool? sendNotificationsToEmail,
-      bool? showReadPosts,
-      bool? botAccount,
-      bool? showBotAccounts,
-      bool? showNewPostNotifs,
-      bool? generateTotp2fa,
-      String auth});
+  $Res call({
+    bool? showNsfw,
+    bool? blurNsfw,
+    bool? autoExpand,
+    String? theme,
+    SortType? defaultSortType,
+    ListingType? defaultListingType,
+    String? interfaceLanguage,
+    String? avatar,
+    String? banner,
+    String? displayName,
+    String? email,
+    String? bio,
+    String? matrixUserId,
+    bool? showAvatars,
+    bool? sendNotificationsToEmail,
+    bool? botAccount,
+    bool? showBotAccounts,
+    bool? showReadPosts,
+    @deprecated bool? showNewPostNotifs,
+    List<int>? discussionLanguages,
+    @deprecated bool? generateTotp2fa,
+    String? auth,
+    bool? openLinksInNewTab,
+    bool? infiniteScrollEnabled,
+    String? postListingMode,
+    bool? enableKeyboardNavigation,
+    bool? enableAnimatedImages,
+    bool? collapseBotComments,
+    bool? showScores,
+    bool? showUpvotes,
+    bool? showDownvotes,
+    bool? showUpvotePercentage,
+  });
 }
 
 /// @nodoc
 class __$$SaveUserSettingsImplCopyWithImpl<$Res>
     extends _$SaveUserSettingsCopyWithImpl<$Res, _$SaveUserSettingsImpl>
     implements _$$SaveUserSettingsImplCopyWith<$Res> {
-  __$$SaveUserSettingsImplCopyWithImpl(_$SaveUserSettingsImpl _value,
-      $Res Function(_$SaveUserSettingsImpl) _then)
-      : super(_value, _then);
+  __$$SaveUserSettingsImplCopyWithImpl(
+    _$SaveUserSettingsImpl _value,
+    $Res Function(_$SaveUserSettingsImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of SaveUserSettings
   /// with the given fields replaced by the non-null parameter values.
@@ -1621,6 +1846,8 @@ class __$$SaveUserSettingsImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? showNsfw = freezed,
+    Object? blurNsfw = freezed,
+    Object? autoExpand = freezed,
     Object? theme = freezed,
     Object? defaultSortType = freezed,
     Object? defaultListingType = freezed,
@@ -1632,97 +1859,189 @@ class __$$SaveUserSettingsImplCopyWithImpl<$Res>
     Object? bio = freezed,
     Object? matrixUserId = freezed,
     Object? showAvatars = freezed,
-    Object? showScores = freezed,
     Object? sendNotificationsToEmail = freezed,
-    Object? showReadPosts = freezed,
     Object? botAccount = freezed,
     Object? showBotAccounts = freezed,
+    Object? showReadPosts = freezed,
     Object? showNewPostNotifs = freezed,
+    Object? discussionLanguages = freezed,
     Object? generateTotp2fa = freezed,
-    Object? auth = null,
+    Object? auth = freezed,
+    Object? openLinksInNewTab = freezed,
+    Object? infiniteScrollEnabled = freezed,
+    Object? postListingMode = freezed,
+    Object? enableKeyboardNavigation = freezed,
+    Object? enableAnimatedImages = freezed,
+    Object? collapseBotComments = freezed,
+    Object? showScores = freezed,
+    Object? showUpvotes = freezed,
+    Object? showDownvotes = freezed,
+    Object? showUpvotePercentage = freezed,
   }) {
-    return _then(_$SaveUserSettingsImpl(
-      showNsfw: freezed == showNsfw
-          ? _value.showNsfw
-          : showNsfw // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      theme: freezed == theme
-          ? _value.theme
-          : theme // ignore: cast_nullable_to_non_nullable
-              as String?,
-      defaultSortType: freezed == defaultSortType
-          ? _value.defaultSortType
-          : defaultSortType // ignore: cast_nullable_to_non_nullable
-              as SortType?,
-      defaultListingType: freezed == defaultListingType
-          ? _value.defaultListingType
-          : defaultListingType // ignore: cast_nullable_to_non_nullable
-              as PostListingType?,
-      interfaceLanguage: freezed == interfaceLanguage
-          ? _value.interfaceLanguage
-          : interfaceLanguage // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatar: freezed == avatar
-          ? _value.avatar
-          : avatar // ignore: cast_nullable_to_non_nullable
-              as String?,
-      banner: freezed == banner
-          ? _value.banner
-          : banner // ignore: cast_nullable_to_non_nullable
-              as String?,
-      displayName: freezed == displayName
-          ? _value.displayName
-          : displayName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      email: freezed == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String?,
-      bio: freezed == bio
-          ? _value.bio
-          : bio // ignore: cast_nullable_to_non_nullable
-              as String?,
-      matrixUserId: freezed == matrixUserId
-          ? _value.matrixUserId
-          : matrixUserId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      showAvatars: freezed == showAvatars
-          ? _value.showAvatars
-          : showAvatars // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      showScores: freezed == showScores
-          ? _value.showScores
-          : showScores // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      sendNotificationsToEmail: freezed == sendNotificationsToEmail
-          ? _value.sendNotificationsToEmail
-          : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      showReadPosts: freezed == showReadPosts
-          ? _value.showReadPosts
-          : showReadPosts // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      botAccount: freezed == botAccount
-          ? _value.botAccount
-          : botAccount // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      showBotAccounts: freezed == showBotAccounts
-          ? _value.showBotAccounts
-          : showBotAccounts // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      showNewPostNotifs: freezed == showNewPostNotifs
-          ? _value.showNewPostNotifs
-          : showNewPostNotifs // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      generateTotp2fa: freezed == generateTotp2fa
-          ? _value.generateTotp2fa
-          : generateTotp2fa // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$SaveUserSettingsImpl(
+        showNsfw:
+            freezed == showNsfw
+                ? _value.showNsfw
+                : showNsfw // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        blurNsfw:
+            freezed == blurNsfw
+                ? _value.blurNsfw
+                : blurNsfw // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        autoExpand:
+            freezed == autoExpand
+                ? _value.autoExpand
+                : autoExpand // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        theme:
+            freezed == theme
+                ? _value.theme
+                : theme // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        defaultSortType:
+            freezed == defaultSortType
+                ? _value.defaultSortType
+                : defaultSortType // ignore: cast_nullable_to_non_nullable
+                    as SortType?,
+        defaultListingType:
+            freezed == defaultListingType
+                ? _value.defaultListingType
+                : defaultListingType // ignore: cast_nullable_to_non_nullable
+                    as ListingType?,
+        interfaceLanguage:
+            freezed == interfaceLanguage
+                ? _value.interfaceLanguage
+                : interfaceLanguage // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        avatar:
+            freezed == avatar
+                ? _value.avatar
+                : avatar // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        banner:
+            freezed == banner
+                ? _value.banner
+                : banner // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        displayName:
+            freezed == displayName
+                ? _value.displayName
+                : displayName // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        email:
+            freezed == email
+                ? _value.email
+                : email // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        bio:
+            freezed == bio
+                ? _value.bio
+                : bio // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        matrixUserId:
+            freezed == matrixUserId
+                ? _value.matrixUserId
+                : matrixUserId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        showAvatars:
+            freezed == showAvatars
+                ? _value.showAvatars
+                : showAvatars // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        sendNotificationsToEmail:
+            freezed == sendNotificationsToEmail
+                ? _value.sendNotificationsToEmail
+                : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        botAccount:
+            freezed == botAccount
+                ? _value.botAccount
+                : botAccount // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        showBotAccounts:
+            freezed == showBotAccounts
+                ? _value.showBotAccounts
+                : showBotAccounts // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        showReadPosts:
+            freezed == showReadPosts
+                ? _value.showReadPosts
+                : showReadPosts // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        showNewPostNotifs:
+            freezed == showNewPostNotifs
+                ? _value.showNewPostNotifs
+                : showNewPostNotifs // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        discussionLanguages:
+            freezed == discussionLanguages
+                ? _value._discussionLanguages
+                : discussionLanguages // ignore: cast_nullable_to_non_nullable
+                    as List<int>?,
+        generateTotp2fa:
+            freezed == generateTotp2fa
+                ? _value.generateTotp2fa
+                : generateTotp2fa // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        openLinksInNewTab:
+            freezed == openLinksInNewTab
+                ? _value.openLinksInNewTab
+                : openLinksInNewTab // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        infiniteScrollEnabled:
+            freezed == infiniteScrollEnabled
+                ? _value.infiniteScrollEnabled
+                : infiniteScrollEnabled // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        postListingMode:
+            freezed == postListingMode
+                ? _value.postListingMode
+                : postListingMode // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        enableKeyboardNavigation:
+            freezed == enableKeyboardNavigation
+                ? _value.enableKeyboardNavigation
+                : enableKeyboardNavigation // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        enableAnimatedImages:
+            freezed == enableAnimatedImages
+                ? _value.enableAnimatedImages
+                : enableAnimatedImages // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        collapseBotComments:
+            freezed == collapseBotComments
+                ? _value.collapseBotComments
+                : collapseBotComments // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        showScores:
+            freezed == showScores
+                ? _value.showScores
+                : showScores // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        showUpvotes:
+            freezed == showUpvotes
+                ? _value.showUpvotes
+                : showUpvotes // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        showDownvotes:
+            freezed == showDownvotes
+                ? _value.showDownvotes
+                : showDownvotes // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        showUpvotePercentage:
+            freezed == showUpvotePercentage
+                ? _value.showUpvotePercentage
+                : showUpvotePercentage // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
@@ -1730,81 +2049,155 @@ class __$$SaveUserSettingsImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$SaveUserSettingsImpl extends _SaveUserSettings {
-  const _$SaveUserSettingsImpl(
-      {this.showNsfw,
-      this.theme,
-      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-      this.defaultSortType,
-      @JsonKey(
-          fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-      this.defaultListingType,
-      this.interfaceLanguage,
-      this.avatar,
-      this.banner,
-      this.displayName,
-      this.email,
-      this.bio,
-      this.matrixUserId,
-      this.showAvatars,
-      this.showScores,
-      this.sendNotificationsToEmail,
-      this.showReadPosts,
-      this.botAccount,
-      this.showBotAccounts,
-      this.showNewPostNotifs,
-      this.generateTotp2fa,
-      required this.auth})
-      : super._();
+  const _$SaveUserSettingsImpl({
+    this.showNsfw,
+    this.blurNsfw,
+    this.autoExpand,
+    this.theme,
+    this.defaultSortType,
+    this.defaultListingType,
+    this.interfaceLanguage,
+    this.avatar,
+    this.banner,
+    this.displayName,
+    this.email,
+    this.bio,
+    this.matrixUserId,
+    this.showAvatars,
+    this.sendNotificationsToEmail,
+    this.botAccount,
+    this.showBotAccounts,
+    this.showReadPosts,
+    @deprecated this.showNewPostNotifs,
+    final List<int>? discussionLanguages,
+    @deprecated this.generateTotp2fa,
+    this.auth,
+    this.openLinksInNewTab,
+    this.infiniteScrollEnabled,
+    this.postListingMode,
+    this.enableKeyboardNavigation,
+    this.enableAnimatedImages,
+    this.collapseBotComments,
+    this.showScores,
+    this.showUpvotes,
+    this.showDownvotes,
+    this.showUpvotePercentage,
+  }) : _discussionLanguages = discussionLanguages,
+       super._();
 
   factory _$SaveUserSettingsImpl.fromJson(Map<String, dynamic> json) =>
       _$$SaveUserSettingsImplFromJson(json);
 
   @override
   final bool? showNsfw;
+  // v0.18.0
+  @override
+  final bool? blurNsfw;
+  // v0.18.3
+  @override
+  final bool? autoExpand;
+  // v0.18.3
   @override
   final String? theme;
+  // v0.18.0
   @override
-  @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
   final SortType? defaultSortType;
+  // v0.18.0
   @override
-  @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-  final PostListingType? defaultListingType;
+  final ListingType? defaultListingType;
+  // v0.18.0
   @override
   final String? interfaceLanguage;
+  // v0.18.0
   @override
   final String? avatar;
+  // v0.18.0
   @override
   final String? banner;
+  // v0.18.0
   @override
   final String? displayName;
+  // v0.18.0
   @override
   final String? email;
+  // v0.18.0
   @override
   final String? bio;
+  // v0.18.0
   @override
   final String? matrixUserId;
+  // v0.18.0
   @override
   final bool? showAvatars;
-  @override
-  final bool? showScores;
+  // v0.18.0
   @override
   final bool? sendNotificationsToEmail;
-  @override
-  final bool? showReadPosts;
+  // v0.18.0
   @override
   final bool? botAccount;
+  // v0.18.0
   @override
   final bool? showBotAccounts;
+  // v0.18.0
   @override
+  final bool? showReadPosts;
+  // v0.18.0
+  @override
+  @deprecated
   final bool? showNewPostNotifs;
+  // v0.18.0 [deprecated in v0.19.0]
+  final List<int>? _discussionLanguages;
+  // v0.18.0 [deprecated in v0.19.0]
   @override
+  List<int>? get discussionLanguages {
+    final value = _discussionLanguages;
+    if (value == null) return null;
+    if (_discussionLanguages is EqualUnmodifiableListView)
+      return _discussionLanguages;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  // v0.18.0
+  @override
+  @deprecated
   final bool? generateTotp2fa;
+  // v0.18.0 [deprecated in v0.19.0]
   @override
-  final String auth;
+  final String? auth;
+  @override
+  final bool? openLinksInNewTab;
+  // v0.18.1
+  @override
+  final bool? infiniteScrollEnabled;
+  // v0.19.0 (optional)
+  @override
+  final String? postListingMode;
+  // v0.19.0 (optional)
+  @override
+  final bool? enableKeyboardNavigation;
+  // v0.19.0 (optional)
+  @override
+  final bool? enableAnimatedImages;
+  // v0.19.0 (optional)
+  @override
+  final bool? collapseBotComments;
+  // v0.19.0 (optional)
+  @override
+  final bool? showScores;
+  // v0.18.0 (optional)
+  @override
+  final bool? showUpvotes;
+  // v0.19.4 (optional)
+  @override
+  final bool? showDownvotes;
+  // v0.19.4 (optional)
+  @override
+  final bool? showUpvotePercentage;
 
   @override
   String toString() {
-    return 'SaveUserSettings(showNsfw: $showNsfw, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, interfaceLanguage: $interfaceLanguage, avatar: $avatar, banner: $banner, displayName: $displayName, email: $email, bio: $bio, matrixUserId: $matrixUserId, showAvatars: $showAvatars, showScores: $showScores, sendNotificationsToEmail: $sendNotificationsToEmail, showReadPosts: $showReadPosts, botAccount: $botAccount, showBotAccounts: $showBotAccounts, showNewPostNotifs: $showNewPostNotifs, generateTotp2fa: $generateTotp2fa, auth: $auth)';
+    return 'SaveUserSettings(showNsfw: $showNsfw, blurNsfw: $blurNsfw, autoExpand: $autoExpand, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, interfaceLanguage: $interfaceLanguage, avatar: $avatar, banner: $banner, displayName: $displayName, email: $email, bio: $bio, matrixUserId: $matrixUserId, showAvatars: $showAvatars, sendNotificationsToEmail: $sendNotificationsToEmail, botAccount: $botAccount, showBotAccounts: $showBotAccounts, showReadPosts: $showReadPosts, showNewPostNotifs: $showNewPostNotifs, discussionLanguages: $discussionLanguages, generateTotp2fa: $generateTotp2fa, auth: $auth, openLinksInNewTab: $openLinksInNewTab, infiniteScrollEnabled: $infiniteScrollEnabled, postListingMode: $postListingMode, enableKeyboardNavigation: $enableKeyboardNavigation, enableAnimatedImages: $enableAnimatedImages, collapseBotComments: $collapseBotComments, showScores: $showScores, showUpvotes: $showUpvotes, showDownvotes: $showDownvotes, showUpvotePercentage: $showUpvotePercentage)';
   }
 
   @override
@@ -1814,6 +2207,10 @@ class _$SaveUserSettingsImpl extends _SaveUserSettings {
             other is _$SaveUserSettingsImpl &&
             (identical(other.showNsfw, showNsfw) ||
                 other.showNsfw == showNsfw) &&
+            (identical(other.blurNsfw, blurNsfw) ||
+                other.blurNsfw == blurNsfw) &&
+            (identical(other.autoExpand, autoExpand) ||
+                other.autoExpand == autoExpand) &&
             (identical(other.theme, theme) || other.theme == theme) &&
             (identical(other.defaultSortType, defaultSortType) ||
                 other.defaultSortType == defaultSortType) &&
@@ -1831,49 +2228,88 @@ class _$SaveUserSettingsImpl extends _SaveUserSettings {
                 other.matrixUserId == matrixUserId) &&
             (identical(other.showAvatars, showAvatars) ||
                 other.showAvatars == showAvatars) &&
-            (identical(other.showScores, showScores) ||
-                other.showScores == showScores) &&
             (identical(
-                    other.sendNotificationsToEmail, sendNotificationsToEmail) ||
+                  other.sendNotificationsToEmail,
+                  sendNotificationsToEmail,
+                ) ||
                 other.sendNotificationsToEmail == sendNotificationsToEmail) &&
-            (identical(other.showReadPosts, showReadPosts) ||
-                other.showReadPosts == showReadPosts) &&
             (identical(other.botAccount, botAccount) ||
                 other.botAccount == botAccount) &&
             (identical(other.showBotAccounts, showBotAccounts) ||
                 other.showBotAccounts == showBotAccounts) &&
+            (identical(other.showReadPosts, showReadPosts) ||
+                other.showReadPosts == showReadPosts) &&
             (identical(other.showNewPostNotifs, showNewPostNotifs) ||
                 other.showNewPostNotifs == showNewPostNotifs) &&
+            const DeepCollectionEquality().equals(
+              other._discussionLanguages,
+              _discussionLanguages,
+            ) &&
             (identical(other.generateTotp2fa, generateTotp2fa) ||
                 other.generateTotp2fa == generateTotp2fa) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            (identical(other.auth, auth) || other.auth == auth) &&
+            (identical(other.openLinksInNewTab, openLinksInNewTab) ||
+                other.openLinksInNewTab == openLinksInNewTab) &&
+            (identical(other.infiniteScrollEnabled, infiniteScrollEnabled) ||
+                other.infiniteScrollEnabled == infiniteScrollEnabled) &&
+            (identical(other.postListingMode, postListingMode) ||
+                other.postListingMode == postListingMode) &&
+            (identical(
+                  other.enableKeyboardNavigation,
+                  enableKeyboardNavigation,
+                ) ||
+                other.enableKeyboardNavigation == enableKeyboardNavigation) &&
+            (identical(other.enableAnimatedImages, enableAnimatedImages) ||
+                other.enableAnimatedImages == enableAnimatedImages) &&
+            (identical(other.collapseBotComments, collapseBotComments) ||
+                other.collapseBotComments == collapseBotComments) &&
+            (identical(other.showScores, showScores) ||
+                other.showScores == showScores) &&
+            (identical(other.showUpvotes, showUpvotes) ||
+                other.showUpvotes == showUpvotes) &&
+            (identical(other.showDownvotes, showDownvotes) ||
+                other.showDownvotes == showDownvotes) &&
+            (identical(other.showUpvotePercentage, showUpvotePercentage) ||
+                other.showUpvotePercentage == showUpvotePercentage));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
-        runtimeType,
-        showNsfw,
-        theme,
-        defaultSortType,
-        defaultListingType,
-        interfaceLanguage,
-        avatar,
-        banner,
-        displayName,
-        email,
-        bio,
-        matrixUserId,
-        showAvatars,
-        showScores,
-        sendNotificationsToEmail,
-        showReadPosts,
-        botAccount,
-        showBotAccounts,
-        showNewPostNotifs,
-        generateTotp2fa,
-        auth
-      ]);
+    runtimeType,
+    showNsfw,
+    blurNsfw,
+    autoExpand,
+    theme,
+    defaultSortType,
+    defaultListingType,
+    interfaceLanguage,
+    avatar,
+    banner,
+    displayName,
+    email,
+    bio,
+    matrixUserId,
+    showAvatars,
+    sendNotificationsToEmail,
+    botAccount,
+    showBotAccounts,
+    showReadPosts,
+    showNewPostNotifs,
+    const DeepCollectionEquality().hash(_discussionLanguages),
+    generateTotp2fa,
+    auth,
+    openLinksInNewTab,
+    infiniteScrollEnabled,
+    postListingMode,
+    enableKeyboardNavigation,
+    enableAnimatedImages,
+    collapseBotComments,
+    showScores,
+    showUpvotes,
+    showDownvotes,
+    showUpvotePercentage,
+  ]);
 
   /// Create a copy of SaveUserSettings
   /// with the given fields replaced by the non-null parameter values.
@@ -1882,88 +2318,122 @@ class _$SaveUserSettingsImpl extends _SaveUserSettings {
   @pragma('vm:prefer-inline')
   _$$SaveUserSettingsImplCopyWith<_$SaveUserSettingsImpl> get copyWith =>
       __$$SaveUserSettingsImplCopyWithImpl<_$SaveUserSettingsImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SaveUserSettingsImplToJson(
-      this,
-    );
+    return _$$SaveUserSettingsImplToJson(this);
   }
 }
 
 abstract class _SaveUserSettings extends SaveUserSettings {
-  const factory _SaveUserSettings(
-      {final bool? showNsfw,
-      final String? theme,
-      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-      final SortType? defaultSortType,
-      @JsonKey(
-          fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-      final PostListingType? defaultListingType,
-      final String? interfaceLanguage,
-      final String? avatar,
-      final String? banner,
-      final String? displayName,
-      final String? email,
-      final String? bio,
-      final String? matrixUserId,
-      final bool? showAvatars,
-      final bool? showScores,
-      final bool? sendNotificationsToEmail,
-      final bool? showReadPosts,
-      final bool? botAccount,
-      final bool? showBotAccounts,
-      final bool? showNewPostNotifs,
-      final bool? generateTotp2fa,
-      required final String auth}) = _$SaveUserSettingsImpl;
+  const factory _SaveUserSettings({
+    final bool? showNsfw,
+    final bool? blurNsfw,
+    final bool? autoExpand,
+    final String? theme,
+    final SortType? defaultSortType,
+    final ListingType? defaultListingType,
+    final String? interfaceLanguage,
+    final String? avatar,
+    final String? banner,
+    final String? displayName,
+    final String? email,
+    final String? bio,
+    final String? matrixUserId,
+    final bool? showAvatars,
+    final bool? sendNotificationsToEmail,
+    final bool? botAccount,
+    final bool? showBotAccounts,
+    final bool? showReadPosts,
+    @deprecated final bool? showNewPostNotifs,
+    final List<int>? discussionLanguages,
+    @deprecated final bool? generateTotp2fa,
+    final String? auth,
+    final bool? openLinksInNewTab,
+    final bool? infiniteScrollEnabled,
+    final String? postListingMode,
+    final bool? enableKeyboardNavigation,
+    final bool? enableAnimatedImages,
+    final bool? collapseBotComments,
+    final bool? showScores,
+    final bool? showUpvotes,
+    final bool? showDownvotes,
+    final bool? showUpvotePercentage,
+  }) = _$SaveUserSettingsImpl;
   const _SaveUserSettings._() : super._();
 
   factory _SaveUserSettings.fromJson(Map<String, dynamic> json) =
       _$SaveUserSettingsImpl.fromJson;
 
   @override
-  bool? get showNsfw;
+  bool? get showNsfw; // v0.18.0
   @override
-  String? get theme;
+  bool? get blurNsfw; // v0.18.3
   @override
-  @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-  SortType? get defaultSortType;
+  bool? get autoExpand; // v0.18.3
   @override
-  @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-  PostListingType? get defaultListingType;
+  String? get theme; // v0.18.0
   @override
-  String? get interfaceLanguage;
+  SortType? get defaultSortType; // v0.18.0
   @override
-  String? get avatar;
+  ListingType? get defaultListingType; // v0.18.0
   @override
-  String? get banner;
+  String? get interfaceLanguage; // v0.18.0
   @override
-  String? get displayName;
+  String? get avatar; // v0.18.0
   @override
-  String? get email;
+  String? get banner; // v0.18.0
   @override
-  String? get bio;
+  String? get displayName; // v0.18.0
   @override
-  String? get matrixUserId;
+  String? get email; // v0.18.0
   @override
-  bool? get showAvatars;
+  String? get bio; // v0.18.0
   @override
-  bool? get showScores;
+  String? get matrixUserId; // v0.18.0
   @override
-  bool? get sendNotificationsToEmail;
+  bool? get showAvatars; // v0.18.0
   @override
-  bool? get showReadPosts;
+  bool? get sendNotificationsToEmail; // v0.18.0
   @override
-  bool? get botAccount;
+  bool? get botAccount; // v0.18.0
   @override
-  bool? get showBotAccounts;
+  bool? get showBotAccounts; // v0.18.0
   @override
-  bool? get showNewPostNotifs;
+  bool? get showReadPosts; // v0.18.0
   @override
-  bool? get generateTotp2fa;
+  @deprecated
+  bool? get showNewPostNotifs; // v0.18.0 [deprecated in v0.19.0]
   @override
-  String get auth;
+  List<int>? get discussionLanguages; // v0.18.0
+  @override
+  @deprecated
+  bool? get generateTotp2fa; // v0.18.0 [deprecated in v0.19.0]
+  @override
+  String? get auth;
+  @override
+  bool? get openLinksInNewTab; // v0.18.1
+  @override
+  bool? get infiniteScrollEnabled; // v0.19.0 (optional)
+  @override
+  String? get postListingMode; // v0.19.0 (optional)
+  @override
+  bool? get enableKeyboardNavigation; // v0.19.0 (optional)
+  @override
+  bool? get enableAnimatedImages; // v0.19.0 (optional)
+  @override
+  bool? get collapseBotComments; // v0.19.0 (optional)
+  @override
+  bool? get showScores; // v0.18.0 (optional)
+  @override
+  bool? get showUpvotes; // v0.19.4 (optional)
+  @override
+  bool? get showDownvotes; // v0.19.4 (optional)
+  @override
+  bool? get showUpvotePercentage;
 
   /// Create a copy of SaveUserSettings
   /// with the given fields replaced by the non-null parameter values.
@@ -1997,14 +2467,16 @@ mixin _$ChangePassword {
 /// @nodoc
 abstract class $ChangePasswordCopyWith<$Res> {
   factory $ChangePasswordCopyWith(
-          ChangePassword value, $Res Function(ChangePassword) then) =
-      _$ChangePasswordCopyWithImpl<$Res, ChangePassword>;
+    ChangePassword value,
+    $Res Function(ChangePassword) then,
+  ) = _$ChangePasswordCopyWithImpl<$Res, ChangePassword>;
   @useResult
-  $Res call(
-      {String newPassword,
-      String newPasswordVerify,
-      String oldPassword,
-      String auth});
+  $Res call({
+    String newPassword,
+    String newPasswordVerify,
+    String oldPassword,
+    String auth,
+  });
 }
 
 /// @nodoc
@@ -2027,40 +2499,49 @@ class _$ChangePasswordCopyWithImpl<$Res, $Val extends ChangePassword>
     Object? oldPassword = null,
     Object? auth = null,
   }) {
-    return _then(_value.copyWith(
-      newPassword: null == newPassword
-          ? _value.newPassword
-          : newPassword // ignore: cast_nullable_to_non_nullable
-              as String,
-      newPasswordVerify: null == newPasswordVerify
-          ? _value.newPasswordVerify
-          : newPasswordVerify // ignore: cast_nullable_to_non_nullable
-              as String,
-      oldPassword: null == oldPassword
-          ? _value.oldPassword
-          : oldPassword // ignore: cast_nullable_to_non_nullable
-              as String,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            newPassword:
+                null == newPassword
+                    ? _value.newPassword
+                    : newPassword // ignore: cast_nullable_to_non_nullable
+                        as String,
+            newPasswordVerify:
+                null == newPasswordVerify
+                    ? _value.newPasswordVerify
+                    : newPasswordVerify // ignore: cast_nullable_to_non_nullable
+                        as String,
+            oldPassword:
+                null == oldPassword
+                    ? _value.oldPassword
+                    : oldPassword // ignore: cast_nullable_to_non_nullable
+                        as String,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$ChangePasswordImplCopyWith<$Res>
     implements $ChangePasswordCopyWith<$Res> {
-  factory _$$ChangePasswordImplCopyWith(_$ChangePasswordImpl value,
-          $Res Function(_$ChangePasswordImpl) then) =
-      __$$ChangePasswordImplCopyWithImpl<$Res>;
+  factory _$$ChangePasswordImplCopyWith(
+    _$ChangePasswordImpl value,
+    $Res Function(_$ChangePasswordImpl) then,
+  ) = __$$ChangePasswordImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String newPassword,
-      String newPasswordVerify,
-      String oldPassword,
-      String auth});
+  $Res call({
+    String newPassword,
+    String newPasswordVerify,
+    String oldPassword,
+    String auth,
+  });
 }
 
 /// @nodoc
@@ -2068,8 +2549,9 @@ class __$$ChangePasswordImplCopyWithImpl<$Res>
     extends _$ChangePasswordCopyWithImpl<$Res, _$ChangePasswordImpl>
     implements _$$ChangePasswordImplCopyWith<$Res> {
   __$$ChangePasswordImplCopyWithImpl(
-      _$ChangePasswordImpl _value, $Res Function(_$ChangePasswordImpl) _then)
-      : super(_value, _then);
+    _$ChangePasswordImpl _value,
+    $Res Function(_$ChangePasswordImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ChangePassword
   /// with the given fields replaced by the non-null parameter values.
@@ -2081,24 +2563,30 @@ class __$$ChangePasswordImplCopyWithImpl<$Res>
     Object? oldPassword = null,
     Object? auth = null,
   }) {
-    return _then(_$ChangePasswordImpl(
-      newPassword: null == newPassword
-          ? _value.newPassword
-          : newPassword // ignore: cast_nullable_to_non_nullable
-              as String,
-      newPasswordVerify: null == newPasswordVerify
-          ? _value.newPasswordVerify
-          : newPasswordVerify // ignore: cast_nullable_to_non_nullable
-              as String,
-      oldPassword: null == oldPassword
-          ? _value.oldPassword
-          : oldPassword // ignore: cast_nullable_to_non_nullable
-              as String,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$ChangePasswordImpl(
+        newPassword:
+            null == newPassword
+                ? _value.newPassword
+                : newPassword // ignore: cast_nullable_to_non_nullable
+                    as String,
+        newPasswordVerify:
+            null == newPasswordVerify
+                ? _value.newPasswordVerify
+                : newPasswordVerify // ignore: cast_nullable_to_non_nullable
+                    as String,
+        oldPassword:
+            null == oldPassword
+                ? _value.oldPassword
+                : oldPassword // ignore: cast_nullable_to_non_nullable
+                    as String,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -2106,12 +2594,12 @@ class __$$ChangePasswordImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$ChangePasswordImpl extends _ChangePassword {
-  const _$ChangePasswordImpl(
-      {required this.newPassword,
-      required this.newPasswordVerify,
-      required this.oldPassword,
-      required this.auth})
-      : super._();
+  const _$ChangePasswordImpl({
+    required this.newPassword,
+    required this.newPasswordVerify,
+    required this.oldPassword,
+    required this.auth,
+  }) : super._();
 
   factory _$ChangePasswordImpl.fromJson(Map<String, dynamic> json) =>
       _$$ChangePasswordImplFromJson(json);
@@ -2147,7 +2635,12 @@ class _$ChangePasswordImpl extends _ChangePassword {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType, newPassword, newPasswordVerify, oldPassword, auth);
+    runtimeType,
+    newPassword,
+    newPasswordVerify,
+    oldPassword,
+    auth,
+  );
 
   /// Create a copy of ChangePassword
   /// with the given fields replaced by the non-null parameter values.
@@ -2156,22 +2649,23 @@ class _$ChangePasswordImpl extends _ChangePassword {
   @pragma('vm:prefer-inline')
   _$$ChangePasswordImplCopyWith<_$ChangePasswordImpl> get copyWith =>
       __$$ChangePasswordImplCopyWithImpl<_$ChangePasswordImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ChangePasswordImplToJson(
-      this,
-    );
+    return _$$ChangePasswordImplToJson(this);
   }
 }
 
 abstract class _ChangePassword extends ChangePassword {
-  const factory _ChangePassword(
-      {required final String newPassword,
-      required final String newPasswordVerify,
-      required final String oldPassword,
-      required final String auth}) = _$ChangePasswordImpl;
+  const factory _ChangePassword({
+    required final String newPassword,
+    required final String newPasswordVerify,
+    required final String oldPassword,
+    required final String auth,
+  }) = _$ChangePasswordImpl;
   const _ChangePassword._() : super._();
 
   factory _ChangePassword.fromJson(Map<String, dynamic> json) =
@@ -2222,18 +2716,20 @@ mixin _$GetPersonDetails {
 /// @nodoc
 abstract class $GetPersonDetailsCopyWith<$Res> {
   factory $GetPersonDetailsCopyWith(
-          GetPersonDetails value, $Res Function(GetPersonDetails) then) =
-      _$GetPersonDetailsCopyWithImpl<$Res, GetPersonDetails>;
+    GetPersonDetails value,
+    $Res Function(GetPersonDetails) then,
+  ) = _$GetPersonDetailsCopyWithImpl<$Res, GetPersonDetails>;
   @useResult
-  $Res call(
-      {int? personId,
-      String? username,
-      SortType? sort,
-      int? page,
-      int? limit,
-      int? communityId,
-      bool? savedOnly,
-      String? auth});
+  $Res call({
+    int? personId,
+    String? username,
+    SortType? sort,
+    int? page,
+    int? limit,
+    int? communityId,
+    bool? savedOnly,
+    String? auth,
+  });
 }
 
 /// @nodoc
@@ -2260,69 +2756,83 @@ class _$GetPersonDetailsCopyWithImpl<$Res, $Val extends GetPersonDetails>
     Object? savedOnly = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_value.copyWith(
-      personId: freezed == personId
-          ? _value.personId
-          : personId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      username: freezed == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String?,
-      sort: freezed == sort
-          ? _value.sort
-          : sort // ignore: cast_nullable_to_non_nullable
-              as SortType?,
-      page: freezed == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as int?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      communityId: freezed == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      savedOnly: freezed == savedOnly
-          ? _value.savedOnly
-          : savedOnly // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            personId:
+                freezed == personId
+                    ? _value.personId
+                    : personId // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            username:
+                freezed == username
+                    ? _value.username
+                    : username // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            sort:
+                freezed == sort
+                    ? _value.sort
+                    : sort // ignore: cast_nullable_to_non_nullable
+                        as SortType?,
+            page:
+                freezed == page
+                    ? _value.page
+                    : page // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            communityId:
+                freezed == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            savedOnly:
+                freezed == savedOnly
+                    ? _value.savedOnly
+                    : savedOnly // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$GetPersonDetailsImplCopyWith<$Res>
     implements $GetPersonDetailsCopyWith<$Res> {
-  factory _$$GetPersonDetailsImplCopyWith(_$GetPersonDetailsImpl value,
-          $Res Function(_$GetPersonDetailsImpl) then) =
-      __$$GetPersonDetailsImplCopyWithImpl<$Res>;
+  factory _$$GetPersonDetailsImplCopyWith(
+    _$GetPersonDetailsImpl value,
+    $Res Function(_$GetPersonDetailsImpl) then,
+  ) = __$$GetPersonDetailsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int? personId,
-      String? username,
-      SortType? sort,
-      int? page,
-      int? limit,
-      int? communityId,
-      bool? savedOnly,
-      String? auth});
+  $Res call({
+    int? personId,
+    String? username,
+    SortType? sort,
+    int? page,
+    int? limit,
+    int? communityId,
+    bool? savedOnly,
+    String? auth,
+  });
 }
 
 /// @nodoc
 class __$$GetPersonDetailsImplCopyWithImpl<$Res>
     extends _$GetPersonDetailsCopyWithImpl<$Res, _$GetPersonDetailsImpl>
     implements _$$GetPersonDetailsImplCopyWith<$Res> {
-  __$$GetPersonDetailsImplCopyWithImpl(_$GetPersonDetailsImpl _value,
-      $Res Function(_$GetPersonDetailsImpl) _then)
-      : super(_value, _then);
+  __$$GetPersonDetailsImplCopyWithImpl(
+    _$GetPersonDetailsImpl _value,
+    $Res Function(_$GetPersonDetailsImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of GetPersonDetails
   /// with the given fields replaced by the non-null parameter values.
@@ -2338,40 +2848,50 @@ class __$$GetPersonDetailsImplCopyWithImpl<$Res>
     Object? savedOnly = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_$GetPersonDetailsImpl(
-      personId: freezed == personId
-          ? _value.personId
-          : personId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      username: freezed == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String?,
-      sort: freezed == sort
-          ? _value.sort
-          : sort // ignore: cast_nullable_to_non_nullable
-              as SortType?,
-      page: freezed == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as int?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      communityId: freezed == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      savedOnly: freezed == savedOnly
-          ? _value.savedOnly
-          : savedOnly // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$GetPersonDetailsImpl(
+        personId:
+            freezed == personId
+                ? _value.personId
+                : personId // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        username:
+            freezed == username
+                ? _value.username
+                : username // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        sort:
+            freezed == sort
+                ? _value.sort
+                : sort // ignore: cast_nullable_to_non_nullable
+                    as SortType?,
+        page:
+            freezed == page
+                ? _value.page
+                : page // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        communityId:
+            freezed == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        savedOnly:
+            freezed == savedOnly
+                ? _value.savedOnly
+                : savedOnly // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -2379,16 +2899,16 @@ class __$$GetPersonDetailsImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$GetPersonDetailsImpl extends _GetPersonDetails {
-  const _$GetPersonDetailsImpl(
-      {this.personId,
-      this.username,
-      this.sort,
-      this.page,
-      this.limit,
-      this.communityId,
-      this.savedOnly,
-      this.auth})
-      : super._();
+  const _$GetPersonDetailsImpl({
+    this.personId,
+    this.username,
+    this.sort,
+    this.page,
+    this.limit,
+    this.communityId,
+    this.savedOnly,
+    this.auth,
+  }) : super._();
 
   factory _$GetPersonDetailsImpl.fromJson(Map<String, dynamic> json) =>
       _$$GetPersonDetailsImplFromJson(json);
@@ -2436,8 +2956,17 @@ class _$GetPersonDetailsImpl extends _GetPersonDetails {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, personId, username, sort, page,
-      limit, communityId, savedOnly, auth);
+  int get hashCode => Object.hash(
+    runtimeType,
+    personId,
+    username,
+    sort,
+    page,
+    limit,
+    communityId,
+    savedOnly,
+    auth,
+  );
 
   /// Create a copy of GetPersonDetails
   /// with the given fields replaced by the non-null parameter values.
@@ -2446,26 +2975,27 @@ class _$GetPersonDetailsImpl extends _GetPersonDetails {
   @pragma('vm:prefer-inline')
   _$$GetPersonDetailsImplCopyWith<_$GetPersonDetailsImpl> get copyWith =>
       __$$GetPersonDetailsImplCopyWithImpl<_$GetPersonDetailsImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetPersonDetailsImplToJson(
-      this,
-    );
+    return _$$GetPersonDetailsImplToJson(this);
   }
 }
 
 abstract class _GetPersonDetails extends GetPersonDetails {
-  const factory _GetPersonDetails(
-      {final int? personId,
-      final String? username,
-      final SortType? sort,
-      final int? page,
-      final int? limit,
-      final int? communityId,
-      final bool? savedOnly,
-      final String? auth}) = _$GetPersonDetailsImpl;
+  const factory _GetPersonDetails({
+    final int? personId,
+    final String? username,
+    final SortType? sort,
+    final int? page,
+    final int? limit,
+    final int? communityId,
+    final bool? savedOnly,
+    final String? auth,
+  }) = _$GetPersonDetailsImpl;
   const _GetPersonDetails._() : super._();
 
   factory _GetPersonDetails.fromJson(Map<String, dynamic> json) =
@@ -2517,8 +3047,9 @@ mixin _$MarkAllAsRead {
 /// @nodoc
 abstract class $MarkAllAsReadCopyWith<$Res> {
   factory $MarkAllAsReadCopyWith(
-          MarkAllAsRead value, $Res Function(MarkAllAsRead) then) =
-      _$MarkAllAsReadCopyWithImpl<$Res, MarkAllAsRead>;
+    MarkAllAsRead value,
+    $Res Function(MarkAllAsRead) then,
+  ) = _$MarkAllAsReadCopyWithImpl<$Res, MarkAllAsRead>;
   @useResult
   $Res call({String auth});
 }
@@ -2537,15 +3068,17 @@ class _$MarkAllAsReadCopyWithImpl<$Res, $Val extends MarkAllAsRead>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? auth = null,
-  }) {
-    return _then(_value.copyWith(
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? auth = null}) {
+    return _then(
+      _value.copyWith(
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -2553,8 +3086,9 @@ class _$MarkAllAsReadCopyWithImpl<$Res, $Val extends MarkAllAsRead>
 abstract class _$$MarkAllAsReadImplCopyWith<$Res>
     implements $MarkAllAsReadCopyWith<$Res> {
   factory _$$MarkAllAsReadImplCopyWith(
-          _$MarkAllAsReadImpl value, $Res Function(_$MarkAllAsReadImpl) then) =
-      __$$MarkAllAsReadImplCopyWithImpl<$Res>;
+    _$MarkAllAsReadImpl value,
+    $Res Function(_$MarkAllAsReadImpl) then,
+  ) = __$$MarkAllAsReadImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String auth});
@@ -2565,22 +3099,24 @@ class __$$MarkAllAsReadImplCopyWithImpl<$Res>
     extends _$MarkAllAsReadCopyWithImpl<$Res, _$MarkAllAsReadImpl>
     implements _$$MarkAllAsReadImplCopyWith<$Res> {
   __$$MarkAllAsReadImplCopyWithImpl(
-      _$MarkAllAsReadImpl _value, $Res Function(_$MarkAllAsReadImpl) _then)
-      : super(_value, _then);
+    _$MarkAllAsReadImpl _value,
+    $Res Function(_$MarkAllAsReadImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of MarkAllAsRead
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? auth = null,
-  }) {
-    return _then(_$MarkAllAsReadImpl(
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? auth = null}) {
+    return _then(
+      _$MarkAllAsReadImpl(
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -2623,9 +3159,7 @@ class _$MarkAllAsReadImpl extends _MarkAllAsRead {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MarkAllAsReadImplToJson(
-      this,
-    );
+    return _$$MarkAllAsReadImplToJson(this);
   }
 }
 
@@ -2695,20 +3229,26 @@ class _$AddAdminCopyWithImpl<$Res, $Val extends AddAdmin>
     Object? added = null,
     Object? auth = null,
   }) {
-    return _then(_value.copyWith(
-      personId: null == personId
-          ? _value.personId
-          : personId // ignore: cast_nullable_to_non_nullable
-              as int,
-      added: null == added
-          ? _value.added
-          : added // ignore: cast_nullable_to_non_nullable
-              as bool,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            personId:
+                null == personId
+                    ? _value.personId
+                    : personId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            added:
+                null == added
+                    ? _value.added
+                    : added // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -2716,8 +3256,9 @@ class _$AddAdminCopyWithImpl<$Res, $Val extends AddAdmin>
 abstract class _$$AddAdminImplCopyWith<$Res>
     implements $AddAdminCopyWith<$Res> {
   factory _$$AddAdminImplCopyWith(
-          _$AddAdminImpl value, $Res Function(_$AddAdminImpl) then) =
-      __$$AddAdminImplCopyWithImpl<$Res>;
+    _$AddAdminImpl value,
+    $Res Function(_$AddAdminImpl) then,
+  ) = __$$AddAdminImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int personId, bool added, String auth});
@@ -2728,8 +3269,9 @@ class __$$AddAdminImplCopyWithImpl<$Res>
     extends _$AddAdminCopyWithImpl<$Res, _$AddAdminImpl>
     implements _$$AddAdminImplCopyWith<$Res> {
   __$$AddAdminImplCopyWithImpl(
-      _$AddAdminImpl _value, $Res Function(_$AddAdminImpl) _then)
-      : super(_value, _then);
+    _$AddAdminImpl _value,
+    $Res Function(_$AddAdminImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of AddAdmin
   /// with the given fields replaced by the non-null parameter values.
@@ -2740,20 +3282,25 @@ class __$$AddAdminImplCopyWithImpl<$Res>
     Object? added = null,
     Object? auth = null,
   }) {
-    return _then(_$AddAdminImpl(
-      personId: null == personId
-          ? _value.personId
-          : personId // ignore: cast_nullable_to_non_nullable
-              as int,
-      added: null == added
-          ? _value.added
-          : added // ignore: cast_nullable_to_non_nullable
-              as bool,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$AddAdminImpl(
+        personId:
+            null == personId
+                ? _value.personId
+                : personId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        added:
+            null == added
+                ? _value.added
+                : added // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -2761,9 +3308,11 @@ class __$$AddAdminImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$AddAdminImpl extends _AddAdmin {
-  const _$AddAdminImpl(
-      {required this.personId, required this.added, required this.auth})
-      : super._();
+  const _$AddAdminImpl({
+    required this.personId,
+    required this.added,
+    required this.auth,
+  }) : super._();
 
   factory _$AddAdminImpl.fromJson(Map<String, dynamic> json) =>
       _$$AddAdminImplFromJson(json);
@@ -2805,17 +3354,16 @@ class _$AddAdminImpl extends _AddAdmin {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AddAdminImplToJson(
-      this,
-    );
+    return _$$AddAdminImplToJson(this);
   }
 }
 
 abstract class _AddAdmin extends AddAdmin {
-  const factory _AddAdmin(
-      {required final int personId,
-      required final bool added,
-      required final String auth}) = _$AddAdminImpl;
+  const factory _AddAdmin({
+    required final int personId,
+    required final bool added,
+    required final String auth,
+  }) = _$AddAdminImpl;
   const _AddAdmin._() : super._();
 
   factory _AddAdmin.fromJson(Map<String, dynamic> json) =
@@ -2864,13 +3412,14 @@ abstract class $BanPersonCopyWith<$Res> {
   factory $BanPersonCopyWith(BanPerson value, $Res Function(BanPerson) then) =
       _$BanPersonCopyWithImpl<$Res, BanPerson>;
   @useResult
-  $Res call(
-      {int personId,
-      bool ban,
-      bool? removeData,
-      String? reason,
-      int? expires,
-      String auth});
+  $Res call({
+    int personId,
+    bool ban,
+    bool? removeData,
+    String? reason,
+    int? expires,
+    String auth,
+  });
 }
 
 /// @nodoc
@@ -2895,32 +3444,41 @@ class _$BanPersonCopyWithImpl<$Res, $Val extends BanPerson>
     Object? expires = freezed,
     Object? auth = null,
   }) {
-    return _then(_value.copyWith(
-      personId: null == personId
-          ? _value.personId
-          : personId // ignore: cast_nullable_to_non_nullable
-              as int,
-      ban: null == ban
-          ? _value.ban
-          : ban // ignore: cast_nullable_to_non_nullable
-              as bool,
-      removeData: freezed == removeData
-          ? _value.removeData
-          : removeData // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      reason: freezed == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String?,
-      expires: freezed == expires
-          ? _value.expires
-          : expires // ignore: cast_nullable_to_non_nullable
-              as int?,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            personId:
+                null == personId
+                    ? _value.personId
+                    : personId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            ban:
+                null == ban
+                    ? _value.ban
+                    : ban // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            removeData:
+                freezed == removeData
+                    ? _value.removeData
+                    : removeData // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            reason:
+                freezed == reason
+                    ? _value.reason
+                    : reason // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            expires:
+                freezed == expires
+                    ? _value.expires
+                    : expires // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -2928,17 +3486,19 @@ class _$BanPersonCopyWithImpl<$Res, $Val extends BanPerson>
 abstract class _$$BanPersonImplCopyWith<$Res>
     implements $BanPersonCopyWith<$Res> {
   factory _$$BanPersonImplCopyWith(
-          _$BanPersonImpl value, $Res Function(_$BanPersonImpl) then) =
-      __$$BanPersonImplCopyWithImpl<$Res>;
+    _$BanPersonImpl value,
+    $Res Function(_$BanPersonImpl) then,
+  ) = __$$BanPersonImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int personId,
-      bool ban,
-      bool? removeData,
-      String? reason,
-      int? expires,
-      String auth});
+  $Res call({
+    int personId,
+    bool ban,
+    bool? removeData,
+    String? reason,
+    int? expires,
+    String auth,
+  });
 }
 
 /// @nodoc
@@ -2946,8 +3506,9 @@ class __$$BanPersonImplCopyWithImpl<$Res>
     extends _$BanPersonCopyWithImpl<$Res, _$BanPersonImpl>
     implements _$$BanPersonImplCopyWith<$Res> {
   __$$BanPersonImplCopyWithImpl(
-      _$BanPersonImpl _value, $Res Function(_$BanPersonImpl) _then)
-      : super(_value, _then);
+    _$BanPersonImpl _value,
+    $Res Function(_$BanPersonImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of BanPerson
   /// with the given fields replaced by the non-null parameter values.
@@ -2961,32 +3522,40 @@ class __$$BanPersonImplCopyWithImpl<$Res>
     Object? expires = freezed,
     Object? auth = null,
   }) {
-    return _then(_$BanPersonImpl(
-      personId: null == personId
-          ? _value.personId
-          : personId // ignore: cast_nullable_to_non_nullable
-              as int,
-      ban: null == ban
-          ? _value.ban
-          : ban // ignore: cast_nullable_to_non_nullable
-              as bool,
-      removeData: freezed == removeData
-          ? _value.removeData
-          : removeData // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      reason: freezed == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String?,
-      expires: freezed == expires
-          ? _value.expires
-          : expires // ignore: cast_nullable_to_non_nullable
-              as int?,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$BanPersonImpl(
+        personId:
+            null == personId
+                ? _value.personId
+                : personId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        ban:
+            null == ban
+                ? _value.ban
+                : ban // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        removeData:
+            freezed == removeData
+                ? _value.removeData
+                : removeData // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        reason:
+            freezed == reason
+                ? _value.reason
+                : reason // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        expires:
+            freezed == expires
+                ? _value.expires
+                : expires // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -2994,14 +3563,14 @@ class __$$BanPersonImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$BanPersonImpl extends _BanPerson {
-  const _$BanPersonImpl(
-      {required this.personId,
-      required this.ban,
-      this.removeData,
-      this.reason,
-      this.expires,
-      required this.auth})
-      : super._();
+  const _$BanPersonImpl({
+    required this.personId,
+    required this.ban,
+    this.removeData,
+    this.reason,
+    this.expires,
+    required this.auth,
+  }) : super._();
 
   factory _$BanPersonImpl.fromJson(Map<String, dynamic> json) =>
       _$$BanPersonImplFromJson(json);
@@ -3042,7 +3611,14 @@ class _$BanPersonImpl extends _BanPerson {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType, personId, ban, removeData, reason, expires, auth);
+    runtimeType,
+    personId,
+    ban,
+    removeData,
+    reason,
+    expires,
+    auth,
+  );
 
   /// Create a copy of BanPerson
   /// with the given fields replaced by the non-null parameter values.
@@ -3054,20 +3630,19 @@ class _$BanPersonImpl extends _BanPerson {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$BanPersonImplToJson(
-      this,
-    );
+    return _$$BanPersonImplToJson(this);
   }
 }
 
 abstract class _BanPerson extends BanPerson {
-  const factory _BanPerson(
-      {required final int personId,
-      required final bool ban,
-      final bool? removeData,
-      final String? reason,
-      final int? expires,
-      required final String auth}) = _$BanPersonImpl;
+  const factory _BanPerson({
+    required final int personId,
+    required final bool ban,
+    final bool? removeData,
+    final String? reason,
+    final int? expires,
+    required final String auth,
+  }) = _$BanPersonImpl;
   const _BanPerson._() : super._();
 
   factory _BanPerson.fromJson(Map<String, dynamic> json) =
@@ -3119,15 +3694,17 @@ mixin _$GetReplies {
 /// @nodoc
 abstract class $GetRepliesCopyWith<$Res> {
   factory $GetRepliesCopyWith(
-          GetReplies value, $Res Function(GetReplies) then) =
-      _$GetRepliesCopyWithImpl<$Res, GetReplies>;
+    GetReplies value,
+    $Res Function(GetReplies) then,
+  ) = _$GetRepliesCopyWithImpl<$Res, GetReplies>;
   @useResult
-  $Res call(
-      {CommentSortType? sort,
-      int? page,
-      int? limit,
-      bool? unreadOnly,
-      String auth});
+  $Res call({
+    CommentSortType? sort,
+    int? page,
+    int? limit,
+    bool? unreadOnly,
+    String auth,
+  });
 }
 
 /// @nodoc
@@ -3151,28 +3728,36 @@ class _$GetRepliesCopyWithImpl<$Res, $Val extends GetReplies>
     Object? unreadOnly = freezed,
     Object? auth = null,
   }) {
-    return _then(_value.copyWith(
-      sort: freezed == sort
-          ? _value.sort
-          : sort // ignore: cast_nullable_to_non_nullable
-              as CommentSortType?,
-      page: freezed == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as int?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      unreadOnly: freezed == unreadOnly
-          ? _value.unreadOnly
-          : unreadOnly // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            sort:
+                freezed == sort
+                    ? _value.sort
+                    : sort // ignore: cast_nullable_to_non_nullable
+                        as CommentSortType?,
+            page:
+                freezed == page
+                    ? _value.page
+                    : page // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            unreadOnly:
+                freezed == unreadOnly
+                    ? _value.unreadOnly
+                    : unreadOnly // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -3180,16 +3765,18 @@ class _$GetRepliesCopyWithImpl<$Res, $Val extends GetReplies>
 abstract class _$$GetRepliesImplCopyWith<$Res>
     implements $GetRepliesCopyWith<$Res> {
   factory _$$GetRepliesImplCopyWith(
-          _$GetRepliesImpl value, $Res Function(_$GetRepliesImpl) then) =
-      __$$GetRepliesImplCopyWithImpl<$Res>;
+    _$GetRepliesImpl value,
+    $Res Function(_$GetRepliesImpl) then,
+  ) = __$$GetRepliesImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {CommentSortType? sort,
-      int? page,
-      int? limit,
-      bool? unreadOnly,
-      String auth});
+  $Res call({
+    CommentSortType? sort,
+    int? page,
+    int? limit,
+    bool? unreadOnly,
+    String auth,
+  });
 }
 
 /// @nodoc
@@ -3197,8 +3784,9 @@ class __$$GetRepliesImplCopyWithImpl<$Res>
     extends _$GetRepliesCopyWithImpl<$Res, _$GetRepliesImpl>
     implements _$$GetRepliesImplCopyWith<$Res> {
   __$$GetRepliesImplCopyWithImpl(
-      _$GetRepliesImpl _value, $Res Function(_$GetRepliesImpl) _then)
-      : super(_value, _then);
+    _$GetRepliesImpl _value,
+    $Res Function(_$GetRepliesImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of GetReplies
   /// with the given fields replaced by the non-null parameter values.
@@ -3211,28 +3799,35 @@ class __$$GetRepliesImplCopyWithImpl<$Res>
     Object? unreadOnly = freezed,
     Object? auth = null,
   }) {
-    return _then(_$GetRepliesImpl(
-      sort: freezed == sort
-          ? _value.sort
-          : sort // ignore: cast_nullable_to_non_nullable
-              as CommentSortType?,
-      page: freezed == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as int?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      unreadOnly: freezed == unreadOnly
-          ? _value.unreadOnly
-          : unreadOnly // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$GetRepliesImpl(
+        sort:
+            freezed == sort
+                ? _value.sort
+                : sort // ignore: cast_nullable_to_non_nullable
+                    as CommentSortType?,
+        page:
+            freezed == page
+                ? _value.page
+                : page // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        unreadOnly:
+            freezed == unreadOnly
+                ? _value.unreadOnly
+                : unreadOnly // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -3240,9 +3835,13 @@ class __$$GetRepliesImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$GetRepliesImpl extends _GetReplies {
-  const _$GetRepliesImpl(
-      {this.sort, this.page, this.limit, this.unreadOnly, required this.auth})
-      : super._();
+  const _$GetRepliesImpl({
+    this.sort,
+    this.page,
+    this.limit,
+    this.unreadOnly,
+    required this.auth,
+  }) : super._();
 
   factory _$GetRepliesImpl.fromJson(Map<String, dynamic> json) =>
       _$$GetRepliesImplFromJson(json);
@@ -3291,19 +3890,18 @@ class _$GetRepliesImpl extends _GetReplies {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetRepliesImplToJson(
-      this,
-    );
+    return _$$GetRepliesImplToJson(this);
   }
 }
 
 abstract class _GetReplies extends GetReplies {
-  const factory _GetReplies(
-      {final CommentSortType? sort,
-      final int? page,
-      final int? limit,
-      final bool? unreadOnly,
-      required final String auth}) = _$GetRepliesImpl;
+  const factory _GetReplies({
+    final CommentSortType? sort,
+    final int? page,
+    final int? limit,
+    final bool? unreadOnly,
+    required final String auth,
+  }) = _$GetRepliesImpl;
   const _GetReplies._() : super._();
 
   factory _GetReplies.fromJson(Map<String, dynamic> json) =
@@ -3353,15 +3951,17 @@ mixin _$GetPersonMentions {
 /// @nodoc
 abstract class $GetPersonMentionsCopyWith<$Res> {
   factory $GetPersonMentionsCopyWith(
-          GetPersonMentions value, $Res Function(GetPersonMentions) then) =
-      _$GetPersonMentionsCopyWithImpl<$Res, GetPersonMentions>;
+    GetPersonMentions value,
+    $Res Function(GetPersonMentions) then,
+  ) = _$GetPersonMentionsCopyWithImpl<$Res, GetPersonMentions>;
   @useResult
-  $Res call(
-      {CommentSortType? sort,
-      int? page,
-      int? limit,
-      bool? unreadOnly,
-      String auth});
+  $Res call({
+    CommentSortType? sort,
+    int? page,
+    int? limit,
+    bool? unreadOnly,
+    String auth,
+  });
 }
 
 /// @nodoc
@@ -3385,54 +3985,65 @@ class _$GetPersonMentionsCopyWithImpl<$Res, $Val extends GetPersonMentions>
     Object? unreadOnly = freezed,
     Object? auth = null,
   }) {
-    return _then(_value.copyWith(
-      sort: freezed == sort
-          ? _value.sort
-          : sort // ignore: cast_nullable_to_non_nullable
-              as CommentSortType?,
-      page: freezed == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as int?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      unreadOnly: freezed == unreadOnly
-          ? _value.unreadOnly
-          : unreadOnly // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            sort:
+                freezed == sort
+                    ? _value.sort
+                    : sort // ignore: cast_nullable_to_non_nullable
+                        as CommentSortType?,
+            page:
+                freezed == page
+                    ? _value.page
+                    : page // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            unreadOnly:
+                freezed == unreadOnly
+                    ? _value.unreadOnly
+                    : unreadOnly // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$GetPersonMentionsImplCopyWith<$Res>
     implements $GetPersonMentionsCopyWith<$Res> {
-  factory _$$GetPersonMentionsImplCopyWith(_$GetPersonMentionsImpl value,
-          $Res Function(_$GetPersonMentionsImpl) then) =
-      __$$GetPersonMentionsImplCopyWithImpl<$Res>;
+  factory _$$GetPersonMentionsImplCopyWith(
+    _$GetPersonMentionsImpl value,
+    $Res Function(_$GetPersonMentionsImpl) then,
+  ) = __$$GetPersonMentionsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {CommentSortType? sort,
-      int? page,
-      int? limit,
-      bool? unreadOnly,
-      String auth});
+  $Res call({
+    CommentSortType? sort,
+    int? page,
+    int? limit,
+    bool? unreadOnly,
+    String auth,
+  });
 }
 
 /// @nodoc
 class __$$GetPersonMentionsImplCopyWithImpl<$Res>
     extends _$GetPersonMentionsCopyWithImpl<$Res, _$GetPersonMentionsImpl>
     implements _$$GetPersonMentionsImplCopyWith<$Res> {
-  __$$GetPersonMentionsImplCopyWithImpl(_$GetPersonMentionsImpl _value,
-      $Res Function(_$GetPersonMentionsImpl) _then)
-      : super(_value, _then);
+  __$$GetPersonMentionsImplCopyWithImpl(
+    _$GetPersonMentionsImpl _value,
+    $Res Function(_$GetPersonMentionsImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of GetPersonMentions
   /// with the given fields replaced by the non-null parameter values.
@@ -3445,28 +4056,35 @@ class __$$GetPersonMentionsImplCopyWithImpl<$Res>
     Object? unreadOnly = freezed,
     Object? auth = null,
   }) {
-    return _then(_$GetPersonMentionsImpl(
-      sort: freezed == sort
-          ? _value.sort
-          : sort // ignore: cast_nullable_to_non_nullable
-              as CommentSortType?,
-      page: freezed == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as int?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      unreadOnly: freezed == unreadOnly
-          ? _value.unreadOnly
-          : unreadOnly // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$GetPersonMentionsImpl(
+        sort:
+            freezed == sort
+                ? _value.sort
+                : sort // ignore: cast_nullable_to_non_nullable
+                    as CommentSortType?,
+        page:
+            freezed == page
+                ? _value.page
+                : page // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        unreadOnly:
+            freezed == unreadOnly
+                ? _value.unreadOnly
+                : unreadOnly // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -3474,9 +4092,13 @@ class __$$GetPersonMentionsImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$GetPersonMentionsImpl extends _GetPersonMentions {
-  const _$GetPersonMentionsImpl(
-      {this.sort, this.page, this.limit, this.unreadOnly, required this.auth})
-      : super._();
+  const _$GetPersonMentionsImpl({
+    this.sort,
+    this.page,
+    this.limit,
+    this.unreadOnly,
+    required this.auth,
+  }) : super._();
 
   factory _$GetPersonMentionsImpl.fromJson(Map<String, dynamic> json) =>
       _$$GetPersonMentionsImplFromJson(json);
@@ -3522,23 +4144,24 @@ class _$GetPersonMentionsImpl extends _GetPersonMentions {
   @pragma('vm:prefer-inline')
   _$$GetPersonMentionsImplCopyWith<_$GetPersonMentionsImpl> get copyWith =>
       __$$GetPersonMentionsImplCopyWithImpl<_$GetPersonMentionsImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetPersonMentionsImplToJson(
-      this,
-    );
+    return _$$GetPersonMentionsImplToJson(this);
   }
 }
 
 abstract class _GetPersonMentions extends GetPersonMentions {
-  const factory _GetPersonMentions(
-      {final CommentSortType? sort,
-      final int? page,
-      final int? limit,
-      final bool? unreadOnly,
-      required final String auth}) = _$GetPersonMentionsImpl;
+  const factory _GetPersonMentions({
+    final CommentSortType? sort,
+    final int? page,
+    final int? limit,
+    final bool? unreadOnly,
+    required final String auth,
+  }) = _$GetPersonMentionsImpl;
   const _GetPersonMentions._() : super._();
 
   factory _GetPersonMentions.fromJson(Map<String, dynamic> json) =
@@ -3564,7 +4187,8 @@ abstract class _GetPersonMentions extends GetPersonMentions {
 }
 
 MarkPersonMentionAsRead _$MarkPersonMentionAsReadFromJson(
-    Map<String, dynamic> json) {
+  Map<String, dynamic> json,
+) {
   return _MarkPersonMentionAsRead.fromJson(json);
 }
 
@@ -3586,16 +4210,19 @@ mixin _$MarkPersonMentionAsRead {
 
 /// @nodoc
 abstract class $MarkPersonMentionAsReadCopyWith<$Res> {
-  factory $MarkPersonMentionAsReadCopyWith(MarkPersonMentionAsRead value,
-          $Res Function(MarkPersonMentionAsRead) then) =
-      _$MarkPersonMentionAsReadCopyWithImpl<$Res, MarkPersonMentionAsRead>;
+  factory $MarkPersonMentionAsReadCopyWith(
+    MarkPersonMentionAsRead value,
+    $Res Function(MarkPersonMentionAsRead) then,
+  ) = _$MarkPersonMentionAsReadCopyWithImpl<$Res, MarkPersonMentionAsRead>;
   @useResult
   $Res call({int personMentionId, bool read, String auth});
 }
 
 /// @nodoc
-class _$MarkPersonMentionAsReadCopyWithImpl<$Res,
-        $Val extends MarkPersonMentionAsRead>
+class _$MarkPersonMentionAsReadCopyWithImpl<
+  $Res,
+  $Val extends MarkPersonMentionAsRead
+>
     implements $MarkPersonMentionAsReadCopyWith<$Res> {
   _$MarkPersonMentionAsReadCopyWithImpl(this._value, this._then);
 
@@ -3613,20 +4240,26 @@ class _$MarkPersonMentionAsReadCopyWithImpl<$Res,
     Object? read = null,
     Object? auth = null,
   }) {
-    return _then(_value.copyWith(
-      personMentionId: null == personMentionId
-          ? _value.personMentionId
-          : personMentionId // ignore: cast_nullable_to_non_nullable
-              as int,
-      read: null == read
-          ? _value.read
-          : read // ignore: cast_nullable_to_non_nullable
-              as bool,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            personMentionId:
+                null == personMentionId
+                    ? _value.personMentionId
+                    : personMentionId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            read:
+                null == read
+                    ? _value.read
+                    : read // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -3634,9 +4267,9 @@ class _$MarkPersonMentionAsReadCopyWithImpl<$Res,
 abstract class _$$MarkPersonMentionAsReadImplCopyWith<$Res>
     implements $MarkPersonMentionAsReadCopyWith<$Res> {
   factory _$$MarkPersonMentionAsReadImplCopyWith(
-          _$MarkPersonMentionAsReadImpl value,
-          $Res Function(_$MarkPersonMentionAsReadImpl) then) =
-      __$$MarkPersonMentionAsReadImplCopyWithImpl<$Res>;
+    _$MarkPersonMentionAsReadImpl value,
+    $Res Function(_$MarkPersonMentionAsReadImpl) then,
+  ) = __$$MarkPersonMentionAsReadImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int personMentionId, bool read, String auth});
@@ -3644,13 +4277,16 @@ abstract class _$$MarkPersonMentionAsReadImplCopyWith<$Res>
 
 /// @nodoc
 class __$$MarkPersonMentionAsReadImplCopyWithImpl<$Res>
-    extends _$MarkPersonMentionAsReadCopyWithImpl<$Res,
-        _$MarkPersonMentionAsReadImpl>
+    extends
+        _$MarkPersonMentionAsReadCopyWithImpl<
+          $Res,
+          _$MarkPersonMentionAsReadImpl
+        >
     implements _$$MarkPersonMentionAsReadImplCopyWith<$Res> {
   __$$MarkPersonMentionAsReadImplCopyWithImpl(
-      _$MarkPersonMentionAsReadImpl _value,
-      $Res Function(_$MarkPersonMentionAsReadImpl) _then)
-      : super(_value, _then);
+    _$MarkPersonMentionAsReadImpl _value,
+    $Res Function(_$MarkPersonMentionAsReadImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of MarkPersonMentionAsRead
   /// with the given fields replaced by the non-null parameter values.
@@ -3661,20 +4297,25 @@ class __$$MarkPersonMentionAsReadImplCopyWithImpl<$Res>
     Object? read = null,
     Object? auth = null,
   }) {
-    return _then(_$MarkPersonMentionAsReadImpl(
-      personMentionId: null == personMentionId
-          ? _value.personMentionId
-          : personMentionId // ignore: cast_nullable_to_non_nullable
-              as int,
-      read: null == read
-          ? _value.read
-          : read // ignore: cast_nullable_to_non_nullable
-              as bool,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$MarkPersonMentionAsReadImpl(
+        personMentionId:
+            null == personMentionId
+                ? _value.personMentionId
+                : personMentionId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        read:
+            null == read
+                ? _value.read
+                : read // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -3682,9 +4323,11 @@ class __$$MarkPersonMentionAsReadImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$MarkPersonMentionAsReadImpl extends _MarkPersonMentionAsRead {
-  const _$MarkPersonMentionAsReadImpl(
-      {required this.personMentionId, required this.read, required this.auth})
-      : super._();
+  const _$MarkPersonMentionAsReadImpl({
+    required this.personMentionId,
+    required this.read,
+    required this.auth,
+  }) : super._();
 
   factory _$MarkPersonMentionAsReadImpl.fromJson(Map<String, dynamic> json) =>
       _$$MarkPersonMentionAsReadImplFromJson(json);
@@ -3722,22 +4365,22 @@ class _$MarkPersonMentionAsReadImpl extends _MarkPersonMentionAsRead {
   @override
   @pragma('vm:prefer-inline')
   _$$MarkPersonMentionAsReadImplCopyWith<_$MarkPersonMentionAsReadImpl>
-      get copyWith => __$$MarkPersonMentionAsReadImplCopyWithImpl<
-          _$MarkPersonMentionAsReadImpl>(this, _$identity);
+  get copyWith => __$$MarkPersonMentionAsReadImplCopyWithImpl<
+    _$MarkPersonMentionAsReadImpl
+  >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MarkPersonMentionAsReadImplToJson(
-      this,
-    );
+    return _$$MarkPersonMentionAsReadImplToJson(this);
   }
 }
 
 abstract class _MarkPersonMentionAsRead extends MarkPersonMentionAsRead {
-  const factory _MarkPersonMentionAsRead(
-      {required final int personMentionId,
-      required final bool read,
-      required final String auth}) = _$MarkPersonMentionAsReadImpl;
+  const factory _MarkPersonMentionAsRead({
+    required final int personMentionId,
+    required final bool read,
+    required final String auth,
+  }) = _$MarkPersonMentionAsReadImpl;
   const _MarkPersonMentionAsRead._() : super._();
 
   factory _MarkPersonMentionAsRead.fromJson(Map<String, dynamic> json) =
@@ -3755,7 +4398,7 @@ abstract class _MarkPersonMentionAsRead extends MarkPersonMentionAsRead {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MarkPersonMentionAsReadImplCopyWith<_$MarkPersonMentionAsReadImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 DeleteAccount _$DeleteAccountFromJson(Map<String, dynamic> json) {
@@ -3780,8 +4423,9 @@ mixin _$DeleteAccount {
 /// @nodoc
 abstract class $DeleteAccountCopyWith<$Res> {
   factory $DeleteAccountCopyWith(
-          DeleteAccount value, $Res Function(DeleteAccount) then) =
-      _$DeleteAccountCopyWithImpl<$Res, DeleteAccount>;
+    DeleteAccount value,
+    $Res Function(DeleteAccount) then,
+  ) = _$DeleteAccountCopyWithImpl<$Res, DeleteAccount>;
   @useResult
   $Res call({String password, String auth});
 }
@@ -3800,20 +4444,22 @@ class _$DeleteAccountCopyWithImpl<$Res, $Val extends DeleteAccount>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? password = null,
-    Object? auth = null,
-  }) {
-    return _then(_value.copyWith(
-      password: null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? password = null, Object? auth = null}) {
+    return _then(
+      _value.copyWith(
+            password:
+                null == password
+                    ? _value.password
+                    : password // ignore: cast_nullable_to_non_nullable
+                        as String,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -3821,8 +4467,9 @@ class _$DeleteAccountCopyWithImpl<$Res, $Val extends DeleteAccount>
 abstract class _$$DeleteAccountImplCopyWith<$Res>
     implements $DeleteAccountCopyWith<$Res> {
   factory _$$DeleteAccountImplCopyWith(
-          _$DeleteAccountImpl value, $Res Function(_$DeleteAccountImpl) then) =
-      __$$DeleteAccountImplCopyWithImpl<$Res>;
+    _$DeleteAccountImpl value,
+    $Res Function(_$DeleteAccountImpl) then,
+  ) = __$$DeleteAccountImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String password, String auth});
@@ -3833,27 +4480,29 @@ class __$$DeleteAccountImplCopyWithImpl<$Res>
     extends _$DeleteAccountCopyWithImpl<$Res, _$DeleteAccountImpl>
     implements _$$DeleteAccountImplCopyWith<$Res> {
   __$$DeleteAccountImplCopyWithImpl(
-      _$DeleteAccountImpl _value, $Res Function(_$DeleteAccountImpl) _then)
-      : super(_value, _then);
+    _$DeleteAccountImpl _value,
+    $Res Function(_$DeleteAccountImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of DeleteAccount
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? password = null,
-    Object? auth = null,
-  }) {
-    return _then(_$DeleteAccountImpl(
-      password: null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? password = null, Object? auth = null}) {
+    return _then(
+      _$DeleteAccountImpl(
+        password:
+            null == password
+                ? _value.password
+                : password // ignore: cast_nullable_to_non_nullable
+                    as String,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -3862,7 +4511,7 @@ class __$$DeleteAccountImplCopyWithImpl<$Res>
 @apiSerde
 class _$DeleteAccountImpl extends _DeleteAccount {
   const _$DeleteAccountImpl({required this.password, required this.auth})
-      : super._();
+    : super._();
 
   factory _$DeleteAccountImpl.fromJson(Map<String, dynamic> json) =>
       _$$DeleteAccountImplFromJson(json);
@@ -3901,16 +4550,15 @@ class _$DeleteAccountImpl extends _DeleteAccount {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DeleteAccountImplToJson(
-      this,
-    );
+    return _$$DeleteAccountImplToJson(this);
   }
 }
 
 abstract class _DeleteAccount extends DeleteAccount {
-  const factory _DeleteAccount(
-      {required final String password,
-      required final String auth}) = _$DeleteAccountImpl;
+  const factory _DeleteAccount({
+    required final String password,
+    required final String auth,
+  }) = _$DeleteAccountImpl;
   const _DeleteAccount._() : super._();
 
   factory _DeleteAccount.fromJson(Map<String, dynamic> json) =
@@ -3950,8 +4598,9 @@ mixin _$PasswordReset {
 /// @nodoc
 abstract class $PasswordResetCopyWith<$Res> {
   factory $PasswordResetCopyWith(
-          PasswordReset value, $Res Function(PasswordReset) then) =
-      _$PasswordResetCopyWithImpl<$Res, PasswordReset>;
+    PasswordReset value,
+    $Res Function(PasswordReset) then,
+  ) = _$PasswordResetCopyWithImpl<$Res, PasswordReset>;
   @useResult
   $Res call({String email});
 }
@@ -3970,15 +4619,17 @@ class _$PasswordResetCopyWithImpl<$Res, $Val extends PasswordReset>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? email = null,
-  }) {
-    return _then(_value.copyWith(
-      email: null == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? email = null}) {
+    return _then(
+      _value.copyWith(
+            email:
+                null == email
+                    ? _value.email
+                    : email // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -3986,8 +4637,9 @@ class _$PasswordResetCopyWithImpl<$Res, $Val extends PasswordReset>
 abstract class _$$PasswordResetImplCopyWith<$Res>
     implements $PasswordResetCopyWith<$Res> {
   factory _$$PasswordResetImplCopyWith(
-          _$PasswordResetImpl value, $Res Function(_$PasswordResetImpl) then) =
-      __$$PasswordResetImplCopyWithImpl<$Res>;
+    _$PasswordResetImpl value,
+    $Res Function(_$PasswordResetImpl) then,
+  ) = __$$PasswordResetImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String email});
@@ -3998,22 +4650,24 @@ class __$$PasswordResetImplCopyWithImpl<$Res>
     extends _$PasswordResetCopyWithImpl<$Res, _$PasswordResetImpl>
     implements _$$PasswordResetImplCopyWith<$Res> {
   __$$PasswordResetImplCopyWithImpl(
-      _$PasswordResetImpl _value, $Res Function(_$PasswordResetImpl) _then)
-      : super(_value, _then);
+    _$PasswordResetImpl _value,
+    $Res Function(_$PasswordResetImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of PasswordReset
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? email = null,
-  }) {
-    return _then(_$PasswordResetImpl(
-      email: null == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? email = null}) {
+    return _then(
+      _$PasswordResetImpl(
+        email:
+            null == email
+                ? _value.email
+                : email // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -4056,9 +4710,7 @@ class _$PasswordResetImpl extends _PasswordReset {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PasswordResetImplToJson(
-      this,
-    );
+    return _$$PasswordResetImplToJson(this);
   }
 }
 
@@ -4104,8 +4756,9 @@ mixin _$PasswordChange {
 /// @nodoc
 abstract class $PasswordChangeCopyWith<$Res> {
   factory $PasswordChangeCopyWith(
-          PasswordChange value, $Res Function(PasswordChange) then) =
-      _$PasswordChangeCopyWithImpl<$Res, PasswordChange>;
+    PasswordChange value,
+    $Res Function(PasswordChange) then,
+  ) = _$PasswordChangeCopyWithImpl<$Res, PasswordChange>;
   @useResult
   $Res call({String token, String password, String passwordVerify});
 }
@@ -4129,29 +4782,36 @@ class _$PasswordChangeCopyWithImpl<$Res, $Val extends PasswordChange>
     Object? password = null,
     Object? passwordVerify = null,
   }) {
-    return _then(_value.copyWith(
-      token: null == token
-          ? _value.token
-          : token // ignore: cast_nullable_to_non_nullable
-              as String,
-      password: null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String,
-      passwordVerify: null == passwordVerify
-          ? _value.passwordVerify
-          : passwordVerify // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            token:
+                null == token
+                    ? _value.token
+                    : token // ignore: cast_nullable_to_non_nullable
+                        as String,
+            password:
+                null == password
+                    ? _value.password
+                    : password // ignore: cast_nullable_to_non_nullable
+                        as String,
+            passwordVerify:
+                null == passwordVerify
+                    ? _value.passwordVerify
+                    : passwordVerify // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$PasswordChangeImplCopyWith<$Res>
     implements $PasswordChangeCopyWith<$Res> {
-  factory _$$PasswordChangeImplCopyWith(_$PasswordChangeImpl value,
-          $Res Function(_$PasswordChangeImpl) then) =
-      __$$PasswordChangeImplCopyWithImpl<$Res>;
+  factory _$$PasswordChangeImplCopyWith(
+    _$PasswordChangeImpl value,
+    $Res Function(_$PasswordChangeImpl) then,
+  ) = __$$PasswordChangeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String token, String password, String passwordVerify});
@@ -4162,8 +4822,9 @@ class __$$PasswordChangeImplCopyWithImpl<$Res>
     extends _$PasswordChangeCopyWithImpl<$Res, _$PasswordChangeImpl>
     implements _$$PasswordChangeImplCopyWith<$Res> {
   __$$PasswordChangeImplCopyWithImpl(
-      _$PasswordChangeImpl _value, $Res Function(_$PasswordChangeImpl) _then)
-      : super(_value, _then);
+    _$PasswordChangeImpl _value,
+    $Res Function(_$PasswordChangeImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of PasswordChange
   /// with the given fields replaced by the non-null parameter values.
@@ -4174,20 +4835,25 @@ class __$$PasswordChangeImplCopyWithImpl<$Res>
     Object? password = null,
     Object? passwordVerify = null,
   }) {
-    return _then(_$PasswordChangeImpl(
-      token: null == token
-          ? _value.token
-          : token // ignore: cast_nullable_to_non_nullable
-              as String,
-      password: null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String,
-      passwordVerify: null == passwordVerify
-          ? _value.passwordVerify
-          : passwordVerify // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$PasswordChangeImpl(
+        token:
+            null == token
+                ? _value.token
+                : token // ignore: cast_nullable_to_non_nullable
+                    as String,
+        password:
+            null == password
+                ? _value.password
+                : password // ignore: cast_nullable_to_non_nullable
+                    as String,
+        passwordVerify:
+            null == passwordVerify
+                ? _value.passwordVerify
+                : passwordVerify // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -4195,11 +4861,11 @@ class __$$PasswordChangeImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$PasswordChangeImpl extends _PasswordChange {
-  const _$PasswordChangeImpl(
-      {required this.token,
-      required this.password,
-      required this.passwordVerify})
-      : super._();
+  const _$PasswordChangeImpl({
+    required this.token,
+    required this.password,
+    required this.passwordVerify,
+  }) : super._();
 
   factory _$PasswordChangeImpl.fromJson(Map<String, dynamic> json) =>
       _$$PasswordChangeImplFromJson(json);
@@ -4239,21 +4905,22 @@ class _$PasswordChangeImpl extends _PasswordChange {
   @pragma('vm:prefer-inline')
   _$$PasswordChangeImplCopyWith<_$PasswordChangeImpl> get copyWith =>
       __$$PasswordChangeImplCopyWithImpl<_$PasswordChangeImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PasswordChangeImplToJson(
-      this,
-    );
+    return _$$PasswordChangeImplToJson(this);
   }
 }
 
 abstract class _PasswordChange extends PasswordChange {
-  const factory _PasswordChange(
-      {required final String token,
-      required final String password,
-      required final String passwordVerify}) = _$PasswordChangeImpl;
+  const factory _PasswordChange({
+    required final String token,
+    required final String password,
+    required final String passwordVerify,
+  }) = _$PasswordChangeImpl;
   const _PasswordChange._() : super._();
 
   factory _PasswordChange.fromJson(Map<String, dynamic> json) =
@@ -4297,8 +4964,9 @@ mixin _$BlockPerson {
 /// @nodoc
 abstract class $BlockPersonCopyWith<$Res> {
   factory $BlockPersonCopyWith(
-          BlockPerson value, $Res Function(BlockPerson) then) =
-      _$BlockPersonCopyWithImpl<$Res, BlockPerson>;
+    BlockPerson value,
+    $Res Function(BlockPerson) then,
+  ) = _$BlockPersonCopyWithImpl<$Res, BlockPerson>;
   @useResult
   $Res call({int personId, bool block, String auth});
 }
@@ -4322,20 +4990,26 @@ class _$BlockPersonCopyWithImpl<$Res, $Val extends BlockPerson>
     Object? block = null,
     Object? auth = null,
   }) {
-    return _then(_value.copyWith(
-      personId: null == personId
-          ? _value.personId
-          : personId // ignore: cast_nullable_to_non_nullable
-              as int,
-      block: null == block
-          ? _value.block
-          : block // ignore: cast_nullable_to_non_nullable
-              as bool,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            personId:
+                null == personId
+                    ? _value.personId
+                    : personId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            block:
+                null == block
+                    ? _value.block
+                    : block // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -4343,8 +5017,9 @@ class _$BlockPersonCopyWithImpl<$Res, $Val extends BlockPerson>
 abstract class _$$BlockPersonImplCopyWith<$Res>
     implements $BlockPersonCopyWith<$Res> {
   factory _$$BlockPersonImplCopyWith(
-          _$BlockPersonImpl value, $Res Function(_$BlockPersonImpl) then) =
-      __$$BlockPersonImplCopyWithImpl<$Res>;
+    _$BlockPersonImpl value,
+    $Res Function(_$BlockPersonImpl) then,
+  ) = __$$BlockPersonImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int personId, bool block, String auth});
@@ -4355,8 +5030,9 @@ class __$$BlockPersonImplCopyWithImpl<$Res>
     extends _$BlockPersonCopyWithImpl<$Res, _$BlockPersonImpl>
     implements _$$BlockPersonImplCopyWith<$Res> {
   __$$BlockPersonImplCopyWithImpl(
-      _$BlockPersonImpl _value, $Res Function(_$BlockPersonImpl) _then)
-      : super(_value, _then);
+    _$BlockPersonImpl _value,
+    $Res Function(_$BlockPersonImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of BlockPerson
   /// with the given fields replaced by the non-null parameter values.
@@ -4367,20 +5043,25 @@ class __$$BlockPersonImplCopyWithImpl<$Res>
     Object? block = null,
     Object? auth = null,
   }) {
-    return _then(_$BlockPersonImpl(
-      personId: null == personId
-          ? _value.personId
-          : personId // ignore: cast_nullable_to_non_nullable
-              as int,
-      block: null == block
-          ? _value.block
-          : block // ignore: cast_nullable_to_non_nullable
-              as bool,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$BlockPersonImpl(
+        personId:
+            null == personId
+                ? _value.personId
+                : personId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        block:
+            null == block
+                ? _value.block
+                : block // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -4388,9 +5069,11 @@ class __$$BlockPersonImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$BlockPersonImpl extends _BlockPerson {
-  const _$BlockPersonImpl(
-      {required this.personId, required this.block, required this.auth})
-      : super._();
+  const _$BlockPersonImpl({
+    required this.personId,
+    required this.block,
+    required this.auth,
+  }) : super._();
 
   factory _$BlockPersonImpl.fromJson(Map<String, dynamic> json) =>
       _$$BlockPersonImplFromJson(json);
@@ -4432,17 +5115,16 @@ class _$BlockPersonImpl extends _BlockPerson {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$BlockPersonImplToJson(
-      this,
-    );
+    return _$$BlockPersonImplToJson(this);
   }
 }
 
 abstract class _BlockPerson extends BlockPerson {
-  const factory _BlockPerson(
-      {required final int personId,
-      required final bool block,
-      required final String auth}) = _$BlockPersonImpl;
+  const factory _BlockPerson({
+    required final int personId,
+    required final bool block,
+    required final String auth,
+  }) = _$BlockPersonImpl;
   const _BlockPerson._() : super._();
 
   factory _BlockPerson.fromJson(Map<String, dynamic> json) =
@@ -4484,8 +5166,9 @@ mixin _$GetUnreadCount {
 /// @nodoc
 abstract class $GetUnreadCountCopyWith<$Res> {
   factory $GetUnreadCountCopyWith(
-          GetUnreadCount value, $Res Function(GetUnreadCount) then) =
-      _$GetUnreadCountCopyWithImpl<$Res, GetUnreadCount>;
+    GetUnreadCount value,
+    $Res Function(GetUnreadCount) then,
+  ) = _$GetUnreadCountCopyWithImpl<$Res, GetUnreadCount>;
   @useResult
   $Res call({String auth});
 }
@@ -4504,24 +5187,27 @@ class _$GetUnreadCountCopyWithImpl<$Res, $Val extends GetUnreadCount>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? auth = null,
-  }) {
-    return _then(_value.copyWith(
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? auth = null}) {
+    return _then(
+      _value.copyWith(
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$GetUnreadCountImplCopyWith<$Res>
     implements $GetUnreadCountCopyWith<$Res> {
-  factory _$$GetUnreadCountImplCopyWith(_$GetUnreadCountImpl value,
-          $Res Function(_$GetUnreadCountImpl) then) =
-      __$$GetUnreadCountImplCopyWithImpl<$Res>;
+  factory _$$GetUnreadCountImplCopyWith(
+    _$GetUnreadCountImpl value,
+    $Res Function(_$GetUnreadCountImpl) then,
+  ) = __$$GetUnreadCountImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String auth});
@@ -4532,22 +5218,24 @@ class __$$GetUnreadCountImplCopyWithImpl<$Res>
     extends _$GetUnreadCountCopyWithImpl<$Res, _$GetUnreadCountImpl>
     implements _$$GetUnreadCountImplCopyWith<$Res> {
   __$$GetUnreadCountImplCopyWithImpl(
-      _$GetUnreadCountImpl _value, $Res Function(_$GetUnreadCountImpl) _then)
-      : super(_value, _then);
+    _$GetUnreadCountImpl _value,
+    $Res Function(_$GetUnreadCountImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of GetUnreadCount
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? auth = null,
-  }) {
-    return _then(_$GetUnreadCountImpl(
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? auth = null}) {
+    return _then(
+      _$GetUnreadCountImpl(
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -4587,13 +5275,13 @@ class _$GetUnreadCountImpl extends _GetUnreadCount {
   @pragma('vm:prefer-inline')
   _$$GetUnreadCountImplCopyWith<_$GetUnreadCountImpl> get copyWith =>
       __$$GetUnreadCountImplCopyWithImpl<_$GetUnreadCountImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetUnreadCountImplToJson(
-      this,
-    );
+    return _$$GetUnreadCountImplToJson(this);
   }
 }
 
@@ -4638,8 +5326,9 @@ mixin _$GetReportCount {
 /// @nodoc
 abstract class $GetReportCountCopyWith<$Res> {
   factory $GetReportCountCopyWith(
-          GetReportCount value, $Res Function(GetReportCount) then) =
-      _$GetReportCountCopyWithImpl<$Res, GetReportCount>;
+    GetReportCount value,
+    $Res Function(GetReportCount) then,
+  ) = _$GetReportCountCopyWithImpl<$Res, GetReportCount>;
   @useResult
   $Res call({int? communityId, String auth});
 }
@@ -4658,29 +5347,32 @@ class _$GetReportCountCopyWithImpl<$Res, $Val extends GetReportCount>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? communityId = freezed,
-    Object? auth = null,
-  }) {
-    return _then(_value.copyWith(
-      communityId: freezed == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? communityId = freezed, Object? auth = null}) {
+    return _then(
+      _value.copyWith(
+            communityId:
+                freezed == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$GetReportCountImplCopyWith<$Res>
     implements $GetReportCountCopyWith<$Res> {
-  factory _$$GetReportCountImplCopyWith(_$GetReportCountImpl value,
-          $Res Function(_$GetReportCountImpl) then) =
-      __$$GetReportCountImplCopyWithImpl<$Res>;
+  factory _$$GetReportCountImplCopyWith(
+    _$GetReportCountImpl value,
+    $Res Function(_$GetReportCountImpl) then,
+  ) = __$$GetReportCountImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? communityId, String auth});
@@ -4691,27 +5383,29 @@ class __$$GetReportCountImplCopyWithImpl<$Res>
     extends _$GetReportCountCopyWithImpl<$Res, _$GetReportCountImpl>
     implements _$$GetReportCountImplCopyWith<$Res> {
   __$$GetReportCountImplCopyWithImpl(
-      _$GetReportCountImpl _value, $Res Function(_$GetReportCountImpl) _then)
-      : super(_value, _then);
+    _$GetReportCountImpl _value,
+    $Res Function(_$GetReportCountImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of GetReportCount
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? communityId = freezed,
-    Object? auth = null,
-  }) {
-    return _then(_$GetReportCountImpl(
-      communityId: freezed == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? communityId = freezed, Object? auth = null}) {
+    return _then(
+      _$GetReportCountImpl(
+        communityId:
+            freezed == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -4720,7 +5414,7 @@ class __$$GetReportCountImplCopyWithImpl<$Res>
 @apiSerde
 class _$GetReportCountImpl extends _GetReportCount {
   const _$GetReportCountImpl({this.communityId, required this.auth})
-      : super._();
+    : super._();
 
   factory _$GetReportCountImpl.fromJson(Map<String, dynamic> json) =>
       _$$GetReportCountImplFromJson(json);
@@ -4756,20 +5450,21 @@ class _$GetReportCountImpl extends _GetReportCount {
   @pragma('vm:prefer-inline')
   _$$GetReportCountImplCopyWith<_$GetReportCountImpl> get copyWith =>
       __$$GetReportCountImplCopyWithImpl<_$GetReportCountImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetReportCountImplToJson(
-      this,
-    );
+    return _$$GetReportCountImplToJson(this);
   }
 }
 
 abstract class _GetReportCount extends GetReportCount {
-  const factory _GetReportCount(
-      {final int? communityId,
-      required final String auth}) = _$GetReportCountImpl;
+  const factory _GetReportCount({
+    final int? communityId,
+    required final String auth,
+  }) = _$GetReportCountImpl;
   const _GetReportCount._() : super._();
 
   factory _GetReportCount.fromJson(Map<String, dynamic> json) =
@@ -4809,8 +5504,9 @@ mixin _$GetBannedPersons {
 /// @nodoc
 abstract class $GetBannedPersonsCopyWith<$Res> {
   factory $GetBannedPersonsCopyWith(
-          GetBannedPersons value, $Res Function(GetBannedPersons) then) =
-      _$GetBannedPersonsCopyWithImpl<$Res, GetBannedPersons>;
+    GetBannedPersons value,
+    $Res Function(GetBannedPersons) then,
+  ) = _$GetBannedPersonsCopyWithImpl<$Res, GetBannedPersons>;
   @useResult
   $Res call({String auth});
 }
@@ -4829,24 +5525,27 @@ class _$GetBannedPersonsCopyWithImpl<$Res, $Val extends GetBannedPersons>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? auth = null,
-  }) {
-    return _then(_value.copyWith(
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? auth = null}) {
+    return _then(
+      _value.copyWith(
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$GetBannedPersonsImplCopyWith<$Res>
     implements $GetBannedPersonsCopyWith<$Res> {
-  factory _$$GetBannedPersonsImplCopyWith(_$GetBannedPersonsImpl value,
-          $Res Function(_$GetBannedPersonsImpl) then) =
-      __$$GetBannedPersonsImplCopyWithImpl<$Res>;
+  factory _$$GetBannedPersonsImplCopyWith(
+    _$GetBannedPersonsImpl value,
+    $Res Function(_$GetBannedPersonsImpl) then,
+  ) = __$$GetBannedPersonsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String auth});
@@ -4856,23 +5555,25 @@ abstract class _$$GetBannedPersonsImplCopyWith<$Res>
 class __$$GetBannedPersonsImplCopyWithImpl<$Res>
     extends _$GetBannedPersonsCopyWithImpl<$Res, _$GetBannedPersonsImpl>
     implements _$$GetBannedPersonsImplCopyWith<$Res> {
-  __$$GetBannedPersonsImplCopyWithImpl(_$GetBannedPersonsImpl _value,
-      $Res Function(_$GetBannedPersonsImpl) _then)
-      : super(_value, _then);
+  __$$GetBannedPersonsImplCopyWithImpl(
+    _$GetBannedPersonsImpl _value,
+    $Res Function(_$GetBannedPersonsImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of GetBannedPersons
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? auth = null,
-  }) {
-    return _then(_$GetBannedPersonsImpl(
-      auth: null == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? auth = null}) {
+    return _then(
+      _$GetBannedPersonsImpl(
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -4912,13 +5613,13 @@ class _$GetBannedPersonsImpl extends _GetBannedPersons {
   @pragma('vm:prefer-inline')
   _$$GetBannedPersonsImplCopyWith<_$GetBannedPersonsImpl> get copyWith =>
       __$$GetBannedPersonsImplCopyWithImpl<_$GetBannedPersonsImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetBannedPersonsImplToJson(
-      this,
-    );
+    return _$$GetBannedPersonsImplToJson(this);
   }
 }
 
@@ -4962,8 +5663,9 @@ mixin _$VerifyEmail {
 /// @nodoc
 abstract class $VerifyEmailCopyWith<$Res> {
   factory $VerifyEmailCopyWith(
-          VerifyEmail value, $Res Function(VerifyEmail) then) =
-      _$VerifyEmailCopyWithImpl<$Res, VerifyEmail>;
+    VerifyEmail value,
+    $Res Function(VerifyEmail) then,
+  ) = _$VerifyEmailCopyWithImpl<$Res, VerifyEmail>;
   @useResult
   $Res call({String token});
 }
@@ -4982,15 +5684,17 @@ class _$VerifyEmailCopyWithImpl<$Res, $Val extends VerifyEmail>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? token = null,
-  }) {
-    return _then(_value.copyWith(
-      token: null == token
-          ? _value.token
-          : token // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? token = null}) {
+    return _then(
+      _value.copyWith(
+            token:
+                null == token
+                    ? _value.token
+                    : token // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -4998,8 +5702,9 @@ class _$VerifyEmailCopyWithImpl<$Res, $Val extends VerifyEmail>
 abstract class _$$VerifyEmailImplCopyWith<$Res>
     implements $VerifyEmailCopyWith<$Res> {
   factory _$$VerifyEmailImplCopyWith(
-          _$VerifyEmailImpl value, $Res Function(_$VerifyEmailImpl) then) =
-      __$$VerifyEmailImplCopyWithImpl<$Res>;
+    _$VerifyEmailImpl value,
+    $Res Function(_$VerifyEmailImpl) then,
+  ) = __$$VerifyEmailImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String token});
@@ -5010,22 +5715,24 @@ class __$$VerifyEmailImplCopyWithImpl<$Res>
     extends _$VerifyEmailCopyWithImpl<$Res, _$VerifyEmailImpl>
     implements _$$VerifyEmailImplCopyWith<$Res> {
   __$$VerifyEmailImplCopyWithImpl(
-      _$VerifyEmailImpl _value, $Res Function(_$VerifyEmailImpl) _then)
-      : super(_value, _then);
+    _$VerifyEmailImpl _value,
+    $Res Function(_$VerifyEmailImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of VerifyEmail
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? token = null,
-  }) {
-    return _then(_$VerifyEmailImpl(
-      token: null == token
-          ? _value.token
-          : token // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? token = null}) {
+    return _then(
+      _$VerifyEmailImpl(
+        token:
+            null == token
+                ? _value.token
+                : token // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -5068,9 +5775,7 @@ class _$VerifyEmailImpl extends _VerifyEmail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$VerifyEmailImplToJson(
-      this,
-    );
+    return _$$VerifyEmailImplToJson(this);
   }
 }
 

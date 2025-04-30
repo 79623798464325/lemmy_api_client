@@ -12,7 +12,8 @@ part of 'private_message_report.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 PrivateMessageReport _$PrivateMessageReportFromJson(Map<String, dynamic> json) {
   return _PrivateMessageReport.fromJson(json);
@@ -42,25 +43,29 @@ mixin _$PrivateMessageReport {
 
 /// @nodoc
 abstract class $PrivateMessageReportCopyWith<$Res> {
-  factory $PrivateMessageReportCopyWith(PrivateMessageReport value,
-          $Res Function(PrivateMessageReport) then) =
-      _$PrivateMessageReportCopyWithImpl<$Res, PrivateMessageReport>;
+  factory $PrivateMessageReportCopyWith(
+    PrivateMessageReport value,
+    $Res Function(PrivateMessageReport) then,
+  ) = _$PrivateMessageReportCopyWithImpl<$Res, PrivateMessageReport>;
   @useResult
-  $Res call(
-      {int id,
-      int creatorId,
-      int privateMessageId,
-      String originalPmText,
-      String reason,
-      bool resolved,
-      int? resolverId,
-      DateTime published,
-      DateTime? updated});
+  $Res call({
+    int id,
+    int creatorId,
+    int privateMessageId,
+    String originalPmText,
+    String reason,
+    bool resolved,
+    int? resolverId,
+    DateTime published,
+    DateTime? updated,
+  });
 }
 
 /// @nodoc
-class _$PrivateMessageReportCopyWithImpl<$Res,
-        $Val extends PrivateMessageReport>
+class _$PrivateMessageReportCopyWithImpl<
+  $Res,
+  $Val extends PrivateMessageReport
+>
     implements $PrivateMessageReportCopyWith<$Res> {
   _$PrivateMessageReportCopyWithImpl(this._value, this._then);
 
@@ -84,74 +89,89 @@ class _$PrivateMessageReportCopyWithImpl<$Res,
     Object? published = null,
     Object? updated = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      creatorId: null == creatorId
-          ? _value.creatorId
-          : creatorId // ignore: cast_nullable_to_non_nullable
-              as int,
-      privateMessageId: null == privateMessageId
-          ? _value.privateMessageId
-          : privateMessageId // ignore: cast_nullable_to_non_nullable
-              as int,
-      originalPmText: null == originalPmText
-          ? _value.originalPmText
-          : originalPmText // ignore: cast_nullable_to_non_nullable
-              as String,
-      reason: null == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String,
-      resolved: null == resolved
-          ? _value.resolved
-          : resolved // ignore: cast_nullable_to_non_nullable
-              as bool,
-      resolverId: freezed == resolverId
-          ? _value.resolverId
-          : resolverId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      published: null == published
-          ? _value.published
-          : published // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updated: freezed == updated
-          ? _value.updated
-          : updated // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as int,
+            creatorId:
+                null == creatorId
+                    ? _value.creatorId
+                    : creatorId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            privateMessageId:
+                null == privateMessageId
+                    ? _value.privateMessageId
+                    : privateMessageId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            originalPmText:
+                null == originalPmText
+                    ? _value.originalPmText
+                    : originalPmText // ignore: cast_nullable_to_non_nullable
+                        as String,
+            reason:
+                null == reason
+                    ? _value.reason
+                    : reason // ignore: cast_nullable_to_non_nullable
+                        as String,
+            resolved:
+                null == resolved
+                    ? _value.resolved
+                    : resolved // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            resolverId:
+                freezed == resolverId
+                    ? _value.resolverId
+                    : resolverId // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            published:
+                null == published
+                    ? _value.published
+                    : published // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            updated:
+                freezed == updated
+                    ? _value.updated
+                    : updated // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$PrivateMessageReportImplCopyWith<$Res>
     implements $PrivateMessageReportCopyWith<$Res> {
-  factory _$$PrivateMessageReportImplCopyWith(_$PrivateMessageReportImpl value,
-          $Res Function(_$PrivateMessageReportImpl) then) =
-      __$$PrivateMessageReportImplCopyWithImpl<$Res>;
+  factory _$$PrivateMessageReportImplCopyWith(
+    _$PrivateMessageReportImpl value,
+    $Res Function(_$PrivateMessageReportImpl) then,
+  ) = __$$PrivateMessageReportImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int id,
-      int creatorId,
-      int privateMessageId,
-      String originalPmText,
-      String reason,
-      bool resolved,
-      int? resolverId,
-      DateTime published,
-      DateTime? updated});
+  $Res call({
+    int id,
+    int creatorId,
+    int privateMessageId,
+    String originalPmText,
+    String reason,
+    bool resolved,
+    int? resolverId,
+    DateTime published,
+    DateTime? updated,
+  });
 }
 
 /// @nodoc
 class __$$PrivateMessageReportImplCopyWithImpl<$Res>
     extends _$PrivateMessageReportCopyWithImpl<$Res, _$PrivateMessageReportImpl>
     implements _$$PrivateMessageReportImplCopyWith<$Res> {
-  __$$PrivateMessageReportImplCopyWithImpl(_$PrivateMessageReportImpl _value,
-      $Res Function(_$PrivateMessageReportImpl) _then)
-      : super(_value, _then);
+  __$$PrivateMessageReportImplCopyWithImpl(
+    _$PrivateMessageReportImpl _value,
+    $Res Function(_$PrivateMessageReportImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of PrivateMessageReport
   /// with the given fields replaced by the non-null parameter values.
@@ -168,44 +188,55 @@ class __$$PrivateMessageReportImplCopyWithImpl<$Res>
     Object? published = null,
     Object? updated = freezed,
   }) {
-    return _then(_$PrivateMessageReportImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      creatorId: null == creatorId
-          ? _value.creatorId
-          : creatorId // ignore: cast_nullable_to_non_nullable
-              as int,
-      privateMessageId: null == privateMessageId
-          ? _value.privateMessageId
-          : privateMessageId // ignore: cast_nullable_to_non_nullable
-              as int,
-      originalPmText: null == originalPmText
-          ? _value.originalPmText
-          : originalPmText // ignore: cast_nullable_to_non_nullable
-              as String,
-      reason: null == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String,
-      resolved: null == resolved
-          ? _value.resolved
-          : resolved // ignore: cast_nullable_to_non_nullable
-              as bool,
-      resolverId: freezed == resolverId
-          ? _value.resolverId
-          : resolverId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      published: null == published
-          ? _value.published
-          : published // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updated: freezed == updated
-          ? _value.updated
-          : updated // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ));
+    return _then(
+      _$PrivateMessageReportImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as int,
+        creatorId:
+            null == creatorId
+                ? _value.creatorId
+                : creatorId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        privateMessageId:
+            null == privateMessageId
+                ? _value.privateMessageId
+                : privateMessageId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        originalPmText:
+            null == originalPmText
+                ? _value.originalPmText
+                : originalPmText // ignore: cast_nullable_to_non_nullable
+                    as String,
+        reason:
+            null == reason
+                ? _value.reason
+                : reason // ignore: cast_nullable_to_non_nullable
+                    as String,
+        resolved:
+            null == resolved
+                ? _value.resolved
+                : resolved // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        resolverId:
+            freezed == resolverId
+                ? _value.resolverId
+                : resolverId // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        published:
+            null == published
+                ? _value.published
+                : published // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        updated:
+            freezed == updated
+                ? _value.updated
+                : updated // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+      ),
+    );
   }
 }
 
@@ -213,45 +244,45 @@ class __$$PrivateMessageReportImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$PrivateMessageReportImpl extends _PrivateMessageReport {
-  const _$PrivateMessageReportImpl(
-      {required this.id,
-      required this.creatorId,
-      required this.privateMessageId,
-      required this.originalPmText,
-      required this.reason,
-      required this.resolved,
-      this.resolverId,
-      required this.published,
-      this.updated})
-      : super._();
+  const _$PrivateMessageReportImpl({
+    required this.id,
+    required this.creatorId,
+    required this.privateMessageId,
+    required this.originalPmText,
+    required this.reason,
+    required this.resolved,
+    this.resolverId,
+    required this.published,
+    this.updated,
+  }) : super._();
 
   factory _$PrivateMessageReportImpl.fromJson(Map<String, dynamic> json) =>
       _$$PrivateMessageReportImplFromJson(json);
 
   @override
   final int id;
-// v0.18.0
+  // v0.18.0
   @override
   final int creatorId;
-// v0.18.0
+  // v0.18.0
   @override
   final int privateMessageId;
-// v0.18.0
+  // v0.18.0
   @override
   final String originalPmText;
-// v0.18.0
+  // v0.18.0
   @override
   final String reason;
-// v0.18.0
+  // v0.18.0
   @override
   final bool resolved;
-// v0.18.0
+  // v0.18.0
   @override
   final int? resolverId;
-// v0.18.0
+  // v0.18.0
   @override
   final DateTime published;
-// v0.18.0
+  // v0.18.0
   @override
   final DateTime? updated;
 
@@ -284,8 +315,18 @@ class _$PrivateMessageReportImpl extends _PrivateMessageReport {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, creatorId, privateMessageId,
-      originalPmText, reason, resolved, resolverId, published, updated);
+  int get hashCode => Object.hash(
+    runtimeType,
+    id,
+    creatorId,
+    privateMessageId,
+    originalPmText,
+    reason,
+    resolved,
+    resolverId,
+    published,
+    updated,
+  );
 
   /// Create a copy of PrivateMessageReport
   /// with the given fields replaced by the non-null parameter values.
@@ -293,29 +334,30 @@ class _$PrivateMessageReportImpl extends _PrivateMessageReport {
   @override
   @pragma('vm:prefer-inline')
   _$$PrivateMessageReportImplCopyWith<_$PrivateMessageReportImpl>
-      get copyWith =>
-          __$$PrivateMessageReportImplCopyWithImpl<_$PrivateMessageReportImpl>(
-              this, _$identity);
+  get copyWith =>
+      __$$PrivateMessageReportImplCopyWithImpl<_$PrivateMessageReportImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PrivateMessageReportImplToJson(
-      this,
-    );
+    return _$$PrivateMessageReportImplToJson(this);
   }
 }
 
 abstract class _PrivateMessageReport extends PrivateMessageReport {
-  const factory _PrivateMessageReport(
-      {required final int id,
-      required final int creatorId,
-      required final int privateMessageId,
-      required final String originalPmText,
-      required final String reason,
-      required final bool resolved,
-      final int? resolverId,
-      required final DateTime published,
-      final DateTime? updated}) = _$PrivateMessageReportImpl;
+  const factory _PrivateMessageReport({
+    required final int id,
+    required final int creatorId,
+    required final int privateMessageId,
+    required final String originalPmText,
+    required final String reason,
+    required final bool resolved,
+    final int? resolverId,
+    required final DateTime published,
+    final DateTime? updated,
+  }) = _$PrivateMessageReportImpl;
   const _PrivateMessageReport._() : super._();
 
   factory _PrivateMessageReport.fromJson(Map<String, dynamic> json) =
@@ -345,5 +387,5 @@ abstract class _PrivateMessageReport extends PrivateMessageReport {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PrivateMessageReportImplCopyWith<_$PrivateMessageReportImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  get copyWith => throw _privateConstructorUsedError;
 }

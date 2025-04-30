@@ -7,13 +7,9 @@ part of 'success_response.dart';
 // **************************************************************************
 
 _$SuccessResponseImpl _$$SuccessResponseImplFromJson(
-        Map<String, dynamic> json) =>
-    _$SuccessResponseImpl(
-      success: json['success'] as bool,
-    );
+  Map<String, dynamic> json,
+) => _$SuccessResponseImpl(success: json['success'] as bool);
 
 Map<String, dynamic> _$$SuccessResponseImplToJson(
-        _$SuccessResponseImpl instance) =>
-    <String, dynamic>{
-      'success': instance.success,
-    };
+  _$SuccessResponseImpl instance,
+) => <String, dynamic>{'success': instance.success};

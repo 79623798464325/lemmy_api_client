@@ -12,7 +12,8 @@ part of 'jwt.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 JwtPayload _$JwtPayloadFromJson(Map<String, dynamic> json) {
   return _JwtPayload.fromJson(json);
@@ -38,8 +39,9 @@ mixin _$JwtPayload {
 /// @nodoc
 abstract class $JwtPayloadCopyWith<$Res> {
   factory $JwtPayloadCopyWith(
-          JwtPayload value, $Res Function(JwtPayload) then) =
-      _$JwtPayloadCopyWithImpl<$Res, JwtPayload>;
+    JwtPayload value,
+    $Res Function(JwtPayload) then,
+  ) = _$JwtPayloadCopyWithImpl<$Res, JwtPayload>;
   @useResult
   $Res call({int iat, String iss, @SubConverter() String sub});
 }
@@ -58,25 +60,27 @@ class _$JwtPayloadCopyWithImpl<$Res, $Val extends JwtPayload>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? iat = null,
-    Object? iss = null,
-    Object? sub = null,
-  }) {
-    return _then(_value.copyWith(
-      iat: null == iat
-          ? _value.iat
-          : iat // ignore: cast_nullable_to_non_nullable
-              as int,
-      iss: null == iss
-          ? _value.iss
-          : iss // ignore: cast_nullable_to_non_nullable
-              as String,
-      sub: null == sub
-          ? _value.sub
-          : sub // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? iat = null, Object? iss = null, Object? sub = null}) {
+    return _then(
+      _value.copyWith(
+            iat:
+                null == iat
+                    ? _value.iat
+                    : iat // ignore: cast_nullable_to_non_nullable
+                        as int,
+            iss:
+                null == iss
+                    ? _value.iss
+                    : iss // ignore: cast_nullable_to_non_nullable
+                        as String,
+            sub:
+                null == sub
+                    ? _value.sub
+                    : sub // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -84,8 +88,9 @@ class _$JwtPayloadCopyWithImpl<$Res, $Val extends JwtPayload>
 abstract class _$$JwtPayloadImplCopyWith<$Res>
     implements $JwtPayloadCopyWith<$Res> {
   factory _$$JwtPayloadImplCopyWith(
-          _$JwtPayloadImpl value, $Res Function(_$JwtPayloadImpl) then) =
-      __$$JwtPayloadImplCopyWithImpl<$Res>;
+    _$JwtPayloadImpl value,
+    $Res Function(_$JwtPayloadImpl) then,
+  ) = __$$JwtPayloadImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int iat, String iss, @SubConverter() String sub});
@@ -96,32 +101,34 @@ class __$$JwtPayloadImplCopyWithImpl<$Res>
     extends _$JwtPayloadCopyWithImpl<$Res, _$JwtPayloadImpl>
     implements _$$JwtPayloadImplCopyWith<$Res> {
   __$$JwtPayloadImplCopyWithImpl(
-      _$JwtPayloadImpl _value, $Res Function(_$JwtPayloadImpl) _then)
-      : super(_value, _then);
+    _$JwtPayloadImpl _value,
+    $Res Function(_$JwtPayloadImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of JwtPayload
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? iat = null,
-    Object? iss = null,
-    Object? sub = null,
-  }) {
-    return _then(_$JwtPayloadImpl(
-      iat: null == iat
-          ? _value.iat
-          : iat // ignore: cast_nullable_to_non_nullable
-              as int,
-      iss: null == iss
-          ? _value.iss
-          : iss // ignore: cast_nullable_to_non_nullable
-              as String,
-      sub: null == sub
-          ? _value.sub
-          : sub // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? iat = null, Object? iss = null, Object? sub = null}) {
+    return _then(
+      _$JwtPayloadImpl(
+        iat:
+            null == iat
+                ? _value.iat
+                : iat // ignore: cast_nullable_to_non_nullable
+                    as int,
+        iss:
+            null == iss
+                ? _value.iss
+                : iss // ignore: cast_nullable_to_non_nullable
+                    as String,
+        sub:
+            null == sub
+                ? _value.sub
+                : sub // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -129,9 +136,11 @@ class __$$JwtPayloadImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$JwtPayloadImpl extends _JwtPayload {
-  const _$JwtPayloadImpl(
-      {required this.iat, required this.iss, @SubConverter() required this.sub})
-      : super._();
+  const _$JwtPayloadImpl({
+    required this.iat,
+    required this.iss,
+    @SubConverter() required this.sub,
+  }) : super._();
 
   factory _$JwtPayloadImpl.fromJson(Map<String, dynamic> json) =>
       _$$JwtPayloadImplFromJson(json);
@@ -173,17 +182,16 @@ class _$JwtPayloadImpl extends _JwtPayload {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$JwtPayloadImplToJson(
-      this,
-    );
+    return _$$JwtPayloadImplToJson(this);
   }
 }
 
 abstract class _JwtPayload extends JwtPayload {
-  const factory _JwtPayload(
-      {required final int iat,
-      required final String iss,
-      @SubConverter() required final String sub}) = _$JwtPayloadImpl;
+  const factory _JwtPayload({
+    required final int iat,
+    required final String iss,
+    @SubConverter() required final String sub,
+  }) = _$JwtPayloadImpl;
   const _JwtPayload._() : super._();
 
   factory _JwtPayload.fromJson(Map<String, dynamic> json) =

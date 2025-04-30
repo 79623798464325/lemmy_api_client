@@ -12,7 +12,8 @@ part of 'success_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 SuccessResponse _$SuccessResponseFromJson(Map<String, dynamic> json) {
   return _SuccessResponse.fromJson(json);
@@ -35,8 +36,9 @@ mixin _$SuccessResponse {
 /// @nodoc
 abstract class $SuccessResponseCopyWith<$Res> {
   factory $SuccessResponseCopyWith(
-          SuccessResponse value, $Res Function(SuccessResponse) then) =
-      _$SuccessResponseCopyWithImpl<$Res, SuccessResponse>;
+    SuccessResponse value,
+    $Res Function(SuccessResponse) then,
+  ) = _$SuccessResponseCopyWithImpl<$Res, SuccessResponse>;
   @useResult
   $Res call({bool success});
 }
@@ -55,24 +57,27 @@ class _$SuccessResponseCopyWithImpl<$Res, $Val extends SuccessResponse>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? success = null,
-  }) {
-    return _then(_value.copyWith(
-      success: null == success
-          ? _value.success
-          : success // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ) as $Val);
+  $Res call({Object? success = null}) {
+    return _then(
+      _value.copyWith(
+            success:
+                null == success
+                    ? _value.success
+                    : success // ignore: cast_nullable_to_non_nullable
+                        as bool,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$SuccessResponseImplCopyWith<$Res>
     implements $SuccessResponseCopyWith<$Res> {
-  factory _$$SuccessResponseImplCopyWith(_$SuccessResponseImpl value,
-          $Res Function(_$SuccessResponseImpl) then) =
-      __$$SuccessResponseImplCopyWithImpl<$Res>;
+  factory _$$SuccessResponseImplCopyWith(
+    _$SuccessResponseImpl value,
+    $Res Function(_$SuccessResponseImpl) then,
+  ) = __$$SuccessResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool success});
@@ -83,22 +88,24 @@ class __$$SuccessResponseImplCopyWithImpl<$Res>
     extends _$SuccessResponseCopyWithImpl<$Res, _$SuccessResponseImpl>
     implements _$$SuccessResponseImplCopyWith<$Res> {
   __$$SuccessResponseImplCopyWithImpl(
-      _$SuccessResponseImpl _value, $Res Function(_$SuccessResponseImpl) _then)
-      : super(_value, _then);
+    _$SuccessResponseImpl _value,
+    $Res Function(_$SuccessResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of SuccessResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? success = null,
-  }) {
-    return _then(_$SuccessResponseImpl(
-      success: null == success
-          ? _value.success
-          : success // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
+  $Res call({Object? success = null}) {
+    return _then(
+      _$SuccessResponseImpl(
+        success:
+            null == success
+                ? _value.success
+                : success // ignore: cast_nullable_to_non_nullable
+                    as bool,
+      ),
+    );
   }
 }
 
@@ -138,13 +145,13 @@ class _$SuccessResponseImpl extends _SuccessResponse {
   @pragma('vm:prefer-inline')
   _$$SuccessResponseImplCopyWith<_$SuccessResponseImpl> get copyWith =>
       __$$SuccessResponseImplCopyWithImpl<_$SuccessResponseImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SuccessResponseImplToJson(
-      this,
-    );
+    return _$$SuccessResponseImplToJson(this);
   }
 }
 
