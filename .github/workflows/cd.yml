@@ -2,8 +2,8 @@ name: cd
 
 on:
   push:
-    tags:
-      - "v*.*.*"
+    branches:
+      - master
 
 jobs:
   publish:
@@ -36,5 +36,18 @@ jobs:
           mkdir -p ~/.config/dart/
           echo $PUB_CREDENTIALS > ~/.config/dart/pub-credentials.json
 
+      - name: Extract version from pubspec.yaml
+        id: version
+        run: |
+          VERSION=$(grep '^version:' pubspec.yaml | awk '{print $2}')
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
       - name: Publish to pub.dev
         run: dart pub publish -f
+
+      - name: Create and push git tag
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag -a "v${{ steps.version.outputs.version }}" -m "Release v${{ steps.version.outputs.version }}"
+          git push origin "v${{ steps.version.outputs.version }}"
