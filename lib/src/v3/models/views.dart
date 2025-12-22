@@ -164,13 +164,8 @@ class CommentReportView with _$CommentReportView {
 @freezed
 class ModAddCommunityView with _$ModAddCommunityView {
   @modelSerde
-  const factory ModAddCommunityView({
-    required ModAddCommunity modAddCommunity,
-    required Person moderator,
-    required CommunitySafe community,
-    required Person moddedPerson,
-    required String instanceHost,
-  }) = _ModAddCommunityView;
+  const factory ModAddCommunityView({required ModAddCommunity modAddCommunity, Person? moderator, required CommunitySafe community, required Person moddedPerson, required String instanceHost}) =
+      _ModAddCommunityView;
 
   const ModAddCommunityView._();
   factory ModAddCommunityView.fromJson(Map<String, dynamic> json) => _$ModAddCommunityViewFromJson(json);
@@ -181,7 +176,7 @@ class ModTransferCommunityView with _$ModTransferCommunityView {
   @modelSerde
   const factory ModTransferCommunityView({
     required ModTransferCommunity modTransferCommunity,
-    required Person moderator,
+    Person? moderator,
     required CommunitySafe community,
     required Person moddedPerson,
     required String instanceHost,
@@ -194,7 +189,7 @@ class ModTransferCommunityView with _$ModTransferCommunityView {
 @freezed
 class ModAddView with _$ModAddView {
   @modelSerde
-  const factory ModAddView({required ModAdd modAdd, required Person moderator, required Person moddedPerson, required String instanceHost}) = _ModAddView;
+  const factory ModAddView({required ModAdd modAdd, Person? moderator, required Person moddedPerson, required String instanceHost}) = _ModAddView;
 
   const ModAddView._();
   factory ModAddView.fromJson(Map<String, dynamic> json) => _$ModAddViewFromJson(json);
@@ -268,7 +263,7 @@ class ModBanFromCommunityView with _$ModBanFromCommunityView {
   @modelSerde
   const factory ModBanFromCommunityView({
     required ModBanFromCommunity modBanFromCommunity,
-    required Person moderator,
+    Person? moderator,
     required CommunitySafe community,
     required Person bannedPerson,
     required String instanceHost,
@@ -281,7 +276,7 @@ class ModBanFromCommunityView with _$ModBanFromCommunityView {
 @freezed
 class ModBanView with _$ModBanView {
   @modelSerde
-  const factory ModBanView({required ModBan modBan, required Person moderator, required Person bannedPerson, required String instanceHost}) = _ModBanView;
+  const factory ModBanView({required ModBan modBan, Person? moderator, required Person bannedPerson, required String instanceHost}) = _ModBanView;
 
   const ModBanView._();
   factory ModBanView.fromJson(Map<String, dynamic> json) => _$ModBanViewFromJson(json);
@@ -290,7 +285,7 @@ class ModBanView with _$ModBanView {
 @freezed
 class ModLockPostView with _$ModLockPostView {
   @modelSerde
-  const factory ModLockPostView({required ModLockPost modLockPost, required Person moderator, required Post post, required CommunitySafe community, required String instanceHost}) = _ModLockPostView;
+  const factory ModLockPostView({required ModLockPost modLockPost, Person? moderator, required Post post, required CommunitySafe community, required String instanceHost}) = _ModLockPostView;
 
   const ModLockPostView._();
   factory ModLockPostView.fromJson(Map<String, dynamic> json) => _$ModLockPostViewFromJson(json);
@@ -331,7 +326,7 @@ class ModRemoveCommentView with _$ModRemoveCommentView {
   @modelSerde
   const factory ModRemoveCommentView({
     required ModRemoveComment modRemoveComment,
-    required Person moderator,
+    Person? moderator,
     required Comment comment,
     required Person commenter,
     required Post post,
@@ -346,8 +341,7 @@ class ModRemoveCommentView with _$ModRemoveCommentView {
 @freezed
 class ModRemoveCommunityView with _$ModRemoveCommunityView {
   @modelSerde
-  const factory ModRemoveCommunityView({required ModRemoveCommunity modRemoveCommunity, required Person moderator, required CommunitySafe community, required String instanceHost}) =
-      _ModRemoveCommunityView;
+  const factory ModRemoveCommunityView({required ModRemoveCommunity modRemoveCommunity, Person? moderator, required CommunitySafe community, required String instanceHost}) = _ModRemoveCommunityView;
 
   const ModRemoveCommunityView._();
   factory ModRemoveCommunityView.fromJson(Map<String, dynamic> json) => _$ModRemoveCommunityViewFromJson(json);
@@ -356,8 +350,7 @@ class ModRemoveCommunityView with _$ModRemoveCommunityView {
 @freezed
 class ModRemovePostView with _$ModRemovePostView {
   @modelSerde
-  const factory ModRemovePostView({required ModRemovePost modRemovePost, required Person moderator, required Post post, required CommunitySafe community, required String instanceHost}) =
-      _ModRemovePostView;
+  const factory ModRemovePostView({required ModRemovePost modRemovePost, Person? moderator, required Post post, required CommunitySafe community, required String instanceHost}) = _ModRemovePostView;
 
   const ModRemovePostView._();
   factory ModRemovePostView.fromJson(Map<String, dynamic> json) => _$ModRemovePostViewFromJson(json);
