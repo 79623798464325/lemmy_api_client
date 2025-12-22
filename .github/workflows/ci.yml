@@ -38,10 +38,29 @@ jobs:
       - name: Run lints
         run: dart analyze --fatal-warnings
 
+      - name: Generate V1 JWT token
+        id: v1_jwt
+        run: |
+          # Generate JWT dynamically from username/password
+          RESPONSE=$(curl -s -X POST "https://voyager.lemmy.ml/api/v3/user/login" \
+            -H "Content-Type: application/json" \
+            -d "{\"username_or_email\":\"$V1_TEST_USERNAME\",\"password\":\"$V1_TEST_PASSWORD\"}")
+          JWT=$(echo "$RESPONSE" | jq -r '.jwt // empty')
+          if [ -z "$JWT" ]; then
+            echo "Failed to get JWT: $RESPONSE"
+            exit 1
+          fi
+          echo "V1_JWT=$JWT" >> $GITHUB_OUTPUT
+          echo "Successfully generated V1 JWT token"
+        env:
+          V1_TEST_USERNAME: ${{ secrets.V1_TEST_USERNAME }}
+          V1_TEST_PASSWORD: ${{ secrets.V1_TEST_PASSWORD }}
+
       - name: Run tests
         run: dart test
         env:
           TEST_JWT: ${{ secrets.TEST_JWT }}
+          V1_JWT: ${{ steps.v1_jwt.outputs.V1_JWT }}
 
       - name: Run tests with coverage
         run: |
@@ -50,6 +69,7 @@ jobs:
           dart pub global run coverage:format_coverage --lcov --in=coverage --out=coverage/lcov.info --packages=.dart_tool/package_config.json --report-on=lib
         env:
           TEST_JWT: ${{ secrets.TEST_JWT }}
+          V1_JWT: ${{ steps.v1_jwt.outputs.V1_JWT }}
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4

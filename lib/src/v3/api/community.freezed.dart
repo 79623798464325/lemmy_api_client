@@ -2752,3 +2752,232 @@ abstract class _BlockCommunity extends BlockCommunity {
   _$$BlockCommunityImplCopyWith<_$BlockCommunityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+HideCommunity _$HideCommunityFromJson(Map<String, dynamic> json) {
+  return _HideCommunity.fromJson(json);
+}
+
+/// @nodoc
+mixin _$HideCommunity {
+  int get communityId => throw _privateConstructorUsedError; // v0.19.0
+  bool get hidden => throw _privateConstructorUsedError; // v0.19.0
+  String? get reason =>
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
+  String? get auth => throw _privateConstructorUsedError;
+
+  /// Serializes this HideCommunity to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of HideCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $HideCommunityCopyWith<HideCommunity> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $HideCommunityCopyWith<$Res> {
+  factory $HideCommunityCopyWith(
+    HideCommunity value,
+    $Res Function(HideCommunity) then,
+  ) = _$HideCommunityCopyWithImpl<$Res, HideCommunity>;
+  @useResult
+  $Res call({int communityId, bool hidden, String? reason, String? auth});
+}
+
+/// @nodoc
+class _$HideCommunityCopyWithImpl<$Res, $Val extends HideCommunity>
+    implements $HideCommunityCopyWith<$Res> {
+  _$HideCommunityCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of HideCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? communityId = null,
+    Object? hidden = null,
+    Object? reason = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(
+      _value.copyWith(
+            communityId:
+                null == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            hidden:
+                null == hidden
+                    ? _value.hidden
+                    : hidden // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            reason:
+                freezed == reason
+                    ? _value.reason
+                    : reason // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
+  }
+}
+
+/// @nodoc
+abstract class _$$HideCommunityImplCopyWith<$Res>
+    implements $HideCommunityCopyWith<$Res> {
+  factory _$$HideCommunityImplCopyWith(
+    _$HideCommunityImpl value,
+    $Res Function(_$HideCommunityImpl) then,
+  ) = __$$HideCommunityImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int communityId, bool hidden, String? reason, String? auth});
+}
+
+/// @nodoc
+class __$$HideCommunityImplCopyWithImpl<$Res>
+    extends _$HideCommunityCopyWithImpl<$Res, _$HideCommunityImpl>
+    implements _$$HideCommunityImplCopyWith<$Res> {
+  __$$HideCommunityImplCopyWithImpl(
+    _$HideCommunityImpl _value,
+    $Res Function(_$HideCommunityImpl) _then,
+  ) : super(_value, _then);
+
+  /// Create a copy of HideCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? communityId = null,
+    Object? hidden = null,
+    Object? reason = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(
+      _$HideCommunityImpl(
+        communityId:
+            null == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        hidden:
+            null == hidden
+                ? _value.hidden
+                : hidden // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        reason:
+            freezed == reason
+                ? _value.reason
+                : reason // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
+  }
+}
+
+/// @nodoc
+
+@apiSerde
+class _$HideCommunityImpl extends _HideCommunity {
+  const _$HideCommunityImpl({
+    required this.communityId,
+    required this.hidden,
+    this.reason,
+    this.auth,
+  }) : super._();
+
+  factory _$HideCommunityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$HideCommunityImplFromJson(json);
+
+  @override
+  final int communityId;
+  // v0.19.0
+  @override
+  final bool hidden;
+  // v0.19.0
+  @override
+  final String? reason;
+  // v0.19.0 (optional)
+  @override
+  final String? auth;
+
+  @override
+  String toString() {
+    return 'HideCommunity(communityId: $communityId, hidden: $hidden, reason: $reason, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$HideCommunityImpl &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.hidden, hidden) || other.hidden == hidden) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, communityId, hidden, reason, auth);
+
+  /// Create a copy of HideCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$HideCommunityImplCopyWith<_$HideCommunityImpl> get copyWith =>
+      __$$HideCommunityImplCopyWithImpl<_$HideCommunityImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$HideCommunityImplToJson(this);
+  }
+}
+
+abstract class _HideCommunity extends HideCommunity {
+  const factory _HideCommunity({
+    required final int communityId,
+    required final bool hidden,
+    final String? reason,
+    final String? auth,
+  }) = _$HideCommunityImpl;
+  const _HideCommunity._() : super._();
+
+  factory _HideCommunity.fromJson(Map<String, dynamic> json) =
+      _$HideCommunityImpl.fromJson;
+
+  @override
+  int get communityId; // v0.19.0
+  @override
+  bool get hidden; // v0.19.0
+  @override
+  String? get reason; // v0.19.0 (optional)
+  @override
+  String? get auth;
+
+  /// Create a copy of HideCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$HideCommunityImplCopyWith<_$HideCommunityImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}

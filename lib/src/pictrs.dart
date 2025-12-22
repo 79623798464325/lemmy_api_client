@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:http/http.dart' as http;
 
-import 'exceptions.dart';
-import 'utils/response_ok.dart';
+import 'shared/exceptions.dart';
+import 'shared/utils/response_ok.dart';
 
 part 'pictrs.freezed.dart';
 part 'pictrs.g.dart';

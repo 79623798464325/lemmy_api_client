@@ -1,0 +1,127 @@
+# Lemmy API Client v0.19 Changelog
+
+## Overview
+This update brings full compatibility with Lemmy API v0.19, including renamed endpoints,
+new models, and additional features.
+
+---
+
+## Phase 1: API Naming Fixes & Breaking Changes
+
+### BREAKING: StickyPost → FeaturePost
+- Renamed `StickyPost` endpoint to `FeaturePost`
+- Changed API path from `/post/sticky` to `/post/feature`
+- Renamed parameter `stickied` to `featured`
+- Added new required parameter `featureType` (PostFeatureType enum)
+
+### New: PostFeatureType Enum
+- `PostFeatureType.local` - Pin post to local instance
+- `PostFeatureType.community` - Pin post to community
+
+### Removed: Legacy ModStickyPost Types
+- Removed `ModStickyPost` (replaced by existing `ModFeaturePost`)
+- Removed `ModStickyPostView` (replaced by existing `ModFeaturePostView`)
+
+### New: GenerateTotpSecret Endpoint
+- `POST /user/totp/generate`
+- Required for 2FA setup before calling `UpdateTotp`
+- Returns `GenerateTotpSecretResponse` with `totpSecretUrl`
+
+---
+
+## Phase 2: New Endpoints
+
+### BlockInstance
+- `POST /site/block`
+- Block or unblock federated instances
+- Parameters: `instanceId`, `block`
+- Returns: `BlockInstanceResponse` with `blocked` status
+
+### DistinguishComment
+- `POST /comment/distinguish`
+- Mark comments as mod/admin distinguished
+- Parameters: `commentId`, `distinguished`
+- Returns: `FullCommentView`
+
+### HideCommunity
+- `PUT /community/hide`
+- Hide communities from public listings (admin only)
+- Parameters: `communityId`, `hidden`, `reason?`
+- Returns: `SuccessResponse`
+
+---
+
+## Phase 3: New Models
+
+### Instance Models
+- `Instance` - Federated instance info (id, domain, published, software?, updated?, version?)
+- `InstanceBlockView` - User's blocked instance
+- `BlockInstanceResponse` - Block operation result
+
+### CustomEmoji Models
+- `CustomEmoji` - Site custom emoji (id, shortcode, imageUrl, altText, category, etc.)
+- `CustomEmojiKeyword` - Searchable aliases for emoji
+- `CustomEmojiView` - Combines emoji with keywords
+
+### LocalSite Models
+- `LocalSite` - Full site configuration (26 fields)
+  - Registration: `registrationMode`, `requireEmailVerification`, `applicationQuestion`
+  - Federation: `federationEnabled`, `federationSignedFetch`
+  - Features: `enableDownvotes`, `enableNsfw`, `captchaEnabled`
+  - Defaults: `defaultTheme`, `defaultPostListingType`, `defaultSortType`
+  - Moderation: `hideModlogModNames`, `slurFilterRegex`
+  
+- `LocalSiteRateLimit` - Rate limiting configuration (17 fields)
+  - Post/comment/message/register/image/search/import limits
+  - Each with count and per-second window
+
+---
+
+## Bug Fixes
+
+### ForceUtcDateTime Export
+- Fixed `serde.dart` to export `ForceUtcDateTime` converter
+- Resolves DateTime serialization in generated `.g.dart` files
+
+---
+
+## Migration Guide
+
+### StickyPost → FeaturePost
+```dart
+// Before (v0.18)
+StickyPost(postId: 123, stickied: true, auth: token)
+
+// After (v0.19)
+FeaturePost(
+  postId: 123, 
+  featured: true, 
+  featureType: PostFeatureType.community, // or .local
+  auth: token
+)
+```
+
+### ModStickyPost → ModFeaturePost
+```dart
+// Before (v0.18)
+ModStickyPost, ModStickyPostView
+
+// After (v0.19) - use existing types
+ModFeaturePost, ModFeaturePostView
+```
+
+### 2FA Setup Flow
+```dart
+// Step 1: Generate secret
+final secret = await api.run(GenerateTotpSecret(auth: token));
+// Use secret.totpSecretUrl with authenticator app
+
+// Step 2: Enable with token from app
+await api.run(UpdateTotp(totpToken: '123456', enabled: true, auth: token));
+```
+
+---
+
+## Test Results
+- 70 tests passed
+- 11 pre-existing auth failures (require valid JWT)

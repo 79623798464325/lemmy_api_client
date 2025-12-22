@@ -6,6 +6,7 @@ import 'package:lemmy_api_client2/src/v3/enums/enums.dart';
 import '../../utils/serde.dart';
 import '../models/api.dart';
 import '../models/views.dart';
+import '../models/user/success_response.dart';
 import '../query.dart';
 
 part 'community.freezed.dart';
@@ -196,4 +197,30 @@ class BlockCommunity with _$BlockCommunity implements LemmyApiQuery<BlockedCommu
 
   @override
   BlockedCommunity responseFactory(Map<String, dynamic> json) => BlockedCommunity.fromJson(json);
+}
+
+/// Hide a community from public listings.
+///
+/// Only available in lemmy v0.19.0 and above. Admin only.
+///
+/// `HTTP.PUT /community/hide`
+@freezed
+class HideCommunity with _$HideCommunity implements LemmyApiQuery<SuccessResponse>, LemmyApiAuthenticatedQuery {
+  @apiSerde
+  const factory HideCommunity({
+    required int communityId, // v0.19.0
+    required bool hidden, // v0.19.0
+    String? reason, // v0.19.0 (optional)
+    String? auth,
+  }) = _HideCommunity;
+
+  const HideCommunity._();
+  factory HideCommunity.fromJson(Map<String, dynamic> json) => _$HideCommunityFromJson(json);
+
+  final path = '/community/hide';
+
+  final httpMethod = HttpMethod.put;
+
+  @override
+  SuccessResponse responseFactory(Map<String, dynamic> json) => SuccessResponse.fromJson(json);
 }

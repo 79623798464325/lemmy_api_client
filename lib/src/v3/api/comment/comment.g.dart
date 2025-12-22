@@ -214,3 +214,19 @@ Map<String, dynamic> _$$ListCommentReportsImplToJson(
   if (instance.unresolvedOnly case final value?) 'unresolved_only': value,
   'auth': instance.auth,
 };
+
+_$DistinguishCommentImpl _$$DistinguishCommentImplFromJson(
+  Map<String, dynamic> json,
+) => _$DistinguishCommentImpl(
+  commentId: (json['comment_id'] as num).toInt(),
+  distinguished: json['distinguished'] as bool,
+  auth: json['auth'] as String?,
+);
+
+Map<String, dynamic> _$$DistinguishCommentImplToJson(
+  _$DistinguishCommentImpl instance,
+) => <String, dynamic>{
+  'comment_id': instance.commentId,
+  'distinguished': instance.distinguished,
+  if (instance.auth case final value?) 'auth': value,
+};

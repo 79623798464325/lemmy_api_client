@@ -2865,3 +2865,213 @@ abstract class _ListCommentReports extends ListCommentReports {
   _$$ListCommentReportsImplCopyWith<_$ListCommentReportsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+DistinguishComment _$DistinguishCommentFromJson(Map<String, dynamic> json) {
+  return _DistinguishComment.fromJson(json);
+}
+
+/// @nodoc
+mixin _$DistinguishComment {
+  int get commentId => throw _privateConstructorUsedError; // v0.19.0
+  bool get distinguished => throw _privateConstructorUsedError; // v0.19.0
+  String? get auth => throw _privateConstructorUsedError;
+
+  /// Serializes this DistinguishComment to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of DistinguishComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $DistinguishCommentCopyWith<DistinguishComment> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $DistinguishCommentCopyWith<$Res> {
+  factory $DistinguishCommentCopyWith(
+    DistinguishComment value,
+    $Res Function(DistinguishComment) then,
+  ) = _$DistinguishCommentCopyWithImpl<$Res, DistinguishComment>;
+  @useResult
+  $Res call({int commentId, bool distinguished, String? auth});
+}
+
+/// @nodoc
+class _$DistinguishCommentCopyWithImpl<$Res, $Val extends DistinguishComment>
+    implements $DistinguishCommentCopyWith<$Res> {
+  _$DistinguishCommentCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of DistinguishComment
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? commentId = null,
+    Object? distinguished = null,
+    Object? auth = freezed,
+  }) {
+    return _then(
+      _value.copyWith(
+            commentId:
+                null == commentId
+                    ? _value.commentId
+                    : commentId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            distinguished:
+                null == distinguished
+                    ? _value.distinguished
+                    : distinguished // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
+  }
+}
+
+/// @nodoc
+abstract class _$$DistinguishCommentImplCopyWith<$Res>
+    implements $DistinguishCommentCopyWith<$Res> {
+  factory _$$DistinguishCommentImplCopyWith(
+    _$DistinguishCommentImpl value,
+    $Res Function(_$DistinguishCommentImpl) then,
+  ) = __$$DistinguishCommentImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int commentId, bool distinguished, String? auth});
+}
+
+/// @nodoc
+class __$$DistinguishCommentImplCopyWithImpl<$Res>
+    extends _$DistinguishCommentCopyWithImpl<$Res, _$DistinguishCommentImpl>
+    implements _$$DistinguishCommentImplCopyWith<$Res> {
+  __$$DistinguishCommentImplCopyWithImpl(
+    _$DistinguishCommentImpl _value,
+    $Res Function(_$DistinguishCommentImpl) _then,
+  ) : super(_value, _then);
+
+  /// Create a copy of DistinguishComment
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? commentId = null,
+    Object? distinguished = null,
+    Object? auth = freezed,
+  }) {
+    return _then(
+      _$DistinguishCommentImpl(
+        commentId:
+            null == commentId
+                ? _value.commentId
+                : commentId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        distinguished:
+            null == distinguished
+                ? _value.distinguished
+                : distinguished // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
+  }
+}
+
+/// @nodoc
+
+@apiSerde
+class _$DistinguishCommentImpl extends _DistinguishComment {
+  const _$DistinguishCommentImpl({
+    required this.commentId,
+    required this.distinguished,
+    this.auth,
+  }) : super._();
+
+  factory _$DistinguishCommentImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DistinguishCommentImplFromJson(json);
+
+  @override
+  final int commentId;
+  // v0.19.0
+  @override
+  final bool distinguished;
+  // v0.19.0
+  @override
+  final String? auth;
+
+  @override
+  String toString() {
+    return 'DistinguishComment(commentId: $commentId, distinguished: $distinguished, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DistinguishCommentImpl &&
+            (identical(other.commentId, commentId) ||
+                other.commentId == commentId) &&
+            (identical(other.distinguished, distinguished) ||
+                other.distinguished == distinguished) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, commentId, distinguished, auth);
+
+  /// Create a copy of DistinguishComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DistinguishCommentImplCopyWith<_$DistinguishCommentImpl> get copyWith =>
+      __$$DistinguishCommentImplCopyWithImpl<_$DistinguishCommentImpl>(
+        this,
+        _$identity,
+      );
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$DistinguishCommentImplToJson(this);
+  }
+}
+
+abstract class _DistinguishComment extends DistinguishComment {
+  const factory _DistinguishComment({
+    required final int commentId,
+    required final bool distinguished,
+    final String? auth,
+  }) = _$DistinguishCommentImpl;
+  const _DistinguishComment._() : super._();
+
+  factory _DistinguishComment.fromJson(Map<String, dynamic> json) =
+      _$DistinguishCommentImpl.fromJson;
+
+  @override
+  int get commentId; // v0.19.0
+  @override
+  bool get distinguished; // v0.19.0
+  @override
+  String? get auth;
+
+  /// Create a copy of DistinguishComment
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$DistinguishCommentImplCopyWith<_$DistinguishCommentImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
