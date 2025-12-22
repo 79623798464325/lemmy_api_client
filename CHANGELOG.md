@@ -1,3 +1,13 @@
+## v0.67.0 - 2025-12-22
+
+### Added
+
+- Added v1.0 API support
+
+### Changed
+
+- Updated version detection to use SemVer
+
 ## v0.22.0 - 2024-12-22
 
 ### Breaking Changes
