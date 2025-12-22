@@ -6,6 +6,8 @@ part of 'success_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$SuccessResponseImpl _$$SuccessResponseImplFromJson(Map<String, dynamic> json) => _$SuccessResponseImpl(success: json['success'] as bool);
+_SuccessResponse _$SuccessResponseFromJson(Map<String, dynamic> json) =>
+    _SuccessResponse(success: json['success'] as bool);
 
-Map<String, dynamic> _$$SuccessResponseImplToJson(_$SuccessResponseImpl instance) => <String, dynamic>{'success': instance.success};
+Map<String, dynamic> _$SuccessResponseToJson(_SuccessResponse instance) =>
+    <String, dynamic>{'success': instance.success};

@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,1206 +9,1402 @@ part of 'aggregates.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-PersonAggregates _$PersonAggregatesFromJson(Map<String, dynamic> json) {
-  return _PersonAggregates.fromJson(json);
-}
 
 /// @nodoc
 mixin _$PersonAggregates {
-  int get personId => throw _privateConstructorUsedError;
-  int get postCount => throw _privateConstructorUsedError;
-  int get commentCount => throw _privateConstructorUsedError;
+
+ int get personId; int get postCount; int get commentCount;
+/// Create a copy of PersonAggregates
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$PersonAggregatesCopyWith<PersonAggregates> get copyWith => _$PersonAggregatesCopyWithImpl<PersonAggregates>(this as PersonAggregates, _$identity);
 
   /// Serializes this PersonAggregates to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of PersonAggregates
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $PersonAggregatesCopyWith<PersonAggregates> get copyWith => throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PersonAggregates&&(identical(other.personId, personId) || other.personId == personId)&&(identical(other.postCount, postCount) || other.postCount == postCount)&&(identical(other.commentCount, commentCount) || other.commentCount == commentCount));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,personId,postCount,commentCount);
+
+@override
+String toString() {
+  return 'PersonAggregates(personId: $personId, postCount: $postCount, commentCount: $commentCount)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $PersonAggregatesCopyWith<$Res> {
-  factory $PersonAggregatesCopyWith(PersonAggregates value, $Res Function(PersonAggregates) then) = _$PersonAggregatesCopyWithImpl<$Res, PersonAggregates>;
-  @useResult
-  $Res call({int personId, int postCount, int commentCount});
+abstract mixin class $PersonAggregatesCopyWith<$Res>  {
+  factory $PersonAggregatesCopyWith(PersonAggregates value, $Res Function(PersonAggregates) _then) = _$PersonAggregatesCopyWithImpl;
+@useResult
+$Res call({
+ int personId, int postCount, int commentCount
+});
+
+
+
+
+}
+/// @nodoc
+class _$PersonAggregatesCopyWithImpl<$Res>
+    implements $PersonAggregatesCopyWith<$Res> {
+  _$PersonAggregatesCopyWithImpl(this._self, this._then);
+
+  final PersonAggregates _self;
+  final $Res Function(PersonAggregates) _then;
+
+/// Create a copy of PersonAggregates
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? personId = null,Object? postCount = null,Object? commentCount = null,}) {
+  return _then(_self.copyWith(
+personId: null == personId ? _self.personId : personId // ignore: cast_nullable_to_non_nullable
+as int,postCount: null == postCount ? _self.postCount : postCount // ignore: cast_nullable_to_non_nullable
+as int,commentCount: null == commentCount ? _self.commentCount : commentCount // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
 }
 
-/// @nodoc
-class _$PersonAggregatesCopyWithImpl<$Res, $Val extends PersonAggregates> implements $PersonAggregatesCopyWith<$Res> {
-  _$PersonAggregatesCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of PersonAggregates
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? personId = null, Object? postCount = null, Object? commentCount = null}) {
-    return _then(
-      _value.copyWith(
-            personId:
-                null == personId
-                    ? _value.personId
-                    : personId // ignore: cast_nullable_to_non_nullable
-                        as int,
-            postCount:
-                null == postCount
-                    ? _value.postCount
-                    : postCount // ignore: cast_nullable_to_non_nullable
-                        as int,
-            commentCount:
-                null == commentCount
-                    ? _value.commentCount
-                    : commentCount // ignore: cast_nullable_to_non_nullable
-                        as int,
-          )
-          as $Val,
-    );
-  }
 }
 
-/// @nodoc
-abstract class _$$PersonAggregatesImplCopyWith<$Res> implements $PersonAggregatesCopyWith<$Res> {
-  factory _$$PersonAggregatesImplCopyWith(_$PersonAggregatesImpl value, $Res Function(_$PersonAggregatesImpl) then) = __$$PersonAggregatesImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({int personId, int postCount, int commentCount});
+
+/// Adds pattern-matching-related methods to [PersonAggregates].
+extension PersonAggregatesPatterns on PersonAggregates {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _PersonAggregates value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _PersonAggregates() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _PersonAggregates value)  $default,){
+final _that = this;
+switch (_that) {
+case _PersonAggregates():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _PersonAggregates value)?  $default,){
+final _that = this;
+switch (_that) {
+case _PersonAggregates() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int personId,  int postCount,  int commentCount)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _PersonAggregates() when $default != null:
+return $default(_that.personId,_that.postCount,_that.commentCount);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int personId,  int postCount,  int commentCount)  $default,) {final _that = this;
+switch (_that) {
+case _PersonAggregates():
+return $default(_that.personId,_that.postCount,_that.commentCount);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int personId,  int postCount,  int commentCount)?  $default,) {final _that = this;
+switch (_that) {
+case _PersonAggregates() when $default != null:
+return $default(_that.personId,_that.postCount,_that.commentCount);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-class __$$PersonAggregatesImplCopyWithImpl<$Res> extends _$PersonAggregatesCopyWithImpl<$Res, _$PersonAggregatesImpl> implements _$$PersonAggregatesImplCopyWith<$Res> {
-  __$$PersonAggregatesImplCopyWithImpl(_$PersonAggregatesImpl _value, $Res Function(_$PersonAggregatesImpl) _then) : super(_value, _then);
-
-  /// Create a copy of PersonAggregates
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? personId = null, Object? postCount = null, Object? commentCount = null}) {
-    return _then(
-      _$PersonAggregatesImpl(
-        personId:
-            null == personId
-                ? _value.personId
-                : personId // ignore: cast_nullable_to_non_nullable
-                    as int,
-        postCount:
-            null == postCount
-                ? _value.postCount
-                : postCount // ignore: cast_nullable_to_non_nullable
-                    as int,
-        commentCount:
-            null == commentCount
-                ? _value.commentCount
-                : commentCount // ignore: cast_nullable_to_non_nullable
-                    as int,
-      ),
-    );
-  }
 }
 
 /// @nodoc
 
 @modelSerde
-class _$PersonAggregatesImpl extends _PersonAggregates {
-  const _$PersonAggregatesImpl({required this.personId, required this.postCount, required this.commentCount}) : super._();
+class _PersonAggregates extends PersonAggregates {
+  const _PersonAggregates({required this.personId, required this.postCount, required this.commentCount}): super._();
+  factory _PersonAggregates.fromJson(Map<String, dynamic> json) => _$PersonAggregatesFromJson(json);
 
-  factory _$PersonAggregatesImpl.fromJson(Map<String, dynamic> json) => _$$PersonAggregatesImplFromJson(json);
+@override final  int personId;
+@override final  int postCount;
+@override final  int commentCount;
 
-  @override
-  final int personId;
-  @override
-  final int postCount;
-  @override
-  final int commentCount;
+/// Create a copy of PersonAggregates
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$PersonAggregatesCopyWith<_PersonAggregates> get copyWith => __$PersonAggregatesCopyWithImpl<_PersonAggregates>(this, _$identity);
 
-  @override
-  String toString() {
-    return 'PersonAggregates(personId: $personId, postCount: $postCount, commentCount: $commentCount)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$PersonAggregatesImpl &&
-            (identical(other.personId, personId) || other.personId == personId) &&
-            (identical(other.postCount, postCount) || other.postCount == postCount) &&
-            (identical(other.commentCount, commentCount) || other.commentCount == commentCount));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, personId, postCount, commentCount);
-
-  /// Create a copy of PersonAggregates
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$PersonAggregatesImplCopyWith<_$PersonAggregatesImpl> get copyWith => __$$PersonAggregatesImplCopyWithImpl<_$PersonAggregatesImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$PersonAggregatesImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$PersonAggregatesToJson(this, );
 }
 
-abstract class _PersonAggregates extends PersonAggregates {
-  const factory _PersonAggregates({required final int personId, required final int postCount, required final int commentCount}) = _$PersonAggregatesImpl;
-  const _PersonAggregates._() : super._();
-
-  factory _PersonAggregates.fromJson(Map<String, dynamic> json) = _$PersonAggregatesImpl.fromJson;
-
-  @override
-  int get personId;
-  @override
-  int get postCount;
-  @override
-  int get commentCount;
-
-  /// Create a copy of PersonAggregates
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PersonAggregatesImplCopyWith<_$PersonAggregatesImpl> get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PersonAggregates&&(identical(other.personId, personId) || other.personId == personId)&&(identical(other.postCount, postCount) || other.postCount == postCount)&&(identical(other.commentCount, commentCount) || other.commentCount == commentCount));
 }
 
-SiteAggregates _$SiteAggregatesFromJson(Map<String, dynamic> json) {
-  return _SiteAggregates.fromJson(json);
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,personId,postCount,commentCount);
+
+@override
+String toString() {
+  return 'PersonAggregates(personId: $personId, postCount: $postCount, commentCount: $commentCount)';
 }
+
+
+}
+
+/// @nodoc
+abstract mixin class _$PersonAggregatesCopyWith<$Res> implements $PersonAggregatesCopyWith<$Res> {
+  factory _$PersonAggregatesCopyWith(_PersonAggregates value, $Res Function(_PersonAggregates) _then) = __$PersonAggregatesCopyWithImpl;
+@override @useResult
+$Res call({
+ int personId, int postCount, int commentCount
+});
+
+
+
+
+}
+/// @nodoc
+class __$PersonAggregatesCopyWithImpl<$Res>
+    implements _$PersonAggregatesCopyWith<$Res> {
+  __$PersonAggregatesCopyWithImpl(this._self, this._then);
+
+  final _PersonAggregates _self;
+  final $Res Function(_PersonAggregates) _then;
+
+/// Create a copy of PersonAggregates
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? personId = null,Object? postCount = null,Object? commentCount = null,}) {
+  return _then(_PersonAggregates(
+personId: null == personId ? _self.personId : personId // ignore: cast_nullable_to_non_nullable
+as int,postCount: null == postCount ? _self.postCount : postCount // ignore: cast_nullable_to_non_nullable
+as int,commentCount: null == commentCount ? _self.commentCount : commentCount // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
+}
+
+
+}
+
 
 /// @nodoc
 mixin _$SiteAggregates {
-  int get siteId => throw _privateConstructorUsedError;
-  int get users => throw _privateConstructorUsedError;
-  int get posts => throw _privateConstructorUsedError;
-  int get comments => throw _privateConstructorUsedError;
-  int get communities => throw _privateConstructorUsedError;
-  int get usersActiveDay => throw _privateConstructorUsedError;
-  int get usersActiveWeek => throw _privateConstructorUsedError;
-  int get usersActiveMonth => throw _privateConstructorUsedError;
-  int get usersActiveHalfYear => throw _privateConstructorUsedError;
+
+ int get siteId; int get users; int get posts; int get comments; int get communities; int get usersActiveDay; int get usersActiveWeek; int get usersActiveMonth; int get usersActiveHalfYear;
+/// Create a copy of SiteAggregates
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$SiteAggregatesCopyWith<SiteAggregates> get copyWith => _$SiteAggregatesCopyWithImpl<SiteAggregates>(this as SiteAggregates, _$identity);
 
   /// Serializes this SiteAggregates to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of SiteAggregates
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $SiteAggregatesCopyWith<SiteAggregates> get copyWith => throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is SiteAggregates&&(identical(other.siteId, siteId) || other.siteId == siteId)&&(identical(other.users, users) || other.users == users)&&(identical(other.posts, posts) || other.posts == posts)&&(identical(other.comments, comments) || other.comments == comments)&&(identical(other.communities, communities) || other.communities == communities)&&(identical(other.usersActiveDay, usersActiveDay) || other.usersActiveDay == usersActiveDay)&&(identical(other.usersActiveWeek, usersActiveWeek) || other.usersActiveWeek == usersActiveWeek)&&(identical(other.usersActiveMonth, usersActiveMonth) || other.usersActiveMonth == usersActiveMonth)&&(identical(other.usersActiveHalfYear, usersActiveHalfYear) || other.usersActiveHalfYear == usersActiveHalfYear));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,siteId,users,posts,comments,communities,usersActiveDay,usersActiveWeek,usersActiveMonth,usersActiveHalfYear);
+
+@override
+String toString() {
+  return 'SiteAggregates(siteId: $siteId, users: $users, posts: $posts, comments: $comments, communities: $communities, usersActiveDay: $usersActiveDay, usersActiveWeek: $usersActiveWeek, usersActiveMonth: $usersActiveMonth, usersActiveHalfYear: $usersActiveHalfYear)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $SiteAggregatesCopyWith<$Res> {
-  factory $SiteAggregatesCopyWith(SiteAggregates value, $Res Function(SiteAggregates) then) = _$SiteAggregatesCopyWithImpl<$Res, SiteAggregates>;
-  @useResult
-  $Res call({int siteId, int users, int posts, int comments, int communities, int usersActiveDay, int usersActiveWeek, int usersActiveMonth, int usersActiveHalfYear});
+abstract mixin class $SiteAggregatesCopyWith<$Res>  {
+  factory $SiteAggregatesCopyWith(SiteAggregates value, $Res Function(SiteAggregates) _then) = _$SiteAggregatesCopyWithImpl;
+@useResult
+$Res call({
+ int siteId, int users, int posts, int comments, int communities, int usersActiveDay, int usersActiveWeek, int usersActiveMonth, int usersActiveHalfYear
+});
+
+
+
+
+}
+/// @nodoc
+class _$SiteAggregatesCopyWithImpl<$Res>
+    implements $SiteAggregatesCopyWith<$Res> {
+  _$SiteAggregatesCopyWithImpl(this._self, this._then);
+
+  final SiteAggregates _self;
+  final $Res Function(SiteAggregates) _then;
+
+/// Create a copy of SiteAggregates
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? siteId = null,Object? users = null,Object? posts = null,Object? comments = null,Object? communities = null,Object? usersActiveDay = null,Object? usersActiveWeek = null,Object? usersActiveMonth = null,Object? usersActiveHalfYear = null,}) {
+  return _then(_self.copyWith(
+siteId: null == siteId ? _self.siteId : siteId // ignore: cast_nullable_to_non_nullable
+as int,users: null == users ? _self.users : users // ignore: cast_nullable_to_non_nullable
+as int,posts: null == posts ? _self.posts : posts // ignore: cast_nullable_to_non_nullable
+as int,comments: null == comments ? _self.comments : comments // ignore: cast_nullable_to_non_nullable
+as int,communities: null == communities ? _self.communities : communities // ignore: cast_nullable_to_non_nullable
+as int,usersActiveDay: null == usersActiveDay ? _self.usersActiveDay : usersActiveDay // ignore: cast_nullable_to_non_nullable
+as int,usersActiveWeek: null == usersActiveWeek ? _self.usersActiveWeek : usersActiveWeek // ignore: cast_nullable_to_non_nullable
+as int,usersActiveMonth: null == usersActiveMonth ? _self.usersActiveMonth : usersActiveMonth // ignore: cast_nullable_to_non_nullable
+as int,usersActiveHalfYear: null == usersActiveHalfYear ? _self.usersActiveHalfYear : usersActiveHalfYear // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
 }
 
-/// @nodoc
-class _$SiteAggregatesCopyWithImpl<$Res, $Val extends SiteAggregates> implements $SiteAggregatesCopyWith<$Res> {
-  _$SiteAggregatesCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of SiteAggregates
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? siteId = null,
-    Object? users = null,
-    Object? posts = null,
-    Object? comments = null,
-    Object? communities = null,
-    Object? usersActiveDay = null,
-    Object? usersActiveWeek = null,
-    Object? usersActiveMonth = null,
-    Object? usersActiveHalfYear = null,
-  }) {
-    return _then(
-      _value.copyWith(
-            siteId:
-                null == siteId
-                    ? _value.siteId
-                    : siteId // ignore: cast_nullable_to_non_nullable
-                        as int,
-            users:
-                null == users
-                    ? _value.users
-                    : users // ignore: cast_nullable_to_non_nullable
-                        as int,
-            posts:
-                null == posts
-                    ? _value.posts
-                    : posts // ignore: cast_nullable_to_non_nullable
-                        as int,
-            comments:
-                null == comments
-                    ? _value.comments
-                    : comments // ignore: cast_nullable_to_non_nullable
-                        as int,
-            communities:
-                null == communities
-                    ? _value.communities
-                    : communities // ignore: cast_nullable_to_non_nullable
-                        as int,
-            usersActiveDay:
-                null == usersActiveDay
-                    ? _value.usersActiveDay
-                    : usersActiveDay // ignore: cast_nullable_to_non_nullable
-                        as int,
-            usersActiveWeek:
-                null == usersActiveWeek
-                    ? _value.usersActiveWeek
-                    : usersActiveWeek // ignore: cast_nullable_to_non_nullable
-                        as int,
-            usersActiveMonth:
-                null == usersActiveMonth
-                    ? _value.usersActiveMonth
-                    : usersActiveMonth // ignore: cast_nullable_to_non_nullable
-                        as int,
-            usersActiveHalfYear:
-                null == usersActiveHalfYear
-                    ? _value.usersActiveHalfYear
-                    : usersActiveHalfYear // ignore: cast_nullable_to_non_nullable
-                        as int,
-          )
-          as $Val,
-    );
-  }
 }
 
-/// @nodoc
-abstract class _$$SiteAggregatesImplCopyWith<$Res> implements $SiteAggregatesCopyWith<$Res> {
-  factory _$$SiteAggregatesImplCopyWith(_$SiteAggregatesImpl value, $Res Function(_$SiteAggregatesImpl) then) = __$$SiteAggregatesImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({int siteId, int users, int posts, int comments, int communities, int usersActiveDay, int usersActiveWeek, int usersActiveMonth, int usersActiveHalfYear});
+
+/// Adds pattern-matching-related methods to [SiteAggregates].
+extension SiteAggregatesPatterns on SiteAggregates {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _SiteAggregates value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _SiteAggregates() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _SiteAggregates value)  $default,){
+final _that = this;
+switch (_that) {
+case _SiteAggregates():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _SiteAggregates value)?  $default,){
+final _that = this;
+switch (_that) {
+case _SiteAggregates() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int siteId,  int users,  int posts,  int comments,  int communities,  int usersActiveDay,  int usersActiveWeek,  int usersActiveMonth,  int usersActiveHalfYear)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _SiteAggregates() when $default != null:
+return $default(_that.siteId,_that.users,_that.posts,_that.comments,_that.communities,_that.usersActiveDay,_that.usersActiveWeek,_that.usersActiveMonth,_that.usersActiveHalfYear);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int siteId,  int users,  int posts,  int comments,  int communities,  int usersActiveDay,  int usersActiveWeek,  int usersActiveMonth,  int usersActiveHalfYear)  $default,) {final _that = this;
+switch (_that) {
+case _SiteAggregates():
+return $default(_that.siteId,_that.users,_that.posts,_that.comments,_that.communities,_that.usersActiveDay,_that.usersActiveWeek,_that.usersActiveMonth,_that.usersActiveHalfYear);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int siteId,  int users,  int posts,  int comments,  int communities,  int usersActiveDay,  int usersActiveWeek,  int usersActiveMonth,  int usersActiveHalfYear)?  $default,) {final _that = this;
+switch (_that) {
+case _SiteAggregates() when $default != null:
+return $default(_that.siteId,_that.users,_that.posts,_that.comments,_that.communities,_that.usersActiveDay,_that.usersActiveWeek,_that.usersActiveMonth,_that.usersActiveHalfYear);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-class __$$SiteAggregatesImplCopyWithImpl<$Res> extends _$SiteAggregatesCopyWithImpl<$Res, _$SiteAggregatesImpl> implements _$$SiteAggregatesImplCopyWith<$Res> {
-  __$$SiteAggregatesImplCopyWithImpl(_$SiteAggregatesImpl _value, $Res Function(_$SiteAggregatesImpl) _then) : super(_value, _then);
-
-  /// Create a copy of SiteAggregates
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? siteId = null,
-    Object? users = null,
-    Object? posts = null,
-    Object? comments = null,
-    Object? communities = null,
-    Object? usersActiveDay = null,
-    Object? usersActiveWeek = null,
-    Object? usersActiveMonth = null,
-    Object? usersActiveHalfYear = null,
-  }) {
-    return _then(
-      _$SiteAggregatesImpl(
-        siteId:
-            null == siteId
-                ? _value.siteId
-                : siteId // ignore: cast_nullable_to_non_nullable
-                    as int,
-        users:
-            null == users
-                ? _value.users
-                : users // ignore: cast_nullable_to_non_nullable
-                    as int,
-        posts:
-            null == posts
-                ? _value.posts
-                : posts // ignore: cast_nullable_to_non_nullable
-                    as int,
-        comments:
-            null == comments
-                ? _value.comments
-                : comments // ignore: cast_nullable_to_non_nullable
-                    as int,
-        communities:
-            null == communities
-                ? _value.communities
-                : communities // ignore: cast_nullable_to_non_nullable
-                    as int,
-        usersActiveDay:
-            null == usersActiveDay
-                ? _value.usersActiveDay
-                : usersActiveDay // ignore: cast_nullable_to_non_nullable
-                    as int,
-        usersActiveWeek:
-            null == usersActiveWeek
-                ? _value.usersActiveWeek
-                : usersActiveWeek // ignore: cast_nullable_to_non_nullable
-                    as int,
-        usersActiveMonth:
-            null == usersActiveMonth
-                ? _value.usersActiveMonth
-                : usersActiveMonth // ignore: cast_nullable_to_non_nullable
-                    as int,
-        usersActiveHalfYear:
-            null == usersActiveHalfYear
-                ? _value.usersActiveHalfYear
-                : usersActiveHalfYear // ignore: cast_nullable_to_non_nullable
-                    as int,
-      ),
-    );
-  }
 }
 
 /// @nodoc
 
 @modelSerde
-class _$SiteAggregatesImpl extends _SiteAggregates {
-  const _$SiteAggregatesImpl({
-    required this.siteId,
-    required this.users,
-    required this.posts,
-    required this.comments,
-    required this.communities,
-    required this.usersActiveDay,
-    required this.usersActiveWeek,
-    required this.usersActiveMonth,
-    required this.usersActiveHalfYear,
-  }) : super._();
+class _SiteAggregates extends SiteAggregates {
+  const _SiteAggregates({required this.siteId, required this.users, required this.posts, required this.comments, required this.communities, required this.usersActiveDay, required this.usersActiveWeek, required this.usersActiveMonth, required this.usersActiveHalfYear}): super._();
+  factory _SiteAggregates.fromJson(Map<String, dynamic> json) => _$SiteAggregatesFromJson(json);
 
-  factory _$SiteAggregatesImpl.fromJson(Map<String, dynamic> json) => _$$SiteAggregatesImplFromJson(json);
+@override final  int siteId;
+@override final  int users;
+@override final  int posts;
+@override final  int comments;
+@override final  int communities;
+@override final  int usersActiveDay;
+@override final  int usersActiveWeek;
+@override final  int usersActiveMonth;
+@override final  int usersActiveHalfYear;
 
-  @override
-  final int siteId;
-  @override
-  final int users;
-  @override
-  final int posts;
-  @override
-  final int comments;
-  @override
-  final int communities;
-  @override
-  final int usersActiveDay;
-  @override
-  final int usersActiveWeek;
-  @override
-  final int usersActiveMonth;
-  @override
-  final int usersActiveHalfYear;
+/// Create a copy of SiteAggregates
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$SiteAggregatesCopyWith<_SiteAggregates> get copyWith => __$SiteAggregatesCopyWithImpl<_SiteAggregates>(this, _$identity);
 
-  @override
-  String toString() {
-    return 'SiteAggregates(siteId: $siteId, users: $users, posts: $posts, comments: $comments, communities: $communities, usersActiveDay: $usersActiveDay, usersActiveWeek: $usersActiveWeek, usersActiveMonth: $usersActiveMonth, usersActiveHalfYear: $usersActiveHalfYear)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SiteAggregatesImpl &&
-            (identical(other.siteId, siteId) || other.siteId == siteId) &&
-            (identical(other.users, users) || other.users == users) &&
-            (identical(other.posts, posts) || other.posts == posts) &&
-            (identical(other.comments, comments) || other.comments == comments) &&
-            (identical(other.communities, communities) || other.communities == communities) &&
-            (identical(other.usersActiveDay, usersActiveDay) || other.usersActiveDay == usersActiveDay) &&
-            (identical(other.usersActiveWeek, usersActiveWeek) || other.usersActiveWeek == usersActiveWeek) &&
-            (identical(other.usersActiveMonth, usersActiveMonth) || other.usersActiveMonth == usersActiveMonth) &&
-            (identical(other.usersActiveHalfYear, usersActiveHalfYear) || other.usersActiveHalfYear == usersActiveHalfYear));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, siteId, users, posts, comments, communities, usersActiveDay, usersActiveWeek, usersActiveMonth, usersActiveHalfYear);
-
-  /// Create a copy of SiteAggregates
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SiteAggregatesImplCopyWith<_$SiteAggregatesImpl> get copyWith => __$$SiteAggregatesImplCopyWithImpl<_$SiteAggregatesImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$SiteAggregatesImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$SiteAggregatesToJson(this, );
 }
 
-abstract class _SiteAggregates extends SiteAggregates {
-  const factory _SiteAggregates({
-    required final int siteId,
-    required final int users,
-    required final int posts,
-    required final int comments,
-    required final int communities,
-    required final int usersActiveDay,
-    required final int usersActiveWeek,
-    required final int usersActiveMonth,
-    required final int usersActiveHalfYear,
-  }) = _$SiteAggregatesImpl;
-  const _SiteAggregates._() : super._();
-
-  factory _SiteAggregates.fromJson(Map<String, dynamic> json) = _$SiteAggregatesImpl.fromJson;
-
-  @override
-  int get siteId;
-  @override
-  int get users;
-  @override
-  int get posts;
-  @override
-  int get comments;
-  @override
-  int get communities;
-  @override
-  int get usersActiveDay;
-  @override
-  int get usersActiveWeek;
-  @override
-  int get usersActiveMonth;
-  @override
-  int get usersActiveHalfYear;
-
-  /// Create a copy of SiteAggregates
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SiteAggregatesImplCopyWith<_$SiteAggregatesImpl> get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _SiteAggregates&&(identical(other.siteId, siteId) || other.siteId == siteId)&&(identical(other.users, users) || other.users == users)&&(identical(other.posts, posts) || other.posts == posts)&&(identical(other.comments, comments) || other.comments == comments)&&(identical(other.communities, communities) || other.communities == communities)&&(identical(other.usersActiveDay, usersActiveDay) || other.usersActiveDay == usersActiveDay)&&(identical(other.usersActiveWeek, usersActiveWeek) || other.usersActiveWeek == usersActiveWeek)&&(identical(other.usersActiveMonth, usersActiveMonth) || other.usersActiveMonth == usersActiveMonth)&&(identical(other.usersActiveHalfYear, usersActiveHalfYear) || other.usersActiveHalfYear == usersActiveHalfYear));
 }
 
-PostAggregates _$PostAggregatesFromJson(Map<String, dynamic> json) {
-  return _PostAggregates.fromJson(json);
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,siteId,users,posts,comments,communities,usersActiveDay,usersActiveWeek,usersActiveMonth,usersActiveHalfYear);
+
+@override
+String toString() {
+  return 'SiteAggregates(siteId: $siteId, users: $users, posts: $posts, comments: $comments, communities: $communities, usersActiveDay: $usersActiveDay, usersActiveWeek: $usersActiveWeek, usersActiveMonth: $usersActiveMonth, usersActiveHalfYear: $usersActiveHalfYear)';
 }
+
+
+}
+
+/// @nodoc
+abstract mixin class _$SiteAggregatesCopyWith<$Res> implements $SiteAggregatesCopyWith<$Res> {
+  factory _$SiteAggregatesCopyWith(_SiteAggregates value, $Res Function(_SiteAggregates) _then) = __$SiteAggregatesCopyWithImpl;
+@override @useResult
+$Res call({
+ int siteId, int users, int posts, int comments, int communities, int usersActiveDay, int usersActiveWeek, int usersActiveMonth, int usersActiveHalfYear
+});
+
+
+
+
+}
+/// @nodoc
+class __$SiteAggregatesCopyWithImpl<$Res>
+    implements _$SiteAggregatesCopyWith<$Res> {
+  __$SiteAggregatesCopyWithImpl(this._self, this._then);
+
+  final _SiteAggregates _self;
+  final $Res Function(_SiteAggregates) _then;
+
+/// Create a copy of SiteAggregates
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? siteId = null,Object? users = null,Object? posts = null,Object? comments = null,Object? communities = null,Object? usersActiveDay = null,Object? usersActiveWeek = null,Object? usersActiveMonth = null,Object? usersActiveHalfYear = null,}) {
+  return _then(_SiteAggregates(
+siteId: null == siteId ? _self.siteId : siteId // ignore: cast_nullable_to_non_nullable
+as int,users: null == users ? _self.users : users // ignore: cast_nullable_to_non_nullable
+as int,posts: null == posts ? _self.posts : posts // ignore: cast_nullable_to_non_nullable
+as int,comments: null == comments ? _self.comments : comments // ignore: cast_nullable_to_non_nullable
+as int,communities: null == communities ? _self.communities : communities // ignore: cast_nullable_to_non_nullable
+as int,usersActiveDay: null == usersActiveDay ? _self.usersActiveDay : usersActiveDay // ignore: cast_nullable_to_non_nullable
+as int,usersActiveWeek: null == usersActiveWeek ? _self.usersActiveWeek : usersActiveWeek // ignore: cast_nullable_to_non_nullable
+as int,usersActiveMonth: null == usersActiveMonth ? _self.usersActiveMonth : usersActiveMonth // ignore: cast_nullable_to_non_nullable
+as int,usersActiveHalfYear: null == usersActiveHalfYear ? _self.usersActiveHalfYear : usersActiveHalfYear // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
+}
+
+
+}
+
 
 /// @nodoc
 mixin _$PostAggregates {
-  int get postId => throw _privateConstructorUsedError;
-  int get comments => throw _privateConstructorUsedError;
-  int get score => throw _privateConstructorUsedError;
-  int get upvotes => throw _privateConstructorUsedError;
-  int get downvotes => throw _privateConstructorUsedError;
+
+ int get postId; int get comments; int get score; int get upvotes; int get downvotes;
+/// Create a copy of PostAggregates
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$PostAggregatesCopyWith<PostAggregates> get copyWith => _$PostAggregatesCopyWithImpl<PostAggregates>(this as PostAggregates, _$identity);
 
   /// Serializes this PostAggregates to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of PostAggregates
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $PostAggregatesCopyWith<PostAggregates> get copyWith => throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PostAggregates&&(identical(other.postId, postId) || other.postId == postId)&&(identical(other.comments, comments) || other.comments == comments)&&(identical(other.score, score) || other.score == score)&&(identical(other.upvotes, upvotes) || other.upvotes == upvotes)&&(identical(other.downvotes, downvotes) || other.downvotes == downvotes));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,postId,comments,score,upvotes,downvotes);
+
+@override
+String toString() {
+  return 'PostAggregates(postId: $postId, comments: $comments, score: $score, upvotes: $upvotes, downvotes: $downvotes)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $PostAggregatesCopyWith<$Res> {
-  factory $PostAggregatesCopyWith(PostAggregates value, $Res Function(PostAggregates) then) = _$PostAggregatesCopyWithImpl<$Res, PostAggregates>;
-  @useResult
-  $Res call({int postId, int comments, int score, int upvotes, int downvotes});
+abstract mixin class $PostAggregatesCopyWith<$Res>  {
+  factory $PostAggregatesCopyWith(PostAggregates value, $Res Function(PostAggregates) _then) = _$PostAggregatesCopyWithImpl;
+@useResult
+$Res call({
+ int postId, int comments, int score, int upvotes, int downvotes
+});
+
+
+
+
+}
+/// @nodoc
+class _$PostAggregatesCopyWithImpl<$Res>
+    implements $PostAggregatesCopyWith<$Res> {
+  _$PostAggregatesCopyWithImpl(this._self, this._then);
+
+  final PostAggregates _self;
+  final $Res Function(PostAggregates) _then;
+
+/// Create a copy of PostAggregates
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? postId = null,Object? comments = null,Object? score = null,Object? upvotes = null,Object? downvotes = null,}) {
+  return _then(_self.copyWith(
+postId: null == postId ? _self.postId : postId // ignore: cast_nullable_to_non_nullable
+as int,comments: null == comments ? _self.comments : comments // ignore: cast_nullable_to_non_nullable
+as int,score: null == score ? _self.score : score // ignore: cast_nullable_to_non_nullable
+as int,upvotes: null == upvotes ? _self.upvotes : upvotes // ignore: cast_nullable_to_non_nullable
+as int,downvotes: null == downvotes ? _self.downvotes : downvotes // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
 }
 
-/// @nodoc
-class _$PostAggregatesCopyWithImpl<$Res, $Val extends PostAggregates> implements $PostAggregatesCopyWith<$Res> {
-  _$PostAggregatesCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of PostAggregates
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? postId = null, Object? comments = null, Object? score = null, Object? upvotes = null, Object? downvotes = null}) {
-    return _then(
-      _value.copyWith(
-            postId:
-                null == postId
-                    ? _value.postId
-                    : postId // ignore: cast_nullable_to_non_nullable
-                        as int,
-            comments:
-                null == comments
-                    ? _value.comments
-                    : comments // ignore: cast_nullable_to_non_nullable
-                        as int,
-            score:
-                null == score
-                    ? _value.score
-                    : score // ignore: cast_nullable_to_non_nullable
-                        as int,
-            upvotes:
-                null == upvotes
-                    ? _value.upvotes
-                    : upvotes // ignore: cast_nullable_to_non_nullable
-                        as int,
-            downvotes:
-                null == downvotes
-                    ? _value.downvotes
-                    : downvotes // ignore: cast_nullable_to_non_nullable
-                        as int,
-          )
-          as $Val,
-    );
-  }
 }
 
-/// @nodoc
-abstract class _$$PostAggregatesImplCopyWith<$Res> implements $PostAggregatesCopyWith<$Res> {
-  factory _$$PostAggregatesImplCopyWith(_$PostAggregatesImpl value, $Res Function(_$PostAggregatesImpl) then) = __$$PostAggregatesImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({int postId, int comments, int score, int upvotes, int downvotes});
+
+/// Adds pattern-matching-related methods to [PostAggregates].
+extension PostAggregatesPatterns on PostAggregates {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _PostAggregates value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _PostAggregates() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _PostAggregates value)  $default,){
+final _that = this;
+switch (_that) {
+case _PostAggregates():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _PostAggregates value)?  $default,){
+final _that = this;
+switch (_that) {
+case _PostAggregates() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int postId,  int comments,  int score,  int upvotes,  int downvotes)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _PostAggregates() when $default != null:
+return $default(_that.postId,_that.comments,_that.score,_that.upvotes,_that.downvotes);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int postId,  int comments,  int score,  int upvotes,  int downvotes)  $default,) {final _that = this;
+switch (_that) {
+case _PostAggregates():
+return $default(_that.postId,_that.comments,_that.score,_that.upvotes,_that.downvotes);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int postId,  int comments,  int score,  int upvotes,  int downvotes)?  $default,) {final _that = this;
+switch (_that) {
+case _PostAggregates() when $default != null:
+return $default(_that.postId,_that.comments,_that.score,_that.upvotes,_that.downvotes);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-class __$$PostAggregatesImplCopyWithImpl<$Res> extends _$PostAggregatesCopyWithImpl<$Res, _$PostAggregatesImpl> implements _$$PostAggregatesImplCopyWith<$Res> {
-  __$$PostAggregatesImplCopyWithImpl(_$PostAggregatesImpl _value, $Res Function(_$PostAggregatesImpl) _then) : super(_value, _then);
-
-  /// Create a copy of PostAggregates
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? postId = null, Object? comments = null, Object? score = null, Object? upvotes = null, Object? downvotes = null}) {
-    return _then(
-      _$PostAggregatesImpl(
-        postId:
-            null == postId
-                ? _value.postId
-                : postId // ignore: cast_nullable_to_non_nullable
-                    as int,
-        comments:
-            null == comments
-                ? _value.comments
-                : comments // ignore: cast_nullable_to_non_nullable
-                    as int,
-        score:
-            null == score
-                ? _value.score
-                : score // ignore: cast_nullable_to_non_nullable
-                    as int,
-        upvotes:
-            null == upvotes
-                ? _value.upvotes
-                : upvotes // ignore: cast_nullable_to_non_nullable
-                    as int,
-        downvotes:
-            null == downvotes
-                ? _value.downvotes
-                : downvotes // ignore: cast_nullable_to_non_nullable
-                    as int,
-      ),
-    );
-  }
 }
 
 /// @nodoc
 
 @modelSerde
-class _$PostAggregatesImpl extends _PostAggregates {
-  const _$PostAggregatesImpl({required this.postId, required this.comments, required this.score, required this.upvotes, required this.downvotes}) : super._();
+class _PostAggregates extends PostAggregates {
+  const _PostAggregates({required this.postId, required this.comments, required this.score, required this.upvotes, required this.downvotes}): super._();
+  factory _PostAggregates.fromJson(Map<String, dynamic> json) => _$PostAggregatesFromJson(json);
 
-  factory _$PostAggregatesImpl.fromJson(Map<String, dynamic> json) => _$$PostAggregatesImplFromJson(json);
+@override final  int postId;
+@override final  int comments;
+@override final  int score;
+@override final  int upvotes;
+@override final  int downvotes;
 
-  @override
-  final int postId;
-  @override
-  final int comments;
-  @override
-  final int score;
-  @override
-  final int upvotes;
-  @override
-  final int downvotes;
+/// Create a copy of PostAggregates
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$PostAggregatesCopyWith<_PostAggregates> get copyWith => __$PostAggregatesCopyWithImpl<_PostAggregates>(this, _$identity);
 
-  @override
-  String toString() {
-    return 'PostAggregates(postId: $postId, comments: $comments, score: $score, upvotes: $upvotes, downvotes: $downvotes)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$PostAggregatesImpl &&
-            (identical(other.postId, postId) || other.postId == postId) &&
-            (identical(other.comments, comments) || other.comments == comments) &&
-            (identical(other.score, score) || other.score == score) &&
-            (identical(other.upvotes, upvotes) || other.upvotes == upvotes) &&
-            (identical(other.downvotes, downvotes) || other.downvotes == downvotes));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, postId, comments, score, upvotes, downvotes);
-
-  /// Create a copy of PostAggregates
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$PostAggregatesImplCopyWith<_$PostAggregatesImpl> get copyWith => __$$PostAggregatesImplCopyWithImpl<_$PostAggregatesImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$PostAggregatesImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$PostAggregatesToJson(this, );
 }
 
-abstract class _PostAggregates extends PostAggregates {
-  const factory _PostAggregates({required final int postId, required final int comments, required final int score, required final int upvotes, required final int downvotes}) = _$PostAggregatesImpl;
-  const _PostAggregates._() : super._();
-
-  factory _PostAggregates.fromJson(Map<String, dynamic> json) = _$PostAggregatesImpl.fromJson;
-
-  @override
-  int get postId;
-  @override
-  int get comments;
-  @override
-  int get score;
-  @override
-  int get upvotes;
-  @override
-  int get downvotes;
-
-  /// Create a copy of PostAggregates
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PostAggregatesImplCopyWith<_$PostAggregatesImpl> get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PostAggregates&&(identical(other.postId, postId) || other.postId == postId)&&(identical(other.comments, comments) || other.comments == comments)&&(identical(other.score, score) || other.score == score)&&(identical(other.upvotes, upvotes) || other.upvotes == upvotes)&&(identical(other.downvotes, downvotes) || other.downvotes == downvotes));
 }
 
-CommunityAggregates _$CommunityAggregatesFromJson(Map<String, dynamic> json) {
-  return _CommunityAggregates.fromJson(json);
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,postId,comments,score,upvotes,downvotes);
+
+@override
+String toString() {
+  return 'PostAggregates(postId: $postId, comments: $comments, score: $score, upvotes: $upvotes, downvotes: $downvotes)';
 }
+
+
+}
+
+/// @nodoc
+abstract mixin class _$PostAggregatesCopyWith<$Res> implements $PostAggregatesCopyWith<$Res> {
+  factory _$PostAggregatesCopyWith(_PostAggregates value, $Res Function(_PostAggregates) _then) = __$PostAggregatesCopyWithImpl;
+@override @useResult
+$Res call({
+ int postId, int comments, int score, int upvotes, int downvotes
+});
+
+
+
+
+}
+/// @nodoc
+class __$PostAggregatesCopyWithImpl<$Res>
+    implements _$PostAggregatesCopyWith<$Res> {
+  __$PostAggregatesCopyWithImpl(this._self, this._then);
+
+  final _PostAggregates _self;
+  final $Res Function(_PostAggregates) _then;
+
+/// Create a copy of PostAggregates
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? postId = null,Object? comments = null,Object? score = null,Object? upvotes = null,Object? downvotes = null,}) {
+  return _then(_PostAggregates(
+postId: null == postId ? _self.postId : postId // ignore: cast_nullable_to_non_nullable
+as int,comments: null == comments ? _self.comments : comments // ignore: cast_nullable_to_non_nullable
+as int,score: null == score ? _self.score : score // ignore: cast_nullable_to_non_nullable
+as int,upvotes: null == upvotes ? _self.upvotes : upvotes // ignore: cast_nullable_to_non_nullable
+as int,downvotes: null == downvotes ? _self.downvotes : downvotes // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
+}
+
+
+}
+
 
 /// @nodoc
 mixin _$CommunityAggregates {
-  int get communityId => throw _privateConstructorUsedError;
-  int get subscribers => throw _privateConstructorUsedError;
-  int get posts => throw _privateConstructorUsedError;
-  int get comments => throw _privateConstructorUsedError;
-  int get usersActiveDay => throw _privateConstructorUsedError;
-  int get usersActiveWeek => throw _privateConstructorUsedError;
-  int get usersActiveMonth => throw _privateConstructorUsedError;
-  int get usersActiveHalfYear => throw _privateConstructorUsedError;
-  int? get hotRank => throw _privateConstructorUsedError;
+
+ int get communityId; int get subscribers; int get posts; int get comments; int get usersActiveDay; int get usersActiveWeek; int get usersActiveMonth; int get usersActiveHalfYear; int? get hotRank;
+/// Create a copy of CommunityAggregates
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$CommunityAggregatesCopyWith<CommunityAggregates> get copyWith => _$CommunityAggregatesCopyWithImpl<CommunityAggregates>(this as CommunityAggregates, _$identity);
 
   /// Serializes this CommunityAggregates to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of CommunityAggregates
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $CommunityAggregatesCopyWith<CommunityAggregates> get copyWith => throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is CommunityAggregates&&(identical(other.communityId, communityId) || other.communityId == communityId)&&(identical(other.subscribers, subscribers) || other.subscribers == subscribers)&&(identical(other.posts, posts) || other.posts == posts)&&(identical(other.comments, comments) || other.comments == comments)&&(identical(other.usersActiveDay, usersActiveDay) || other.usersActiveDay == usersActiveDay)&&(identical(other.usersActiveWeek, usersActiveWeek) || other.usersActiveWeek == usersActiveWeek)&&(identical(other.usersActiveMonth, usersActiveMonth) || other.usersActiveMonth == usersActiveMonth)&&(identical(other.usersActiveHalfYear, usersActiveHalfYear) || other.usersActiveHalfYear == usersActiveHalfYear)&&(identical(other.hotRank, hotRank) || other.hotRank == hotRank));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,communityId,subscribers,posts,comments,usersActiveDay,usersActiveWeek,usersActiveMonth,usersActiveHalfYear,hotRank);
+
+@override
+String toString() {
+  return 'CommunityAggregates(communityId: $communityId, subscribers: $subscribers, posts: $posts, comments: $comments, usersActiveDay: $usersActiveDay, usersActiveWeek: $usersActiveWeek, usersActiveMonth: $usersActiveMonth, usersActiveHalfYear: $usersActiveHalfYear, hotRank: $hotRank)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $CommunityAggregatesCopyWith<$Res> {
-  factory $CommunityAggregatesCopyWith(CommunityAggregates value, $Res Function(CommunityAggregates) then) = _$CommunityAggregatesCopyWithImpl<$Res, CommunityAggregates>;
-  @useResult
-  $Res call({int communityId, int subscribers, int posts, int comments, int usersActiveDay, int usersActiveWeek, int usersActiveMonth, int usersActiveHalfYear, int? hotRank});
+abstract mixin class $CommunityAggregatesCopyWith<$Res>  {
+  factory $CommunityAggregatesCopyWith(CommunityAggregates value, $Res Function(CommunityAggregates) _then) = _$CommunityAggregatesCopyWithImpl;
+@useResult
+$Res call({
+ int communityId, int subscribers, int posts, int comments, int usersActiveDay, int usersActiveWeek, int usersActiveMonth, int usersActiveHalfYear, int? hotRank
+});
+
+
+
+
+}
+/// @nodoc
+class _$CommunityAggregatesCopyWithImpl<$Res>
+    implements $CommunityAggregatesCopyWith<$Res> {
+  _$CommunityAggregatesCopyWithImpl(this._self, this._then);
+
+  final CommunityAggregates _self;
+  final $Res Function(CommunityAggregates) _then;
+
+/// Create a copy of CommunityAggregates
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? communityId = null,Object? subscribers = null,Object? posts = null,Object? comments = null,Object? usersActiveDay = null,Object? usersActiveWeek = null,Object? usersActiveMonth = null,Object? usersActiveHalfYear = null,Object? hotRank = freezed,}) {
+  return _then(_self.copyWith(
+communityId: null == communityId ? _self.communityId : communityId // ignore: cast_nullable_to_non_nullable
+as int,subscribers: null == subscribers ? _self.subscribers : subscribers // ignore: cast_nullable_to_non_nullable
+as int,posts: null == posts ? _self.posts : posts // ignore: cast_nullable_to_non_nullable
+as int,comments: null == comments ? _self.comments : comments // ignore: cast_nullable_to_non_nullable
+as int,usersActiveDay: null == usersActiveDay ? _self.usersActiveDay : usersActiveDay // ignore: cast_nullable_to_non_nullable
+as int,usersActiveWeek: null == usersActiveWeek ? _self.usersActiveWeek : usersActiveWeek // ignore: cast_nullable_to_non_nullable
+as int,usersActiveMonth: null == usersActiveMonth ? _self.usersActiveMonth : usersActiveMonth // ignore: cast_nullable_to_non_nullable
+as int,usersActiveHalfYear: null == usersActiveHalfYear ? _self.usersActiveHalfYear : usersActiveHalfYear // ignore: cast_nullable_to_non_nullable
+as int,hotRank: freezed == hotRank ? _self.hotRank : hotRank // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
 }
 
-/// @nodoc
-class _$CommunityAggregatesCopyWithImpl<$Res, $Val extends CommunityAggregates> implements $CommunityAggregatesCopyWith<$Res> {
-  _$CommunityAggregatesCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of CommunityAggregates
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? communityId = null,
-    Object? subscribers = null,
-    Object? posts = null,
-    Object? comments = null,
-    Object? usersActiveDay = null,
-    Object? usersActiveWeek = null,
-    Object? usersActiveMonth = null,
-    Object? usersActiveHalfYear = null,
-    Object? hotRank = freezed,
-  }) {
-    return _then(
-      _value.copyWith(
-            communityId:
-                null == communityId
-                    ? _value.communityId
-                    : communityId // ignore: cast_nullable_to_non_nullable
-                        as int,
-            subscribers:
-                null == subscribers
-                    ? _value.subscribers
-                    : subscribers // ignore: cast_nullable_to_non_nullable
-                        as int,
-            posts:
-                null == posts
-                    ? _value.posts
-                    : posts // ignore: cast_nullable_to_non_nullable
-                        as int,
-            comments:
-                null == comments
-                    ? _value.comments
-                    : comments // ignore: cast_nullable_to_non_nullable
-                        as int,
-            usersActiveDay:
-                null == usersActiveDay
-                    ? _value.usersActiveDay
-                    : usersActiveDay // ignore: cast_nullable_to_non_nullable
-                        as int,
-            usersActiveWeek:
-                null == usersActiveWeek
-                    ? _value.usersActiveWeek
-                    : usersActiveWeek // ignore: cast_nullable_to_non_nullable
-                        as int,
-            usersActiveMonth:
-                null == usersActiveMonth
-                    ? _value.usersActiveMonth
-                    : usersActiveMonth // ignore: cast_nullable_to_non_nullable
-                        as int,
-            usersActiveHalfYear:
-                null == usersActiveHalfYear
-                    ? _value.usersActiveHalfYear
-                    : usersActiveHalfYear // ignore: cast_nullable_to_non_nullable
-                        as int,
-            hotRank:
-                freezed == hotRank
-                    ? _value.hotRank
-                    : hotRank // ignore: cast_nullable_to_non_nullable
-                        as int?,
-          )
-          as $Val,
-    );
-  }
 }
 
-/// @nodoc
-abstract class _$$CommunityAggregatesImplCopyWith<$Res> implements $CommunityAggregatesCopyWith<$Res> {
-  factory _$$CommunityAggregatesImplCopyWith(_$CommunityAggregatesImpl value, $Res Function(_$CommunityAggregatesImpl) then) = __$$CommunityAggregatesImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({int communityId, int subscribers, int posts, int comments, int usersActiveDay, int usersActiveWeek, int usersActiveMonth, int usersActiveHalfYear, int? hotRank});
+
+/// Adds pattern-matching-related methods to [CommunityAggregates].
+extension CommunityAggregatesPatterns on CommunityAggregates {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _CommunityAggregates value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _CommunityAggregates() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _CommunityAggregates value)  $default,){
+final _that = this;
+switch (_that) {
+case _CommunityAggregates():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _CommunityAggregates value)?  $default,){
+final _that = this;
+switch (_that) {
+case _CommunityAggregates() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int communityId,  int subscribers,  int posts,  int comments,  int usersActiveDay,  int usersActiveWeek,  int usersActiveMonth,  int usersActiveHalfYear,  int? hotRank)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _CommunityAggregates() when $default != null:
+return $default(_that.communityId,_that.subscribers,_that.posts,_that.comments,_that.usersActiveDay,_that.usersActiveWeek,_that.usersActiveMonth,_that.usersActiveHalfYear,_that.hotRank);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int communityId,  int subscribers,  int posts,  int comments,  int usersActiveDay,  int usersActiveWeek,  int usersActiveMonth,  int usersActiveHalfYear,  int? hotRank)  $default,) {final _that = this;
+switch (_that) {
+case _CommunityAggregates():
+return $default(_that.communityId,_that.subscribers,_that.posts,_that.comments,_that.usersActiveDay,_that.usersActiveWeek,_that.usersActiveMonth,_that.usersActiveHalfYear,_that.hotRank);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int communityId,  int subscribers,  int posts,  int comments,  int usersActiveDay,  int usersActiveWeek,  int usersActiveMonth,  int usersActiveHalfYear,  int? hotRank)?  $default,) {final _that = this;
+switch (_that) {
+case _CommunityAggregates() when $default != null:
+return $default(_that.communityId,_that.subscribers,_that.posts,_that.comments,_that.usersActiveDay,_that.usersActiveWeek,_that.usersActiveMonth,_that.usersActiveHalfYear,_that.hotRank);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-class __$$CommunityAggregatesImplCopyWithImpl<$Res> extends _$CommunityAggregatesCopyWithImpl<$Res, _$CommunityAggregatesImpl> implements _$$CommunityAggregatesImplCopyWith<$Res> {
-  __$$CommunityAggregatesImplCopyWithImpl(_$CommunityAggregatesImpl _value, $Res Function(_$CommunityAggregatesImpl) _then) : super(_value, _then);
-
-  /// Create a copy of CommunityAggregates
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? communityId = null,
-    Object? subscribers = null,
-    Object? posts = null,
-    Object? comments = null,
-    Object? usersActiveDay = null,
-    Object? usersActiveWeek = null,
-    Object? usersActiveMonth = null,
-    Object? usersActiveHalfYear = null,
-    Object? hotRank = freezed,
-  }) {
-    return _then(
-      _$CommunityAggregatesImpl(
-        communityId:
-            null == communityId
-                ? _value.communityId
-                : communityId // ignore: cast_nullable_to_non_nullable
-                    as int,
-        subscribers:
-            null == subscribers
-                ? _value.subscribers
-                : subscribers // ignore: cast_nullable_to_non_nullable
-                    as int,
-        posts:
-            null == posts
-                ? _value.posts
-                : posts // ignore: cast_nullable_to_non_nullable
-                    as int,
-        comments:
-            null == comments
-                ? _value.comments
-                : comments // ignore: cast_nullable_to_non_nullable
-                    as int,
-        usersActiveDay:
-            null == usersActiveDay
-                ? _value.usersActiveDay
-                : usersActiveDay // ignore: cast_nullable_to_non_nullable
-                    as int,
-        usersActiveWeek:
-            null == usersActiveWeek
-                ? _value.usersActiveWeek
-                : usersActiveWeek // ignore: cast_nullable_to_non_nullable
-                    as int,
-        usersActiveMonth:
-            null == usersActiveMonth
-                ? _value.usersActiveMonth
-                : usersActiveMonth // ignore: cast_nullable_to_non_nullable
-                    as int,
-        usersActiveHalfYear:
-            null == usersActiveHalfYear
-                ? _value.usersActiveHalfYear
-                : usersActiveHalfYear // ignore: cast_nullable_to_non_nullable
-                    as int,
-        hotRank:
-            freezed == hotRank
-                ? _value.hotRank
-                : hotRank // ignore: cast_nullable_to_non_nullable
-                    as int?,
-      ),
-    );
-  }
 }
 
 /// @nodoc
 
 @modelSerde
-class _$CommunityAggregatesImpl extends _CommunityAggregates {
-  const _$CommunityAggregatesImpl({
-    required this.communityId,
-    required this.subscribers,
-    required this.posts,
-    required this.comments,
-    required this.usersActiveDay,
-    required this.usersActiveWeek,
-    required this.usersActiveMonth,
-    required this.usersActiveHalfYear,
-    this.hotRank,
-  }) : super._();
+class _CommunityAggregates extends CommunityAggregates {
+  const _CommunityAggregates({required this.communityId, required this.subscribers, required this.posts, required this.comments, required this.usersActiveDay, required this.usersActiveWeek, required this.usersActiveMonth, required this.usersActiveHalfYear, this.hotRank}): super._();
+  factory _CommunityAggregates.fromJson(Map<String, dynamic> json) => _$CommunityAggregatesFromJson(json);
 
-  factory _$CommunityAggregatesImpl.fromJson(Map<String, dynamic> json) => _$$CommunityAggregatesImplFromJson(json);
+@override final  int communityId;
+@override final  int subscribers;
+@override final  int posts;
+@override final  int comments;
+@override final  int usersActiveDay;
+@override final  int usersActiveWeek;
+@override final  int usersActiveMonth;
+@override final  int usersActiveHalfYear;
+@override final  int? hotRank;
 
-  @override
-  final int communityId;
-  @override
-  final int subscribers;
-  @override
-  final int posts;
-  @override
-  final int comments;
-  @override
-  final int usersActiveDay;
-  @override
-  final int usersActiveWeek;
-  @override
-  final int usersActiveMonth;
-  @override
-  final int usersActiveHalfYear;
-  @override
-  final int? hotRank;
+/// Create a copy of CommunityAggregates
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$CommunityAggregatesCopyWith<_CommunityAggregates> get copyWith => __$CommunityAggregatesCopyWithImpl<_CommunityAggregates>(this, _$identity);
 
-  @override
-  String toString() {
-    return 'CommunityAggregates(communityId: $communityId, subscribers: $subscribers, posts: $posts, comments: $comments, usersActiveDay: $usersActiveDay, usersActiveWeek: $usersActiveWeek, usersActiveMonth: $usersActiveMonth, usersActiveHalfYear: $usersActiveHalfYear, hotRank: $hotRank)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CommunityAggregatesImpl &&
-            (identical(other.communityId, communityId) || other.communityId == communityId) &&
-            (identical(other.subscribers, subscribers) || other.subscribers == subscribers) &&
-            (identical(other.posts, posts) || other.posts == posts) &&
-            (identical(other.comments, comments) || other.comments == comments) &&
-            (identical(other.usersActiveDay, usersActiveDay) || other.usersActiveDay == usersActiveDay) &&
-            (identical(other.usersActiveWeek, usersActiveWeek) || other.usersActiveWeek == usersActiveWeek) &&
-            (identical(other.usersActiveMonth, usersActiveMonth) || other.usersActiveMonth == usersActiveMonth) &&
-            (identical(other.usersActiveHalfYear, usersActiveHalfYear) || other.usersActiveHalfYear == usersActiveHalfYear) &&
-            (identical(other.hotRank, hotRank) || other.hotRank == hotRank));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, communityId, subscribers, posts, comments, usersActiveDay, usersActiveWeek, usersActiveMonth, usersActiveHalfYear, hotRank);
-
-  /// Create a copy of CommunityAggregates
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CommunityAggregatesImplCopyWith<_$CommunityAggregatesImpl> get copyWith => __$$CommunityAggregatesImplCopyWithImpl<_$CommunityAggregatesImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$CommunityAggregatesImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$CommunityAggregatesToJson(this, );
 }
 
-abstract class _CommunityAggregates extends CommunityAggregates {
-  const factory _CommunityAggregates({
-    required final int communityId,
-    required final int subscribers,
-    required final int posts,
-    required final int comments,
-    required final int usersActiveDay,
-    required final int usersActiveWeek,
-    required final int usersActiveMonth,
-    required final int usersActiveHalfYear,
-    final int? hotRank,
-  }) = _$CommunityAggregatesImpl;
-  const _CommunityAggregates._() : super._();
-
-  factory _CommunityAggregates.fromJson(Map<String, dynamic> json) = _$CommunityAggregatesImpl.fromJson;
-
-  @override
-  int get communityId;
-  @override
-  int get subscribers;
-  @override
-  int get posts;
-  @override
-  int get comments;
-  @override
-  int get usersActiveDay;
-  @override
-  int get usersActiveWeek;
-  @override
-  int get usersActiveMonth;
-  @override
-  int get usersActiveHalfYear;
-  @override
-  int? get hotRank;
-
-  /// Create a copy of CommunityAggregates
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CommunityAggregatesImplCopyWith<_$CommunityAggregatesImpl> get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CommunityAggregates&&(identical(other.communityId, communityId) || other.communityId == communityId)&&(identical(other.subscribers, subscribers) || other.subscribers == subscribers)&&(identical(other.posts, posts) || other.posts == posts)&&(identical(other.comments, comments) || other.comments == comments)&&(identical(other.usersActiveDay, usersActiveDay) || other.usersActiveDay == usersActiveDay)&&(identical(other.usersActiveWeek, usersActiveWeek) || other.usersActiveWeek == usersActiveWeek)&&(identical(other.usersActiveMonth, usersActiveMonth) || other.usersActiveMonth == usersActiveMonth)&&(identical(other.usersActiveHalfYear, usersActiveHalfYear) || other.usersActiveHalfYear == usersActiveHalfYear)&&(identical(other.hotRank, hotRank) || other.hotRank == hotRank));
 }
 
-CommentAggregates _$CommentAggregatesFromJson(Map<String, dynamic> json) {
-  return _CommentAggregates.fromJson(json);
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,communityId,subscribers,posts,comments,usersActiveDay,usersActiveWeek,usersActiveMonth,usersActiveHalfYear,hotRank);
+
+@override
+String toString() {
+  return 'CommunityAggregates(communityId: $communityId, subscribers: $subscribers, posts: $posts, comments: $comments, usersActiveDay: $usersActiveDay, usersActiveWeek: $usersActiveWeek, usersActiveMonth: $usersActiveMonth, usersActiveHalfYear: $usersActiveHalfYear, hotRank: $hotRank)';
 }
+
+
+}
+
+/// @nodoc
+abstract mixin class _$CommunityAggregatesCopyWith<$Res> implements $CommunityAggregatesCopyWith<$Res> {
+  factory _$CommunityAggregatesCopyWith(_CommunityAggregates value, $Res Function(_CommunityAggregates) _then) = __$CommunityAggregatesCopyWithImpl;
+@override @useResult
+$Res call({
+ int communityId, int subscribers, int posts, int comments, int usersActiveDay, int usersActiveWeek, int usersActiveMonth, int usersActiveHalfYear, int? hotRank
+});
+
+
+
+
+}
+/// @nodoc
+class __$CommunityAggregatesCopyWithImpl<$Res>
+    implements _$CommunityAggregatesCopyWith<$Res> {
+  __$CommunityAggregatesCopyWithImpl(this._self, this._then);
+
+  final _CommunityAggregates _self;
+  final $Res Function(_CommunityAggregates) _then;
+
+/// Create a copy of CommunityAggregates
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? communityId = null,Object? subscribers = null,Object? posts = null,Object? comments = null,Object? usersActiveDay = null,Object? usersActiveWeek = null,Object? usersActiveMonth = null,Object? usersActiveHalfYear = null,Object? hotRank = freezed,}) {
+  return _then(_CommunityAggregates(
+communityId: null == communityId ? _self.communityId : communityId // ignore: cast_nullable_to_non_nullable
+as int,subscribers: null == subscribers ? _self.subscribers : subscribers // ignore: cast_nullable_to_non_nullable
+as int,posts: null == posts ? _self.posts : posts // ignore: cast_nullable_to_non_nullable
+as int,comments: null == comments ? _self.comments : comments // ignore: cast_nullable_to_non_nullable
+as int,usersActiveDay: null == usersActiveDay ? _self.usersActiveDay : usersActiveDay // ignore: cast_nullable_to_non_nullable
+as int,usersActiveWeek: null == usersActiveWeek ? _self.usersActiveWeek : usersActiveWeek // ignore: cast_nullable_to_non_nullable
+as int,usersActiveMonth: null == usersActiveMonth ? _self.usersActiveMonth : usersActiveMonth // ignore: cast_nullable_to_non_nullable
+as int,usersActiveHalfYear: null == usersActiveHalfYear ? _self.usersActiveHalfYear : usersActiveHalfYear // ignore: cast_nullable_to_non_nullable
+as int,hotRank: freezed == hotRank ? _self.hotRank : hotRank // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
+}
+
+
+}
+
 
 /// @nodoc
 mixin _$CommentAggregates {
-  int get commentId => throw _privateConstructorUsedError;
-  int get score => throw _privateConstructorUsedError;
-  int get upvotes => throw _privateConstructorUsedError;
-  int get downvotes => throw _privateConstructorUsedError;
-  int? get childCount => throw _privateConstructorUsedError;
-  int? get hotRank => throw _privateConstructorUsedError;
+
+ int get commentId; int get score; int get upvotes; int get downvotes; int? get childCount; int? get hotRank;
+/// Create a copy of CommentAggregates
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$CommentAggregatesCopyWith<CommentAggregates> get copyWith => _$CommentAggregatesCopyWithImpl<CommentAggregates>(this as CommentAggregates, _$identity);
 
   /// Serializes this CommentAggregates to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of CommentAggregates
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $CommentAggregatesCopyWith<CommentAggregates> get copyWith => throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is CommentAggregates&&(identical(other.commentId, commentId) || other.commentId == commentId)&&(identical(other.score, score) || other.score == score)&&(identical(other.upvotes, upvotes) || other.upvotes == upvotes)&&(identical(other.downvotes, downvotes) || other.downvotes == downvotes)&&(identical(other.childCount, childCount) || other.childCount == childCount)&&(identical(other.hotRank, hotRank) || other.hotRank == hotRank));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,commentId,score,upvotes,downvotes,childCount,hotRank);
+
+@override
+String toString() {
+  return 'CommentAggregates(commentId: $commentId, score: $score, upvotes: $upvotes, downvotes: $downvotes, childCount: $childCount, hotRank: $hotRank)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $CommentAggregatesCopyWith<$Res> {
-  factory $CommentAggregatesCopyWith(CommentAggregates value, $Res Function(CommentAggregates) then) = _$CommentAggregatesCopyWithImpl<$Res, CommentAggregates>;
-  @useResult
-  $Res call({int commentId, int score, int upvotes, int downvotes, int? childCount, int? hotRank});
+abstract mixin class $CommentAggregatesCopyWith<$Res>  {
+  factory $CommentAggregatesCopyWith(CommentAggregates value, $Res Function(CommentAggregates) _then) = _$CommentAggregatesCopyWithImpl;
+@useResult
+$Res call({
+ int commentId, int score, int upvotes, int downvotes, int? childCount, int? hotRank
+});
+
+
+
+
+}
+/// @nodoc
+class _$CommentAggregatesCopyWithImpl<$Res>
+    implements $CommentAggregatesCopyWith<$Res> {
+  _$CommentAggregatesCopyWithImpl(this._self, this._then);
+
+  final CommentAggregates _self;
+  final $Res Function(CommentAggregates) _then;
+
+/// Create a copy of CommentAggregates
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? commentId = null,Object? score = null,Object? upvotes = null,Object? downvotes = null,Object? childCount = freezed,Object? hotRank = freezed,}) {
+  return _then(_self.copyWith(
+commentId: null == commentId ? _self.commentId : commentId // ignore: cast_nullable_to_non_nullable
+as int,score: null == score ? _self.score : score // ignore: cast_nullable_to_non_nullable
+as int,upvotes: null == upvotes ? _self.upvotes : upvotes // ignore: cast_nullable_to_non_nullable
+as int,downvotes: null == downvotes ? _self.downvotes : downvotes // ignore: cast_nullable_to_non_nullable
+as int,childCount: freezed == childCount ? _self.childCount : childCount // ignore: cast_nullable_to_non_nullable
+as int?,hotRank: freezed == hotRank ? _self.hotRank : hotRank // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
 }
 
-/// @nodoc
-class _$CommentAggregatesCopyWithImpl<$Res, $Val extends CommentAggregates> implements $CommentAggregatesCopyWith<$Res> {
-  _$CommentAggregatesCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of CommentAggregates
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? commentId = null, Object? score = null, Object? upvotes = null, Object? downvotes = null, Object? childCount = freezed, Object? hotRank = freezed}) {
-    return _then(
-      _value.copyWith(
-            commentId:
-                null == commentId
-                    ? _value.commentId
-                    : commentId // ignore: cast_nullable_to_non_nullable
-                        as int,
-            score:
-                null == score
-                    ? _value.score
-                    : score // ignore: cast_nullable_to_non_nullable
-                        as int,
-            upvotes:
-                null == upvotes
-                    ? _value.upvotes
-                    : upvotes // ignore: cast_nullable_to_non_nullable
-                        as int,
-            downvotes:
-                null == downvotes
-                    ? _value.downvotes
-                    : downvotes // ignore: cast_nullable_to_non_nullable
-                        as int,
-            childCount:
-                freezed == childCount
-                    ? _value.childCount
-                    : childCount // ignore: cast_nullable_to_non_nullable
-                        as int?,
-            hotRank:
-                freezed == hotRank
-                    ? _value.hotRank
-                    : hotRank // ignore: cast_nullable_to_non_nullable
-                        as int?,
-          )
-          as $Val,
-    );
-  }
 }
 
-/// @nodoc
-abstract class _$$CommentAggregatesImplCopyWith<$Res> implements $CommentAggregatesCopyWith<$Res> {
-  factory _$$CommentAggregatesImplCopyWith(_$CommentAggregatesImpl value, $Res Function(_$CommentAggregatesImpl) then) = __$$CommentAggregatesImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({int commentId, int score, int upvotes, int downvotes, int? childCount, int? hotRank});
+
+/// Adds pattern-matching-related methods to [CommentAggregates].
+extension CommentAggregatesPatterns on CommentAggregates {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _CommentAggregates value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _CommentAggregates() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _CommentAggregates value)  $default,){
+final _that = this;
+switch (_that) {
+case _CommentAggregates():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _CommentAggregates value)?  $default,){
+final _that = this;
+switch (_that) {
+case _CommentAggregates() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int commentId,  int score,  int upvotes,  int downvotes,  int? childCount,  int? hotRank)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _CommentAggregates() when $default != null:
+return $default(_that.commentId,_that.score,_that.upvotes,_that.downvotes,_that.childCount,_that.hotRank);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int commentId,  int score,  int upvotes,  int downvotes,  int? childCount,  int? hotRank)  $default,) {final _that = this;
+switch (_that) {
+case _CommentAggregates():
+return $default(_that.commentId,_that.score,_that.upvotes,_that.downvotes,_that.childCount,_that.hotRank);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int commentId,  int score,  int upvotes,  int downvotes,  int? childCount,  int? hotRank)?  $default,) {final _that = this;
+switch (_that) {
+case _CommentAggregates() when $default != null:
+return $default(_that.commentId,_that.score,_that.upvotes,_that.downvotes,_that.childCount,_that.hotRank);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-class __$$CommentAggregatesImplCopyWithImpl<$Res> extends _$CommentAggregatesCopyWithImpl<$Res, _$CommentAggregatesImpl> implements _$$CommentAggregatesImplCopyWith<$Res> {
-  __$$CommentAggregatesImplCopyWithImpl(_$CommentAggregatesImpl _value, $Res Function(_$CommentAggregatesImpl) _then) : super(_value, _then);
-
-  /// Create a copy of CommentAggregates
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? commentId = null, Object? score = null, Object? upvotes = null, Object? downvotes = null, Object? childCount = freezed, Object? hotRank = freezed}) {
-    return _then(
-      _$CommentAggregatesImpl(
-        commentId:
-            null == commentId
-                ? _value.commentId
-                : commentId // ignore: cast_nullable_to_non_nullable
-                    as int,
-        score:
-            null == score
-                ? _value.score
-                : score // ignore: cast_nullable_to_non_nullable
-                    as int,
-        upvotes:
-            null == upvotes
-                ? _value.upvotes
-                : upvotes // ignore: cast_nullable_to_non_nullable
-                    as int,
-        downvotes:
-            null == downvotes
-                ? _value.downvotes
-                : downvotes // ignore: cast_nullable_to_non_nullable
-                    as int,
-        childCount:
-            freezed == childCount
-                ? _value.childCount
-                : childCount // ignore: cast_nullable_to_non_nullable
-                    as int?,
-        hotRank:
-            freezed == hotRank
-                ? _value.hotRank
-                : hotRank // ignore: cast_nullable_to_non_nullable
-                    as int?,
-      ),
-    );
-  }
 }
 
 /// @nodoc
 
 @modelSerde
-class _$CommentAggregatesImpl extends _CommentAggregates {
-  const _$CommentAggregatesImpl({required this.commentId, required this.score, required this.upvotes, required this.downvotes, this.childCount, this.hotRank}) : super._();
+class _CommentAggregates extends CommentAggregates {
+  const _CommentAggregates({required this.commentId, required this.score, required this.upvotes, required this.downvotes, this.childCount, this.hotRank}): super._();
+  factory _CommentAggregates.fromJson(Map<String, dynamic> json) => _$CommentAggregatesFromJson(json);
 
-  factory _$CommentAggregatesImpl.fromJson(Map<String, dynamic> json) => _$$CommentAggregatesImplFromJson(json);
+@override final  int commentId;
+@override final  int score;
+@override final  int upvotes;
+@override final  int downvotes;
+@override final  int? childCount;
+@override final  int? hotRank;
 
-  @override
-  final int commentId;
-  @override
-  final int score;
-  @override
-  final int upvotes;
-  @override
-  final int downvotes;
-  @override
-  final int? childCount;
-  @override
-  final int? hotRank;
+/// Create a copy of CommentAggregates
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$CommentAggregatesCopyWith<_CommentAggregates> get copyWith => __$CommentAggregatesCopyWithImpl<_CommentAggregates>(this, _$identity);
 
-  @override
-  String toString() {
-    return 'CommentAggregates(commentId: $commentId, score: $score, upvotes: $upvotes, downvotes: $downvotes, childCount: $childCount, hotRank: $hotRank)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CommentAggregatesImpl &&
-            (identical(other.commentId, commentId) || other.commentId == commentId) &&
-            (identical(other.score, score) || other.score == score) &&
-            (identical(other.upvotes, upvotes) || other.upvotes == upvotes) &&
-            (identical(other.downvotes, downvotes) || other.downvotes == downvotes) &&
-            (identical(other.childCount, childCount) || other.childCount == childCount) &&
-            (identical(other.hotRank, hotRank) || other.hotRank == hotRank));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, commentId, score, upvotes, downvotes, childCount, hotRank);
-
-  /// Create a copy of CommentAggregates
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CommentAggregatesImplCopyWith<_$CommentAggregatesImpl> get copyWith => __$$CommentAggregatesImplCopyWithImpl<_$CommentAggregatesImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$CommentAggregatesImplToJson(this);
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$CommentAggregatesToJson(this, );
 }
 
-abstract class _CommentAggregates extends CommentAggregates {
-  const factory _CommentAggregates({required final int commentId, required final int score, required final int upvotes, required final int downvotes, final int? childCount, final int? hotRank}) =
-      _$CommentAggregatesImpl;
-  const _CommentAggregates._() : super._();
-
-  factory _CommentAggregates.fromJson(Map<String, dynamic> json) = _$CommentAggregatesImpl.fromJson;
-
-  @override
-  int get commentId;
-  @override
-  int get score;
-  @override
-  int get upvotes;
-  @override
-  int get downvotes;
-  @override
-  int? get childCount;
-  @override
-  int? get hotRank;
-
-  /// Create a copy of CommentAggregates
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CommentAggregatesImplCopyWith<_$CommentAggregatesImpl> get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CommentAggregates&&(identical(other.commentId, commentId) || other.commentId == commentId)&&(identical(other.score, score) || other.score == score)&&(identical(other.upvotes, upvotes) || other.upvotes == upvotes)&&(identical(other.downvotes, downvotes) || other.downvotes == downvotes)&&(identical(other.childCount, childCount) || other.childCount == childCount)&&(identical(other.hotRank, hotRank) || other.hotRank == hotRank));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,commentId,score,upvotes,downvotes,childCount,hotRank);
+
+@override
+String toString() {
+  return 'CommentAggregates(commentId: $commentId, score: $score, upvotes: $upvotes, downvotes: $downvotes, childCount: $childCount, hotRank: $hotRank)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$CommentAggregatesCopyWith<$Res> implements $CommentAggregatesCopyWith<$Res> {
+  factory _$CommentAggregatesCopyWith(_CommentAggregates value, $Res Function(_CommentAggregates) _then) = __$CommentAggregatesCopyWithImpl;
+@override @useResult
+$Res call({
+ int commentId, int score, int upvotes, int downvotes, int? childCount, int? hotRank
+});
+
+
+
+
+}
+/// @nodoc
+class __$CommentAggregatesCopyWithImpl<$Res>
+    implements _$CommentAggregatesCopyWith<$Res> {
+  __$CommentAggregatesCopyWithImpl(this._self, this._then);
+
+  final _CommentAggregates _self;
+  final $Res Function(_CommentAggregates) _then;
+
+/// Create a copy of CommentAggregates
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? commentId = null,Object? score = null,Object? upvotes = null,Object? downvotes = null,Object? childCount = freezed,Object? hotRank = freezed,}) {
+  return _then(_CommentAggregates(
+commentId: null == commentId ? _self.commentId : commentId // ignore: cast_nullable_to_non_nullable
+as int,score: null == score ? _self.score : score // ignore: cast_nullable_to_non_nullable
+as int,upvotes: null == upvotes ? _self.upvotes : upvotes // ignore: cast_nullable_to_non_nullable
+as int,downvotes: null == downvotes ? _self.downvotes : downvotes // ignore: cast_nullable_to_non_nullable
+as int,childCount: freezed == childCount ? _self.childCount : childCount // ignore: cast_nullable_to_non_nullable
+as int?,hotRank: freezed == hotRank ? _self.hotRank : hotRank // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
+}
+
+
+}
+
+// dart format on

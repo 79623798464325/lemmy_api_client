@@ -6,33 +6,37 @@ part of 'site.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$SearchImpl _$$SearchImplFromJson(Map<String, dynamic> json) => _$SearchImpl(
+_Search _$SearchFromJson(Map<String, dynamic> json) => _Search(
   q: json['q'] as String,
   communityId: (json['community_id'] as num?)?.toInt(),
   communityName: json['community_name'] as String?,
   creatorId: (json['creator_id'] as num?)?.toInt(),
-  type: json['type_'] == null ? null : SearchType.fromJson(json['type_'] as String),
+  type: json['type_'] == null
+      ? null
+      : SearchType.fromJson(json['type_'] as String),
   sort: json['sort'] == null ? null : SortType.fromJson(json['sort']),
-  listingType: json['listing_type'] == null ? null : ListingType.fromJson(json['listing_type']),
+  listingType: json['listing_type'] == null
+      ? null
+      : ListingType.fromJson(json['listing_type']),
   page: (json['page'] as num?)?.toInt(),
   limit: (json['limit'] as num?)?.toInt(),
   auth: json['auth'] as String?,
 );
 
-Map<String, dynamic> _$$SearchImplToJson(_$SearchImpl instance) => <String, dynamic>{
+Map<String, dynamic> _$SearchToJson(_Search instance) => <String, dynamic>{
   'q': instance.q,
-  if (instance.communityId case final value?) 'community_id': value,
-  if (instance.communityName case final value?) 'community_name': value,
-  if (instance.creatorId case final value?) 'creator_id': value,
-  if (instance.type?.toJson() case final value?) 'type_': value,
-  if (instance.sort?.toJson() case final value?) 'sort': value,
-  if (instance.listingType?.toJson() case final value?) 'listing_type': value,
-  if (instance.page case final value?) 'page': value,
-  if (instance.limit case final value?) 'limit': value,
-  if (instance.auth case final value?) 'auth': value,
+  'community_id': ?instance.communityId,
+  'community_name': ?instance.communityName,
+  'creator_id': ?instance.creatorId,
+  'type_': ?instance.type?.toJson(),
+  'sort': ?instance.sort?.toJson(),
+  'listing_type': ?instance.listingType?.toJson(),
+  'page': ?instance.page,
+  'limit': ?instance.limit,
+  'auth': ?instance.auth,
 };
 
-_$CreateSiteImpl _$$CreateSiteImplFromJson(Map<String, dynamic> json) => _$CreateSiteImpl(
+_CreateSite _$CreateSiteFromJson(Map<String, dynamic> json) => _CreateSite(
   name: json['name'] as String,
   sidebar: json['sidebar'] as String?,
   description: json['description'] as String?,
@@ -50,25 +54,26 @@ _$CreateSiteImpl _$$CreateSiteImplFromJson(Map<String, dynamic> json) => _$Creat
   defaultTheme: json['default_theme'] as String?,
 );
 
-Map<String, dynamic> _$$CreateSiteImplToJson(_$CreateSiteImpl instance) => <String, dynamic>{
-  'name': instance.name,
-  if (instance.sidebar case final value?) 'sidebar': value,
-  if (instance.description case final value?) 'description': value,
-  if (instance.icon case final value?) 'icon': value,
-  if (instance.banner case final value?) 'banner': value,
-  if (instance.enableDownvotes case final value?) 'enable_downvotes': value,
-  if (instance.openRegistration case final value?) 'open_registration': value,
-  if (instance.enableNsfw case final value?) 'enable_nsfw': value,
-  if (instance.communityCreationAdminOnly case final value?) 'community_creation_admin_only': value,
-  if (instance.requireEmailVerification case final value?) 'require_email_verification': value,
-  if (instance.requireApplication case final value?) 'require_application': value,
-  if (instance.applicationQuestion case final value?) 'application_question': value,
-  if (instance.privateInstance case final value?) 'private_instance': value,
-  'auth': instance.auth,
-  if (instance.defaultTheme case final value?) 'default_theme': value,
-};
+Map<String, dynamic> _$CreateSiteToJson(_CreateSite instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'sidebar': ?instance.sidebar,
+      'description': ?instance.description,
+      'icon': ?instance.icon,
+      'banner': ?instance.banner,
+      'enable_downvotes': ?instance.enableDownvotes,
+      'open_registration': ?instance.openRegistration,
+      'enable_nsfw': ?instance.enableNsfw,
+      'community_creation_admin_only': ?instance.communityCreationAdminOnly,
+      'require_email_verification': ?instance.requireEmailVerification,
+      'require_application': ?instance.requireApplication,
+      'application_question': ?instance.applicationQuestion,
+      'private_instance': ?instance.privateInstance,
+      'auth': instance.auth,
+      'default_theme': ?instance.defaultTheme,
+    };
 
-_$EditSiteImpl _$$EditSiteImplFromJson(Map<String, dynamic> json) => _$EditSiteImpl(
+_EditSite _$EditSiteFromJson(Map<String, dynamic> json) => _EditSite(
   name: json['name'] as String?,
   sidebar: json['sidebar'] as String?,
   description: json['description'] as String?,
@@ -86,65 +91,101 @@ _$EditSiteImpl _$$EditSiteImplFromJson(Map<String, dynamic> json) => _$EditSiteI
   defaultTheme: json['default_theme'] as String?,
 );
 
-Map<String, dynamic> _$$EditSiteImplToJson(_$EditSiteImpl instance) => <String, dynamic>{
-  if (instance.name case final value?) 'name': value,
-  if (instance.sidebar case final value?) 'sidebar': value,
-  if (instance.description case final value?) 'description': value,
-  if (instance.icon case final value?) 'icon': value,
-  if (instance.banner case final value?) 'banner': value,
-  if (instance.enableDownvotes case final value?) 'enable_downvotes': value,
-  if (instance.openRegistration case final value?) 'open_registration': value,
-  if (instance.enableNsfw case final value?) 'enable_nsfw': value,
-  if (instance.communityCreationAdminOnly case final value?) 'community_creation_admin_only': value,
-  if (instance.requireEmailVerification case final value?) 'require_email_verification': value,
-  if (instance.requireApplication case final value?) 'require_application': value,
-  if (instance.applicationQuestion case final value?) 'application_question': value,
-  if (instance.privateInstance case final value?) 'private_instance': value,
+Map<String, dynamic> _$EditSiteToJson(_EditSite instance) => <String, dynamic>{
+  'name': ?instance.name,
+  'sidebar': ?instance.sidebar,
+  'description': ?instance.description,
+  'icon': ?instance.icon,
+  'banner': ?instance.banner,
+  'enable_downvotes': ?instance.enableDownvotes,
+  'open_registration': ?instance.openRegistration,
+  'enable_nsfw': ?instance.enableNsfw,
+  'community_creation_admin_only': ?instance.communityCreationAdminOnly,
+  'require_email_verification': ?instance.requireEmailVerification,
+  'require_application': ?instance.requireApplication,
+  'application_question': ?instance.applicationQuestion,
+  'private_instance': ?instance.privateInstance,
   'auth': instance.auth,
-  if (instance.defaultTheme case final value?) 'default_theme': value,
+  'default_theme': ?instance.defaultTheme,
 };
 
-_$GetSiteImpl _$$GetSiteImplFromJson(Map<String, dynamic> json) => _$GetSiteImpl(auth: json['auth'] as String?);
+_GetSite _$GetSiteFromJson(Map<String, dynamic> json) =>
+    _GetSite(auth: json['auth'] as String?);
 
-Map<String, dynamic> _$$GetSiteImplToJson(_$GetSiteImpl instance) => <String, dynamic>{if (instance.auth case final value?) 'auth': value};
+Map<String, dynamic> _$GetSiteToJson(_GetSite instance) => <String, dynamic>{
+  'auth': ?instance.auth,
+};
 
-_$LeaveAdminImpl _$$LeaveAdminImplFromJson(Map<String, dynamic> json) => _$LeaveAdminImpl(auth: json['auth'] as String);
+_LeaveAdmin _$LeaveAdminFromJson(Map<String, dynamic> json) =>
+    _LeaveAdmin(auth: json['auth'] as String);
 
-Map<String, dynamic> _$$LeaveAdminImplToJson(_$LeaveAdminImpl instance) => <String, dynamic>{'auth': instance.auth};
+Map<String, dynamic> _$LeaveAdminToJson(_LeaveAdmin instance) =>
+    <String, dynamic>{'auth': instance.auth};
 
-_$GetSiteConfigImpl _$$GetSiteConfigImplFromJson(Map<String, dynamic> json) => _$GetSiteConfigImpl(auth: json['auth'] as String);
+_GetSiteConfig _$GetSiteConfigFromJson(Map<String, dynamic> json) =>
+    _GetSiteConfig(auth: json['auth'] as String);
 
-Map<String, dynamic> _$$GetSiteConfigImplToJson(_$GetSiteConfigImpl instance) => <String, dynamic>{'auth': instance.auth};
+Map<String, dynamic> _$GetSiteConfigToJson(_GetSiteConfig instance) =>
+    <String, dynamic>{'auth': instance.auth};
 
-_$SaveSiteConfigImpl _$$SaveSiteConfigImplFromJson(Map<String, dynamic> json) => _$SaveSiteConfigImpl(configHjson: json['config_hjson'] as String, auth: json['auth'] as String);
+_SaveSiteConfig _$SaveSiteConfigFromJson(Map<String, dynamic> json) =>
+    _SaveSiteConfig(
+      configHjson: json['config_hjson'] as String,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$$SaveSiteConfigImplToJson(_$SaveSiteConfigImpl instance) => <String, dynamic>{'config_hjson': instance.configHjson, 'auth': instance.auth};
+Map<String, dynamic> _$SaveSiteConfigToJson(_SaveSiteConfig instance) =>
+    <String, dynamic>{
+      'config_hjson': instance.configHjson,
+      'auth': instance.auth,
+    };
 
-_$ResolveObjectImpl _$$ResolveObjectImplFromJson(Map<String, dynamic> json) => _$ResolveObjectImpl(q: json['q'] as String, auth: json['auth'] as String?);
+_ResolveObject _$ResolveObjectFromJson(Map<String, dynamic> json) =>
+    _ResolveObject(q: json['q'] as String, auth: json['auth'] as String?);
 
-Map<String, dynamic> _$$ResolveObjectImplToJson(_$ResolveObjectImpl instance) => <String, dynamic>{'q': instance.q, if (instance.auth case final value?) 'auth': value};
+Map<String, dynamic> _$ResolveObjectToJson(_ResolveObject instance) =>
+    <String, dynamic>{'q': instance.q, 'auth': ?instance.auth};
 
-_$GetUnreadRegistrationApplicationCountImpl _$$GetUnreadRegistrationApplicationCountImplFromJson(Map<String, dynamic> json) =>
-    _$GetUnreadRegistrationApplicationCountImpl(auth: json['auth'] as String);
+_GetUnreadRegistrationApplicationCount
+_$GetUnreadRegistrationApplicationCountFromJson(Map<String, dynamic> json) =>
+    _GetUnreadRegistrationApplicationCount(auth: json['auth'] as String);
 
-Map<String, dynamic> _$$GetUnreadRegistrationApplicationCountImplToJson(_$GetUnreadRegistrationApplicationCountImpl instance) => <String, dynamic>{'auth': instance.auth};
+Map<String, dynamic> _$GetUnreadRegistrationApplicationCountToJson(
+  _GetUnreadRegistrationApplicationCount instance,
+) => <String, dynamic>{'auth': instance.auth};
 
-_$ListRegistrationApplicationsImpl _$$ListRegistrationApplicationsImplFromJson(Map<String, dynamic> json) =>
-    _$ListRegistrationApplicationsImpl(unreadOnly: json['unread_only'] as bool?, page: (json['page'] as num?)?.toInt(), limit: (json['limit'] as num?)?.toInt(), auth: json['auth'] as String);
+_ListRegistrationApplications _$ListRegistrationApplicationsFromJson(
+  Map<String, dynamic> json,
+) => _ListRegistrationApplications(
+  unreadOnly: json['unread_only'] as bool?,
+  page: (json['page'] as num?)?.toInt(),
+  limit: (json['limit'] as num?)?.toInt(),
+  auth: json['auth'] as String,
+);
 
-Map<String, dynamic> _$$ListRegistrationApplicationsImplToJson(_$ListRegistrationApplicationsImpl instance) => <String, dynamic>{
-  if (instance.unreadOnly case final value?) 'unread_only': value,
-  if (instance.page case final value?) 'page': value,
-  if (instance.limit case final value?) 'limit': value,
+Map<String, dynamic> _$ListRegistrationApplicationsToJson(
+  _ListRegistrationApplications instance,
+) => <String, dynamic>{
+  'unread_only': ?instance.unreadOnly,
+  'page': ?instance.page,
+  'limit': ?instance.limit,
   'auth': instance.auth,
 };
 
-_$ApproveRegistrationApplicationImpl _$$ApproveRegistrationApplicationImplFromJson(Map<String, dynamic> json) =>
-    _$ApproveRegistrationApplicationImpl(id: (json['id'] as num).toInt(), approve: json['approve'] as bool, denyReason: json['deny_reason'] as String?, auth: json['auth'] as String);
+_ApproveRegistrationApplication _$ApproveRegistrationApplicationFromJson(
+  Map<String, dynamic> json,
+) => _ApproveRegistrationApplication(
+  id: (json['id'] as num).toInt(),
+  approve: json['approve'] as bool,
+  denyReason: json['deny_reason'] as String?,
+  auth: json['auth'] as String,
+);
 
-Map<String, dynamic> _$$ApproveRegistrationApplicationImplToJson(_$ApproveRegistrationApplicationImpl instance) => <String, dynamic>{
+Map<String, dynamic> _$ApproveRegistrationApplicationToJson(
+  _ApproveRegistrationApplication instance,
+) => <String, dynamic>{
   'id': instance.id,
   'approve': instance.approve,
-  if (instance.denyReason case final value?) 'deny_reason': value,
+  'deny_reason': ?instance.denyReason,
   'auth': instance.auth,
 };

@@ -6,66 +6,117 @@ part of 'comment.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$CreateCommentImpl _$$CreateCommentImplFromJson(Map<String, dynamic> json) => _$CreateCommentImpl(
+_CreateComment _$CreateCommentFromJson(Map<String, dynamic> json) =>
+    _CreateComment(
+      content: json['content'] as String,
+      parentId: (json['parent_id'] as num?)?.toInt(),
+      postId: (json['post_id'] as num).toInt(),
+      formId: json['form_id'] as String?,
+      auth: json['auth'] as String,
+    );
+
+Map<String, dynamic> _$CreateCommentToJson(_CreateComment instance) =>
+    <String, dynamic>{
+      'content': instance.content,
+      'parent_id': ?instance.parentId,
+      'post_id': instance.postId,
+      'form_id': ?instance.formId,
+      'auth': instance.auth,
+    };
+
+_EditComment _$EditCommentFromJson(Map<String, dynamic> json) => _EditComment(
   content: json['content'] as String,
-  parentId: (json['parent_id'] as num?)?.toInt(),
-  postId: (json['post_id'] as num).toInt(),
+  commentId: (json['comment_id'] as num).toInt(),
   formId: json['form_id'] as String?,
   auth: json['auth'] as String,
 );
 
-Map<String, dynamic> _$$CreateCommentImplToJson(_$CreateCommentImpl instance) => <String, dynamic>{
-  'content': instance.content,
-  if (instance.parentId case final value?) 'parent_id': value,
-  'post_id': instance.postId,
-  if (instance.formId case final value?) 'form_id': value,
-  'auth': instance.auth,
-};
+Map<String, dynamic> _$EditCommentToJson(_EditComment instance) =>
+    <String, dynamic>{
+      'content': instance.content,
+      'comment_id': instance.commentId,
+      'form_id': ?instance.formId,
+      'auth': instance.auth,
+    };
 
-_$EditCommentImpl _$$EditCommentImplFromJson(Map<String, dynamic> json) =>
-    _$EditCommentImpl(content: json['content'] as String, commentId: (json['comment_id'] as num).toInt(), formId: json['form_id'] as String?, auth: json['auth'] as String);
+_DeleteComment _$DeleteCommentFromJson(Map<String, dynamic> json) =>
+    _DeleteComment(
+      commentId: (json['comment_id'] as num).toInt(),
+      deleted: json['deleted'] as bool,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$$EditCommentImplToJson(_$EditCommentImpl instance) => <String, dynamic>{
-  'content': instance.content,
-  'comment_id': instance.commentId,
-  if (instance.formId case final value?) 'form_id': value,
-  'auth': instance.auth,
-};
+Map<String, dynamic> _$DeleteCommentToJson(_DeleteComment instance) =>
+    <String, dynamic>{
+      'comment_id': instance.commentId,
+      'deleted': instance.deleted,
+      'auth': instance.auth,
+    };
 
-_$DeleteCommentImpl _$$DeleteCommentImplFromJson(Map<String, dynamic> json) =>
-    _$DeleteCommentImpl(commentId: (json['comment_id'] as num).toInt(), deleted: json['deleted'] as bool, auth: json['auth'] as String);
+_RemoveComment _$RemoveCommentFromJson(Map<String, dynamic> json) =>
+    _RemoveComment(
+      commentId: (json['comment_id'] as num).toInt(),
+      removed: json['removed'] as bool,
+      reason: json['reason'] as String?,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$$DeleteCommentImplToJson(_$DeleteCommentImpl instance) => <String, dynamic>{'comment_id': instance.commentId, 'deleted': instance.deleted, 'auth': instance.auth};
+Map<String, dynamic> _$RemoveCommentToJson(_RemoveComment instance) =>
+    <String, dynamic>{
+      'comment_id': instance.commentId,
+      'removed': instance.removed,
+      'reason': ?instance.reason,
+      'auth': instance.auth,
+    };
 
-_$RemoveCommentImpl _$$RemoveCommentImplFromJson(Map<String, dynamic> json) =>
-    _$RemoveCommentImpl(commentId: (json['comment_id'] as num).toInt(), removed: json['removed'] as bool, reason: json['reason'] as String?, auth: json['auth'] as String);
+_MarkCommentAsRead _$MarkCommentAsReadFromJson(Map<String, dynamic> json) =>
+    _MarkCommentAsRead(
+      CommentReplyId: (json['comment_reply_id'] as num).toInt(),
+      read: json['read'] as bool,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$$RemoveCommentImplToJson(_$RemoveCommentImpl instance) => <String, dynamic>{
-  'comment_id': instance.commentId,
-  'removed': instance.removed,
-  if (instance.reason case final value?) 'reason': value,
-  'auth': instance.auth,
-};
+Map<String, dynamic> _$MarkCommentAsReadToJson(_MarkCommentAsRead instance) =>
+    <String, dynamic>{
+      'comment_reply_id': instance.CommentReplyId,
+      'read': instance.read,
+      'auth': instance.auth,
+    };
 
-_$MarkCommentAsReadImpl _$$MarkCommentAsReadImplFromJson(Map<String, dynamic> json) =>
-    _$MarkCommentAsReadImpl(CommentReplyId: (json['comment_reply_id'] as num).toInt(), read: json['read'] as bool, auth: json['auth'] as String);
+_SaveComment _$SaveCommentFromJson(Map<String, dynamic> json) => _SaveComment(
+  commentId: (json['comment_id'] as num).toInt(),
+  save: json['save'] as bool,
+  auth: json['auth'] as String,
+);
 
-Map<String, dynamic> _$$MarkCommentAsReadImplToJson(_$MarkCommentAsReadImpl instance) => <String, dynamic>{'comment_reply_id': instance.CommentReplyId, 'read': instance.read, 'auth': instance.auth};
+Map<String, dynamic> _$SaveCommentToJson(_SaveComment instance) =>
+    <String, dynamic>{
+      'comment_id': instance.commentId,
+      'save': instance.save,
+      'auth': instance.auth,
+    };
 
-_$SaveCommentImpl _$$SaveCommentImplFromJson(Map<String, dynamic> json) => _$SaveCommentImpl(commentId: (json['comment_id'] as num).toInt(), save: json['save'] as bool, auth: json['auth'] as String);
+_CreateCommentLike _$CreateCommentLikeFromJson(Map<String, dynamic> json) =>
+    _CreateCommentLike(
+      commentId: (json['comment_id'] as num).toInt(),
+      score: json['score'] as num,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$$SaveCommentImplToJson(_$SaveCommentImpl instance) => <String, dynamic>{'comment_id': instance.commentId, 'save': instance.save, 'auth': instance.auth};
+Map<String, dynamic> _$CreateCommentLikeToJson(_CreateCommentLike instance) =>
+    <String, dynamic>{
+      'comment_id': instance.commentId,
+      'score': instance.score,
+      'auth': instance.auth,
+    };
 
-_$CreateCommentLikeImpl _$$CreateCommentLikeImplFromJson(Map<String, dynamic> json) =>
-    _$CreateCommentLikeImpl(commentId: (json['comment_id'] as num).toInt(), score: json['score'] as num, auth: json['auth'] as String);
+_GetComment _$GetCommentFromJson(Map<String, dynamic> json) =>
+    _GetComment(id: (json['id'] as num).toInt(), auth: json['auth'] as String?);
 
-Map<String, dynamic> _$$CreateCommentLikeImplToJson(_$CreateCommentLikeImpl instance) => <String, dynamic>{'comment_id': instance.commentId, 'score': instance.score, 'auth': instance.auth};
+Map<String, dynamic> _$GetCommentToJson(_GetComment instance) =>
+    <String, dynamic>{'id': instance.id, 'auth': ?instance.auth};
 
-_$GetCommentImpl _$$GetCommentImplFromJson(Map<String, dynamic> json) => _$GetCommentImpl(id: (json['id'] as num).toInt(), auth: json['auth'] as String?);
-
-Map<String, dynamic> _$$GetCommentImplToJson(_$GetCommentImpl instance) => <String, dynamic>{'id': instance.id, if (instance.auth case final value?) 'auth': value};
-
-_$GetCommentsImpl _$$GetCommentsImplFromJson(Map<String, dynamic> json) => _$GetCommentsImpl(
+_GetComments _$GetCommentsFromJson(Map<String, dynamic> json) => _GetComments(
   type: json['type_'] == null ? null : ListingType.fromJson(json['type_']),
   sort: json['sort'] == null ? null : CommentSortType.fromJson(json['sort']),
   maxDepth: (json['max_depth'] as num?)?.toInt(),
@@ -81,44 +132,68 @@ _$GetCommentsImpl _$$GetCommentsImplFromJson(Map<String, dynamic> json) => _$Get
   auth: json['auth'] as String?,
 );
 
-Map<String, dynamic> _$$GetCommentsImplToJson(_$GetCommentsImpl instance) => <String, dynamic>{
-  if (instance.type?.toJson() case final value?) 'type_': value,
-  if (instance.sort?.toJson() case final value?) 'sort': value,
-  if (instance.maxDepth case final value?) 'max_depth': value,
-  if (instance.page case final value?) 'page': value,
-  if (instance.limit case final value?) 'limit': value,
-  if (instance.communityId case final value?) 'community_id': value,
-  if (instance.communityName case final value?) 'community_name': value,
-  if (instance.postId case final value?) 'post_id': value,
-  if (instance.parentId case final value?) 'parent_id': value,
-  if (instance.savedOnly case final value?) 'saved_only': value,
-  if (instance.likedOnly case final value?) 'liked_only': value,
-  if (instance.dislikedOnly case final value?) 'disliked_only': value,
-  if (instance.auth case final value?) 'auth': value,
+Map<String, dynamic> _$GetCommentsToJson(_GetComments instance) =>
+    <String, dynamic>{
+      'type_': ?instance.type?.toJson(),
+      'sort': ?instance.sort?.toJson(),
+      'max_depth': ?instance.maxDepth,
+      'page': ?instance.page,
+      'limit': ?instance.limit,
+      'community_id': ?instance.communityId,
+      'community_name': ?instance.communityName,
+      'post_id': ?instance.postId,
+      'parent_id': ?instance.parentId,
+      'saved_only': ?instance.savedOnly,
+      'liked_only': ?instance.likedOnly,
+      'disliked_only': ?instance.dislikedOnly,
+      'auth': ?instance.auth,
+    };
+
+_CreateCommentReport _$CreateCommentReportFromJson(Map<String, dynamic> json) =>
+    _CreateCommentReport(
+      commentId: (json['comment_id'] as num).toInt(),
+      reason: json['reason'] as String,
+      auth: json['auth'] as String,
+    );
+
+Map<String, dynamic> _$CreateCommentReportToJson(
+  _CreateCommentReport instance,
+) => <String, dynamic>{
+  'comment_id': instance.commentId,
+  'reason': instance.reason,
+  'auth': instance.auth,
 };
 
-_$CreateCommentReportImpl _$$CreateCommentReportImplFromJson(Map<String, dynamic> json) =>
-    _$CreateCommentReportImpl(commentId: (json['comment_id'] as num).toInt(), reason: json['reason'] as String, auth: json['auth'] as String);
-
-Map<String, dynamic> _$$CreateCommentReportImplToJson(_$CreateCommentReportImpl instance) => <String, dynamic>{'comment_id': instance.commentId, 'reason': instance.reason, 'auth': instance.auth};
-
-_$ResolveCommentReportImpl _$$ResolveCommentReportImplFromJson(Map<String, dynamic> json) =>
-    _$ResolveCommentReportImpl(reportId: (json['report_id'] as num).toInt(), resolved: json['resolved'] as bool, auth: json['auth'] as String);
-
-Map<String, dynamic> _$$ResolveCommentReportImplToJson(_$ResolveCommentReportImpl instance) => <String, dynamic>{'report_id': instance.reportId, 'resolved': instance.resolved, 'auth': instance.auth};
-
-_$ListCommentReportsImpl _$$ListCommentReportsImplFromJson(Map<String, dynamic> json) => _$ListCommentReportsImpl(
-  page: (json['page'] as num?)?.toInt(),
-  limit: (json['limit'] as num?)?.toInt(),
-  communityId: (json['community_id'] as num?)?.toInt(),
-  unresolvedOnly: json['unresolved_only'] as bool?,
+_ResolveCommentReport _$ResolveCommentReportFromJson(
+  Map<String, dynamic> json,
+) => _ResolveCommentReport(
+  reportId: (json['report_id'] as num).toInt(),
+  resolved: json['resolved'] as bool,
   auth: json['auth'] as String,
 );
 
-Map<String, dynamic> _$$ListCommentReportsImplToJson(_$ListCommentReportsImpl instance) => <String, dynamic>{
-  if (instance.page case final value?) 'page': value,
-  if (instance.limit case final value?) 'limit': value,
-  if (instance.communityId case final value?) 'community_id': value,
-  if (instance.unresolvedOnly case final value?) 'unresolved_only': value,
+Map<String, dynamic> _$ResolveCommentReportToJson(
+  _ResolveCommentReport instance,
+) => <String, dynamic>{
+  'report_id': instance.reportId,
+  'resolved': instance.resolved,
   'auth': instance.auth,
 };
+
+_ListCommentReports _$ListCommentReportsFromJson(Map<String, dynamic> json) =>
+    _ListCommentReports(
+      page: (json['page'] as num?)?.toInt(),
+      limit: (json['limit'] as num?)?.toInt(),
+      communityId: (json['community_id'] as num?)?.toInt(),
+      unresolvedOnly: json['unresolved_only'] as bool?,
+      auth: json['auth'] as String,
+    );
+
+Map<String, dynamic> _$ListCommentReportsToJson(_ListCommentReports instance) =>
+    <String, dynamic>{
+      'page': ?instance.page,
+      'limit': ?instance.limit,
+      'community_id': ?instance.communityId,
+      'unresolved_only': ?instance.unresolvedOnly,
+      'auth': instance.auth,
+    };
