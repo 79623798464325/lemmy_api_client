@@ -58,7 +58,8 @@ mixin _$Post {
 
 /// @nodoc
 abstract class $PostCopyWith<$Res> {
-  factory $PostCopyWith(Post value, $Res Function(Post) then) = _$PostCopyWithImpl<$Res, Post>;
+  factory $PostCopyWith(Post value, $Res Function(Post) then) =
+      _$PostCopyWithImpl<$Res, Post>;
   @useResult
   $Res call({
     int id,
@@ -90,7 +91,8 @@ abstract class $PostCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PostCopyWithImpl<$Res, $Val extends Post> implements $PostCopyWith<$Res> {
+class _$PostCopyWithImpl<$Res, $Val extends Post>
+    implements $PostCopyWith<$Res> {
   _$PostCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -264,7 +266,10 @@ class _$PostCopyWithImpl<$Res, $Val extends Post> implements $PostCopyWith<$Res>
 
 /// @nodoc
 abstract class _$$PostImplCopyWith<$Res> implements $PostCopyWith<$Res> {
-  factory _$$PostImplCopyWith(_$PostImpl value, $Res Function(_$PostImpl) then) = __$$PostImplCopyWithImpl<$Res>;
+  factory _$$PostImplCopyWith(
+    _$PostImpl value,
+    $Res Function(_$PostImpl) then,
+  ) = __$$PostImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({
@@ -297,8 +302,11 @@ abstract class _$$PostImplCopyWith<$Res> implements $PostCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$PostImplCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res, _$PostImpl> implements _$$PostImplCopyWith<$Res> {
-  __$$PostImplCopyWithImpl(_$PostImpl _value, $Res Function(_$PostImpl) _then) : super(_value, _then);
+class __$$PostImplCopyWithImpl<$Res>
+    extends _$PostCopyWithImpl<$Res, _$PostImpl>
+    implements _$$PostImplCopyWith<$Res> {
+  __$$PostImplCopyWithImpl(_$PostImpl _value, $Res Function(_$PostImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of Post
   /// with the given fields replaced by the non-null parameter values.
@@ -495,7 +503,8 @@ class _$PostImpl extends _Post {
     this.altText,
   }) : super._();
 
-  factory _$PostImpl.fromJson(Map<String, dynamic> json) => _$$PostImplFromJson(json);
+  factory _$PostImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PostImplFromJson(json);
 
   @override
   final int id;
@@ -562,26 +571,39 @@ class _$PostImpl extends _Post {
             (identical(other.name, name) || other.name == name) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.body, body) || other.body == body) &&
-            (identical(other.creatorId, creatorId) || other.creatorId == creatorId) &&
-            (identical(other.communityId, communityId) || other.communityId == communityId) &&
+            (identical(other.creatorId, creatorId) ||
+                other.creatorId == creatorId) &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
             (identical(other.removed, removed) || other.removed == removed) &&
             (identical(other.locked, locked) || other.locked == locked) &&
-            (identical(other.published, published) || other.published == published) &&
+            (identical(other.published, published) ||
+                other.published == published) &&
             (identical(other.updated, updated) || other.updated == updated) &&
             (identical(other.deleted, deleted) || other.deleted == deleted) &&
             (identical(other.nsfw, nsfw) || other.nsfw == nsfw) &&
-            (identical(other.stickied, stickied) || other.stickied == stickied) &&
-            (identical(other.embedTitle, embedTitle) || other.embedTitle == embedTitle) &&
-            (identical(other.embedDescription, embedDescription) || other.embedDescription == embedDescription) &&
-            (identical(other.embedVideoUrl, embedVideoUrl) || other.embedVideoUrl == embedVideoUrl) &&
-            (identical(other.thumbnailUrl, thumbnailUrl) || other.thumbnailUrl == thumbnailUrl) &&
+            (identical(other.stickied, stickied) ||
+                other.stickied == stickied) &&
+            (identical(other.embedTitle, embedTitle) ||
+                other.embedTitle == embedTitle) &&
+            (identical(other.embedDescription, embedDescription) ||
+                other.embedDescription == embedDescription) &&
+            (identical(other.embedVideoUrl, embedVideoUrl) ||
+                other.embedVideoUrl == embedVideoUrl) &&
+            (identical(other.thumbnailUrl, thumbnailUrl) ||
+                other.thumbnailUrl == thumbnailUrl) &&
             (identical(other.apId, apId) || other.apId == apId) &&
             (identical(other.local, local) || other.local == local) &&
-            (identical(other.languageId, languageId) || other.languageId == languageId) &&
-            (identical(other.featuredCommunity, featuredCommunity) || other.featuredCommunity == featuredCommunity) &&
-            (identical(other.featuredLocal, featuredLocal) || other.featuredLocal == featuredLocal) &&
-            (identical(other.instanceHost, instanceHost) || other.instanceHost == instanceHost) &&
-            (identical(other.urlContentType, urlContentType) || other.urlContentType == urlContentType) &&
+            (identical(other.languageId, languageId) ||
+                other.languageId == languageId) &&
+            (identical(other.featuredCommunity, featuredCommunity) ||
+                other.featuredCommunity == featuredCommunity) &&
+            (identical(other.featuredLocal, featuredLocal) ||
+                other.featuredLocal == featuredLocal) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost) &&
+            (identical(other.urlContentType, urlContentType) ||
+                other.urlContentType == urlContentType) &&
             (identical(other.altText, altText) || other.altText == altText));
   }
 
@@ -621,7 +643,8 @@ class _$PostImpl extends _Post {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$PostImplCopyWith<_$PostImpl> get copyWith => __$$PostImplCopyWithImpl<_$PostImpl>(this, _$identity);
+  _$$PostImplCopyWith<_$PostImpl> get copyWith =>
+      __$$PostImplCopyWithImpl<_$PostImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -716,5 +739,6 @@ abstract class _Post extends Post {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PostImplCopyWith<_$PostImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$PostImplCopyWith<_$PostImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

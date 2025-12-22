@@ -6,7 +6,9 @@ part of 'mod_hide_community.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ModHideCommunityImpl _$$ModHideCommunityImplFromJson(Map<String, dynamic> json) => _$ModHideCommunityImpl(
+_$ModHideCommunityImpl _$$ModHideCommunityImplFromJson(
+  Map<String, dynamic> json,
+) => _$ModHideCommunityImpl(
   id: (json['id'] as num).toInt(),
   communityId: (json['community_id'] as num).toInt(),
   modPersonId: (json['mod_person_id'] as num).toInt(),
@@ -15,7 +17,9 @@ _$ModHideCommunityImpl _$$ModHideCommunityImplFromJson(Map<String, dynamic> json
   hidden: json['hidden'] as bool,
 );
 
-Map<String, dynamic> _$$ModHideCommunityImplToJson(_$ModHideCommunityImpl instance) => <String, dynamic>{
+Map<String, dynamic> _$$ModHideCommunityImplToJson(
+  _$ModHideCommunityImpl instance,
+) => <String, dynamic>{
   'id': instance.id,
   'community_id': instance.communityId,
   'mod_person_id': instance.modPersonId,

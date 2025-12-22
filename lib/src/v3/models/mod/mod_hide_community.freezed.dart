@@ -35,18 +35,30 @@ mixin _$ModHideCommunity {
   /// Create a copy of ModHideCommunity
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ModHideCommunityCopyWith<ModHideCommunity> get copyWith => throw _privateConstructorUsedError;
+  $ModHideCommunityCopyWith<ModHideCommunity> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ModHideCommunityCopyWith<$Res> {
-  factory $ModHideCommunityCopyWith(ModHideCommunity value, $Res Function(ModHideCommunity) then) = _$ModHideCommunityCopyWithImpl<$Res, ModHideCommunity>;
+  factory $ModHideCommunityCopyWith(
+    ModHideCommunity value,
+    $Res Function(ModHideCommunity) then,
+  ) = _$ModHideCommunityCopyWithImpl<$Res, ModHideCommunity>;
   @useResult
-  $Res call({int id, int communityId, int modPersonId, @JsonKey(name: 'when_') String when, String? reason, bool hidden});
+  $Res call({
+    int id,
+    int communityId,
+    int modPersonId,
+    @JsonKey(name: 'when_') String when,
+    String? reason,
+    bool hidden,
+  });
 }
 
 /// @nodoc
-class _$ModHideCommunityCopyWithImpl<$Res, $Val extends ModHideCommunity> implements $ModHideCommunityCopyWith<$Res> {
+class _$ModHideCommunityCopyWithImpl<$Res, $Val extends ModHideCommunity>
+    implements $ModHideCommunityCopyWith<$Res> {
   _$ModHideCommunityCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -58,7 +70,14 @@ class _$ModHideCommunityCopyWithImpl<$Res, $Val extends ModHideCommunity> implem
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? id = null, Object? communityId = null, Object? modPersonId = null, Object? when = null, Object? reason = freezed, Object? hidden = null}) {
+  $Res call({
+    Object? id = null,
+    Object? communityId = null,
+    Object? modPersonId = null,
+    Object? when = null,
+    Object? reason = freezed,
+    Object? hidden = null,
+  }) {
     return _then(
       _value.copyWith(
             id:
@@ -98,22 +117,45 @@ class _$ModHideCommunityCopyWithImpl<$Res, $Val extends ModHideCommunity> implem
 }
 
 /// @nodoc
-abstract class _$$ModHideCommunityImplCopyWith<$Res> implements $ModHideCommunityCopyWith<$Res> {
-  factory _$$ModHideCommunityImplCopyWith(_$ModHideCommunityImpl value, $Res Function(_$ModHideCommunityImpl) then) = __$$ModHideCommunityImplCopyWithImpl<$Res>;
+abstract class _$$ModHideCommunityImplCopyWith<$Res>
+    implements $ModHideCommunityCopyWith<$Res> {
+  factory _$$ModHideCommunityImplCopyWith(
+    _$ModHideCommunityImpl value,
+    $Res Function(_$ModHideCommunityImpl) then,
+  ) = __$$ModHideCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int id, int communityId, int modPersonId, @JsonKey(name: 'when_') String when, String? reason, bool hidden});
+  $Res call({
+    int id,
+    int communityId,
+    int modPersonId,
+    @JsonKey(name: 'when_') String when,
+    String? reason,
+    bool hidden,
+  });
 }
 
 /// @nodoc
-class __$$ModHideCommunityImplCopyWithImpl<$Res> extends _$ModHideCommunityCopyWithImpl<$Res, _$ModHideCommunityImpl> implements _$$ModHideCommunityImplCopyWith<$Res> {
-  __$$ModHideCommunityImplCopyWithImpl(_$ModHideCommunityImpl _value, $Res Function(_$ModHideCommunityImpl) _then) : super(_value, _then);
+class __$$ModHideCommunityImplCopyWithImpl<$Res>
+    extends _$ModHideCommunityCopyWithImpl<$Res, _$ModHideCommunityImpl>
+    implements _$$ModHideCommunityImplCopyWith<$Res> {
+  __$$ModHideCommunityImplCopyWithImpl(
+    _$ModHideCommunityImpl _value,
+    $Res Function(_$ModHideCommunityImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ModHideCommunity
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? id = null, Object? communityId = null, Object? modPersonId = null, Object? when = null, Object? reason = freezed, Object? hidden = null}) {
+  $Res call({
+    Object? id = null,
+    Object? communityId = null,
+    Object? modPersonId = null,
+    Object? when = null,
+    Object? reason = freezed,
+    Object? hidden = null,
+  }) {
     return _then(
       _$ModHideCommunityImpl(
         id:
@@ -155,9 +197,17 @@ class __$$ModHideCommunityImplCopyWithImpl<$Res> extends _$ModHideCommunityCopyW
 
 @modelSerde
 class _$ModHideCommunityImpl extends _ModHideCommunity {
-  const _$ModHideCommunityImpl({required this.id, required this.communityId, required this.modPersonId, @JsonKey(name: 'when_') required this.when, this.reason, required this.hidden}) : super._();
+  const _$ModHideCommunityImpl({
+    required this.id,
+    required this.communityId,
+    required this.modPersonId,
+    @JsonKey(name: 'when_') required this.when,
+    this.reason,
+    required this.hidden,
+  }) : super._();
 
-  factory _$ModHideCommunityImpl.fromJson(Map<String, dynamic> json) => _$$ModHideCommunityImplFromJson(json);
+  factory _$ModHideCommunityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ModHideCommunityImplFromJson(json);
 
   @override
   final int id;
@@ -189,8 +239,10 @@ class _$ModHideCommunityImpl extends _ModHideCommunity {
         (other.runtimeType == runtimeType &&
             other is _$ModHideCommunityImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.communityId, communityId) || other.communityId == communityId) &&
-            (identical(other.modPersonId, modPersonId) || other.modPersonId == modPersonId) &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.modPersonId, modPersonId) ||
+                other.modPersonId == modPersonId) &&
             (identical(other.when, when) || other.when == when) &&
             (identical(other.reason, reason) || other.reason == reason) &&
             (identical(other.hidden, hidden) || other.hidden == hidden));
@@ -198,14 +250,26 @@ class _$ModHideCommunityImpl extends _ModHideCommunity {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, communityId, modPersonId, when, reason, hidden);
+  int get hashCode => Object.hash(
+    runtimeType,
+    id,
+    communityId,
+    modPersonId,
+    when,
+    reason,
+    hidden,
+  );
 
   /// Create a copy of ModHideCommunity
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ModHideCommunityImplCopyWith<_$ModHideCommunityImpl> get copyWith => __$$ModHideCommunityImplCopyWithImpl<_$ModHideCommunityImpl>(this, _$identity);
+  _$$ModHideCommunityImplCopyWith<_$ModHideCommunityImpl> get copyWith =>
+      __$$ModHideCommunityImplCopyWithImpl<_$ModHideCommunityImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
@@ -224,7 +288,8 @@ abstract class _ModHideCommunity extends ModHideCommunity {
   }) = _$ModHideCommunityImpl;
   const _ModHideCommunity._() : super._();
 
-  factory _ModHideCommunity.fromJson(Map<String, dynamic> json) = _$ModHideCommunityImpl.fromJson;
+  factory _ModHideCommunity.fromJson(Map<String, dynamic> json) =
+      _$ModHideCommunityImpl.fromJson;
 
   @override
   int get id; // v0.18.0
@@ -244,5 +309,6 @@ abstract class _ModHideCommunity extends ModHideCommunity {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ModHideCommunityImplCopyWith<_$ModHideCommunityImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$ModHideCommunityImplCopyWith<_$ModHideCommunityImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
