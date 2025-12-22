@@ -10,11 +10,24 @@ jobs:
     name: Publish
     runs-on: ubuntu-latest
     steps:
-      - uses: dart-lang/setup-dart@v1
-        with:
-          sdk: 2.17.0
+      - uses: actions/checkout@v4
 
-      - uses: actions/checkout@v2
+      - uses: dart-lang/setup-dart@v1.6
+        with:
+          sdk: stable
+
+      - name: Cache pub dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.pub-cache
+            .dart_tool
+          key: ${{ runner.os }}-pub-${{ hashFiles('pubspec.yaml', 'pubspec.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-pub-
+
+      - name: Get dependencies
+        run: dart pub get
 
       - name: Inject pub.dev credentials
         env:

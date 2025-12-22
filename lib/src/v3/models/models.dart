@@ -14,3 +14,4 @@ export 'private_message/private_message_report.dart';
 export 'source.dart';
 export 'views.dart';
 export 'comment/get_comments_response.dart';
+export 'user/save_user_settings_response.dart';

@@ -6,6 +6,7 @@ import 'package:lemmy_api_client2/src/v3/enums/enums.dart';
 import '../../../utils/serde.dart';
 import '../../models/api.dart';
 import '../../models/jwt.dart';
+import '../../models/models.dart';
 import '../../models/user/success_response.dart';
 import '../../models/user/update_totp_response.dart';
 import '../../models/views.dart';
@@ -198,8 +199,11 @@ class GetCaptcha with _$GetCaptcha implements LemmyApiQuery<Captcha> {
   Captcha responseFactory(Map<String, dynamic> json) => Captcha.fromJson(json['ok']);
 }
 
+/// Save your user settings.
+///
+/// `HTTP.PUT /user/save_user_settings`
 @freezed
-class SaveUserSettings with _$SaveUserSettings implements LemmyApiQuery<Jwt> {
+class SaveUserSettings with _$SaveUserSettings implements LemmyApiQuery<SaveUserSettingsResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory SaveUserSettings({
     bool? showNsfw, // v0.18.0
@@ -244,7 +248,7 @@ class SaveUserSettings with _$SaveUserSettings implements LemmyApiQuery<Jwt> {
   final httpMethod = HttpMethod.put;
 
   @override
-  Jwt responseFactory(Map<String, dynamic> json) => Jwt.fromJson(json['jwt']);
+  SaveUserSettingsResponse responseFactory(Map<String, dynamic> json) => SaveUserSettingsResponse.fromJson(json);
 }
 
 @freezed
