@@ -23,8 +23,7 @@ Future<void> main(List<String> args) async {
 }
 
 Future<void> assertNoStagedGit() async {
-  final res =
-      await Process.run('git', ['diff-index', '--cached', '--quiet', 'HEAD']);
+  final res = await Process.run('git', ['diff-index', '--cached', '--quiet', 'HEAD']);
 
   if (res.exitCode != 0) {
     print('You have staged files, commit or unstage them.');
@@ -42,8 +41,7 @@ Future<Version> bumpedVersion(String versionBumpType) async {
   final pubspecFile = File('pubspec.yaml');
   final pubspecContents = await pubspecFile.readAsString();
 
-  final versionMatch =
-      RegExp(r'version: (\d+)\.(\d+)\.(\d+)').firstMatch(pubspecContents);
+  final versionMatch = RegExp(r'version: (\d+)\.(\d+)\.(\d+)').firstMatch(pubspecContents);
 
   if (versionMatch == null) throw Exception('Failed to find pubspec version');
 
@@ -75,8 +73,7 @@ Future<void> updatePubspec(Version version) async {
 
   confirm('Version looks good? $version');
 
-  final updatedPubspec =
-      pubspecContents.replaceFirst(RegExp('version: .+'), 'version: $version');
+  final updatedPubspec = pubspecContents.replaceFirst(RegExp('version: .+'), 'version: $version');
   await pubspecFile.writeAsString(updatedPubspec);
 }
 
@@ -84,9 +81,7 @@ Future<void> updateChangelog(Version version) async {
   final changelogFile = File('CHANGELOG.md');
   final changelogContents = await changelogFile.readAsString();
 
-  var currentChangelog =
-      RegExp(r'^## Unreleased$.+?^##[^#]', multiLine: true, dotAll: true)
-          .stringMatch(changelogContents);
+  var currentChangelog = RegExp(r'^## Unreleased$.+?^##[^#]', multiLine: true, dotAll: true).stringMatch(changelogContents);
   if (currentChangelog == null) {
     throw Exception('Failed to find changelog');
   }
@@ -94,26 +89,20 @@ Future<void> updateChangelog(Version version) async {
   currentChangelog = currentChangelog.substring(0, currentChangelog.length - 4);
 
   final date = DateTime.now();
-  final dateString = '${date.year}-${date.month.toString().padLeft(2, '0')}'
+  final dateString =
+      '${date.year}-${date.month.toString().padLeft(2, '0')}'
       '-${date.day.toString().padLeft(2, '0')}';
 
-  currentChangelog =
-      currentChangelog.replaceFirst('Unreleased', 'v$version - $dateString');
+  currentChangelog = currentChangelog.replaceFirst('Unreleased', 'v$version - $dateString');
 
   confirm('Changelog looks good?\n$currentChangelog\n');
 
-  await changelogFile.writeAsString(
-    changelogContents.replaceFirst('Unreleased', 'v$version - $dateString'),
-  );
+  await changelogFile.writeAsString(changelogContents.replaceFirst('Unreleased', 'v$version - $dateString'));
 }
 
 Future<void> runGitCommands(Version version) async {
   stdout.write('Running git add... ');
-  await Process.run('git', [
-    'add',
-    'CHANGELOG.md',
-    'pubspec.yaml',
-  ]);
+  await Process.run('git', ['add', 'CHANGELOG.md', 'pubspec.yaml']);
   print('done');
 
   stdout.write('Running git commit... ');

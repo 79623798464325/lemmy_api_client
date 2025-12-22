@@ -32,23 +32,18 @@ mixin _$JwtPayload {
   /// Create a copy of JwtPayload
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $JwtPayloadCopyWith<JwtPayload> get copyWith =>
-      throw _privateConstructorUsedError;
+  $JwtPayloadCopyWith<JwtPayload> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $JwtPayloadCopyWith<$Res> {
-  factory $JwtPayloadCopyWith(
-    JwtPayload value,
-    $Res Function(JwtPayload) then,
-  ) = _$JwtPayloadCopyWithImpl<$Res, JwtPayload>;
+  factory $JwtPayloadCopyWith(JwtPayload value, $Res Function(JwtPayload) then) = _$JwtPayloadCopyWithImpl<$Res, JwtPayload>;
   @useResult
   $Res call({int iat, String iss, @SubConverter() String sub});
 }
 
 /// @nodoc
-class _$JwtPayloadCopyWithImpl<$Res, $Val extends JwtPayload>
-    implements $JwtPayloadCopyWith<$Res> {
+class _$JwtPayloadCopyWithImpl<$Res, $Val extends JwtPayload> implements $JwtPayloadCopyWith<$Res> {
   _$JwtPayloadCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -85,25 +80,16 @@ class _$JwtPayloadCopyWithImpl<$Res, $Val extends JwtPayload>
 }
 
 /// @nodoc
-abstract class _$$JwtPayloadImplCopyWith<$Res>
-    implements $JwtPayloadCopyWith<$Res> {
-  factory _$$JwtPayloadImplCopyWith(
-    _$JwtPayloadImpl value,
-    $Res Function(_$JwtPayloadImpl) then,
-  ) = __$$JwtPayloadImplCopyWithImpl<$Res>;
+abstract class _$$JwtPayloadImplCopyWith<$Res> implements $JwtPayloadCopyWith<$Res> {
+  factory _$$JwtPayloadImplCopyWith(_$JwtPayloadImpl value, $Res Function(_$JwtPayloadImpl) then) = __$$JwtPayloadImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int iat, String iss, @SubConverter() String sub});
 }
 
 /// @nodoc
-class __$$JwtPayloadImplCopyWithImpl<$Res>
-    extends _$JwtPayloadCopyWithImpl<$Res, _$JwtPayloadImpl>
-    implements _$$JwtPayloadImplCopyWith<$Res> {
-  __$$JwtPayloadImplCopyWithImpl(
-    _$JwtPayloadImpl _value,
-    $Res Function(_$JwtPayloadImpl) _then,
-  ) : super(_value, _then);
+class __$$JwtPayloadImplCopyWithImpl<$Res> extends _$JwtPayloadCopyWithImpl<$Res, _$JwtPayloadImpl> implements _$$JwtPayloadImplCopyWith<$Res> {
+  __$$JwtPayloadImplCopyWithImpl(_$JwtPayloadImpl _value, $Res Function(_$JwtPayloadImpl) _then) : super(_value, _then);
 
   /// Create a copy of JwtPayload
   /// with the given fields replaced by the non-null parameter values.
@@ -136,14 +122,9 @@ class __$$JwtPayloadImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$JwtPayloadImpl extends _JwtPayload {
-  const _$JwtPayloadImpl({
-    required this.iat,
-    required this.iss,
-    @SubConverter() required this.sub,
-  }) : super._();
+  const _$JwtPayloadImpl({required this.iat, required this.iss, @SubConverter() required this.sub}) : super._();
 
-  factory _$JwtPayloadImpl.fromJson(Map<String, dynamic> json) =>
-      _$$JwtPayloadImplFromJson(json);
+  factory _$JwtPayloadImpl.fromJson(Map<String, dynamic> json) => _$$JwtPayloadImplFromJson(json);
 
   @override
   final int iat;
@@ -177,8 +158,7 @@ class _$JwtPayloadImpl extends _JwtPayload {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$JwtPayloadImplCopyWith<_$JwtPayloadImpl> get copyWith =>
-      __$$JwtPayloadImplCopyWithImpl<_$JwtPayloadImpl>(this, _$identity);
+  _$$JwtPayloadImplCopyWith<_$JwtPayloadImpl> get copyWith => __$$JwtPayloadImplCopyWithImpl<_$JwtPayloadImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -187,15 +167,10 @@ class _$JwtPayloadImpl extends _JwtPayload {
 }
 
 abstract class _JwtPayload extends JwtPayload {
-  const factory _JwtPayload({
-    required final int iat,
-    required final String iss,
-    @SubConverter() required final String sub,
-  }) = _$JwtPayloadImpl;
+  const factory _JwtPayload({required final int iat, required final String iss, @SubConverter() required final String sub}) = _$JwtPayloadImpl;
   const _JwtPayload._() : super._();
 
-  factory _JwtPayload.fromJson(Map<String, dynamic> json) =
-      _$JwtPayloadImpl.fromJson;
+  factory _JwtPayload.fromJson(Map<String, dynamic> json) = _$JwtPayloadImpl.fromJson;
 
   @override
   int get iat;
@@ -209,6 +184,5 @@ abstract class _JwtPayload extends JwtPayload {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$JwtPayloadImplCopyWith<_$JwtPayloadImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$JwtPayloadImplCopyWith<_$JwtPayloadImpl> get copyWith => throw _privateConstructorUsedError;
 }

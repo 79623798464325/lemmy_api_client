@@ -15,16 +15,13 @@ final _privateConstructorUsedError = UnsupportedError(
   'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
 );
 
-PrivateMessageResponse _$PrivateMessageResponseFromJson(
-  Map<String, dynamic> json,
-) {
+PrivateMessageResponse _$PrivateMessageResponseFromJson(Map<String, dynamic> json) {
   return _PrivateMessageResponse.fromJson(json);
 }
 
 /// @nodoc
 mixin _$PrivateMessageResponse {
-  PrivateMessageView get privateMessageView =>
-      throw _privateConstructorUsedError;
+  PrivateMessageView get privateMessageView => throw _privateConstructorUsedError;
 
   /// Serializes this PrivateMessageResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -32,16 +29,12 @@ mixin _$PrivateMessageResponse {
   /// Create a copy of PrivateMessageResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $PrivateMessageResponseCopyWith<PrivateMessageResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PrivateMessageResponseCopyWith<PrivateMessageResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PrivateMessageResponseCopyWith<$Res> {
-  factory $PrivateMessageResponseCopyWith(
-    PrivateMessageResponse value,
-    $Res Function(PrivateMessageResponse) then,
-  ) = _$PrivateMessageResponseCopyWithImpl<$Res, PrivateMessageResponse>;
+  factory $PrivateMessageResponseCopyWith(PrivateMessageResponse value, $Res Function(PrivateMessageResponse) then) = _$PrivateMessageResponseCopyWithImpl<$Res, PrivateMessageResponse>;
   @useResult
   $Res call({PrivateMessageView privateMessageView});
 
@@ -49,11 +42,7 @@ abstract class $PrivateMessageResponseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PrivateMessageResponseCopyWithImpl<
-  $Res,
-  $Val extends PrivateMessageResponse
->
-    implements $PrivateMessageResponseCopyWith<$Res> {
+class _$PrivateMessageResponseCopyWithImpl<$Res, $Val extends PrivateMessageResponse> implements $PrivateMessageResponseCopyWith<$Res> {
   _$PrivateMessageResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -83,21 +72,15 @@ class _$PrivateMessageResponseCopyWithImpl<
   @override
   @pragma('vm:prefer-inline')
   $PrivateMessageViewCopyWith<$Res> get privateMessageView {
-    return $PrivateMessageViewCopyWith<$Res>(_value.privateMessageView, (
-      value,
-    ) {
+    return $PrivateMessageViewCopyWith<$Res>(_value.privateMessageView, (value) {
       return _then(_value.copyWith(privateMessageView: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$PrivateMessageResponseImplCopyWith<$Res>
-    implements $PrivateMessageResponseCopyWith<$Res> {
-  factory _$$PrivateMessageResponseImplCopyWith(
-    _$PrivateMessageResponseImpl value,
-    $Res Function(_$PrivateMessageResponseImpl) then,
-  ) = __$$PrivateMessageResponseImplCopyWithImpl<$Res>;
+abstract class _$$PrivateMessageResponseImplCopyWith<$Res> implements $PrivateMessageResponseCopyWith<$Res> {
+  factory _$$PrivateMessageResponseImplCopyWith(_$PrivateMessageResponseImpl value, $Res Function(_$PrivateMessageResponseImpl) then) = __$$PrivateMessageResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({PrivateMessageView privateMessageView});
@@ -107,14 +90,8 @@ abstract class _$$PrivateMessageResponseImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PrivateMessageResponseImplCopyWithImpl<$Res>
-    extends
-        _$PrivateMessageResponseCopyWithImpl<$Res, _$PrivateMessageResponseImpl>
-    implements _$$PrivateMessageResponseImplCopyWith<$Res> {
-  __$$PrivateMessageResponseImplCopyWithImpl(
-    _$PrivateMessageResponseImpl _value,
-    $Res Function(_$PrivateMessageResponseImpl) _then,
-  ) : super(_value, _then);
+class __$$PrivateMessageResponseImplCopyWithImpl<$Res> extends _$PrivateMessageResponseCopyWithImpl<$Res, _$PrivateMessageResponseImpl> implements _$$PrivateMessageResponseImplCopyWith<$Res> {
+  __$$PrivateMessageResponseImplCopyWithImpl(_$PrivateMessageResponseImpl _value, $Res Function(_$PrivateMessageResponseImpl) _then) : super(_value, _then);
 
   /// Create a copy of PrivateMessageResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -137,11 +114,9 @@ class __$$PrivateMessageResponseImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$PrivateMessageResponseImpl extends _PrivateMessageResponse {
-  const _$PrivateMessageResponseImpl({required this.privateMessageView})
-    : super._();
+  const _$PrivateMessageResponseImpl({required this.privateMessageView}) : super._();
 
-  factory _$PrivateMessageResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PrivateMessageResponseImplFromJson(json);
+  factory _$PrivateMessageResponseImpl.fromJson(Map<String, dynamic> json) => _$$PrivateMessageResponseImplFromJson(json);
 
   @override
   final PrivateMessageView privateMessageView;
@@ -154,10 +129,7 @@ class _$PrivateMessageResponseImpl extends _PrivateMessageResponse {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$PrivateMessageResponseImpl &&
-            (identical(other.privateMessageView, privateMessageView) ||
-                other.privateMessageView == privateMessageView));
+        (other.runtimeType == runtimeType && other is _$PrivateMessageResponseImpl && (identical(other.privateMessageView, privateMessageView) || other.privateMessageView == privateMessageView));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -169,12 +141,7 @@ class _$PrivateMessageResponseImpl extends _PrivateMessageResponse {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$PrivateMessageResponseImplCopyWith<_$PrivateMessageResponseImpl>
-  get copyWith =>
-      __$$PrivateMessageResponseImplCopyWithImpl<_$PrivateMessageResponseImpl>(
-        this,
-        _$identity,
-      );
+  _$$PrivateMessageResponseImplCopyWith<_$PrivateMessageResponseImpl> get copyWith => __$$PrivateMessageResponseImplCopyWithImpl<_$PrivateMessageResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -183,13 +150,10 @@ class _$PrivateMessageResponseImpl extends _PrivateMessageResponse {
 }
 
 abstract class _PrivateMessageResponse extends PrivateMessageResponse {
-  const factory _PrivateMessageResponse({
-    required final PrivateMessageView privateMessageView,
-  }) = _$PrivateMessageResponseImpl;
+  const factory _PrivateMessageResponse({required final PrivateMessageView privateMessageView}) = _$PrivateMessageResponseImpl;
   const _PrivateMessageResponse._() : super._();
 
-  factory _PrivateMessageResponse.fromJson(Map<String, dynamic> json) =
-      _$PrivateMessageResponseImpl.fromJson;
+  factory _PrivateMessageResponse.fromJson(Map<String, dynamic> json) = _$PrivateMessageResponseImpl.fromJson;
 
   @override
   PrivateMessageView get privateMessageView;
@@ -198,6 +162,5 @@ abstract class _PrivateMessageResponse extends PrivateMessageResponse {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PrivateMessageResponseImplCopyWith<_$PrivateMessageResponseImpl>
-  get copyWith => throw _privateConstructorUsedError;
+  _$$PrivateMessageResponseImplCopyWith<_$PrivateMessageResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }

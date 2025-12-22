@@ -15,9 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
   'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
 );
 
-SaveUserSettingsResponse _$SaveUserSettingsResponseFromJson(
-  Map<String, dynamic> json,
-) {
+SaveUserSettingsResponse _$SaveUserSettingsResponseFromJson(Map<String, dynamic> json) {
   return _SaveUserSettingsResponse.fromJson(json);
 }
 
@@ -37,31 +35,18 @@ mixin _$SaveUserSettingsResponse {
   /// Create a copy of SaveUserSettingsResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $SaveUserSettingsResponseCopyWith<SaveUserSettingsResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  $SaveUserSettingsResponseCopyWith<SaveUserSettingsResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SaveUserSettingsResponseCopyWith<$Res> {
-  factory $SaveUserSettingsResponseCopyWith(
-    SaveUserSettingsResponse value,
-    $Res Function(SaveUserSettingsResponse) then,
-  ) = _$SaveUserSettingsResponseCopyWithImpl<$Res, SaveUserSettingsResponse>;
+  factory $SaveUserSettingsResponseCopyWith(SaveUserSettingsResponse value, $Res Function(SaveUserSettingsResponse) then) = _$SaveUserSettingsResponseCopyWithImpl<$Res, SaveUserSettingsResponse>;
   @useResult
-  $Res call({
-    @deprecated String? jwt,
-    @deprecated bool? registrationCreated,
-    @deprecated bool? verifyEmailSent,
-    bool? success,
-  });
+  $Res call({@deprecated String? jwt, @deprecated bool? registrationCreated, @deprecated bool? verifyEmailSent, bool? success});
 }
 
 /// @nodoc
-class _$SaveUserSettingsResponseCopyWithImpl<
-  $Res,
-  $Val extends SaveUserSettingsResponse
->
-    implements $SaveUserSettingsResponseCopyWith<$Res> {
+class _$SaveUserSettingsResponseCopyWithImpl<$Res, $Val extends SaveUserSettingsResponse> implements $SaveUserSettingsResponseCopyWith<$Res> {
   _$SaveUserSettingsResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -73,12 +58,7 @@ class _$SaveUserSettingsResponseCopyWithImpl<
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? jwt = freezed,
-    Object? registrationCreated = freezed,
-    Object? verifyEmailSent = freezed,
-    Object? success = freezed,
-  }) {
+  $Res call({Object? jwt = freezed, Object? registrationCreated = freezed, Object? verifyEmailSent = freezed, Object? success = freezed}) {
     return _then(
       _value.copyWith(
             jwt:
@@ -108,45 +88,22 @@ class _$SaveUserSettingsResponseCopyWithImpl<
 }
 
 /// @nodoc
-abstract class _$$SaveUserSettingsResponseImplCopyWith<$Res>
-    implements $SaveUserSettingsResponseCopyWith<$Res> {
-  factory _$$SaveUserSettingsResponseImplCopyWith(
-    _$SaveUserSettingsResponseImpl value,
-    $Res Function(_$SaveUserSettingsResponseImpl) then,
-  ) = __$$SaveUserSettingsResponseImplCopyWithImpl<$Res>;
+abstract class _$$SaveUserSettingsResponseImplCopyWith<$Res> implements $SaveUserSettingsResponseCopyWith<$Res> {
+  factory _$$SaveUserSettingsResponseImplCopyWith(_$SaveUserSettingsResponseImpl value, $Res Function(_$SaveUserSettingsResponseImpl) then) = __$$SaveUserSettingsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @deprecated String? jwt,
-    @deprecated bool? registrationCreated,
-    @deprecated bool? verifyEmailSent,
-    bool? success,
-  });
+  $Res call({@deprecated String? jwt, @deprecated bool? registrationCreated, @deprecated bool? verifyEmailSent, bool? success});
 }
 
 /// @nodoc
-class __$$SaveUserSettingsResponseImplCopyWithImpl<$Res>
-    extends
-        _$SaveUserSettingsResponseCopyWithImpl<
-          $Res,
-          _$SaveUserSettingsResponseImpl
-        >
-    implements _$$SaveUserSettingsResponseImplCopyWith<$Res> {
-  __$$SaveUserSettingsResponseImplCopyWithImpl(
-    _$SaveUserSettingsResponseImpl _value,
-    $Res Function(_$SaveUserSettingsResponseImpl) _then,
-  ) : super(_value, _then);
+class __$$SaveUserSettingsResponseImplCopyWithImpl<$Res> extends _$SaveUserSettingsResponseCopyWithImpl<$Res, _$SaveUserSettingsResponseImpl> implements _$$SaveUserSettingsResponseImplCopyWith<$Res> {
+  __$$SaveUserSettingsResponseImplCopyWithImpl(_$SaveUserSettingsResponseImpl _value, $Res Function(_$SaveUserSettingsResponseImpl) _then) : super(_value, _then);
 
   /// Create a copy of SaveUserSettingsResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? jwt = freezed,
-    Object? registrationCreated = freezed,
-    Object? verifyEmailSent = freezed,
-    Object? success = freezed,
-  }) {
+  $Res call({Object? jwt = freezed, Object? registrationCreated = freezed, Object? verifyEmailSent = freezed, Object? success = freezed}) {
     return _then(
       _$SaveUserSettingsResponseImpl(
         jwt:
@@ -178,15 +135,9 @@ class __$$SaveUserSettingsResponseImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$SaveUserSettingsResponseImpl extends _SaveUserSettingsResponse {
-  const _$SaveUserSettingsResponseImpl({
-    @deprecated this.jwt,
-    @deprecated this.registrationCreated,
-    @deprecated this.verifyEmailSent,
-    this.success,
-  }) : super._();
+  const _$SaveUserSettingsResponseImpl({@deprecated this.jwt, @deprecated this.registrationCreated, @deprecated this.verifyEmailSent, this.success}) : super._();
 
-  factory _$SaveUserSettingsResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SaveUserSettingsResponseImplFromJson(json);
+  factory _$SaveUserSettingsResponseImpl.fromJson(Map<String, dynamic> json) => _$$SaveUserSettingsResponseImplFromJson(json);
 
   @override
   @deprecated
@@ -211,32 +162,21 @@ class _$SaveUserSettingsResponseImpl extends _SaveUserSettingsResponse {
         (other.runtimeType == runtimeType &&
             other is _$SaveUserSettingsResponseImpl &&
             (identical(other.jwt, jwt) || other.jwt == jwt) &&
-            (identical(other.registrationCreated, registrationCreated) ||
-                other.registrationCreated == registrationCreated) &&
-            (identical(other.verifyEmailSent, verifyEmailSent) ||
-                other.verifyEmailSent == verifyEmailSent) &&
+            (identical(other.registrationCreated, registrationCreated) || other.registrationCreated == registrationCreated) &&
+            (identical(other.verifyEmailSent, verifyEmailSent) || other.verifyEmailSent == verifyEmailSent) &&
             (identical(other.success, success) || other.success == success));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    jwt,
-    registrationCreated,
-    verifyEmailSent,
-    success,
-  );
+  int get hashCode => Object.hash(runtimeType, jwt, registrationCreated, verifyEmailSent, success);
 
   /// Create a copy of SaveUserSettingsResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$SaveUserSettingsResponseImplCopyWith<_$SaveUserSettingsResponseImpl>
-  get copyWith => __$$SaveUserSettingsResponseImplCopyWithImpl<
-    _$SaveUserSettingsResponseImpl
-  >(this, _$identity);
+  _$$SaveUserSettingsResponseImplCopyWith<_$SaveUserSettingsResponseImpl> get copyWith => __$$SaveUserSettingsResponseImplCopyWithImpl<_$SaveUserSettingsResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -245,16 +185,11 @@ class _$SaveUserSettingsResponseImpl extends _SaveUserSettingsResponse {
 }
 
 abstract class _SaveUserSettingsResponse extends SaveUserSettingsResponse {
-  const factory _SaveUserSettingsResponse({
-    @deprecated final String? jwt,
-    @deprecated final bool? registrationCreated,
-    @deprecated final bool? verifyEmailSent,
-    final bool? success,
-  }) = _$SaveUserSettingsResponseImpl;
+  const factory _SaveUserSettingsResponse({@deprecated final String? jwt, @deprecated final bool? registrationCreated, @deprecated final bool? verifyEmailSent, final bool? success}) =
+      _$SaveUserSettingsResponseImpl;
   const _SaveUserSettingsResponse._() : super._();
 
-  factory _SaveUserSettingsResponse.fromJson(Map<String, dynamic> json) =
-      _$SaveUserSettingsResponseImpl.fromJson;
+  factory _SaveUserSettingsResponse.fromJson(Map<String, dynamic> json) = _$SaveUserSettingsResponseImpl.fromJson;
 
   @override
   @deprecated
@@ -272,6 +207,5 @@ abstract class _SaveUserSettingsResponse extends SaveUserSettingsResponse {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SaveUserSettingsResponseImplCopyWith<_$SaveUserSettingsResponseImpl>
-  get copyWith => throw _privateConstructorUsedError;
+  _$$SaveUserSettingsResponseImplCopyWith<_$SaveUserSettingsResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }

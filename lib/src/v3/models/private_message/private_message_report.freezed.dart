@@ -37,36 +37,18 @@ mixin _$PrivateMessageReport {
   /// Create a copy of PrivateMessageReport
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $PrivateMessageReportCopyWith<PrivateMessageReport> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PrivateMessageReportCopyWith<PrivateMessageReport> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PrivateMessageReportCopyWith<$Res> {
-  factory $PrivateMessageReportCopyWith(
-    PrivateMessageReport value,
-    $Res Function(PrivateMessageReport) then,
-  ) = _$PrivateMessageReportCopyWithImpl<$Res, PrivateMessageReport>;
+  factory $PrivateMessageReportCopyWith(PrivateMessageReport value, $Res Function(PrivateMessageReport) then) = _$PrivateMessageReportCopyWithImpl<$Res, PrivateMessageReport>;
   @useResult
-  $Res call({
-    int id,
-    int creatorId,
-    int privateMessageId,
-    String originalPmText,
-    String reason,
-    bool resolved,
-    int? resolverId,
-    DateTime published,
-    DateTime? updated,
-  });
+  $Res call({int id, int creatorId, int privateMessageId, String originalPmText, String reason, bool resolved, int? resolverId, DateTime published, DateTime? updated});
 }
 
 /// @nodoc
-class _$PrivateMessageReportCopyWithImpl<
-  $Res,
-  $Val extends PrivateMessageReport
->
-    implements $PrivateMessageReportCopyWith<$Res> {
+class _$PrivateMessageReportCopyWithImpl<$Res, $Val extends PrivateMessageReport> implements $PrivateMessageReportCopyWith<$Res> {
   _$PrivateMessageReportCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -143,35 +125,16 @@ class _$PrivateMessageReportCopyWithImpl<
 }
 
 /// @nodoc
-abstract class _$$PrivateMessageReportImplCopyWith<$Res>
-    implements $PrivateMessageReportCopyWith<$Res> {
-  factory _$$PrivateMessageReportImplCopyWith(
-    _$PrivateMessageReportImpl value,
-    $Res Function(_$PrivateMessageReportImpl) then,
-  ) = __$$PrivateMessageReportImplCopyWithImpl<$Res>;
+abstract class _$$PrivateMessageReportImplCopyWith<$Res> implements $PrivateMessageReportCopyWith<$Res> {
+  factory _$$PrivateMessageReportImplCopyWith(_$PrivateMessageReportImpl value, $Res Function(_$PrivateMessageReportImpl) then) = __$$PrivateMessageReportImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    int id,
-    int creatorId,
-    int privateMessageId,
-    String originalPmText,
-    String reason,
-    bool resolved,
-    int? resolverId,
-    DateTime published,
-    DateTime? updated,
-  });
+  $Res call({int id, int creatorId, int privateMessageId, String originalPmText, String reason, bool resolved, int? resolverId, DateTime published, DateTime? updated});
 }
 
 /// @nodoc
-class __$$PrivateMessageReportImplCopyWithImpl<$Res>
-    extends _$PrivateMessageReportCopyWithImpl<$Res, _$PrivateMessageReportImpl>
-    implements _$$PrivateMessageReportImplCopyWith<$Res> {
-  __$$PrivateMessageReportImplCopyWithImpl(
-    _$PrivateMessageReportImpl _value,
-    $Res Function(_$PrivateMessageReportImpl) _then,
-  ) : super(_value, _then);
+class __$$PrivateMessageReportImplCopyWithImpl<$Res> extends _$PrivateMessageReportCopyWithImpl<$Res, _$PrivateMessageReportImpl> implements _$$PrivateMessageReportImplCopyWith<$Res> {
+  __$$PrivateMessageReportImplCopyWithImpl(_$PrivateMessageReportImpl _value, $Res Function(_$PrivateMessageReportImpl) _then) : super(_value, _then);
 
   /// Create a copy of PrivateMessageReport
   /// with the given fields replaced by the non-null parameter values.
@@ -256,8 +219,7 @@ class _$PrivateMessageReportImpl extends _PrivateMessageReport {
     this.updated,
   }) : super._();
 
-  factory _$PrivateMessageReportImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PrivateMessageReportImplFromJson(json);
+  factory _$PrivateMessageReportImpl.fromJson(Map<String, dynamic> json) => _$$PrivateMessageReportImplFromJson(json);
 
   @override
   final int id;
@@ -297,48 +259,26 @@ class _$PrivateMessageReportImpl extends _PrivateMessageReport {
         (other.runtimeType == runtimeType &&
             other is _$PrivateMessageReportImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.creatorId, creatorId) ||
-                other.creatorId == creatorId) &&
-            (identical(other.privateMessageId, privateMessageId) ||
-                other.privateMessageId == privateMessageId) &&
-            (identical(other.originalPmText, originalPmText) ||
-                other.originalPmText == originalPmText) &&
+            (identical(other.creatorId, creatorId) || other.creatorId == creatorId) &&
+            (identical(other.privateMessageId, privateMessageId) || other.privateMessageId == privateMessageId) &&
+            (identical(other.originalPmText, originalPmText) || other.originalPmText == originalPmText) &&
             (identical(other.reason, reason) || other.reason == reason) &&
-            (identical(other.resolved, resolved) ||
-                other.resolved == resolved) &&
-            (identical(other.resolverId, resolverId) ||
-                other.resolverId == resolverId) &&
-            (identical(other.published, published) ||
-                other.published == published) &&
+            (identical(other.resolved, resolved) || other.resolved == resolved) &&
+            (identical(other.resolverId, resolverId) || other.resolverId == resolverId) &&
+            (identical(other.published, published) || other.published == published) &&
             (identical(other.updated, updated) || other.updated == updated));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    id,
-    creatorId,
-    privateMessageId,
-    originalPmText,
-    reason,
-    resolved,
-    resolverId,
-    published,
-    updated,
-  );
+  int get hashCode => Object.hash(runtimeType, id, creatorId, privateMessageId, originalPmText, reason, resolved, resolverId, published, updated);
 
   /// Create a copy of PrivateMessageReport
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$PrivateMessageReportImplCopyWith<_$PrivateMessageReportImpl>
-  get copyWith =>
-      __$$PrivateMessageReportImplCopyWithImpl<_$PrivateMessageReportImpl>(
-        this,
-        _$identity,
-      );
+  _$$PrivateMessageReportImplCopyWith<_$PrivateMessageReportImpl> get copyWith => __$$PrivateMessageReportImplCopyWithImpl<_$PrivateMessageReportImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -360,8 +300,7 @@ abstract class _PrivateMessageReport extends PrivateMessageReport {
   }) = _$PrivateMessageReportImpl;
   const _PrivateMessageReport._() : super._();
 
-  factory _PrivateMessageReport.fromJson(Map<String, dynamic> json) =
-      _$PrivateMessageReportImpl.fromJson;
+  factory _PrivateMessageReport.fromJson(Map<String, dynamic> json) = _$PrivateMessageReportImpl.fromJson;
 
   @override
   int get id; // v0.18.0
@@ -386,6 +325,5 @@ abstract class _PrivateMessageReport extends PrivateMessageReport {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PrivateMessageReportImplCopyWith<_$PrivateMessageReportImpl>
-  get copyWith => throw _privateConstructorUsedError;
+  _$$PrivateMessageReportImplCopyWith<_$PrivateMessageReportImpl> get copyWith => throw _privateConstructorUsedError;
 }

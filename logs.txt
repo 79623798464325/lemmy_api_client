@@ -1,0 +1,336 @@
+2025-12-22T02:45:34.8323915Z Current runner version: '2.330.0'
+2025-12-22T02:45:34.8348504Z ##[group]Runner Image Provisioner
+2025-12-22T02:45:34.8349304Z Hosted Compute Agent
+2025-12-22T02:45:34.8349929Z Version: 20251211.462
+2025-12-22T02:45:34.8350915Z Commit: 6cbad8c2bb55d58165063d031ccabf57e2d2db61
+2025-12-22T02:45:34.8351644Z Build Date: 2025-12-11T16:28:49Z
+2025-12-22T02:45:34.8352392Z Worker ID: {8c343d77-a0f5-43ee-9230-e2c2c8b62366}
+2025-12-22T02:45:34.8353061Z ##[endgroup]
+2025-12-22T02:45:34.8353579Z ##[group]Operating System
+2025-12-22T02:45:34.8354119Z Ubuntu
+2025-12-22T02:45:34.8354595Z 24.04.3
+2025-12-22T02:45:34.8355036Z LTS
+2025-12-22T02:45:34.8355483Z ##[endgroup]
+2025-12-22T02:45:34.8356023Z ##[group]Runner Image
+2025-12-22T02:45:34.8356526Z Image: ubuntu-24.04
+2025-12-22T02:45:34.8357058Z Version: 20251215.174.1
+2025-12-22T02:45:34.8358101Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20251215.174/images/ubuntu/Ubuntu2404-Readme.md
+2025-12-22T02:45:34.8359600Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20251215.174
+2025-12-22T02:45:34.8360987Z ##[endgroup]
+2025-12-22T02:45:34.8362036Z ##[group]GITHUB_TOKEN Permissions
+2025-12-22T02:45:34.8364021Z Contents: read
+2025-12-22T02:45:34.8364574Z Metadata: read
+2025-12-22T02:45:34.8365160Z Packages: read
+2025-12-22T02:45:34.8365705Z ##[endgroup]
+2025-12-22T02:45:34.8368105Z Secret source: Actions
+2025-12-22T02:45:34.8369208Z Prepare workflow directory
+2025-12-22T02:45:34.8698481Z Prepare all required actions
+2025-12-22T02:45:34.8736282Z Getting action download info
+2025-12-22T02:45:35.2889485Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2025-12-22T02:45:35.9645072Z Download action repository 'dart-lang/setup-dart@v1' (SHA:e51d8e571e22473a2ddebf0ef8a2123f0ab2c02c)
+2025-12-22T02:45:36.4682760Z Download action repository 'actions/cache@v4' (SHA:0057852bfaa89a56745cba8c7296529d2fc39830)
+2025-12-22T02:45:36.5692926Z Download action repository 'codecov/codecov-action@v4' (SHA:b9fd7d16f6d7d1b5d2bec1a2887e65ceed900238)
+2025-12-22T02:45:37.0978047Z Complete job name: Test
+2025-12-22T02:45:37.1669475Z ##[group]Run actions/checkout@v4
+2025-12-22T02:45:37.1670122Z with:
+2025-12-22T02:45:37.1670397Z   repository: 79623798464325/lemmy_api_client
+2025-12-22T02:45:37.1671051Z   token: ***
+2025-12-22T02:45:37.1671292Z   ssh-strict: true
+2025-12-22T02:45:37.1671530Z   ssh-user: git
+2025-12-22T02:45:37.1671773Z   persist-credentials: true
+2025-12-22T02:45:37.1672063Z   clean: true
+2025-12-22T02:45:37.1672309Z   sparse-checkout-cone-mode: true
+2025-12-22T02:45:37.1672589Z   fetch-depth: 1
+2025-12-22T02:45:37.1672830Z   fetch-tags: false
+2025-12-22T02:45:37.1673067Z   show-progress: true
+2025-12-22T02:45:37.1673310Z   lfs: false
+2025-12-22T02:45:37.1673522Z   submodules: false
+2025-12-22T02:45:37.1673749Z   set-safe-directory: true
+2025-12-22T02:45:37.1674256Z ##[endgroup]
+2025-12-22T02:45:37.2726187Z Syncing repository: 79623798464325/lemmy_api_client
+2025-12-22T02:45:37.2727678Z ##[group]Getting Git version info
+2025-12-22T02:45:37.2728272Z Working directory is '/home/runner/work/lemmy_api_client/lemmy_api_client'
+2025-12-22T02:45:37.2728918Z [command]/usr/bin/git version
+2025-12-22T02:45:37.2802264Z git version 2.52.0
+2025-12-22T02:45:37.2827630Z ##[endgroup]
+2025-12-22T02:45:37.2841592Z Temporarily overriding HOME='/home/runner/work/_temp/aebf69cd-168c-4efd-9ef4-b1c599867384' before making global git config changes
+2025-12-22T02:45:37.2842579Z Adding repository directory to the temporary git global config as a safe directory
+2025-12-22T02:45:37.2853990Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/lemmy_api_client/lemmy_api_client
+2025-12-22T02:45:37.2891922Z Deleting the contents of '/home/runner/work/lemmy_api_client/lemmy_api_client'
+2025-12-22T02:45:37.2895158Z ##[group]Initializing the repository
+2025-12-22T02:45:37.2899276Z [command]/usr/bin/git init /home/runner/work/lemmy_api_client/lemmy_api_client
+2025-12-22T02:45:37.3005621Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-12-22T02:45:37.3007025Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2025-12-22T02:45:37.3007663Z hint: to use in all of your new repositories, which will suppress this warning,
+2025-12-22T02:45:37.3008146Z hint: call:
+2025-12-22T02:45:37.3008596Z hint:
+2025-12-22T02:45:37.3009466Z hint: 	git config --global init.defaultBranch <name>
+2025-12-22T02:45:37.3009927Z hint:
+2025-12-22T02:45:37.3010322Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-12-22T02:45:37.3011601Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-12-22T02:45:37.3012491Z hint:
+2025-12-22T02:45:37.3013026Z hint: 	git branch -m <name>
+2025-12-22T02:45:37.3013601Z hint:
+2025-12-22T02:45:37.3014353Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-12-22T02:45:37.3015749Z Initialized empty Git repository in /home/runner/work/lemmy_api_client/lemmy_api_client/.git/
+2025-12-22T02:45:37.3023064Z [command]/usr/bin/git remote add origin https://github.com/79623798464325/lemmy_api_client
+2025-12-22T02:45:37.3074564Z ##[endgroup]
+2025-12-22T02:45:37.3075309Z ##[group]Disabling automatic garbage collection
+2025-12-22T02:45:37.3079370Z [command]/usr/bin/git config --local gc.auto 0
+2025-12-22T02:45:37.3107159Z ##[endgroup]
+2025-12-22T02:45:37.3107937Z ##[group]Setting up auth
+2025-12-22T02:45:37.3115055Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-12-22T02:45:37.3144756Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-12-22T02:45:37.3493943Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-12-22T02:45:37.3524890Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-12-22T02:45:37.3746226Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2025-12-22T02:45:37.3776872Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2025-12-22T02:45:37.4008865Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-12-22T02:45:37.4045864Z ##[endgroup]
+2025-12-22T02:45:37.4046627Z ##[group]Fetching the repository
+2025-12-22T02:45:37.4053710Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +9f814b781a4ec4cea08f4ed8d6f77aa596c928f4:refs/remotes/origin/master
+2025-12-22T02:45:37.8407487Z From https://github.com/79623798464325/lemmy_api_client
+2025-12-22T02:45:37.8408398Z  * [new ref]         9f814b781a4ec4cea08f4ed8d6f77aa596c928f4 -> origin/master
+2025-12-22T02:45:37.8445261Z ##[endgroup]
+2025-12-22T02:45:37.8446124Z ##[group]Determining the checkout info
+2025-12-22T02:45:37.8448356Z ##[endgroup]
+2025-12-22T02:45:37.8452220Z [command]/usr/bin/git sparse-checkout disable
+2025-12-22T02:45:37.8504622Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-12-22T02:45:37.8537698Z ##[group]Checking out the ref
+2025-12-22T02:45:37.8539031Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2025-12-22T02:45:37.8702536Z Reset branch 'master'
+2025-12-22T02:45:37.8704989Z branch 'master' set up to track 'origin/master'.
+2025-12-22T02:45:37.8713844Z ##[endgroup]
+2025-12-22T02:45:37.8755644Z [command]/usr/bin/git log -1 --format=%H
+2025-12-22T02:45:37.8780329Z 9f814b781a4ec4cea08f4ed8d6f77aa596c928f4
+2025-12-22T02:45:37.8996676Z ##[group]Run dart-lang/setup-dart@v1
+2025-12-22T02:45:37.8997004Z with:
+2025-12-22T02:45:37.8997216Z   sdk: stable
+2025-12-22T02:45:37.8997436Z ##[endgroup]
+2025-12-22T02:45:38.1514966Z Installing the linux-x64 Dart SDK version 3.10.6 from the stable (release) channel.
+2025-12-22T02:45:38.1530158Z https://storage.googleapis.com/dart-archive/channels/stable/release/3.10.6/sdk/dartsdk-linux-x64-release.zip ...
+2025-12-22T02:45:39.6592475Z [command]/usr/bin/unzip -o -q /home/runner/work/_temp/dartsdk-linux-x64-release.zip
+2025-12-22T02:45:45.2038214Z [command]/opt/hostedtoolcache/dart/3.10.6/x64/bin/dart --version
+2025-12-22T02:45:45.2074333Z Dart SDK version: 3.10.6 (stable) (Tue Dec 16 06:05:04 2025 -0800) on "linux_x64"
+2025-12-22T02:45:45.2858245Z ##[group]Run actions/cache@v4
+2025-12-22T02:45:45.2858533Z with:
+2025-12-22T02:45:45.2858728Z   path: ~/.pub-cache
+.dart_tool
+
+2025-12-22T02:45:45.2859116Z   key: Linux-pub-2305e3d993cf984c401d7c56a0df57d4f162c6e9aff0df2862760d6d07325ebf
+2025-12-22T02:45:45.2859520Z   restore-keys: Linux-pub-
+
+2025-12-22T02:45:45.2859752Z   enableCrossOsArchive: false
+2025-12-22T02:45:45.2859987Z   fail-on-cache-miss: false
+2025-12-22T02:45:45.2860203Z   lookup-only: false
+2025-12-22T02:45:45.2860413Z   save-always: false
+2025-12-22T02:45:45.2860928Z env:
+2025-12-22T02:45:45.2861134Z   DART_HOME: /opt/hostedtoolcache/dart/3.10.6/x64
+2025-12-22T02:45:45.2861456Z   PUB_CACHE: /home/runner/.pub-cache
+2025-12-22T02:45:45.2861716Z ##[endgroup]
+2025-12-22T02:45:45.5918055Z Cache not found for input keys: Linux-pub-2305e3d993cf984c401d7c56a0df57d4f162c6e9aff0df2862760d6d07325ebf, Linux-pub-
+2025-12-22T02:45:45.5997955Z ##[group]Run dart pub get
+2025-12-22T02:45:45.5998279Z [36;1mdart pub get[0m
+2025-12-22T02:45:45.6033391Z shell: /usr/bin/bash -e {0}
+2025-12-22T02:45:45.6033655Z env:
+2025-12-22T02:45:45.6033870Z   DART_HOME: /opt/hostedtoolcache/dart/3.10.6/x64
+2025-12-22T02:45:45.6034169Z   PUB_CACHE: /home/runner/.pub-cache
+2025-12-22T02:45:45.6034400Z ##[endgroup]
+2025-12-22T02:45:45.6264264Z Resolving dependencies...
+2025-12-22T02:45:46.0585595Z Downloading packages...
+2025-12-22T02:45:48.5111891Z + _fe_analyzer_shared 85.0.0 (92.0.0 available)
+2025-12-22T02:45:48.5112498Z + analyzer 7.7.1 (9.0.0 available)
+2025-12-22T02:45:48.5115867Z + args 2.7.0
+2025-12-22T02:45:48.5116839Z + async 2.13.0
+2025-12-22T02:45:48.5117884Z + boolean_selector 2.1.2
+2025-12-22T02:45:48.5118633Z + build 2.5.4 (4.0.3 available)
+2025-12-22T02:45:48.5119634Z + build_config 1.1.2 (1.2.0 available)
+2025-12-22T02:45:48.5120655Z + build_daemon 4.1.1
+2025-12-22T02:45:48.5121447Z + build_resolvers 2.5.4 (3.0.4 available)
+2025-12-22T02:45:48.5132084Z + build_runner 2.5.4 (2.10.4 available)
+2025-12-22T02:45:48.5132561Z + build_runner_core 9.1.2 (9.3.2 available)
+2025-12-22T02:45:48.5133011Z + built_collection 5.1.1
+2025-12-22T02:45:48.5133366Z + built_value 8.12.1
+2025-12-22T02:45:48.5133681Z + checked_yaml 2.0.4
+2025-12-22T02:45:48.5133995Z + cli_config 0.2.0
+2025-12-22T02:45:48.5134299Z + code_builder 4.11.0
+2025-12-22T02:45:48.5134627Z + collection 1.19.1
+2025-12-22T02:45:48.5134946Z + convert 3.1.2
+2025-12-22T02:45:48.5135250Z + coverage 1.15.0
+2025-12-22T02:45:48.5135559Z + crypto 3.0.7
+2025-12-22T02:45:48.5135890Z + dart_style 3.1.1 (3.1.3 available)
+2025-12-22T02:45:48.5136295Z + file 7.0.1
+2025-12-22T02:45:48.5136568Z + fixnum 1.1.1
+2025-12-22T02:45:48.5136864Z + freezed 2.5.8 (3.2.3 available)
+2025-12-22T02:45:48.5137254Z + freezed_annotation 2.4.4 (3.1.0 available)
+2025-12-22T02:45:48.5137702Z + frontend_server_client 4.0.0
+2025-12-22T02:45:48.5138060Z + glob 2.1.3
+2025-12-22T02:45:48.5138331Z + graphs 2.3.2
+2025-12-22T02:45:48.5138631Z + http 1.6.0
+2025-12-22T02:45:48.5138918Z + http_multi_server 3.2.2
+2025-12-22T02:45:48.5139265Z + http_parser 4.1.2
+2025-12-22T02:45:48.5139566Z + io 1.0.5
+2025-12-22T02:45:48.5139823Z + js 0.7.2
+2025-12-22T02:45:48.5140100Z + json_annotation 4.9.0
+2025-12-22T02:45:48.5140697Z + json_serializable 6.9.4 (6.11.3 available)
+2025-12-22T02:45:48.5141146Z + lints 5.1.1 (6.0.0 available)
+2025-12-22T02:45:48.5141513Z + logging 1.3.0
+2025-12-22T02:45:48.5141826Z + matcher 0.12.17 (0.12.18 available)
+2025-12-22T02:45:48.5142214Z + meta 1.17.0
+2025-12-22T02:45:48.5142491Z + mime 2.0.0
+2025-12-22T02:45:48.5143086Z + node_preamble 2.0.2
+2025-12-22T02:45:48.5143418Z + package_config 2.2.0
+2025-12-22T02:45:48.5143727Z + path 1.9.1
+2025-12-22T02:45:48.5144000Z + pool 1.5.2
+2025-12-22T02:45:48.5144261Z + pub_semver 2.2.0
+2025-12-22T02:45:48.5144567Z + pubspec_parse 1.5.0
+2025-12-22T02:45:48.5144877Z + shelf 1.4.2
+2025-12-22T02:45:48.5145185Z + shelf_packages_handler 3.0.2
+2025-12-22T02:45:48.5145575Z + shelf_static 1.1.3
+2025-12-22T02:45:48.5145898Z + shelf_web_socket 3.0.0
+2025-12-22T02:45:48.5146251Z + source_gen 2.0.0 (4.1.1 available)
+2025-12-22T02:45:48.5146672Z + source_helper 1.3.7 (1.3.9 available)
+2025-12-22T02:45:48.5147098Z + source_map_stack_trace 2.1.2
+2025-12-22T02:45:48.5147467Z + source_maps 0.10.13
+2025-12-22T02:45:48.5147783Z + source_span 1.10.1
+2025-12-22T02:45:48.5148096Z + stack_trace 1.12.1
+2025-12-22T02:45:48.5148409Z + stream_channel 2.1.4
+2025-12-22T02:45:48.5148735Z + stream_transform 2.1.1
+2025-12-22T02:45:48.5149083Z + string_scanner 1.4.1
+2025-12-22T02:45:48.5149409Z + term_glyph 1.2.2
+2025-12-22T02:45:48.5149721Z + test 1.26.3 (1.28.0 available)
+2025-12-22T02:45:48.5150097Z + test_api 0.7.7 (0.7.8 available)
+2025-12-22T02:45:48.5150690Z + test_core 0.6.12 (0.6.14 available)
+2025-12-22T02:45:48.5151084Z + timing 1.0.2
+2025-12-22T02:45:48.5151371Z + typed_data 1.4.0
+2025-12-22T02:45:48.5151743Z + vm_service 15.0.2
+2025-12-22T02:45:48.5152066Z + watcher 1.2.0
+2025-12-22T02:45:48.5152638Z + web 1.1.1
+2025-12-22T02:45:48.5152917Z + web_socket 1.0.1
+2025-12-22T02:45:48.5153231Z + web_socket_channel 3.0.3
+2025-12-22T02:45:48.5153597Z + webkit_inspection_protocol 1.2.1
+2025-12-22T02:45:48.5153981Z + yaml 3.1.3
+2025-12-22T02:45:48.5154294Z Changed 72 dependencies!
+2025-12-22T02:45:48.5154834Z 18 packages have newer versions incompatible with dependency constraints.
+2025-12-22T02:45:48.5155495Z Try `dart pub outdated` for more information.
+2025-12-22T02:45:48.5169680Z Resolving dependencies in `./example`...
+2025-12-22T02:45:48.5213592Z Downloading packages...
+2025-12-22T02:45:48.5221561Z Got dependencies in `./example`.
+2025-12-22T02:45:48.5428607Z ##[group]Run dart format --set-exit-if-changed --output none .
+2025-12-22T02:45:48.5429092Z [36;1mdart format --set-exit-if-changed --output none .[0m
+2025-12-22T02:45:48.5463641Z shell: /usr/bin/bash -e {0}
+2025-12-22T02:45:48.5463870Z env:
+2025-12-22T02:45:48.5464085Z   DART_HOME: /opt/hostedtoolcache/dart/3.10.6/x64
+2025-12-22T02:45:48.5464370Z   PUB_CACHE: /home/runner/.pub-cache
+2025-12-22T02:45:48.5464604Z ##[endgroup]
+2025-12-22T02:45:48.7269076Z Warning: Package resolution error when reading "analysis_options.yaml" file:
+2025-12-22T02:45:48.7269929Z Failed to resolve package URI "package:lints/recommended.yaml" in include.
+2025-12-22T02:45:48.7335898Z Changed lib/src/pictrs.dart
+2025-12-22T02:45:48.7377360Z Changed lib/src/pictrs.freezed.dart
+2025-12-22T02:45:48.7395632Z Changed lib/src/pictrs.g.dart
+2025-12-22T02:45:48.7422738Z Changed lib/src/utils/force_utc_datetime.dart
+2025-12-22T02:45:48.7427167Z Changed lib/src/utils/serde.dart
+2025-12-22T02:45:48.7789681Z Changed lib/src/v3/api/comment/comment.freezed.dart
+2025-12-22T02:45:48.7863523Z Changed lib/src/v3/api/comment/comment.g.dart
+2025-12-22T02:45:48.8242849Z Changed lib/src/v3/api/community.freezed.dart
+2025-12-22T02:45:48.8281142Z Changed lib/src/v3/api/community.g.dart
+2025-12-22T02:45:48.8285920Z Changed lib/src/v3/api/modlog.dart
+2025-12-22T02:45:48.8314717Z Changed lib/src/v3/api/modlog.freezed.dart
+2025-12-22T02:45:48.8321237Z Changed lib/src/v3/api/modlog.g.dart
+2025-12-22T02:45:48.8856793Z Changed lib/src/v3/api/post.freezed.dart
+2025-12-22T02:45:48.8907764Z Changed lib/src/v3/api/post.g.dart
+2025-12-22T02:45:48.8965296Z Changed lib/src/v3/api/private_message/private_message.dart
+2025-12-22T02:45:48.9138411Z Changed lib/src/v3/api/private_message/private_message.freezed.dart
+2025-12-22T02:45:48.9174194Z Changed lib/src/v3/api/private_message/private_message.g.dart
+2025-12-22T02:45:48.9429049Z Changed lib/src/v3/api/site.freezed.dart
+2025-12-22T02:45:48.9460945Z Changed lib/src/v3/api/site.g.dart
+2025-12-22T02:45:49.0030864Z Changed lib/src/v3/api/user/person.freezed.dart
+2025-12-22T02:45:49.0086887Z Changed lib/src/v3/api/user/person.g.dart
+2025-12-22T02:45:49.0118228Z Changed lib/src/v3/enums/listing_type.dart
+2025-12-22T02:45:49.0121913Z Changed lib/src/v3/enums/modlog_action_type.dart
+2025-12-22T02:45:49.0167356Z Changed lib/src/v3/main.dart
+2025-12-22T02:45:49.0192351Z Changed lib/src/v3/models/admin/admin_purge_comment.dart
+2025-12-22T02:45:49.0213438Z Changed lib/src/v3/models/admin/admin_purge_comment.freezed.dart
+2025-12-22T02:45:49.0223089Z Changed lib/src/v3/models/admin/admin_purge_comment.g.dart
+2025-12-22T02:45:49.0226216Z Changed lib/src/v3/models/admin/admin_purge_community.dart
+2025-12-22T02:45:49.0245609Z Changed lib/src/v3/models/admin/admin_purge_community.freezed.dart
+2025-12-22T02:45:49.0289854Z Changed lib/src/v3/models/admin/admin_purge_community.g.dart
+2025-12-22T02:45:49.0292445Z Changed lib/src/v3/models/admin/admin_purge_person.dart
+2025-12-22T02:45:49.0312611Z Changed lib/src/v3/models/admin/admin_purge_person.freezed.dart
+2025-12-22T02:45:49.0319440Z Changed lib/src/v3/models/admin/admin_purge_person.g.dart
+2025-12-22T02:45:49.0322510Z Changed lib/src/v3/models/admin/admin_purge_post.dart
+2025-12-22T02:45:49.0343769Z Changed lib/src/v3/models/admin/admin_purge_post.freezed.dart
+2025-12-22T02:45:49.0353515Z Changed lib/src/v3/models/admin/admin_purge_post.g.dart
+2025-12-22T02:45:49.0380079Z Changed lib/src/v3/models/aggregates.dart
+2025-12-22T02:45:49.0478088Z Changed lib/src/v3/models/aggregates.freezed.dart
+2025-12-22T02:45:49.0503322Z Changed lib/src/v3/models/aggregates.g.dart
+2025-12-22T02:45:49.1012092Z Changed lib/src/v3/models/api.freezed.dart
+2025-12-22T02:45:49.1102620Z Changed lib/src/v3/models/api.g.dart
+2025-12-22T02:45:49.1144023Z Changed lib/src/v3/models/comment/get_comments_response.freezed.dart
+2025-12-22T02:45:49.1148929Z Changed lib/src/v3/models/comment/get_comments_response.g.dart
+2025-12-22T02:45:49.1173572Z Changed lib/src/v3/models/image/image_details.dart
+2025-12-22T02:45:49.1202172Z Changed lib/src/v3/models/image/image_details.freezed.dart
+2025-12-22T02:45:49.1207887Z Changed lib/src/v3/models/image/image_details.g.dart
+2025-12-22T02:45:49.1213120Z Changed lib/src/v3/models/jwt.dart
+2025-12-22T02:45:49.1234461Z Changed lib/src/v3/models/jwt.freezed.dart
+2025-12-22T02:45:49.1238452Z Changed lib/src/v3/models/jwt.g.dart
+2025-12-22T02:45:49.1262964Z Changed lib/src/v3/models/mod/mod_hide_community.dart
+2025-12-22T02:45:49.1285818Z Changed lib/src/v3/models/mod/mod_hide_community.freezed.dart
+2025-12-22T02:45:49.1292740Z Changed lib/src/v3/models/mod/mod_hide_community.g.dart
+2025-12-22T02:45:49.1318328Z Changed lib/src/v3/models/post/get_posts_response.dart
+2025-12-22T02:45:49.1337382Z Changed lib/src/v3/models/post/get_posts_response.freezed.dart
+2025-12-22T02:45:49.1342704Z Changed lib/src/v3/models/post/get_posts_response.g.dart
+2025-12-22T02:45:49.1383290Z Changed lib/src/v3/models/post/mark_post_as_read_response.freezed.dart
+2025-12-22T02:45:49.1387316Z Changed lib/src/v3/models/post/mark_post_as_read_response.g.dart
+2025-12-22T02:45:49.1446040Z Changed lib/src/v3/models/post/post.freezed.dart
+2025-12-22T02:45:49.1455391Z Changed lib/src/v3/models/post/post.g.dart
+2025-12-22T02:45:49.1478863Z Changed lib/src/v3/models/private_message/list_private_message_reports_response.dart
+2025-12-22T02:45:49.1495282Z Changed lib/src/v3/models/private_message/list_private_message_reports_response.freezed.dart
+2025-12-22T02:45:49.1503417Z Changed lib/src/v3/models/private_message/list_private_message_reports_response.g.dart
+2025-12-22T02:45:49.1506346Z Changed lib/src/v3/models/private_message/private_message_report.dart
+2025-12-22T02:45:49.1533635Z Changed lib/src/v3/models/private_message/private_message_report.freezed.dart
+2025-12-22T02:45:49.1539880Z Changed lib/src/v3/models/private_message/private_message_report.g.dart
+2025-12-22T02:45:49.1542667Z Changed lib/src/v3/models/private_message/private_message_report_response.dart
+2025-12-22T02:45:49.1558697Z Changed lib/src/v3/models/private_message/private_message_report_response.freezed.dart
+2025-12-22T02:45:49.1562957Z Changed lib/src/v3/models/private_message/private_message_report_response.g.dart
+2025-12-22T02:45:49.1565420Z Changed lib/src/v3/models/private_message/private_message_response.dart
+2025-12-22T02:45:49.1580095Z Changed lib/src/v3/models/private_message/private_message_response.freezed.dart
+2025-12-22T02:45:49.1583601Z Changed lib/src/v3/models/private_message/private_message_response.g.dart
+2025-12-22T02:45:49.1586116Z Changed lib/src/v3/models/private_message/private_messages_response.dart
+2025-12-22T02:45:49.1601238Z Changed lib/src/v3/models/private_message/private_messages_response.freezed.dart
+2025-12-22T02:45:49.1605795Z Changed lib/src/v3/models/private_message/private_messages_response.g.dart
+2025-12-22T02:45:49.2529586Z Changed lib/src/v3/models/source.freezed.dart
+2025-12-22T02:45:49.2613475Z Changed lib/src/v3/models/source.g.dart
+2025-12-22T02:45:49.2656913Z Changed lib/src/v3/models/user/save_user_settings_response.freezed.dart
+2025-12-22T02:45:49.2663640Z Changed lib/src/v3/models/user/save_user_settings_response.g.dart
+2025-12-22T02:45:49.2666058Z Changed lib/src/v3/models/user/success_response.dart
+2025-12-22T02:45:49.2679798Z Changed lib/src/v3/models/user/success_response.freezed.dart
+2025-12-22T02:45:49.2682550Z Changed lib/src/v3/models/user/success_response.g.dart
+2025-12-22T02:45:49.2684986Z Changed lib/src/v3/models/user/update_totp_response.dart
+2025-12-22T02:45:49.2698620Z Changed lib/src/v3/models/user/update_totp_response.freezed.dart
+2025-12-22T02:45:49.2701006Z Changed lib/src/v3/models/user/update_totp_response.g.dart
+2025-12-22T02:45:49.3971421Z Changed lib/src/v3/models/views.freezed.dart
+2025-12-22T02:45:49.4135981Z Changed lib/src/v3/models/views.g.dart
+2025-12-22T02:45:49.4207561Z Changed lib/src/v3/views/comment_view.freezed.dart
+2025-12-22T02:45:49.4214153Z Changed lib/src/v3/views/comment_view.g.dart
+2025-12-22T02:45:49.4217563Z Changed lib/src/v3/views/private_message_report_view.dart
+2025-12-22T02:45:49.4244007Z Changed lib/src/v3/views/private_message_report_view.freezed.dart
+2025-12-22T02:45:49.4248919Z Changed lib/src/v3/views/private_message_report_view.g.dart
+2025-12-22T02:45:49.4283822Z Changed scripts/release.dart
+2025-12-22T02:45:49.4373693Z Formatted 127 files (92 changed) in 0.71 seconds.
+2025-12-22T02:45:49.4456918Z ##[error]Process completed with exit code 1.
+2025-12-22T02:45:49.4552261Z Post job cleanup.
+2025-12-22T02:45:49.5483827Z [command]/usr/bin/git version
+2025-12-22T02:45:49.5519182Z git version 2.52.0
+2025-12-22T02:45:49.5560968Z Temporarily overriding HOME='/home/runner/work/_temp/c99b478b-946a-439d-9696-2fc34fc2e4b1' before making global git config changes
+2025-12-22T02:45:49.5562150Z Adding repository directory to the temporary git global config as a safe directory
+2025-12-22T02:45:49.5566439Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/lemmy_api_client/lemmy_api_client
+2025-12-22T02:45:49.5603102Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-12-22T02:45:49.5635193Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-12-22T02:45:49.5861139Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-12-22T02:45:49.5881037Z http.https://github.com/.extraheader
+2025-12-22T02:45:49.5892928Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-12-22T02:45:49.5922915Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-12-22T02:45:49.6142193Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2025-12-22T02:45:49.6172153Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2025-12-22T02:45:49.6492312Z Cleaning up orphan processes

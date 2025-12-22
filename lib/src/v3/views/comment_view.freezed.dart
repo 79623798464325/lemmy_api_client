@@ -26,16 +26,11 @@ mixin _$CommentView {
   Post get post => throw _privateConstructorUsedError; // v0.18.0
   CommunitySafe get community => throw _privateConstructorUsedError; // v0.18.0
   CommentAggregates get counts => throw _privateConstructorUsedError; // v0.18.0
-  bool get creatorBannedFromCommunity =>
-      throw _privateConstructorUsedError; // v0.18.0
-  bool? get bannedFromCommunity =>
-      throw _privateConstructorUsedError; // v0.19.4 (required)
-  bool? get creatorIsModerator =>
-      throw _privateConstructorUsedError; // v0.19.0 (required)
-  bool? get creatorIsAdmin =>
-      throw _privateConstructorUsedError; // v0.19.0 (required)
-  SubscribedType get subscribed =>
-      throw _privateConstructorUsedError; // v0.18.0
+  bool get creatorBannedFromCommunity => throw _privateConstructorUsedError; // v0.18.0
+  bool? get bannedFromCommunity => throw _privateConstructorUsedError; // v0.19.4 (required)
+  bool? get creatorIsModerator => throw _privateConstructorUsedError; // v0.19.0 (required)
+  bool? get creatorIsAdmin => throw _privateConstructorUsedError; // v0.19.0 (required)
+  SubscribedType get subscribed => throw _privateConstructorUsedError; // v0.18.0
   bool get saved => throw _privateConstructorUsedError; // v0.18.0
   bool get creatorBlocked => throw _privateConstructorUsedError; // v0.18.0
   int? get myVote => throw _privateConstructorUsedError;
@@ -46,16 +41,12 @@ mixin _$CommentView {
   /// Create a copy of CommentView
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $CommentViewCopyWith<CommentView> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CommentViewCopyWith<CommentView> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CommentViewCopyWith<$Res> {
-  factory $CommentViewCopyWith(
-    CommentView value,
-    $Res Function(CommentView) then,
-  ) = _$CommentViewCopyWithImpl<$Res, CommentView>;
+  factory $CommentViewCopyWith(CommentView value, $Res Function(CommentView) then) = _$CommentViewCopyWithImpl<$Res, CommentView>;
   @useResult
   $Res call({
     Comment comment,
@@ -81,8 +72,7 @@ abstract class $CommentViewCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CommentViewCopyWithImpl<$Res, $Val extends CommentView>
-    implements $CommentViewCopyWith<$Res> {
+class _$CommentViewCopyWithImpl<$Res, $Val extends CommentView> implements $CommentViewCopyWith<$Res> {
   _$CommentViewCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -233,12 +223,8 @@ class _$CommentViewCopyWithImpl<$Res, $Val extends CommentView>
 }
 
 /// @nodoc
-abstract class _$$CommentViewImplCopyWith<$Res>
-    implements $CommentViewCopyWith<$Res> {
-  factory _$$CommentViewImplCopyWith(
-    _$CommentViewImpl value,
-    $Res Function(_$CommentViewImpl) then,
-  ) = __$$CommentViewImplCopyWithImpl<$Res>;
+abstract class _$$CommentViewImplCopyWith<$Res> implements $CommentViewCopyWith<$Res> {
+  factory _$$CommentViewImplCopyWith(_$CommentViewImpl value, $Res Function(_$CommentViewImpl) then) = __$$CommentViewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({
@@ -270,13 +256,8 @@ abstract class _$$CommentViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$CommentViewImplCopyWithImpl<$Res>
-    extends _$CommentViewCopyWithImpl<$Res, _$CommentViewImpl>
-    implements _$$CommentViewImplCopyWith<$Res> {
-  __$$CommentViewImplCopyWithImpl(
-    _$CommentViewImpl _value,
-    $Res Function(_$CommentViewImpl) _then,
-  ) : super(_value, _then);
+class __$$CommentViewImplCopyWithImpl<$Res> extends _$CommentViewCopyWithImpl<$Res, _$CommentViewImpl> implements _$$CommentViewImplCopyWith<$Res> {
+  __$$CommentViewImplCopyWithImpl(_$CommentViewImpl _value, $Res Function(_$CommentViewImpl) _then) : super(_value, _then);
 
   /// Create a copy of CommentView
   /// with the given fields replaced by the non-null parameter values.
@@ -389,8 +370,7 @@ class _$CommentViewImpl extends _CommentView {
     this.myVote,
   }) : super._();
 
-  factory _$CommentViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CommentViewImplFromJson(json);
+  factory _$CommentViewImpl.fromJson(Map<String, dynamic> json) => _$$CommentViewImplFromJson(json);
 
   @override
   final Comment comment;
@@ -444,26 +424,15 @@ class _$CommentViewImpl extends _CommentView {
             (identical(other.comment, comment) || other.comment == comment) &&
             (identical(other.creator, creator) || other.creator == creator) &&
             (identical(other.post, post) || other.post == post) &&
-            (identical(other.community, community) ||
-                other.community == community) &&
+            (identical(other.community, community) || other.community == community) &&
             (identical(other.counts, counts) || other.counts == counts) &&
-            (identical(
-                  other.creatorBannedFromCommunity,
-                  creatorBannedFromCommunity,
-                ) ||
-                other.creatorBannedFromCommunity ==
-                    creatorBannedFromCommunity) &&
-            (identical(other.bannedFromCommunity, bannedFromCommunity) ||
-                other.bannedFromCommunity == bannedFromCommunity) &&
-            (identical(other.creatorIsModerator, creatorIsModerator) ||
-                other.creatorIsModerator == creatorIsModerator) &&
-            (identical(other.creatorIsAdmin, creatorIsAdmin) ||
-                other.creatorIsAdmin == creatorIsAdmin) &&
-            (identical(other.subscribed, subscribed) ||
-                other.subscribed == subscribed) &&
+            (identical(other.creatorBannedFromCommunity, creatorBannedFromCommunity) || other.creatorBannedFromCommunity == creatorBannedFromCommunity) &&
+            (identical(other.bannedFromCommunity, bannedFromCommunity) || other.bannedFromCommunity == bannedFromCommunity) &&
+            (identical(other.creatorIsModerator, creatorIsModerator) || other.creatorIsModerator == creatorIsModerator) &&
+            (identical(other.creatorIsAdmin, creatorIsAdmin) || other.creatorIsAdmin == creatorIsAdmin) &&
+            (identical(other.subscribed, subscribed) || other.subscribed == subscribed) &&
             (identical(other.saved, saved) || other.saved == saved) &&
-            (identical(other.creatorBlocked, creatorBlocked) ||
-                other.creatorBlocked == creatorBlocked) &&
+            (identical(other.creatorBlocked, creatorBlocked) || other.creatorBlocked == creatorBlocked) &&
             (identical(other.myVote, myVote) || other.myVote == myVote));
   }
 
@@ -491,8 +460,7 @@ class _$CommentViewImpl extends _CommentView {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$CommentViewImplCopyWith<_$CommentViewImpl> get copyWith =>
-      __$$CommentViewImplCopyWithImpl<_$CommentViewImpl>(this, _$identity);
+  _$$CommentViewImplCopyWith<_$CommentViewImpl> get copyWith => __$$CommentViewImplCopyWithImpl<_$CommentViewImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -518,8 +486,7 @@ abstract class _CommentView extends CommentView {
   }) = _$CommentViewImpl;
   const _CommentView._() : super._();
 
-  factory _CommentView.fromJson(Map<String, dynamic> json) =
-      _$CommentViewImpl.fromJson;
+  factory _CommentView.fromJson(Map<String, dynamic> json) = _$CommentViewImpl.fromJson;
 
   @override
   Comment get comment; // v0.18.0
@@ -552,6 +519,5 @@ abstract class _CommentView extends CommentView {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CommentViewImplCopyWith<_$CommentViewImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CommentViewImplCopyWith<_$CommentViewImpl> get copyWith => throw _privateConstructorUsedError;
 }

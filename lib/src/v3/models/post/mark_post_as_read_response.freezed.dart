@@ -15,9 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
   'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
 );
 
-MarkPostAsReadResponse _$MarkPostAsReadResponseFromJson(
-  Map<String, dynamic> json,
-) {
+MarkPostAsReadResponse _$MarkPostAsReadResponseFromJson(Map<String, dynamic> json) {
   return _MarkPostAsReadResponse.fromJson(json);
 }
 
@@ -33,16 +31,12 @@ mixin _$MarkPostAsReadResponse {
   /// Create a copy of MarkPostAsReadResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $MarkPostAsReadResponseCopyWith<MarkPostAsReadResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  $MarkPostAsReadResponseCopyWith<MarkPostAsReadResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $MarkPostAsReadResponseCopyWith<$Res> {
-  factory $MarkPostAsReadResponseCopyWith(
-    MarkPostAsReadResponse value,
-    $Res Function(MarkPostAsReadResponse) then,
-  ) = _$MarkPostAsReadResponseCopyWithImpl<$Res, MarkPostAsReadResponse>;
+  factory $MarkPostAsReadResponseCopyWith(MarkPostAsReadResponse value, $Res Function(MarkPostAsReadResponse) then) = _$MarkPostAsReadResponseCopyWithImpl<$Res, MarkPostAsReadResponse>;
   @useResult
   $Res call({@deprecated PostView? postView, bool? success});
 
@@ -50,11 +44,7 @@ abstract class $MarkPostAsReadResponseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$MarkPostAsReadResponseCopyWithImpl<
-  $Res,
-  $Val extends MarkPostAsReadResponse
->
-    implements $MarkPostAsReadResponseCopyWith<$Res> {
+class _$MarkPostAsReadResponseCopyWithImpl<$Res, $Val extends MarkPostAsReadResponse> implements $MarkPostAsReadResponseCopyWith<$Res> {
   _$MarkPostAsReadResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -100,12 +90,8 @@ class _$MarkPostAsReadResponseCopyWithImpl<
 }
 
 /// @nodoc
-abstract class _$$MarkPostAsReadResponseImplCopyWith<$Res>
-    implements $MarkPostAsReadResponseCopyWith<$Res> {
-  factory _$$MarkPostAsReadResponseImplCopyWith(
-    _$MarkPostAsReadResponseImpl value,
-    $Res Function(_$MarkPostAsReadResponseImpl) then,
-  ) = __$$MarkPostAsReadResponseImplCopyWithImpl<$Res>;
+abstract class _$$MarkPostAsReadResponseImplCopyWith<$Res> implements $MarkPostAsReadResponseCopyWith<$Res> {
+  factory _$$MarkPostAsReadResponseImplCopyWith(_$MarkPostAsReadResponseImpl value, $Res Function(_$MarkPostAsReadResponseImpl) then) = __$$MarkPostAsReadResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@deprecated PostView? postView, bool? success});
@@ -115,14 +101,8 @@ abstract class _$$MarkPostAsReadResponseImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$MarkPostAsReadResponseImplCopyWithImpl<$Res>
-    extends
-        _$MarkPostAsReadResponseCopyWithImpl<$Res, _$MarkPostAsReadResponseImpl>
-    implements _$$MarkPostAsReadResponseImplCopyWith<$Res> {
-  __$$MarkPostAsReadResponseImplCopyWithImpl(
-    _$MarkPostAsReadResponseImpl _value,
-    $Res Function(_$MarkPostAsReadResponseImpl) _then,
-  ) : super(_value, _then);
+class __$$MarkPostAsReadResponseImplCopyWithImpl<$Res> extends _$MarkPostAsReadResponseCopyWithImpl<$Res, _$MarkPostAsReadResponseImpl> implements _$$MarkPostAsReadResponseImplCopyWith<$Res> {
+  __$$MarkPostAsReadResponseImplCopyWithImpl(_$MarkPostAsReadResponseImpl _value, $Res Function(_$MarkPostAsReadResponseImpl) _then) : super(_value, _then);
 
   /// Create a copy of MarkPostAsReadResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -150,11 +130,9 @@ class __$$MarkPostAsReadResponseImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$MarkPostAsReadResponseImpl extends _MarkPostAsReadResponse {
-  const _$MarkPostAsReadResponseImpl({@deprecated this.postView, this.success})
-    : super._();
+  const _$MarkPostAsReadResponseImpl({@deprecated this.postView, this.success}) : super._();
 
-  factory _$MarkPostAsReadResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$MarkPostAsReadResponseImplFromJson(json);
+  factory _$MarkPostAsReadResponseImpl.fromJson(Map<String, dynamic> json) => _$$MarkPostAsReadResponseImplFromJson(json);
 
   @override
   @deprecated
@@ -172,8 +150,7 @@ class _$MarkPostAsReadResponseImpl extends _MarkPostAsReadResponse {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MarkPostAsReadResponseImpl &&
-            (identical(other.postView, postView) ||
-                other.postView == postView) &&
+            (identical(other.postView, postView) || other.postView == postView) &&
             (identical(other.success, success) || other.success == success));
   }
 
@@ -186,12 +163,7 @@ class _$MarkPostAsReadResponseImpl extends _MarkPostAsReadResponse {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$MarkPostAsReadResponseImplCopyWith<_$MarkPostAsReadResponseImpl>
-  get copyWith =>
-      __$$MarkPostAsReadResponseImplCopyWithImpl<_$MarkPostAsReadResponseImpl>(
-        this,
-        _$identity,
-      );
+  _$$MarkPostAsReadResponseImplCopyWith<_$MarkPostAsReadResponseImpl> get copyWith => __$$MarkPostAsReadResponseImplCopyWithImpl<_$MarkPostAsReadResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -200,14 +172,10 @@ class _$MarkPostAsReadResponseImpl extends _MarkPostAsReadResponse {
 }
 
 abstract class _MarkPostAsReadResponse extends MarkPostAsReadResponse {
-  const factory _MarkPostAsReadResponse({
-    @deprecated final PostView? postView,
-    final bool? success,
-  }) = _$MarkPostAsReadResponseImpl;
+  const factory _MarkPostAsReadResponse({@deprecated final PostView? postView, final bool? success}) = _$MarkPostAsReadResponseImpl;
   const _MarkPostAsReadResponse._() : super._();
 
-  factory _MarkPostAsReadResponse.fromJson(Map<String, dynamic> json) =
-      _$MarkPostAsReadResponseImpl.fromJson;
+  factory _MarkPostAsReadResponse.fromJson(Map<String, dynamic> json) = _$MarkPostAsReadResponseImpl.fromJson;
 
   @override
   @deprecated
@@ -219,6 +187,5 @@ abstract class _MarkPostAsReadResponse extends MarkPostAsReadResponse {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$MarkPostAsReadResponseImplCopyWith<_$MarkPostAsReadResponseImpl>
-  get copyWith => throw _privateConstructorUsedError;
+  _$$MarkPostAsReadResponseImplCopyWith<_$MarkPostAsReadResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }

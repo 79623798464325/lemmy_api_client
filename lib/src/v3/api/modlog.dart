@@ -12,22 +12,12 @@ part 'modlog.g.dart';
 @freezed
 class GetModlog with _$GetModlog implements LemmyApiQuery<Modlog> {
   @apiSerde
-  const factory GetModlog({
-    int? modPersonId,
-    int? communityId,
-    int? page,
-    int? limit,
-    @JsonKey(name: 'type_') ModlogActionType? type,
-    int? otherPersonId,
-    int? postId,
-    int? commentId,
-    String? auth,
-  }) = _GetModlog;
+  const factory GetModlog({int? modPersonId, int? communityId, int? page, int? limit, @JsonKey(name: 'type_') ModlogActionType? type, int? otherPersonId, int? postId, int? commentId, String? auth}) =
+      _GetModlog;
 
   const GetModlog._();
 
-  factory GetModlog.fromJson(Map<String, dynamic> json) =>
-      _$GetModlogFromJson(json);
+  factory GetModlog.fromJson(Map<String, dynamic> json) => _$GetModlogFromJson(json);
 
   final path = '/modlog';
 
