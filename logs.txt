@@ -1,331 +1,665 @@
-2025-12-22T03:07:58.8924360Z Current runner version: '2.330.0'
-2025-12-22T03:07:58.8957851Z ##[group]Runner Image Provisioner
-2025-12-22T03:07:58.8959057Z Hosted Compute Agent
-2025-12-22T03:07:58.8960243Z Version: 20251211.462
-2025-12-22T03:07:58.8961232Z Commit: 6cbad8c2bb55d58165063d031ccabf57e2d2db61
-2025-12-22T03:07:58.8962483Z Build Date: 2025-12-11T16:28:49Z
-2025-12-22T03:07:58.8963806Z Worker ID: {f1d845db-0e7b-4385-bd7c-63dc25b86e65}
-2025-12-22T03:07:58.8965201Z ##[endgroup]
-2025-12-22T03:07:58.8966078Z ##[group]Operating System
-2025-12-22T03:07:58.8967244Z Ubuntu
-2025-12-22T03:07:58.8968062Z 24.04.3
-2025-12-22T03:07:58.8968913Z LTS
-2025-12-22T03:07:58.8969888Z ##[endgroup]
-2025-12-22T03:07:58.8970757Z ##[group]Runner Image
-2025-12-22T03:07:58.8971576Z Image: ubuntu-24.04
-2025-12-22T03:07:58.8972558Z Version: 20251215.174.1
-2025-12-22T03:07:58.8974275Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20251215.174/images/ubuntu/Ubuntu2404-Readme.md
-2025-12-22T03:07:58.8977353Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20251215.174
-2025-12-22T03:07:58.8979085Z ##[endgroup]
-2025-12-22T03:07:58.8981089Z ##[group]GITHUB_TOKEN Permissions
-2025-12-22T03:07:58.8983867Z Contents: read
-2025-12-22T03:07:58.8985258Z Metadata: read
-2025-12-22T03:07:58.8986257Z Packages: read
-2025-12-22T03:07:58.8987054Z ##[endgroup]
-2025-12-22T03:07:58.8990148Z Secret source: Actions
-2025-12-22T03:07:58.8991197Z Prepare workflow directory
-2025-12-22T03:07:58.9471663Z Prepare all required actions
-2025-12-22T03:07:58.9529922Z Getting action download info
-2025-12-22T03:07:59.2828157Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
-2025-12-22T03:07:59.4032596Z Download action repository 'dart-lang/setup-dart@v1' (SHA:e51d8e571e22473a2ddebf0ef8a2123f0ab2c02c)
-2025-12-22T03:07:59.8305369Z Download action repository 'actions/cache@v4' (SHA:0057852bfaa89a56745cba8c7296529d2fc39830)
-2025-12-22T03:07:59.9453826Z Download action repository 'codecov/codecov-action@v4' (SHA:b9fd7d16f6d7d1b5d2bec1a2887e65ceed900238)
-2025-12-22T03:08:00.4397940Z Complete job name: Test
-2025-12-22T03:08:00.5269405Z ##[group]Run actions/checkout@v4
-2025-12-22T03:08:00.5270712Z with:
-2025-12-22T03:08:00.5271533Z   repository: 79623798464325/lemmy_api_client
-2025-12-22T03:08:00.5272859Z   token: ***
-2025-12-22T03:08:00.5273605Z   ssh-strict: true
-2025-12-22T03:08:00.5274387Z   ssh-user: git
-2025-12-22T03:08:00.5275375Z   persist-credentials: true
-2025-12-22T03:08:00.5276278Z   clean: true
-2025-12-22T03:08:00.5277093Z   sparse-checkout-cone-mode: true
-2025-12-22T03:08:00.5278080Z   fetch-depth: 1
-2025-12-22T03:08:00.5278870Z   fetch-tags: false
-2025-12-22T03:08:00.5279670Z   show-progress: true
-2025-12-22T03:08:00.5280481Z   lfs: false
-2025-12-22T03:08:00.5281210Z   submodules: false
-2025-12-22T03:08:00.5282036Z   set-safe-directory: true
-2025-12-22T03:08:00.5283182Z ##[endgroup]
-2025-12-22T03:08:00.6393498Z Syncing repository: 79623798464325/lemmy_api_client
-2025-12-22T03:08:00.6397218Z ##[group]Getting Git version info
-2025-12-22T03:08:00.6399684Z Working directory is '/home/runner/work/lemmy_api_client/lemmy_api_client'
-2025-12-22T03:08:00.6402107Z [command]/usr/bin/git version
-2025-12-22T03:08:00.6478174Z git version 2.52.0
-2025-12-22T03:08:00.6504303Z ##[endgroup]
-2025-12-22T03:08:00.6518975Z Temporarily overriding HOME='/home/runner/work/_temp/70346bb9-8872-4477-afdb-9b92170edb17' before making global git config changes
-2025-12-22T03:08:00.6521673Z Adding repository directory to the temporary git global config as a safe directory
-2025-12-22T03:08:00.6524350Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/lemmy_api_client/lemmy_api_client
-2025-12-22T03:08:00.6562906Z Deleting the contents of '/home/runner/work/lemmy_api_client/lemmy_api_client'
-2025-12-22T03:08:00.6566035Z ##[group]Initializing the repository
-2025-12-22T03:08:00.6570585Z [command]/usr/bin/git init /home/runner/work/lemmy_api_client/lemmy_api_client
-2025-12-22T03:08:00.6689481Z hint: Using 'master' as the name for the initial branch. This default branch name
-2025-12-22T03:08:00.6691939Z hint: will change to "main" in Git 3.0. To configure the initial branch name
-2025-12-22T03:08:00.6694361Z hint: to use in all of your new repositories, which will suppress this warning,
-2025-12-22T03:08:00.6696502Z hint: call:
-2025-12-22T03:08:00.6697747Z hint:
-2025-12-22T03:08:00.6699354Z hint: 	git config --global init.defaultBranch <name>
-2025-12-22T03:08:00.6701317Z hint:
-2025-12-22T03:08:00.6703135Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
-2025-12-22T03:08:00.6706374Z hint: 'development'. The just-created branch can be renamed via this command:
-2025-12-22T03:08:00.6708805Z hint:
-2025-12-22T03:08:00.6710065Z hint: 	git branch -m <name>
-2025-12-22T03:08:00.6711508Z hint:
-2025-12-22T03:08:00.6713374Z hint: Disable this message with "git config set advice.defaultBranchName false"
-2025-12-22T03:08:00.6716063Z Initialized empty Git repository in /home/runner/work/lemmy_api_client/lemmy_api_client/.git/
-2025-12-22T03:08:00.6719881Z [command]/usr/bin/git remote add origin https://github.com/79623798464325/lemmy_api_client
-2025-12-22T03:08:00.6745889Z ##[endgroup]
-2025-12-22T03:08:00.6748377Z ##[group]Disabling automatic garbage collection
-2025-12-22T03:08:00.6750599Z [command]/usr/bin/git config --local gc.auto 0
-2025-12-22T03:08:00.6779477Z ##[endgroup]
-2025-12-22T03:08:00.6781794Z ##[group]Setting up auth
-2025-12-22T03:08:00.6786948Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2025-12-22T03:08:00.6819162Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2025-12-22T03:08:00.7201656Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2025-12-22T03:08:00.7235809Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-2025-12-22T03:08:00.7453680Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
-2025-12-22T03:08:00.7484247Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
-2025-12-22T03:08:00.7700637Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
-2025-12-22T03:08:00.7733671Z ##[endgroup]
-2025-12-22T03:08:00.7735890Z ##[group]Fetching the repository
-2025-12-22T03:08:00.7742897Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +7ef7431b39a7a5cad85a60e5338d5a16f74f63d3:refs/remotes/pull/1/merge
-2025-12-22T03:08:01.1151375Z From https://github.com/79623798464325/lemmy_api_client
-2025-12-22T03:08:01.1153660Z  * [new ref]         7ef7431b39a7a5cad85a60e5338d5a16f74f63d3 -> pull/1/merge
-2025-12-22T03:08:01.1185663Z ##[endgroup]
-2025-12-22T03:08:01.1187741Z ##[group]Determining the checkout info
-2025-12-22T03:08:01.1189808Z ##[endgroup]
-2025-12-22T03:08:01.1191695Z [command]/usr/bin/git sparse-checkout disable
-2025-12-22T03:08:01.1231358Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
-2025-12-22T03:08:01.1256891Z ##[group]Checking out the ref
-2025-12-22T03:08:01.1259121Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/1/merge
-2025-12-22T03:08:01.1419226Z Note: switching to 'refs/remotes/pull/1/merge'.
-2025-12-22T03:08:01.1420099Z 
-2025-12-22T03:08:01.1420780Z You are in 'detached HEAD' state. You can look around, make experimental
-2025-12-22T03:08:01.1422457Z changes and commit them, and you can discard any commits you make in this
-2025-12-22T03:08:01.1424946Z state without impacting any branches by switching back to a branch.
-2025-12-22T03:08:01.1426571Z 
-2025-12-22T03:08:01.1427679Z If you want to create a new branch to retain commits you create, you may
-2025-12-22T03:08:01.1430428Z do so (now or later) by using -c with the switch command. Example:
-2025-12-22T03:08:01.1431841Z 
-2025-12-22T03:08:01.1432478Z   git switch -c <new-branch-name>
-2025-12-22T03:08:01.1433556Z 
-2025-12-22T03:08:01.1434172Z Or undo this operation with:
-2025-12-22T03:08:01.1435440Z 
-2025-12-22T03:08:01.1435968Z   git switch -
-2025-12-22T03:08:01.1436734Z 
-2025-12-22T03:08:01.1437826Z Turn off this advice by setting config variable advice.detachedHead to false
-2025-12-22T03:08:01.1439381Z 
-2025-12-22T03:08:01.1440739Z HEAD is now at 7ef7431 Merge df812211ec4fc29cc04e24d4711b1e9ba205e13f into 935a1cfc9a3a6957a98b556a0d36374f3df4790a
-2025-12-22T03:08:01.1444321Z ##[endgroup]
-2025-12-22T03:08:01.1466511Z [command]/usr/bin/git log -1 --format=%H
-2025-12-22T03:08:01.1488266Z 7ef7431b39a7a5cad85a60e5338d5a16f74f63d3
-2025-12-22T03:08:01.1786895Z ##[group]Run dart-lang/setup-dart@v1
-2025-12-22T03:08:01.1787805Z with:
-2025-12-22T03:08:01.1788466Z   sdk: stable
-2025-12-22T03:08:01.1789152Z ##[endgroup]
-2025-12-22T03:08:01.3723440Z Installing the linux-x64 Dart SDK version 3.10.6 from the stable (release) channel.
-2025-12-22T03:08:01.3742594Z https://storage.googleapis.com/dart-archive/channels/stable/release/3.10.6/sdk/dartsdk-linux-x64-release.zip ...
-2025-12-22T03:08:02.9697285Z [command]/usr/bin/unzip -o -q /home/runner/work/_temp/dartsdk-linux-x64-release.zip
-2025-12-22T03:08:08.5238389Z [command]/opt/hostedtoolcache/dart/3.10.6/x64/bin/dart --version
-2025-12-22T03:08:08.5274267Z Dart SDK version: 3.10.6 (stable) (Tue Dec 16 06:05:04 2025 -0800) on "linux_x64"
-2025-12-22T03:08:08.5983469Z ##[group]Run actions/cache@v4
-2025-12-22T03:08:08.5983742Z with:
-2025-12-22T03:08:08.5983934Z   path: ~/.pub-cache
+2025-12-22T03:31:39.6125874Z Current runner version: '2.330.0'
+2025-12-22T03:31:39.6147740Z ##[group]Runner Image Provisioner
+2025-12-22T03:31:39.6148582Z Hosted Compute Agent
+2025-12-22T03:31:39.6149271Z Version: 20251211.462
+2025-12-22T03:31:39.6149944Z Commit: 6cbad8c2bb55d58165063d031ccabf57e2d2db61
+2025-12-22T03:31:39.6150662Z Build Date: 2025-12-11T16:28:49Z
+2025-12-22T03:31:39.6151285Z Worker ID: {c54e9e19-c5e5-4c13-b9ed-3f0b7ab3d400}
+2025-12-22T03:31:39.6152031Z ##[endgroup]
+2025-12-22T03:31:39.6152541Z ##[group]Operating System
+2025-12-22T03:31:39.6153089Z Ubuntu
+2025-12-22T03:31:39.6153581Z 24.04.3
+2025-12-22T03:31:39.6154014Z LTS
+2025-12-22T03:31:39.6154472Z ##[endgroup]
+2025-12-22T03:31:39.6155025Z ##[group]Runner Image
+2025-12-22T03:31:39.6155550Z Image: ubuntu-24.04
+2025-12-22T03:31:39.6156054Z Version: 20251215.174.1
+2025-12-22T03:31:39.6157016Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20251215.174/images/ubuntu/Ubuntu2404-Readme.md
+2025-12-22T03:31:39.6158600Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20251215.174
+2025-12-22T03:31:39.6159799Z ##[endgroup]
+2025-12-22T03:31:39.6160892Z ##[group]GITHUB_TOKEN Permissions
+2025-12-22T03:31:39.6162621Z Contents: read
+2025-12-22T03:31:39.6163274Z Metadata: read
+2025-12-22T03:31:39.6163741Z Packages: read
+2025-12-22T03:31:39.6164261Z ##[endgroup]
+2025-12-22T03:31:39.6166572Z Secret source: Actions
+2025-12-22T03:31:39.6167224Z Prepare workflow directory
+2025-12-22T03:31:39.6514129Z Prepare all required actions
+2025-12-22T03:31:39.6572875Z Getting action download info
+2025-12-22T03:31:40.1231160Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2025-12-22T03:31:40.2164231Z Download action repository 'dart-lang/setup-dart@v1' (SHA:e51d8e571e22473a2ddebf0ef8a2123f0ab2c02c)
+2025-12-22T03:31:40.7167288Z Download action repository 'actions/cache@v4' (SHA:0057852bfaa89a56745cba8c7296529d2fc39830)
+2025-12-22T03:31:40.8217374Z Download action repository 'codecov/codecov-action@v4' (SHA:b9fd7d16f6d7d1b5d2bec1a2887e65ceed900238)
+2025-12-22T03:31:41.4412316Z Complete job name: Test
+2025-12-22T03:31:41.5131723Z ##[group]Run actions/checkout@v4
+2025-12-22T03:31:41.5132613Z with:
+2025-12-22T03:31:41.5133072Z   repository: 79623798464325/lemmy_api_client
+2025-12-22T03:31:41.5133805Z   token: ***
+2025-12-22T03:31:41.5134221Z   ssh-strict: true
+2025-12-22T03:31:41.5134650Z   ssh-user: git
+2025-12-22T03:31:41.5135073Z   persist-credentials: true
+2025-12-22T03:31:41.5135556Z   clean: true
+2025-12-22T03:31:41.5135989Z   sparse-checkout-cone-mode: true
+2025-12-22T03:31:41.5136495Z   fetch-depth: 1
+2025-12-22T03:31:41.5136923Z   fetch-tags: false
+2025-12-22T03:31:41.5137349Z   show-progress: true
+2025-12-22T03:31:41.5137784Z   lfs: false
+2025-12-22T03:31:41.5138180Z   submodules: false
+2025-12-22T03:31:41.5138613Z   set-safe-directory: true
+2025-12-22T03:31:41.5139593Z ##[endgroup]
+2025-12-22T03:31:41.6281512Z Syncing repository: 79623798464325/lemmy_api_client
+2025-12-22T03:31:41.6284338Z ##[group]Getting Git version info
+2025-12-22T03:31:41.6285769Z Working directory is '/home/runner/work/lemmy_api_client/lemmy_api_client'
+2025-12-22T03:31:41.6287709Z [command]/usr/bin/git version
+2025-12-22T03:31:41.6359914Z git version 2.52.0
+2025-12-22T03:31:41.6386383Z ##[endgroup]
+2025-12-22T03:31:41.6401564Z Temporarily overriding HOME='/home/runner/work/_temp/3af6b89b-806b-424d-a47b-bf74f89c1644' before making global git config changes
+2025-12-22T03:31:41.6404003Z Adding repository directory to the temporary git global config as a safe directory
+2025-12-22T03:31:41.6407933Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/lemmy_api_client/lemmy_api_client
+2025-12-22T03:31:41.6445167Z Deleting the contents of '/home/runner/work/lemmy_api_client/lemmy_api_client'
+2025-12-22T03:31:41.6448771Z ##[group]Initializing the repository
+2025-12-22T03:31:41.6453827Z [command]/usr/bin/git init /home/runner/work/lemmy_api_client/lemmy_api_client
+2025-12-22T03:31:41.6593298Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-12-22T03:31:41.6594927Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2025-12-22T03:31:41.6595807Z hint: to use in all of your new repositories, which will suppress this warning,
+2025-12-22T03:31:41.6596493Z hint: call:
+2025-12-22T03:31:41.6597025Z hint:
+2025-12-22T03:31:41.6598106Z hint: 	git config --global init.defaultBranch <name>
+2025-12-22T03:31:41.6598737Z hint:
+2025-12-22T03:31:41.6599879Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-12-22T03:31:41.6601569Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-12-22T03:31:41.6602921Z hint:
+2025-12-22T03:31:41.6603676Z hint: 	git branch -m <name>
+2025-12-22T03:31:41.6604575Z hint:
+2025-12-22T03:31:41.6605683Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-12-22T03:31:41.6607574Z Initialized empty Git repository in /home/runner/work/lemmy_api_client/lemmy_api_client/.git/
+2025-12-22T03:31:41.6611671Z [command]/usr/bin/git remote add origin https://github.com/79623798464325/lemmy_api_client
+2025-12-22T03:31:41.6644619Z ##[endgroup]
+2025-12-22T03:31:41.6645899Z ##[group]Disabling automatic garbage collection
+2025-12-22T03:31:41.6649474Z [command]/usr/bin/git config --local gc.auto 0
+2025-12-22T03:31:41.6677718Z ##[endgroup]
+2025-12-22T03:31:41.6679219Z ##[group]Setting up auth
+2025-12-22T03:31:41.6685276Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-12-22T03:31:41.6715552Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-12-22T03:31:41.7079404Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-12-22T03:31:41.7111006Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-12-22T03:31:41.7345647Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2025-12-22T03:31:41.7383473Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2025-12-22T03:31:41.7601763Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-12-22T03:31:41.7634815Z ##[endgroup]
+2025-12-22T03:31:41.7636164Z ##[group]Fetching the repository
+2025-12-22T03:31:41.7645436Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +bf89c84280974aa53a2a9cabb6c003ba07029a04:refs/remotes/pull/2/merge
+2025-12-22T03:31:42.2314462Z From https://github.com/79623798464325/lemmy_api_client
+2025-12-22T03:31:42.2315912Z  * [new ref]         bf89c84280974aa53a2a9cabb6c003ba07029a04 -> pull/2/merge
+2025-12-22T03:31:42.2348164Z ##[endgroup]
+2025-12-22T03:31:42.2351658Z ##[group]Determining the checkout info
+2025-12-22T03:31:42.2353097Z ##[endgroup]
+2025-12-22T03:31:42.2357159Z [command]/usr/bin/git sparse-checkout disable
+2025-12-22T03:31:42.2398442Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-12-22T03:31:42.2424282Z ##[group]Checking out the ref
+2025-12-22T03:31:42.2428378Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/2/merge
+2025-12-22T03:31:42.2592418Z Note: switching to 'refs/remotes/pull/2/merge'.
+2025-12-22T03:31:42.2593703Z 
+2025-12-22T03:31:42.2594730Z You are in 'detached HEAD' state. You can look around, make experimental
+2025-12-22T03:31:42.2596194Z changes and commit them, and you can discard any commits you make in this
+2025-12-22T03:31:42.2597632Z state without impacting any branches by switching back to a branch.
+2025-12-22T03:31:42.2598501Z 
+2025-12-22T03:31:42.2599113Z If you want to create a new branch to retain commits you create, you may
+2025-12-22T03:31:42.2600209Z do so (now or later) by using -c with the switch command. Example:
+2025-12-22T03:31:42.2600706Z 
+2025-12-22T03:31:42.2600912Z   git switch -c <new-branch-name>
+2025-12-22T03:31:42.2601244Z 
+2025-12-22T03:31:42.2601437Z Or undo this operation with:
+2025-12-22T03:31:42.2601734Z 
+2025-12-22T03:31:42.2601917Z   git switch -
+2025-12-22T03:31:42.2602157Z 
+2025-12-22T03:31:42.2602530Z Turn off this advice by setting config variable advice.detachedHead to false
+2025-12-22T03:31:42.2603350Z 
+2025-12-22T03:31:42.2604396Z HEAD is now at bf89c84 Merge cfe6b2e229fcfa42c81f26e460fa51bb355889d3 into 3ef3035e36aad88863176361b5971e54f3e96abd
+2025-12-22T03:31:42.2607184Z ##[endgroup]
+2025-12-22T03:31:42.2643718Z [command]/usr/bin/git log -1 --format=%H
+2025-12-22T03:31:42.2666700Z bf89c84280974aa53a2a9cabb6c003ba07029a04
+2025-12-22T03:31:42.2944520Z ##[group]Run dart-lang/setup-dart@v1
+2025-12-22T03:31:42.2945328Z with:
+2025-12-22T03:31:42.2945780Z   sdk: stable
+2025-12-22T03:31:42.2946244Z ##[endgroup]
+2025-12-22T03:31:42.5113038Z Installing the linux-x64 Dart SDK version 3.10.6 from the stable (release) channel.
+2025-12-22T03:31:42.5131664Z https://storage.googleapis.com/dart-archive/channels/stable/release/3.10.6/sdk/dartsdk-linux-x64-release.zip ...
+2025-12-22T03:31:44.1086716Z [command]/usr/bin/unzip -o -q /home/runner/work/_temp/dartsdk-linux-x64-release.zip
+2025-12-22T03:31:50.0048729Z [command]/opt/hostedtoolcache/dart/3.10.6/x64/bin/dart --version
+2025-12-22T03:31:50.0083537Z Dart SDK version: 3.10.6 (stable) (Tue Dec 16 06:05:04 2025 -0800) on "linux_x64"
+2025-12-22T03:31:50.0799910Z ##[group]Run actions/cache@v4
+2025-12-22T03:31:50.0800267Z with:
+2025-12-22T03:31:50.0800503Z   path: ~/.pub-cache
 .dart_tool
 
-2025-12-22T03:08:08.5984317Z   key: Linux-pub-c22652667c215d89b38da3fdf5739ef003f2aa3c32a7096b4570a62756f26ca7
-2025-12-22T03:08:08.5984998Z   restore-keys: Linux-pub-
+2025-12-22T03:31:50.0800933Z   key: Linux-pub-15fc6c8e24758a1cd7f3b4314c5cbf6870ad268b441bed523f05a0f9749de800
+2025-12-22T03:31:50.0801378Z   restore-keys: Linux-pub-
 
-2025-12-22T03:08:08.5985240Z   enableCrossOsArchive: false
-2025-12-22T03:08:08.5985475Z   fail-on-cache-miss: false
-2025-12-22T03:08:08.5985717Z   lookup-only: false
-2025-12-22T03:08:08.5985907Z   save-always: false
-2025-12-22T03:08:08.5986090Z env:
-2025-12-22T03:08:08.5986298Z   DART_HOME: /opt/hostedtoolcache/dart/3.10.6/x64
-2025-12-22T03:08:08.5986601Z   PUB_CACHE: /home/runner/.pub-cache
-2025-12-22T03:08:08.5986867Z ##[endgroup]
-2025-12-22T03:08:08.8967072Z Cache hit for restore-key: Linux-pub-2305e3d993cf984c401d7c56a0df57d4f162c6e9aff0df2862760d6d07325ebf
-2025-12-22T03:08:09.4424476Z Received 36800908 of 36800908 (100.0%), 77.6 MBs/sec
-2025-12-22T03:08:09.4425879Z Cache Size: ~35 MB (36800908 B)
-2025-12-22T03:08:09.4455438Z [command]/usr/bin/tar -xf /home/runner/work/_temp/b7c7ca77-ac65-4b8e-ab35-009a95f01fc1/cache.tzst -P -C /home/runner/work/lemmy_api_client/lemmy_api_client --use-compress-program unzstd
-2025-12-22T03:08:09.9042938Z Cache restored successfully
-2025-12-22T03:08:09.9195878Z Cache restored from key: Linux-pub-2305e3d993cf984c401d7c56a0df57d4f162c6e9aff0df2862760d6d07325ebf
-2025-12-22T03:08:09.9310281Z ##[group]Run dart pub get
-2025-12-22T03:08:09.9310626Z [36;1mdart pub get[0m
-2025-12-22T03:08:09.9346699Z shell: /usr/bin/bash -e {0}
-2025-12-22T03:08:09.9346957Z env:
-2025-12-22T03:08:09.9347185Z   DART_HOME: /opt/hostedtoolcache/dart/3.10.6/x64
-2025-12-22T03:08:09.9347496Z   PUB_CACHE: /home/runner/.pub-cache
-2025-12-22T03:08:09.9347746Z ##[endgroup]
-2025-12-22T03:08:09.9573540Z Resolving dependencies...
-2025-12-22T03:08:10.3765916Z Downloading packages...
-2025-12-22T03:08:10.4507572Z + _fe_analyzer_shared 85.0.0 (92.0.0 available)
-2025-12-22T03:08:10.4508117Z + analyzer 7.7.1 (9.0.0 available)
-2025-12-22T03:08:10.4508513Z + args 2.7.0
-2025-12-22T03:08:10.4508810Z + async 2.13.0
-2025-12-22T03:08:10.4509143Z + boolean_selector 2.1.2
-2025-12-22T03:08:10.4509512Z + build 2.5.4 (4.0.3 available)
-2025-12-22T03:08:10.4509942Z + build_config 1.1.2 (1.2.0 available)
-2025-12-22T03:08:10.4510379Z + build_daemon 4.1.1
-2025-12-22T03:08:10.4510824Z + build_resolvers 2.5.4 (3.0.4 available)
-2025-12-22T03:08:10.4511335Z + build_runner 2.5.4 (2.10.4 available)
-2025-12-22T03:08:10.4512139Z + build_runner_core 9.1.2 (9.3.2 available)
-2025-12-22T03:08:10.4512647Z + built_collection 5.1.1
-2025-12-22T03:08:10.4513044Z + built_value 8.12.1
-2025-12-22T03:08:10.4513405Z + checked_yaml 2.0.4
-2025-12-22T03:08:10.4513754Z + cli_config 0.2.0
-2025-12-22T03:08:10.4514103Z + code_builder 4.11.0
-2025-12-22T03:08:10.4514470Z + collection 1.19.1
-2025-12-22T03:08:10.4515078Z + convert 3.1.2
-2025-12-22T03:08:10.4515442Z + coverage 1.15.0
-2025-12-22T03:08:10.4515777Z + crypto 3.0.7
-2025-12-22T03:08:10.4516119Z + dart_style 3.1.1 (3.1.3 available)
-2025-12-22T03:08:10.4516534Z + file 7.0.1
-2025-12-22T03:08:10.4516842Z + fixnum 1.1.1
-2025-12-22T03:08:10.4517182Z + freezed 2.5.8 (3.2.3 available)
-2025-12-22T03:08:10.4517642Z + freezed_annotation 2.4.4 (3.1.0 available)
-2025-12-22T03:08:10.4518164Z + frontend_server_client 4.0.0
-2025-12-22T03:08:10.4518589Z + glob 2.1.3
-2025-12-22T03:08:10.4518928Z + graphs 2.3.2
-2025-12-22T03:08:10.4519271Z + http 1.6.0
-2025-12-22T03:08:10.4519668Z + http_multi_server 3.2.2
-2025-12-22T03:08:10.4520072Z + http_parser 4.1.2
-2025-12-22T03:08:10.4520425Z + io 1.0.5
-2025-12-22T03:08:10.4520765Z + js 0.7.2
-2025-12-22T03:08:10.4521096Z + json_annotation 4.9.0
-2025-12-22T03:08:10.4521534Z + json_serializable 6.9.5 (6.11.3 available)
-2025-12-22T03:08:10.4521982Z + lints 5.1.1 (6.0.0 available)
-2025-12-22T03:08:10.4522383Z + logging 1.3.0
-2025-12-22T03:08:10.4522746Z + matcher 0.12.17 (0.12.18 available)
-2025-12-22T03:08:10.4523183Z + meta 1.17.0
-2025-12-22T03:08:10.4523523Z + mime 2.0.0
-2025-12-22T03:08:10.4523840Z + node_preamble 2.0.2
-2025-12-22T03:08:10.4524234Z + package_config 2.2.0
-2025-12-22T03:08:10.4524939Z + path 1.9.1
-2025-12-22T03:08:10.4525286Z + pool 1.5.2
-2025-12-22T03:08:10.4525587Z + pub_semver 2.2.0
-2025-12-22T03:08:10.4525916Z + pubspec_parse 1.5.0
-2025-12-22T03:08:10.4526258Z + shelf 1.4.2
-2025-12-22T03:08:10.4526601Z + shelf_packages_handler 3.0.2
-2025-12-22T03:08:10.4527003Z + shelf_static 1.1.3
-2025-12-22T03:08:10.4527352Z + shelf_web_socket 3.0.0
-2025-12-22T03:08:10.4527726Z + source_gen 2.0.0 (4.1.1 available)
-2025-12-22T03:08:10.4528153Z + source_helper 1.3.7 (1.3.9 available)
-2025-12-22T03:08:10.4528599Z + source_map_stack_trace 2.1.2
-2025-12-22T03:08:10.4529000Z + source_maps 0.10.13
-2025-12-22T03:08:10.4529350Z + source_span 1.10.1
-2025-12-22T03:08:10.4529680Z + stack_trace 1.12.1
-2025-12-22T03:08:10.4530011Z + stream_channel 2.1.4
-2025-12-22T03:08:10.4530365Z + stream_transform 2.1.1
-2025-12-22T03:08:10.4530729Z + string_scanner 1.4.1
-2025-12-22T03:08:10.4531088Z + term_glyph 1.2.2
-2025-12-22T03:08:10.4531412Z + test 1.26.3 (1.28.0 available)
-2025-12-22T03:08:10.4531789Z + test_api 0.7.7 (0.7.8 available)
-2025-12-22T03:08:10.4532196Z + test_core 0.6.12 (0.6.14 available)
-2025-12-22T03:08:10.4532600Z + timing 1.0.2
-2025-12-22T03:08:10.4532977Z + typed_data 1.4.0
-2025-12-22T03:08:10.4533321Z + vm_service 15.0.2
-2025-12-22T03:08:10.4533613Z + watcher 1.2.0
-2025-12-22T03:08:10.4534195Z + web 1.1.1
-2025-12-22T03:08:10.4534759Z + web_socket 1.0.1
-2025-12-22T03:08:10.4535096Z + web_socket_channel 3.0.3
-2025-12-22T03:08:10.4535478Z + webkit_inspection_protocol 1.2.1
-2025-12-22T03:08:10.4535868Z + yaml 3.1.3
-2025-12-22T03:08:10.4536192Z Changed 72 dependencies!
-2025-12-22T03:08:10.4536762Z 18 packages have newer versions incompatible with dependency constraints.
-2025-12-22T03:08:10.4537450Z Try `dart pub outdated` for more information.
-2025-12-22T03:08:10.4550442Z Resolving dependencies in `./example`...
-2025-12-22T03:08:10.4584967Z Downloading packages...
-2025-12-22T03:08:10.4591945Z Got dependencies in `./example`.
-2025-12-22T03:08:10.4728239Z ##[group]Run dart format --set-exit-if-changed --output none .
-2025-12-22T03:08:10.4728738Z [36;1mdart format --set-exit-if-changed --output none .[0m
-2025-12-22T03:08:10.4761475Z shell: /usr/bin/bash -e {0}
-2025-12-22T03:08:10.4761708Z env:
-2025-12-22T03:08:10.4761924Z   DART_HOME: /opt/hostedtoolcache/dart/3.10.6/x64
-2025-12-22T03:08:10.4762248Z   PUB_CACHE: /home/runner/.pub-cache
-2025-12-22T03:08:10.4762662Z ##[endgroup]
-2025-12-22T03:08:10.4987424Z Warning: Package resolution error when reading "analysis_options.yaml" file:
-2025-12-22T03:08:10.4988135Z Failed to resolve package URI "package:lints/recommended.yaml" in include.
-2025-12-22T03:08:10.5093270Z Changed lib/src/pictrs.freezed.dart
-2025-12-22T03:08:10.5110719Z Changed lib/src/pictrs.g.dart
-2025-12-22T03:08:10.5481508Z Changed lib/src/v3/api/comment/comment.freezed.dart
-2025-12-22T03:08:10.5547016Z Changed lib/src/v3/api/comment/comment.g.dart
-2025-12-22T03:08:10.5880464Z Changed lib/src/v3/api/community.freezed.dart
-2025-12-22T03:08:10.5918042Z Changed lib/src/v3/api/community.g.dart
-2025-12-22T03:08:10.5949891Z Changed lib/src/v3/api/modlog.freezed.dart
-2025-12-22T03:08:10.5956058Z Changed lib/src/v3/api/modlog.g.dart
-2025-12-22T03:08:10.6300668Z Changed lib/src/v3/api/post.freezed.dart
-2025-12-22T03:08:10.6349899Z Changed lib/src/v3/api/post.g.dart
-2025-12-22T03:08:10.6552315Z Changed lib/src/v3/api/private_message/private_message.freezed.dart
-2025-12-22T03:08:10.6587876Z Changed lib/src/v3/api/private_message/private_message.g.dart
-2025-12-22T03:08:10.6946300Z Changed lib/src/v3/api/site.freezed.dart
-2025-12-22T03:08:10.6979181Z Changed lib/src/v3/api/site.g.dart
-2025-12-22T03:08:10.7570737Z Changed lib/src/v3/api/user/person.freezed.dart
-2025-12-22T03:08:10.7627872Z Changed lib/src/v3/api/user/person.g.dart
-2025-12-22T03:08:10.7748179Z Changed lib/src/v3/models/admin/admin_purge_comment.freezed.dart
-2025-12-22T03:08:10.7758028Z Changed lib/src/v3/models/admin/admin_purge_comment.g.dart
-2025-12-22T03:08:10.7779523Z Changed lib/src/v3/models/admin/admin_purge_community.freezed.dart
-2025-12-22T03:08:10.7816530Z Changed lib/src/v3/models/admin/admin_purge_community.g.dart
-2025-12-22T03:08:10.7838071Z Changed lib/src/v3/models/admin/admin_purge_person.freezed.dart
-2025-12-22T03:08:10.7844797Z Changed lib/src/v3/models/admin/admin_purge_person.g.dart
-2025-12-22T03:08:10.7868562Z Changed lib/src/v3/models/admin/admin_purge_post.freezed.dart
-2025-12-22T03:08:10.7878441Z Changed lib/src/v3/models/admin/admin_purge_post.g.dart
-2025-12-22T03:08:10.8011905Z Changed lib/src/v3/models/aggregates.freezed.dart
-2025-12-22T03:08:10.8037300Z Changed lib/src/v3/models/aggregates.g.dart
-2025-12-22T03:08:10.8575384Z Changed lib/src/v3/models/api.freezed.dart
-2025-12-22T03:08:10.8676132Z Changed lib/src/v3/models/api.g.dart
-2025-12-22T03:08:10.8727405Z Changed lib/src/v3/models/comment/get_comments_response.freezed.dart
-2025-12-22T03:08:10.8734237Z Changed lib/src/v3/models/comment/get_comments_response.g.dart
-2025-12-22T03:08:10.8788649Z Changed lib/src/v3/models/image/image_details.freezed.dart
-2025-12-22T03:08:10.8794788Z Changed lib/src/v3/models/image/image_details.g.dart
-2025-12-22T03:08:10.8823453Z Changed lib/src/v3/models/jwt.freezed.dart
-2025-12-22T03:08:10.8828021Z Changed lib/src/v3/models/jwt.g.dart
-2025-12-22T03:08:10.8876213Z Changed lib/src/v3/models/mod/mod_hide_community.freezed.dart
-2025-12-22T03:08:10.8883599Z Changed lib/src/v3/models/mod/mod_hide_community.g.dart
-2025-12-22T03:08:10.8930015Z Changed lib/src/v3/models/post/get_posts_response.freezed.dart
-2025-12-22T03:08:10.8935329Z Changed lib/src/v3/models/post/get_posts_response.g.dart
-2025-12-22T03:08:10.8978677Z Changed lib/src/v3/models/post/mark_post_as_read_response.freezed.dart
-2025-12-22T03:08:10.8983011Z Changed lib/src/v3/models/post/mark_post_as_read_response.g.dart
-2025-12-22T03:08:10.9044802Z Changed lib/src/v3/models/post/post.freezed.dart
-2025-12-22T03:08:10.9054894Z Changed lib/src/v3/models/post/post.g.dart
-2025-12-22T03:08:10.9102001Z Changed lib/src/v3/models/private_message/list_private_message_reports_response.freezed.dart
-2025-12-22T03:08:10.9110681Z Changed lib/src/v3/models/private_message/list_private_message_reports_response.g.dart
-2025-12-22T03:08:10.9142873Z Changed lib/src/v3/models/private_message/private_message_report.freezed.dart
-2025-12-22T03:08:10.9150152Z Changed lib/src/v3/models/private_message/private_message_report.g.dart
-2025-12-22T03:08:10.9170226Z Changed lib/src/v3/models/private_message/private_message_report_response.freezed.dart
-2025-12-22T03:08:10.9175106Z Changed lib/src/v3/models/private_message/private_message_report_response.g.dart
-2025-12-22T03:08:10.9194027Z Changed lib/src/v3/models/private_message/private_message_response.freezed.dart
-2025-12-22T03:08:10.9197294Z Changed lib/src/v3/models/private_message/private_message_response.g.dart
-2025-12-22T03:08:10.9215687Z Changed lib/src/v3/models/private_message/private_messages_response.freezed.dart
-2025-12-22T03:08:10.9220557Z Changed lib/src/v3/models/private_message/private_messages_response.g.dart
-2025-12-22T03:08:11.0142397Z Changed lib/src/v3/models/source.freezed.dart
-2025-12-22T03:08:11.0225907Z Changed lib/src/v3/models/source.g.dart
-2025-12-22T03:08:11.0271141Z Changed lib/src/v3/models/user/save_user_settings_response.freezed.dart
-2025-12-22T03:08:11.0277939Z Changed lib/src/v3/models/user/save_user_settings_response.g.dart
-2025-12-22T03:08:11.0293467Z Changed lib/src/v3/models/user/success_response.freezed.dart
-2025-12-22T03:08:11.0296038Z Changed lib/src/v3/models/user/success_response.g.dart
-2025-12-22T03:08:11.0311560Z Changed lib/src/v3/models/user/update_totp_response.freezed.dart
-2025-12-22T03:08:11.0313863Z Changed lib/src/v3/models/user/update_totp_response.g.dart
-2025-12-22T03:08:11.1612143Z Changed lib/src/v3/models/views.freezed.dart
-2025-12-22T03:08:11.1777447Z Changed lib/src/v3/models/views.g.dart
-2025-12-22T03:08:11.1846012Z Changed lib/src/v3/views/comment_view.freezed.dart
-2025-12-22T03:08:11.1851984Z Changed lib/src/v3/views/comment_view.g.dart
-2025-12-22T03:08:11.1879561Z Changed lib/src/v3/views/private_message_report_view.freezed.dart
-2025-12-22T03:08:11.1884150Z Changed lib/src/v3/views/private_message_report_view.g.dart
-2025-12-22T03:08:11.2016733Z Formatted 128 files (66 changed) in 0.70 seconds.
-2025-12-22T03:08:11.2098917Z ##[error]Process completed with exit code 1.
-2025-12-22T03:08:11.2198329Z Post job cleanup.
-2025-12-22T03:08:11.3132031Z [command]/usr/bin/git version
-2025-12-22T03:08:11.3167946Z git version 2.52.0
-2025-12-22T03:08:11.3216186Z Temporarily overriding HOME='/home/runner/work/_temp/144f4ca5-0d20-46d9-bb20-6d5c5ee16b99' before making global git config changes
-2025-12-22T03:08:11.3217386Z Adding repository directory to the temporary git global config as a safe directory
-2025-12-22T03:08:11.3221358Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/lemmy_api_client/lemmy_api_client
-2025-12-22T03:08:11.3256019Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2025-12-22T03:08:11.3288441Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2025-12-22T03:08:11.3514460Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2025-12-22T03:08:11.3534772Z http.https://github.com/.extraheader
-2025-12-22T03:08:11.3546785Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
-2025-12-22T03:08:11.3576854Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-2025-12-22T03:08:11.3796293Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
-2025-12-22T03:08:11.3825878Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
-2025-12-22T03:08:11.4160332Z Cleaning up orphan processes
+2025-12-22T03:31:50.0801647Z   enableCrossOsArchive: false
+2025-12-22T03:31:50.0801919Z   fail-on-cache-miss: false
+2025-12-22T03:31:50.0802202Z   lookup-only: false
+2025-12-22T03:31:50.0802430Z   save-always: false
+2025-12-22T03:31:50.0802655Z env:
+2025-12-22T03:31:50.0802900Z   DART_HOME: /opt/hostedtoolcache/dart/3.10.6/x64
+2025-12-22T03:31:50.0803241Z   PUB_CACHE: /home/runner/.pub-cache
+2025-12-22T03:31:50.0803541Z ##[endgroup]
+2025-12-22T03:31:50.5324794Z Cache hit for restore-key: Linux-pub-20ed74220b6c1ee3fc4073ec1c97bd83bdd3a0d6f26c071cbac0ad9bafa86e0f
+2025-12-22T03:31:51.8267934Z Received 4194304 of 36791058 (11.4%), 4.0 MBs/sec
+2025-12-22T03:31:52.0639199Z Received 36791058 of 36791058 (100.0%), 28.3 MBs/sec
+2025-12-22T03:31:52.0642750Z Cache Size: ~35 MB (36791058 B)
+2025-12-22T03:31:52.0672522Z [command]/usr/bin/tar -xf /home/runner/work/_temp/451680ce-5598-45f4-a668-96c06980c3d8/cache.tzst -P -C /home/runner/work/lemmy_api_client/lemmy_api_client --use-compress-program unzstd
+2025-12-22T03:31:52.5889324Z Cache restored successfully
+2025-12-22T03:31:52.6036813Z Cache restored from key: Linux-pub-20ed74220b6c1ee3fc4073ec1c97bd83bdd3a0d6f26c071cbac0ad9bafa86e0f
+2025-12-22T03:31:52.6147318Z ##[group]Run dart pub get
+2025-12-22T03:31:52.6147636Z [36;1mdart pub get[0m
+2025-12-22T03:31:52.6184597Z shell: /usr/bin/bash -e {0}
+2025-12-22T03:31:52.6184847Z env:
+2025-12-22T03:31:52.6185069Z   DART_HOME: /opt/hostedtoolcache/dart/3.10.6/x64
+2025-12-22T03:31:52.6185370Z   PUB_CACHE: /home/runner/.pub-cache
+2025-12-22T03:31:52.6185632Z ##[endgroup]
+2025-12-22T03:31:52.6405065Z Resolving dependencies...
+2025-12-22T03:31:53.0344963Z Downloading packages...
+2025-12-22T03:31:54.0701405Z + _fe_analyzer_shared 91.0.0 (92.0.0 available)
+2025-12-22T03:31:54.0702022Z + analyzer 8.4.1 (9.0.0 available)
+2025-12-22T03:31:54.0702502Z + args 2.7.0
+2025-12-22T03:31:54.0702866Z + async 2.13.0
+2025-12-22T03:31:54.0703310Z + boolean_selector 2.1.2
+2025-12-22T03:31:54.0703760Z + build 4.0.3
+2025-12-22T03:31:54.0704159Z + build_config 1.2.0
+2025-12-22T03:31:54.0704578Z + build_daemon 4.1.1
+2025-12-22T03:31:54.0705005Z + build_runner 2.10.4
+2025-12-22T03:31:54.0705914Z + built_collection 5.1.1
+2025-12-22T03:31:54.0706413Z + built_value 8.12.1
+2025-12-22T03:31:54.0706787Z + checked_yaml 2.0.4
+2025-12-22T03:31:54.0707192Z + cli_config 0.2.0
+2025-12-22T03:31:54.0707583Z + code_builder 4.11.0
+2025-12-22T03:31:54.0707989Z + collection 1.19.1
+2025-12-22T03:31:54.0708350Z + convert 3.1.2
+2025-12-22T03:31:54.0708645Z + coverage 1.15.0
+2025-12-22T03:31:54.0709148Z + crypto 3.0.7
+2025-12-22T03:31:54.0709448Z + dart_style 3.1.3
+2025-12-22T03:31:54.0709738Z + file 7.0.1
+2025-12-22T03:31:54.0710013Z + fixnum 1.1.1
+2025-12-22T03:31:54.0710295Z + freezed 3.2.3
+2025-12-22T03:31:54.0710608Z + freezed_annotation 3.1.0
+2025-12-22T03:31:54.0710982Z + frontend_server_client 4.0.0
+2025-12-22T03:31:54.0711336Z + glob 2.1.3
+2025-12-22T03:31:54.0711609Z + graphs 2.3.2
+2025-12-22T03:31:54.0711889Z + http 1.6.0
+2025-12-22T03:31:54.0712180Z + http_multi_server 3.2.2
+2025-12-22T03:31:54.0712523Z + http_parser 4.1.2
+2025-12-22T03:31:54.0712823Z + io 1.0.5
+2025-12-22T03:31:54.0713098Z + json_annotation 4.9.0
+2025-12-22T03:31:54.0713473Z + json_serializable 6.11.2 (6.11.3 available)
+2025-12-22T03:31:54.0713898Z + lints 5.1.1 (6.0.0 available)
+2025-12-22T03:31:54.0714244Z + logging 1.3.0
+2025-12-22T03:31:54.0714477Z + matcher 0.12.18
+2025-12-22T03:31:54.0714652Z + meta 1.17.0
+2025-12-22T03:31:54.0714822Z + mime 2.0.0
+2025-12-22T03:31:54.0714993Z + node_preamble 2.0.2
+2025-12-22T03:31:54.0715186Z + package_config 2.2.0
+2025-12-22T03:31:54.0715382Z + path 1.9.1
+2025-12-22T03:31:54.0715551Z + pool 1.5.2
+2025-12-22T03:31:54.0715727Z + pub_semver 2.2.0
+2025-12-22T03:31:54.0715910Z + pubspec_parse 1.5.0
+2025-12-22T03:31:54.0716098Z + shelf 1.4.2
+2025-12-22T03:31:54.0716282Z + shelf_packages_handler 3.0.2
+2025-12-22T03:31:54.0716503Z + shelf_static 1.1.3
+2025-12-22T03:31:54.0716689Z + shelf_web_socket 3.0.0
+2025-12-22T03:31:54.0716888Z + source_gen 4.1.1
+2025-12-22T03:31:54.0717084Z + source_helper 1.3.8 (1.3.9 available)
+2025-12-22T03:31:54.0717335Z + source_map_stack_trace 2.1.2
+2025-12-22T03:31:54.0717547Z + source_maps 0.10.13
+2025-12-22T03:31:54.0717736Z + source_span 1.10.1
+2025-12-22T03:31:54.0717939Z + stack_trace 1.12.1
+2025-12-22T03:31:54.0718121Z + stream_channel 2.1.4
+2025-12-22T03:31:54.0718314Z + stream_transform 2.1.1
+2025-12-22T03:31:54.0718512Z + string_scanner 1.4.1
+2025-12-22T03:31:54.0718702Z + term_glyph 1.2.2
+2025-12-22T03:31:54.0719076Z + test 1.28.0
+2025-12-22T03:31:54.0719252Z + test_api 0.7.8
+2025-12-22T03:31:54.0719425Z + test_core 0.6.14
+2025-12-22T03:31:54.0719600Z + typed_data 1.4.0
+2025-12-22T03:31:54.0719777Z + vm_service 15.0.2
+2025-12-22T03:31:54.0719949Z + watcher 1.2.0
+2025-12-22T03:31:54.0720137Z + web 1.1.1
+2025-12-22T03:31:54.0720306Z + web_socket 1.0.1
+2025-12-22T03:31:54.0720597Z + web_socket_channel 3.0.3
+2025-12-22T03:31:54.0720854Z + webkit_inspection_protocol 1.2.1
+2025-12-22T03:31:54.0721088Z + yaml 3.1.3
+2025-12-22T03:31:54.0721284Z Changed 68 dependencies!
+2025-12-22T03:31:54.0721615Z 5 packages have newer versions incompatible with dependency constraints.
+2025-12-22T03:31:54.0722209Z Try `dart pub outdated` for more information.
+2025-12-22T03:31:54.0739311Z Resolving dependencies in `./example`...
+2025-12-22T03:31:54.0774332Z Downloading packages...
+2025-12-22T03:31:54.0781524Z Got dependencies in `./example`.
+2025-12-22T03:31:54.0953936Z ##[group]Run find lib test -name "*.dart" ! -name "*.freezed.dart" ! -name "*.g.dart" | xargs dart format --set-exit-if-changed --output none
+2025-12-22T03:31:54.0954793Z [36;1mfind lib test -name "*.dart" ! -name "*.freezed.dart" ! -name "*.g.dart" | xargs dart format --set-exit-if-changed --output none[0m
+2025-12-22T03:31:54.0987982Z shell: /usr/bin/bash -e {0}
+2025-12-22T03:31:54.0988215Z env:
+2025-12-22T03:31:54.0988435Z   DART_HOME: /opt/hostedtoolcache/dart/3.10.6/x64
+2025-12-22T03:31:54.0988746Z   PUB_CACHE: /home/runner/.pub-cache
+2025-12-22T03:31:54.0989244Z ##[endgroup]
+2025-12-22T03:31:54.2177272Z Formatted 60 files (0 changed) in 0.10 seconds.
+2025-12-22T03:31:54.2256309Z ##[group]Run dart analyze --fatal-warnings
+2025-12-22T03:31:54.2256822Z [36;1mdart analyze --fatal-warnings[0m
+2025-12-22T03:31:54.2289408Z shell: /usr/bin/bash -e {0}
+2025-12-22T03:31:54.2289638Z env:
+2025-12-22T03:31:54.2289853Z   DART_HOME: /opt/hostedtoolcache/dart/3.10.6/x64
+2025-12-22T03:31:54.2290149Z   PUB_CACHE: /home/runner/.pub-cache
+2025-12-22T03:31:54.2290382Z ##[endgroup]
+2025-12-22T03:31:54.2488014Z Analyzing lemmy_api_client...
+2025-12-22T03:31:57.2342955Z 
+2025-12-22T03:31:57.2345605Z   error - lib/src/pictrs.dart:48:7 - Missing concrete implementations of 'getter mixin _$PictrsUploadFile on Object.deleteToken', 'getter mixin _$PictrsUploadFile on Object.file', and 'mixin _$PictrsUploadFile on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2349797Z   error - lib/src/pictrs.dart:57:7 - Missing concrete implementations of 'getter mixin _$PictrsUpload on Object.files', 'getter mixin _$PictrsUpload on Object.instanceHost', 'getter mixin _$PictrsUpload on Object.msg', and 'mixin _$PictrsUpload on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2353979Z   error - lib/src/v3/api/comment/comment.dart:12:7 - Missing concrete implementations of 'getter mixin _$CreateComment on Object.auth', 'getter mixin _$CreateComment on Object.content', 'getter mixin _$CreateComment on Object.formId', 'getter mixin _$CreateComment on Object.parentId', and 2 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2358243Z   error - lib/src/v3/api/comment/comment.dart:28:7 - Missing concrete implementations of 'getter mixin _$EditComment on Object.auth', 'getter mixin _$EditComment on Object.commentId', 'getter mixin _$EditComment on Object.content', 'getter mixin _$EditComment on Object.formId', and 1 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2362699Z   error - lib/src/v3/api/comment/comment.dart:44:7 - Missing concrete implementations of 'getter mixin _$DeleteComment on Object.auth', 'getter mixin _$DeleteComment on Object.commentId', 'getter mixin _$DeleteComment on Object.deleted', and 'mixin _$DeleteComment on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2367460Z   error - lib/src/v3/api/comment/comment.dart:60:7 - Missing concrete implementations of 'getter mixin _$RemoveComment on Object.auth', 'getter mixin _$RemoveComment on Object.commentId', 'getter mixin _$RemoveComment on Object.reason', 'getter mixin _$RemoveComment on Object.removed', and 1 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2372161Z   error - lib/src/v3/api/comment/comment.dart:76:7 - Missing concrete implementations of 'getter mixin _$MarkCommentAsRead on Object.CommentReplyId', 'getter mixin _$MarkCommentAsRead on Object.auth', 'getter mixin _$MarkCommentAsRead on Object.read', and 'mixin _$MarkCommentAsRead on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2377314Z   error - lib/src/v3/api/comment/comment.dart:92:7 - Missing concrete implementations of 'getter mixin _$SaveComment on Object.auth', 'getter mixin _$SaveComment on Object.commentId', 'getter mixin _$SaveComment on Object.save', and 'mixin _$SaveComment on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2382304Z   error - lib/src/v3/api/comment/comment.dart:108:7 - Missing concrete implementations of 'getter mixin _$CreateCommentLike on Object.auth', 'getter mixin _$CreateCommentLike on Object.commentId', 'getter mixin _$CreateCommentLike on Object.score', and 'mixin _$CreateCommentLike on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2386552Z   error - lib/src/v3/api/comment/comment.dart:124:7 - Missing concrete implementations of 'getter mixin _$GetComment on Object.auth', 'getter mixin _$GetComment on Object.id', and 'mixin _$GetComment on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2390869Z   error - lib/src/v3/api/comment/comment.dart:143:7 - Missing concrete implementations of 'getter mixin _$GetComments on Object.auth', 'getter mixin _$GetComments on Object.communityId', 'getter mixin _$GetComments on Object.communityName', 'getter mixin _$GetComments on Object.dislikedOnly', and 10 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2395556Z   error - lib/src/v3/api/comment/comment.dart:173:7 - Missing concrete implementations of 'getter mixin _$CreateCommentReport on Object.auth', 'getter mixin _$CreateCommentReport on Object.commentId', 'getter mixin _$CreateCommentReport on Object.reason', and 'mixin _$CreateCommentReport on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2400390Z   error - lib/src/v3/api/comment/comment.dart:189:7 - Missing concrete implementations of 'getter mixin _$ResolveCommentReport on Object.auth', 'getter mixin _$ResolveCommentReport on Object.reportId', 'getter mixin _$ResolveCommentReport on Object.resolved', and 'mixin _$ResolveCommentReport on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2405115Z   error - lib/src/v3/api/comment/comment.dart:205:7 - Missing concrete implementations of 'getter mixin _$ListCommentReports on Object.auth', 'getter mixin _$ListCommentReports on Object.communityId', 'getter mixin _$ListCommentReports on Object.limit', 'getter mixin _$ListCommentReports on Object.page', and 2 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2409597Z   error - lib/src/v3/api/community.dart:15:7 - Missing concrete implementations of 'getter mixin _$GetCommunity on Object.auth', 'getter mixin _$GetCommunity on Object.id', 'getter mixin _$GetCommunity on Object.name', and 'mixin _$GetCommunity on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2413814Z   error - lib/src/v3/api/community.dart:32:7 - Missing concrete implementations of 'getter mixin _$CreateCommunity on Object.auth', 'getter mixin _$CreateCommunity on Object.banner', 'getter mixin _$CreateCommunity on Object.description', 'getter mixin _$CreateCommunity on Object.icon', and 4 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2418201Z   error - lib/src/v3/api/community.dart:49:7 - Missing concrete implementations of 'getter mixin _$ListCommunities on Object.auth', 'getter mixin _$ListCommunities on Object.limit', 'getter mixin _$ListCommunities on Object.page', 'getter mixin _$ListCommunities on Object.showNsfw', and 3 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2423007Z   error - lib/src/v3/api/community.dart:66:7 - Missing concrete implementations of 'getter mixin _$BanFromCommunity on Object.auth', 'getter mixin _$BanFromCommunity on Object.ban', 'getter mixin _$BanFromCommunity on Object.communityId', 'getter mixin _$BanFromCommunity on Object.expires', and 4 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2427599Z   error - lib/src/v3/api/community.dart:83:7 - Missing concrete implementations of 'getter mixin _$AddModToCommunity on Object.added', 'getter mixin _$AddModToCommunity on Object.auth', 'getter mixin _$AddModToCommunity on Object.communityId', 'getter mixin _$AddModToCommunity on Object.personId', and 1 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2432492Z   error - lib/src/v3/api/community.dart:100:7 - Missing concrete implementations of 'getter mixin _$EditCommunity on Object.auth', 'getter mixin _$EditCommunity on Object.banner', 'getter mixin _$EditCommunity on Object.communityId', 'getter mixin _$EditCommunity on Object.description', and 4 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2436863Z   error - lib/src/v3/api/community.dart:117:7 - Missing concrete implementations of 'getter mixin _$DeleteCommunity on Object.auth', 'getter mixin _$DeleteCommunity on Object.communityId', 'getter mixin _$DeleteCommunity on Object.deleted', and 'mixin _$DeleteCommunity on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2441527Z   error - lib/src/v3/api/community.dart:134:7 - Missing concrete implementations of 'getter mixin _$RemoveCommunity on Object.auth', 'getter mixin _$RemoveCommunity on Object.communityId', 'getter mixin _$RemoveCommunity on Object.expires', 'getter mixin _$RemoveCommunity on Object.reason', and 2 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2445929Z   error - lib/src/v3/api/community.dart:151:7 - Missing concrete implementations of 'getter mixin _$FollowCommunity on Object.auth', 'getter mixin _$FollowCommunity on Object.communityId', 'getter mixin _$FollowCommunity on Object.follow', and 'mixin _$FollowCommunity on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2450270Z   error - lib/src/v3/api/community.dart:168:7 - Missing concrete implementations of 'getter mixin _$TransferCommunity on Object.auth', 'getter mixin _$TransferCommunity on Object.communityId', 'getter mixin _$TransferCommunity on Object.personId', and 'mixin _$TransferCommunity on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2452751Z   error - lib/src/v3/api/community.dart:185:7 - Missing concrete implementations of 'getter mixin _$BlockCommunity on Object.auth', 'getter mixin _$BlockCommunity on Object.block', 'getter mixin _$BlockCommunity on Object.communityId', and 'mixin _$BlockCommunity on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2455016Z   error - lib/src/v3/api/modlog.dart:13:7 - Missing concrete implementations of 'getter mixin _$GetModlog on Object.auth', 'getter mixin _$GetModlog on Object.commentId', 'getter mixin _$GetModlog on Object.communityId', 'getter mixin _$GetModlog on Object.limit', and 6 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2457036Z   error - lib/src/v3/api/post.dart:15:7 - Missing concrete implementations of 'getter mixin _$GetPost on Object.auth', 'getter mixin _$GetPost on Object.id', and 'mixin _$GetPost on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2459335Z   error - lib/src/v3/api/post.dart:31:7 - Missing concrete implementations of 'getter mixin _$CreatePost on Object.altText', 'getter mixin _$CreatePost on Object.auth', 'getter mixin _$CreatePost on Object.body', 'getter mixin _$CreatePost on Object.communityId', and 6 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2461689Z   error - lib/src/v3/api/post.dart:48:7 - Missing concrete implementations of 'getter mixin _$GetPosts on Object.auth', 'getter mixin _$GetPosts on Object.communityId', 'getter mixin _$GetPosts on Object.communityName', 'getter mixin _$GetPosts on Object.dislikedOnly', and 12 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2463915Z   error - lib/src/v3/api/post.dart:80:7 - Missing concrete implementations of 'getter mixin _$CreatePostLike on Object.auth', 'getter mixin _$CreatePostLike on Object.postId', 'getter mixin _$CreatePostLike on Object.score', and 'mixin _$CreatePostLike on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2466096Z   error - lib/src/v3/api/post.dart:96:7 - Missing concrete implementations of 'getter mixin _$EditPost on Object.altText', 'getter mixin _$EditPost on Object.auth', 'getter mixin _$EditPost on Object.body', 'getter mixin _$EditPost on Object.customThumbnail', and 5 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2468229Z   error - lib/src/v3/api/post.dart:112:7 - Missing concrete implementations of 'getter mixin _$DeletePost on Object.auth', 'getter mixin _$DeletePost on Object.deleted', 'getter mixin _$DeletePost on Object.postId', and 'mixin _$DeletePost on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2470532Z   error - lib/src/v3/api/post.dart:128:7 - Missing concrete implementations of 'getter mixin _$RemovePost on Object.auth', 'getter mixin _$RemovePost on Object.postId', 'getter mixin _$RemovePost on Object.reason', 'getter mixin _$RemovePost on Object.removed', and 1 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2472632Z   error - lib/src/v3/api/post.dart:144:7 - Missing concrete implementations of 'getter mixin _$LockPost on Object.auth', 'getter mixin _$LockPost on Object.locked', 'getter mixin _$LockPost on Object.postId', and 'mixin _$LockPost on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2474696Z   error - lib/src/v3/api/post.dart:160:7 - Missing concrete implementations of 'getter mixin _$StickyPost on Object.auth', 'getter mixin _$StickyPost on Object.postId', 'getter mixin _$StickyPost on Object.stickied', and 'mixin _$StickyPost on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2476745Z   error - lib/src/v3/api/post.dart:176:7 - Missing concrete implementations of 'getter mixin _$SavePost on Object.auth', 'getter mixin _$SavePost on Object.postId', 'getter mixin _$SavePost on Object.save', and 'mixin _$SavePost on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2478757Z   error - lib/src/v3/api/post.dart:192:7 - Missing concrete implementations of 'getter mixin _$GetSiteMetadata on Object.url' and 'mixin _$GetSiteMetadata on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2480989Z   error - lib/src/v3/api/post.dart:208:7 - Missing concrete implementations of 'getter mixin _$CreatePostReport on Object.auth', 'getter mixin _$CreatePostReport on Object.postId', 'getter mixin _$CreatePostReport on Object.reason', and 'mixin _$CreatePostReport on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2483401Z   error - lib/src/v3/api/post.dart:224:7 - Missing concrete implementations of 'getter mixin _$ResolvePostReport on Object.auth', 'getter mixin _$ResolvePostReport on Object.reportId', 'getter mixin _$ResolvePostReport on Object.resolved', and 'mixin _$ResolvePostReport on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2485740Z   error - lib/src/v3/api/post.dart:240:7 - Missing concrete implementations of 'getter mixin _$ListPostReports on Object.auth', 'getter mixin _$ListPostReports on Object.communityId', 'getter mixin _$ListPostReports on Object.limit', 'getter mixin _$ListPostReports on Object.page', and 2 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2488043Z   error - lib/src/v3/api/post.dart:259:7 - Missing concrete implementations of 'getter mixin _$MarkPostAsRead on Object.auth', 'getter mixin _$MarkPostAsRead on Object.postId', 'getter mixin _$MarkPostAsRead on Object.postIds', 'getter mixin _$MarkPostAsRead on Object.read', and 1 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2490341Z   error - lib/src/v3/api/post.dart:285:7 - Missing concrete implementations of 'getter mixin _$HidePost on Object.auth', 'getter mixin _$HidePost on Object.hide', 'getter mixin _$HidePost on Object.postIds', and 'mixin _$HidePost on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2492664Z   error - lib/src/v3/api/private_message/private_message.dart:18:7 - Missing concrete implementations of 'getter mixin _$GetPrivateMessages on Object.auth', 'getter mixin _$GetPrivateMessages on Object.creatorId', 'getter mixin _$GetPrivateMessages on Object.limit', 'getter mixin _$GetPrivateMessages on Object.page', and 2 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2495270Z   error - lib/src/v3/api/private_message/private_message.dart:40:7 - Missing concrete implementations of 'getter mixin _$CreatePrivateMessage on Object.auth', 'getter mixin _$CreatePrivateMessage on Object.content', 'getter mixin _$CreatePrivateMessage on Object.recipientId', and 'mixin _$CreatePrivateMessage on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2497879Z   error - lib/src/v3/api/private_message/private_message.dart:59:7 - Missing concrete implementations of 'getter mixin _$EditPrivateMessage on Object.auth', 'getter mixin _$EditPrivateMessage on Object.content', 'getter mixin _$EditPrivateMessage on Object.privateMessageId', and 'mixin _$EditPrivateMessage on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2500682Z   error - lib/src/v3/api/private_message/private_message.dart:82:7 - Missing concrete implementations of 'getter mixin _$DeletePrivateMessage on Object.auth', 'getter mixin _$DeletePrivateMessage on Object.deleted', 'getter mixin _$DeletePrivateMessage on Object.privateMessageId', and 'mixin _$DeletePrivateMessage on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2503530Z   error - lib/src/v3/api/private_message/private_message.dart:105:7 - Missing concrete implementations of 'getter mixin _$MarkPrivateMessageAsRead on Object.auth', 'getter mixin _$MarkPrivateMessageAsRead on Object.privateMessageId', 'getter mixin _$MarkPrivateMessageAsRead on Object.read', and 'mixin _$MarkPrivateMessageAsRead on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2506395Z   error - lib/src/v3/api/private_message/private_message.dart:128:7 - Missing concrete implementations of 'getter mixin _$CreatePrivateMessageReport on Object.auth', 'getter mixin _$CreatePrivateMessageReport on Object.privateMessageId', 'getter mixin _$CreatePrivateMessageReport on Object.reason', and 'mixin _$CreatePrivateMessageReport on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2509507Z   error - lib/src/v3/api/private_message/private_message.dart:151:7 - Missing concrete implementations of 'getter mixin _$ResolvePrivateMessageReport on Object.auth', 'getter mixin _$ResolvePrivateMessageReport on Object.reportId', 'getter mixin _$ResolvePrivateMessageReport on Object.resolved', and 'mixin _$ResolvePrivateMessageReport on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2512357Z   error - lib/src/v3/api/private_message/private_message.dart:174:7 - Missing concrete implementations of 'getter mixin _$ListPrivateMessageReports on Object.auth', 'getter mixin _$ListPrivateMessageReports on Object.communityId', 'getter mixin _$ListPrivateMessageReports on Object.limit', 'getter mixin _$ListPrivateMessageReports on Object.page', and 2 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2514836Z   error - lib/src/v3/api/site.dart:15:7 - Missing concrete implementations of 'getter mixin _$Search on Object.auth', 'getter mixin _$Search on Object.communityId', 'getter mixin _$Search on Object.communityName', 'getter mixin _$Search on Object.creatorId', and 7 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2517109Z   error - lib/src/v3/api/site.dart:43:7 - Missing concrete implementations of 'getter mixin _$CreateSite on Object.applicationQuestion', 'getter mixin _$CreateSite on Object.auth', 'getter mixin _$CreateSite on Object.banner', 'getter mixin _$CreateSite on Object.communityCreationAdminOnly', and 12 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2519622Z   error - lib/src/v3/api/site.dart:76:7 - Missing concrete implementations of 'getter mixin _$EditSite on Object.applicationQuestion', 'getter mixin _$EditSite on Object.auth', 'getter mixin _$EditSite on Object.banner', 'getter mixin _$EditSite on Object.communityCreationAdminOnly', and 12 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2521555Z   error - lib/src/v3/api/site.dart:109:7 - Missing concrete implementations of 'getter mixin _$GetSite on Object.auth' and 'mixin _$GetSite on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2523097Z   error - lib/src/v3/api/site.dart:126:7 - Missing concrete implementations of 'getter mixin _$LeaveAdmin on Object.auth' and 'mixin _$LeaveAdmin on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2524673Z   error - lib/src/v3/api/site.dart:143:7 - Missing concrete implementations of 'getter mixin _$GetSiteConfig on Object.auth' and 'mixin _$GetSiteConfig on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2526565Z   error - lib/src/v3/api/site.dart:160:7 - Missing concrete implementations of 'getter mixin _$SaveSiteConfig on Object.auth', 'getter mixin _$SaveSiteConfig on Object.configHjson', and 'mixin _$SaveSiteConfig on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2528458Z   error - lib/src/v3/api/site.dart:177:7 - Missing concrete implementations of 'getter mixin _$ResolveObject on Object.auth', 'getter mixin _$ResolveObject on Object.q', and 'mixin _$ResolveObject on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2530637Z   error - lib/src/v3/api/site.dart:194:7 - Missing concrete implementations of 'getter mixin _$GetUnreadRegistrationApplicationCount on Object.auth' and 'mixin _$GetUnreadRegistrationApplicationCount on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2533017Z   error - lib/src/v3/api/site.dart:211:7 - Missing concrete implementations of 'getter mixin _$ListRegistrationApplications on Object.auth', 'getter mixin _$ListRegistrationApplications on Object.limit', 'getter mixin _$ListRegistrationApplications on Object.page', 'getter mixin _$ListRegistrationApplications on Object.unreadOnly', and 1 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2537085Z   error - lib/src/v3/api/site.dart:228:7 - Missing concrete implementations of 'getter mixin _$ApproveRegistrationApplication on Object.approve', 'getter mixin _$ApproveRegistrationApplication on Object.auth', 'getter mixin _$ApproveRegistrationApplication on Object.denyReason', 'getter mixin _$ApproveRegistrationApplication on Object.id', and 1 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2539837Z   error - lib/src/v3/api/user/person.dart:23:7 - Missing concrete implementations of 'getter mixin _$Login on Object.password', 'getter mixin _$Login on Object.totp2faToken', 'getter mixin _$Login on Object.usernameOrEmail', and 'mixin _$Login on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2541579Z   error - lib/src/v3/api/user/person.dart:48:7 - Missing concrete implementation of 'mixin _$Logout on Object.toJson'. Try implementing the missing method, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2543070Z   error - lib/src/v3/api/user/person.dart:71:7 - Missing concrete implementations of 'getter mixin _$ExportSettings on Object.auth' and 'mixin _$ExportSettings on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2545299Z   error - lib/src/v3/api/user/person.dart:92:7 - Missing concrete implementations of 'getter mixin _$ImportSettings on Object.auth', 'getter mixin _$ImportSettings on Object.data', and 'mixin _$ImportSettings on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2547539Z   error - lib/src/v3/api/user/person.dart:116:7 - Missing concrete implementations of 'getter mixin _$ValidateAuth on Object.auth' and 'mixin _$ValidateAuth on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2549646Z   error - lib/src/v3/api/user/person.dart:141:7 - Missing concrete implementations of 'getter mixin _$UpdateTotp on Object.auth', 'getter mixin _$UpdateTotp on Object.enabled', 'getter mixin _$UpdateTotp on Object.totpToken', and 'mixin _$UpdateTotp on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2552030Z   error - lib/src/v3/api/user/person.dart:161:7 - Missing concrete implementations of 'getter mixin _$Register on Object.answer', 'getter mixin _$Register on Object.captchaAnswer', 'getter mixin _$Register on Object.captchaUuid', 'getter mixin _$Register on Object.email', and 6 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2553987Z   error - lib/src/v3/api/user/person.dart:187:7 - Missing concrete implementation of 'mixin _$GetCaptcha on Object.toJson'. Try implementing the missing method, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2555894Z   error - lib/src/v3/api/user/person.dart:206:7 - Missing concrete implementations of 'getter mixin _$SaveUserSettings on Object.auth', 'getter mixin _$SaveUserSettings on Object.autoExpand', 'getter mixin _$SaveUserSettings on Object.avatar', 'getter mixin _$SaveUserSettings on Object.banner', and 29 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2558371Z   error - lib/src/v3/api/user/person.dart:255:7 - Missing concrete implementations of 'getter mixin _$ChangePassword on Object.auth', 'getter mixin _$ChangePassword on Object.newPassword', 'getter mixin _$ChangePassword on Object.newPasswordVerify', 'getter mixin _$ChangePassword on Object.oldPassword', and 1 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2561002Z   error - lib/src/v3/api/user/person.dart:271:7 - Missing concrete implementations of 'getter mixin _$GetPersonDetails on Object.auth', 'getter mixin _$GetPersonDetails on Object.communityId', 'getter mixin _$GetPersonDetails on Object.limit', 'getter mixin _$GetPersonDetails on Object.page', and 5 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2563050Z   error - lib/src/v3/api/user/person.dart:287:7 - Missing concrete implementations of 'getter mixin _$MarkAllAsRead on Object.auth' and 'mixin _$MarkAllAsRead on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2564926Z   error - lib/src/v3/api/user/person.dart:303:7 - Missing concrete implementations of 'getter mixin _$AddAdmin on Object.added', 'getter mixin _$AddAdmin on Object.auth', 'getter mixin _$AddAdmin on Object.personId', and 'mixin _$AddAdmin on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2567252Z   error - lib/src/v3/api/user/person.dart:319:7 - Missing concrete implementations of 'getter mixin _$BanPerson on Object.auth', 'getter mixin _$BanPerson on Object.ban', 'getter mixin _$BanPerson on Object.expires', 'getter mixin _$BanPerson on Object.personId', and 3 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2571142Z   error - lib/src/v3/api/user/person.dart:335:7 - Missing concrete implementations of 'getter mixin _$GetReplies on Object.auth', 'getter mixin _$GetReplies on Object.limit', 'getter mixin _$GetReplies on Object.page', 'getter mixin _$GetReplies on Object.sort', and 2 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2573675Z   error - lib/src/v3/api/user/person.dart:351:7 - Missing concrete implementations of 'getter mixin _$GetPersonMentions on Object.auth', 'getter mixin _$GetPersonMentions on Object.limit', 'getter mixin _$GetPersonMentions on Object.page', 'getter mixin _$GetPersonMentions on Object.sort', and 2 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2576338Z   error - lib/src/v3/api/user/person.dart:367:7 - Missing concrete implementations of 'getter mixin _$MarkPersonMentionAsRead on Object.auth', 'getter mixin _$MarkPersonMentionAsRead on Object.personMentionId', 'getter mixin _$MarkPersonMentionAsRead on Object.read', and 'mixin _$MarkPersonMentionAsRead on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2578772Z   error - lib/src/v3/api/user/person.dart:383:7 - Missing concrete implementations of 'getter mixin _$DeleteAccount on Object.auth', 'getter mixin _$DeleteAccount on Object.password', and 'mixin _$DeleteAccount on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2580790Z   error - lib/src/v3/api/user/person.dart:399:7 - Missing concrete implementations of 'getter mixin _$PasswordReset on Object.email' and 'mixin _$PasswordReset on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2582822Z   error - lib/src/v3/api/user/person.dart:415:7 - Missing concrete implementations of 'getter mixin _$PasswordChange on Object.password', 'getter mixin _$PasswordChange on Object.passwordVerify', 'getter mixin _$PasswordChange on Object.token', and 'mixin _$PasswordChange on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2585096Z   error - lib/src/v3/api/user/person.dart:431:7 - Missing concrete implementations of 'getter mixin _$BlockPerson on Object.auth', 'getter mixin _$BlockPerson on Object.block', 'getter mixin _$BlockPerson on Object.personId', and 'mixin _$BlockPerson on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2587015Z   error - lib/src/v3/api/user/person.dart:448:7 - Missing concrete implementations of 'getter mixin _$GetUnreadCount on Object.auth' and 'mixin _$GetUnreadCount on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2589014Z   error - lib/src/v3/api/user/person.dart:465:7 - Missing concrete implementations of 'getter mixin _$GetReportCount on Object.auth', 'getter mixin _$GetReportCount on Object.communityId', and 'mixin _$GetReportCount on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2590955Z   error - lib/src/v3/api/user/person.dart:481:7 - Missing concrete implementations of 'getter mixin _$GetBannedPersons on Object.auth' and 'mixin _$GetBannedPersons on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2592643Z   error - lib/src/v3/api/user/person.dart:497:7 - Missing concrete implementations of 'getter mixin _$VerifyEmail on Object.token' and 'mixin _$VerifyEmail on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2594769Z   error - lib/src/v3/models/admin/admin_purge_comment.dart:9:7 - Missing concrete implementations of 'getter mixin _$AdminPurgeComment on Object.adminPersonId', 'getter mixin _$AdminPurgeComment on Object.id', 'getter mixin _$AdminPurgeComment on Object.postId', 'getter mixin _$AdminPurgeComment on Object.reason', and 2 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2597373Z   error - lib/src/v3/models/admin/admin_purge_community.dart:9:7 - Missing concrete implementations of 'getter mixin _$AdminPurgeCommunity on Object.adminPersonId', 'getter mixin _$AdminPurgeCommunity on Object.id', 'getter mixin _$AdminPurgeCommunity on Object.reason', 'getter mixin _$AdminPurgeCommunity on Object.when', and 1 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2600393Z   error - lib/src/v3/models/admin/admin_purge_person.dart:9:7 - Missing concrete implementations of 'getter mixin _$AdminPurgePerson on Object.adminPersonId', 'getter mixin _$AdminPurgePerson on Object.id', 'getter mixin _$AdminPurgePerson on Object.reason', 'getter mixin _$AdminPurgePerson on Object.when', and 1 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2603043Z   error - lib/src/v3/models/admin/admin_purge_post.dart:9:7 - Missing concrete implementations of 'getter mixin _$AdminPurgePost on Object.adminPersonId', 'getter mixin _$AdminPurgePost on Object.communityId', 'getter mixin _$AdminPurgePost on Object.id', 'getter mixin _$AdminPurgePost on Object.reason', and 2 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2605516Z   error - lib/src/v3/models/aggregates.dart:9:7 - Missing concrete implementations of 'getter mixin _$PersonAggregates on Object.commentCount', 'getter mixin _$PersonAggregates on Object.personId', 'getter mixin _$PersonAggregates on Object.postCount', and 'mixin _$PersonAggregates on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2607945Z   error - lib/src/v3/models/aggregates.dart:18:7 - Missing concrete implementations of 'getter mixin _$SiteAggregates on Object.comments', 'getter mixin _$SiteAggregates on Object.communities', 'getter mixin _$SiteAggregates on Object.posts', 'getter mixin _$SiteAggregates on Object.siteId', and 6 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2610534Z   error - lib/src/v3/models/aggregates.dart:37:7 - Missing concrete implementations of 'getter mixin _$PostAggregates on Object.comments', 'getter mixin _$PostAggregates on Object.downvotes', 'getter mixin _$PostAggregates on Object.postId', 'getter mixin _$PostAggregates on Object.score', and 2 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2613008Z   error - lib/src/v3/models/aggregates.dart:46:7 - Missing concrete implementations of 'getter mixin _$CommunityAggregates on Object.comments', 'getter mixin _$CommunityAggregates on Object.communityId', 'getter mixin _$CommunityAggregates on Object.hotRank', 'getter mixin _$CommunityAggregates on Object.posts', and 6 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2615564Z   error - lib/src/v3/models/aggregates.dart:65:7 - Missing concrete implementations of 'getter mixin _$CommentAggregates on Object.childCount', 'getter mixin _$CommentAggregates on Object.commentId', 'getter mixin _$CommentAggregates on Object.downvotes', 'getter mixin _$CommentAggregates on Object.hotRank', and 3 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2618095Z   error - lib/src/v3/models/api.dart:10:7 - Missing concrete implementations of 'getter mixin _$FullCommunityView on Object.communityView', 'getter mixin _$FullCommunityView on Object.instanceHost', 'getter mixin _$FullCommunityView on Object.moderators', 'getter mixin _$FullCommunityView on Object.site', and 1 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2620723Z   error - lib/src/v3/models/api.dart:20:7 - Missing concrete implementations of 'getter mixin _$FullPostView on Object.communityView', 'getter mixin _$FullPostView on Object.crossPosts', 'getter mixin _$FullPostView on Object.instanceHost', 'getter mixin _$FullPostView on Object.moderators', and 2 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2623217Z   error - lib/src/v3/models/api.dart:35:7 - Missing concrete implementations of 'getter mixin _$SearchResults on Object.comments', 'getter mixin _$SearchResults on Object.communities', 'getter mixin _$SearchResults on Object.instanceHost', 'getter mixin _$SearchResults on Object.posts', and 3 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2625704Z   error - lib/src/v3/models/api.dart:52:7 - Missing concrete implementations of 'getter mixin _$Modlog on Object.added', 'getter mixin _$Modlog on Object.addedToCommunity', 'getter mixin _$Modlog on Object.adminPurgedComments', 'getter mixin _$Modlog on Object.adminPurgedCommunities', and 12 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2628114Z   error - lib/src/v3/models/api.dart:78:7 - Missing concrete implementations of 'getter mixin _$FullCommentView on Object.commentView', 'getter mixin _$FullCommentView on Object.formId', 'getter mixin _$FullCommentView on Object.instanceHost', 'getter mixin _$FullCommentView on Object.recipientIds', and 1 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2630690Z   error - lib/src/v3/models/api.dart:87:7 - Missing concrete implementations of 'getter mixin _$FullSiteView on Object.admins', 'getter mixin _$FullSiteView on Object.federatedInstances', 'getter mixin _$FullSiteView on Object.instanceHost', 'getter mixin _$FullSiteView on Object.myUser', and 3 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2633051Z   error - lib/src/v3/models/api.dart:104:7 - Missing concrete implementations of 'getter mixin _$MyUserInfo on Object.communityBlocks', 'getter mixin _$MyUserInfo on Object.follows', 'getter mixin _$MyUserInfo on Object.instanceHost', 'getter mixin _$MyUserInfo on Object.localUserView', and 3 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2635471Z   error - lib/src/v3/models/api.dart:121:7 - Missing concrete implementations of 'getter mixin _$FederatedInstances on Object.allowed', 'getter mixin _$FederatedInstances on Object.blocked', 'getter mixin _$FederatedInstances on Object.instanceHost', 'getter mixin _$FederatedInstances on Object.linked', and 1 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2637711Z   error - lib/src/v3/models/api.dart:131:7 - Missing concrete implementations of 'getter mixin _$Captcha on Object.png', 'getter mixin _$Captcha on Object.uuid', 'getter mixin _$Captcha on Object.wav', and 'mixin _$Captcha on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2640045Z   error - lib/src/v3/models/api.dart:147:7 - Missing concrete implementations of 'getter mixin _$FullPersonView on Object.comments', 'getter mixin _$FullPersonView on Object.instanceHost', 'getter mixin _$FullPersonView on Object.moderates', 'getter mixin _$FullPersonView on Object.personView', and 2 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2642491Z   error - lib/src/v3/models/api.dart:162:7 - Missing concrete implementations of 'getter mixin _$BannedCommunityUser on Object.banned', 'getter mixin _$BannedCommunityUser on Object.instanceHost', 'getter mixin _$BannedCommunityUser on Object.personView', and 'mixin _$BannedCommunityUser on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2644968Z   error - lib/src/v3/models/api.dart:172:7 - Missing concrete implementations of 'getter mixin _$BannedPerson on Object.banned', 'getter mixin _$BannedPerson on Object.instanceHost', 'getter mixin _$BannedPerson on Object.personView', and 'mixin _$BannedPerson on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2647533Z   error - lib/src/v3/models/api.dart:181:7 - Missing concrete implementations of 'getter mixin _$ResolveObjectResponse on Object.comment', 'getter mixin _$ResolveObjectResponse on Object.community', 'getter mixin _$ResolveObjectResponse on Object.instanceHost', 'getter mixin _$ResolveObjectResponse on Object.person', and 2 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2650202Z   error - lib/src/v3/models/api.dart:190:7 - Missing concrete implementations of 'getter mixin _$SiteMetadata on Object.description', 'getter mixin _$SiteMetadata on Object.html', 'getter mixin _$SiteMetadata on Object.image', 'getter mixin _$SiteMetadata on Object.instanceHost', and 2 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2652540Z   error - lib/src/v3/models/api.dart:199:7 - Missing concrete implementations of 'getter mixin _$BlockedPerson on Object.blocked', 'getter mixin _$BlockedPerson on Object.instanceHost', 'getter mixin _$BlockedPerson on Object.personView', and 'mixin _$BlockedPerson on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2654889Z   error - lib/src/v3/models/api.dart:208:7 - Missing concrete implementations of 'getter mixin _$BlockedCommunity on Object.blocked', 'getter mixin _$BlockedCommunity on Object.communityView', 'getter mixin _$BlockedCommunity on Object.instanceHost', and 'mixin _$BlockedCommunity on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2657299Z   error - lib/src/v3/models/api.dart:217:7 - Missing concrete implementations of 'getter mixin _$ReportCount on Object.commentReports', 'getter mixin _$ReportCount on Object.communityId', 'getter mixin _$ReportCount on Object.instanceHost', 'getter mixin _$ReportCount on Object.postReports', and 1 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2659827Z   error - lib/src/v3/models/api.dart:226:7 - Missing concrete implementations of 'getter mixin _$UnreadCount on Object.instanceHost', 'getter mixin _$UnreadCount on Object.mentions', 'getter mixin _$UnreadCount on Object.privateMessages', 'getter mixin _$UnreadCount on Object.replies', and 1 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2662234Z   error - lib/src/v3/models/api.dart:235:7 - Missing concrete implementations of 'getter mixin _$LoginResponse on Object.instanceHost', 'getter mixin _$LoginResponse on Object.jwt', 'getter mixin _$LoginResponse on Object.registrationCreated', 'getter mixin _$LoginResponse on Object.verifyEmailSent', and 1 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2664443Z   error - lib/src/v3/models/comment/get_comments_response.dart:10:7 - Missing concrete implementations of 'getter mixin _$GetCommentsResponse on Object.comments' and 'mixin _$GetCommentsResponse on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2666595Z   error - lib/src/v3/models/image/image_details.dart:9:7 - Missing concrete implementations of 'getter mixin _$ImageDetails on Object.contentType', 'getter mixin _$ImageDetails on Object.height', 'getter mixin _$ImageDetails on Object.link', 'getter mixin _$ImageDetails on Object.width', and 1 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2669043Z   error - lib/src/v3/models/jwt.dart:25:7 - Missing concrete implementations of 'getter mixin _$JwtPayload on Object.iat', 'getter mixin _$JwtPayload on Object.iss', 'getter mixin _$JwtPayload on Object.sub', and 'mixin _$JwtPayload on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2671462Z   error - lib/src/v3/models/mod/mod_hide_community.dart:9:7 - Missing concrete implementations of 'getter mixin _$ModHideCommunity on Object.communityId', 'getter mixin _$ModHideCommunity on Object.hidden', 'getter mixin _$ModHideCommunity on Object.id', 'getter mixin _$ModHideCommunity on Object.modPersonId', and 3 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2673806Z   error - lib/src/v3/models/post/get_posts_response.dart:10:7 - Missing concrete implementations of 'getter mixin _$GetPostsResponse on Object.nextPage', 'getter mixin _$GetPostsResponse on Object.posts', and 'mixin _$GetPostsResponse on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2676049Z   error - lib/src/v3/models/post/mark_post_as_read_response.dart:10:7 - Missing concrete implementations of 'getter mixin _$MarkPostAsReadResponse on Object.postView', 'getter mixin _$MarkPostAsReadResponse on Object.success', and 'mixin _$MarkPostAsReadResponse on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2678242Z   error - lib/src/v3/models/post/post.dart:8:7 - Missing concrete implementations of 'getter mixin _$Post on Object.altText', 'getter mixin _$Post on Object.apId', 'getter mixin _$Post on Object.body', 'getter mixin _$Post on Object.communityId', and 22 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2680686Z   error - lib/src/v3/models/private_message/list_private_message_reports_response.dart:9:7 - Missing concrete implementations of 'getter mixin _$ListPrivateMessageReportsResponse on Object.privateMessageReports' and 'mixin _$ListPrivateMessageReportsResponse on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2683365Z   error - lib/src/v3/models/private_message/private_message_report.dart:10:7 - Missing concrete implementations of 'getter mixin _$PrivateMessageReport on Object.creatorId', 'getter mixin _$PrivateMessageReport on Object.id', 'getter mixin _$PrivateMessageReport on Object.originalPmText', 'getter mixin _$PrivateMessageReport on Object.privateMessageId', and 6 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2685979Z   error - lib/src/v3/models/private_message/private_message_report_response.dart:10:7 - Missing concrete implementations of 'getter mixin _$PrivateMessageReportResponse on Object.privateMessageReportView' and 'mixin _$PrivateMessageReportResponse on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2688223Z   error - lib/src/v3/models/private_message/private_message_response.dart:10:7 - Missing concrete implementations of 'getter mixin _$PrivateMessageResponse on Object.privateMessageView' and 'mixin _$PrivateMessageResponse on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2690481Z   error - lib/src/v3/models/private_message/private_messages_response.dart:10:7 - Missing concrete implementations of 'getter mixin _$PrivateMessagesResponse on Object.privateMessages' and 'mixin _$PrivateMessagesResponse on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2692728Z   error - lib/src/v3/models/source.dart:10:7 - Missing concrete implementations of 'getter mixin _$Person on Object.actorId', 'getter mixin _$Person on Object.avatar', 'getter mixin _$Person on Object.banExpires', 'getter mixin _$Person on Object.banned', and 13 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2695191Z   error - lib/src/v3/models/source.dart:36:7 - Missing concrete implementations of 'getter mixin _$LocalUserSettings on Object.acceptedApplication', 'getter mixin _$LocalUserSettings on Object.blurNsfw', 'getter mixin _$LocalUserSettings on Object.email', 'getter mixin _$LocalUserSettings on Object.emailVerified', and 13 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2697500Z   error - lib/src/v3/models/source.dart:67:7 - Missing concrete implementations of 'getter mixin _$Site on Object.actorId', 'getter mixin _$Site on Object.banner', 'getter mixin _$Site on Object.description', 'getter mixin _$Site on Object.icon', and 10 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2699822Z   error - lib/src/v3/models/source.dart:90:7 - Missing concrete implementations of 'getter mixin _$PrivateMessage on Object.apId', 'getter mixin _$PrivateMessage on Object.content', 'getter mixin _$PrivateMessage on Object.creatorId', 'getter mixin _$PrivateMessage on Object.deleted', and 8 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2702176Z   error - lib/src/v3/models/source.dart:111:7 - Missing concrete implementations of 'getter mixin _$PostReport on Object.creatorId', 'getter mixin _$PostReport on Object.id', 'getter mixin _$PostReport on Object.instanceHost', 'getter mixin _$PostReport on Object.originalPostBody', and 9 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2704649Z   error - lib/src/v3/models/source.dart:133:7 - Missing concrete implementations of 'getter mixin _$PasswordResetRequest on Object.id', 'getter mixin _$PasswordResetRequest on Object.instanceHost', 'getter mixin _$PasswordResetRequest on Object.localUserId', 'getter mixin _$PasswordResetRequest on Object.published', and 2 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2707144Z   error - lib/src/v3/models/source.dart:142:7 - Missing concrete implementations of 'getter mixin _$ModRemovePost on Object.id', 'getter mixin _$ModRemovePost on Object.instanceHost', 'getter mixin _$ModRemovePost on Object.modPersonId', 'getter mixin _$ModRemovePost on Object.postId', and 4 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2709576Z   error - lib/src/v3/models/source.dart:159:7 - Missing concrete implementations of 'getter mixin _$ModLockPost on Object.id', 'getter mixin _$ModLockPost on Object.instanceHost', 'getter mixin _$ModLockPost on Object.locked', 'getter mixin _$ModLockPost on Object.modPersonId', and 3 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2711900Z   error - lib/src/v3/models/source.dart:169:7 - Missing concrete implementations of 'getter mixin _$ModStickyPost on Object.id', 'getter mixin _$ModStickyPost on Object.instanceHost', 'getter mixin _$ModStickyPost on Object.modPersonId', 'getter mixin _$ModStickyPost on Object.postId', and 3 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2714421Z   error - lib/src/v3/models/source.dart:179:7 - Missing concrete implementations of 'getter mixin _$ModRemoveComment on Object.commentId', 'getter mixin _$ModRemoveComment on Object.id', 'getter mixin _$ModRemoveComment on Object.instanceHost', 'getter mixin _$ModRemoveComment on Object.modPersonId', and 4 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2717027Z   error - lib/src/v3/models/source.dart:196:7 - Missing concrete implementations of 'getter mixin _$ModRemoveCommunity on Object.communityId', 'getter mixin _$ModRemoveCommunity on Object.expires', 'getter mixin _$ModRemoveCommunity on Object.id', 'getter mixin _$ModRemoveCommunity on Object.instanceHost', and 5 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2719646Z   error - lib/src/v3/models/source.dart:214:7 - Missing concrete implementations of 'getter mixin _$ModBanFromCommunity on Object.banned', 'getter mixin _$ModBanFromCommunity on Object.communityId', 'getter mixin _$ModBanFromCommunity on Object.expires', 'getter mixin _$ModBanFromCommunity on Object.id', and 6 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2721960Z   error - lib/src/v3/models/source.dart:233:7 - Missing concrete implementations of 'getter mixin _$ModBan on Object.banned', 'getter mixin _$ModBan on Object.expires', 'getter mixin _$ModBan on Object.id', 'getter mixin _$ModBan on Object.instanceHost', and 5 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2724242Z   error - lib/src/v3/models/source.dart:251:7 - Missing concrete implementations of 'getter mixin _$ModAddCommunity on Object.communityId', 'getter mixin _$ModAddCommunity on Object.id', 'getter mixin _$ModAddCommunity on Object.instanceHost', 'getter mixin _$ModAddCommunity on Object.modPersonId', and 4 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2726788Z   error - lib/src/v3/models/source.dart:268:7 - Missing concrete implementations of 'getter mixin _$ModTransferCommunity on Object.communityId', 'getter mixin _$ModTransferCommunity on Object.id', 'getter mixin _$ModTransferCommunity on Object.instanceHost', 'getter mixin _$ModTransferCommunity on Object.modPersonId', and 4 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2729284Z   error - lib/src/v3/models/source.dart:285:7 - Missing concrete implementations of 'getter mixin _$ModAdd on Object.id', 'getter mixin _$ModAdd on Object.instanceHost', 'getter mixin _$ModAdd on Object.modPersonId', 'getter mixin _$ModAdd on Object.otherPersonId', and 3 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2731568Z   error - lib/src/v3/models/source.dart:294:7 - Missing concrete implementations of 'getter mixin _$CommunitySafe on Object.actorId', 'getter mixin _$CommunitySafe on Object.banner', 'getter mixin _$CommunitySafe on Object.deleted', 'getter mixin _$CommunitySafe on Object.description', and 11 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2733940Z   error - lib/src/v3/models/source.dart:318:7 - Missing concrete implementations of 'getter mixin _$CommentReport on Object.commentId', 'getter mixin _$CommentReport on Object.creatorId', 'getter mixin _$CommentReport on Object.id', 'getter mixin _$CommentReport on Object.instanceHost', and 7 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2736403Z   error - lib/src/v3/models/source.dart:338:7 - Missing concrete implementations of 'getter mixin _$CommentReply on Object.commentId', 'getter mixin _$CommentReply on Object.id', 'getter mixin _$CommentReply on Object.instanceHost', 'getter mixin _$CommentReply on Object.published', and 3 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2738734Z   error - lib/src/v3/models/source.dart:347:7 - Missing concrete implementations of 'getter mixin _$Comment on Object.apId', 'getter mixin _$Comment on Object.content', 'getter mixin _$Comment on Object.creatorId', 'getter mixin _$Comment on Object.deleted', and 11 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2741090Z   error - lib/src/v3/models/source.dart:371:7 - Missing concrete implementations of 'getter mixin _$PersonMention on Object.commentId', 'getter mixin _$PersonMention on Object.id', 'getter mixin _$PersonMention on Object.instanceHost', 'getter mixin _$PersonMention on Object.published', and 3 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2743593Z   error - lib/src/v3/models/source.dart:380:7 - Missing concrete implementations of 'getter mixin _$RegistrationApplication on Object.adminId', 'getter mixin _$RegistrationApplication on Object.answer', 'getter mixin _$RegistrationApplication on Object.denyReason', 'getter mixin _$RegistrationApplication on Object.id', and 4 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2746422Z   error - lib/src/v3/models/user/save_user_settings_response.dart:9:7 - Missing concrete implementations of 'getter mixin _$SaveUserSettingsResponse on Object.jwt', 'getter mixin _$SaveUserSettingsResponse on Object.registrationCreated', 'getter mixin _$SaveUserSettingsResponse on Object.success', 'getter mixin _$SaveUserSettingsResponse on Object.verifyEmailSent', and 1 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2748824Z   error - lib/src/v3/models/user/success_response.dart:9:7 - Missing concrete implementations of 'getter mixin _$SuccessResponse on Object.success' and 'mixin _$SuccessResponse on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2750768Z   error - lib/src/v3/models/user/update_totp_response.dart:9:7 - Missing concrete implementations of 'getter mixin _$UpdateTotpResponse on Object.enabled' and 'mixin _$UpdateTotpResponse on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2752894Z   error - lib/src/v3/models/views.dart:18:7 - Missing concrete implementations of 'getter mixin _$PersonViewSafe on Object.counts', 'getter mixin _$PersonViewSafe on Object.instanceHost', 'getter mixin _$PersonViewSafe on Object.person', and 'mixin _$PersonViewSafe on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2755285Z   error - lib/src/v3/models/views.dart:27:7 - Missing concrete implementations of 'getter mixin _$PersonMentionView on Object.comment', 'getter mixin _$PersonMentionView on Object.community', 'getter mixin _$PersonMentionView on Object.counts', 'getter mixin _$PersonMentionView on Object.creator', and 10 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2757814Z   error - lib/src/v3/models/views.dart:50:7 - Missing concrete implementations of 'getter mixin _$LocalUserSettingsView on Object.counts', 'getter mixin _$LocalUserSettingsView on Object.instanceHost', 'getter mixin _$LocalUserSettingsView on Object.localUser', 'getter mixin _$LocalUserSettingsView on Object.person', and 1 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2760371Z   error - lib/src/v3/models/views.dart:59:7 - Missing concrete implementations of 'getter mixin _$SiteView on Object.counts', 'getter mixin _$SiteView on Object.instanceHost', 'getter mixin _$SiteView on Object.site', and 'mixin _$SiteView on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2762885Z   error - lib/src/v3/models/views.dart:68:7 - Missing concrete implementations of 'getter mixin _$PrivateMessageView on Object.creator', 'getter mixin _$PrivateMessageView on Object.instanceHost', 'getter mixin _$PrivateMessageView on Object.privateMessage', 'getter mixin _$PrivateMessageView on Object.recipient', and 1 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2783014Z   error - lib/src/v3/models/views.dart:77:7 - Missing concrete implementations of 'getter mixin _$PostView on Object.community', 'getter mixin _$PostView on Object.counts', 'getter mixin _$PostView on Object.creator', 'getter mixin _$PostView on Object.creatorBannedFromCommunity', and 11 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2785506Z   error - lib/src/v3/models/views.dart:101:7 - Missing concrete implementations of 'getter mixin _$PostReportView on Object.community', 'getter mixin _$PostReportView on Object.counts', 'getter mixin _$PostReportView on Object.creator', 'getter mixin _$PostReportView on Object.creatorBannedFromCommunity', and 7 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2788038Z   error - lib/src/v3/models/views.dart:121:7 - Missing concrete implementations of 'getter mixin _$CommentReplyView on Object.comment', 'getter mixin _$CommentReplyView on Object.commentReply', 'getter mixin _$CommentReplyView on Object.community', 'getter mixin _$CommentReplyView on Object.counts', and 10 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2790681Z   error - lib/src/v3/models/views.dart:144:7 - Missing concrete implementations of 'getter mixin _$CommentReportView on Object.comment', 'getter mixin _$CommentReportView on Object.commentCreator', 'getter mixin _$CommentReportView on Object.commentReport', 'getter mixin _$CommentReportView on Object.community', and 8 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2793308Z   error - lib/src/v3/models/views.dart:165:7 - Missing concrete implementations of 'getter mixin _$ModAddCommunityView on Object.community', 'getter mixin _$ModAddCommunityView on Object.instanceHost', 'getter mixin _$ModAddCommunityView on Object.modAddCommunity', 'getter mixin _$ModAddCommunityView on Object.moddedPerson', and 2 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2796091Z   error - lib/src/v3/models/views.dart:175:7 - Missing concrete implementations of 'getter mixin _$ModTransferCommunityView on Object.community', 'getter mixin _$ModTransferCommunityView on Object.instanceHost', 'getter mixin _$ModTransferCommunityView on Object.modTransferCommunity', 'getter mixin _$ModTransferCommunityView on Object.moddedPerson', and 2 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2798684Z   error - lib/src/v3/models/views.dart:190:7 - Missing concrete implementations of 'getter mixin _$ModAddView on Object.instanceHost', 'getter mixin _$ModAddView on Object.modAdd', 'getter mixin _$ModAddView on Object.moddedPerson', 'getter mixin _$ModAddView on Object.moderator', and 1 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2801197Z   error - lib/src/v3/models/views.dart:199:7 - Missing concrete implementations of 'getter mixin _$AdminPurgePersonView on Object.admin', 'getter mixin _$AdminPurgePersonView on Object.adminPurgePerson', and 'mixin _$AdminPurgePersonView on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2803652Z   error - lib/src/v3/models/views.dart:211:7 - Missing concrete implementations of 'getter mixin _$AdminPurgePostView on Object.admin', 'getter mixin _$AdminPurgePostView on Object.adminPurgePost', 'getter mixin _$AdminPurgePostView on Object.community', and 'mixin _$AdminPurgePostView on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2806032Z   error - lib/src/v3/models/views.dart:224:7 - Missing concrete implementations of 'getter mixin _$AdminPurgeCommunityView on Object.admin', 'getter mixin _$AdminPurgeCommunityView on Object.adminPurgeCommunity', and 'mixin _$AdminPurgeCommunityView on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2808450Z   error - lib/src/v3/models/views.dart:236:7 - Missing concrete implementations of 'getter mixin _$AdminPurgeCommentView on Object.admin', 'getter mixin _$AdminPurgeCommentView on Object.adminPurgeComment', 'getter mixin _$AdminPurgeCommentView on Object.post', and 'mixin _$AdminPurgeCommentView on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2811100Z   error - lib/src/v3/models/views.dart:249:7 - Missing concrete implementations of 'getter mixin _$ModHideCommunityView on Object.admin', 'getter mixin _$ModHideCommunityView on Object.community', 'getter mixin _$ModHideCommunityView on Object.modHideCommunity', and 'mixin _$ModHideCommunityView on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2813786Z   error - lib/src/v3/models/views.dart:262:7 - Missing concrete implementations of 'getter mixin _$ModBanFromCommunityView on Object.bannedPerson', 'getter mixin _$ModBanFromCommunityView on Object.community', 'getter mixin _$ModBanFromCommunityView on Object.instanceHost', 'getter mixin _$ModBanFromCommunityView on Object.modBanFromCommunity', and 2 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2816365Z   error - lib/src/v3/models/views.dart:277:7 - Missing concrete implementations of 'getter mixin _$ModBanView on Object.bannedPerson', 'getter mixin _$ModBanView on Object.instanceHost', 'getter mixin _$ModBanView on Object.modBan', 'getter mixin _$ModBanView on Object.moderator', and 1 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2818765Z   error - lib/src/v3/models/views.dart:286:7 - Missing concrete implementations of 'getter mixin _$ModLockPostView on Object.community', 'getter mixin _$ModLockPostView on Object.instanceHost', 'getter mixin _$ModLockPostView on Object.modLockPost', 'getter mixin _$ModLockPostView on Object.moderator', and 2 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2821375Z   error - lib/src/v3/models/views.dart:295:7 - Missing concrete implementations of 'getter mixin _$ModFeaturePostView on Object.community', 'getter mixin _$ModFeaturePostView on Object.modFeaturePost', 'getter mixin _$ModFeaturePostView on Object.moderator', 'getter mixin _$ModFeaturePostView on Object.post', and 1 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2824022Z   error - lib/src/v3/models/views.dart:309:7 - Missing concrete implementations of 'getter mixin _$ModFeaturePost on Object.featured', 'getter mixin _$ModFeaturePost on Object.id', 'getter mixin _$ModFeaturePost on Object.isFeaturedCommunity', 'getter mixin _$ModFeaturePost on Object.modPersonId', and 3 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2826658Z   error - lib/src/v3/models/views.dart:325:7 - Missing concrete implementations of 'getter mixin _$ModRemoveCommentView on Object.comment', 'getter mixin _$ModRemoveCommentView on Object.commenter', 'getter mixin _$ModRemoveCommentView on Object.community', 'getter mixin _$ModRemoveCommentView on Object.instanceHost', and 4 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2829452Z   error - lib/src/v3/models/views.dart:342:7 - Missing concrete implementations of 'getter mixin _$ModRemoveCommunityView on Object.community', 'getter mixin _$ModRemoveCommunityView on Object.instanceHost', 'getter mixin _$ModRemoveCommunityView on Object.modRemoveCommunity', 'getter mixin _$ModRemoveCommunityView on Object.moderator', and 1 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2832159Z   error - lib/src/v3/models/views.dart:351:7 - Missing concrete implementations of 'getter mixin _$ModRemovePostView on Object.community', 'getter mixin _$ModRemovePostView on Object.instanceHost', 'getter mixin _$ModRemovePostView on Object.modRemovePost', 'getter mixin _$ModRemovePostView on Object.moderator', and 2 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2834743Z   error - lib/src/v3/models/views.dart:360:7 - Missing concrete implementations of 'getter mixin _$ModStickyPostView on Object.community', 'getter mixin _$ModStickyPostView on Object.instanceHost', 'getter mixin _$ModStickyPostView on Object.modStickyPost', 'getter mixin _$ModStickyPostView on Object.moderator', and 2 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2837322Z   error - lib/src/v3/models/views.dart:370:7 - Missing concrete implementations of 'getter mixin _$CommunityFollowerView on Object.community', 'getter mixin _$CommunityFollowerView on Object.follower', 'getter mixin _$CommunityFollowerView on Object.instanceHost', and 'mixin _$CommunityFollowerView on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2840019Z   error - lib/src/v3/models/views.dart:379:7 - Missing concrete implementations of 'getter mixin _$CommunityModeratorView on Object.community', 'getter mixin _$CommunityModeratorView on Object.instanceHost', 'getter mixin _$CommunityModeratorView on Object.moderator', and 'mixin _$CommunityModeratorView on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2842514Z   error - lib/src/v3/models/views.dart:388:7 - Missing concrete implementations of 'getter mixin _$PersonBlockView on Object.instanceHost', 'getter mixin _$PersonBlockView on Object.person', 'getter mixin _$PersonBlockView on Object.target', and 'mixin _$PersonBlockView on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2844917Z   error - lib/src/v3/models/views.dart:397:7 - Missing concrete implementations of 'getter mixin _$CommunityBlockView on Object.community', 'getter mixin _$CommunityBlockView on Object.instanceHost', 'getter mixin _$CommunityBlockView on Object.person', and 'mixin _$CommunityBlockView on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2847574Z   error - lib/src/v3/models/views.dart:406:7 - Missing concrete implementations of 'getter mixin _$CommunityPersonBanView on Object.community', 'getter mixin _$CommunityPersonBanView on Object.instanceHost', 'getter mixin _$CommunityPersonBanView on Object.person', and 'mixin _$CommunityPersonBanView on Object.toJson'. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2850258Z   error - lib/src/v3/models/views.dart:415:7 - Missing concrete implementations of 'getter mixin _$CommunityView on Object.blocked', 'getter mixin _$CommunityView on Object.community', 'getter mixin _$CommunityView on Object.counts', 'getter mixin _$CommunityView on Object.instanceHost', and 2 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2852934Z   error - lib/src/v3/models/views.dart:425:7 - Missing concrete implementations of 'getter mixin _$RegistrationApplicationView on Object.admin', 'getter mixin _$RegistrationApplicationView on Object.creator', 'getter mixin _$RegistrationApplicationView on Object.creatorLocalUser', 'getter mixin _$RegistrationApplicationView on Object.instanceHost', and 2 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2855590Z   error - lib/src/v3/views/comment_view.dart:11:7 - Missing concrete implementations of 'getter mixin _$CommentView on Object.bannedFromCommunity', 'getter mixin _$CommentView on Object.comment', 'getter mixin _$CommentView on Object.community', 'getter mixin _$CommentView on Object.counts', and 10 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2858348Z   error - lib/src/v3/views/private_message_report_view.dart:11:7 - Missing concrete implementations of 'getter mixin _$PrivateMessageReportView on Object.creator', 'getter mixin _$PrivateMessageReportView on Object.privateMessage', 'getter mixin _$PrivateMessageReportView on Object.privateMessageCreator', 'getter mixin _$PrivateMessageReportView on Object.privateMessageReport', and 2 more. Try implementing the missing methods, or make the class abstract. - non_abstract_class_inherits_abstract_member
+2025-12-22T03:31:57.2860563Z    info - lib/src/v3/api/comment/comment.dart:19:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2861735Z    info - lib/src/v3/api/comment/comment.dart:21:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2862879Z    info - lib/src/v3/api/comment/comment.dart:35:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2864015Z    info - lib/src/v3/api/comment/comment.dart:37:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2865142Z    info - lib/src/v3/api/comment/comment.dart:51:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2866259Z    info - lib/src/v3/api/comment/comment.dart:53:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2867370Z    info - lib/src/v3/api/comment/comment.dart:67:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2868643Z    info - lib/src/v3/api/comment/comment.dart:69:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2870048Z    info - lib/src/v3/api/comment/comment.dart:78:49 - The variable name 'CommentReplyId' isn't a lowerCamelCase identifier. Try changing the name to follow the lowerCamelCase style. - non_constant_identifier_names
+2025-12-22T03:31:57.2871227Z    info - lib/src/v3/api/comment/comment.dart:83:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2872358Z    info - lib/src/v3/api/comment/comment.dart:85:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2873489Z    info - lib/src/v3/api/comment/comment.dart:99:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2874615Z    info - lib/src/v3/api/comment/comment.dart:101:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2875760Z    info - lib/src/v3/api/comment/comment.dart:115:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2876886Z    info - lib/src/v3/api/comment/comment.dart:117:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2878015Z    info - lib/src/v3/api/comment/comment.dart:131:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2879239Z    info - lib/src/v3/api/comment/comment.dart:133:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2880374Z    info - lib/src/v3/api/comment/comment.dart:164:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2881509Z    info - lib/src/v3/api/comment/comment.dart:166:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2882645Z    info - lib/src/v3/api/comment/comment.dart:180:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2883779Z    info - lib/src/v3/api/comment/comment.dart:182:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2884915Z    info - lib/src/v3/api/comment/comment.dart:196:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2886041Z    info - lib/src/v3/api/comment/comment.dart:198:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2887169Z    info - lib/src/v3/api/comment/comment.dart:212:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2888294Z    info - lib/src/v3/api/comment/comment.dart:214:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2889606Z    info - lib/src/v3/api/community.dart:23:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2890830Z    info - lib/src/v3/api/community.dart:25:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2891901Z    info - lib/src/v3/api/community.dart:40:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2892975Z    info - lib/src/v3/api/community.dart:42:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2894047Z    info - lib/src/v3/api/community.dart:57:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2895114Z    info - lib/src/v3/api/community.dart:59:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2896187Z    info - lib/src/v3/api/community.dart:74:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2897257Z    info - lib/src/v3/api/community.dart:76:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2898328Z    info - lib/src/v3/api/community.dart:91:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2899506Z    info - lib/src/v3/api/community.dart:93:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2900598Z    info - lib/src/v3/api/community.dart:108:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2901680Z    info - lib/src/v3/api/community.dart:110:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2902761Z    info - lib/src/v3/api/community.dart:125:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2903837Z    info - lib/src/v3/api/community.dart:127:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2904916Z    info - lib/src/v3/api/community.dart:142:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2905991Z    info - lib/src/v3/api/community.dart:144:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2907063Z    info - lib/src/v3/api/community.dart:159:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2908137Z    info - lib/src/v3/api/community.dart:161:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2909424Z    info - lib/src/v3/api/community.dart:176:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2910606Z    info - lib/src/v3/api/community.dart:178:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2911673Z    info - lib/src/v3/api/community.dart:193:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2912745Z    info - lib/src/v3/api/community.dart:195:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2913812Z    info - lib/src/v3/api/modlog.dart:22:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2914862Z    info - lib/src/v3/api/modlog.dart:24:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2915911Z    info - lib/src/v3/api/post.dart:22:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2916950Z    info - lib/src/v3/api/post.dart:24:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2917979Z    info - lib/src/v3/api/post.dart:39:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2919118Z    info - lib/src/v3/api/post.dart:41:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2920154Z    info - lib/src/v3/api/post.dart:58:5 - Missing a deprecation message. Try using the constructor to provide a message ('@Deprecated("message")'). - provide_deprecation_message
+2025-12-22T03:31:57.2921164Z    info - lib/src/v3/api/post.dart:71:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2922190Z    info - lib/src/v3/api/post.dart:73:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2923216Z    info - lib/src/v3/api/post.dart:87:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2924251Z    info - lib/src/v3/api/post.dart:89:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2925287Z    info - lib/src/v3/api/post.dart:103:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2926327Z    info - lib/src/v3/api/post.dart:105:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2927362Z    info - lib/src/v3/api/post.dart:119:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2928512Z    info - lib/src/v3/api/post.dart:121:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2929656Z    info - lib/src/v3/api/post.dart:135:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2930805Z    info - lib/src/v3/api/post.dart:137:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2931840Z    info - lib/src/v3/api/post.dart:151:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2932878Z    info - lib/src/v3/api/post.dart:153:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2933919Z    info - lib/src/v3/api/post.dart:167:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2934955Z    info - lib/src/v3/api/post.dart:169:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2935991Z    info - lib/src/v3/api/post.dart:183:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2937030Z    info - lib/src/v3/api/post.dart:185:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2938064Z    info - lib/src/v3/api/post.dart:199:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2939208Z    info - lib/src/v3/api/post.dart:201:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2940251Z    info - lib/src/v3/api/post.dart:215:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2941284Z    info - lib/src/v3/api/post.dart:217:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2942326Z    info - lib/src/v3/api/post.dart:231:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2943359Z    info - lib/src/v3/api/post.dart:233:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2944409Z    info - lib/src/v3/api/post.dart:247:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2945452Z    info - lib/src/v3/api/post.dart:249:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2946497Z    info - lib/src/v3/api/post.dart:262:5 - Missing a deprecation message. Try using the constructor to provide a message ('@Deprecated("message")'). - provide_deprecation_message
+2025-12-22T03:31:57.2947514Z    info - lib/src/v3/api/post.dart:271:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2948669Z    info - lib/src/v3/api/post.dart:273:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2949916Z    info - lib/src/v3/api/post.dart:296:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2950954Z    info - lib/src/v3/api/post.dart:298:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2952066Z    info - lib/src/v3/api/post.g.dart:50:3 - 'moderatorView' is deprecated and shouldn't be used. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use_from_same_package
+2025-12-22T03:31:57.2953249Z    info - lib/src/v3/api/post.g.dart:68:31 - 'moderatorView' is deprecated and shouldn't be used. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use_from_same_package
+2025-12-22T03:31:57.2954358Z    info - lib/src/v3/api/post.g.dart:233:7 - 'postId' is deprecated and shouldn't be used. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use_from_same_package
+2025-12-22T03:31:57.2955446Z    info - lib/src/v3/api/post.g.dart:243:28 - 'postId' is deprecated and shouldn't be used. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use_from_same_package
+2025-12-22T03:31:57.2956697Z    info - lib/src/v3/api/private_message/private_message.dart:9:8 - The import of '../../query.dart' is unnecessary because all of the used elements are also provided by the import of '../../../../v3.dart'. Try removing the import directive. - unnecessary_import
+2025-12-22T03:31:57.2958000Z    info - lib/src/v3/api/private_message/private_message.dart:31:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2959313Z    info - lib/src/v3/api/private_message/private_message.dart:33:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2960533Z    info - lib/src/v3/api/private_message/private_message.dart:47:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2961739Z    info - lib/src/v3/api/private_message/private_message.dart:49:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2962949Z    info - lib/src/v3/api/private_message/private_message.dart:70:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2964158Z    info - lib/src/v3/api/private_message/private_message.dart:72:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2965378Z    info - lib/src/v3/api/private_message/private_message.dart:93:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2966586Z    info - lib/src/v3/api/private_message/private_message.dart:95:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2967809Z    info - lib/src/v3/api/private_message/private_message.dart:116:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2969241Z    info - lib/src/v3/api/private_message/private_message.dart:118:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2970598Z    info - lib/src/v3/api/private_message/private_message.dart:139:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2971818Z    info - lib/src/v3/api/private_message/private_message.dart:141:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2973043Z    info - lib/src/v3/api/private_message/private_message.dart:162:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2974270Z    info - lib/src/v3/api/private_message/private_message.dart:164:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2975498Z    info - lib/src/v3/api/private_message/private_message.dart:187:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2976720Z    info - lib/src/v3/api/private_message/private_message.dart:189:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2977850Z    info - lib/src/v3/api/site.dart:34:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2979013Z    info - lib/src/v3/api/site.dart:36:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2980047Z    info - lib/src/v3/api/site.dart:67:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2981065Z    info - lib/src/v3/api/site.dart:69:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2982091Z    info - lib/src/v3/api/site.dart:100:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2983127Z    info - lib/src/v3/api/site.dart:102:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2984168Z    info - lib/src/v3/api/site.dart:117:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2985209Z    info - lib/src/v3/api/site.dart:119:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2986240Z    info - lib/src/v3/api/site.dart:134:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2987272Z    info - lib/src/v3/api/site.dart:136:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2988307Z    info - lib/src/v3/api/site.dart:151:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2989555Z    info - lib/src/v3/api/site.dart:153:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2990693Z    info - lib/src/v3/api/site.dart:168:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2991722Z    info - lib/src/v3/api/site.dart:170:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2992757Z    info - lib/src/v3/api/site.dart:185:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2993800Z    info - lib/src/v3/api/site.dart:187:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2994858Z    info - lib/src/v3/api/site.dart:202:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2995892Z    info - lib/src/v3/api/site.dart:204:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2996918Z    info - lib/src/v3/api/site.dart:219:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2997950Z    info - lib/src/v3/api/site.dart:221:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.2999084Z    info - lib/src/v3/api/site.dart:236:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3000130Z    info - lib/src/v3/api/site.dart:238:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3001347Z    info - lib/src/v3/api/user/person.dart:7:8 - The import of '../../models/api.dart' is unnecessary because all of the used elements are also provided by the import of '../../models/models.dart'. Try removing the import directive. - unnecessary_import
+2025-12-22T03:31:57.3002703Z    info - lib/src/v3/api/user/person.dart:8:8 - The import of '../../models/jwt.dart' is unnecessary because all of the used elements are also provided by the import of '../../models/models.dart'. Try removing the import directive. - unnecessary_import
+2025-12-22T03:31:57.3004068Z    info - lib/src/v3/api/user/person.dart:12:8 - The import of '../../models/views.dart' is unnecessary because all of the used elements are also provided by the import of '../../models/models.dart'. Try removing the import directive. - unnecessary_import
+2025-12-22T03:31:57.3005300Z    info - lib/src/v3/api/user/person.dart:34:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3006389Z    info - lib/src/v3/api/user/person.dart:36:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3007469Z    info - lib/src/v3/api/user/person.dart:55:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3008657Z    info - lib/src/v3/api/user/person.dart:57:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3009936Z    info - lib/src/v3/api/user/person.dart:78:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3011015Z    info - lib/src/v3/api/user/person.dart:80:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3012090Z    info - lib/src/v3/api/user/person.dart:99:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3013183Z    info - lib/src/v3/api/user/person.dart:101:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3014290Z    info - lib/src/v3/api/user/person.dart:123:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3015384Z    info - lib/src/v3/api/user/person.dart:125:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3016468Z    info - lib/src/v3/api/user/person.dart:152:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3017562Z    info - lib/src/v3/api/user/person.dart:154:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3018653Z    info - lib/src/v3/api/user/person.dart:178:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3019841Z    info - lib/src/v3/api/user/person.dart:180:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3020932Z    info - lib/src/v3/api/user/person.dart:194:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3022025Z    info - lib/src/v3/api/user/person.dart:196:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3023115Z    info - lib/src/v3/api/user/person.dart:227:5 - Missing a deprecation message. Try using the constructor to provide a message ('@Deprecated("message")'). - provide_deprecation_message
+2025-12-22T03:31:57.3024176Z    info - lib/src/v3/api/user/person.dart:229:5 - Missing a deprecation message. Try using the constructor to provide a message ('@Deprecated("message")'). - provide_deprecation_message
+2025-12-22T03:31:57.3025240Z    info - lib/src/v3/api/user/person.dart:246:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3026336Z    info - lib/src/v3/api/user/person.dart:248:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3027431Z    info - lib/src/v3/api/user/person.dart:262:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3028635Z    info - lib/src/v3/api/user/person.dart:264:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3029924Z    info - lib/src/v3/api/user/person.dart:278:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3031011Z    info - lib/src/v3/api/user/person.dart:280:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3032100Z    info - lib/src/v3/api/user/person.dart:294:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3033193Z    info - lib/src/v3/api/user/person.dart:296:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3034283Z    info - lib/src/v3/api/user/person.dart:310:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3035376Z    info - lib/src/v3/api/user/person.dart:312:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3036464Z    info - lib/src/v3/api/user/person.dart:326:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3037551Z    info - lib/src/v3/api/user/person.dart:328:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3038649Z    info - lib/src/v3/api/user/person.dart:342:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3039837Z    info - lib/src/v3/api/user/person.dart:344:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3040930Z    info - lib/src/v3/api/user/person.dart:358:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3042017Z    info - lib/src/v3/api/user/person.dart:360:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3043112Z    info - lib/src/v3/api/user/person.dart:374:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3044209Z    info - lib/src/v3/api/user/person.dart:376:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3045311Z    info - lib/src/v3/api/user/person.dart:390:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3046402Z    info - lib/src/v3/api/user/person.dart:392:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3047490Z    info - lib/src/v3/api/user/person.dart:406:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3048702Z    info - lib/src/v3/api/user/person.dart:408:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3049998Z    info - lib/src/v3/api/user/person.dart:422:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3051089Z    info - lib/src/v3/api/user/person.dart:424:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3052186Z    info - lib/src/v3/api/user/person.dart:439:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3053310Z    info - lib/src/v3/api/user/person.dart:441:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3054410Z    info - lib/src/v3/api/user/person.dart:456:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3055512Z    info - lib/src/v3/api/user/person.dart:458:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3056611Z    info - lib/src/v3/api/user/person.dart:472:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3057710Z    info - lib/src/v3/api/user/person.dart:474:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3058808Z    info - lib/src/v3/api/user/person.dart:488:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3059992Z    info - lib/src/v3/api/user/person.dart:490:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3061084Z    info - lib/src/v3/api/user/person.dart:504:9 - The member 'path' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3062182Z    info - lib/src/v3/api/user/person.dart:506:9 - The member 'httpMethod' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3063378Z    info - lib/src/v3/api/user/person.g.dart:109:7 - 'showNewPostNotifs' is deprecated and shouldn't be used. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use_from_same_package
+2025-12-22T03:31:57.3064613Z    info - lib/src/v3/api/user/person.g.dart:113:7 - 'generateTotp2fa' is deprecated and shouldn't be used. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use_from_same_package
+2025-12-22T03:31:57.3065844Z    info - lib/src/v3/api/user/person.g.dart:147:41 - 'showNewPostNotifs' is deprecated and shouldn't be used. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use_from_same_package
+2025-12-22T03:31:57.3067072Z    info - lib/src/v3/api/user/person.g.dart:149:37 - 'generateTotp2fa' is deprecated and shouldn't be used. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use_from_same_package
+2025-12-22T03:31:57.3068261Z    info - lib/src/v3/enums/comment_sort_type.dart:17:10 - The member 'toString' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3069588Z    info - lib/src/v3/enums/listing_type.dart:16:10 - The member 'toString' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3070812Z    info - lib/src/v3/enums/search_type.dart:16:10 - The member 'toString' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3071902Z    info - lib/src/v3/enums/sort_type.dart:32:10 - The member 'toString' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3073014Z    info - lib/src/v3/enums/subscribed_type.dart:13:10 - The member 'toString' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3074183Z    info - lib/src/v3/models/post/mark_post_as_read_response.dart:13:5 - Missing a deprecation message. Try using the constructor to provide a message ('@Deprecated("message")'). - provide_deprecation_message
+2025-12-22T03:31:57.3075425Z    info - lib/src/v3/models/post/mark_post_as_read_response.g.dart:12:3 - 'postView' is deprecated and shouldn't be used. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use_from_same_package
+2025-12-22T03:31:57.3076715Z    info - lib/src/v3/models/post/mark_post_as_read_response.g.dart:21:25 - 'postView' is deprecated and shouldn't be used. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use_from_same_package
+2025-12-22T03:31:57.3077961Z    info - lib/src/v3/models/user/save_user_settings_response.dart:12:5 - Missing a deprecation message. Try using the constructor to provide a message ('@Deprecated("message")'). - provide_deprecation_message
+2025-12-22T03:31:57.3079255Z    info - lib/src/v3/models/user/save_user_settings_response.dart:13:5 - Missing a deprecation message. Try using the constructor to provide a message ('@Deprecated("message")'). - provide_deprecation_message
+2025-12-22T03:31:57.3080449Z    info - lib/src/v3/models/user/save_user_settings_response.dart:14:5 - Missing a deprecation message. Try using the constructor to provide a message ('@Deprecated("message")'). - provide_deprecation_message
+2025-12-22T03:31:57.3081672Z    info - lib/src/v3/models/user/save_user_settings_response.g.dart:12:3 - 'jwt' is deprecated and shouldn't be used. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use_from_same_package
+2025-12-22T03:31:57.3083006Z    info - lib/src/v3/models/user/save_user_settings_response.g.dart:13:3 - 'registrationCreated' is deprecated and shouldn't be used. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use_from_same_package
+2025-12-22T03:31:57.3084379Z    info - lib/src/v3/models/user/save_user_settings_response.g.dart:14:3 - 'verifyEmailSent' is deprecated and shouldn't be used. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use_from_same_package
+2025-12-22T03:31:57.3085717Z    info - lib/src/v3/models/user/save_user_settings_response.g.dart:21:19 - 'jwt' is deprecated and shouldn't be used. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use_from_same_package
+2025-12-22T03:31:57.3087043Z    info - lib/src/v3/models/user/save_user_settings_response.g.dart:22:36 - 'registrationCreated' is deprecated and shouldn't be used. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use_from_same_package
+2025-12-22T03:31:57.3088415Z    info - lib/src/v3/models/user/save_user_settings_response.g.dart:23:33 - 'verifyEmailSent' is deprecated and shouldn't be used. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use_from_same_package
+2025-12-22T03:31:57.3090174Z    info - lib/src/v3/views/private_message_report_view.dart:5:8 - The import of '../models/private_message/private_message_report.dart' is unnecessary because all of the used elements are also provided by the import of '../models/models.dart'. Try removing the import directive. - unnecessary_import
+2025-12-22T03:31:57.3091644Z    info - scripts/release.dart:37:10 - The member 'toString' overrides an inherited member but isn't annotated with '@override'. Try adding the '@override' annotation. - annotate_overrides
+2025-12-22T03:31:57.3092985Z    info - test/v3/comment_test.dart:1:8 - The import of 'package:lemmy_api_client2/src/v3/api/comment/comment.dart' is unnecessary because all of the used elements are also provided by the import of 'package:lemmy_api_client2/v3.dart'. Try removing the import directive. - unnecessary_import
+2025-12-22T03:31:57.3094595Z    info - test/v3/modlog_test.dart:1:8 - The import of 'package:lemmy_api_client2/src/v3/api/modlog.dart' is unnecessary because all of the used elements are also provided by the import of 'package:lemmy_api_client2/v3.dart'. Try removing the import directive. - unnecessary_import
+2025-12-22T03:31:57.3096239Z    info - test/v3/person_test.dart:1:8 - The import of 'package:lemmy_api_client2/src/v3/api/private_message/private_message.dart' is unnecessary because all of the used elements are also provided by the import of 'package:lemmy_api_client2/v3.dart'. Try removing the import directive. - unnecessary_import
+2025-12-22T03:31:57.3097880Z    info - test/v3/site_test.dart:1:8 - The import of 'package:lemmy_api_client2/src/v3/api/modlog.dart' is unnecessary because all of the used elements are also provided by the import of 'package:lemmy_api_client2/v3.dart'. Try removing the import directive. - unnecessary_import
+2025-12-22T03:31:57.3098702Z 
+2025-12-22T03:31:57.3098773Z 394 issues found.
+2025-12-22T03:31:57.3107619Z ##[error]Process completed with exit code 3.
+2025-12-22T03:31:57.3200911Z Post job cleanup.
+2025-12-22T03:31:57.4127271Z [command]/usr/bin/git version
+2025-12-22T03:31:57.4162631Z git version 2.52.0
+2025-12-22T03:31:57.4210925Z Temporarily overriding HOME='/home/runner/work/_temp/00104d0e-1a30-4a42-90bc-0100ecc352b8' before making global git config changes
+2025-12-22T03:31:57.4212062Z Adding repository directory to the temporary git global config as a safe directory
+2025-12-22T03:31:57.4216016Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/lemmy_api_client/lemmy_api_client
+2025-12-22T03:31:57.4248556Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-12-22T03:31:57.4279563Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-12-22T03:31:57.4502290Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-12-22T03:31:57.4523346Z http.https://github.com/.extraheader
+2025-12-22T03:31:57.4535330Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-12-22T03:31:57.4564277Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-12-22T03:31:57.4782061Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2025-12-22T03:31:57.4811452Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2025-12-22T03:31:57.5123364Z Cleaning up orphan processes

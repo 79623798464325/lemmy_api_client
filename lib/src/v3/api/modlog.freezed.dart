@@ -38,18 +38,31 @@ mixin _$GetModlog {
   /// Create a copy of GetModlog
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $GetModlogCopyWith<GetModlog> get copyWith => throw _privateConstructorUsedError;
+  $GetModlogCopyWith<GetModlog> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GetModlogCopyWith<$Res> {
-  factory $GetModlogCopyWith(GetModlog value, $Res Function(GetModlog) then) = _$GetModlogCopyWithImpl<$Res, GetModlog>;
+  factory $GetModlogCopyWith(GetModlog value, $Res Function(GetModlog) then) =
+      _$GetModlogCopyWithImpl<$Res, GetModlog>;
   @useResult
-  $Res call({int? modPersonId, int? communityId, int? page, int? limit, @JsonKey(name: 'type_') ModlogActionType? type, int? otherPersonId, int? postId, int? commentId, String? auth});
+  $Res call({
+    int? modPersonId,
+    int? communityId,
+    int? page,
+    int? limit,
+    @JsonKey(name: 'type_') ModlogActionType? type,
+    int? otherPersonId,
+    int? postId,
+    int? commentId,
+    String? auth,
+  });
 }
 
 /// @nodoc
-class _$GetModlogCopyWithImpl<$Res, $Val extends GetModlog> implements $GetModlogCopyWith<$Res> {
+class _$GetModlogCopyWithImpl<$Res, $Val extends GetModlog>
+    implements $GetModlogCopyWith<$Res> {
   _$GetModlogCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -126,16 +139,35 @@ class _$GetModlogCopyWithImpl<$Res, $Val extends GetModlog> implements $GetModlo
 }
 
 /// @nodoc
-abstract class _$$GetModlogImplCopyWith<$Res> implements $GetModlogCopyWith<$Res> {
-  factory _$$GetModlogImplCopyWith(_$GetModlogImpl value, $Res Function(_$GetModlogImpl) then) = __$$GetModlogImplCopyWithImpl<$Res>;
+abstract class _$$GetModlogImplCopyWith<$Res>
+    implements $GetModlogCopyWith<$Res> {
+  factory _$$GetModlogImplCopyWith(
+    _$GetModlogImpl value,
+    $Res Function(_$GetModlogImpl) then,
+  ) = __$$GetModlogImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int? modPersonId, int? communityId, int? page, int? limit, @JsonKey(name: 'type_') ModlogActionType? type, int? otherPersonId, int? postId, int? commentId, String? auth});
+  $Res call({
+    int? modPersonId,
+    int? communityId,
+    int? page,
+    int? limit,
+    @JsonKey(name: 'type_') ModlogActionType? type,
+    int? otherPersonId,
+    int? postId,
+    int? commentId,
+    String? auth,
+  });
 }
 
 /// @nodoc
-class __$$GetModlogImplCopyWithImpl<$Res> extends _$GetModlogCopyWithImpl<$Res, _$GetModlogImpl> implements _$$GetModlogImplCopyWith<$Res> {
-  __$$GetModlogImplCopyWithImpl(_$GetModlogImpl _value, $Res Function(_$GetModlogImpl) _then) : super(_value, _then);
+class __$$GetModlogImplCopyWithImpl<$Res>
+    extends _$GetModlogCopyWithImpl<$Res, _$GetModlogImpl>
+    implements _$$GetModlogImplCopyWith<$Res> {
+  __$$GetModlogImplCopyWithImpl(
+    _$GetModlogImpl _value,
+    $Res Function(_$GetModlogImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of GetModlog
   /// with the given fields replaced by the non-null parameter values.
@@ -208,9 +240,20 @@ class __$$GetModlogImplCopyWithImpl<$Res> extends _$GetModlogCopyWithImpl<$Res, 
 
 @apiSerde
 class _$GetModlogImpl extends _GetModlog {
-  const _$GetModlogImpl({this.modPersonId, this.communityId, this.page, this.limit, @JsonKey(name: 'type_') this.type, this.otherPersonId, this.postId, this.commentId, this.auth}) : super._();
+  const _$GetModlogImpl({
+    this.modPersonId,
+    this.communityId,
+    this.page,
+    this.limit,
+    @JsonKey(name: 'type_') this.type,
+    this.otherPersonId,
+    this.postId,
+    this.commentId,
+    this.auth,
+  }) : super._();
 
-  factory _$GetModlogImpl.fromJson(Map<String, dynamic> json) => _$$GetModlogImplFromJson(json);
+  factory _$GetModlogImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetModlogImplFromJson(json);
 
   @override
   final int? modPersonId;
@@ -242,27 +285,43 @@ class _$GetModlogImpl extends _GetModlog {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetModlogImpl &&
-            (identical(other.modPersonId, modPersonId) || other.modPersonId == modPersonId) &&
-            (identical(other.communityId, communityId) || other.communityId == communityId) &&
+            (identical(other.modPersonId, modPersonId) ||
+                other.modPersonId == modPersonId) &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
             (identical(other.page, page) || other.page == page) &&
             (identical(other.limit, limit) || other.limit == limit) &&
             (identical(other.type, type) || other.type == type) &&
-            (identical(other.otherPersonId, otherPersonId) || other.otherPersonId == otherPersonId) &&
+            (identical(other.otherPersonId, otherPersonId) ||
+                other.otherPersonId == otherPersonId) &&
             (identical(other.postId, postId) || other.postId == postId) &&
-            (identical(other.commentId, commentId) || other.commentId == commentId) &&
+            (identical(other.commentId, commentId) ||
+                other.commentId == commentId) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, modPersonId, communityId, page, limit, type, otherPersonId, postId, commentId, auth);
+  int get hashCode => Object.hash(
+    runtimeType,
+    modPersonId,
+    communityId,
+    page,
+    limit,
+    type,
+    otherPersonId,
+    postId,
+    commentId,
+    auth,
+  );
 
   /// Create a copy of GetModlog
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetModlogImplCopyWith<_$GetModlogImpl> get copyWith => __$$GetModlogImplCopyWithImpl<_$GetModlogImpl>(this, _$identity);
+  _$$GetModlogImplCopyWith<_$GetModlogImpl> get copyWith =>
+      __$$GetModlogImplCopyWithImpl<_$GetModlogImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -284,7 +343,8 @@ abstract class _GetModlog extends GetModlog {
   }) = _$GetModlogImpl;
   const _GetModlog._() : super._();
 
-  factory _GetModlog.fromJson(Map<String, dynamic> json) = _$GetModlogImpl.fromJson;
+  factory _GetModlog.fromJson(Map<String, dynamic> json) =
+      _$GetModlogImpl.fromJson;
 
   @override
   int? get modPersonId;
@@ -310,5 +370,6 @@ abstract class _GetModlog extends GetModlog {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetModlogImplCopyWith<_$GetModlogImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$GetModlogImplCopyWith<_$GetModlogImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

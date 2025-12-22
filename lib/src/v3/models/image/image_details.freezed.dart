@@ -32,18 +32,23 @@ mixin _$ImageDetails {
   /// Create a copy of ImageDetails
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ImageDetailsCopyWith<ImageDetails> get copyWith => throw _privateConstructorUsedError;
+  $ImageDetailsCopyWith<ImageDetails> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ImageDetailsCopyWith<$Res> {
-  factory $ImageDetailsCopyWith(ImageDetails value, $Res Function(ImageDetails) then) = _$ImageDetailsCopyWithImpl<$Res, ImageDetails>;
+  factory $ImageDetailsCopyWith(
+    ImageDetails value,
+    $Res Function(ImageDetails) then,
+  ) = _$ImageDetailsCopyWithImpl<$Res, ImageDetails>;
   @useResult
   $Res call({String link, int width, int height, String contentType});
 }
 
 /// @nodoc
-class _$ImageDetailsCopyWithImpl<$Res, $Val extends ImageDetails> implements $ImageDetailsCopyWith<$Res> {
+class _$ImageDetailsCopyWithImpl<$Res, $Val extends ImageDetails>
+    implements $ImageDetailsCopyWith<$Res> {
   _$ImageDetailsCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -55,7 +60,12 @@ class _$ImageDetailsCopyWithImpl<$Res, $Val extends ImageDetails> implements $Im
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? link = null, Object? width = null, Object? height = null, Object? contentType = null}) {
+  $Res call({
+    Object? link = null,
+    Object? width = null,
+    Object? height = null,
+    Object? contentType = null,
+  }) {
     return _then(
       _value.copyWith(
             link:
@@ -85,22 +95,36 @@ class _$ImageDetailsCopyWithImpl<$Res, $Val extends ImageDetails> implements $Im
 }
 
 /// @nodoc
-abstract class _$$ImageDetailsImplCopyWith<$Res> implements $ImageDetailsCopyWith<$Res> {
-  factory _$$ImageDetailsImplCopyWith(_$ImageDetailsImpl value, $Res Function(_$ImageDetailsImpl) then) = __$$ImageDetailsImplCopyWithImpl<$Res>;
+abstract class _$$ImageDetailsImplCopyWith<$Res>
+    implements $ImageDetailsCopyWith<$Res> {
+  factory _$$ImageDetailsImplCopyWith(
+    _$ImageDetailsImpl value,
+    $Res Function(_$ImageDetailsImpl) then,
+  ) = __$$ImageDetailsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String link, int width, int height, String contentType});
 }
 
 /// @nodoc
-class __$$ImageDetailsImplCopyWithImpl<$Res> extends _$ImageDetailsCopyWithImpl<$Res, _$ImageDetailsImpl> implements _$$ImageDetailsImplCopyWith<$Res> {
-  __$$ImageDetailsImplCopyWithImpl(_$ImageDetailsImpl _value, $Res Function(_$ImageDetailsImpl) _then) : super(_value, _then);
+class __$$ImageDetailsImplCopyWithImpl<$Res>
+    extends _$ImageDetailsCopyWithImpl<$Res, _$ImageDetailsImpl>
+    implements _$$ImageDetailsImplCopyWith<$Res> {
+  __$$ImageDetailsImplCopyWithImpl(
+    _$ImageDetailsImpl _value,
+    $Res Function(_$ImageDetailsImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ImageDetails
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? link = null, Object? width = null, Object? height = null, Object? contentType = null}) {
+  $Res call({
+    Object? link = null,
+    Object? width = null,
+    Object? height = null,
+    Object? contentType = null,
+  }) {
     return _then(
       _$ImageDetailsImpl(
         link:
@@ -132,9 +156,15 @@ class __$$ImageDetailsImplCopyWithImpl<$Res> extends _$ImageDetailsCopyWithImpl<
 
 @modelSerde
 class _$ImageDetailsImpl extends _ImageDetails {
-  const _$ImageDetailsImpl({required this.link, required this.width, required this.height, required this.contentType}) : super._();
+  const _$ImageDetailsImpl({
+    required this.link,
+    required this.width,
+    required this.height,
+    required this.contentType,
+  }) : super._();
 
-  factory _$ImageDetailsImpl.fromJson(Map<String, dynamic> json) => _$$ImageDetailsImplFromJson(json);
+  factory _$ImageDetailsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ImageDetailsImplFromJson(json);
 
   @override
   final String link;
@@ -161,19 +191,22 @@ class _$ImageDetailsImpl extends _ImageDetails {
             (identical(other.link, link) || other.link == link) &&
             (identical(other.width, width) || other.width == width) &&
             (identical(other.height, height) || other.height == height) &&
-            (identical(other.contentType, contentType) || other.contentType == contentType));
+            (identical(other.contentType, contentType) ||
+                other.contentType == contentType));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, link, width, height, contentType);
+  int get hashCode =>
+      Object.hash(runtimeType, link, width, height, contentType);
 
   /// Create a copy of ImageDetails
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ImageDetailsImplCopyWith<_$ImageDetailsImpl> get copyWith => __$$ImageDetailsImplCopyWithImpl<_$ImageDetailsImpl>(this, _$identity);
+  _$$ImageDetailsImplCopyWith<_$ImageDetailsImpl> get copyWith =>
+      __$$ImageDetailsImplCopyWithImpl<_$ImageDetailsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -182,10 +215,16 @@ class _$ImageDetailsImpl extends _ImageDetails {
 }
 
 abstract class _ImageDetails extends ImageDetails {
-  const factory _ImageDetails({required final String link, required final int width, required final int height, required final String contentType}) = _$ImageDetailsImpl;
+  const factory _ImageDetails({
+    required final String link,
+    required final int width,
+    required final int height,
+    required final String contentType,
+  }) = _$ImageDetailsImpl;
   const _ImageDetails._() : super._();
 
-  factory _ImageDetails.fromJson(Map<String, dynamic> json) = _$ImageDetailsImpl.fromJson;
+  factory _ImageDetails.fromJson(Map<String, dynamic> json) =
+      _$ImageDetailsImpl.fromJson;
 
   @override
   String get link; // v0.19.6 (required)
@@ -200,5 +239,6 @@ abstract class _ImageDetails extends ImageDetails {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ImageDetailsImplCopyWith<_$ImageDetailsImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$ImageDetailsImplCopyWith<_$ImageDetailsImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
