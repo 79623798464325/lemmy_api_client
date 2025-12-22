@@ -165,17 +165,19 @@ Map<String, dynamic> _$$LockPostImplToJson(_$LockPostImpl instance) =>
       'auth': instance.auth,
     };
 
-_$StickyPostImpl _$$StickyPostImplFromJson(Map<String, dynamic> json) =>
-    _$StickyPostImpl(
+_$FeaturePostImpl _$$FeaturePostImplFromJson(Map<String, dynamic> json) =>
+    _$FeaturePostImpl(
       postId: (json['post_id'] as num).toInt(),
-      stickied: json['stickied'] as bool,
+      featured: json['featured'] as bool,
+      featureType: PostFeatureType.fromJson(json['feature_type']),
       auth: json['auth'] as String,
     );
 
-Map<String, dynamic> _$$StickyPostImplToJson(_$StickyPostImpl instance) =>
+Map<String, dynamic> _$$FeaturePostImplToJson(_$FeaturePostImpl instance) =>
     <String, dynamic>{
       'post_id': instance.postId,
-      'stickied': instance.stickied,
+      'featured': instance.featured,
+      'feature_type': instance.featureType.toJson(),
       'auth': instance.auth,
     };
 

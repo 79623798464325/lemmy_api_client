@@ -9,6 +9,7 @@ import '../../models/jwt.dart';
 import '../../models/models.dart';
 import '../../models/user/success_response.dart';
 import '../../models/user/update_totp_response.dart';
+import '../../models/user/generate_totp_secret_response.dart';
 import '../../models/views.dart';
 import '../../query.dart';
 import '../../views/views.dart';
@@ -126,6 +127,31 @@ class ValidateAuth with _$ValidateAuth implements LemmyApiQuery<SuccessResponse>
 
   @override
   SuccessResponse responseFactory(Map<String, dynamic> json) => SuccessResponse.fromJson(json);
+}
+
+/// Only available in lemmy v0.19.0 and above
+///
+/// Generate a TOTP / two-factor secret.
+///
+/// This must be called first when setting up 2FA. The returned secret URL
+/// can be used to set up an authenticator app. Then call UpdateTotp with
+/// a valid token from the app to complete 2FA setup.
+///
+/// `HTTP.POST /user/totp/generate`
+@freezed
+class GenerateTotpSecret with _$GenerateTotpSecret implements LemmyApiQuery<GenerateTotpSecretResponse>, LemmyApiAuthenticatedQuery {
+  @apiSerde
+  const factory GenerateTotpSecret({String? auth}) = _GenerateTotpSecret;
+
+  const GenerateTotpSecret._();
+  factory GenerateTotpSecret.fromJson(Map<String, dynamic> json) => _$GenerateTotpSecretFromJson(json);
+
+  final path = '/user/totp/generate';
+
+  final httpMethod = HttpMethod.post;
+
+  @override
+  GenerateTotpSecretResponse responseFactory(Map<String, dynamic> json) => GenerateTotpSecretResponse.fromJson(json);
 }
 
 /// Only available in lemmy v0.19.0 and above

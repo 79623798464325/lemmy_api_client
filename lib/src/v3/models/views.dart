@@ -356,15 +356,7 @@ class ModRemovePostView with _$ModRemovePostView {
   factory ModRemovePostView.fromJson(Map<String, dynamic> json) => _$ModRemovePostViewFromJson(json);
 }
 
-@freezed
-class ModStickyPostView with _$ModStickyPostView {
-  @modelSerde
-  const factory ModStickyPostView({required ModStickyPost modStickyPost, required Person moderator, required Post post, required CommunitySafe community, required String instanceHost}) =
-      _ModStickyPostView;
-
-  const ModStickyPostView._();
-  factory ModStickyPostView.fromJson(Map<String, dynamic> json) => _$ModStickyPostViewFromJson(json);
-}
+// ModStickyPostView was removed in v0.19 - use ModFeaturePostView instead
 
 @freezed
 class CommunityFollowerView with _$CommunityFollowerView {
