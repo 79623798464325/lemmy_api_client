@@ -1,18 +1,2 @@
-enum HttpMethod { get, put, post }
-
-abstract class LemmyApiQuery<T> {
-  abstract final String path;
-  abstract final HttpMethod httpMethod;
-
-  Map<String, dynamic> toJson();
-
-  T responseFactory(Map<String, dynamic> json);
-}
-
-abstract class LemmyApiAuthenticatedQuery {
-  String? get auth;
-}
-
-abstract class PassthroughParameter {
-  String get parameter;
-}
+// Re-export shared query types for v3 API compatibility
+export '../shared/query.dart';

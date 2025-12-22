@@ -212,3 +212,19 @@ Map<String, dynamic> _$$BlockCommunityImplToJson(
   'block': instance.block,
   'auth': instance.auth,
 };
+
+_$HideCommunityImpl _$$HideCommunityImplFromJson(Map<String, dynamic> json) =>
+    _$HideCommunityImpl(
+      communityId: (json['community_id'] as num).toInt(),
+      hidden: json['hidden'] as bool,
+      reason: json['reason'] as String?,
+      auth: json['auth'] as String?,
+    );
+
+Map<String, dynamic> _$$HideCommunityImplToJson(_$HideCommunityImpl instance) =>
+    <String, dynamic>{
+      'community_id': instance.communityId,
+      'hidden': instance.hidden,
+      if (instance.reason case final value?) 'reason': value,
+      if (instance.auth case final value?) 'auth': value,
+    };

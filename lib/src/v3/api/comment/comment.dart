@@ -216,3 +216,28 @@ class ListCommentReports with _$ListCommentReports implements LemmyApiQuery<List
   @override
   List<CommentReportView> responseFactory(Map<String, dynamic> json) => (json['comment_reports'] as List).map((dynamic e) => CommentReportView.fromJson(e)).toList();
 }
+
+/// Distinguish a comment (mark it as a mod/admin comment).
+///
+/// Only available in lemmy v0.19.0 and above.
+///
+/// `HTTP.POST /comment/distinguish`
+@freezed
+class DistinguishComment with _$DistinguishComment implements LemmyApiQuery<FullCommentView>, LemmyApiAuthenticatedQuery {
+  @apiSerde
+  const factory DistinguishComment({
+    required int commentId, // v0.19.0
+    required bool distinguished, // v0.19.0
+    String? auth,
+  }) = _DistinguishComment;
+
+  const DistinguishComment._();
+  factory DistinguishComment.fromJson(Map<String, dynamic> json) => _$DistinguishCommentFromJson(json);
+
+  final path = '/comment/distinguish';
+
+  final httpMethod = HttpMethod.post;
+
+  @override
+  FullCommentView responseFactory(Map<String, dynamic> json) => FullCommentView.fromJson(json);
+}

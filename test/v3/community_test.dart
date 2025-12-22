@@ -62,6 +62,11 @@ void main() {
         //   )),
         // );
       });
+
+      group('HideCommunity', () {
+        // HideCommunity is admin-only, so we test bad auth
+        test('bad auth', () => lemmyThrows(const HideCommunity(communityId: goodCommunityId, hidden: true, auth: badAuth)));
+      });
     });
   });
 }

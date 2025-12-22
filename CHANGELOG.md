@@ -1,3 +1,28 @@
+## v0.22.0 - 2024-12-22
+
+### Breaking Changes
+
+- **`StickyPost` → `FeaturePost`**: Renamed endpoint with new `featureType` parameter (`PostFeatureType.local` | `PostFeatureType.community`)
+- Removed legacy `ModStickyPost` and `ModStickyPostView` (use `ModFeaturePost`/`ModFeaturePostView`)
+
+### Added
+
+- **PostFeatureType** enum for featured post types
+- **GenerateTotpSecret** endpoint for 2FA setup
+- **BlockInstance** endpoint for instance blocking
+- **DistinguishComment** endpoint for mod/admin comment marking
+- **HideCommunity** endpoint for hiding communities (admin only)
+- **Instance**, **InstanceBlockView**, **BlockInstanceResponse** models
+- **CustomEmoji**, **CustomEmojiKeyword**, **CustomEmojiView** models
+- **LocalSite** model (26 fields) - full site configuration
+- **LocalSiteRateLimit** model (17 fields) - rate limiting config
+
+### Fixed
+
+- `ForceUtcDateTime` export for generated serialization files
+
+---
+
 ## v0.21.0 - 2022-05-12
 
 ### Changed

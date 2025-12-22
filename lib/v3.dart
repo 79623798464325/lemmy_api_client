@@ -1,4 +1,4 @@
-export 'src/exceptions.dart';
+export 'src/shared/exceptions.dart';
 export 'src/v3/api/api.dart';
 export 'src/v3/enums/enums.dart';
 export 'src/v3/main.dart';

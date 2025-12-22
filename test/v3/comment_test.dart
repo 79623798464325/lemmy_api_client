@@ -90,6 +90,11 @@ void main() {
 
         test('bad communityId', () => lemmyThrows(const ListCommentReports(communityId: badCommunityId, auth: badAuth)));
       });
+
+      group('DistinguishComment', () {
+        // DistinguishComment is mod-only, so we test bad auth
+        test('bad auth', () => lemmyThrows(const DistinguishComment(commentId: goodCommentId, distinguished: true, auth: badAuth)));
+      });
     });
   });
 }

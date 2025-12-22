@@ -2,6 +2,7 @@
 
 export 'comment/comment.dart';
 export 'community.dart';
+export 'instance.dart';
 export 'modlog.dart';
 export 'post.dart';
 export 'private_message/private_message.dart';

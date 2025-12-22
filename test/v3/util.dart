@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:lemmy_api_client2/v3.dart';
 import 'package:test/test.dart';
 
-final run = const LemmyApiV3('lemmy.world').run;
+final run = LemmyApiV3('lemmy.world').run;
 
 /// checks if the LemmyApiQuery will throw and will have a correct i18n string set as a message
 Future<void> lemmyThrows(LemmyApiQuery query) async {
