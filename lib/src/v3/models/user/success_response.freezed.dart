@@ -29,23 +29,18 @@ mixin _$SuccessResponse {
   /// Create a copy of SuccessResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $SuccessResponseCopyWith<SuccessResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  $SuccessResponseCopyWith<SuccessResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SuccessResponseCopyWith<$Res> {
-  factory $SuccessResponseCopyWith(
-    SuccessResponse value,
-    $Res Function(SuccessResponse) then,
-  ) = _$SuccessResponseCopyWithImpl<$Res, SuccessResponse>;
+  factory $SuccessResponseCopyWith(SuccessResponse value, $Res Function(SuccessResponse) then) = _$SuccessResponseCopyWithImpl<$Res, SuccessResponse>;
   @useResult
   $Res call({bool success});
 }
 
 /// @nodoc
-class _$SuccessResponseCopyWithImpl<$Res, $Val extends SuccessResponse>
-    implements $SuccessResponseCopyWith<$Res> {
+class _$SuccessResponseCopyWithImpl<$Res, $Val extends SuccessResponse> implements $SuccessResponseCopyWith<$Res> {
   _$SuccessResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -72,25 +67,16 @@ class _$SuccessResponseCopyWithImpl<$Res, $Val extends SuccessResponse>
 }
 
 /// @nodoc
-abstract class _$$SuccessResponseImplCopyWith<$Res>
-    implements $SuccessResponseCopyWith<$Res> {
-  factory _$$SuccessResponseImplCopyWith(
-    _$SuccessResponseImpl value,
-    $Res Function(_$SuccessResponseImpl) then,
-  ) = __$$SuccessResponseImplCopyWithImpl<$Res>;
+abstract class _$$SuccessResponseImplCopyWith<$Res> implements $SuccessResponseCopyWith<$Res> {
+  factory _$$SuccessResponseImplCopyWith(_$SuccessResponseImpl value, $Res Function(_$SuccessResponseImpl) then) = __$$SuccessResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool success});
 }
 
 /// @nodoc
-class __$$SuccessResponseImplCopyWithImpl<$Res>
-    extends _$SuccessResponseCopyWithImpl<$Res, _$SuccessResponseImpl>
-    implements _$$SuccessResponseImplCopyWith<$Res> {
-  __$$SuccessResponseImplCopyWithImpl(
-    _$SuccessResponseImpl _value,
-    $Res Function(_$SuccessResponseImpl) _then,
-  ) : super(_value, _then);
+class __$$SuccessResponseImplCopyWithImpl<$Res> extends _$SuccessResponseCopyWithImpl<$Res, _$SuccessResponseImpl> implements _$$SuccessResponseImplCopyWith<$Res> {
+  __$$SuccessResponseImplCopyWithImpl(_$SuccessResponseImpl _value, $Res Function(_$SuccessResponseImpl) _then) : super(_value, _then);
 
   /// Create a copy of SuccessResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -115,8 +101,7 @@ class __$$SuccessResponseImplCopyWithImpl<$Res>
 class _$SuccessResponseImpl extends _SuccessResponse {
   const _$SuccessResponseImpl({required this.success}) : super._();
 
-  factory _$SuccessResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SuccessResponseImplFromJson(json);
+  factory _$SuccessResponseImpl.fromJson(Map<String, dynamic> json) => _$$SuccessResponseImplFromJson(json);
 
   @override
   final bool success;
@@ -128,10 +113,7 @@ class _$SuccessResponseImpl extends _SuccessResponse {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SuccessResponseImpl &&
-            (identical(other.success, success) || other.success == success));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$SuccessResponseImpl && (identical(other.success, success) || other.success == success));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -143,11 +125,7 @@ class _$SuccessResponseImpl extends _SuccessResponse {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$SuccessResponseImplCopyWith<_$SuccessResponseImpl> get copyWith =>
-      __$$SuccessResponseImplCopyWithImpl<_$SuccessResponseImpl>(
-        this,
-        _$identity,
-      );
+  _$$SuccessResponseImplCopyWith<_$SuccessResponseImpl> get copyWith => __$$SuccessResponseImplCopyWithImpl<_$SuccessResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -156,12 +134,10 @@ class _$SuccessResponseImpl extends _SuccessResponse {
 }
 
 abstract class _SuccessResponse extends SuccessResponse {
-  const factory _SuccessResponse({required final bool success}) =
-      _$SuccessResponseImpl;
+  const factory _SuccessResponse({required final bool success}) = _$SuccessResponseImpl;
   const _SuccessResponse._() : super._();
 
-  factory _SuccessResponse.fromJson(Map<String, dynamic> json) =
-      _$SuccessResponseImpl.fromJson;
+  factory _SuccessResponse.fromJson(Map<String, dynamic> json) = _$SuccessResponseImpl.fromJson;
 
   @override
   bool get success;
@@ -170,6 +146,5 @@ abstract class _SuccessResponse extends SuccessResponse {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SuccessResponseImplCopyWith<_$SuccessResponseImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SuccessResponseImplCopyWith<_$SuccessResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }

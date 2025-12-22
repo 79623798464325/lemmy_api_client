@@ -6,9 +6,7 @@ part of 'comment_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$CommentViewImpl _$$CommentViewImplFromJson(
-  Map<String, dynamic> json,
-) => _$CommentViewImpl(
+_$CommentViewImpl _$$CommentViewImplFromJson(Map<String, dynamic> json) => _$CommentViewImpl(
   comment: Comment.fromJson(json['comment'] as Map<String, dynamic>),
   creator: Person.fromJson(json['creator'] as Map<String, dynamic>),
   post: Post.fromJson(json['post'] as Map<String, dynamic>),
@@ -24,19 +22,18 @@ _$CommentViewImpl _$$CommentViewImplFromJson(
   myVote: (json['my_vote'] as num?)?.toInt(),
 );
 
-Map<String, dynamic> _$$CommentViewImplToJson(_$CommentViewImpl instance) =>
-    <String, dynamic>{
-      'comment': instance.comment.toJson(),
-      'creator': instance.creator.toJson(),
-      'post': instance.post.toJson(),
-      'community': instance.community.toJson(),
-      'counts': instance.counts.toJson(),
-      'creator_banned_from_community': instance.creatorBannedFromCommunity,
-      'banned_from_community': instance.bannedFromCommunity,
-      'creator_is_moderator': instance.creatorIsModerator,
-      'creator_is_admin': instance.creatorIsAdmin,
-      'subscribed': instance.subscribed.toJson(),
-      'saved': instance.saved,
-      'creator_blocked': instance.creatorBlocked,
-      'my_vote': instance.myVote,
-    };
+Map<String, dynamic> _$$CommentViewImplToJson(_$CommentViewImpl instance) => <String, dynamic>{
+  'comment': instance.comment.toJson(),
+  'creator': instance.creator.toJson(),
+  'post': instance.post.toJson(),
+  'community': instance.community.toJson(),
+  'counts': instance.counts.toJson(),
+  'creator_banned_from_community': instance.creatorBannedFromCommunity,
+  'banned_from_community': instance.bannedFromCommunity,
+  'creator_is_moderator': instance.creatorIsModerator,
+  'creator_is_admin': instance.creatorIsAdmin,
+  'subscribed': instance.subscribed.toJson(),
+  'saved': instance.saved,
+  'creator_blocked': instance.creatorBlocked,
+  'my_vote': instance.myVote,
+};

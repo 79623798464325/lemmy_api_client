@@ -34,29 +34,18 @@ mixin _$AdminPurgePost {
   /// Create a copy of AdminPurgePost
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $AdminPurgePostCopyWith<AdminPurgePost> get copyWith =>
-      throw _privateConstructorUsedError;
+  $AdminPurgePostCopyWith<AdminPurgePost> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AdminPurgePostCopyWith<$Res> {
-  factory $AdminPurgePostCopyWith(
-    AdminPurgePost value,
-    $Res Function(AdminPurgePost) then,
-  ) = _$AdminPurgePostCopyWithImpl<$Res, AdminPurgePost>;
+  factory $AdminPurgePostCopyWith(AdminPurgePost value, $Res Function(AdminPurgePost) then) = _$AdminPurgePostCopyWithImpl<$Res, AdminPurgePost>;
   @useResult
-  $Res call({
-    int id,
-    int adminPersonId,
-    int communityId,
-    String? reason,
-    @JsonKey(name: 'when_') String when,
-  });
+  $Res call({int id, int adminPersonId, int communityId, String? reason, @JsonKey(name: 'when_') String when});
 }
 
 /// @nodoc
-class _$AdminPurgePostCopyWithImpl<$Res, $Val extends AdminPurgePost>
-    implements $AdminPurgePostCopyWith<$Res> {
+class _$AdminPurgePostCopyWithImpl<$Res, $Val extends AdminPurgePost> implements $AdminPurgePostCopyWith<$Res> {
   _$AdminPurgePostCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -68,13 +57,7 @@ class _$AdminPurgePostCopyWithImpl<$Res, $Val extends AdminPurgePost>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? adminPersonId = null,
-    Object? communityId = null,
-    Object? reason = freezed,
-    Object? when = null,
-  }) {
+  $Res call({Object? id = null, Object? adminPersonId = null, Object? communityId = null, Object? reason = freezed, Object? when = null}) {
     return _then(
       _value.copyWith(
             id:
@@ -109,43 +92,22 @@ class _$AdminPurgePostCopyWithImpl<$Res, $Val extends AdminPurgePost>
 }
 
 /// @nodoc
-abstract class _$$AdminPurgePostImplCopyWith<$Res>
-    implements $AdminPurgePostCopyWith<$Res> {
-  factory _$$AdminPurgePostImplCopyWith(
-    _$AdminPurgePostImpl value,
-    $Res Function(_$AdminPurgePostImpl) then,
-  ) = __$$AdminPurgePostImplCopyWithImpl<$Res>;
+abstract class _$$AdminPurgePostImplCopyWith<$Res> implements $AdminPurgePostCopyWith<$Res> {
+  factory _$$AdminPurgePostImplCopyWith(_$AdminPurgePostImpl value, $Res Function(_$AdminPurgePostImpl) then) = __$$AdminPurgePostImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    int id,
-    int adminPersonId,
-    int communityId,
-    String? reason,
-    @JsonKey(name: 'when_') String when,
-  });
+  $Res call({int id, int adminPersonId, int communityId, String? reason, @JsonKey(name: 'when_') String when});
 }
 
 /// @nodoc
-class __$$AdminPurgePostImplCopyWithImpl<$Res>
-    extends _$AdminPurgePostCopyWithImpl<$Res, _$AdminPurgePostImpl>
-    implements _$$AdminPurgePostImplCopyWith<$Res> {
-  __$$AdminPurgePostImplCopyWithImpl(
-    _$AdminPurgePostImpl _value,
-    $Res Function(_$AdminPurgePostImpl) _then,
-  ) : super(_value, _then);
+class __$$AdminPurgePostImplCopyWithImpl<$Res> extends _$AdminPurgePostCopyWithImpl<$Res, _$AdminPurgePostImpl> implements _$$AdminPurgePostImplCopyWith<$Res> {
+  __$$AdminPurgePostImplCopyWithImpl(_$AdminPurgePostImpl _value, $Res Function(_$AdminPurgePostImpl) _then) : super(_value, _then);
 
   /// Create a copy of AdminPurgePost
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? adminPersonId = null,
-    Object? communityId = null,
-    Object? reason = freezed,
-    Object? when = null,
-  }) {
+  $Res call({Object? id = null, Object? adminPersonId = null, Object? communityId = null, Object? reason = freezed, Object? when = null}) {
     return _then(
       _$AdminPurgePostImpl(
         id:
@@ -182,16 +144,9 @@ class __$$AdminPurgePostImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$AdminPurgePostImpl extends _AdminPurgePost {
-  const _$AdminPurgePostImpl({
-    required this.id,
-    required this.adminPersonId,
-    required this.communityId,
-    this.reason,
-    @JsonKey(name: 'when_') required this.when,
-  }) : super._();
+  const _$AdminPurgePostImpl({required this.id, required this.adminPersonId, required this.communityId, this.reason, @JsonKey(name: 'when_') required this.when}) : super._();
 
-  factory _$AdminPurgePostImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AdminPurgePostImplFromJson(json);
+  factory _$AdminPurgePostImpl.fromJson(Map<String, dynamic> json) => _$$AdminPurgePostImplFromJson(json);
 
   @override
   final int id;
@@ -220,29 +175,22 @@ class _$AdminPurgePostImpl extends _AdminPurgePost {
         (other.runtimeType == runtimeType &&
             other is _$AdminPurgePostImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.adminPersonId, adminPersonId) ||
-                other.adminPersonId == adminPersonId) &&
-            (identical(other.communityId, communityId) ||
-                other.communityId == communityId) &&
+            (identical(other.adminPersonId, adminPersonId) || other.adminPersonId == adminPersonId) &&
+            (identical(other.communityId, communityId) || other.communityId == communityId) &&
             (identical(other.reason, reason) || other.reason == reason) &&
             (identical(other.when, when) || other.when == when));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, adminPersonId, communityId, reason, when);
+  int get hashCode => Object.hash(runtimeType, id, adminPersonId, communityId, reason, when);
 
   /// Create a copy of AdminPurgePost
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$AdminPurgePostImplCopyWith<_$AdminPurgePostImpl> get copyWith =>
-      __$$AdminPurgePostImplCopyWithImpl<_$AdminPurgePostImpl>(
-        this,
-        _$identity,
-      );
+  _$$AdminPurgePostImplCopyWith<_$AdminPurgePostImpl> get copyWith => __$$AdminPurgePostImplCopyWithImpl<_$AdminPurgePostImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -251,17 +199,11 @@ class _$AdminPurgePostImpl extends _AdminPurgePost {
 }
 
 abstract class _AdminPurgePost extends AdminPurgePost {
-  const factory _AdminPurgePost({
-    required final int id,
-    required final int adminPersonId,
-    required final int communityId,
-    final String? reason,
-    @JsonKey(name: 'when_') required final String when,
-  }) = _$AdminPurgePostImpl;
+  const factory _AdminPurgePost({required final int id, required final int adminPersonId, required final int communityId, final String? reason, @JsonKey(name: 'when_') required final String when}) =
+      _$AdminPurgePostImpl;
   const _AdminPurgePost._() : super._();
 
-  factory _AdminPurgePost.fromJson(Map<String, dynamic> json) =
-      _$AdminPurgePostImpl.fromJson;
+  factory _AdminPurgePost.fromJson(Map<String, dynamic> json) = _$AdminPurgePostImpl.fromJson;
 
   @override
   int get id; // v0.18.0
@@ -279,6 +221,5 @@ abstract class _AdminPurgePost extends AdminPurgePost {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AdminPurgePostImplCopyWith<_$AdminPurgePostImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$AdminPurgePostImplCopyWith<_$AdminPurgePostImpl> get copyWith => throw _privateConstructorUsedError;
 }
