@@ -6,9 +6,9 @@ part of 'private_message_report.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_PrivateMessageReport _$PrivateMessageReportFromJson(
+_$PrivateMessageReportImpl _$$PrivateMessageReportImplFromJson(
   Map<String, dynamic> json,
-) => _PrivateMessageReport(
+) => _$PrivateMessageReportImpl(
   id: (json['id'] as num).toInt(),
   creatorId: (json['creator_id'] as num).toInt(),
   privateMessageId: (json['private_message_id'] as num).toInt(),
@@ -23,8 +23,8 @@ _PrivateMessageReport _$PrivateMessageReportFromJson(
   ),
 );
 
-Map<String, dynamic> _$PrivateMessageReportToJson(
-  _PrivateMessageReport instance,
+Map<String, dynamic> _$$PrivateMessageReportImplToJson(
+  _$PrivateMessageReportImpl instance,
 ) => <String, dynamic>{
   'id': instance.id,
   'creator_id': instance.creatorId,

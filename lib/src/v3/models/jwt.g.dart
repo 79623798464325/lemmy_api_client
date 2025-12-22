@@ -6,13 +6,14 @@ part of 'jwt.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_JwtPayload _$JwtPayloadFromJson(Map<String, dynamic> json) => _JwtPayload(
-  iat: (json['iat'] as num).toInt(),
-  iss: json['iss'] as String,
-  sub: const SubConverter().fromJson(json['sub']),
-);
+_$JwtPayloadImpl _$$JwtPayloadImplFromJson(Map<String, dynamic> json) =>
+    _$JwtPayloadImpl(
+      iat: (json['iat'] as num).toInt(),
+      iss: json['iss'] as String,
+      sub: const SubConverter().fromJson(json['sub']),
+    );
 
-Map<String, dynamic> _$JwtPayloadToJson(_JwtPayload instance) =>
+Map<String, dynamic> _$$JwtPayloadImplToJson(_$JwtPayloadImpl instance) =>
     <String, dynamic>{
       'iat': instance.iat,
       'iss': instance.iss,

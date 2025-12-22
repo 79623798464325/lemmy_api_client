@@ -1,5 +1,5 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,3052 +9,2897 @@ part of 'site.dart';
 // FreezedGenerator
 // **************************************************************************
 
-// dart format off
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
+
+Search _$SearchFromJson(Map<String, dynamic> json) {
+  return _Search.fromJson(json);
+}
 
 /// @nodoc
 mixin _$Search {
-
- dynamic get path; dynamic get httpMethod; String get q;// v0.18.0
- int? get communityId;// v0.18.0
- String? get communityName;// v0.18.0
- int? get creatorId;// v0.18.0
-@JsonKey(name: 'type_') SearchType? get type;// v0.18.0
- SortType? get sort;// v0.18.0
- ListingType? get listingType;// v0.18.0
- int? get page;// v0.18.0
- int? get limit;// v0.18.0
- String? get auth;
-/// Create a copy of Search
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$SearchCopyWith<Search> get copyWith => _$SearchCopyWithImpl<Search>(this as Search, _$identity);
+  String get q => throw _privateConstructorUsedError; // v0.18.0
+  int? get communityId => throw _privateConstructorUsedError; // v0.18.0
+  String? get communityName => throw _privateConstructorUsedError; // v0.18.0
+  int? get creatorId => throw _privateConstructorUsedError; // v0.18.0
+  @JsonKey(name: 'type_')
+  SearchType? get type => throw _privateConstructorUsedError; // v0.18.0
+  SortType? get sort => throw _privateConstructorUsedError; // v0.18.0
+  ListingType? get listingType => throw _privateConstructorUsedError; // v0.18.0
+  int? get page => throw _privateConstructorUsedError; // v0.18.0
+  int? get limit => throw _privateConstructorUsedError; // v0.18.0
+  String? get auth => throw _privateConstructorUsedError;
 
   /// Serializes this Search to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Search&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.q, q) || other.q == q)&&(identical(other.communityId, communityId) || other.communityId == communityId)&&(identical(other.communityName, communityName) || other.communityName == communityName)&&(identical(other.creatorId, creatorId) || other.creatorId == creatorId)&&(identical(other.type, type) || other.type == type)&&(identical(other.sort, sort) || other.sort == sort)&&(identical(other.listingType, listingType) || other.listingType == listingType)&&(identical(other.page, page) || other.page == page)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),q,communityId,communityName,creatorId,type,sort,listingType,page,limit,auth);
-
-@override
-String toString() {
-  return 'Search(path: $path, httpMethod: $httpMethod, q: $q, communityId: $communityId, communityName: $communityName, creatorId: $creatorId, type: $type, sort: $sort, listingType: $listingType, page: $page, limit: $limit, auth: $auth)';
-}
-
-
+  /// Create a copy of Search
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $SearchCopyWith<Search> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $SearchCopyWith<$Res>  {
-  factory $SearchCopyWith(Search value, $Res Function(Search) _then) = _$SearchCopyWithImpl;
-@useResult
-$Res call({
- String q, int? communityId, String? communityName, int? creatorId,@JsonKey(name: 'type_') SearchType? type, SortType? sort, ListingType? listingType, int? page, int? limit, String? auth
-});
-
-
-
-
+abstract class $SearchCopyWith<$Res> {
+  factory $SearchCopyWith(Search value, $Res Function(Search) then) =
+      _$SearchCopyWithImpl<$Res, Search>;
+  @useResult
+  $Res call({
+    String q,
+    int? communityId,
+    String? communityName,
+    int? creatorId,
+    @JsonKey(name: 'type_') SearchType? type,
+    SortType? sort,
+    ListingType? listingType,
+    int? page,
+    int? limit,
+    String? auth,
+  });
 }
+
 /// @nodoc
-class _$SearchCopyWithImpl<$Res>
+class _$SearchCopyWithImpl<$Res, $Val extends Search>
     implements $SearchCopyWith<$Res> {
-  _$SearchCopyWithImpl(this._self, this._then);
+  _$SearchCopyWithImpl(this._value, this._then);
 
-  final Search _self;
-  final $Res Function(Search) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of Search
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? q = null,Object? communityId = freezed,Object? communityName = freezed,Object? creatorId = freezed,Object? type = freezed,Object? sort = freezed,Object? listingType = freezed,Object? page = freezed,Object? limit = freezed,Object? auth = freezed,}) {
-  return _then(_self.copyWith(
-q: null == q ? _self.q : q // ignore: cast_nullable_to_non_nullable
-as String,communityId: freezed == communityId ? _self.communityId : communityId // ignore: cast_nullable_to_non_nullable
-as int?,communityName: freezed == communityName ? _self.communityName : communityName // ignore: cast_nullable_to_non_nullable
-as String?,creatorId: freezed == creatorId ? _self.creatorId : creatorId // ignore: cast_nullable_to_non_nullable
-as int?,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as SearchType?,sort: freezed == sort ? _self.sort : sort // ignore: cast_nullable_to_non_nullable
-as SortType?,listingType: freezed == listingType ? _self.listingType : listingType // ignore: cast_nullable_to_non_nullable
-as ListingType?,page: freezed == page ? _self.page : page // ignore: cast_nullable_to_non_nullable
-as int?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
+  /// Create a copy of Search
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? q = null,
+    Object? communityId = freezed,
+    Object? communityName = freezed,
+    Object? creatorId = freezed,
+    Object? type = freezed,
+    Object? sort = freezed,
+    Object? listingType = freezed,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(
+      _value.copyWith(
+            q:
+                null == q
+                    ? _value.q
+                    : q // ignore: cast_nullable_to_non_nullable
+                        as String,
+            communityId:
+                freezed == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            communityName:
+                freezed == communityName
+                    ? _value.communityName
+                    : communityName // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            creatorId:
+                freezed == creatorId
+                    ? _value.creatorId
+                    : creatorId // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            type:
+                freezed == type
+                    ? _value.type
+                    : type // ignore: cast_nullable_to_non_nullable
+                        as SearchType?,
+            sort:
+                freezed == sort
+                    ? _value.sort
+                    : sort // ignore: cast_nullable_to_non_nullable
+                        as SortType?,
+            listingType:
+                freezed == listingType
+                    ? _value.listingType
+                    : listingType // ignore: cast_nullable_to_non_nullable
+                        as ListingType?,
+            page:
+                freezed == page
+                    ? _value.page
+                    : page // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$SearchImplCopyWith<$Res> implements $SearchCopyWith<$Res> {
+  factory _$$SearchImplCopyWith(
+    _$SearchImpl value,
+    $Res Function(_$SearchImpl) then,
+  ) = __$$SearchImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({
+    String q,
+    int? communityId,
+    String? communityName,
+    int? creatorId,
+    @JsonKey(name: 'type_') SearchType? type,
+    SortType? sort,
+    ListingType? listingType,
+    int? page,
+    int? limit,
+    String? auth,
+  });
 }
 
+/// @nodoc
+class __$$SearchImplCopyWithImpl<$Res>
+    extends _$SearchCopyWithImpl<$Res, _$SearchImpl>
+    implements _$$SearchImplCopyWith<$Res> {
+  __$$SearchImplCopyWithImpl(
+    _$SearchImpl _value,
+    $Res Function(_$SearchImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [Search].
-extension SearchPatterns on Search {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _Search value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _Search() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _Search value)  $default,){
-final _that = this;
-switch (_that) {
-case _Search():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _Search value)?  $default,){
-final _that = this;
-switch (_that) {
-case _Search() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String q,  int? communityId,  String? communityName,  int? creatorId, @JsonKey(name: 'type_')  SearchType? type,  SortType? sort,  ListingType? listingType,  int? page,  int? limit,  String? auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _Search() when $default != null:
-return $default(_that.q,_that.communityId,_that.communityName,_that.creatorId,_that.type,_that.sort,_that.listingType,_that.page,_that.limit,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String q,  int? communityId,  String? communityName,  int? creatorId, @JsonKey(name: 'type_')  SearchType? type,  SortType? sort,  ListingType? listingType,  int? page,  int? limit,  String? auth)  $default,) {final _that = this;
-switch (_that) {
-case _Search():
-return $default(_that.q,_that.communityId,_that.communityName,_that.creatorId,_that.type,_that.sort,_that.listingType,_that.page,_that.limit,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String q,  int? communityId,  String? communityName,  int? creatorId, @JsonKey(name: 'type_')  SearchType? type,  SortType? sort,  ListingType? listingType,  int? page,  int? limit,  String? auth)?  $default,) {final _that = this;
-switch (_that) {
-case _Search() when $default != null:
-return $default(_that.q,_that.communityId,_that.communityName,_that.creatorId,_that.type,_that.sort,_that.listingType,_that.page,_that.limit,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of Search
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? q = null,
+    Object? communityId = freezed,
+    Object? communityName = freezed,
+    Object? creatorId = freezed,
+    Object? type = freezed,
+    Object? sort = freezed,
+    Object? listingType = freezed,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(
+      _$SearchImpl(
+        q:
+            null == q
+                ? _value.q
+                : q // ignore: cast_nullable_to_non_nullable
+                    as String,
+        communityId:
+            freezed == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        communityName:
+            freezed == communityName
+                ? _value.communityName
+                : communityName // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        creatorId:
+            freezed == creatorId
+                ? _value.creatorId
+                : creatorId // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        type:
+            freezed == type
+                ? _value.type
+                : type // ignore: cast_nullable_to_non_nullable
+                    as SearchType?,
+        sort:
+            freezed == sort
+                ? _value.sort
+                : sort // ignore: cast_nullable_to_non_nullable
+                    as SortType?,
+        listingType:
+            freezed == listingType
+                ? _value.listingType
+                : listingType // ignore: cast_nullable_to_non_nullable
+                    as ListingType?,
+        page:
+            freezed == page
+                ? _value.page
+                : page // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _Search extends Search {
-  const _Search({required this.q, this.communityId, this.communityName, this.creatorId, @JsonKey(name: 'type_') this.type, this.sort, this.listingType, this.page, this.limit, this.auth}): super._();
-  factory _Search.fromJson(Map<String, dynamic> json) => _$SearchFromJson(json);
+class _$SearchImpl extends _Search {
+  const _$SearchImpl({
+    required this.q,
+    this.communityId,
+    this.communityName,
+    this.creatorId,
+    @JsonKey(name: 'type_') this.type,
+    this.sort,
+    this.listingType,
+    this.page,
+    this.limit,
+    this.auth,
+  }) : super._();
 
-@override final  String q;
-// v0.18.0
-@override final  int? communityId;
-// v0.18.0
-@override final  String? communityName;
-// v0.18.0
-@override final  int? creatorId;
-// v0.18.0
-@override@JsonKey(name: 'type_') final  SearchType? type;
-// v0.18.0
-@override final  SortType? sort;
-// v0.18.0
-@override final  ListingType? listingType;
-// v0.18.0
-@override final  int? page;
-// v0.18.0
-@override final  int? limit;
-// v0.18.0
-@override final  String? auth;
+  factory _$SearchImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SearchImplFromJson(json);
 
-/// Create a copy of Search
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$SearchCopyWith<_Search> get copyWith => __$SearchCopyWithImpl<_Search>(this, _$identity);
+  @override
+  final String q;
+  // v0.18.0
+  @override
+  final int? communityId;
+  // v0.18.0
+  @override
+  final String? communityName;
+  // v0.18.0
+  @override
+  final int? creatorId;
+  // v0.18.0
+  @override
+  @JsonKey(name: 'type_')
+  final SearchType? type;
+  // v0.18.0
+  @override
+  final SortType? sort;
+  // v0.18.0
+  @override
+  final ListingType? listingType;
+  // v0.18.0
+  @override
+  final int? page;
+  // v0.18.0
+  @override
+  final int? limit;
+  // v0.18.0
+  @override
+  final String? auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$SearchToJson(this, );
+  @override
+  String toString() {
+    return 'Search(q: $q, communityId: $communityId, communityName: $communityName, creatorId: $creatorId, type: $type, sort: $sort, listingType: $listingType, page: $page, limit: $limit, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SearchImpl &&
+            (identical(other.q, q) || other.q == q) &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.communityName, communityName) ||
+                other.communityName == communityName) &&
+            (identical(other.creatorId, creatorId) ||
+                other.creatorId == creatorId) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.sort, sort) || other.sort == sort) &&
+            (identical(other.listingType, listingType) ||
+                other.listingType == listingType) &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+    runtimeType,
+    q,
+    communityId,
+    communityName,
+    creatorId,
+    type,
+    sort,
+    listingType,
+    page,
+    limit,
+    auth,
+  );
+
+  /// Create a copy of Search
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SearchImplCopyWith<_$SearchImpl> get copyWith =>
+      __$$SearchImplCopyWithImpl<_$SearchImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$SearchImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Search&&(identical(other.q, q) || other.q == q)&&(identical(other.communityId, communityId) || other.communityId == communityId)&&(identical(other.communityName, communityName) || other.communityName == communityName)&&(identical(other.creatorId, creatorId) || other.creatorId == creatorId)&&(identical(other.type, type) || other.type == type)&&(identical(other.sort, sort) || other.sort == sort)&&(identical(other.listingType, listingType) || other.listingType == listingType)&&(identical(other.page, page) || other.page == page)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _Search extends Search {
+  const factory _Search({
+    required final String q,
+    final int? communityId,
+    final String? communityName,
+    final int? creatorId,
+    @JsonKey(name: 'type_') final SearchType? type,
+    final SortType? sort,
+    final ListingType? listingType,
+    final int? page,
+    final int? limit,
+    final String? auth,
+  }) = _$SearchImpl;
+  const _Search._() : super._();
+
+  factory _Search.fromJson(Map<String, dynamic> json) = _$SearchImpl.fromJson;
+
+  @override
+  String get q; // v0.18.0
+  @override
+  int? get communityId; // v0.18.0
+  @override
+  String? get communityName; // v0.18.0
+  @override
+  int? get creatorId; // v0.18.0
+  @override
+  @JsonKey(name: 'type_')
+  SearchType? get type; // v0.18.0
+  @override
+  SortType? get sort; // v0.18.0
+  @override
+  ListingType? get listingType; // v0.18.0
+  @override
+  int? get page; // v0.18.0
+  @override
+  int? get limit; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of Search
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SearchImplCopyWith<_$SearchImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,q,communityId,communityName,creatorId,type,sort,listingType,page,limit,auth);
-
-@override
-String toString() {
-  return 'Search(q: $q, communityId: $communityId, communityName: $communityName, creatorId: $creatorId, type: $type, sort: $sort, listingType: $listingType, page: $page, limit: $limit, auth: $auth)';
+CreateSite _$CreateSiteFromJson(Map<String, dynamic> json) {
+  return _CreateSite.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$SearchCopyWith<$Res> implements $SearchCopyWith<$Res> {
-  factory _$SearchCopyWith(_Search value, $Res Function(_Search) _then) = __$SearchCopyWithImpl;
-@override @useResult
-$Res call({
- String q, int? communityId, String? communityName, int? creatorId,@JsonKey(name: 'type_') SearchType? type, SortType? sort, ListingType? listingType, int? page, int? limit, String? auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$SearchCopyWithImpl<$Res>
-    implements _$SearchCopyWith<$Res> {
-  __$SearchCopyWithImpl(this._self, this._then);
-
-  final _Search _self;
-  final $Res Function(_Search) _then;
-
-/// Create a copy of Search
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? q = null,Object? communityId = freezed,Object? communityName = freezed,Object? creatorId = freezed,Object? type = freezed,Object? sort = freezed,Object? listingType = freezed,Object? page = freezed,Object? limit = freezed,Object? auth = freezed,}) {
-  return _then(_Search(
-q: null == q ? _self.q : q // ignore: cast_nullable_to_non_nullable
-as String,communityId: freezed == communityId ? _self.communityId : communityId // ignore: cast_nullable_to_non_nullable
-as int?,communityName: freezed == communityName ? _self.communityName : communityName // ignore: cast_nullable_to_non_nullable
-as String?,creatorId: freezed == creatorId ? _self.creatorId : creatorId // ignore: cast_nullable_to_non_nullable
-as int?,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as SearchType?,sort: freezed == sort ? _self.sort : sort // ignore: cast_nullable_to_non_nullable
-as SortType?,listingType: freezed == listingType ? _self.listingType : listingType // ignore: cast_nullable_to_non_nullable
-as ListingType?,page: freezed == page ? _self.page : page // ignore: cast_nullable_to_non_nullable
-as int?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$CreateSite {
-
- dynamic get path; dynamic get httpMethod; String get name; String? get sidebar; String? get description; String? get icon; String? get banner; bool? get enableDownvotes; bool? get openRegistration; bool? get enableNsfw; bool? get communityCreationAdminOnly; bool? get requireEmailVerification; bool? get requireApplication; String? get applicationQuestion; bool? get privateInstance; String get auth; String? get defaultTheme;
-/// Create a copy of CreateSite
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$CreateSiteCopyWith<CreateSite> get copyWith => _$CreateSiteCopyWithImpl<CreateSite>(this as CreateSite, _$identity);
+  String get name => throw _privateConstructorUsedError;
+  String? get sidebar => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
+  String? get icon => throw _privateConstructorUsedError;
+  String? get banner => throw _privateConstructorUsedError;
+  bool? get enableDownvotes => throw _privateConstructorUsedError;
+  bool? get openRegistration => throw _privateConstructorUsedError;
+  bool? get enableNsfw => throw _privateConstructorUsedError;
+  bool? get communityCreationAdminOnly => throw _privateConstructorUsedError;
+  bool? get requireEmailVerification => throw _privateConstructorUsedError;
+  bool? get requireApplication => throw _privateConstructorUsedError;
+  String? get applicationQuestion => throw _privateConstructorUsedError;
+  bool? get privateInstance => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
+  String? get defaultTheme => throw _privateConstructorUsedError;
 
   /// Serializes this CreateSite to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is CreateSite&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.name, name) || other.name == name)&&(identical(other.sidebar, sidebar) || other.sidebar == sidebar)&&(identical(other.description, description) || other.description == description)&&(identical(other.icon, icon) || other.icon == icon)&&(identical(other.banner, banner) || other.banner == banner)&&(identical(other.enableDownvotes, enableDownvotes) || other.enableDownvotes == enableDownvotes)&&(identical(other.openRegistration, openRegistration) || other.openRegistration == openRegistration)&&(identical(other.enableNsfw, enableNsfw) || other.enableNsfw == enableNsfw)&&(identical(other.communityCreationAdminOnly, communityCreationAdminOnly) || other.communityCreationAdminOnly == communityCreationAdminOnly)&&(identical(other.requireEmailVerification, requireEmailVerification) || other.requireEmailVerification == requireEmailVerification)&&(identical(other.requireApplication, requireApplication) || other.requireApplication == requireApplication)&&(identical(other.applicationQuestion, applicationQuestion) || other.applicationQuestion == applicationQuestion)&&(identical(other.privateInstance, privateInstance) || other.privateInstance == privateInstance)&&(identical(other.auth, auth) || other.auth == auth)&&(identical(other.defaultTheme, defaultTheme) || other.defaultTheme == defaultTheme));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),name,sidebar,description,icon,banner,enableDownvotes,openRegistration,enableNsfw,communityCreationAdminOnly,requireEmailVerification,requireApplication,applicationQuestion,privateInstance,auth,defaultTheme);
-
-@override
-String toString() {
-  return 'CreateSite(path: $path, httpMethod: $httpMethod, name: $name, sidebar: $sidebar, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, requireEmailVerification: $requireEmailVerification, requireApplication: $requireApplication, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, auth: $auth, defaultTheme: $defaultTheme)';
-}
-
-
+  /// Create a copy of CreateSite
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $CreateSiteCopyWith<CreateSite> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $CreateSiteCopyWith<$Res>  {
-  factory $CreateSiteCopyWith(CreateSite value, $Res Function(CreateSite) _then) = _$CreateSiteCopyWithImpl;
-@useResult
-$Res call({
- String name, String? sidebar, String? description, String? icon, String? banner, bool? enableDownvotes, bool? openRegistration, bool? enableNsfw, bool? communityCreationAdminOnly, bool? requireEmailVerification, bool? requireApplication, String? applicationQuestion, bool? privateInstance, String auth, String? defaultTheme
-});
-
-
-
-
+abstract class $CreateSiteCopyWith<$Res> {
+  factory $CreateSiteCopyWith(
+    CreateSite value,
+    $Res Function(CreateSite) then,
+  ) = _$CreateSiteCopyWithImpl<$Res, CreateSite>;
+  @useResult
+  $Res call({
+    String name,
+    String? sidebar,
+    String? description,
+    String? icon,
+    String? banner,
+    bool? enableDownvotes,
+    bool? openRegistration,
+    bool? enableNsfw,
+    bool? communityCreationAdminOnly,
+    bool? requireEmailVerification,
+    bool? requireApplication,
+    String? applicationQuestion,
+    bool? privateInstance,
+    String auth,
+    String? defaultTheme,
+  });
 }
+
 /// @nodoc
-class _$CreateSiteCopyWithImpl<$Res>
+class _$CreateSiteCopyWithImpl<$Res, $Val extends CreateSite>
     implements $CreateSiteCopyWith<$Res> {
-  _$CreateSiteCopyWithImpl(this._self, this._then);
+  _$CreateSiteCopyWithImpl(this._value, this._then);
 
-  final CreateSite _self;
-  final $Res Function(CreateSite) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of CreateSite
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? name = null,Object? sidebar = freezed,Object? description = freezed,Object? icon = freezed,Object? banner = freezed,Object? enableDownvotes = freezed,Object? openRegistration = freezed,Object? enableNsfw = freezed,Object? communityCreationAdminOnly = freezed,Object? requireEmailVerification = freezed,Object? requireApplication = freezed,Object? applicationQuestion = freezed,Object? privateInstance = freezed,Object? auth = null,Object? defaultTheme = freezed,}) {
-  return _then(_self.copyWith(
-name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String,sidebar: freezed == sidebar ? _self.sidebar : sidebar // ignore: cast_nullable_to_non_nullable
-as String?,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
-as String?,icon: freezed == icon ? _self.icon : icon // ignore: cast_nullable_to_non_nullable
-as String?,banner: freezed == banner ? _self.banner : banner // ignore: cast_nullable_to_non_nullable
-as String?,enableDownvotes: freezed == enableDownvotes ? _self.enableDownvotes : enableDownvotes // ignore: cast_nullable_to_non_nullable
-as bool?,openRegistration: freezed == openRegistration ? _self.openRegistration : openRegistration // ignore: cast_nullable_to_non_nullable
-as bool?,enableNsfw: freezed == enableNsfw ? _self.enableNsfw : enableNsfw // ignore: cast_nullable_to_non_nullable
-as bool?,communityCreationAdminOnly: freezed == communityCreationAdminOnly ? _self.communityCreationAdminOnly : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
-as bool?,requireEmailVerification: freezed == requireEmailVerification ? _self.requireEmailVerification : requireEmailVerification // ignore: cast_nullable_to_non_nullable
-as bool?,requireApplication: freezed == requireApplication ? _self.requireApplication : requireApplication // ignore: cast_nullable_to_non_nullable
-as bool?,applicationQuestion: freezed == applicationQuestion ? _self.applicationQuestion : applicationQuestion // ignore: cast_nullable_to_non_nullable
-as String?,privateInstance: freezed == privateInstance ? _self.privateInstance : privateInstance // ignore: cast_nullable_to_non_nullable
-as bool?,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,defaultTheme: freezed == defaultTheme ? _self.defaultTheme : defaultTheme // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
+  /// Create a copy of CreateSite
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = null,
+    Object? sidebar = freezed,
+    Object? description = freezed,
+    Object? icon = freezed,
+    Object? banner = freezed,
+    Object? enableDownvotes = freezed,
+    Object? openRegistration = freezed,
+    Object? enableNsfw = freezed,
+    Object? communityCreationAdminOnly = freezed,
+    Object? requireEmailVerification = freezed,
+    Object? requireApplication = freezed,
+    Object? applicationQuestion = freezed,
+    Object? privateInstance = freezed,
+    Object? auth = null,
+    Object? defaultTheme = freezed,
+  }) {
+    return _then(
+      _value.copyWith(
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            sidebar:
+                freezed == sidebar
+                    ? _value.sidebar
+                    : sidebar // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            description:
+                freezed == description
+                    ? _value.description
+                    : description // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            icon:
+                freezed == icon
+                    ? _value.icon
+                    : icon // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            banner:
+                freezed == banner
+                    ? _value.banner
+                    : banner // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            enableDownvotes:
+                freezed == enableDownvotes
+                    ? _value.enableDownvotes
+                    : enableDownvotes // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            openRegistration:
+                freezed == openRegistration
+                    ? _value.openRegistration
+                    : openRegistration // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            enableNsfw:
+                freezed == enableNsfw
+                    ? _value.enableNsfw
+                    : enableNsfw // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            communityCreationAdminOnly:
+                freezed == communityCreationAdminOnly
+                    ? _value.communityCreationAdminOnly
+                    : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            requireEmailVerification:
+                freezed == requireEmailVerification
+                    ? _value.requireEmailVerification
+                    : requireEmailVerification // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            requireApplication:
+                freezed == requireApplication
+                    ? _value.requireApplication
+                    : requireApplication // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            applicationQuestion:
+                freezed == applicationQuestion
+                    ? _value.applicationQuestion
+                    : applicationQuestion // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            privateInstance:
+                freezed == privateInstance
+                    ? _value.privateInstance
+                    : privateInstance // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+            defaultTheme:
+                freezed == defaultTheme
+                    ? _value.defaultTheme
+                    : defaultTheme // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$CreateSiteImplCopyWith<$Res>
+    implements $CreateSiteCopyWith<$Res> {
+  factory _$$CreateSiteImplCopyWith(
+    _$CreateSiteImpl value,
+    $Res Function(_$CreateSiteImpl) then,
+  ) = __$$CreateSiteImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({
+    String name,
+    String? sidebar,
+    String? description,
+    String? icon,
+    String? banner,
+    bool? enableDownvotes,
+    bool? openRegistration,
+    bool? enableNsfw,
+    bool? communityCreationAdminOnly,
+    bool? requireEmailVerification,
+    bool? requireApplication,
+    String? applicationQuestion,
+    bool? privateInstance,
+    String auth,
+    String? defaultTheme,
+  });
 }
 
+/// @nodoc
+class __$$CreateSiteImplCopyWithImpl<$Res>
+    extends _$CreateSiteCopyWithImpl<$Res, _$CreateSiteImpl>
+    implements _$$CreateSiteImplCopyWith<$Res> {
+  __$$CreateSiteImplCopyWithImpl(
+    _$CreateSiteImpl _value,
+    $Res Function(_$CreateSiteImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [CreateSite].
-extension CreateSitePatterns on CreateSite {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _CreateSite value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _CreateSite() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _CreateSite value)  $default,){
-final _that = this;
-switch (_that) {
-case _CreateSite():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _CreateSite value)?  $default,){
-final _that = this;
-switch (_that) {
-case _CreateSite() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String name,  String? sidebar,  String? description,  String? icon,  String? banner,  bool? enableDownvotes,  bool? openRegistration,  bool? enableNsfw,  bool? communityCreationAdminOnly,  bool? requireEmailVerification,  bool? requireApplication,  String? applicationQuestion,  bool? privateInstance,  String auth,  String? defaultTheme)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _CreateSite() when $default != null:
-return $default(_that.name,_that.sidebar,_that.description,_that.icon,_that.banner,_that.enableDownvotes,_that.openRegistration,_that.enableNsfw,_that.communityCreationAdminOnly,_that.requireEmailVerification,_that.requireApplication,_that.applicationQuestion,_that.privateInstance,_that.auth,_that.defaultTheme);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String name,  String? sidebar,  String? description,  String? icon,  String? banner,  bool? enableDownvotes,  bool? openRegistration,  bool? enableNsfw,  bool? communityCreationAdminOnly,  bool? requireEmailVerification,  bool? requireApplication,  String? applicationQuestion,  bool? privateInstance,  String auth,  String? defaultTheme)  $default,) {final _that = this;
-switch (_that) {
-case _CreateSite():
-return $default(_that.name,_that.sidebar,_that.description,_that.icon,_that.banner,_that.enableDownvotes,_that.openRegistration,_that.enableNsfw,_that.communityCreationAdminOnly,_that.requireEmailVerification,_that.requireApplication,_that.applicationQuestion,_that.privateInstance,_that.auth,_that.defaultTheme);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String name,  String? sidebar,  String? description,  String? icon,  String? banner,  bool? enableDownvotes,  bool? openRegistration,  bool? enableNsfw,  bool? communityCreationAdminOnly,  bool? requireEmailVerification,  bool? requireApplication,  String? applicationQuestion,  bool? privateInstance,  String auth,  String? defaultTheme)?  $default,) {final _that = this;
-switch (_that) {
-case _CreateSite() when $default != null:
-return $default(_that.name,_that.sidebar,_that.description,_that.icon,_that.banner,_that.enableDownvotes,_that.openRegistration,_that.enableNsfw,_that.communityCreationAdminOnly,_that.requireEmailVerification,_that.requireApplication,_that.applicationQuestion,_that.privateInstance,_that.auth,_that.defaultTheme);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of CreateSite
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = null,
+    Object? sidebar = freezed,
+    Object? description = freezed,
+    Object? icon = freezed,
+    Object? banner = freezed,
+    Object? enableDownvotes = freezed,
+    Object? openRegistration = freezed,
+    Object? enableNsfw = freezed,
+    Object? communityCreationAdminOnly = freezed,
+    Object? requireEmailVerification = freezed,
+    Object? requireApplication = freezed,
+    Object? applicationQuestion = freezed,
+    Object? privateInstance = freezed,
+    Object? auth = null,
+    Object? defaultTheme = freezed,
+  }) {
+    return _then(
+      _$CreateSiteImpl(
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        sidebar:
+            freezed == sidebar
+                ? _value.sidebar
+                : sidebar // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        description:
+            freezed == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        icon:
+            freezed == icon
+                ? _value.icon
+                : icon // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        banner:
+            freezed == banner
+                ? _value.banner
+                : banner // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        enableDownvotes:
+            freezed == enableDownvotes
+                ? _value.enableDownvotes
+                : enableDownvotes // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        openRegistration:
+            freezed == openRegistration
+                ? _value.openRegistration
+                : openRegistration // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        enableNsfw:
+            freezed == enableNsfw
+                ? _value.enableNsfw
+                : enableNsfw // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        communityCreationAdminOnly:
+            freezed == communityCreationAdminOnly
+                ? _value.communityCreationAdminOnly
+                : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        requireEmailVerification:
+            freezed == requireEmailVerification
+                ? _value.requireEmailVerification
+                : requireEmailVerification // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        requireApplication:
+            freezed == requireApplication
+                ? _value.requireApplication
+                : requireApplication // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        applicationQuestion:
+            freezed == applicationQuestion
+                ? _value.applicationQuestion
+                : applicationQuestion // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        privateInstance:
+            freezed == privateInstance
+                ? _value.privateInstance
+                : privateInstance // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+        defaultTheme:
+            freezed == defaultTheme
+                ? _value.defaultTheme
+                : defaultTheme // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _CreateSite extends CreateSite {
-  const _CreateSite({required this.name, this.sidebar, this.description, this.icon, this.banner, this.enableDownvotes, this.openRegistration, this.enableNsfw, this.communityCreationAdminOnly, this.requireEmailVerification, this.requireApplication, this.applicationQuestion, this.privateInstance, required this.auth, this.defaultTheme}): super._();
-  factory _CreateSite.fromJson(Map<String, dynamic> json) => _$CreateSiteFromJson(json);
+class _$CreateSiteImpl extends _CreateSite {
+  const _$CreateSiteImpl({
+    required this.name,
+    this.sidebar,
+    this.description,
+    this.icon,
+    this.banner,
+    this.enableDownvotes,
+    this.openRegistration,
+    this.enableNsfw,
+    this.communityCreationAdminOnly,
+    this.requireEmailVerification,
+    this.requireApplication,
+    this.applicationQuestion,
+    this.privateInstance,
+    required this.auth,
+    this.defaultTheme,
+  }) : super._();
 
-@override final  String name;
-@override final  String? sidebar;
-@override final  String? description;
-@override final  String? icon;
-@override final  String? banner;
-@override final  bool? enableDownvotes;
-@override final  bool? openRegistration;
-@override final  bool? enableNsfw;
-@override final  bool? communityCreationAdminOnly;
-@override final  bool? requireEmailVerification;
-@override final  bool? requireApplication;
-@override final  String? applicationQuestion;
-@override final  bool? privateInstance;
-@override final  String auth;
-@override final  String? defaultTheme;
+  factory _$CreateSiteImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CreateSiteImplFromJson(json);
 
-/// Create a copy of CreateSite
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$CreateSiteCopyWith<_CreateSite> get copyWith => __$CreateSiteCopyWithImpl<_CreateSite>(this, _$identity);
+  @override
+  final String name;
+  @override
+  final String? sidebar;
+  @override
+  final String? description;
+  @override
+  final String? icon;
+  @override
+  final String? banner;
+  @override
+  final bool? enableDownvotes;
+  @override
+  final bool? openRegistration;
+  @override
+  final bool? enableNsfw;
+  @override
+  final bool? communityCreationAdminOnly;
+  @override
+  final bool? requireEmailVerification;
+  @override
+  final bool? requireApplication;
+  @override
+  final String? applicationQuestion;
+  @override
+  final bool? privateInstance;
+  @override
+  final String auth;
+  @override
+  final String? defaultTheme;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$CreateSiteToJson(this, );
+  @override
+  String toString() {
+    return 'CreateSite(name: $name, sidebar: $sidebar, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, requireEmailVerification: $requireEmailVerification, requireApplication: $requireApplication, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, auth: $auth, defaultTheme: $defaultTheme)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CreateSiteImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.sidebar, sidebar) || other.sidebar == sidebar) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.banner, banner) || other.banner == banner) &&
+            (identical(other.enableDownvotes, enableDownvotes) ||
+                other.enableDownvotes == enableDownvotes) &&
+            (identical(other.openRegistration, openRegistration) ||
+                other.openRegistration == openRegistration) &&
+            (identical(other.enableNsfw, enableNsfw) ||
+                other.enableNsfw == enableNsfw) &&
+            (identical(
+                  other.communityCreationAdminOnly,
+                  communityCreationAdminOnly,
+                ) ||
+                other.communityCreationAdminOnly ==
+                    communityCreationAdminOnly) &&
+            (identical(
+                  other.requireEmailVerification,
+                  requireEmailVerification,
+                ) ||
+                other.requireEmailVerification == requireEmailVerification) &&
+            (identical(other.requireApplication, requireApplication) ||
+                other.requireApplication == requireApplication) &&
+            (identical(other.applicationQuestion, applicationQuestion) ||
+                other.applicationQuestion == applicationQuestion) &&
+            (identical(other.privateInstance, privateInstance) ||
+                other.privateInstance == privateInstance) &&
+            (identical(other.auth, auth) || other.auth == auth) &&
+            (identical(other.defaultTheme, defaultTheme) ||
+                other.defaultTheme == defaultTheme));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+    runtimeType,
+    name,
+    sidebar,
+    description,
+    icon,
+    banner,
+    enableDownvotes,
+    openRegistration,
+    enableNsfw,
+    communityCreationAdminOnly,
+    requireEmailVerification,
+    requireApplication,
+    applicationQuestion,
+    privateInstance,
+    auth,
+    defaultTheme,
+  );
+
+  /// Create a copy of CreateSite
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CreateSiteImplCopyWith<_$CreateSiteImpl> get copyWith =>
+      __$$CreateSiteImplCopyWithImpl<_$CreateSiteImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$CreateSiteImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CreateSite&&(identical(other.name, name) || other.name == name)&&(identical(other.sidebar, sidebar) || other.sidebar == sidebar)&&(identical(other.description, description) || other.description == description)&&(identical(other.icon, icon) || other.icon == icon)&&(identical(other.banner, banner) || other.banner == banner)&&(identical(other.enableDownvotes, enableDownvotes) || other.enableDownvotes == enableDownvotes)&&(identical(other.openRegistration, openRegistration) || other.openRegistration == openRegistration)&&(identical(other.enableNsfw, enableNsfw) || other.enableNsfw == enableNsfw)&&(identical(other.communityCreationAdminOnly, communityCreationAdminOnly) || other.communityCreationAdminOnly == communityCreationAdminOnly)&&(identical(other.requireEmailVerification, requireEmailVerification) || other.requireEmailVerification == requireEmailVerification)&&(identical(other.requireApplication, requireApplication) || other.requireApplication == requireApplication)&&(identical(other.applicationQuestion, applicationQuestion) || other.applicationQuestion == applicationQuestion)&&(identical(other.privateInstance, privateInstance) || other.privateInstance == privateInstance)&&(identical(other.auth, auth) || other.auth == auth)&&(identical(other.defaultTheme, defaultTheme) || other.defaultTheme == defaultTheme));
+abstract class _CreateSite extends CreateSite {
+  const factory _CreateSite({
+    required final String name,
+    final String? sidebar,
+    final String? description,
+    final String? icon,
+    final String? banner,
+    final bool? enableDownvotes,
+    final bool? openRegistration,
+    final bool? enableNsfw,
+    final bool? communityCreationAdminOnly,
+    final bool? requireEmailVerification,
+    final bool? requireApplication,
+    final String? applicationQuestion,
+    final bool? privateInstance,
+    required final String auth,
+    final String? defaultTheme,
+  }) = _$CreateSiteImpl;
+  const _CreateSite._() : super._();
+
+  factory _CreateSite.fromJson(Map<String, dynamic> json) =
+      _$CreateSiteImpl.fromJson;
+
+  @override
+  String get name;
+  @override
+  String? get sidebar;
+  @override
+  String? get description;
+  @override
+  String? get icon;
+  @override
+  String? get banner;
+  @override
+  bool? get enableDownvotes;
+  @override
+  bool? get openRegistration;
+  @override
+  bool? get enableNsfw;
+  @override
+  bool? get communityCreationAdminOnly;
+  @override
+  bool? get requireEmailVerification;
+  @override
+  bool? get requireApplication;
+  @override
+  String? get applicationQuestion;
+  @override
+  bool? get privateInstance;
+  @override
+  String get auth;
+  @override
+  String? get defaultTheme;
+
+  /// Create a copy of CreateSite
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$CreateSiteImplCopyWith<_$CreateSiteImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,name,sidebar,description,icon,banner,enableDownvotes,openRegistration,enableNsfw,communityCreationAdminOnly,requireEmailVerification,requireApplication,applicationQuestion,privateInstance,auth,defaultTheme);
-
-@override
-String toString() {
-  return 'CreateSite(name: $name, sidebar: $sidebar, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, requireEmailVerification: $requireEmailVerification, requireApplication: $requireApplication, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, auth: $auth, defaultTheme: $defaultTheme)';
+EditSite _$EditSiteFromJson(Map<String, dynamic> json) {
+  return _EditSite.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$CreateSiteCopyWith<$Res> implements $CreateSiteCopyWith<$Res> {
-  factory _$CreateSiteCopyWith(_CreateSite value, $Res Function(_CreateSite) _then) = __$CreateSiteCopyWithImpl;
-@override @useResult
-$Res call({
- String name, String? sidebar, String? description, String? icon, String? banner, bool? enableDownvotes, bool? openRegistration, bool? enableNsfw, bool? communityCreationAdminOnly, bool? requireEmailVerification, bool? requireApplication, String? applicationQuestion, bool? privateInstance, String auth, String? defaultTheme
-});
-
-
-
-
-}
-/// @nodoc
-class __$CreateSiteCopyWithImpl<$Res>
-    implements _$CreateSiteCopyWith<$Res> {
-  __$CreateSiteCopyWithImpl(this._self, this._then);
-
-  final _CreateSite _self;
-  final $Res Function(_CreateSite) _then;
-
-/// Create a copy of CreateSite
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? name = null,Object? sidebar = freezed,Object? description = freezed,Object? icon = freezed,Object? banner = freezed,Object? enableDownvotes = freezed,Object? openRegistration = freezed,Object? enableNsfw = freezed,Object? communityCreationAdminOnly = freezed,Object? requireEmailVerification = freezed,Object? requireApplication = freezed,Object? applicationQuestion = freezed,Object? privateInstance = freezed,Object? auth = null,Object? defaultTheme = freezed,}) {
-  return _then(_CreateSite(
-name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String,sidebar: freezed == sidebar ? _self.sidebar : sidebar // ignore: cast_nullable_to_non_nullable
-as String?,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
-as String?,icon: freezed == icon ? _self.icon : icon // ignore: cast_nullable_to_non_nullable
-as String?,banner: freezed == banner ? _self.banner : banner // ignore: cast_nullable_to_non_nullable
-as String?,enableDownvotes: freezed == enableDownvotes ? _self.enableDownvotes : enableDownvotes // ignore: cast_nullable_to_non_nullable
-as bool?,openRegistration: freezed == openRegistration ? _self.openRegistration : openRegistration // ignore: cast_nullable_to_non_nullable
-as bool?,enableNsfw: freezed == enableNsfw ? _self.enableNsfw : enableNsfw // ignore: cast_nullable_to_non_nullable
-as bool?,communityCreationAdminOnly: freezed == communityCreationAdminOnly ? _self.communityCreationAdminOnly : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
-as bool?,requireEmailVerification: freezed == requireEmailVerification ? _self.requireEmailVerification : requireEmailVerification // ignore: cast_nullable_to_non_nullable
-as bool?,requireApplication: freezed == requireApplication ? _self.requireApplication : requireApplication // ignore: cast_nullable_to_non_nullable
-as bool?,applicationQuestion: freezed == applicationQuestion ? _self.applicationQuestion : applicationQuestion // ignore: cast_nullable_to_non_nullable
-as String?,privateInstance: freezed == privateInstance ? _self.privateInstance : privateInstance // ignore: cast_nullable_to_non_nullable
-as bool?,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,defaultTheme: freezed == defaultTheme ? _self.defaultTheme : defaultTheme // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$EditSite {
-
- dynamic get path; dynamic get httpMethod; String? get name; String? get sidebar; String? get description; String? get icon; String? get banner; bool? get enableDownvotes; bool? get openRegistration; bool? get enableNsfw; bool? get communityCreationAdminOnly; bool? get requireEmailVerification; bool? get requireApplication; String? get applicationQuestion; bool? get privateInstance; String get auth; String? get defaultTheme;
-/// Create a copy of EditSite
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$EditSiteCopyWith<EditSite> get copyWith => _$EditSiteCopyWithImpl<EditSite>(this as EditSite, _$identity);
+  String? get name => throw _privateConstructorUsedError;
+  String? get sidebar => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
+  String? get icon => throw _privateConstructorUsedError;
+  String? get banner => throw _privateConstructorUsedError;
+  bool? get enableDownvotes => throw _privateConstructorUsedError;
+  bool? get openRegistration => throw _privateConstructorUsedError;
+  bool? get enableNsfw => throw _privateConstructorUsedError;
+  bool? get communityCreationAdminOnly => throw _privateConstructorUsedError;
+  bool? get requireEmailVerification => throw _privateConstructorUsedError;
+  bool? get requireApplication => throw _privateConstructorUsedError;
+  String? get applicationQuestion => throw _privateConstructorUsedError;
+  bool? get privateInstance => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
+  String? get defaultTheme => throw _privateConstructorUsedError;
 
   /// Serializes this EditSite to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is EditSite&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.name, name) || other.name == name)&&(identical(other.sidebar, sidebar) || other.sidebar == sidebar)&&(identical(other.description, description) || other.description == description)&&(identical(other.icon, icon) || other.icon == icon)&&(identical(other.banner, banner) || other.banner == banner)&&(identical(other.enableDownvotes, enableDownvotes) || other.enableDownvotes == enableDownvotes)&&(identical(other.openRegistration, openRegistration) || other.openRegistration == openRegistration)&&(identical(other.enableNsfw, enableNsfw) || other.enableNsfw == enableNsfw)&&(identical(other.communityCreationAdminOnly, communityCreationAdminOnly) || other.communityCreationAdminOnly == communityCreationAdminOnly)&&(identical(other.requireEmailVerification, requireEmailVerification) || other.requireEmailVerification == requireEmailVerification)&&(identical(other.requireApplication, requireApplication) || other.requireApplication == requireApplication)&&(identical(other.applicationQuestion, applicationQuestion) || other.applicationQuestion == applicationQuestion)&&(identical(other.privateInstance, privateInstance) || other.privateInstance == privateInstance)&&(identical(other.auth, auth) || other.auth == auth)&&(identical(other.defaultTheme, defaultTheme) || other.defaultTheme == defaultTheme));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),name,sidebar,description,icon,banner,enableDownvotes,openRegistration,enableNsfw,communityCreationAdminOnly,requireEmailVerification,requireApplication,applicationQuestion,privateInstance,auth,defaultTheme);
-
-@override
-String toString() {
-  return 'EditSite(path: $path, httpMethod: $httpMethod, name: $name, sidebar: $sidebar, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, requireEmailVerification: $requireEmailVerification, requireApplication: $requireApplication, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, auth: $auth, defaultTheme: $defaultTheme)';
-}
-
-
+  /// Create a copy of EditSite
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $EditSiteCopyWith<EditSite> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $EditSiteCopyWith<$Res>  {
-  factory $EditSiteCopyWith(EditSite value, $Res Function(EditSite) _then) = _$EditSiteCopyWithImpl;
-@useResult
-$Res call({
- String? name, String? sidebar, String? description, String? icon, String? banner, bool? enableDownvotes, bool? openRegistration, bool? enableNsfw, bool? communityCreationAdminOnly, bool? requireEmailVerification, bool? requireApplication, String? applicationQuestion, bool? privateInstance, String auth, String? defaultTheme
-});
-
-
-
-
+abstract class $EditSiteCopyWith<$Res> {
+  factory $EditSiteCopyWith(EditSite value, $Res Function(EditSite) then) =
+      _$EditSiteCopyWithImpl<$Res, EditSite>;
+  @useResult
+  $Res call({
+    String? name,
+    String? sidebar,
+    String? description,
+    String? icon,
+    String? banner,
+    bool? enableDownvotes,
+    bool? openRegistration,
+    bool? enableNsfw,
+    bool? communityCreationAdminOnly,
+    bool? requireEmailVerification,
+    bool? requireApplication,
+    String? applicationQuestion,
+    bool? privateInstance,
+    String auth,
+    String? defaultTheme,
+  });
 }
+
 /// @nodoc
-class _$EditSiteCopyWithImpl<$Res>
+class _$EditSiteCopyWithImpl<$Res, $Val extends EditSite>
     implements $EditSiteCopyWith<$Res> {
-  _$EditSiteCopyWithImpl(this._self, this._then);
+  _$EditSiteCopyWithImpl(this._value, this._then);
 
-  final EditSite _self;
-  final $Res Function(EditSite) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of EditSite
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? name = freezed,Object? sidebar = freezed,Object? description = freezed,Object? icon = freezed,Object? banner = freezed,Object? enableDownvotes = freezed,Object? openRegistration = freezed,Object? enableNsfw = freezed,Object? communityCreationAdminOnly = freezed,Object? requireEmailVerification = freezed,Object? requireApplication = freezed,Object? applicationQuestion = freezed,Object? privateInstance = freezed,Object? auth = null,Object? defaultTheme = freezed,}) {
-  return _then(_self.copyWith(
-name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String?,sidebar: freezed == sidebar ? _self.sidebar : sidebar // ignore: cast_nullable_to_non_nullable
-as String?,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
-as String?,icon: freezed == icon ? _self.icon : icon // ignore: cast_nullable_to_non_nullable
-as String?,banner: freezed == banner ? _self.banner : banner // ignore: cast_nullable_to_non_nullable
-as String?,enableDownvotes: freezed == enableDownvotes ? _self.enableDownvotes : enableDownvotes // ignore: cast_nullable_to_non_nullable
-as bool?,openRegistration: freezed == openRegistration ? _self.openRegistration : openRegistration // ignore: cast_nullable_to_non_nullable
-as bool?,enableNsfw: freezed == enableNsfw ? _self.enableNsfw : enableNsfw // ignore: cast_nullable_to_non_nullable
-as bool?,communityCreationAdminOnly: freezed == communityCreationAdminOnly ? _self.communityCreationAdminOnly : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
-as bool?,requireEmailVerification: freezed == requireEmailVerification ? _self.requireEmailVerification : requireEmailVerification // ignore: cast_nullable_to_non_nullable
-as bool?,requireApplication: freezed == requireApplication ? _self.requireApplication : requireApplication // ignore: cast_nullable_to_non_nullable
-as bool?,applicationQuestion: freezed == applicationQuestion ? _self.applicationQuestion : applicationQuestion // ignore: cast_nullable_to_non_nullable
-as String?,privateInstance: freezed == privateInstance ? _self.privateInstance : privateInstance // ignore: cast_nullable_to_non_nullable
-as bool?,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,defaultTheme: freezed == defaultTheme ? _self.defaultTheme : defaultTheme // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
+  /// Create a copy of EditSite
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = freezed,
+    Object? sidebar = freezed,
+    Object? description = freezed,
+    Object? icon = freezed,
+    Object? banner = freezed,
+    Object? enableDownvotes = freezed,
+    Object? openRegistration = freezed,
+    Object? enableNsfw = freezed,
+    Object? communityCreationAdminOnly = freezed,
+    Object? requireEmailVerification = freezed,
+    Object? requireApplication = freezed,
+    Object? applicationQuestion = freezed,
+    Object? privateInstance = freezed,
+    Object? auth = null,
+    Object? defaultTheme = freezed,
+  }) {
+    return _then(
+      _value.copyWith(
+            name:
+                freezed == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            sidebar:
+                freezed == sidebar
+                    ? _value.sidebar
+                    : sidebar // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            description:
+                freezed == description
+                    ? _value.description
+                    : description // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            icon:
+                freezed == icon
+                    ? _value.icon
+                    : icon // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            banner:
+                freezed == banner
+                    ? _value.banner
+                    : banner // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            enableDownvotes:
+                freezed == enableDownvotes
+                    ? _value.enableDownvotes
+                    : enableDownvotes // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            openRegistration:
+                freezed == openRegistration
+                    ? _value.openRegistration
+                    : openRegistration // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            enableNsfw:
+                freezed == enableNsfw
+                    ? _value.enableNsfw
+                    : enableNsfw // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            communityCreationAdminOnly:
+                freezed == communityCreationAdminOnly
+                    ? _value.communityCreationAdminOnly
+                    : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            requireEmailVerification:
+                freezed == requireEmailVerification
+                    ? _value.requireEmailVerification
+                    : requireEmailVerification // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            requireApplication:
+                freezed == requireApplication
+                    ? _value.requireApplication
+                    : requireApplication // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            applicationQuestion:
+                freezed == applicationQuestion
+                    ? _value.applicationQuestion
+                    : applicationQuestion // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            privateInstance:
+                freezed == privateInstance
+                    ? _value.privateInstance
+                    : privateInstance // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+            defaultTheme:
+                freezed == defaultTheme
+                    ? _value.defaultTheme
+                    : defaultTheme // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$EditSiteImplCopyWith<$Res>
+    implements $EditSiteCopyWith<$Res> {
+  factory _$$EditSiteImplCopyWith(
+    _$EditSiteImpl value,
+    $Res Function(_$EditSiteImpl) then,
+  ) = __$$EditSiteImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({
+    String? name,
+    String? sidebar,
+    String? description,
+    String? icon,
+    String? banner,
+    bool? enableDownvotes,
+    bool? openRegistration,
+    bool? enableNsfw,
+    bool? communityCreationAdminOnly,
+    bool? requireEmailVerification,
+    bool? requireApplication,
+    String? applicationQuestion,
+    bool? privateInstance,
+    String auth,
+    String? defaultTheme,
+  });
 }
 
+/// @nodoc
+class __$$EditSiteImplCopyWithImpl<$Res>
+    extends _$EditSiteCopyWithImpl<$Res, _$EditSiteImpl>
+    implements _$$EditSiteImplCopyWith<$Res> {
+  __$$EditSiteImplCopyWithImpl(
+    _$EditSiteImpl _value,
+    $Res Function(_$EditSiteImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [EditSite].
-extension EditSitePatterns on EditSite {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _EditSite value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _EditSite() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _EditSite value)  $default,){
-final _that = this;
-switch (_that) {
-case _EditSite():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _EditSite value)?  $default,){
-final _that = this;
-switch (_that) {
-case _EditSite() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? name,  String? sidebar,  String? description,  String? icon,  String? banner,  bool? enableDownvotes,  bool? openRegistration,  bool? enableNsfw,  bool? communityCreationAdminOnly,  bool? requireEmailVerification,  bool? requireApplication,  String? applicationQuestion,  bool? privateInstance,  String auth,  String? defaultTheme)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _EditSite() when $default != null:
-return $default(_that.name,_that.sidebar,_that.description,_that.icon,_that.banner,_that.enableDownvotes,_that.openRegistration,_that.enableNsfw,_that.communityCreationAdminOnly,_that.requireEmailVerification,_that.requireApplication,_that.applicationQuestion,_that.privateInstance,_that.auth,_that.defaultTheme);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? name,  String? sidebar,  String? description,  String? icon,  String? banner,  bool? enableDownvotes,  bool? openRegistration,  bool? enableNsfw,  bool? communityCreationAdminOnly,  bool? requireEmailVerification,  bool? requireApplication,  String? applicationQuestion,  bool? privateInstance,  String auth,  String? defaultTheme)  $default,) {final _that = this;
-switch (_that) {
-case _EditSite():
-return $default(_that.name,_that.sidebar,_that.description,_that.icon,_that.banner,_that.enableDownvotes,_that.openRegistration,_that.enableNsfw,_that.communityCreationAdminOnly,_that.requireEmailVerification,_that.requireApplication,_that.applicationQuestion,_that.privateInstance,_that.auth,_that.defaultTheme);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? name,  String? sidebar,  String? description,  String? icon,  String? banner,  bool? enableDownvotes,  bool? openRegistration,  bool? enableNsfw,  bool? communityCreationAdminOnly,  bool? requireEmailVerification,  bool? requireApplication,  String? applicationQuestion,  bool? privateInstance,  String auth,  String? defaultTheme)?  $default,) {final _that = this;
-switch (_that) {
-case _EditSite() when $default != null:
-return $default(_that.name,_that.sidebar,_that.description,_that.icon,_that.banner,_that.enableDownvotes,_that.openRegistration,_that.enableNsfw,_that.communityCreationAdminOnly,_that.requireEmailVerification,_that.requireApplication,_that.applicationQuestion,_that.privateInstance,_that.auth,_that.defaultTheme);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of EditSite
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = freezed,
+    Object? sidebar = freezed,
+    Object? description = freezed,
+    Object? icon = freezed,
+    Object? banner = freezed,
+    Object? enableDownvotes = freezed,
+    Object? openRegistration = freezed,
+    Object? enableNsfw = freezed,
+    Object? communityCreationAdminOnly = freezed,
+    Object? requireEmailVerification = freezed,
+    Object? requireApplication = freezed,
+    Object? applicationQuestion = freezed,
+    Object? privateInstance = freezed,
+    Object? auth = null,
+    Object? defaultTheme = freezed,
+  }) {
+    return _then(
+      _$EditSiteImpl(
+        name:
+            freezed == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        sidebar:
+            freezed == sidebar
+                ? _value.sidebar
+                : sidebar // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        description:
+            freezed == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        icon:
+            freezed == icon
+                ? _value.icon
+                : icon // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        banner:
+            freezed == banner
+                ? _value.banner
+                : banner // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        enableDownvotes:
+            freezed == enableDownvotes
+                ? _value.enableDownvotes
+                : enableDownvotes // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        openRegistration:
+            freezed == openRegistration
+                ? _value.openRegistration
+                : openRegistration // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        enableNsfw:
+            freezed == enableNsfw
+                ? _value.enableNsfw
+                : enableNsfw // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        communityCreationAdminOnly:
+            freezed == communityCreationAdminOnly
+                ? _value.communityCreationAdminOnly
+                : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        requireEmailVerification:
+            freezed == requireEmailVerification
+                ? _value.requireEmailVerification
+                : requireEmailVerification // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        requireApplication:
+            freezed == requireApplication
+                ? _value.requireApplication
+                : requireApplication // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        applicationQuestion:
+            freezed == applicationQuestion
+                ? _value.applicationQuestion
+                : applicationQuestion // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        privateInstance:
+            freezed == privateInstance
+                ? _value.privateInstance
+                : privateInstance // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+        defaultTheme:
+            freezed == defaultTheme
+                ? _value.defaultTheme
+                : defaultTheme // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _EditSite extends EditSite {
-  const _EditSite({this.name, this.sidebar, this.description, this.icon, this.banner, this.enableDownvotes, this.openRegistration, this.enableNsfw, this.communityCreationAdminOnly, this.requireEmailVerification, this.requireApplication, this.applicationQuestion, this.privateInstance, required this.auth, this.defaultTheme}): super._();
-  factory _EditSite.fromJson(Map<String, dynamic> json) => _$EditSiteFromJson(json);
+class _$EditSiteImpl extends _EditSite {
+  const _$EditSiteImpl({
+    this.name,
+    this.sidebar,
+    this.description,
+    this.icon,
+    this.banner,
+    this.enableDownvotes,
+    this.openRegistration,
+    this.enableNsfw,
+    this.communityCreationAdminOnly,
+    this.requireEmailVerification,
+    this.requireApplication,
+    this.applicationQuestion,
+    this.privateInstance,
+    required this.auth,
+    this.defaultTheme,
+  }) : super._();
 
-@override final  String? name;
-@override final  String? sidebar;
-@override final  String? description;
-@override final  String? icon;
-@override final  String? banner;
-@override final  bool? enableDownvotes;
-@override final  bool? openRegistration;
-@override final  bool? enableNsfw;
-@override final  bool? communityCreationAdminOnly;
-@override final  bool? requireEmailVerification;
-@override final  bool? requireApplication;
-@override final  String? applicationQuestion;
-@override final  bool? privateInstance;
-@override final  String auth;
-@override final  String? defaultTheme;
+  factory _$EditSiteImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EditSiteImplFromJson(json);
 
-/// Create a copy of EditSite
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$EditSiteCopyWith<_EditSite> get copyWith => __$EditSiteCopyWithImpl<_EditSite>(this, _$identity);
+  @override
+  final String? name;
+  @override
+  final String? sidebar;
+  @override
+  final String? description;
+  @override
+  final String? icon;
+  @override
+  final String? banner;
+  @override
+  final bool? enableDownvotes;
+  @override
+  final bool? openRegistration;
+  @override
+  final bool? enableNsfw;
+  @override
+  final bool? communityCreationAdminOnly;
+  @override
+  final bool? requireEmailVerification;
+  @override
+  final bool? requireApplication;
+  @override
+  final String? applicationQuestion;
+  @override
+  final bool? privateInstance;
+  @override
+  final String auth;
+  @override
+  final String? defaultTheme;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$EditSiteToJson(this, );
+  @override
+  String toString() {
+    return 'EditSite(name: $name, sidebar: $sidebar, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, requireEmailVerification: $requireEmailVerification, requireApplication: $requireApplication, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, auth: $auth, defaultTheme: $defaultTheme)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EditSiteImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.sidebar, sidebar) || other.sidebar == sidebar) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.banner, banner) || other.banner == banner) &&
+            (identical(other.enableDownvotes, enableDownvotes) ||
+                other.enableDownvotes == enableDownvotes) &&
+            (identical(other.openRegistration, openRegistration) ||
+                other.openRegistration == openRegistration) &&
+            (identical(other.enableNsfw, enableNsfw) ||
+                other.enableNsfw == enableNsfw) &&
+            (identical(
+                  other.communityCreationAdminOnly,
+                  communityCreationAdminOnly,
+                ) ||
+                other.communityCreationAdminOnly ==
+                    communityCreationAdminOnly) &&
+            (identical(
+                  other.requireEmailVerification,
+                  requireEmailVerification,
+                ) ||
+                other.requireEmailVerification == requireEmailVerification) &&
+            (identical(other.requireApplication, requireApplication) ||
+                other.requireApplication == requireApplication) &&
+            (identical(other.applicationQuestion, applicationQuestion) ||
+                other.applicationQuestion == applicationQuestion) &&
+            (identical(other.privateInstance, privateInstance) ||
+                other.privateInstance == privateInstance) &&
+            (identical(other.auth, auth) || other.auth == auth) &&
+            (identical(other.defaultTheme, defaultTheme) ||
+                other.defaultTheme == defaultTheme));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+    runtimeType,
+    name,
+    sidebar,
+    description,
+    icon,
+    banner,
+    enableDownvotes,
+    openRegistration,
+    enableNsfw,
+    communityCreationAdminOnly,
+    requireEmailVerification,
+    requireApplication,
+    applicationQuestion,
+    privateInstance,
+    auth,
+    defaultTheme,
+  );
+
+  /// Create a copy of EditSite
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EditSiteImplCopyWith<_$EditSiteImpl> get copyWith =>
+      __$$EditSiteImplCopyWithImpl<_$EditSiteImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$EditSiteImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _EditSite&&(identical(other.name, name) || other.name == name)&&(identical(other.sidebar, sidebar) || other.sidebar == sidebar)&&(identical(other.description, description) || other.description == description)&&(identical(other.icon, icon) || other.icon == icon)&&(identical(other.banner, banner) || other.banner == banner)&&(identical(other.enableDownvotes, enableDownvotes) || other.enableDownvotes == enableDownvotes)&&(identical(other.openRegistration, openRegistration) || other.openRegistration == openRegistration)&&(identical(other.enableNsfw, enableNsfw) || other.enableNsfw == enableNsfw)&&(identical(other.communityCreationAdminOnly, communityCreationAdminOnly) || other.communityCreationAdminOnly == communityCreationAdminOnly)&&(identical(other.requireEmailVerification, requireEmailVerification) || other.requireEmailVerification == requireEmailVerification)&&(identical(other.requireApplication, requireApplication) || other.requireApplication == requireApplication)&&(identical(other.applicationQuestion, applicationQuestion) || other.applicationQuestion == applicationQuestion)&&(identical(other.privateInstance, privateInstance) || other.privateInstance == privateInstance)&&(identical(other.auth, auth) || other.auth == auth)&&(identical(other.defaultTheme, defaultTheme) || other.defaultTheme == defaultTheme));
+abstract class _EditSite extends EditSite {
+  const factory _EditSite({
+    final String? name,
+    final String? sidebar,
+    final String? description,
+    final String? icon,
+    final String? banner,
+    final bool? enableDownvotes,
+    final bool? openRegistration,
+    final bool? enableNsfw,
+    final bool? communityCreationAdminOnly,
+    final bool? requireEmailVerification,
+    final bool? requireApplication,
+    final String? applicationQuestion,
+    final bool? privateInstance,
+    required final String auth,
+    final String? defaultTheme,
+  }) = _$EditSiteImpl;
+  const _EditSite._() : super._();
+
+  factory _EditSite.fromJson(Map<String, dynamic> json) =
+      _$EditSiteImpl.fromJson;
+
+  @override
+  String? get name;
+  @override
+  String? get sidebar;
+  @override
+  String? get description;
+  @override
+  String? get icon;
+  @override
+  String? get banner;
+  @override
+  bool? get enableDownvotes;
+  @override
+  bool? get openRegistration;
+  @override
+  bool? get enableNsfw;
+  @override
+  bool? get communityCreationAdminOnly;
+  @override
+  bool? get requireEmailVerification;
+  @override
+  bool? get requireApplication;
+  @override
+  String? get applicationQuestion;
+  @override
+  bool? get privateInstance;
+  @override
+  String get auth;
+  @override
+  String? get defaultTheme;
+
+  /// Create a copy of EditSite
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$EditSiteImplCopyWith<_$EditSiteImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,name,sidebar,description,icon,banner,enableDownvotes,openRegistration,enableNsfw,communityCreationAdminOnly,requireEmailVerification,requireApplication,applicationQuestion,privateInstance,auth,defaultTheme);
-
-@override
-String toString() {
-  return 'EditSite(name: $name, sidebar: $sidebar, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, requireEmailVerification: $requireEmailVerification, requireApplication: $requireApplication, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, auth: $auth, defaultTheme: $defaultTheme)';
+GetSite _$GetSiteFromJson(Map<String, dynamic> json) {
+  return _GetSite.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$EditSiteCopyWith<$Res> implements $EditSiteCopyWith<$Res> {
-  factory _$EditSiteCopyWith(_EditSite value, $Res Function(_EditSite) _then) = __$EditSiteCopyWithImpl;
-@override @useResult
-$Res call({
- String? name, String? sidebar, String? description, String? icon, String? banner, bool? enableDownvotes, bool? openRegistration, bool? enableNsfw, bool? communityCreationAdminOnly, bool? requireEmailVerification, bool? requireApplication, String? applicationQuestion, bool? privateInstance, String auth, String? defaultTheme
-});
-
-
-
-
-}
-/// @nodoc
-class __$EditSiteCopyWithImpl<$Res>
-    implements _$EditSiteCopyWith<$Res> {
-  __$EditSiteCopyWithImpl(this._self, this._then);
-
-  final _EditSite _self;
-  final $Res Function(_EditSite) _then;
-
-/// Create a copy of EditSite
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? name = freezed,Object? sidebar = freezed,Object? description = freezed,Object? icon = freezed,Object? banner = freezed,Object? enableDownvotes = freezed,Object? openRegistration = freezed,Object? enableNsfw = freezed,Object? communityCreationAdminOnly = freezed,Object? requireEmailVerification = freezed,Object? requireApplication = freezed,Object? applicationQuestion = freezed,Object? privateInstance = freezed,Object? auth = null,Object? defaultTheme = freezed,}) {
-  return _then(_EditSite(
-name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String?,sidebar: freezed == sidebar ? _self.sidebar : sidebar // ignore: cast_nullable_to_non_nullable
-as String?,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
-as String?,icon: freezed == icon ? _self.icon : icon // ignore: cast_nullable_to_non_nullable
-as String?,banner: freezed == banner ? _self.banner : banner // ignore: cast_nullable_to_non_nullable
-as String?,enableDownvotes: freezed == enableDownvotes ? _self.enableDownvotes : enableDownvotes // ignore: cast_nullable_to_non_nullable
-as bool?,openRegistration: freezed == openRegistration ? _self.openRegistration : openRegistration // ignore: cast_nullable_to_non_nullable
-as bool?,enableNsfw: freezed == enableNsfw ? _self.enableNsfw : enableNsfw // ignore: cast_nullable_to_non_nullable
-as bool?,communityCreationAdminOnly: freezed == communityCreationAdminOnly ? _self.communityCreationAdminOnly : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
-as bool?,requireEmailVerification: freezed == requireEmailVerification ? _self.requireEmailVerification : requireEmailVerification // ignore: cast_nullable_to_non_nullable
-as bool?,requireApplication: freezed == requireApplication ? _self.requireApplication : requireApplication // ignore: cast_nullable_to_non_nullable
-as bool?,applicationQuestion: freezed == applicationQuestion ? _self.applicationQuestion : applicationQuestion // ignore: cast_nullable_to_non_nullable
-as String?,privateInstance: freezed == privateInstance ? _self.privateInstance : privateInstance // ignore: cast_nullable_to_non_nullable
-as bool?,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,defaultTheme: freezed == defaultTheme ? _self.defaultTheme : defaultTheme // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$GetSite {
-
- dynamic get path; dynamic get httpMethod; String? get auth;
-/// Create a copy of GetSite
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$GetSiteCopyWith<GetSite> get copyWith => _$GetSiteCopyWithImpl<GetSite>(this as GetSite, _$identity);
+  String? get auth => throw _privateConstructorUsedError;
 
   /// Serializes this GetSite to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is GetSite&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),auth);
-
-@override
-String toString() {
-  return 'GetSite(path: $path, httpMethod: $httpMethod, auth: $auth)';
-}
-
-
+  /// Create a copy of GetSite
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $GetSiteCopyWith<GetSite> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $GetSiteCopyWith<$Res>  {
-  factory $GetSiteCopyWith(GetSite value, $Res Function(GetSite) _then) = _$GetSiteCopyWithImpl;
-@useResult
-$Res call({
- String? auth
-});
-
-
-
-
+abstract class $GetSiteCopyWith<$Res> {
+  factory $GetSiteCopyWith(GetSite value, $Res Function(GetSite) then) =
+      _$GetSiteCopyWithImpl<$Res, GetSite>;
+  @useResult
+  $Res call({String? auth});
 }
+
 /// @nodoc
-class _$GetSiteCopyWithImpl<$Res>
+class _$GetSiteCopyWithImpl<$Res, $Val extends GetSite>
     implements $GetSiteCopyWith<$Res> {
-  _$GetSiteCopyWithImpl(this._self, this._then);
+  _$GetSiteCopyWithImpl(this._value, this._then);
 
-  final GetSite _self;
-  final $Res Function(GetSite) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of GetSite
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? auth = freezed,}) {
-  return _then(_self.copyWith(
-auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
+  /// Create a copy of GetSite
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? auth = freezed}) {
+    return _then(
+      _value.copyWith(
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$GetSiteImplCopyWith<$Res> implements $GetSiteCopyWith<$Res> {
+  factory _$$GetSiteImplCopyWith(
+    _$GetSiteImpl value,
+    $Res Function(_$GetSiteImpl) then,
+  ) = __$$GetSiteImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String? auth});
 }
 
+/// @nodoc
+class __$$GetSiteImplCopyWithImpl<$Res>
+    extends _$GetSiteCopyWithImpl<$Res, _$GetSiteImpl>
+    implements _$$GetSiteImplCopyWith<$Res> {
+  __$$GetSiteImplCopyWithImpl(
+    _$GetSiteImpl _value,
+    $Res Function(_$GetSiteImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [GetSite].
-extension GetSitePatterns on GetSite {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _GetSite value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _GetSite() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _GetSite value)  $default,){
-final _that = this;
-switch (_that) {
-case _GetSite():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _GetSite value)?  $default,){
-final _that = this;
-switch (_that) {
-case _GetSite() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _GetSite() when $default != null:
-return $default(_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? auth)  $default,) {final _that = this;
-switch (_that) {
-case _GetSite():
-return $default(_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? auth)?  $default,) {final _that = this;
-switch (_that) {
-case _GetSite() when $default != null:
-return $default(_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of GetSite
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? auth = freezed}) {
+    return _then(
+      _$GetSiteImpl(
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _GetSite extends GetSite {
-  const _GetSite({this.auth}): super._();
-  factory _GetSite.fromJson(Map<String, dynamic> json) => _$GetSiteFromJson(json);
+class _$GetSiteImpl extends _GetSite {
+  const _$GetSiteImpl({this.auth}) : super._();
 
-@override final  String? auth;
+  factory _$GetSiteImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetSiteImplFromJson(json);
 
-/// Create a copy of GetSite
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$GetSiteCopyWith<_GetSite> get copyWith => __$GetSiteCopyWithImpl<_GetSite>(this, _$identity);
+  @override
+  final String? auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$GetSiteToJson(this, );
+  @override
+  String toString() {
+    return 'GetSite(auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSiteImpl &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, auth);
+
+  /// Create a copy of GetSite
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetSiteImplCopyWith<_$GetSiteImpl> get copyWith =>
+      __$$GetSiteImplCopyWithImpl<_$GetSiteImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$GetSiteImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _GetSite&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _GetSite extends GetSite {
+  const factory _GetSite({final String? auth}) = _$GetSiteImpl;
+  const _GetSite._() : super._();
+
+  factory _GetSite.fromJson(Map<String, dynamic> json) = _$GetSiteImpl.fromJson;
+
+  @override
+  String? get auth;
+
+  /// Create a copy of GetSite
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetSiteImplCopyWith<_$GetSiteImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,auth);
-
-@override
-String toString() {
-  return 'GetSite(auth: $auth)';
+LeaveAdmin _$LeaveAdminFromJson(Map<String, dynamic> json) {
+  return _LeaveAdmin.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$GetSiteCopyWith<$Res> implements $GetSiteCopyWith<$Res> {
-  factory _$GetSiteCopyWith(_GetSite value, $Res Function(_GetSite) _then) = __$GetSiteCopyWithImpl;
-@override @useResult
-$Res call({
- String? auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$GetSiteCopyWithImpl<$Res>
-    implements _$GetSiteCopyWith<$Res> {
-  __$GetSiteCopyWithImpl(this._self, this._then);
-
-  final _GetSite _self;
-  final $Res Function(_GetSite) _then;
-
-/// Create a copy of GetSite
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? auth = freezed,}) {
-  return _then(_GetSite(
-auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$LeaveAdmin {
-
- dynamic get path; dynamic get httpMethod; String get auth;
-/// Create a copy of LeaveAdmin
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$LeaveAdminCopyWith<LeaveAdmin> get copyWith => _$LeaveAdminCopyWithImpl<LeaveAdmin>(this as LeaveAdmin, _$identity);
+  String get auth => throw _privateConstructorUsedError;
 
   /// Serializes this LeaveAdmin to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is LeaveAdmin&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),auth);
-
-@override
-String toString() {
-  return 'LeaveAdmin(path: $path, httpMethod: $httpMethod, auth: $auth)';
-}
-
-
+  /// Create a copy of LeaveAdmin
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $LeaveAdminCopyWith<LeaveAdmin> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $LeaveAdminCopyWith<$Res>  {
-  factory $LeaveAdminCopyWith(LeaveAdmin value, $Res Function(LeaveAdmin) _then) = _$LeaveAdminCopyWithImpl;
-@useResult
-$Res call({
- String auth
-});
-
-
-
-
+abstract class $LeaveAdminCopyWith<$Res> {
+  factory $LeaveAdminCopyWith(
+    LeaveAdmin value,
+    $Res Function(LeaveAdmin) then,
+  ) = _$LeaveAdminCopyWithImpl<$Res, LeaveAdmin>;
+  @useResult
+  $Res call({String auth});
 }
+
 /// @nodoc
-class _$LeaveAdminCopyWithImpl<$Res>
+class _$LeaveAdminCopyWithImpl<$Res, $Val extends LeaveAdmin>
     implements $LeaveAdminCopyWith<$Res> {
-  _$LeaveAdminCopyWithImpl(this._self, this._then);
+  _$LeaveAdminCopyWithImpl(this._value, this._then);
 
-  final LeaveAdmin _self;
-  final $Res Function(LeaveAdmin) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of LeaveAdmin
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? auth = null,}) {
-  return _then(_self.copyWith(
-auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of LeaveAdmin
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? auth = null}) {
+    return _then(
+      _value.copyWith(
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$LeaveAdminImplCopyWith<$Res>
+    implements $LeaveAdminCopyWith<$Res> {
+  factory _$$LeaveAdminImplCopyWith(
+    _$LeaveAdminImpl value,
+    $Res Function(_$LeaveAdminImpl) then,
+  ) = __$$LeaveAdminImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String auth});
 }
 
+/// @nodoc
+class __$$LeaveAdminImplCopyWithImpl<$Res>
+    extends _$LeaveAdminCopyWithImpl<$Res, _$LeaveAdminImpl>
+    implements _$$LeaveAdminImplCopyWith<$Res> {
+  __$$LeaveAdminImplCopyWithImpl(
+    _$LeaveAdminImpl _value,
+    $Res Function(_$LeaveAdminImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [LeaveAdmin].
-extension LeaveAdminPatterns on LeaveAdmin {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _LeaveAdmin value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _LeaveAdmin() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _LeaveAdmin value)  $default,){
-final _that = this;
-switch (_that) {
-case _LeaveAdmin():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _LeaveAdmin value)?  $default,){
-final _that = this;
-switch (_that) {
-case _LeaveAdmin() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _LeaveAdmin() when $default != null:
-return $default(_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String auth)  $default,) {final _that = this;
-switch (_that) {
-case _LeaveAdmin():
-return $default(_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String auth)?  $default,) {final _that = this;
-switch (_that) {
-case _LeaveAdmin() when $default != null:
-return $default(_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of LeaveAdmin
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? auth = null}) {
+    return _then(
+      _$LeaveAdminImpl(
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _LeaveAdmin extends LeaveAdmin {
-  const _LeaveAdmin({required this.auth}): super._();
-  factory _LeaveAdmin.fromJson(Map<String, dynamic> json) => _$LeaveAdminFromJson(json);
+class _$LeaveAdminImpl extends _LeaveAdmin {
+  const _$LeaveAdminImpl({required this.auth}) : super._();
 
-@override final  String auth;
+  factory _$LeaveAdminImpl.fromJson(Map<String, dynamic> json) =>
+      _$$LeaveAdminImplFromJson(json);
 
-/// Create a copy of LeaveAdmin
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$LeaveAdminCopyWith<_LeaveAdmin> get copyWith => __$LeaveAdminCopyWithImpl<_LeaveAdmin>(this, _$identity);
+  @override
+  final String auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$LeaveAdminToJson(this, );
+  @override
+  String toString() {
+    return 'LeaveAdmin(auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LeaveAdminImpl &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, auth);
+
+  /// Create a copy of LeaveAdmin
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LeaveAdminImplCopyWith<_$LeaveAdminImpl> get copyWith =>
+      __$$LeaveAdminImplCopyWithImpl<_$LeaveAdminImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$LeaveAdminImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _LeaveAdmin&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _LeaveAdmin extends LeaveAdmin {
+  const factory _LeaveAdmin({required final String auth}) = _$LeaveAdminImpl;
+  const _LeaveAdmin._() : super._();
+
+  factory _LeaveAdmin.fromJson(Map<String, dynamic> json) =
+      _$LeaveAdminImpl.fromJson;
+
+  @override
+  String get auth;
+
+  /// Create a copy of LeaveAdmin
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$LeaveAdminImplCopyWith<_$LeaveAdminImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,auth);
-
-@override
-String toString() {
-  return 'LeaveAdmin(auth: $auth)';
+GetSiteConfig _$GetSiteConfigFromJson(Map<String, dynamic> json) {
+  return _GetSiteConfig.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$LeaveAdminCopyWith<$Res> implements $LeaveAdminCopyWith<$Res> {
-  factory _$LeaveAdminCopyWith(_LeaveAdmin value, $Res Function(_LeaveAdmin) _then) = __$LeaveAdminCopyWithImpl;
-@override @useResult
-$Res call({
- String auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$LeaveAdminCopyWithImpl<$Res>
-    implements _$LeaveAdminCopyWith<$Res> {
-  __$LeaveAdminCopyWithImpl(this._self, this._then);
-
-  final _LeaveAdmin _self;
-  final $Res Function(_LeaveAdmin) _then;
-
-/// Create a copy of LeaveAdmin
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? auth = null,}) {
-  return _then(_LeaveAdmin(
-auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$GetSiteConfig {
-
- dynamic get path; dynamic get httpMethod; String get auth;
-/// Create a copy of GetSiteConfig
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$GetSiteConfigCopyWith<GetSiteConfig> get copyWith => _$GetSiteConfigCopyWithImpl<GetSiteConfig>(this as GetSiteConfig, _$identity);
+  String get auth => throw _privateConstructorUsedError;
 
   /// Serializes this GetSiteConfig to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is GetSiteConfig&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),auth);
-
-@override
-String toString() {
-  return 'GetSiteConfig(path: $path, httpMethod: $httpMethod, auth: $auth)';
-}
-
-
+  /// Create a copy of GetSiteConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $GetSiteConfigCopyWith<GetSiteConfig> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $GetSiteConfigCopyWith<$Res>  {
-  factory $GetSiteConfigCopyWith(GetSiteConfig value, $Res Function(GetSiteConfig) _then) = _$GetSiteConfigCopyWithImpl;
-@useResult
-$Res call({
- String auth
-});
-
-
-
-
+abstract class $GetSiteConfigCopyWith<$Res> {
+  factory $GetSiteConfigCopyWith(
+    GetSiteConfig value,
+    $Res Function(GetSiteConfig) then,
+  ) = _$GetSiteConfigCopyWithImpl<$Res, GetSiteConfig>;
+  @useResult
+  $Res call({String auth});
 }
+
 /// @nodoc
-class _$GetSiteConfigCopyWithImpl<$Res>
+class _$GetSiteConfigCopyWithImpl<$Res, $Val extends GetSiteConfig>
     implements $GetSiteConfigCopyWith<$Res> {
-  _$GetSiteConfigCopyWithImpl(this._self, this._then);
+  _$GetSiteConfigCopyWithImpl(this._value, this._then);
 
-  final GetSiteConfig _self;
-  final $Res Function(GetSiteConfig) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of GetSiteConfig
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? auth = null,}) {
-  return _then(_self.copyWith(
-auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of GetSiteConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? auth = null}) {
+    return _then(
+      _value.copyWith(
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$GetSiteConfigImplCopyWith<$Res>
+    implements $GetSiteConfigCopyWith<$Res> {
+  factory _$$GetSiteConfigImplCopyWith(
+    _$GetSiteConfigImpl value,
+    $Res Function(_$GetSiteConfigImpl) then,
+  ) = __$$GetSiteConfigImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String auth});
 }
 
+/// @nodoc
+class __$$GetSiteConfigImplCopyWithImpl<$Res>
+    extends _$GetSiteConfigCopyWithImpl<$Res, _$GetSiteConfigImpl>
+    implements _$$GetSiteConfigImplCopyWith<$Res> {
+  __$$GetSiteConfigImplCopyWithImpl(
+    _$GetSiteConfigImpl _value,
+    $Res Function(_$GetSiteConfigImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [GetSiteConfig].
-extension GetSiteConfigPatterns on GetSiteConfig {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _GetSiteConfig value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _GetSiteConfig() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _GetSiteConfig value)  $default,){
-final _that = this;
-switch (_that) {
-case _GetSiteConfig():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _GetSiteConfig value)?  $default,){
-final _that = this;
-switch (_that) {
-case _GetSiteConfig() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _GetSiteConfig() when $default != null:
-return $default(_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String auth)  $default,) {final _that = this;
-switch (_that) {
-case _GetSiteConfig():
-return $default(_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String auth)?  $default,) {final _that = this;
-switch (_that) {
-case _GetSiteConfig() when $default != null:
-return $default(_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of GetSiteConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? auth = null}) {
+    return _then(
+      _$GetSiteConfigImpl(
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _GetSiteConfig extends GetSiteConfig {
-  const _GetSiteConfig({required this.auth}): super._();
-  factory _GetSiteConfig.fromJson(Map<String, dynamic> json) => _$GetSiteConfigFromJson(json);
+class _$GetSiteConfigImpl extends _GetSiteConfig {
+  const _$GetSiteConfigImpl({required this.auth}) : super._();
 
-@override final  String auth;
+  factory _$GetSiteConfigImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetSiteConfigImplFromJson(json);
 
-/// Create a copy of GetSiteConfig
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$GetSiteConfigCopyWith<_GetSiteConfig> get copyWith => __$GetSiteConfigCopyWithImpl<_GetSiteConfig>(this, _$identity);
+  @override
+  final String auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$GetSiteConfigToJson(this, );
+  @override
+  String toString() {
+    return 'GetSiteConfig(auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSiteConfigImpl &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, auth);
+
+  /// Create a copy of GetSiteConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetSiteConfigImplCopyWith<_$GetSiteConfigImpl> get copyWith =>
+      __$$GetSiteConfigImplCopyWithImpl<_$GetSiteConfigImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$GetSiteConfigImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _GetSiteConfig&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _GetSiteConfig extends GetSiteConfig {
+  const factory _GetSiteConfig({required final String auth}) =
+      _$GetSiteConfigImpl;
+  const _GetSiteConfig._() : super._();
+
+  factory _GetSiteConfig.fromJson(Map<String, dynamic> json) =
+      _$GetSiteConfigImpl.fromJson;
+
+  @override
+  String get auth;
+
+  /// Create a copy of GetSiteConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetSiteConfigImplCopyWith<_$GetSiteConfigImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,auth);
-
-@override
-String toString() {
-  return 'GetSiteConfig(auth: $auth)';
+SaveSiteConfig _$SaveSiteConfigFromJson(Map<String, dynamic> json) {
+  return _SaveSiteConfig.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$GetSiteConfigCopyWith<$Res> implements $GetSiteConfigCopyWith<$Res> {
-  factory _$GetSiteConfigCopyWith(_GetSiteConfig value, $Res Function(_GetSiteConfig) _then) = __$GetSiteConfigCopyWithImpl;
-@override @useResult
-$Res call({
- String auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$GetSiteConfigCopyWithImpl<$Res>
-    implements _$GetSiteConfigCopyWith<$Res> {
-  __$GetSiteConfigCopyWithImpl(this._self, this._then);
-
-  final _GetSiteConfig _self;
-  final $Res Function(_GetSiteConfig) _then;
-
-/// Create a copy of GetSiteConfig
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? auth = null,}) {
-  return _then(_GetSiteConfig(
-auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$SaveSiteConfig {
-
- dynamic get path; dynamic get httpMethod; String get configHjson; String get auth;
-/// Create a copy of SaveSiteConfig
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$SaveSiteConfigCopyWith<SaveSiteConfig> get copyWith => _$SaveSiteConfigCopyWithImpl<SaveSiteConfig>(this as SaveSiteConfig, _$identity);
+  String get configHjson => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
   /// Serializes this SaveSiteConfig to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is SaveSiteConfig&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.configHjson, configHjson) || other.configHjson == configHjson)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),configHjson,auth);
-
-@override
-String toString() {
-  return 'SaveSiteConfig(path: $path, httpMethod: $httpMethod, configHjson: $configHjson, auth: $auth)';
-}
-
-
+  /// Create a copy of SaveSiteConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $SaveSiteConfigCopyWith<SaveSiteConfig> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $SaveSiteConfigCopyWith<$Res>  {
-  factory $SaveSiteConfigCopyWith(SaveSiteConfig value, $Res Function(SaveSiteConfig) _then) = _$SaveSiteConfigCopyWithImpl;
-@useResult
-$Res call({
- String configHjson, String auth
-});
-
-
-
-
+abstract class $SaveSiteConfigCopyWith<$Res> {
+  factory $SaveSiteConfigCopyWith(
+    SaveSiteConfig value,
+    $Res Function(SaveSiteConfig) then,
+  ) = _$SaveSiteConfigCopyWithImpl<$Res, SaveSiteConfig>;
+  @useResult
+  $Res call({String configHjson, String auth});
 }
+
 /// @nodoc
-class _$SaveSiteConfigCopyWithImpl<$Res>
+class _$SaveSiteConfigCopyWithImpl<$Res, $Val extends SaveSiteConfig>
     implements $SaveSiteConfigCopyWith<$Res> {
-  _$SaveSiteConfigCopyWithImpl(this._self, this._then);
+  _$SaveSiteConfigCopyWithImpl(this._value, this._then);
 
-  final SaveSiteConfig _self;
-  final $Res Function(SaveSiteConfig) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of SaveSiteConfig
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? configHjson = null,Object? auth = null,}) {
-  return _then(_self.copyWith(
-configHjson: null == configHjson ? _self.configHjson : configHjson // ignore: cast_nullable_to_non_nullable
-as String,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of SaveSiteConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? configHjson = null, Object? auth = null}) {
+    return _then(
+      _value.copyWith(
+            configHjson:
+                null == configHjson
+                    ? _value.configHjson
+                    : configHjson // ignore: cast_nullable_to_non_nullable
+                        as String,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$SaveSiteConfigImplCopyWith<$Res>
+    implements $SaveSiteConfigCopyWith<$Res> {
+  factory _$$SaveSiteConfigImplCopyWith(
+    _$SaveSiteConfigImpl value,
+    $Res Function(_$SaveSiteConfigImpl) then,
+  ) = __$$SaveSiteConfigImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String configHjson, String auth});
 }
 
+/// @nodoc
+class __$$SaveSiteConfigImplCopyWithImpl<$Res>
+    extends _$SaveSiteConfigCopyWithImpl<$Res, _$SaveSiteConfigImpl>
+    implements _$$SaveSiteConfigImplCopyWith<$Res> {
+  __$$SaveSiteConfigImplCopyWithImpl(
+    _$SaveSiteConfigImpl _value,
+    $Res Function(_$SaveSiteConfigImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [SaveSiteConfig].
-extension SaveSiteConfigPatterns on SaveSiteConfig {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _SaveSiteConfig value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _SaveSiteConfig() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _SaveSiteConfig value)  $default,){
-final _that = this;
-switch (_that) {
-case _SaveSiteConfig():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _SaveSiteConfig value)?  $default,){
-final _that = this;
-switch (_that) {
-case _SaveSiteConfig() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String configHjson,  String auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _SaveSiteConfig() when $default != null:
-return $default(_that.configHjson,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String configHjson,  String auth)  $default,) {final _that = this;
-switch (_that) {
-case _SaveSiteConfig():
-return $default(_that.configHjson,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String configHjson,  String auth)?  $default,) {final _that = this;
-switch (_that) {
-case _SaveSiteConfig() when $default != null:
-return $default(_that.configHjson,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of SaveSiteConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? configHjson = null, Object? auth = null}) {
+    return _then(
+      _$SaveSiteConfigImpl(
+        configHjson:
+            null == configHjson
+                ? _value.configHjson
+                : configHjson // ignore: cast_nullable_to_non_nullable
+                    as String,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _SaveSiteConfig extends SaveSiteConfig {
-  const _SaveSiteConfig({required this.configHjson, required this.auth}): super._();
-  factory _SaveSiteConfig.fromJson(Map<String, dynamic> json) => _$SaveSiteConfigFromJson(json);
+class _$SaveSiteConfigImpl extends _SaveSiteConfig {
+  const _$SaveSiteConfigImpl({required this.configHjson, required this.auth})
+    : super._();
 
-@override final  String configHjson;
-@override final  String auth;
+  factory _$SaveSiteConfigImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SaveSiteConfigImplFromJson(json);
 
-/// Create a copy of SaveSiteConfig
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$SaveSiteConfigCopyWith<_SaveSiteConfig> get copyWith => __$SaveSiteConfigCopyWithImpl<_SaveSiteConfig>(this, _$identity);
+  @override
+  final String configHjson;
+  @override
+  final String auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$SaveSiteConfigToJson(this, );
+  @override
+  String toString() {
+    return 'SaveSiteConfig(configHjson: $configHjson, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SaveSiteConfigImpl &&
+            (identical(other.configHjson, configHjson) ||
+                other.configHjson == configHjson) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, configHjson, auth);
+
+  /// Create a copy of SaveSiteConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SaveSiteConfigImplCopyWith<_$SaveSiteConfigImpl> get copyWith =>
+      __$$SaveSiteConfigImplCopyWithImpl<_$SaveSiteConfigImpl>(
+        this,
+        _$identity,
+      );
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$SaveSiteConfigImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _SaveSiteConfig&&(identical(other.configHjson, configHjson) || other.configHjson == configHjson)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _SaveSiteConfig extends SaveSiteConfig {
+  const factory _SaveSiteConfig({
+    required final String configHjson,
+    required final String auth,
+  }) = _$SaveSiteConfigImpl;
+  const _SaveSiteConfig._() : super._();
+
+  factory _SaveSiteConfig.fromJson(Map<String, dynamic> json) =
+      _$SaveSiteConfigImpl.fromJson;
+
+  @override
+  String get configHjson;
+  @override
+  String get auth;
+
+  /// Create a copy of SaveSiteConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SaveSiteConfigImplCopyWith<_$SaveSiteConfigImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,configHjson,auth);
-
-@override
-String toString() {
-  return 'SaveSiteConfig(configHjson: $configHjson, auth: $auth)';
+ResolveObject _$ResolveObjectFromJson(Map<String, dynamic> json) {
+  return _ResolveObject.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$SaveSiteConfigCopyWith<$Res> implements $SaveSiteConfigCopyWith<$Res> {
-  factory _$SaveSiteConfigCopyWith(_SaveSiteConfig value, $Res Function(_SaveSiteConfig) _then) = __$SaveSiteConfigCopyWithImpl;
-@override @useResult
-$Res call({
- String configHjson, String auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$SaveSiteConfigCopyWithImpl<$Res>
-    implements _$SaveSiteConfigCopyWith<$Res> {
-  __$SaveSiteConfigCopyWithImpl(this._self, this._then);
-
-  final _SaveSiteConfig _self;
-  final $Res Function(_SaveSiteConfig) _then;
-
-/// Create a copy of SaveSiteConfig
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? configHjson = null,Object? auth = null,}) {
-  return _then(_SaveSiteConfig(
-configHjson: null == configHjson ? _self.configHjson : configHjson // ignore: cast_nullable_to_non_nullable
-as String,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$ResolveObject {
-
- dynamic get path; dynamic get httpMethod; String get q; String? get auth;
-/// Create a copy of ResolveObject
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$ResolveObjectCopyWith<ResolveObject> get copyWith => _$ResolveObjectCopyWithImpl<ResolveObject>(this as ResolveObject, _$identity);
+  String get q => throw _privateConstructorUsedError;
+  String? get auth => throw _privateConstructorUsedError;
 
   /// Serializes this ResolveObject to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ResolveObject&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.q, q) || other.q == q)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),q,auth);
-
-@override
-String toString() {
-  return 'ResolveObject(path: $path, httpMethod: $httpMethod, q: $q, auth: $auth)';
-}
-
-
+  /// Create a copy of ResolveObject
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $ResolveObjectCopyWith<ResolveObject> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $ResolveObjectCopyWith<$Res>  {
-  factory $ResolveObjectCopyWith(ResolveObject value, $Res Function(ResolveObject) _then) = _$ResolveObjectCopyWithImpl;
-@useResult
-$Res call({
- String q, String? auth
-});
-
-
-
-
+abstract class $ResolveObjectCopyWith<$Res> {
+  factory $ResolveObjectCopyWith(
+    ResolveObject value,
+    $Res Function(ResolveObject) then,
+  ) = _$ResolveObjectCopyWithImpl<$Res, ResolveObject>;
+  @useResult
+  $Res call({String q, String? auth});
 }
+
 /// @nodoc
-class _$ResolveObjectCopyWithImpl<$Res>
+class _$ResolveObjectCopyWithImpl<$Res, $Val extends ResolveObject>
     implements $ResolveObjectCopyWith<$Res> {
-  _$ResolveObjectCopyWithImpl(this._self, this._then);
+  _$ResolveObjectCopyWithImpl(this._value, this._then);
 
-  final ResolveObject _self;
-  final $Res Function(ResolveObject) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of ResolveObject
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? q = null,Object? auth = freezed,}) {
-  return _then(_self.copyWith(
-q: null == q ? _self.q : q // ignore: cast_nullable_to_non_nullable
-as String,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
+  /// Create a copy of ResolveObject
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? q = null, Object? auth = freezed}) {
+    return _then(
+      _value.copyWith(
+            q:
+                null == q
+                    ? _value.q
+                    : q // ignore: cast_nullable_to_non_nullable
+                        as String,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$ResolveObjectImplCopyWith<$Res>
+    implements $ResolveObjectCopyWith<$Res> {
+  factory _$$ResolveObjectImplCopyWith(
+    _$ResolveObjectImpl value,
+    $Res Function(_$ResolveObjectImpl) then,
+  ) = __$$ResolveObjectImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String q, String? auth});
 }
 
+/// @nodoc
+class __$$ResolveObjectImplCopyWithImpl<$Res>
+    extends _$ResolveObjectCopyWithImpl<$Res, _$ResolveObjectImpl>
+    implements _$$ResolveObjectImplCopyWith<$Res> {
+  __$$ResolveObjectImplCopyWithImpl(
+    _$ResolveObjectImpl _value,
+    $Res Function(_$ResolveObjectImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [ResolveObject].
-extension ResolveObjectPatterns on ResolveObject {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ResolveObject value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _ResolveObject() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ResolveObject value)  $default,){
-final _that = this;
-switch (_that) {
-case _ResolveObject():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ResolveObject value)?  $default,){
-final _that = this;
-switch (_that) {
-case _ResolveObject() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String q,  String? auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _ResolveObject() when $default != null:
-return $default(_that.q,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String q,  String? auth)  $default,) {final _that = this;
-switch (_that) {
-case _ResolveObject():
-return $default(_that.q,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String q,  String? auth)?  $default,) {final _that = this;
-switch (_that) {
-case _ResolveObject() when $default != null:
-return $default(_that.q,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of ResolveObject
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? q = null, Object? auth = freezed}) {
+    return _then(
+      _$ResolveObjectImpl(
+        q:
+            null == q
+                ? _value.q
+                : q // ignore: cast_nullable_to_non_nullable
+                    as String,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _ResolveObject extends ResolveObject {
-  const _ResolveObject({required this.q, this.auth}): super._();
-  factory _ResolveObject.fromJson(Map<String, dynamic> json) => _$ResolveObjectFromJson(json);
+class _$ResolveObjectImpl extends _ResolveObject {
+  const _$ResolveObjectImpl({required this.q, this.auth}) : super._();
 
-@override final  String q;
-@override final  String? auth;
+  factory _$ResolveObjectImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ResolveObjectImplFromJson(json);
 
-/// Create a copy of ResolveObject
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ResolveObjectCopyWith<_ResolveObject> get copyWith => __$ResolveObjectCopyWithImpl<_ResolveObject>(this, _$identity);
+  @override
+  final String q;
+  @override
+  final String? auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$ResolveObjectToJson(this, );
+  @override
+  String toString() {
+    return 'ResolveObject(q: $q, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ResolveObjectImpl &&
+            (identical(other.q, q) || other.q == q) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, q, auth);
+
+  /// Create a copy of ResolveObject
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ResolveObjectImplCopyWith<_$ResolveObjectImpl> get copyWith =>
+      __$$ResolveObjectImplCopyWithImpl<_$ResolveObjectImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ResolveObjectImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ResolveObject&&(identical(other.q, q) || other.q == q)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _ResolveObject extends ResolveObject {
+  const factory _ResolveObject({required final String q, final String? auth}) =
+      _$ResolveObjectImpl;
+  const _ResolveObject._() : super._();
+
+  factory _ResolveObject.fromJson(Map<String, dynamic> json) =
+      _$ResolveObjectImpl.fromJson;
+
+  @override
+  String get q;
+  @override
+  String? get auth;
+
+  /// Create a copy of ResolveObject
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ResolveObjectImplCopyWith<_$ResolveObjectImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,q,auth);
-
-@override
-String toString() {
-  return 'ResolveObject(q: $q, auth: $auth)';
+GetUnreadRegistrationApplicationCount
+_$GetUnreadRegistrationApplicationCountFromJson(Map<String, dynamic> json) {
+  return _GetUnreadRegistrationApplicationCount.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ResolveObjectCopyWith<$Res> implements $ResolveObjectCopyWith<$Res> {
-  factory _$ResolveObjectCopyWith(_ResolveObject value, $Res Function(_ResolveObject) _then) = __$ResolveObjectCopyWithImpl;
-@override @useResult
-$Res call({
- String q, String? auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$ResolveObjectCopyWithImpl<$Res>
-    implements _$ResolveObjectCopyWith<$Res> {
-  __$ResolveObjectCopyWithImpl(this._self, this._then);
-
-  final _ResolveObject _self;
-  final $Res Function(_ResolveObject) _then;
-
-/// Create a copy of ResolveObject
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? q = null,Object? auth = freezed,}) {
-  return _then(_ResolveObject(
-q: null == q ? _self.q : q // ignore: cast_nullable_to_non_nullable
-as String,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$GetUnreadRegistrationApplicationCount {
-
- dynamic get path; dynamic get httpMethod; String get auth;
-/// Create a copy of GetUnreadRegistrationApplicationCount
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$GetUnreadRegistrationApplicationCountCopyWith<GetUnreadRegistrationApplicationCount> get copyWith => _$GetUnreadRegistrationApplicationCountCopyWithImpl<GetUnreadRegistrationApplicationCount>(this as GetUnreadRegistrationApplicationCount, _$identity);
+  String get auth => throw _privateConstructorUsedError;
 
   /// Serializes this GetUnreadRegistrationApplicationCount to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is GetUnreadRegistrationApplicationCount&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),auth);
-
-@override
-String toString() {
-  return 'GetUnreadRegistrationApplicationCount(path: $path, httpMethod: $httpMethod, auth: $auth)';
-}
-
-
+  /// Create a copy of GetUnreadRegistrationApplicationCount
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $GetUnreadRegistrationApplicationCountCopyWith<
+    GetUnreadRegistrationApplicationCount
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $GetUnreadRegistrationApplicationCountCopyWith<$Res>  {
-  factory $GetUnreadRegistrationApplicationCountCopyWith(GetUnreadRegistrationApplicationCount value, $Res Function(GetUnreadRegistrationApplicationCount) _then) = _$GetUnreadRegistrationApplicationCountCopyWithImpl;
-@useResult
-$Res call({
- String auth
-});
-
-
-
-
+abstract class $GetUnreadRegistrationApplicationCountCopyWith<$Res> {
+  factory $GetUnreadRegistrationApplicationCountCopyWith(
+    GetUnreadRegistrationApplicationCount value,
+    $Res Function(GetUnreadRegistrationApplicationCount) then,
+  ) =
+      _$GetUnreadRegistrationApplicationCountCopyWithImpl<
+        $Res,
+        GetUnreadRegistrationApplicationCount
+      >;
+  @useResult
+  $Res call({String auth});
 }
+
 /// @nodoc
-class _$GetUnreadRegistrationApplicationCountCopyWithImpl<$Res>
+class _$GetUnreadRegistrationApplicationCountCopyWithImpl<
+  $Res,
+  $Val extends GetUnreadRegistrationApplicationCount
+>
     implements $GetUnreadRegistrationApplicationCountCopyWith<$Res> {
-  _$GetUnreadRegistrationApplicationCountCopyWithImpl(this._self, this._then);
+  _$GetUnreadRegistrationApplicationCountCopyWithImpl(this._value, this._then);
 
-  final GetUnreadRegistrationApplicationCount _self;
-  final $Res Function(GetUnreadRegistrationApplicationCount) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of GetUnreadRegistrationApplicationCount
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? auth = null,}) {
-  return _then(_self.copyWith(
-auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of GetUnreadRegistrationApplicationCount
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? auth = null}) {
+    return _then(
+      _value.copyWith(
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$GetUnreadRegistrationApplicationCountImplCopyWith<$Res>
+    implements $GetUnreadRegistrationApplicationCountCopyWith<$Res> {
+  factory _$$GetUnreadRegistrationApplicationCountImplCopyWith(
+    _$GetUnreadRegistrationApplicationCountImpl value,
+    $Res Function(_$GetUnreadRegistrationApplicationCountImpl) then,
+  ) = __$$GetUnreadRegistrationApplicationCountImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String auth});
 }
 
+/// @nodoc
+class __$$GetUnreadRegistrationApplicationCountImplCopyWithImpl<$Res>
+    extends
+        _$GetUnreadRegistrationApplicationCountCopyWithImpl<
+          $Res,
+          _$GetUnreadRegistrationApplicationCountImpl
+        >
+    implements _$$GetUnreadRegistrationApplicationCountImplCopyWith<$Res> {
+  __$$GetUnreadRegistrationApplicationCountImplCopyWithImpl(
+    _$GetUnreadRegistrationApplicationCountImpl _value,
+    $Res Function(_$GetUnreadRegistrationApplicationCountImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [GetUnreadRegistrationApplicationCount].
-extension GetUnreadRegistrationApplicationCountPatterns on GetUnreadRegistrationApplicationCount {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _GetUnreadRegistrationApplicationCount value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _GetUnreadRegistrationApplicationCount() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _GetUnreadRegistrationApplicationCount value)  $default,){
-final _that = this;
-switch (_that) {
-case _GetUnreadRegistrationApplicationCount():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _GetUnreadRegistrationApplicationCount value)?  $default,){
-final _that = this;
-switch (_that) {
-case _GetUnreadRegistrationApplicationCount() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _GetUnreadRegistrationApplicationCount() when $default != null:
-return $default(_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String auth)  $default,) {final _that = this;
-switch (_that) {
-case _GetUnreadRegistrationApplicationCount():
-return $default(_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String auth)?  $default,) {final _that = this;
-switch (_that) {
-case _GetUnreadRegistrationApplicationCount() when $default != null:
-return $default(_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of GetUnreadRegistrationApplicationCount
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? auth = null}) {
+    return _then(
+      _$GetUnreadRegistrationApplicationCountImpl(
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _GetUnreadRegistrationApplicationCount extends GetUnreadRegistrationApplicationCount {
-  const _GetUnreadRegistrationApplicationCount({required this.auth}): super._();
-  factory _GetUnreadRegistrationApplicationCount.fromJson(Map<String, dynamic> json) => _$GetUnreadRegistrationApplicationCountFromJson(json);
+class _$GetUnreadRegistrationApplicationCountImpl
+    extends _GetUnreadRegistrationApplicationCount {
+  const _$GetUnreadRegistrationApplicationCountImpl({required this.auth})
+    : super._();
 
-@override final  String auth;
+  factory _$GetUnreadRegistrationApplicationCountImpl.fromJson(
+    Map<String, dynamic> json,
+  ) => _$$GetUnreadRegistrationApplicationCountImplFromJson(json);
 
-/// Create a copy of GetUnreadRegistrationApplicationCount
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$GetUnreadRegistrationApplicationCountCopyWith<_GetUnreadRegistrationApplicationCount> get copyWith => __$GetUnreadRegistrationApplicationCountCopyWithImpl<_GetUnreadRegistrationApplicationCount>(this, _$identity);
+  @override
+  final String auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$GetUnreadRegistrationApplicationCountToJson(this, );
+  @override
+  String toString() {
+    return 'GetUnreadRegistrationApplicationCount(auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetUnreadRegistrationApplicationCountImpl &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, auth);
+
+  /// Create a copy of GetUnreadRegistrationApplicationCount
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetUnreadRegistrationApplicationCountImplCopyWith<
+    _$GetUnreadRegistrationApplicationCountImpl
+  >
+  get copyWith => __$$GetUnreadRegistrationApplicationCountImplCopyWithImpl<
+    _$GetUnreadRegistrationApplicationCountImpl
+  >(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$GetUnreadRegistrationApplicationCountImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _GetUnreadRegistrationApplicationCount&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _GetUnreadRegistrationApplicationCount
+    extends GetUnreadRegistrationApplicationCount {
+  const factory _GetUnreadRegistrationApplicationCount({
+    required final String auth,
+  }) = _$GetUnreadRegistrationApplicationCountImpl;
+  const _GetUnreadRegistrationApplicationCount._() : super._();
+
+  factory _GetUnreadRegistrationApplicationCount.fromJson(
+    Map<String, dynamic> json,
+  ) = _$GetUnreadRegistrationApplicationCountImpl.fromJson;
+
+  @override
+  String get auth;
+
+  /// Create a copy of GetUnreadRegistrationApplicationCount
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetUnreadRegistrationApplicationCountImplCopyWith<
+    _$GetUnreadRegistrationApplicationCountImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,auth);
-
-@override
-String toString() {
-  return 'GetUnreadRegistrationApplicationCount(auth: $auth)';
+ListRegistrationApplications _$ListRegistrationApplicationsFromJson(
+  Map<String, dynamic> json,
+) {
+  return _ListRegistrationApplications.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$GetUnreadRegistrationApplicationCountCopyWith<$Res> implements $GetUnreadRegistrationApplicationCountCopyWith<$Res> {
-  factory _$GetUnreadRegistrationApplicationCountCopyWith(_GetUnreadRegistrationApplicationCount value, $Res Function(_GetUnreadRegistrationApplicationCount) _then) = __$GetUnreadRegistrationApplicationCountCopyWithImpl;
-@override @useResult
-$Res call({
- String auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$GetUnreadRegistrationApplicationCountCopyWithImpl<$Res>
-    implements _$GetUnreadRegistrationApplicationCountCopyWith<$Res> {
-  __$GetUnreadRegistrationApplicationCountCopyWithImpl(this._self, this._then);
-
-  final _GetUnreadRegistrationApplicationCount _self;
-  final $Res Function(_GetUnreadRegistrationApplicationCount) _then;
-
-/// Create a copy of GetUnreadRegistrationApplicationCount
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? auth = null,}) {
-  return _then(_GetUnreadRegistrationApplicationCount(
-auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$ListRegistrationApplications {
-
- dynamic get path; dynamic get httpMethod; bool? get unreadOnly; int? get page; int? get limit; String get auth;
-/// Create a copy of ListRegistrationApplications
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$ListRegistrationApplicationsCopyWith<ListRegistrationApplications> get copyWith => _$ListRegistrationApplicationsCopyWithImpl<ListRegistrationApplications>(this as ListRegistrationApplications, _$identity);
+  bool? get unreadOnly => throw _privateConstructorUsedError;
+  int? get page => throw _privateConstructorUsedError;
+  int? get limit => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
   /// Serializes this ListRegistrationApplications to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ListRegistrationApplications&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.unreadOnly, unreadOnly) || other.unreadOnly == unreadOnly)&&(identical(other.page, page) || other.page == page)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),unreadOnly,page,limit,auth);
-
-@override
-String toString() {
-  return 'ListRegistrationApplications(path: $path, httpMethod: $httpMethod, unreadOnly: $unreadOnly, page: $page, limit: $limit, auth: $auth)';
-}
-
-
+  /// Create a copy of ListRegistrationApplications
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $ListRegistrationApplicationsCopyWith<ListRegistrationApplications>
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $ListRegistrationApplicationsCopyWith<$Res>  {
-  factory $ListRegistrationApplicationsCopyWith(ListRegistrationApplications value, $Res Function(ListRegistrationApplications) _then) = _$ListRegistrationApplicationsCopyWithImpl;
-@useResult
-$Res call({
- bool? unreadOnly, int? page, int? limit, String auth
-});
-
-
-
-
+abstract class $ListRegistrationApplicationsCopyWith<$Res> {
+  factory $ListRegistrationApplicationsCopyWith(
+    ListRegistrationApplications value,
+    $Res Function(ListRegistrationApplications) then,
+  ) =
+      _$ListRegistrationApplicationsCopyWithImpl<
+        $Res,
+        ListRegistrationApplications
+      >;
+  @useResult
+  $Res call({bool? unreadOnly, int? page, int? limit, String auth});
 }
+
 /// @nodoc
-class _$ListRegistrationApplicationsCopyWithImpl<$Res>
+class _$ListRegistrationApplicationsCopyWithImpl<
+  $Res,
+  $Val extends ListRegistrationApplications
+>
     implements $ListRegistrationApplicationsCopyWith<$Res> {
-  _$ListRegistrationApplicationsCopyWithImpl(this._self, this._then);
+  _$ListRegistrationApplicationsCopyWithImpl(this._value, this._then);
 
-  final ListRegistrationApplications _self;
-  final $Res Function(ListRegistrationApplications) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of ListRegistrationApplications
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? unreadOnly = freezed,Object? page = freezed,Object? limit = freezed,Object? auth = null,}) {
-  return _then(_self.copyWith(
-unreadOnly: freezed == unreadOnly ? _self.unreadOnly : unreadOnly // ignore: cast_nullable_to_non_nullable
-as bool?,page: freezed == page ? _self.page : page // ignore: cast_nullable_to_non_nullable
-as int?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of ListRegistrationApplications
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? unreadOnly = freezed,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? auth = null,
+  }) {
+    return _then(
+      _value.copyWith(
+            unreadOnly:
+                freezed == unreadOnly
+                    ? _value.unreadOnly
+                    : unreadOnly // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            page:
+                freezed == page
+                    ? _value.page
+                    : page // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$ListRegistrationApplicationsImplCopyWith<$Res>
+    implements $ListRegistrationApplicationsCopyWith<$Res> {
+  factory _$$ListRegistrationApplicationsImplCopyWith(
+    _$ListRegistrationApplicationsImpl value,
+    $Res Function(_$ListRegistrationApplicationsImpl) then,
+  ) = __$$ListRegistrationApplicationsImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({bool? unreadOnly, int? page, int? limit, String auth});
 }
 
+/// @nodoc
+class __$$ListRegistrationApplicationsImplCopyWithImpl<$Res>
+    extends
+        _$ListRegistrationApplicationsCopyWithImpl<
+          $Res,
+          _$ListRegistrationApplicationsImpl
+        >
+    implements _$$ListRegistrationApplicationsImplCopyWith<$Res> {
+  __$$ListRegistrationApplicationsImplCopyWithImpl(
+    _$ListRegistrationApplicationsImpl _value,
+    $Res Function(_$ListRegistrationApplicationsImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [ListRegistrationApplications].
-extension ListRegistrationApplicationsPatterns on ListRegistrationApplications {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ListRegistrationApplications value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _ListRegistrationApplications() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ListRegistrationApplications value)  $default,){
-final _that = this;
-switch (_that) {
-case _ListRegistrationApplications():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ListRegistrationApplications value)?  $default,){
-final _that = this;
-switch (_that) {
-case _ListRegistrationApplications() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( bool? unreadOnly,  int? page,  int? limit,  String auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _ListRegistrationApplications() when $default != null:
-return $default(_that.unreadOnly,_that.page,_that.limit,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( bool? unreadOnly,  int? page,  int? limit,  String auth)  $default,) {final _that = this;
-switch (_that) {
-case _ListRegistrationApplications():
-return $default(_that.unreadOnly,_that.page,_that.limit,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( bool? unreadOnly,  int? page,  int? limit,  String auth)?  $default,) {final _that = this;
-switch (_that) {
-case _ListRegistrationApplications() when $default != null:
-return $default(_that.unreadOnly,_that.page,_that.limit,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of ListRegistrationApplications
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? unreadOnly = freezed,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? auth = null,
+  }) {
+    return _then(
+      _$ListRegistrationApplicationsImpl(
+        unreadOnly:
+            freezed == unreadOnly
+                ? _value.unreadOnly
+                : unreadOnly // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        page:
+            freezed == page
+                ? _value.page
+                : page // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _ListRegistrationApplications extends ListRegistrationApplications {
-  const _ListRegistrationApplications({this.unreadOnly, this.page, this.limit, required this.auth}): super._();
-  factory _ListRegistrationApplications.fromJson(Map<String, dynamic> json) => _$ListRegistrationApplicationsFromJson(json);
+class _$ListRegistrationApplicationsImpl extends _ListRegistrationApplications {
+  const _$ListRegistrationApplicationsImpl({
+    this.unreadOnly,
+    this.page,
+    this.limit,
+    required this.auth,
+  }) : super._();
 
-@override final  bool? unreadOnly;
-@override final  int? page;
-@override final  int? limit;
-@override final  String auth;
+  factory _$ListRegistrationApplicationsImpl.fromJson(
+    Map<String, dynamic> json,
+  ) => _$$ListRegistrationApplicationsImplFromJson(json);
 
-/// Create a copy of ListRegistrationApplications
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ListRegistrationApplicationsCopyWith<_ListRegistrationApplications> get copyWith => __$ListRegistrationApplicationsCopyWithImpl<_ListRegistrationApplications>(this, _$identity);
+  @override
+  final bool? unreadOnly;
+  @override
+  final int? page;
+  @override
+  final int? limit;
+  @override
+  final String auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$ListRegistrationApplicationsToJson(this, );
+  @override
+  String toString() {
+    return 'ListRegistrationApplications(unreadOnly: $unreadOnly, page: $page, limit: $limit, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ListRegistrationApplicationsImpl &&
+            (identical(other.unreadOnly, unreadOnly) ||
+                other.unreadOnly == unreadOnly) &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, unreadOnly, page, limit, auth);
+
+  /// Create a copy of ListRegistrationApplications
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ListRegistrationApplicationsImplCopyWith<
+    _$ListRegistrationApplicationsImpl
+  >
+  get copyWith => __$$ListRegistrationApplicationsImplCopyWithImpl<
+    _$ListRegistrationApplicationsImpl
+  >(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ListRegistrationApplicationsImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ListRegistrationApplications&&(identical(other.unreadOnly, unreadOnly) || other.unreadOnly == unreadOnly)&&(identical(other.page, page) || other.page == page)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _ListRegistrationApplications
+    extends ListRegistrationApplications {
+  const factory _ListRegistrationApplications({
+    final bool? unreadOnly,
+    final int? page,
+    final int? limit,
+    required final String auth,
+  }) = _$ListRegistrationApplicationsImpl;
+  const _ListRegistrationApplications._() : super._();
+
+  factory _ListRegistrationApplications.fromJson(Map<String, dynamic> json) =
+      _$ListRegistrationApplicationsImpl.fromJson;
+
+  @override
+  bool? get unreadOnly;
+  @override
+  int? get page;
+  @override
+  int? get limit;
+  @override
+  String get auth;
+
+  /// Create a copy of ListRegistrationApplications
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ListRegistrationApplicationsImplCopyWith<
+    _$ListRegistrationApplicationsImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,unreadOnly,page,limit,auth);
-
-@override
-String toString() {
-  return 'ListRegistrationApplications(unreadOnly: $unreadOnly, page: $page, limit: $limit, auth: $auth)';
+ApproveRegistrationApplication _$ApproveRegistrationApplicationFromJson(
+  Map<String, dynamic> json,
+) {
+  return _ApproveRegistrationApplication.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ListRegistrationApplicationsCopyWith<$Res> implements $ListRegistrationApplicationsCopyWith<$Res> {
-  factory _$ListRegistrationApplicationsCopyWith(_ListRegistrationApplications value, $Res Function(_ListRegistrationApplications) _then) = __$ListRegistrationApplicationsCopyWithImpl;
-@override @useResult
-$Res call({
- bool? unreadOnly, int? page, int? limit, String auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$ListRegistrationApplicationsCopyWithImpl<$Res>
-    implements _$ListRegistrationApplicationsCopyWith<$Res> {
-  __$ListRegistrationApplicationsCopyWithImpl(this._self, this._then);
-
-  final _ListRegistrationApplications _self;
-  final $Res Function(_ListRegistrationApplications) _then;
-
-/// Create a copy of ListRegistrationApplications
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? unreadOnly = freezed,Object? page = freezed,Object? limit = freezed,Object? auth = null,}) {
-  return _then(_ListRegistrationApplications(
-unreadOnly: freezed == unreadOnly ? _self.unreadOnly : unreadOnly // ignore: cast_nullable_to_non_nullable
-as bool?,page: freezed == page ? _self.page : page // ignore: cast_nullable_to_non_nullable
-as int?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$ApproveRegistrationApplication {
-
- dynamic get path; dynamic get httpMethod; int get id; bool get approve; String? get denyReason; String get auth;
-/// Create a copy of ApproveRegistrationApplication
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$ApproveRegistrationApplicationCopyWith<ApproveRegistrationApplication> get copyWith => _$ApproveRegistrationApplicationCopyWithImpl<ApproveRegistrationApplication>(this as ApproveRegistrationApplication, _$identity);
+  int get id => throw _privateConstructorUsedError;
+  bool get approve => throw _privateConstructorUsedError;
+  String? get denyReason => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
   /// Serializes this ApproveRegistrationApplication to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ApproveRegistrationApplication&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.id, id) || other.id == id)&&(identical(other.approve, approve) || other.approve == approve)&&(identical(other.denyReason, denyReason) || other.denyReason == denyReason)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),id,approve,denyReason,auth);
-
-@override
-String toString() {
-  return 'ApproveRegistrationApplication(path: $path, httpMethod: $httpMethod, id: $id, approve: $approve, denyReason: $denyReason, auth: $auth)';
-}
-
-
+  /// Create a copy of ApproveRegistrationApplication
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $ApproveRegistrationApplicationCopyWith<ApproveRegistrationApplication>
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $ApproveRegistrationApplicationCopyWith<$Res>  {
-  factory $ApproveRegistrationApplicationCopyWith(ApproveRegistrationApplication value, $Res Function(ApproveRegistrationApplication) _then) = _$ApproveRegistrationApplicationCopyWithImpl;
-@useResult
-$Res call({
- int id, bool approve, String? denyReason, String auth
-});
-
-
-
-
+abstract class $ApproveRegistrationApplicationCopyWith<$Res> {
+  factory $ApproveRegistrationApplicationCopyWith(
+    ApproveRegistrationApplication value,
+    $Res Function(ApproveRegistrationApplication) then,
+  ) =
+      _$ApproveRegistrationApplicationCopyWithImpl<
+        $Res,
+        ApproveRegistrationApplication
+      >;
+  @useResult
+  $Res call({int id, bool approve, String? denyReason, String auth});
 }
+
 /// @nodoc
-class _$ApproveRegistrationApplicationCopyWithImpl<$Res>
+class _$ApproveRegistrationApplicationCopyWithImpl<
+  $Res,
+  $Val extends ApproveRegistrationApplication
+>
     implements $ApproveRegistrationApplicationCopyWith<$Res> {
-  _$ApproveRegistrationApplicationCopyWithImpl(this._self, this._then);
+  _$ApproveRegistrationApplicationCopyWithImpl(this._value, this._then);
 
-  final ApproveRegistrationApplication _self;
-  final $Res Function(ApproveRegistrationApplication) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of ApproveRegistrationApplication
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? approve = null,Object? denyReason = freezed,Object? auth = null,}) {
-  return _then(_self.copyWith(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as int,approve: null == approve ? _self.approve : approve // ignore: cast_nullable_to_non_nullable
-as bool,denyReason: freezed == denyReason ? _self.denyReason : denyReason // ignore: cast_nullable_to_non_nullable
-as String?,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of ApproveRegistrationApplication
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? approve = null,
+    Object? denyReason = freezed,
+    Object? auth = null,
+  }) {
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as int,
+            approve:
+                null == approve
+                    ? _value.approve
+                    : approve // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            denyReason:
+                freezed == denyReason
+                    ? _value.denyReason
+                    : denyReason // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$ApproveRegistrationApplicationImplCopyWith<$Res>
+    implements $ApproveRegistrationApplicationCopyWith<$Res> {
+  factory _$$ApproveRegistrationApplicationImplCopyWith(
+    _$ApproveRegistrationApplicationImpl value,
+    $Res Function(_$ApproveRegistrationApplicationImpl) then,
+  ) = __$$ApproveRegistrationApplicationImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int id, bool approve, String? denyReason, String auth});
 }
 
+/// @nodoc
+class __$$ApproveRegistrationApplicationImplCopyWithImpl<$Res>
+    extends
+        _$ApproveRegistrationApplicationCopyWithImpl<
+          $Res,
+          _$ApproveRegistrationApplicationImpl
+        >
+    implements _$$ApproveRegistrationApplicationImplCopyWith<$Res> {
+  __$$ApproveRegistrationApplicationImplCopyWithImpl(
+    _$ApproveRegistrationApplicationImpl _value,
+    $Res Function(_$ApproveRegistrationApplicationImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [ApproveRegistrationApplication].
-extension ApproveRegistrationApplicationPatterns on ApproveRegistrationApplication {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ApproveRegistrationApplication value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _ApproveRegistrationApplication() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ApproveRegistrationApplication value)  $default,){
-final _that = this;
-switch (_that) {
-case _ApproveRegistrationApplication():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ApproveRegistrationApplication value)?  $default,){
-final _that = this;
-switch (_that) {
-case _ApproveRegistrationApplication() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int id,  bool approve,  String? denyReason,  String auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _ApproveRegistrationApplication() when $default != null:
-return $default(_that.id,_that.approve,_that.denyReason,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int id,  bool approve,  String? denyReason,  String auth)  $default,) {final _that = this;
-switch (_that) {
-case _ApproveRegistrationApplication():
-return $default(_that.id,_that.approve,_that.denyReason,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int id,  bool approve,  String? denyReason,  String auth)?  $default,) {final _that = this;
-switch (_that) {
-case _ApproveRegistrationApplication() when $default != null:
-return $default(_that.id,_that.approve,_that.denyReason,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of ApproveRegistrationApplication
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? approve = null,
+    Object? denyReason = freezed,
+    Object? auth = null,
+  }) {
+    return _then(
+      _$ApproveRegistrationApplicationImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as int,
+        approve:
+            null == approve
+                ? _value.approve
+                : approve // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        denyReason:
+            freezed == denyReason
+                ? _value.denyReason
+                : denyReason // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _ApproveRegistrationApplication extends ApproveRegistrationApplication {
-  const _ApproveRegistrationApplication({required this.id, required this.approve, this.denyReason, required this.auth}): super._();
-  factory _ApproveRegistrationApplication.fromJson(Map<String, dynamic> json) => _$ApproveRegistrationApplicationFromJson(json);
+class _$ApproveRegistrationApplicationImpl
+    extends _ApproveRegistrationApplication {
+  const _$ApproveRegistrationApplicationImpl({
+    required this.id,
+    required this.approve,
+    this.denyReason,
+    required this.auth,
+  }) : super._();
 
-@override final  int id;
-@override final  bool approve;
-@override final  String? denyReason;
-@override final  String auth;
+  factory _$ApproveRegistrationApplicationImpl.fromJson(
+    Map<String, dynamic> json,
+  ) => _$$ApproveRegistrationApplicationImplFromJson(json);
 
-/// Create a copy of ApproveRegistrationApplication
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ApproveRegistrationApplicationCopyWith<_ApproveRegistrationApplication> get copyWith => __$ApproveRegistrationApplicationCopyWithImpl<_ApproveRegistrationApplication>(this, _$identity);
+  @override
+  final int id;
+  @override
+  final bool approve;
+  @override
+  final String? denyReason;
+  @override
+  final String auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$ApproveRegistrationApplicationToJson(this, );
+  @override
+  String toString() {
+    return 'ApproveRegistrationApplication(id: $id, approve: $approve, denyReason: $denyReason, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ApproveRegistrationApplicationImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.approve, approve) || other.approve == approve) &&
+            (identical(other.denyReason, denyReason) ||
+                other.denyReason == denyReason) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, id, approve, denyReason, auth);
+
+  /// Create a copy of ApproveRegistrationApplication
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ApproveRegistrationApplicationImplCopyWith<
+    _$ApproveRegistrationApplicationImpl
+  >
+  get copyWith => __$$ApproveRegistrationApplicationImplCopyWithImpl<
+    _$ApproveRegistrationApplicationImpl
+  >(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ApproveRegistrationApplicationImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ApproveRegistrationApplication&&(identical(other.id, id) || other.id == id)&&(identical(other.approve, approve) || other.approve == approve)&&(identical(other.denyReason, denyReason) || other.denyReason == denyReason)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _ApproveRegistrationApplication
+    extends ApproveRegistrationApplication {
+  const factory _ApproveRegistrationApplication({
+    required final int id,
+    required final bool approve,
+    final String? denyReason,
+    required final String auth,
+  }) = _$ApproveRegistrationApplicationImpl;
+  const _ApproveRegistrationApplication._() : super._();
+
+  factory _ApproveRegistrationApplication.fromJson(Map<String, dynamic> json) =
+      _$ApproveRegistrationApplicationImpl.fromJson;
+
+  @override
+  int get id;
+  @override
+  bool get approve;
+  @override
+  String? get denyReason;
+  @override
+  String get auth;
+
+  /// Create a copy of ApproveRegistrationApplication
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ApproveRegistrationApplicationImplCopyWith<
+    _$ApproveRegistrationApplicationImpl
+  >
+  get copyWith => throw _privateConstructorUsedError;
 }
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,id,approve,denyReason,auth);
-
-@override
-String toString() {
-  return 'ApproveRegistrationApplication(id: $id, approve: $approve, denyReason: $denyReason, auth: $auth)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ApproveRegistrationApplicationCopyWith<$Res> implements $ApproveRegistrationApplicationCopyWith<$Res> {
-  factory _$ApproveRegistrationApplicationCopyWith(_ApproveRegistrationApplication value, $Res Function(_ApproveRegistrationApplication) _then) = __$ApproveRegistrationApplicationCopyWithImpl;
-@override @useResult
-$Res call({
- int id, bool approve, String? denyReason, String auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$ApproveRegistrationApplicationCopyWithImpl<$Res>
-    implements _$ApproveRegistrationApplicationCopyWith<$Res> {
-  __$ApproveRegistrationApplicationCopyWithImpl(this._self, this._then);
-
-  final _ApproveRegistrationApplication _self;
-  final $Res Function(_ApproveRegistrationApplication) _then;
-
-/// Create a copy of ApproveRegistrationApplication
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? approve = null,Object? denyReason = freezed,Object? auth = null,}) {
-  return _then(_ApproveRegistrationApplication(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as int,approve: null == approve ? _self.approve : approve // ignore: cast_nullable_to_non_nullable
-as bool,denyReason: freezed == denyReason ? _self.denyReason : denyReason // ignore: cast_nullable_to_non_nullable
-as String?,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
-// dart format on

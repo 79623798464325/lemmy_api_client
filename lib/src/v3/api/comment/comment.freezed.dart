@@ -1,5 +1,5 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,3303 +9,2859 @@ part of 'comment.dart';
 // FreezedGenerator
 // **************************************************************************
 
-// dart format off
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
+
+CreateComment _$CreateCommentFromJson(Map<String, dynamic> json) {
+  return _CreateComment.fromJson(json);
+}
 
 /// @nodoc
 mixin _$CreateComment {
-
- dynamic get path; dynamic get httpMethod; String get content; int? get parentId; int get postId; String? get formId; String get auth;
-/// Create a copy of CreateComment
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$CreateCommentCopyWith<CreateComment> get copyWith => _$CreateCommentCopyWithImpl<CreateComment>(this as CreateComment, _$identity);
+  String get content => throw _privateConstructorUsedError;
+  int? get parentId => throw _privateConstructorUsedError;
+  int get postId => throw _privateConstructorUsedError;
+  String? get formId => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
   /// Serializes this CreateComment to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is CreateComment&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.content, content) || other.content == content)&&(identical(other.parentId, parentId) || other.parentId == parentId)&&(identical(other.postId, postId) || other.postId == postId)&&(identical(other.formId, formId) || other.formId == formId)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),content,parentId,postId,formId,auth);
-
-@override
-String toString() {
-  return 'CreateComment(path: $path, httpMethod: $httpMethod, content: $content, parentId: $parentId, postId: $postId, formId: $formId, auth: $auth)';
-}
-
-
+  /// Create a copy of CreateComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $CreateCommentCopyWith<CreateComment> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $CreateCommentCopyWith<$Res>  {
-  factory $CreateCommentCopyWith(CreateComment value, $Res Function(CreateComment) _then) = _$CreateCommentCopyWithImpl;
-@useResult
-$Res call({
- String content, int? parentId, int postId, String? formId, String auth
-});
-
-
-
-
+abstract class $CreateCommentCopyWith<$Res> {
+  factory $CreateCommentCopyWith(
+    CreateComment value,
+    $Res Function(CreateComment) then,
+  ) = _$CreateCommentCopyWithImpl<$Res, CreateComment>;
+  @useResult
+  $Res call({
+    String content,
+    int? parentId,
+    int postId,
+    String? formId,
+    String auth,
+  });
 }
+
 /// @nodoc
-class _$CreateCommentCopyWithImpl<$Res>
+class _$CreateCommentCopyWithImpl<$Res, $Val extends CreateComment>
     implements $CreateCommentCopyWith<$Res> {
-  _$CreateCommentCopyWithImpl(this._self, this._then);
+  _$CreateCommentCopyWithImpl(this._value, this._then);
 
-  final CreateComment _self;
-  final $Res Function(CreateComment) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of CreateComment
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? content = null,Object? parentId = freezed,Object? postId = null,Object? formId = freezed,Object? auth = null,}) {
-  return _then(_self.copyWith(
-content: null == content ? _self.content : content // ignore: cast_nullable_to_non_nullable
-as String,parentId: freezed == parentId ? _self.parentId : parentId // ignore: cast_nullable_to_non_nullable
-as int?,postId: null == postId ? _self.postId : postId // ignore: cast_nullable_to_non_nullable
-as int,formId: freezed == formId ? _self.formId : formId // ignore: cast_nullable_to_non_nullable
-as String?,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of CreateComment
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? content = null,
+    Object? parentId = freezed,
+    Object? postId = null,
+    Object? formId = freezed,
+    Object? auth = null,
+  }) {
+    return _then(
+      _value.copyWith(
+            content:
+                null == content
+                    ? _value.content
+                    : content // ignore: cast_nullable_to_non_nullable
+                        as String,
+            parentId:
+                freezed == parentId
+                    ? _value.parentId
+                    : parentId // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            postId:
+                null == postId
+                    ? _value.postId
+                    : postId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            formId:
+                freezed == formId
+                    ? _value.formId
+                    : formId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$CreateCommentImplCopyWith<$Res>
+    implements $CreateCommentCopyWith<$Res> {
+  factory _$$CreateCommentImplCopyWith(
+    _$CreateCommentImpl value,
+    $Res Function(_$CreateCommentImpl) then,
+  ) = __$$CreateCommentImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({
+    String content,
+    int? parentId,
+    int postId,
+    String? formId,
+    String auth,
+  });
 }
 
+/// @nodoc
+class __$$CreateCommentImplCopyWithImpl<$Res>
+    extends _$CreateCommentCopyWithImpl<$Res, _$CreateCommentImpl>
+    implements _$$CreateCommentImplCopyWith<$Res> {
+  __$$CreateCommentImplCopyWithImpl(
+    _$CreateCommentImpl _value,
+    $Res Function(_$CreateCommentImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [CreateComment].
-extension CreateCommentPatterns on CreateComment {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _CreateComment value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _CreateComment() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _CreateComment value)  $default,){
-final _that = this;
-switch (_that) {
-case _CreateComment():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _CreateComment value)?  $default,){
-final _that = this;
-switch (_that) {
-case _CreateComment() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String content,  int? parentId,  int postId,  String? formId,  String auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _CreateComment() when $default != null:
-return $default(_that.content,_that.parentId,_that.postId,_that.formId,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String content,  int? parentId,  int postId,  String? formId,  String auth)  $default,) {final _that = this;
-switch (_that) {
-case _CreateComment():
-return $default(_that.content,_that.parentId,_that.postId,_that.formId,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String content,  int? parentId,  int postId,  String? formId,  String auth)?  $default,) {final _that = this;
-switch (_that) {
-case _CreateComment() when $default != null:
-return $default(_that.content,_that.parentId,_that.postId,_that.formId,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of CreateComment
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? content = null,
+    Object? parentId = freezed,
+    Object? postId = null,
+    Object? formId = freezed,
+    Object? auth = null,
+  }) {
+    return _then(
+      _$CreateCommentImpl(
+        content:
+            null == content
+                ? _value.content
+                : content // ignore: cast_nullable_to_non_nullable
+                    as String,
+        parentId:
+            freezed == parentId
+                ? _value.parentId
+                : parentId // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        postId:
+            null == postId
+                ? _value.postId
+                : postId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        formId:
+            freezed == formId
+                ? _value.formId
+                : formId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _CreateComment extends CreateComment {
-  const _CreateComment({required this.content, this.parentId, required this.postId, this.formId, required this.auth}): super._();
-  factory _CreateComment.fromJson(Map<String, dynamic> json) => _$CreateCommentFromJson(json);
+class _$CreateCommentImpl extends _CreateComment {
+  const _$CreateCommentImpl({
+    required this.content,
+    this.parentId,
+    required this.postId,
+    this.formId,
+    required this.auth,
+  }) : super._();
 
-@override final  String content;
-@override final  int? parentId;
-@override final  int postId;
-@override final  String? formId;
-@override final  String auth;
+  factory _$CreateCommentImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CreateCommentImplFromJson(json);
 
-/// Create a copy of CreateComment
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$CreateCommentCopyWith<_CreateComment> get copyWith => __$CreateCommentCopyWithImpl<_CreateComment>(this, _$identity);
+  @override
+  final String content;
+  @override
+  final int? parentId;
+  @override
+  final int postId;
+  @override
+  final String? formId;
+  @override
+  final String auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$CreateCommentToJson(this, );
+  @override
+  String toString() {
+    return 'CreateComment(content: $content, parentId: $parentId, postId: $postId, formId: $formId, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CreateCommentImpl &&
+            (identical(other.content, content) || other.content == content) &&
+            (identical(other.parentId, parentId) ||
+                other.parentId == parentId) &&
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.formId, formId) || other.formId == formId) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, content, parentId, postId, formId, auth);
+
+  /// Create a copy of CreateComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CreateCommentImplCopyWith<_$CreateCommentImpl> get copyWith =>
+      __$$CreateCommentImplCopyWithImpl<_$CreateCommentImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$CreateCommentImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CreateComment&&(identical(other.content, content) || other.content == content)&&(identical(other.parentId, parentId) || other.parentId == parentId)&&(identical(other.postId, postId) || other.postId == postId)&&(identical(other.formId, formId) || other.formId == formId)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _CreateComment extends CreateComment {
+  const factory _CreateComment({
+    required final String content,
+    final int? parentId,
+    required final int postId,
+    final String? formId,
+    required final String auth,
+  }) = _$CreateCommentImpl;
+  const _CreateComment._() : super._();
+
+  factory _CreateComment.fromJson(Map<String, dynamic> json) =
+      _$CreateCommentImpl.fromJson;
+
+  @override
+  String get content;
+  @override
+  int? get parentId;
+  @override
+  int get postId;
+  @override
+  String? get formId;
+  @override
+  String get auth;
+
+  /// Create a copy of CreateComment
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$CreateCommentImplCopyWith<_$CreateCommentImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,content,parentId,postId,formId,auth);
-
-@override
-String toString() {
-  return 'CreateComment(content: $content, parentId: $parentId, postId: $postId, formId: $formId, auth: $auth)';
+EditComment _$EditCommentFromJson(Map<String, dynamic> json) {
+  return _EditComment.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$CreateCommentCopyWith<$Res> implements $CreateCommentCopyWith<$Res> {
-  factory _$CreateCommentCopyWith(_CreateComment value, $Res Function(_CreateComment) _then) = __$CreateCommentCopyWithImpl;
-@override @useResult
-$Res call({
- String content, int? parentId, int postId, String? formId, String auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$CreateCommentCopyWithImpl<$Res>
-    implements _$CreateCommentCopyWith<$Res> {
-  __$CreateCommentCopyWithImpl(this._self, this._then);
-
-  final _CreateComment _self;
-  final $Res Function(_CreateComment) _then;
-
-/// Create a copy of CreateComment
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? content = null,Object? parentId = freezed,Object? postId = null,Object? formId = freezed,Object? auth = null,}) {
-  return _then(_CreateComment(
-content: null == content ? _self.content : content // ignore: cast_nullable_to_non_nullable
-as String,parentId: freezed == parentId ? _self.parentId : parentId // ignore: cast_nullable_to_non_nullable
-as int?,postId: null == postId ? _self.postId : postId // ignore: cast_nullable_to_non_nullable
-as int,formId: freezed == formId ? _self.formId : formId // ignore: cast_nullable_to_non_nullable
-as String?,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$EditComment {
-
- dynamic get path; dynamic get httpMethod; String get content; int get commentId; String? get formId; String get auth;
-/// Create a copy of EditComment
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$EditCommentCopyWith<EditComment> get copyWith => _$EditCommentCopyWithImpl<EditComment>(this as EditComment, _$identity);
+  String get content => throw _privateConstructorUsedError;
+  int get commentId => throw _privateConstructorUsedError;
+  String? get formId => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
   /// Serializes this EditComment to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is EditComment&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.content, content) || other.content == content)&&(identical(other.commentId, commentId) || other.commentId == commentId)&&(identical(other.formId, formId) || other.formId == formId)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),content,commentId,formId,auth);
-
-@override
-String toString() {
-  return 'EditComment(path: $path, httpMethod: $httpMethod, content: $content, commentId: $commentId, formId: $formId, auth: $auth)';
-}
-
-
+  /// Create a copy of EditComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $EditCommentCopyWith<EditComment> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $EditCommentCopyWith<$Res>  {
-  factory $EditCommentCopyWith(EditComment value, $Res Function(EditComment) _then) = _$EditCommentCopyWithImpl;
-@useResult
-$Res call({
- String content, int commentId, String? formId, String auth
-});
-
-
-
-
+abstract class $EditCommentCopyWith<$Res> {
+  factory $EditCommentCopyWith(
+    EditComment value,
+    $Res Function(EditComment) then,
+  ) = _$EditCommentCopyWithImpl<$Res, EditComment>;
+  @useResult
+  $Res call({String content, int commentId, String? formId, String auth});
 }
+
 /// @nodoc
-class _$EditCommentCopyWithImpl<$Res>
+class _$EditCommentCopyWithImpl<$Res, $Val extends EditComment>
     implements $EditCommentCopyWith<$Res> {
-  _$EditCommentCopyWithImpl(this._self, this._then);
+  _$EditCommentCopyWithImpl(this._value, this._then);
 
-  final EditComment _self;
-  final $Res Function(EditComment) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of EditComment
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? content = null,Object? commentId = null,Object? formId = freezed,Object? auth = null,}) {
-  return _then(_self.copyWith(
-content: null == content ? _self.content : content // ignore: cast_nullable_to_non_nullable
-as String,commentId: null == commentId ? _self.commentId : commentId // ignore: cast_nullable_to_non_nullable
-as int,formId: freezed == formId ? _self.formId : formId // ignore: cast_nullable_to_non_nullable
-as String?,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of EditComment
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? content = null,
+    Object? commentId = null,
+    Object? formId = freezed,
+    Object? auth = null,
+  }) {
+    return _then(
+      _value.copyWith(
+            content:
+                null == content
+                    ? _value.content
+                    : content // ignore: cast_nullable_to_non_nullable
+                        as String,
+            commentId:
+                null == commentId
+                    ? _value.commentId
+                    : commentId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            formId:
+                freezed == formId
+                    ? _value.formId
+                    : formId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$EditCommentImplCopyWith<$Res>
+    implements $EditCommentCopyWith<$Res> {
+  factory _$$EditCommentImplCopyWith(
+    _$EditCommentImpl value,
+    $Res Function(_$EditCommentImpl) then,
+  ) = __$$EditCommentImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String content, int commentId, String? formId, String auth});
 }
 
+/// @nodoc
+class __$$EditCommentImplCopyWithImpl<$Res>
+    extends _$EditCommentCopyWithImpl<$Res, _$EditCommentImpl>
+    implements _$$EditCommentImplCopyWith<$Res> {
+  __$$EditCommentImplCopyWithImpl(
+    _$EditCommentImpl _value,
+    $Res Function(_$EditCommentImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [EditComment].
-extension EditCommentPatterns on EditComment {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _EditComment value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _EditComment() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _EditComment value)  $default,){
-final _that = this;
-switch (_that) {
-case _EditComment():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _EditComment value)?  $default,){
-final _that = this;
-switch (_that) {
-case _EditComment() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String content,  int commentId,  String? formId,  String auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _EditComment() when $default != null:
-return $default(_that.content,_that.commentId,_that.formId,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String content,  int commentId,  String? formId,  String auth)  $default,) {final _that = this;
-switch (_that) {
-case _EditComment():
-return $default(_that.content,_that.commentId,_that.formId,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String content,  int commentId,  String? formId,  String auth)?  $default,) {final _that = this;
-switch (_that) {
-case _EditComment() when $default != null:
-return $default(_that.content,_that.commentId,_that.formId,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of EditComment
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? content = null,
+    Object? commentId = null,
+    Object? formId = freezed,
+    Object? auth = null,
+  }) {
+    return _then(
+      _$EditCommentImpl(
+        content:
+            null == content
+                ? _value.content
+                : content // ignore: cast_nullable_to_non_nullable
+                    as String,
+        commentId:
+            null == commentId
+                ? _value.commentId
+                : commentId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        formId:
+            freezed == formId
+                ? _value.formId
+                : formId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _EditComment extends EditComment {
-  const _EditComment({required this.content, required this.commentId, this.formId, required this.auth}): super._();
-  factory _EditComment.fromJson(Map<String, dynamic> json) => _$EditCommentFromJson(json);
+class _$EditCommentImpl extends _EditComment {
+  const _$EditCommentImpl({
+    required this.content,
+    required this.commentId,
+    this.formId,
+    required this.auth,
+  }) : super._();
 
-@override final  String content;
-@override final  int commentId;
-@override final  String? formId;
-@override final  String auth;
+  factory _$EditCommentImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EditCommentImplFromJson(json);
 
-/// Create a copy of EditComment
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$EditCommentCopyWith<_EditComment> get copyWith => __$EditCommentCopyWithImpl<_EditComment>(this, _$identity);
+  @override
+  final String content;
+  @override
+  final int commentId;
+  @override
+  final String? formId;
+  @override
+  final String auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$EditCommentToJson(this, );
+  @override
+  String toString() {
+    return 'EditComment(content: $content, commentId: $commentId, formId: $formId, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EditCommentImpl &&
+            (identical(other.content, content) || other.content == content) &&
+            (identical(other.commentId, commentId) ||
+                other.commentId == commentId) &&
+            (identical(other.formId, formId) || other.formId == formId) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, content, commentId, formId, auth);
+
+  /// Create a copy of EditComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EditCommentImplCopyWith<_$EditCommentImpl> get copyWith =>
+      __$$EditCommentImplCopyWithImpl<_$EditCommentImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$EditCommentImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _EditComment&&(identical(other.content, content) || other.content == content)&&(identical(other.commentId, commentId) || other.commentId == commentId)&&(identical(other.formId, formId) || other.formId == formId)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _EditComment extends EditComment {
+  const factory _EditComment({
+    required final String content,
+    required final int commentId,
+    final String? formId,
+    required final String auth,
+  }) = _$EditCommentImpl;
+  const _EditComment._() : super._();
+
+  factory _EditComment.fromJson(Map<String, dynamic> json) =
+      _$EditCommentImpl.fromJson;
+
+  @override
+  String get content;
+  @override
+  int get commentId;
+  @override
+  String? get formId;
+  @override
+  String get auth;
+
+  /// Create a copy of EditComment
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$EditCommentImplCopyWith<_$EditCommentImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,content,commentId,formId,auth);
-
-@override
-String toString() {
-  return 'EditComment(content: $content, commentId: $commentId, formId: $formId, auth: $auth)';
+DeleteComment _$DeleteCommentFromJson(Map<String, dynamic> json) {
+  return _DeleteComment.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$EditCommentCopyWith<$Res> implements $EditCommentCopyWith<$Res> {
-  factory _$EditCommentCopyWith(_EditComment value, $Res Function(_EditComment) _then) = __$EditCommentCopyWithImpl;
-@override @useResult
-$Res call({
- String content, int commentId, String? formId, String auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$EditCommentCopyWithImpl<$Res>
-    implements _$EditCommentCopyWith<$Res> {
-  __$EditCommentCopyWithImpl(this._self, this._then);
-
-  final _EditComment _self;
-  final $Res Function(_EditComment) _then;
-
-/// Create a copy of EditComment
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? content = null,Object? commentId = null,Object? formId = freezed,Object? auth = null,}) {
-  return _then(_EditComment(
-content: null == content ? _self.content : content // ignore: cast_nullable_to_non_nullable
-as String,commentId: null == commentId ? _self.commentId : commentId // ignore: cast_nullable_to_non_nullable
-as int,formId: freezed == formId ? _self.formId : formId // ignore: cast_nullable_to_non_nullable
-as String?,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$DeleteComment {
-
- dynamic get path; dynamic get httpMethod; int get commentId; bool get deleted; String get auth;
-/// Create a copy of DeleteComment
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$DeleteCommentCopyWith<DeleteComment> get copyWith => _$DeleteCommentCopyWithImpl<DeleteComment>(this as DeleteComment, _$identity);
+  int get commentId => throw _privateConstructorUsedError;
+  bool get deleted => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
   /// Serializes this DeleteComment to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is DeleteComment&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.commentId, commentId) || other.commentId == commentId)&&(identical(other.deleted, deleted) || other.deleted == deleted)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),commentId,deleted,auth);
-
-@override
-String toString() {
-  return 'DeleteComment(path: $path, httpMethod: $httpMethod, commentId: $commentId, deleted: $deleted, auth: $auth)';
-}
-
-
+  /// Create a copy of DeleteComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $DeleteCommentCopyWith<DeleteComment> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $DeleteCommentCopyWith<$Res>  {
-  factory $DeleteCommentCopyWith(DeleteComment value, $Res Function(DeleteComment) _then) = _$DeleteCommentCopyWithImpl;
-@useResult
-$Res call({
- int commentId, bool deleted, String auth
-});
-
-
-
-
+abstract class $DeleteCommentCopyWith<$Res> {
+  factory $DeleteCommentCopyWith(
+    DeleteComment value,
+    $Res Function(DeleteComment) then,
+  ) = _$DeleteCommentCopyWithImpl<$Res, DeleteComment>;
+  @useResult
+  $Res call({int commentId, bool deleted, String auth});
 }
+
 /// @nodoc
-class _$DeleteCommentCopyWithImpl<$Res>
+class _$DeleteCommentCopyWithImpl<$Res, $Val extends DeleteComment>
     implements $DeleteCommentCopyWith<$Res> {
-  _$DeleteCommentCopyWithImpl(this._self, this._then);
+  _$DeleteCommentCopyWithImpl(this._value, this._then);
 
-  final DeleteComment _self;
-  final $Res Function(DeleteComment) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of DeleteComment
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? commentId = null,Object? deleted = null,Object? auth = null,}) {
-  return _then(_self.copyWith(
-commentId: null == commentId ? _self.commentId : commentId // ignore: cast_nullable_to_non_nullable
-as int,deleted: null == deleted ? _self.deleted : deleted // ignore: cast_nullable_to_non_nullable
-as bool,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of DeleteComment
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? commentId = null,
+    Object? deleted = null,
+    Object? auth = null,
+  }) {
+    return _then(
+      _value.copyWith(
+            commentId:
+                null == commentId
+                    ? _value.commentId
+                    : commentId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            deleted:
+                null == deleted
+                    ? _value.deleted
+                    : deleted // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$DeleteCommentImplCopyWith<$Res>
+    implements $DeleteCommentCopyWith<$Res> {
+  factory _$$DeleteCommentImplCopyWith(
+    _$DeleteCommentImpl value,
+    $Res Function(_$DeleteCommentImpl) then,
+  ) = __$$DeleteCommentImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int commentId, bool deleted, String auth});
 }
 
+/// @nodoc
+class __$$DeleteCommentImplCopyWithImpl<$Res>
+    extends _$DeleteCommentCopyWithImpl<$Res, _$DeleteCommentImpl>
+    implements _$$DeleteCommentImplCopyWith<$Res> {
+  __$$DeleteCommentImplCopyWithImpl(
+    _$DeleteCommentImpl _value,
+    $Res Function(_$DeleteCommentImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [DeleteComment].
-extension DeleteCommentPatterns on DeleteComment {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _DeleteComment value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _DeleteComment() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _DeleteComment value)  $default,){
-final _that = this;
-switch (_that) {
-case _DeleteComment():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _DeleteComment value)?  $default,){
-final _that = this;
-switch (_that) {
-case _DeleteComment() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int commentId,  bool deleted,  String auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _DeleteComment() when $default != null:
-return $default(_that.commentId,_that.deleted,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int commentId,  bool deleted,  String auth)  $default,) {final _that = this;
-switch (_that) {
-case _DeleteComment():
-return $default(_that.commentId,_that.deleted,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int commentId,  bool deleted,  String auth)?  $default,) {final _that = this;
-switch (_that) {
-case _DeleteComment() when $default != null:
-return $default(_that.commentId,_that.deleted,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of DeleteComment
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? commentId = null,
+    Object? deleted = null,
+    Object? auth = null,
+  }) {
+    return _then(
+      _$DeleteCommentImpl(
+        commentId:
+            null == commentId
+                ? _value.commentId
+                : commentId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        deleted:
+            null == deleted
+                ? _value.deleted
+                : deleted // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _DeleteComment extends DeleteComment {
-  const _DeleteComment({required this.commentId, required this.deleted, required this.auth}): super._();
-  factory _DeleteComment.fromJson(Map<String, dynamic> json) => _$DeleteCommentFromJson(json);
+class _$DeleteCommentImpl extends _DeleteComment {
+  const _$DeleteCommentImpl({
+    required this.commentId,
+    required this.deleted,
+    required this.auth,
+  }) : super._();
 
-@override final  int commentId;
-@override final  bool deleted;
-@override final  String auth;
+  factory _$DeleteCommentImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DeleteCommentImplFromJson(json);
 
-/// Create a copy of DeleteComment
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$DeleteCommentCopyWith<_DeleteComment> get copyWith => __$DeleteCommentCopyWithImpl<_DeleteComment>(this, _$identity);
+  @override
+  final int commentId;
+  @override
+  final bool deleted;
+  @override
+  final String auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$DeleteCommentToJson(this, );
+  @override
+  String toString() {
+    return 'DeleteComment(commentId: $commentId, deleted: $deleted, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DeleteCommentImpl &&
+            (identical(other.commentId, commentId) ||
+                other.commentId == commentId) &&
+            (identical(other.deleted, deleted) || other.deleted == deleted) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, commentId, deleted, auth);
+
+  /// Create a copy of DeleteComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DeleteCommentImplCopyWith<_$DeleteCommentImpl> get copyWith =>
+      __$$DeleteCommentImplCopyWithImpl<_$DeleteCommentImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$DeleteCommentImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _DeleteComment&&(identical(other.commentId, commentId) || other.commentId == commentId)&&(identical(other.deleted, deleted) || other.deleted == deleted)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _DeleteComment extends DeleteComment {
+  const factory _DeleteComment({
+    required final int commentId,
+    required final bool deleted,
+    required final String auth,
+  }) = _$DeleteCommentImpl;
+  const _DeleteComment._() : super._();
+
+  factory _DeleteComment.fromJson(Map<String, dynamic> json) =
+      _$DeleteCommentImpl.fromJson;
+
+  @override
+  int get commentId;
+  @override
+  bool get deleted;
+  @override
+  String get auth;
+
+  /// Create a copy of DeleteComment
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$DeleteCommentImplCopyWith<_$DeleteCommentImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,commentId,deleted,auth);
-
-@override
-String toString() {
-  return 'DeleteComment(commentId: $commentId, deleted: $deleted, auth: $auth)';
+RemoveComment _$RemoveCommentFromJson(Map<String, dynamic> json) {
+  return _RemoveComment.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$DeleteCommentCopyWith<$Res> implements $DeleteCommentCopyWith<$Res> {
-  factory _$DeleteCommentCopyWith(_DeleteComment value, $Res Function(_DeleteComment) _then) = __$DeleteCommentCopyWithImpl;
-@override @useResult
-$Res call({
- int commentId, bool deleted, String auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$DeleteCommentCopyWithImpl<$Res>
-    implements _$DeleteCommentCopyWith<$Res> {
-  __$DeleteCommentCopyWithImpl(this._self, this._then);
-
-  final _DeleteComment _self;
-  final $Res Function(_DeleteComment) _then;
-
-/// Create a copy of DeleteComment
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? commentId = null,Object? deleted = null,Object? auth = null,}) {
-  return _then(_DeleteComment(
-commentId: null == commentId ? _self.commentId : commentId // ignore: cast_nullable_to_non_nullable
-as int,deleted: null == deleted ? _self.deleted : deleted // ignore: cast_nullable_to_non_nullable
-as bool,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$RemoveComment {
-
- dynamic get path; dynamic get httpMethod; int get commentId; bool get removed; String? get reason; String get auth;
-/// Create a copy of RemoveComment
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$RemoveCommentCopyWith<RemoveComment> get copyWith => _$RemoveCommentCopyWithImpl<RemoveComment>(this as RemoveComment, _$identity);
+  int get commentId => throw _privateConstructorUsedError;
+  bool get removed => throw _privateConstructorUsedError;
+  String? get reason => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
   /// Serializes this RemoveComment to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoveComment&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.commentId, commentId) || other.commentId == commentId)&&(identical(other.removed, removed) || other.removed == removed)&&(identical(other.reason, reason) || other.reason == reason)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),commentId,removed,reason,auth);
-
-@override
-String toString() {
-  return 'RemoveComment(path: $path, httpMethod: $httpMethod, commentId: $commentId, removed: $removed, reason: $reason, auth: $auth)';
-}
-
-
+  /// Create a copy of RemoveComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $RemoveCommentCopyWith<RemoveComment> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $RemoveCommentCopyWith<$Res>  {
-  factory $RemoveCommentCopyWith(RemoveComment value, $Res Function(RemoveComment) _then) = _$RemoveCommentCopyWithImpl;
-@useResult
-$Res call({
- int commentId, bool removed, String? reason, String auth
-});
-
-
-
-
+abstract class $RemoveCommentCopyWith<$Res> {
+  factory $RemoveCommentCopyWith(
+    RemoveComment value,
+    $Res Function(RemoveComment) then,
+  ) = _$RemoveCommentCopyWithImpl<$Res, RemoveComment>;
+  @useResult
+  $Res call({int commentId, bool removed, String? reason, String auth});
 }
+
 /// @nodoc
-class _$RemoveCommentCopyWithImpl<$Res>
+class _$RemoveCommentCopyWithImpl<$Res, $Val extends RemoveComment>
     implements $RemoveCommentCopyWith<$Res> {
-  _$RemoveCommentCopyWithImpl(this._self, this._then);
+  _$RemoveCommentCopyWithImpl(this._value, this._then);
 
-  final RemoveComment _self;
-  final $Res Function(RemoveComment) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of RemoveComment
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? commentId = null,Object? removed = null,Object? reason = freezed,Object? auth = null,}) {
-  return _then(_self.copyWith(
-commentId: null == commentId ? _self.commentId : commentId // ignore: cast_nullable_to_non_nullable
-as int,removed: null == removed ? _self.removed : removed // ignore: cast_nullable_to_non_nullable
-as bool,reason: freezed == reason ? _self.reason : reason // ignore: cast_nullable_to_non_nullable
-as String?,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of RemoveComment
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? commentId = null,
+    Object? removed = null,
+    Object? reason = freezed,
+    Object? auth = null,
+  }) {
+    return _then(
+      _value.copyWith(
+            commentId:
+                null == commentId
+                    ? _value.commentId
+                    : commentId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            removed:
+                null == removed
+                    ? _value.removed
+                    : removed // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            reason:
+                freezed == reason
+                    ? _value.reason
+                    : reason // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$RemoveCommentImplCopyWith<$Res>
+    implements $RemoveCommentCopyWith<$Res> {
+  factory _$$RemoveCommentImplCopyWith(
+    _$RemoveCommentImpl value,
+    $Res Function(_$RemoveCommentImpl) then,
+  ) = __$$RemoveCommentImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int commentId, bool removed, String? reason, String auth});
 }
 
+/// @nodoc
+class __$$RemoveCommentImplCopyWithImpl<$Res>
+    extends _$RemoveCommentCopyWithImpl<$Res, _$RemoveCommentImpl>
+    implements _$$RemoveCommentImplCopyWith<$Res> {
+  __$$RemoveCommentImplCopyWithImpl(
+    _$RemoveCommentImpl _value,
+    $Res Function(_$RemoveCommentImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [RemoveComment].
-extension RemoveCommentPatterns on RemoveComment {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _RemoveComment value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _RemoveComment() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _RemoveComment value)  $default,){
-final _that = this;
-switch (_that) {
-case _RemoveComment():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _RemoveComment value)?  $default,){
-final _that = this;
-switch (_that) {
-case _RemoveComment() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int commentId,  bool removed,  String? reason,  String auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _RemoveComment() when $default != null:
-return $default(_that.commentId,_that.removed,_that.reason,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int commentId,  bool removed,  String? reason,  String auth)  $default,) {final _that = this;
-switch (_that) {
-case _RemoveComment():
-return $default(_that.commentId,_that.removed,_that.reason,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int commentId,  bool removed,  String? reason,  String auth)?  $default,) {final _that = this;
-switch (_that) {
-case _RemoveComment() when $default != null:
-return $default(_that.commentId,_that.removed,_that.reason,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of RemoveComment
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? commentId = null,
+    Object? removed = null,
+    Object? reason = freezed,
+    Object? auth = null,
+  }) {
+    return _then(
+      _$RemoveCommentImpl(
+        commentId:
+            null == commentId
+                ? _value.commentId
+                : commentId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        removed:
+            null == removed
+                ? _value.removed
+                : removed // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        reason:
+            freezed == reason
+                ? _value.reason
+                : reason // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _RemoveComment extends RemoveComment {
-  const _RemoveComment({required this.commentId, required this.removed, this.reason, required this.auth}): super._();
-  factory _RemoveComment.fromJson(Map<String, dynamic> json) => _$RemoveCommentFromJson(json);
+class _$RemoveCommentImpl extends _RemoveComment {
+  const _$RemoveCommentImpl({
+    required this.commentId,
+    required this.removed,
+    this.reason,
+    required this.auth,
+  }) : super._();
 
-@override final  int commentId;
-@override final  bool removed;
-@override final  String? reason;
-@override final  String auth;
+  factory _$RemoveCommentImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RemoveCommentImplFromJson(json);
 
-/// Create a copy of RemoveComment
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$RemoveCommentCopyWith<_RemoveComment> get copyWith => __$RemoveCommentCopyWithImpl<_RemoveComment>(this, _$identity);
+  @override
+  final int commentId;
+  @override
+  final bool removed;
+  @override
+  final String? reason;
+  @override
+  final String auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$RemoveCommentToJson(this, );
+  @override
+  String toString() {
+    return 'RemoveComment(commentId: $commentId, removed: $removed, reason: $reason, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$RemoveCommentImpl &&
+            (identical(other.commentId, commentId) ||
+                other.commentId == commentId) &&
+            (identical(other.removed, removed) || other.removed == removed) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, commentId, removed, reason, auth);
+
+  /// Create a copy of RemoveComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$RemoveCommentImplCopyWith<_$RemoveCommentImpl> get copyWith =>
+      __$$RemoveCommentImplCopyWithImpl<_$RemoveCommentImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$RemoveCommentImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RemoveComment&&(identical(other.commentId, commentId) || other.commentId == commentId)&&(identical(other.removed, removed) || other.removed == removed)&&(identical(other.reason, reason) || other.reason == reason)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _RemoveComment extends RemoveComment {
+  const factory _RemoveComment({
+    required final int commentId,
+    required final bool removed,
+    final String? reason,
+    required final String auth,
+  }) = _$RemoveCommentImpl;
+  const _RemoveComment._() : super._();
+
+  factory _RemoveComment.fromJson(Map<String, dynamic> json) =
+      _$RemoveCommentImpl.fromJson;
+
+  @override
+  int get commentId;
+  @override
+  bool get removed;
+  @override
+  String? get reason;
+  @override
+  String get auth;
+
+  /// Create a copy of RemoveComment
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$RemoveCommentImplCopyWith<_$RemoveCommentImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,commentId,removed,reason,auth);
-
-@override
-String toString() {
-  return 'RemoveComment(commentId: $commentId, removed: $removed, reason: $reason, auth: $auth)';
+MarkCommentAsRead _$MarkCommentAsReadFromJson(Map<String, dynamic> json) {
+  return _MarkCommentAsRead.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$RemoveCommentCopyWith<$Res> implements $RemoveCommentCopyWith<$Res> {
-  factory _$RemoveCommentCopyWith(_RemoveComment value, $Res Function(_RemoveComment) _then) = __$RemoveCommentCopyWithImpl;
-@override @useResult
-$Res call({
- int commentId, bool removed, String? reason, String auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$RemoveCommentCopyWithImpl<$Res>
-    implements _$RemoveCommentCopyWith<$Res> {
-  __$RemoveCommentCopyWithImpl(this._self, this._then);
-
-  final _RemoveComment _self;
-  final $Res Function(_RemoveComment) _then;
-
-/// Create a copy of RemoveComment
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? commentId = null,Object? removed = null,Object? reason = freezed,Object? auth = null,}) {
-  return _then(_RemoveComment(
-commentId: null == commentId ? _self.commentId : commentId // ignore: cast_nullable_to_non_nullable
-as int,removed: null == removed ? _self.removed : removed // ignore: cast_nullable_to_non_nullable
-as bool,reason: freezed == reason ? _self.reason : reason // ignore: cast_nullable_to_non_nullable
-as String?,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$MarkCommentAsRead {
-
- dynamic get path; dynamic get httpMethod; int get CommentReplyId; bool get read; String get auth;
-/// Create a copy of MarkCommentAsRead
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$MarkCommentAsReadCopyWith<MarkCommentAsRead> get copyWith => _$MarkCommentAsReadCopyWithImpl<MarkCommentAsRead>(this as MarkCommentAsRead, _$identity);
+  int get CommentReplyId => throw _privateConstructorUsedError;
+  bool get read => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
   /// Serializes this MarkCommentAsRead to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is MarkCommentAsRead&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.CommentReplyId, CommentReplyId) || other.CommentReplyId == CommentReplyId)&&(identical(other.read, read) || other.read == read)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),CommentReplyId,read,auth);
-
-@override
-String toString() {
-  return 'MarkCommentAsRead(path: $path, httpMethod: $httpMethod, CommentReplyId: $CommentReplyId, read: $read, auth: $auth)';
-}
-
-
+  /// Create a copy of MarkCommentAsRead
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $MarkCommentAsReadCopyWith<MarkCommentAsRead> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $MarkCommentAsReadCopyWith<$Res>  {
-  factory $MarkCommentAsReadCopyWith(MarkCommentAsRead value, $Res Function(MarkCommentAsRead) _then) = _$MarkCommentAsReadCopyWithImpl;
-@useResult
-$Res call({
- int CommentReplyId, bool read, String auth
-});
-
-
-
-
+abstract class $MarkCommentAsReadCopyWith<$Res> {
+  factory $MarkCommentAsReadCopyWith(
+    MarkCommentAsRead value,
+    $Res Function(MarkCommentAsRead) then,
+  ) = _$MarkCommentAsReadCopyWithImpl<$Res, MarkCommentAsRead>;
+  @useResult
+  $Res call({int CommentReplyId, bool read, String auth});
 }
+
 /// @nodoc
-class _$MarkCommentAsReadCopyWithImpl<$Res>
+class _$MarkCommentAsReadCopyWithImpl<$Res, $Val extends MarkCommentAsRead>
     implements $MarkCommentAsReadCopyWith<$Res> {
-  _$MarkCommentAsReadCopyWithImpl(this._self, this._then);
+  _$MarkCommentAsReadCopyWithImpl(this._value, this._then);
 
-  final MarkCommentAsRead _self;
-  final $Res Function(MarkCommentAsRead) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of MarkCommentAsRead
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? CommentReplyId = null,Object? read = null,Object? auth = null,}) {
-  return _then(_self.copyWith(
-CommentReplyId: null == CommentReplyId ? _self.CommentReplyId : CommentReplyId // ignore: cast_nullable_to_non_nullable
-as int,read: null == read ? _self.read : read // ignore: cast_nullable_to_non_nullable
-as bool,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of MarkCommentAsRead
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? CommentReplyId = null,
+    Object? read = null,
+    Object? auth = null,
+  }) {
+    return _then(
+      _value.copyWith(
+            CommentReplyId:
+                null == CommentReplyId
+                    ? _value.CommentReplyId
+                    : CommentReplyId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            read:
+                null == read
+                    ? _value.read
+                    : read // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$MarkCommentAsReadImplCopyWith<$Res>
+    implements $MarkCommentAsReadCopyWith<$Res> {
+  factory _$$MarkCommentAsReadImplCopyWith(
+    _$MarkCommentAsReadImpl value,
+    $Res Function(_$MarkCommentAsReadImpl) then,
+  ) = __$$MarkCommentAsReadImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int CommentReplyId, bool read, String auth});
 }
 
+/// @nodoc
+class __$$MarkCommentAsReadImplCopyWithImpl<$Res>
+    extends _$MarkCommentAsReadCopyWithImpl<$Res, _$MarkCommentAsReadImpl>
+    implements _$$MarkCommentAsReadImplCopyWith<$Res> {
+  __$$MarkCommentAsReadImplCopyWithImpl(
+    _$MarkCommentAsReadImpl _value,
+    $Res Function(_$MarkCommentAsReadImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [MarkCommentAsRead].
-extension MarkCommentAsReadPatterns on MarkCommentAsRead {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _MarkCommentAsRead value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _MarkCommentAsRead() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _MarkCommentAsRead value)  $default,){
-final _that = this;
-switch (_that) {
-case _MarkCommentAsRead():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _MarkCommentAsRead value)?  $default,){
-final _that = this;
-switch (_that) {
-case _MarkCommentAsRead() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int CommentReplyId,  bool read,  String auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _MarkCommentAsRead() when $default != null:
-return $default(_that.CommentReplyId,_that.read,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int CommentReplyId,  bool read,  String auth)  $default,) {final _that = this;
-switch (_that) {
-case _MarkCommentAsRead():
-return $default(_that.CommentReplyId,_that.read,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int CommentReplyId,  bool read,  String auth)?  $default,) {final _that = this;
-switch (_that) {
-case _MarkCommentAsRead() when $default != null:
-return $default(_that.CommentReplyId,_that.read,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of MarkCommentAsRead
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? CommentReplyId = null,
+    Object? read = null,
+    Object? auth = null,
+  }) {
+    return _then(
+      _$MarkCommentAsReadImpl(
+        CommentReplyId:
+            null == CommentReplyId
+                ? _value.CommentReplyId
+                : CommentReplyId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        read:
+            null == read
+                ? _value.read
+                : read // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _MarkCommentAsRead extends MarkCommentAsRead {
-  const _MarkCommentAsRead({required this.CommentReplyId, required this.read, required this.auth}): super._();
-  factory _MarkCommentAsRead.fromJson(Map<String, dynamic> json) => _$MarkCommentAsReadFromJson(json);
+class _$MarkCommentAsReadImpl extends _MarkCommentAsRead {
+  const _$MarkCommentAsReadImpl({
+    required this.CommentReplyId,
+    required this.read,
+    required this.auth,
+  }) : super._();
 
-@override final  int CommentReplyId;
-@override final  bool read;
-@override final  String auth;
+  factory _$MarkCommentAsReadImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MarkCommentAsReadImplFromJson(json);
 
-/// Create a copy of MarkCommentAsRead
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$MarkCommentAsReadCopyWith<_MarkCommentAsRead> get copyWith => __$MarkCommentAsReadCopyWithImpl<_MarkCommentAsRead>(this, _$identity);
+  @override
+  final int CommentReplyId;
+  @override
+  final bool read;
+  @override
+  final String auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$MarkCommentAsReadToJson(this, );
+  @override
+  String toString() {
+    return 'MarkCommentAsRead(CommentReplyId: $CommentReplyId, read: $read, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$MarkCommentAsReadImpl &&
+            (identical(other.CommentReplyId, CommentReplyId) ||
+                other.CommentReplyId == CommentReplyId) &&
+            (identical(other.read, read) || other.read == read) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, CommentReplyId, read, auth);
+
+  /// Create a copy of MarkCommentAsRead
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$MarkCommentAsReadImplCopyWith<_$MarkCommentAsReadImpl> get copyWith =>
+      __$$MarkCommentAsReadImplCopyWithImpl<_$MarkCommentAsReadImpl>(
+        this,
+        _$identity,
+      );
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$MarkCommentAsReadImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _MarkCommentAsRead&&(identical(other.CommentReplyId, CommentReplyId) || other.CommentReplyId == CommentReplyId)&&(identical(other.read, read) || other.read == read)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _MarkCommentAsRead extends MarkCommentAsRead {
+  const factory _MarkCommentAsRead({
+    required final int CommentReplyId,
+    required final bool read,
+    required final String auth,
+  }) = _$MarkCommentAsReadImpl;
+  const _MarkCommentAsRead._() : super._();
+
+  factory _MarkCommentAsRead.fromJson(Map<String, dynamic> json) =
+      _$MarkCommentAsReadImpl.fromJson;
+
+  @override
+  int get CommentReplyId;
+  @override
+  bool get read;
+  @override
+  String get auth;
+
+  /// Create a copy of MarkCommentAsRead
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$MarkCommentAsReadImplCopyWith<_$MarkCommentAsReadImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,CommentReplyId,read,auth);
-
-@override
-String toString() {
-  return 'MarkCommentAsRead(CommentReplyId: $CommentReplyId, read: $read, auth: $auth)';
+SaveComment _$SaveCommentFromJson(Map<String, dynamic> json) {
+  return _SaveComment.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$MarkCommentAsReadCopyWith<$Res> implements $MarkCommentAsReadCopyWith<$Res> {
-  factory _$MarkCommentAsReadCopyWith(_MarkCommentAsRead value, $Res Function(_MarkCommentAsRead) _then) = __$MarkCommentAsReadCopyWithImpl;
-@override @useResult
-$Res call({
- int CommentReplyId, bool read, String auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$MarkCommentAsReadCopyWithImpl<$Res>
-    implements _$MarkCommentAsReadCopyWith<$Res> {
-  __$MarkCommentAsReadCopyWithImpl(this._self, this._then);
-
-  final _MarkCommentAsRead _self;
-  final $Res Function(_MarkCommentAsRead) _then;
-
-/// Create a copy of MarkCommentAsRead
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? CommentReplyId = null,Object? read = null,Object? auth = null,}) {
-  return _then(_MarkCommentAsRead(
-CommentReplyId: null == CommentReplyId ? _self.CommentReplyId : CommentReplyId // ignore: cast_nullable_to_non_nullable
-as int,read: null == read ? _self.read : read // ignore: cast_nullable_to_non_nullable
-as bool,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$SaveComment {
-
- dynamic get path; dynamic get httpMethod; int get commentId; bool get save; String get auth;
-/// Create a copy of SaveComment
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$SaveCommentCopyWith<SaveComment> get copyWith => _$SaveCommentCopyWithImpl<SaveComment>(this as SaveComment, _$identity);
+  int get commentId => throw _privateConstructorUsedError;
+  bool get save => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
   /// Serializes this SaveComment to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is SaveComment&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.commentId, commentId) || other.commentId == commentId)&&(identical(other.save, save) || other.save == save)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),commentId,save,auth);
-
-@override
-String toString() {
-  return 'SaveComment(path: $path, httpMethod: $httpMethod, commentId: $commentId, save: $save, auth: $auth)';
-}
-
-
+  /// Create a copy of SaveComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $SaveCommentCopyWith<SaveComment> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $SaveCommentCopyWith<$Res>  {
-  factory $SaveCommentCopyWith(SaveComment value, $Res Function(SaveComment) _then) = _$SaveCommentCopyWithImpl;
-@useResult
-$Res call({
- int commentId, bool save, String auth
-});
-
-
-
-
+abstract class $SaveCommentCopyWith<$Res> {
+  factory $SaveCommentCopyWith(
+    SaveComment value,
+    $Res Function(SaveComment) then,
+  ) = _$SaveCommentCopyWithImpl<$Res, SaveComment>;
+  @useResult
+  $Res call({int commentId, bool save, String auth});
 }
+
 /// @nodoc
-class _$SaveCommentCopyWithImpl<$Res>
+class _$SaveCommentCopyWithImpl<$Res, $Val extends SaveComment>
     implements $SaveCommentCopyWith<$Res> {
-  _$SaveCommentCopyWithImpl(this._self, this._then);
+  _$SaveCommentCopyWithImpl(this._value, this._then);
 
-  final SaveComment _self;
-  final $Res Function(SaveComment) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of SaveComment
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? commentId = null,Object? save = null,Object? auth = null,}) {
-  return _then(_self.copyWith(
-commentId: null == commentId ? _self.commentId : commentId // ignore: cast_nullable_to_non_nullable
-as int,save: null == save ? _self.save : save // ignore: cast_nullable_to_non_nullable
-as bool,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of SaveComment
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? commentId = null,
+    Object? save = null,
+    Object? auth = null,
+  }) {
+    return _then(
+      _value.copyWith(
+            commentId:
+                null == commentId
+                    ? _value.commentId
+                    : commentId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            save:
+                null == save
+                    ? _value.save
+                    : save // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$SaveCommentImplCopyWith<$Res>
+    implements $SaveCommentCopyWith<$Res> {
+  factory _$$SaveCommentImplCopyWith(
+    _$SaveCommentImpl value,
+    $Res Function(_$SaveCommentImpl) then,
+  ) = __$$SaveCommentImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int commentId, bool save, String auth});
 }
 
+/// @nodoc
+class __$$SaveCommentImplCopyWithImpl<$Res>
+    extends _$SaveCommentCopyWithImpl<$Res, _$SaveCommentImpl>
+    implements _$$SaveCommentImplCopyWith<$Res> {
+  __$$SaveCommentImplCopyWithImpl(
+    _$SaveCommentImpl _value,
+    $Res Function(_$SaveCommentImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [SaveComment].
-extension SaveCommentPatterns on SaveComment {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _SaveComment value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _SaveComment() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _SaveComment value)  $default,){
-final _that = this;
-switch (_that) {
-case _SaveComment():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _SaveComment value)?  $default,){
-final _that = this;
-switch (_that) {
-case _SaveComment() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int commentId,  bool save,  String auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _SaveComment() when $default != null:
-return $default(_that.commentId,_that.save,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int commentId,  bool save,  String auth)  $default,) {final _that = this;
-switch (_that) {
-case _SaveComment():
-return $default(_that.commentId,_that.save,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int commentId,  bool save,  String auth)?  $default,) {final _that = this;
-switch (_that) {
-case _SaveComment() when $default != null:
-return $default(_that.commentId,_that.save,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of SaveComment
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? commentId = null,
+    Object? save = null,
+    Object? auth = null,
+  }) {
+    return _then(
+      _$SaveCommentImpl(
+        commentId:
+            null == commentId
+                ? _value.commentId
+                : commentId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        save:
+            null == save
+                ? _value.save
+                : save // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _SaveComment extends SaveComment {
-  const _SaveComment({required this.commentId, required this.save, required this.auth}): super._();
-  factory _SaveComment.fromJson(Map<String, dynamic> json) => _$SaveCommentFromJson(json);
+class _$SaveCommentImpl extends _SaveComment {
+  const _$SaveCommentImpl({
+    required this.commentId,
+    required this.save,
+    required this.auth,
+  }) : super._();
 
-@override final  int commentId;
-@override final  bool save;
-@override final  String auth;
+  factory _$SaveCommentImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SaveCommentImplFromJson(json);
 
-/// Create a copy of SaveComment
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$SaveCommentCopyWith<_SaveComment> get copyWith => __$SaveCommentCopyWithImpl<_SaveComment>(this, _$identity);
+  @override
+  final int commentId;
+  @override
+  final bool save;
+  @override
+  final String auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$SaveCommentToJson(this, );
+  @override
+  String toString() {
+    return 'SaveComment(commentId: $commentId, save: $save, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SaveCommentImpl &&
+            (identical(other.commentId, commentId) ||
+                other.commentId == commentId) &&
+            (identical(other.save, save) || other.save == save) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, commentId, save, auth);
+
+  /// Create a copy of SaveComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SaveCommentImplCopyWith<_$SaveCommentImpl> get copyWith =>
+      __$$SaveCommentImplCopyWithImpl<_$SaveCommentImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$SaveCommentImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _SaveComment&&(identical(other.commentId, commentId) || other.commentId == commentId)&&(identical(other.save, save) || other.save == save)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _SaveComment extends SaveComment {
+  const factory _SaveComment({
+    required final int commentId,
+    required final bool save,
+    required final String auth,
+  }) = _$SaveCommentImpl;
+  const _SaveComment._() : super._();
+
+  factory _SaveComment.fromJson(Map<String, dynamic> json) =
+      _$SaveCommentImpl.fromJson;
+
+  @override
+  int get commentId;
+  @override
+  bool get save;
+  @override
+  String get auth;
+
+  /// Create a copy of SaveComment
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SaveCommentImplCopyWith<_$SaveCommentImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,commentId,save,auth);
-
-@override
-String toString() {
-  return 'SaveComment(commentId: $commentId, save: $save, auth: $auth)';
+CreateCommentLike _$CreateCommentLikeFromJson(Map<String, dynamic> json) {
+  return _CreateCommentLike.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$SaveCommentCopyWith<$Res> implements $SaveCommentCopyWith<$Res> {
-  factory _$SaveCommentCopyWith(_SaveComment value, $Res Function(_SaveComment) _then) = __$SaveCommentCopyWithImpl;
-@override @useResult
-$Res call({
- int commentId, bool save, String auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$SaveCommentCopyWithImpl<$Res>
-    implements _$SaveCommentCopyWith<$Res> {
-  __$SaveCommentCopyWithImpl(this._self, this._then);
-
-  final _SaveComment _self;
-  final $Res Function(_SaveComment) _then;
-
-/// Create a copy of SaveComment
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? commentId = null,Object? save = null,Object? auth = null,}) {
-  return _then(_SaveComment(
-commentId: null == commentId ? _self.commentId : commentId // ignore: cast_nullable_to_non_nullable
-as int,save: null == save ? _self.save : save // ignore: cast_nullable_to_non_nullable
-as bool,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$CreateCommentLike {
-
- dynamic get path; dynamic get httpMethod; int get commentId; num get score; String get auth;
-/// Create a copy of CreateCommentLike
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$CreateCommentLikeCopyWith<CreateCommentLike> get copyWith => _$CreateCommentLikeCopyWithImpl<CreateCommentLike>(this as CreateCommentLike, _$identity);
+  int get commentId => throw _privateConstructorUsedError;
+  num get score => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
   /// Serializes this CreateCommentLike to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is CreateCommentLike&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.commentId, commentId) || other.commentId == commentId)&&(identical(other.score, score) || other.score == score)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),commentId,score,auth);
-
-@override
-String toString() {
-  return 'CreateCommentLike(path: $path, httpMethod: $httpMethod, commentId: $commentId, score: $score, auth: $auth)';
-}
-
-
+  /// Create a copy of CreateCommentLike
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $CreateCommentLikeCopyWith<CreateCommentLike> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $CreateCommentLikeCopyWith<$Res>  {
-  factory $CreateCommentLikeCopyWith(CreateCommentLike value, $Res Function(CreateCommentLike) _then) = _$CreateCommentLikeCopyWithImpl;
-@useResult
-$Res call({
- int commentId, num score, String auth
-});
-
-
-
-
+abstract class $CreateCommentLikeCopyWith<$Res> {
+  factory $CreateCommentLikeCopyWith(
+    CreateCommentLike value,
+    $Res Function(CreateCommentLike) then,
+  ) = _$CreateCommentLikeCopyWithImpl<$Res, CreateCommentLike>;
+  @useResult
+  $Res call({int commentId, num score, String auth});
 }
+
 /// @nodoc
-class _$CreateCommentLikeCopyWithImpl<$Res>
+class _$CreateCommentLikeCopyWithImpl<$Res, $Val extends CreateCommentLike>
     implements $CreateCommentLikeCopyWith<$Res> {
-  _$CreateCommentLikeCopyWithImpl(this._self, this._then);
+  _$CreateCommentLikeCopyWithImpl(this._value, this._then);
 
-  final CreateCommentLike _self;
-  final $Res Function(CreateCommentLike) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of CreateCommentLike
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? commentId = null,Object? score = null,Object? auth = null,}) {
-  return _then(_self.copyWith(
-commentId: null == commentId ? _self.commentId : commentId // ignore: cast_nullable_to_non_nullable
-as int,score: null == score ? _self.score : score // ignore: cast_nullable_to_non_nullable
-as num,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of CreateCommentLike
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? commentId = null,
+    Object? score = null,
+    Object? auth = null,
+  }) {
+    return _then(
+      _value.copyWith(
+            commentId:
+                null == commentId
+                    ? _value.commentId
+                    : commentId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            score:
+                null == score
+                    ? _value.score
+                    : score // ignore: cast_nullable_to_non_nullable
+                        as num,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$CreateCommentLikeImplCopyWith<$Res>
+    implements $CreateCommentLikeCopyWith<$Res> {
+  factory _$$CreateCommentLikeImplCopyWith(
+    _$CreateCommentLikeImpl value,
+    $Res Function(_$CreateCommentLikeImpl) then,
+  ) = __$$CreateCommentLikeImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int commentId, num score, String auth});
 }
 
+/// @nodoc
+class __$$CreateCommentLikeImplCopyWithImpl<$Res>
+    extends _$CreateCommentLikeCopyWithImpl<$Res, _$CreateCommentLikeImpl>
+    implements _$$CreateCommentLikeImplCopyWith<$Res> {
+  __$$CreateCommentLikeImplCopyWithImpl(
+    _$CreateCommentLikeImpl _value,
+    $Res Function(_$CreateCommentLikeImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [CreateCommentLike].
-extension CreateCommentLikePatterns on CreateCommentLike {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _CreateCommentLike value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _CreateCommentLike() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _CreateCommentLike value)  $default,){
-final _that = this;
-switch (_that) {
-case _CreateCommentLike():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _CreateCommentLike value)?  $default,){
-final _that = this;
-switch (_that) {
-case _CreateCommentLike() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int commentId,  num score,  String auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _CreateCommentLike() when $default != null:
-return $default(_that.commentId,_that.score,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int commentId,  num score,  String auth)  $default,) {final _that = this;
-switch (_that) {
-case _CreateCommentLike():
-return $default(_that.commentId,_that.score,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int commentId,  num score,  String auth)?  $default,) {final _that = this;
-switch (_that) {
-case _CreateCommentLike() when $default != null:
-return $default(_that.commentId,_that.score,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of CreateCommentLike
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? commentId = null,
+    Object? score = null,
+    Object? auth = null,
+  }) {
+    return _then(
+      _$CreateCommentLikeImpl(
+        commentId:
+            null == commentId
+                ? _value.commentId
+                : commentId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        score:
+            null == score
+                ? _value.score
+                : score // ignore: cast_nullable_to_non_nullable
+                    as num,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _CreateCommentLike extends CreateCommentLike {
-  const _CreateCommentLike({required this.commentId, required this.score, required this.auth}): super._();
-  factory _CreateCommentLike.fromJson(Map<String, dynamic> json) => _$CreateCommentLikeFromJson(json);
+class _$CreateCommentLikeImpl extends _CreateCommentLike {
+  const _$CreateCommentLikeImpl({
+    required this.commentId,
+    required this.score,
+    required this.auth,
+  }) : super._();
 
-@override final  int commentId;
-@override final  num score;
-@override final  String auth;
+  factory _$CreateCommentLikeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CreateCommentLikeImplFromJson(json);
 
-/// Create a copy of CreateCommentLike
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$CreateCommentLikeCopyWith<_CreateCommentLike> get copyWith => __$CreateCommentLikeCopyWithImpl<_CreateCommentLike>(this, _$identity);
+  @override
+  final int commentId;
+  @override
+  final num score;
+  @override
+  final String auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$CreateCommentLikeToJson(this, );
+  @override
+  String toString() {
+    return 'CreateCommentLike(commentId: $commentId, score: $score, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CreateCommentLikeImpl &&
+            (identical(other.commentId, commentId) ||
+                other.commentId == commentId) &&
+            (identical(other.score, score) || other.score == score) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, commentId, score, auth);
+
+  /// Create a copy of CreateCommentLike
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CreateCommentLikeImplCopyWith<_$CreateCommentLikeImpl> get copyWith =>
+      __$$CreateCommentLikeImplCopyWithImpl<_$CreateCommentLikeImpl>(
+        this,
+        _$identity,
+      );
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$CreateCommentLikeImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CreateCommentLike&&(identical(other.commentId, commentId) || other.commentId == commentId)&&(identical(other.score, score) || other.score == score)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _CreateCommentLike extends CreateCommentLike {
+  const factory _CreateCommentLike({
+    required final int commentId,
+    required final num score,
+    required final String auth,
+  }) = _$CreateCommentLikeImpl;
+  const _CreateCommentLike._() : super._();
+
+  factory _CreateCommentLike.fromJson(Map<String, dynamic> json) =
+      _$CreateCommentLikeImpl.fromJson;
+
+  @override
+  int get commentId;
+  @override
+  num get score;
+  @override
+  String get auth;
+
+  /// Create a copy of CreateCommentLike
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$CreateCommentLikeImplCopyWith<_$CreateCommentLikeImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,commentId,score,auth);
-
-@override
-String toString() {
-  return 'CreateCommentLike(commentId: $commentId, score: $score, auth: $auth)';
+GetComment _$GetCommentFromJson(Map<String, dynamic> json) {
+  return _GetComment.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$CreateCommentLikeCopyWith<$Res> implements $CreateCommentLikeCopyWith<$Res> {
-  factory _$CreateCommentLikeCopyWith(_CreateCommentLike value, $Res Function(_CreateCommentLike) _then) = __$CreateCommentLikeCopyWithImpl;
-@override @useResult
-$Res call({
- int commentId, num score, String auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$CreateCommentLikeCopyWithImpl<$Res>
-    implements _$CreateCommentLikeCopyWith<$Res> {
-  __$CreateCommentLikeCopyWithImpl(this._self, this._then);
-
-  final _CreateCommentLike _self;
-  final $Res Function(_CreateCommentLike) _then;
-
-/// Create a copy of CreateCommentLike
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? commentId = null,Object? score = null,Object? auth = null,}) {
-  return _then(_CreateCommentLike(
-commentId: null == commentId ? _self.commentId : commentId // ignore: cast_nullable_to_non_nullable
-as int,score: null == score ? _self.score : score // ignore: cast_nullable_to_non_nullable
-as num,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$GetComment {
-
- dynamic get path; dynamic get httpMethod; int get id; String? get auth;
-/// Create a copy of GetComment
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$GetCommentCopyWith<GetComment> get copyWith => _$GetCommentCopyWithImpl<GetComment>(this as GetComment, _$identity);
+  int get id => throw _privateConstructorUsedError;
+  String? get auth => throw _privateConstructorUsedError;
 
   /// Serializes this GetComment to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is GetComment&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.id, id) || other.id == id)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),id,auth);
-
-@override
-String toString() {
-  return 'GetComment(path: $path, httpMethod: $httpMethod, id: $id, auth: $auth)';
-}
-
-
+  /// Create a copy of GetComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $GetCommentCopyWith<GetComment> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $GetCommentCopyWith<$Res>  {
-  factory $GetCommentCopyWith(GetComment value, $Res Function(GetComment) _then) = _$GetCommentCopyWithImpl;
-@useResult
-$Res call({
- int id, String? auth
-});
-
-
-
-
+abstract class $GetCommentCopyWith<$Res> {
+  factory $GetCommentCopyWith(
+    GetComment value,
+    $Res Function(GetComment) then,
+  ) = _$GetCommentCopyWithImpl<$Res, GetComment>;
+  @useResult
+  $Res call({int id, String? auth});
 }
+
 /// @nodoc
-class _$GetCommentCopyWithImpl<$Res>
+class _$GetCommentCopyWithImpl<$Res, $Val extends GetComment>
     implements $GetCommentCopyWith<$Res> {
-  _$GetCommentCopyWithImpl(this._self, this._then);
+  _$GetCommentCopyWithImpl(this._value, this._then);
 
-  final GetComment _self;
-  final $Res Function(GetComment) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of GetComment
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? auth = freezed,}) {
-  return _then(_self.copyWith(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as int,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
+  /// Create a copy of GetComment
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? id = null, Object? auth = freezed}) {
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as int,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$GetCommentImplCopyWith<$Res>
+    implements $GetCommentCopyWith<$Res> {
+  factory _$$GetCommentImplCopyWith(
+    _$GetCommentImpl value,
+    $Res Function(_$GetCommentImpl) then,
+  ) = __$$GetCommentImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int id, String? auth});
 }
 
+/// @nodoc
+class __$$GetCommentImplCopyWithImpl<$Res>
+    extends _$GetCommentCopyWithImpl<$Res, _$GetCommentImpl>
+    implements _$$GetCommentImplCopyWith<$Res> {
+  __$$GetCommentImplCopyWithImpl(
+    _$GetCommentImpl _value,
+    $Res Function(_$GetCommentImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [GetComment].
-extension GetCommentPatterns on GetComment {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _GetComment value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _GetComment() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _GetComment value)  $default,){
-final _that = this;
-switch (_that) {
-case _GetComment():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _GetComment value)?  $default,){
-final _that = this;
-switch (_that) {
-case _GetComment() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int id,  String? auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _GetComment() when $default != null:
-return $default(_that.id,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int id,  String? auth)  $default,) {final _that = this;
-switch (_that) {
-case _GetComment():
-return $default(_that.id,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int id,  String? auth)?  $default,) {final _that = this;
-switch (_that) {
-case _GetComment() when $default != null:
-return $default(_that.id,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of GetComment
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? id = null, Object? auth = freezed}) {
+    return _then(
+      _$GetCommentImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as int,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _GetComment extends GetComment {
-  const _GetComment({required this.id, this.auth}): super._();
-  factory _GetComment.fromJson(Map<String, dynamic> json) => _$GetCommentFromJson(json);
+class _$GetCommentImpl extends _GetComment {
+  const _$GetCommentImpl({required this.id, this.auth}) : super._();
 
-@override final  int id;
-@override final  String? auth;
+  factory _$GetCommentImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetCommentImplFromJson(json);
 
-/// Create a copy of GetComment
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$GetCommentCopyWith<_GetComment> get copyWith => __$GetCommentCopyWithImpl<_GetComment>(this, _$identity);
+  @override
+  final int id;
+  @override
+  final String? auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$GetCommentToJson(this, );
+  @override
+  String toString() {
+    return 'GetComment(id: $id, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetCommentImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, id, auth);
+
+  /// Create a copy of GetComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetCommentImplCopyWith<_$GetCommentImpl> get copyWith =>
+      __$$GetCommentImplCopyWithImpl<_$GetCommentImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$GetCommentImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _GetComment&&(identical(other.id, id) || other.id == id)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _GetComment extends GetComment {
+  const factory _GetComment({required final int id, final String? auth}) =
+      _$GetCommentImpl;
+  const _GetComment._() : super._();
+
+  factory _GetComment.fromJson(Map<String, dynamic> json) =
+      _$GetCommentImpl.fromJson;
+
+  @override
+  int get id;
+  @override
+  String? get auth;
+
+  /// Create a copy of GetComment
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetCommentImplCopyWith<_$GetCommentImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,id,auth);
-
-@override
-String toString() {
-  return 'GetComment(id: $id, auth: $auth)';
+GetComments _$GetCommentsFromJson(Map<String, dynamic> json) {
+  return _GetComments.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$GetCommentCopyWith<$Res> implements $GetCommentCopyWith<$Res> {
-  factory _$GetCommentCopyWith(_GetComment value, $Res Function(_GetComment) _then) = __$GetCommentCopyWithImpl;
-@override @useResult
-$Res call({
- int id, String? auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$GetCommentCopyWithImpl<$Res>
-    implements _$GetCommentCopyWith<$Res> {
-  __$GetCommentCopyWithImpl(this._self, this._then);
-
-  final _GetComment _self;
-  final $Res Function(_GetComment) _then;
-
-/// Create a copy of GetComment
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? auth = freezed,}) {
-  return _then(_GetComment(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as int,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$GetComments {
-
- dynamic get path; dynamic get httpMethod;@JsonKey(name: 'type_') ListingType? get type;// v0.18.0
- CommentSortType? get sort;// v0.18.0
- int? get maxDepth;// v0.18.0
- int? get page;// v0.18.0
- int? get limit;// v0.18.0
- int? get communityId;// v0.18.0
- String? get communityName;// v0.18.0
- int? get postId;// v0.18.0
- int? get parentId;// v0.18.0
- bool? get savedOnly;// v0.18.0
- bool? get likedOnly;// v0.19.0 (optional)
- bool? get dislikedOnly;// v0.19.0 (optional)
- String? get auth;
-/// Create a copy of GetComments
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$GetCommentsCopyWith<GetComments> get copyWith => _$GetCommentsCopyWithImpl<GetComments>(this as GetComments, _$identity);
+  @JsonKey(name: 'type_')
+  ListingType? get type => throw _privateConstructorUsedError; // v0.18.0
+  CommentSortType? get sort => throw _privateConstructorUsedError; // v0.18.0
+  int? get maxDepth => throw _privateConstructorUsedError; // v0.18.0
+  int? get page => throw _privateConstructorUsedError; // v0.18.0
+  int? get limit => throw _privateConstructorUsedError; // v0.18.0
+  int? get communityId => throw _privateConstructorUsedError; // v0.18.0
+  String? get communityName => throw _privateConstructorUsedError; // v0.18.0
+  int? get postId => throw _privateConstructorUsedError; // v0.18.0
+  int? get parentId => throw _privateConstructorUsedError; // v0.18.0
+  bool? get savedOnly => throw _privateConstructorUsedError; // v0.18.0
+  bool? get likedOnly =>
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
+  bool? get dislikedOnly =>
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
+  String? get auth => throw _privateConstructorUsedError;
 
   /// Serializes this GetComments to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is GetComments&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.type, type) || other.type == type)&&(identical(other.sort, sort) || other.sort == sort)&&(identical(other.maxDepth, maxDepth) || other.maxDepth == maxDepth)&&(identical(other.page, page) || other.page == page)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.communityId, communityId) || other.communityId == communityId)&&(identical(other.communityName, communityName) || other.communityName == communityName)&&(identical(other.postId, postId) || other.postId == postId)&&(identical(other.parentId, parentId) || other.parentId == parentId)&&(identical(other.savedOnly, savedOnly) || other.savedOnly == savedOnly)&&(identical(other.likedOnly, likedOnly) || other.likedOnly == likedOnly)&&(identical(other.dislikedOnly, dislikedOnly) || other.dislikedOnly == dislikedOnly)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),type,sort,maxDepth,page,limit,communityId,communityName,postId,parentId,savedOnly,likedOnly,dislikedOnly,auth);
-
-@override
-String toString() {
-  return 'GetComments(path: $path, httpMethod: $httpMethod, type: $type, sort: $sort, maxDepth: $maxDepth, page: $page, limit: $limit, communityId: $communityId, communityName: $communityName, postId: $postId, parentId: $parentId, savedOnly: $savedOnly, likedOnly: $likedOnly, dislikedOnly: $dislikedOnly, auth: $auth)';
-}
-
-
+  /// Create a copy of GetComments
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $GetCommentsCopyWith<GetComments> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $GetCommentsCopyWith<$Res>  {
-  factory $GetCommentsCopyWith(GetComments value, $Res Function(GetComments) _then) = _$GetCommentsCopyWithImpl;
-@useResult
-$Res call({
-@JsonKey(name: 'type_') ListingType? type, CommentSortType? sort, int? maxDepth, int? page, int? limit, int? communityId, String? communityName, int? postId, int? parentId, bool? savedOnly, bool? likedOnly, bool? dislikedOnly, String? auth
-});
-
-
-
-
+abstract class $GetCommentsCopyWith<$Res> {
+  factory $GetCommentsCopyWith(
+    GetComments value,
+    $Res Function(GetComments) then,
+  ) = _$GetCommentsCopyWithImpl<$Res, GetComments>;
+  @useResult
+  $Res call({
+    @JsonKey(name: 'type_') ListingType? type,
+    CommentSortType? sort,
+    int? maxDepth,
+    int? page,
+    int? limit,
+    int? communityId,
+    String? communityName,
+    int? postId,
+    int? parentId,
+    bool? savedOnly,
+    bool? likedOnly,
+    bool? dislikedOnly,
+    String? auth,
+  });
 }
+
 /// @nodoc
-class _$GetCommentsCopyWithImpl<$Res>
+class _$GetCommentsCopyWithImpl<$Res, $Val extends GetComments>
     implements $GetCommentsCopyWith<$Res> {
-  _$GetCommentsCopyWithImpl(this._self, this._then);
+  _$GetCommentsCopyWithImpl(this._value, this._then);
 
-  final GetComments _self;
-  final $Res Function(GetComments) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of GetComments
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? type = freezed,Object? sort = freezed,Object? maxDepth = freezed,Object? page = freezed,Object? limit = freezed,Object? communityId = freezed,Object? communityName = freezed,Object? postId = freezed,Object? parentId = freezed,Object? savedOnly = freezed,Object? likedOnly = freezed,Object? dislikedOnly = freezed,Object? auth = freezed,}) {
-  return _then(_self.copyWith(
-type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as ListingType?,sort: freezed == sort ? _self.sort : sort // ignore: cast_nullable_to_non_nullable
-as CommentSortType?,maxDepth: freezed == maxDepth ? _self.maxDepth : maxDepth // ignore: cast_nullable_to_non_nullable
-as int?,page: freezed == page ? _self.page : page // ignore: cast_nullable_to_non_nullable
-as int?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,communityId: freezed == communityId ? _self.communityId : communityId // ignore: cast_nullable_to_non_nullable
-as int?,communityName: freezed == communityName ? _self.communityName : communityName // ignore: cast_nullable_to_non_nullable
-as String?,postId: freezed == postId ? _self.postId : postId // ignore: cast_nullable_to_non_nullable
-as int?,parentId: freezed == parentId ? _self.parentId : parentId // ignore: cast_nullable_to_non_nullable
-as int?,savedOnly: freezed == savedOnly ? _self.savedOnly : savedOnly // ignore: cast_nullable_to_non_nullable
-as bool?,likedOnly: freezed == likedOnly ? _self.likedOnly : likedOnly // ignore: cast_nullable_to_non_nullable
-as bool?,dislikedOnly: freezed == dislikedOnly ? _self.dislikedOnly : dislikedOnly // ignore: cast_nullable_to_non_nullable
-as bool?,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
+  /// Create a copy of GetComments
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? type = freezed,
+    Object? sort = freezed,
+    Object? maxDepth = freezed,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? communityId = freezed,
+    Object? communityName = freezed,
+    Object? postId = freezed,
+    Object? parentId = freezed,
+    Object? savedOnly = freezed,
+    Object? likedOnly = freezed,
+    Object? dislikedOnly = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(
+      _value.copyWith(
+            type:
+                freezed == type
+                    ? _value.type
+                    : type // ignore: cast_nullable_to_non_nullable
+                        as ListingType?,
+            sort:
+                freezed == sort
+                    ? _value.sort
+                    : sort // ignore: cast_nullable_to_non_nullable
+                        as CommentSortType?,
+            maxDepth:
+                freezed == maxDepth
+                    ? _value.maxDepth
+                    : maxDepth // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            page:
+                freezed == page
+                    ? _value.page
+                    : page // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            communityId:
+                freezed == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            communityName:
+                freezed == communityName
+                    ? _value.communityName
+                    : communityName // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            postId:
+                freezed == postId
+                    ? _value.postId
+                    : postId // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            parentId:
+                freezed == parentId
+                    ? _value.parentId
+                    : parentId // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            savedOnly:
+                freezed == savedOnly
+                    ? _value.savedOnly
+                    : savedOnly // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            likedOnly:
+                freezed == likedOnly
+                    ? _value.likedOnly
+                    : likedOnly // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            dislikedOnly:
+                freezed == dislikedOnly
+                    ? _value.dislikedOnly
+                    : dislikedOnly // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$GetCommentsImplCopyWith<$Res>
+    implements $GetCommentsCopyWith<$Res> {
+  factory _$$GetCommentsImplCopyWith(
+    _$GetCommentsImpl value,
+    $Res Function(_$GetCommentsImpl) then,
+  ) = __$$GetCommentsImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({
+    @JsonKey(name: 'type_') ListingType? type,
+    CommentSortType? sort,
+    int? maxDepth,
+    int? page,
+    int? limit,
+    int? communityId,
+    String? communityName,
+    int? postId,
+    int? parentId,
+    bool? savedOnly,
+    bool? likedOnly,
+    bool? dislikedOnly,
+    String? auth,
+  });
 }
 
+/// @nodoc
+class __$$GetCommentsImplCopyWithImpl<$Res>
+    extends _$GetCommentsCopyWithImpl<$Res, _$GetCommentsImpl>
+    implements _$$GetCommentsImplCopyWith<$Res> {
+  __$$GetCommentsImplCopyWithImpl(
+    _$GetCommentsImpl _value,
+    $Res Function(_$GetCommentsImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [GetComments].
-extension GetCommentsPatterns on GetComments {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _GetComments value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _GetComments() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _GetComments value)  $default,){
-final _that = this;
-switch (_that) {
-case _GetComments():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _GetComments value)?  $default,){
-final _that = this;
-switch (_that) {
-case _GetComments() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(name: 'type_')  ListingType? type,  CommentSortType? sort,  int? maxDepth,  int? page,  int? limit,  int? communityId,  String? communityName,  int? postId,  int? parentId,  bool? savedOnly,  bool? likedOnly,  bool? dislikedOnly,  String? auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _GetComments() when $default != null:
-return $default(_that.type,_that.sort,_that.maxDepth,_that.page,_that.limit,_that.communityId,_that.communityName,_that.postId,_that.parentId,_that.savedOnly,_that.likedOnly,_that.dislikedOnly,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(name: 'type_')  ListingType? type,  CommentSortType? sort,  int? maxDepth,  int? page,  int? limit,  int? communityId,  String? communityName,  int? postId,  int? parentId,  bool? savedOnly,  bool? likedOnly,  bool? dislikedOnly,  String? auth)  $default,) {final _that = this;
-switch (_that) {
-case _GetComments():
-return $default(_that.type,_that.sort,_that.maxDepth,_that.page,_that.limit,_that.communityId,_that.communityName,_that.postId,_that.parentId,_that.savedOnly,_that.likedOnly,_that.dislikedOnly,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(name: 'type_')  ListingType? type,  CommentSortType? sort,  int? maxDepth,  int? page,  int? limit,  int? communityId,  String? communityName,  int? postId,  int? parentId,  bool? savedOnly,  bool? likedOnly,  bool? dislikedOnly,  String? auth)?  $default,) {final _that = this;
-switch (_that) {
-case _GetComments() when $default != null:
-return $default(_that.type,_that.sort,_that.maxDepth,_that.page,_that.limit,_that.communityId,_that.communityName,_that.postId,_that.parentId,_that.savedOnly,_that.likedOnly,_that.dislikedOnly,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of GetComments
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? type = freezed,
+    Object? sort = freezed,
+    Object? maxDepth = freezed,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? communityId = freezed,
+    Object? communityName = freezed,
+    Object? postId = freezed,
+    Object? parentId = freezed,
+    Object? savedOnly = freezed,
+    Object? likedOnly = freezed,
+    Object? dislikedOnly = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(
+      _$GetCommentsImpl(
+        type:
+            freezed == type
+                ? _value.type
+                : type // ignore: cast_nullable_to_non_nullable
+                    as ListingType?,
+        sort:
+            freezed == sort
+                ? _value.sort
+                : sort // ignore: cast_nullable_to_non_nullable
+                    as CommentSortType?,
+        maxDepth:
+            freezed == maxDepth
+                ? _value.maxDepth
+                : maxDepth // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        page:
+            freezed == page
+                ? _value.page
+                : page // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        communityId:
+            freezed == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        communityName:
+            freezed == communityName
+                ? _value.communityName
+                : communityName // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        postId:
+            freezed == postId
+                ? _value.postId
+                : postId // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        parentId:
+            freezed == parentId
+                ? _value.parentId
+                : parentId // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        savedOnly:
+            freezed == savedOnly
+                ? _value.savedOnly
+                : savedOnly // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        likedOnly:
+            freezed == likedOnly
+                ? _value.likedOnly
+                : likedOnly // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        dislikedOnly:
+            freezed == dislikedOnly
+                ? _value.dislikedOnly
+                : dislikedOnly // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _GetComments extends GetComments {
-  const _GetComments({@JsonKey(name: 'type_') this.type, this.sort, this.maxDepth, this.page, this.limit, this.communityId, this.communityName, this.postId, this.parentId, this.savedOnly, this.likedOnly, this.dislikedOnly, this.auth}): super._();
-  factory _GetComments.fromJson(Map<String, dynamic> json) => _$GetCommentsFromJson(json);
+class _$GetCommentsImpl extends _GetComments {
+  const _$GetCommentsImpl({
+    @JsonKey(name: 'type_') this.type,
+    this.sort,
+    this.maxDepth,
+    this.page,
+    this.limit,
+    this.communityId,
+    this.communityName,
+    this.postId,
+    this.parentId,
+    this.savedOnly,
+    this.likedOnly,
+    this.dislikedOnly,
+    this.auth,
+  }) : super._();
 
-@override@JsonKey(name: 'type_') final  ListingType? type;
-// v0.18.0
-@override final  CommentSortType? sort;
-// v0.18.0
-@override final  int? maxDepth;
-// v0.18.0
-@override final  int? page;
-// v0.18.0
-@override final  int? limit;
-// v0.18.0
-@override final  int? communityId;
-// v0.18.0
-@override final  String? communityName;
-// v0.18.0
-@override final  int? postId;
-// v0.18.0
-@override final  int? parentId;
-// v0.18.0
-@override final  bool? savedOnly;
-// v0.18.0
-@override final  bool? likedOnly;
-// v0.19.0 (optional)
-@override final  bool? dislikedOnly;
-// v0.19.0 (optional)
-@override final  String? auth;
+  factory _$GetCommentsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetCommentsImplFromJson(json);
 
-/// Create a copy of GetComments
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$GetCommentsCopyWith<_GetComments> get copyWith => __$GetCommentsCopyWithImpl<_GetComments>(this, _$identity);
+  @override
+  @JsonKey(name: 'type_')
+  final ListingType? type;
+  // v0.18.0
+  @override
+  final CommentSortType? sort;
+  // v0.18.0
+  @override
+  final int? maxDepth;
+  // v0.18.0
+  @override
+  final int? page;
+  // v0.18.0
+  @override
+  final int? limit;
+  // v0.18.0
+  @override
+  final int? communityId;
+  // v0.18.0
+  @override
+  final String? communityName;
+  // v0.18.0
+  @override
+  final int? postId;
+  // v0.18.0
+  @override
+  final int? parentId;
+  // v0.18.0
+  @override
+  final bool? savedOnly;
+  // v0.18.0
+  @override
+  final bool? likedOnly;
+  // v0.19.0 (optional)
+  @override
+  final bool? dislikedOnly;
+  // v0.19.0 (optional)
+  @override
+  final String? auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$GetCommentsToJson(this, );
+  @override
+  String toString() {
+    return 'GetComments(type: $type, sort: $sort, maxDepth: $maxDepth, page: $page, limit: $limit, communityId: $communityId, communityName: $communityName, postId: $postId, parentId: $parentId, savedOnly: $savedOnly, likedOnly: $likedOnly, dislikedOnly: $dislikedOnly, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetCommentsImpl &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.sort, sort) || other.sort == sort) &&
+            (identical(other.maxDepth, maxDepth) ||
+                other.maxDepth == maxDepth) &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.communityName, communityName) ||
+                other.communityName == communityName) &&
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.parentId, parentId) ||
+                other.parentId == parentId) &&
+            (identical(other.savedOnly, savedOnly) ||
+                other.savedOnly == savedOnly) &&
+            (identical(other.likedOnly, likedOnly) ||
+                other.likedOnly == likedOnly) &&
+            (identical(other.dislikedOnly, dislikedOnly) ||
+                other.dislikedOnly == dislikedOnly) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+    runtimeType,
+    type,
+    sort,
+    maxDepth,
+    page,
+    limit,
+    communityId,
+    communityName,
+    postId,
+    parentId,
+    savedOnly,
+    likedOnly,
+    dislikedOnly,
+    auth,
+  );
+
+  /// Create a copy of GetComments
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetCommentsImplCopyWith<_$GetCommentsImpl> get copyWith =>
+      __$$GetCommentsImplCopyWithImpl<_$GetCommentsImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$GetCommentsImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _GetComments&&(identical(other.type, type) || other.type == type)&&(identical(other.sort, sort) || other.sort == sort)&&(identical(other.maxDepth, maxDepth) || other.maxDepth == maxDepth)&&(identical(other.page, page) || other.page == page)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.communityId, communityId) || other.communityId == communityId)&&(identical(other.communityName, communityName) || other.communityName == communityName)&&(identical(other.postId, postId) || other.postId == postId)&&(identical(other.parentId, parentId) || other.parentId == parentId)&&(identical(other.savedOnly, savedOnly) || other.savedOnly == savedOnly)&&(identical(other.likedOnly, likedOnly) || other.likedOnly == likedOnly)&&(identical(other.dislikedOnly, dislikedOnly) || other.dislikedOnly == dislikedOnly)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _GetComments extends GetComments {
+  const factory _GetComments({
+    @JsonKey(name: 'type_') final ListingType? type,
+    final CommentSortType? sort,
+    final int? maxDepth,
+    final int? page,
+    final int? limit,
+    final int? communityId,
+    final String? communityName,
+    final int? postId,
+    final int? parentId,
+    final bool? savedOnly,
+    final bool? likedOnly,
+    final bool? dislikedOnly,
+    final String? auth,
+  }) = _$GetCommentsImpl;
+  const _GetComments._() : super._();
+
+  factory _GetComments.fromJson(Map<String, dynamic> json) =
+      _$GetCommentsImpl.fromJson;
+
+  @override
+  @JsonKey(name: 'type_')
+  ListingType? get type; // v0.18.0
+  @override
+  CommentSortType? get sort; // v0.18.0
+  @override
+  int? get maxDepth; // v0.18.0
+  @override
+  int? get page; // v0.18.0
+  @override
+  int? get limit; // v0.18.0
+  @override
+  int? get communityId; // v0.18.0
+  @override
+  String? get communityName; // v0.18.0
+  @override
+  int? get postId; // v0.18.0
+  @override
+  int? get parentId; // v0.18.0
+  @override
+  bool? get savedOnly; // v0.18.0
+  @override
+  bool? get likedOnly; // v0.19.0 (optional)
+  @override
+  bool? get dislikedOnly; // v0.19.0 (optional)
+  @override
+  String? get auth;
+
+  /// Create a copy of GetComments
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetCommentsImplCopyWith<_$GetCommentsImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,type,sort,maxDepth,page,limit,communityId,communityName,postId,parentId,savedOnly,likedOnly,dislikedOnly,auth);
-
-@override
-String toString() {
-  return 'GetComments(type: $type, sort: $sort, maxDepth: $maxDepth, page: $page, limit: $limit, communityId: $communityId, communityName: $communityName, postId: $postId, parentId: $parentId, savedOnly: $savedOnly, likedOnly: $likedOnly, dislikedOnly: $dislikedOnly, auth: $auth)';
+CreateCommentReport _$CreateCommentReportFromJson(Map<String, dynamic> json) {
+  return _CreateCommentReport.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$GetCommentsCopyWith<$Res> implements $GetCommentsCopyWith<$Res> {
-  factory _$GetCommentsCopyWith(_GetComments value, $Res Function(_GetComments) _then) = __$GetCommentsCopyWithImpl;
-@override @useResult
-$Res call({
-@JsonKey(name: 'type_') ListingType? type, CommentSortType? sort, int? maxDepth, int? page, int? limit, int? communityId, String? communityName, int? postId, int? parentId, bool? savedOnly, bool? likedOnly, bool? dislikedOnly, String? auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$GetCommentsCopyWithImpl<$Res>
-    implements _$GetCommentsCopyWith<$Res> {
-  __$GetCommentsCopyWithImpl(this._self, this._then);
-
-  final _GetComments _self;
-  final $Res Function(_GetComments) _then;
-
-/// Create a copy of GetComments
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? type = freezed,Object? sort = freezed,Object? maxDepth = freezed,Object? page = freezed,Object? limit = freezed,Object? communityId = freezed,Object? communityName = freezed,Object? postId = freezed,Object? parentId = freezed,Object? savedOnly = freezed,Object? likedOnly = freezed,Object? dislikedOnly = freezed,Object? auth = freezed,}) {
-  return _then(_GetComments(
-type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as ListingType?,sort: freezed == sort ? _self.sort : sort // ignore: cast_nullable_to_non_nullable
-as CommentSortType?,maxDepth: freezed == maxDepth ? _self.maxDepth : maxDepth // ignore: cast_nullable_to_non_nullable
-as int?,page: freezed == page ? _self.page : page // ignore: cast_nullable_to_non_nullable
-as int?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,communityId: freezed == communityId ? _self.communityId : communityId // ignore: cast_nullable_to_non_nullable
-as int?,communityName: freezed == communityName ? _self.communityName : communityName // ignore: cast_nullable_to_non_nullable
-as String?,postId: freezed == postId ? _self.postId : postId // ignore: cast_nullable_to_non_nullable
-as int?,parentId: freezed == parentId ? _self.parentId : parentId // ignore: cast_nullable_to_non_nullable
-as int?,savedOnly: freezed == savedOnly ? _self.savedOnly : savedOnly // ignore: cast_nullable_to_non_nullable
-as bool?,likedOnly: freezed == likedOnly ? _self.likedOnly : likedOnly // ignore: cast_nullable_to_non_nullable
-as bool?,dislikedOnly: freezed == dislikedOnly ? _self.dislikedOnly : dislikedOnly // ignore: cast_nullable_to_non_nullable
-as bool?,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$CreateCommentReport {
-
- dynamic get path; dynamic get httpMethod; int get commentId; String get reason; String get auth;
-/// Create a copy of CreateCommentReport
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$CreateCommentReportCopyWith<CreateCommentReport> get copyWith => _$CreateCommentReportCopyWithImpl<CreateCommentReport>(this as CreateCommentReport, _$identity);
+  int get commentId => throw _privateConstructorUsedError;
+  String get reason => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
   /// Serializes this CreateCommentReport to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is CreateCommentReport&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.commentId, commentId) || other.commentId == commentId)&&(identical(other.reason, reason) || other.reason == reason)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),commentId,reason,auth);
-
-@override
-String toString() {
-  return 'CreateCommentReport(path: $path, httpMethod: $httpMethod, commentId: $commentId, reason: $reason, auth: $auth)';
-}
-
-
+  /// Create a copy of CreateCommentReport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $CreateCommentReportCopyWith<CreateCommentReport> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $CreateCommentReportCopyWith<$Res>  {
-  factory $CreateCommentReportCopyWith(CreateCommentReport value, $Res Function(CreateCommentReport) _then) = _$CreateCommentReportCopyWithImpl;
-@useResult
-$Res call({
- int commentId, String reason, String auth
-});
-
-
-
-
+abstract class $CreateCommentReportCopyWith<$Res> {
+  factory $CreateCommentReportCopyWith(
+    CreateCommentReport value,
+    $Res Function(CreateCommentReport) then,
+  ) = _$CreateCommentReportCopyWithImpl<$Res, CreateCommentReport>;
+  @useResult
+  $Res call({int commentId, String reason, String auth});
 }
+
 /// @nodoc
-class _$CreateCommentReportCopyWithImpl<$Res>
+class _$CreateCommentReportCopyWithImpl<$Res, $Val extends CreateCommentReport>
     implements $CreateCommentReportCopyWith<$Res> {
-  _$CreateCommentReportCopyWithImpl(this._self, this._then);
+  _$CreateCommentReportCopyWithImpl(this._value, this._then);
 
-  final CreateCommentReport _self;
-  final $Res Function(CreateCommentReport) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of CreateCommentReport
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? commentId = null,Object? reason = null,Object? auth = null,}) {
-  return _then(_self.copyWith(
-commentId: null == commentId ? _self.commentId : commentId // ignore: cast_nullable_to_non_nullable
-as int,reason: null == reason ? _self.reason : reason // ignore: cast_nullable_to_non_nullable
-as String,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of CreateCommentReport
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? commentId = null,
+    Object? reason = null,
+    Object? auth = null,
+  }) {
+    return _then(
+      _value.copyWith(
+            commentId:
+                null == commentId
+                    ? _value.commentId
+                    : commentId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            reason:
+                null == reason
+                    ? _value.reason
+                    : reason // ignore: cast_nullable_to_non_nullable
+                        as String,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$CreateCommentReportImplCopyWith<$Res>
+    implements $CreateCommentReportCopyWith<$Res> {
+  factory _$$CreateCommentReportImplCopyWith(
+    _$CreateCommentReportImpl value,
+    $Res Function(_$CreateCommentReportImpl) then,
+  ) = __$$CreateCommentReportImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int commentId, String reason, String auth});
 }
 
+/// @nodoc
+class __$$CreateCommentReportImplCopyWithImpl<$Res>
+    extends _$CreateCommentReportCopyWithImpl<$Res, _$CreateCommentReportImpl>
+    implements _$$CreateCommentReportImplCopyWith<$Res> {
+  __$$CreateCommentReportImplCopyWithImpl(
+    _$CreateCommentReportImpl _value,
+    $Res Function(_$CreateCommentReportImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [CreateCommentReport].
-extension CreateCommentReportPatterns on CreateCommentReport {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _CreateCommentReport value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _CreateCommentReport() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _CreateCommentReport value)  $default,){
-final _that = this;
-switch (_that) {
-case _CreateCommentReport():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _CreateCommentReport value)?  $default,){
-final _that = this;
-switch (_that) {
-case _CreateCommentReport() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int commentId,  String reason,  String auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _CreateCommentReport() when $default != null:
-return $default(_that.commentId,_that.reason,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int commentId,  String reason,  String auth)  $default,) {final _that = this;
-switch (_that) {
-case _CreateCommentReport():
-return $default(_that.commentId,_that.reason,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int commentId,  String reason,  String auth)?  $default,) {final _that = this;
-switch (_that) {
-case _CreateCommentReport() when $default != null:
-return $default(_that.commentId,_that.reason,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of CreateCommentReport
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? commentId = null,
+    Object? reason = null,
+    Object? auth = null,
+  }) {
+    return _then(
+      _$CreateCommentReportImpl(
+        commentId:
+            null == commentId
+                ? _value.commentId
+                : commentId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        reason:
+            null == reason
+                ? _value.reason
+                : reason // ignore: cast_nullable_to_non_nullable
+                    as String,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _CreateCommentReport extends CreateCommentReport {
-  const _CreateCommentReport({required this.commentId, required this.reason, required this.auth}): super._();
-  factory _CreateCommentReport.fromJson(Map<String, dynamic> json) => _$CreateCommentReportFromJson(json);
+class _$CreateCommentReportImpl extends _CreateCommentReport {
+  const _$CreateCommentReportImpl({
+    required this.commentId,
+    required this.reason,
+    required this.auth,
+  }) : super._();
 
-@override final  int commentId;
-@override final  String reason;
-@override final  String auth;
+  factory _$CreateCommentReportImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CreateCommentReportImplFromJson(json);
 
-/// Create a copy of CreateCommentReport
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$CreateCommentReportCopyWith<_CreateCommentReport> get copyWith => __$CreateCommentReportCopyWithImpl<_CreateCommentReport>(this, _$identity);
+  @override
+  final int commentId;
+  @override
+  final String reason;
+  @override
+  final String auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$CreateCommentReportToJson(this, );
+  @override
+  String toString() {
+    return 'CreateCommentReport(commentId: $commentId, reason: $reason, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CreateCommentReportImpl &&
+            (identical(other.commentId, commentId) ||
+                other.commentId == commentId) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, commentId, reason, auth);
+
+  /// Create a copy of CreateCommentReport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CreateCommentReportImplCopyWith<_$CreateCommentReportImpl> get copyWith =>
+      __$$CreateCommentReportImplCopyWithImpl<_$CreateCommentReportImpl>(
+        this,
+        _$identity,
+      );
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$CreateCommentReportImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CreateCommentReport&&(identical(other.commentId, commentId) || other.commentId == commentId)&&(identical(other.reason, reason) || other.reason == reason)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _CreateCommentReport extends CreateCommentReport {
+  const factory _CreateCommentReport({
+    required final int commentId,
+    required final String reason,
+    required final String auth,
+  }) = _$CreateCommentReportImpl;
+  const _CreateCommentReport._() : super._();
+
+  factory _CreateCommentReport.fromJson(Map<String, dynamic> json) =
+      _$CreateCommentReportImpl.fromJson;
+
+  @override
+  int get commentId;
+  @override
+  String get reason;
+  @override
+  String get auth;
+
+  /// Create a copy of CreateCommentReport
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$CreateCommentReportImplCopyWith<_$CreateCommentReportImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,commentId,reason,auth);
-
-@override
-String toString() {
-  return 'CreateCommentReport(commentId: $commentId, reason: $reason, auth: $auth)';
+ResolveCommentReport _$ResolveCommentReportFromJson(Map<String, dynamic> json) {
+  return _ResolveCommentReport.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$CreateCommentReportCopyWith<$Res> implements $CreateCommentReportCopyWith<$Res> {
-  factory _$CreateCommentReportCopyWith(_CreateCommentReport value, $Res Function(_CreateCommentReport) _then) = __$CreateCommentReportCopyWithImpl;
-@override @useResult
-$Res call({
- int commentId, String reason, String auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$CreateCommentReportCopyWithImpl<$Res>
-    implements _$CreateCommentReportCopyWith<$Res> {
-  __$CreateCommentReportCopyWithImpl(this._self, this._then);
-
-  final _CreateCommentReport _self;
-  final $Res Function(_CreateCommentReport) _then;
-
-/// Create a copy of CreateCommentReport
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? commentId = null,Object? reason = null,Object? auth = null,}) {
-  return _then(_CreateCommentReport(
-commentId: null == commentId ? _self.commentId : commentId // ignore: cast_nullable_to_non_nullable
-as int,reason: null == reason ? _self.reason : reason // ignore: cast_nullable_to_non_nullable
-as String,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$ResolveCommentReport {
-
- dynamic get path; dynamic get httpMethod; int get reportId; bool get resolved; String get auth;
-/// Create a copy of ResolveCommentReport
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$ResolveCommentReportCopyWith<ResolveCommentReport> get copyWith => _$ResolveCommentReportCopyWithImpl<ResolveCommentReport>(this as ResolveCommentReport, _$identity);
+  int get reportId => throw _privateConstructorUsedError;
+  bool get resolved => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
   /// Serializes this ResolveCommentReport to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ResolveCommentReport&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.reportId, reportId) || other.reportId == reportId)&&(identical(other.resolved, resolved) || other.resolved == resolved)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),reportId,resolved,auth);
-
-@override
-String toString() {
-  return 'ResolveCommentReport(path: $path, httpMethod: $httpMethod, reportId: $reportId, resolved: $resolved, auth: $auth)';
-}
-
-
+  /// Create a copy of ResolveCommentReport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $ResolveCommentReportCopyWith<ResolveCommentReport> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $ResolveCommentReportCopyWith<$Res>  {
-  factory $ResolveCommentReportCopyWith(ResolveCommentReport value, $Res Function(ResolveCommentReport) _then) = _$ResolveCommentReportCopyWithImpl;
-@useResult
-$Res call({
- int reportId, bool resolved, String auth
-});
-
-
-
-
+abstract class $ResolveCommentReportCopyWith<$Res> {
+  factory $ResolveCommentReportCopyWith(
+    ResolveCommentReport value,
+    $Res Function(ResolveCommentReport) then,
+  ) = _$ResolveCommentReportCopyWithImpl<$Res, ResolveCommentReport>;
+  @useResult
+  $Res call({int reportId, bool resolved, String auth});
 }
+
 /// @nodoc
-class _$ResolveCommentReportCopyWithImpl<$Res>
+class _$ResolveCommentReportCopyWithImpl<
+  $Res,
+  $Val extends ResolveCommentReport
+>
     implements $ResolveCommentReportCopyWith<$Res> {
-  _$ResolveCommentReportCopyWithImpl(this._self, this._then);
+  _$ResolveCommentReportCopyWithImpl(this._value, this._then);
 
-  final ResolveCommentReport _self;
-  final $Res Function(ResolveCommentReport) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of ResolveCommentReport
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? reportId = null,Object? resolved = null,Object? auth = null,}) {
-  return _then(_self.copyWith(
-reportId: null == reportId ? _self.reportId : reportId // ignore: cast_nullable_to_non_nullable
-as int,resolved: null == resolved ? _self.resolved : resolved // ignore: cast_nullable_to_non_nullable
-as bool,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of ResolveCommentReport
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? reportId = null,
+    Object? resolved = null,
+    Object? auth = null,
+  }) {
+    return _then(
+      _value.copyWith(
+            reportId:
+                null == reportId
+                    ? _value.reportId
+                    : reportId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            resolved:
+                null == resolved
+                    ? _value.resolved
+                    : resolved // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$ResolveCommentReportImplCopyWith<$Res>
+    implements $ResolveCommentReportCopyWith<$Res> {
+  factory _$$ResolveCommentReportImplCopyWith(
+    _$ResolveCommentReportImpl value,
+    $Res Function(_$ResolveCommentReportImpl) then,
+  ) = __$$ResolveCommentReportImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int reportId, bool resolved, String auth});
 }
 
+/// @nodoc
+class __$$ResolveCommentReportImplCopyWithImpl<$Res>
+    extends _$ResolveCommentReportCopyWithImpl<$Res, _$ResolveCommentReportImpl>
+    implements _$$ResolveCommentReportImplCopyWith<$Res> {
+  __$$ResolveCommentReportImplCopyWithImpl(
+    _$ResolveCommentReportImpl _value,
+    $Res Function(_$ResolveCommentReportImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [ResolveCommentReport].
-extension ResolveCommentReportPatterns on ResolveCommentReport {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ResolveCommentReport value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _ResolveCommentReport() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ResolveCommentReport value)  $default,){
-final _that = this;
-switch (_that) {
-case _ResolveCommentReport():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ResolveCommentReport value)?  $default,){
-final _that = this;
-switch (_that) {
-case _ResolveCommentReport() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int reportId,  bool resolved,  String auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _ResolveCommentReport() when $default != null:
-return $default(_that.reportId,_that.resolved,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int reportId,  bool resolved,  String auth)  $default,) {final _that = this;
-switch (_that) {
-case _ResolveCommentReport():
-return $default(_that.reportId,_that.resolved,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int reportId,  bool resolved,  String auth)?  $default,) {final _that = this;
-switch (_that) {
-case _ResolveCommentReport() when $default != null:
-return $default(_that.reportId,_that.resolved,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of ResolveCommentReport
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? reportId = null,
+    Object? resolved = null,
+    Object? auth = null,
+  }) {
+    return _then(
+      _$ResolveCommentReportImpl(
+        reportId:
+            null == reportId
+                ? _value.reportId
+                : reportId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        resolved:
+            null == resolved
+                ? _value.resolved
+                : resolved // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _ResolveCommentReport extends ResolveCommentReport {
-  const _ResolveCommentReport({required this.reportId, required this.resolved, required this.auth}): super._();
-  factory _ResolveCommentReport.fromJson(Map<String, dynamic> json) => _$ResolveCommentReportFromJson(json);
+class _$ResolveCommentReportImpl extends _ResolveCommentReport {
+  const _$ResolveCommentReportImpl({
+    required this.reportId,
+    required this.resolved,
+    required this.auth,
+  }) : super._();
 
-@override final  int reportId;
-@override final  bool resolved;
-@override final  String auth;
+  factory _$ResolveCommentReportImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ResolveCommentReportImplFromJson(json);
 
-/// Create a copy of ResolveCommentReport
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ResolveCommentReportCopyWith<_ResolveCommentReport> get copyWith => __$ResolveCommentReportCopyWithImpl<_ResolveCommentReport>(this, _$identity);
+  @override
+  final int reportId;
+  @override
+  final bool resolved;
+  @override
+  final String auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$ResolveCommentReportToJson(this, );
+  @override
+  String toString() {
+    return 'ResolveCommentReport(reportId: $reportId, resolved: $resolved, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ResolveCommentReportImpl &&
+            (identical(other.reportId, reportId) ||
+                other.reportId == reportId) &&
+            (identical(other.resolved, resolved) ||
+                other.resolved == resolved) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, reportId, resolved, auth);
+
+  /// Create a copy of ResolveCommentReport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ResolveCommentReportImplCopyWith<_$ResolveCommentReportImpl>
+  get copyWith =>
+      __$$ResolveCommentReportImplCopyWithImpl<_$ResolveCommentReportImpl>(
+        this,
+        _$identity,
+      );
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ResolveCommentReportImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ResolveCommentReport&&(identical(other.reportId, reportId) || other.reportId == reportId)&&(identical(other.resolved, resolved) || other.resolved == resolved)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _ResolveCommentReport extends ResolveCommentReport {
+  const factory _ResolveCommentReport({
+    required final int reportId,
+    required final bool resolved,
+    required final String auth,
+  }) = _$ResolveCommentReportImpl;
+  const _ResolveCommentReport._() : super._();
+
+  factory _ResolveCommentReport.fromJson(Map<String, dynamic> json) =
+      _$ResolveCommentReportImpl.fromJson;
+
+  @override
+  int get reportId;
+  @override
+  bool get resolved;
+  @override
+  String get auth;
+
+  /// Create a copy of ResolveCommentReport
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ResolveCommentReportImplCopyWith<_$ResolveCommentReportImpl>
+  get copyWith => throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,reportId,resolved,auth);
-
-@override
-String toString() {
-  return 'ResolveCommentReport(reportId: $reportId, resolved: $resolved, auth: $auth)';
+ListCommentReports _$ListCommentReportsFromJson(Map<String, dynamic> json) {
+  return _ListCommentReports.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ResolveCommentReportCopyWith<$Res> implements $ResolveCommentReportCopyWith<$Res> {
-  factory _$ResolveCommentReportCopyWith(_ResolveCommentReport value, $Res Function(_ResolveCommentReport) _then) = __$ResolveCommentReportCopyWithImpl;
-@override @useResult
-$Res call({
- int reportId, bool resolved, String auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$ResolveCommentReportCopyWithImpl<$Res>
-    implements _$ResolveCommentReportCopyWith<$Res> {
-  __$ResolveCommentReportCopyWithImpl(this._self, this._then);
-
-  final _ResolveCommentReport _self;
-  final $Res Function(_ResolveCommentReport) _then;
-
-/// Create a copy of ResolveCommentReport
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? reportId = null,Object? resolved = null,Object? auth = null,}) {
-  return _then(_ResolveCommentReport(
-reportId: null == reportId ? _self.reportId : reportId // ignore: cast_nullable_to_non_nullable
-as int,resolved: null == resolved ? _self.resolved : resolved // ignore: cast_nullable_to_non_nullable
-as bool,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$ListCommentReports {
-
- dynamic get path; dynamic get httpMethod; int? get page; int? get limit; int? get communityId; bool? get unresolvedOnly; String get auth;
-/// Create a copy of ListCommentReports
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$ListCommentReportsCopyWith<ListCommentReports> get copyWith => _$ListCommentReportsCopyWithImpl<ListCommentReports>(this as ListCommentReports, _$identity);
+  int? get page => throw _privateConstructorUsedError;
+  int? get limit => throw _privateConstructorUsedError;
+  int? get communityId => throw _privateConstructorUsedError;
+  bool? get unresolvedOnly => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
   /// Serializes this ListCommentReports to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ListCommentReports&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.page, page) || other.page == page)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.communityId, communityId) || other.communityId == communityId)&&(identical(other.unresolvedOnly, unresolvedOnly) || other.unresolvedOnly == unresolvedOnly)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),page,limit,communityId,unresolvedOnly,auth);
-
-@override
-String toString() {
-  return 'ListCommentReports(path: $path, httpMethod: $httpMethod, page: $page, limit: $limit, communityId: $communityId, unresolvedOnly: $unresolvedOnly, auth: $auth)';
-}
-
-
+  /// Create a copy of ListCommentReports
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $ListCommentReportsCopyWith<ListCommentReports> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $ListCommentReportsCopyWith<$Res>  {
-  factory $ListCommentReportsCopyWith(ListCommentReports value, $Res Function(ListCommentReports) _then) = _$ListCommentReportsCopyWithImpl;
-@useResult
-$Res call({
- int? page, int? limit, int? communityId, bool? unresolvedOnly, String auth
-});
-
-
-
-
+abstract class $ListCommentReportsCopyWith<$Res> {
+  factory $ListCommentReportsCopyWith(
+    ListCommentReports value,
+    $Res Function(ListCommentReports) then,
+  ) = _$ListCommentReportsCopyWithImpl<$Res, ListCommentReports>;
+  @useResult
+  $Res call({
+    int? page,
+    int? limit,
+    int? communityId,
+    bool? unresolvedOnly,
+    String auth,
+  });
 }
+
 /// @nodoc
-class _$ListCommentReportsCopyWithImpl<$Res>
+class _$ListCommentReportsCopyWithImpl<$Res, $Val extends ListCommentReports>
     implements $ListCommentReportsCopyWith<$Res> {
-  _$ListCommentReportsCopyWithImpl(this._self, this._then);
+  _$ListCommentReportsCopyWithImpl(this._value, this._then);
 
-  final ListCommentReports _self;
-  final $Res Function(ListCommentReports) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of ListCommentReports
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? page = freezed,Object? limit = freezed,Object? communityId = freezed,Object? unresolvedOnly = freezed,Object? auth = null,}) {
-  return _then(_self.copyWith(
-page: freezed == page ? _self.page : page // ignore: cast_nullable_to_non_nullable
-as int?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,communityId: freezed == communityId ? _self.communityId : communityId // ignore: cast_nullable_to_non_nullable
-as int?,unresolvedOnly: freezed == unresolvedOnly ? _self.unresolvedOnly : unresolvedOnly // ignore: cast_nullable_to_non_nullable
-as bool?,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of ListCommentReports
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? communityId = freezed,
+    Object? unresolvedOnly = freezed,
+    Object? auth = null,
+  }) {
+    return _then(
+      _value.copyWith(
+            page:
+                freezed == page
+                    ? _value.page
+                    : page // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            communityId:
+                freezed == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            unresolvedOnly:
+                freezed == unresolvedOnly
+                    ? _value.unresolvedOnly
+                    : unresolvedOnly // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$ListCommentReportsImplCopyWith<$Res>
+    implements $ListCommentReportsCopyWith<$Res> {
+  factory _$$ListCommentReportsImplCopyWith(
+    _$ListCommentReportsImpl value,
+    $Res Function(_$ListCommentReportsImpl) then,
+  ) = __$$ListCommentReportsImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({
+    int? page,
+    int? limit,
+    int? communityId,
+    bool? unresolvedOnly,
+    String auth,
+  });
 }
 
+/// @nodoc
+class __$$ListCommentReportsImplCopyWithImpl<$Res>
+    extends _$ListCommentReportsCopyWithImpl<$Res, _$ListCommentReportsImpl>
+    implements _$$ListCommentReportsImplCopyWith<$Res> {
+  __$$ListCommentReportsImplCopyWithImpl(
+    _$ListCommentReportsImpl _value,
+    $Res Function(_$ListCommentReportsImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [ListCommentReports].
-extension ListCommentReportsPatterns on ListCommentReports {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ListCommentReports value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _ListCommentReports() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ListCommentReports value)  $default,){
-final _that = this;
-switch (_that) {
-case _ListCommentReports():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ListCommentReports value)?  $default,){
-final _that = this;
-switch (_that) {
-case _ListCommentReports() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? page,  int? limit,  int? communityId,  bool? unresolvedOnly,  String auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _ListCommentReports() when $default != null:
-return $default(_that.page,_that.limit,_that.communityId,_that.unresolvedOnly,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? page,  int? limit,  int? communityId,  bool? unresolvedOnly,  String auth)  $default,) {final _that = this;
-switch (_that) {
-case _ListCommentReports():
-return $default(_that.page,_that.limit,_that.communityId,_that.unresolvedOnly,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? page,  int? limit,  int? communityId,  bool? unresolvedOnly,  String auth)?  $default,) {final _that = this;
-switch (_that) {
-case _ListCommentReports() when $default != null:
-return $default(_that.page,_that.limit,_that.communityId,_that.unresolvedOnly,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of ListCommentReports
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? communityId = freezed,
+    Object? unresolvedOnly = freezed,
+    Object? auth = null,
+  }) {
+    return _then(
+      _$ListCommentReportsImpl(
+        page:
+            freezed == page
+                ? _value.page
+                : page // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        communityId:
+            freezed == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        unresolvedOnly:
+            freezed == unresolvedOnly
+                ? _value.unresolvedOnly
+                : unresolvedOnly // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _ListCommentReports extends ListCommentReports {
-  const _ListCommentReports({this.page, this.limit, this.communityId, this.unresolvedOnly, required this.auth}): super._();
-  factory _ListCommentReports.fromJson(Map<String, dynamic> json) => _$ListCommentReportsFromJson(json);
+class _$ListCommentReportsImpl extends _ListCommentReports {
+  const _$ListCommentReportsImpl({
+    this.page,
+    this.limit,
+    this.communityId,
+    this.unresolvedOnly,
+    required this.auth,
+  }) : super._();
 
-@override final  int? page;
-@override final  int? limit;
-@override final  int? communityId;
-@override final  bool? unresolvedOnly;
-@override final  String auth;
+  factory _$ListCommentReportsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ListCommentReportsImplFromJson(json);
 
-/// Create a copy of ListCommentReports
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ListCommentReportsCopyWith<_ListCommentReports> get copyWith => __$ListCommentReportsCopyWithImpl<_ListCommentReports>(this, _$identity);
+  @override
+  final int? page;
+  @override
+  final int? limit;
+  @override
+  final int? communityId;
+  @override
+  final bool? unresolvedOnly;
+  @override
+  final String auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$ListCommentReportsToJson(this, );
+  @override
+  String toString() {
+    return 'ListCommentReports(page: $page, limit: $limit, communityId: $communityId, unresolvedOnly: $unresolvedOnly, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ListCommentReportsImpl &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.unresolvedOnly, unresolvedOnly) ||
+                other.unresolvedOnly == unresolvedOnly) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, page, limit, communityId, unresolvedOnly, auth);
+
+  /// Create a copy of ListCommentReports
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ListCommentReportsImplCopyWith<_$ListCommentReportsImpl> get copyWith =>
+      __$$ListCommentReportsImplCopyWithImpl<_$ListCommentReportsImpl>(
+        this,
+        _$identity,
+      );
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ListCommentReportsImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ListCommentReports&&(identical(other.page, page) || other.page == page)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.communityId, communityId) || other.communityId == communityId)&&(identical(other.unresolvedOnly, unresolvedOnly) || other.unresolvedOnly == unresolvedOnly)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _ListCommentReports extends ListCommentReports {
+  const factory _ListCommentReports({
+    final int? page,
+    final int? limit,
+    final int? communityId,
+    final bool? unresolvedOnly,
+    required final String auth,
+  }) = _$ListCommentReportsImpl;
+  const _ListCommentReports._() : super._();
+
+  factory _ListCommentReports.fromJson(Map<String, dynamic> json) =
+      _$ListCommentReportsImpl.fromJson;
+
+  @override
+  int? get page;
+  @override
+  int? get limit;
+  @override
+  int? get communityId;
+  @override
+  bool? get unresolvedOnly;
+  @override
+  String get auth;
+
+  /// Create a copy of ListCommentReports
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ListCommentReportsImplCopyWith<_$ListCommentReportsImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,page,limit,communityId,unresolvedOnly,auth);
-
-@override
-String toString() {
-  return 'ListCommentReports(page: $page, limit: $limit, communityId: $communityId, unresolvedOnly: $unresolvedOnly, auth: $auth)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ListCommentReportsCopyWith<$Res> implements $ListCommentReportsCopyWith<$Res> {
-  factory _$ListCommentReportsCopyWith(_ListCommentReports value, $Res Function(_ListCommentReports) _then) = __$ListCommentReportsCopyWithImpl;
-@override @useResult
-$Res call({
- int? page, int? limit, int? communityId, bool? unresolvedOnly, String auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$ListCommentReportsCopyWithImpl<$Res>
-    implements _$ListCommentReportsCopyWith<$Res> {
-  __$ListCommentReportsCopyWithImpl(this._self, this._then);
-
-  final _ListCommentReports _self;
-  final $Res Function(_ListCommentReports) _then;
-
-/// Create a copy of ListCommentReports
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? page = freezed,Object? limit = freezed,Object? communityId = freezed,Object? unresolvedOnly = freezed,Object? auth = null,}) {
-  return _then(_ListCommentReports(
-page: freezed == page ? _self.page : page // ignore: cast_nullable_to_non_nullable
-as int?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,communityId: freezed == communityId ? _self.communityId : communityId // ignore: cast_nullable_to_non_nullable
-as int?,unresolvedOnly: freezed == unresolvedOnly ? _self.unresolvedOnly : unresolvedOnly // ignore: cast_nullable_to_non_nullable
-as bool?,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
-// dart format on

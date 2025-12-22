@@ -1,5 +1,5 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,2204 +9,1842 @@ part of 'private_message.dart';
 // FreezedGenerator
 // **************************************************************************
 
-// dart format off
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
+
+GetPrivateMessages _$GetPrivateMessagesFromJson(Map<String, dynamic> json) {
+  return _GetPrivateMessages.fromJson(json);
+}
 
 /// @nodoc
 mixin _$GetPrivateMessages {
-
- dynamic get path; dynamic get httpMethod; bool? get unreadOnly;// v0.18.0
- int? get page;// v0.18.0
- int? get limit;// v0.18.0
- int? get creatorId;// v0.19.0 (optional)
- String? get auth;
-/// Create a copy of GetPrivateMessages
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$GetPrivateMessagesCopyWith<GetPrivateMessages> get copyWith => _$GetPrivateMessagesCopyWithImpl<GetPrivateMessages>(this as GetPrivateMessages, _$identity);
+  bool? get unreadOnly => throw _privateConstructorUsedError; // v0.18.0
+  int? get page => throw _privateConstructorUsedError; // v0.18.0
+  int? get limit => throw _privateConstructorUsedError; // v0.18.0
+  int? get creatorId =>
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
+  String? get auth => throw _privateConstructorUsedError;
 
   /// Serializes this GetPrivateMessages to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is GetPrivateMessages&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.unreadOnly, unreadOnly) || other.unreadOnly == unreadOnly)&&(identical(other.page, page) || other.page == page)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.creatorId, creatorId) || other.creatorId == creatorId)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),unreadOnly,page,limit,creatorId,auth);
-
-@override
-String toString() {
-  return 'GetPrivateMessages(path: $path, httpMethod: $httpMethod, unreadOnly: $unreadOnly, page: $page, limit: $limit, creatorId: $creatorId, auth: $auth)';
-}
-
-
+  /// Create a copy of GetPrivateMessages
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $GetPrivateMessagesCopyWith<GetPrivateMessages> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $GetPrivateMessagesCopyWith<$Res>  {
-  factory $GetPrivateMessagesCopyWith(GetPrivateMessages value, $Res Function(GetPrivateMessages) _then) = _$GetPrivateMessagesCopyWithImpl;
-@useResult
-$Res call({
- bool? unreadOnly, int? page, int? limit, int? creatorId, String? auth
-});
-
-
-
-
+abstract class $GetPrivateMessagesCopyWith<$Res> {
+  factory $GetPrivateMessagesCopyWith(
+    GetPrivateMessages value,
+    $Res Function(GetPrivateMessages) then,
+  ) = _$GetPrivateMessagesCopyWithImpl<$Res, GetPrivateMessages>;
+  @useResult
+  $Res call({
+    bool? unreadOnly,
+    int? page,
+    int? limit,
+    int? creatorId,
+    String? auth,
+  });
 }
+
 /// @nodoc
-class _$GetPrivateMessagesCopyWithImpl<$Res>
+class _$GetPrivateMessagesCopyWithImpl<$Res, $Val extends GetPrivateMessages>
     implements $GetPrivateMessagesCopyWith<$Res> {
-  _$GetPrivateMessagesCopyWithImpl(this._self, this._then);
+  _$GetPrivateMessagesCopyWithImpl(this._value, this._then);
 
-  final GetPrivateMessages _self;
-  final $Res Function(GetPrivateMessages) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of GetPrivateMessages
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? unreadOnly = freezed,Object? page = freezed,Object? limit = freezed,Object? creatorId = freezed,Object? auth = freezed,}) {
-  return _then(_self.copyWith(
-unreadOnly: freezed == unreadOnly ? _self.unreadOnly : unreadOnly // ignore: cast_nullable_to_non_nullable
-as bool?,page: freezed == page ? _self.page : page // ignore: cast_nullable_to_non_nullable
-as int?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,creatorId: freezed == creatorId ? _self.creatorId : creatorId // ignore: cast_nullable_to_non_nullable
-as int?,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
+  /// Create a copy of GetPrivateMessages
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? unreadOnly = freezed,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? creatorId = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(
+      _value.copyWith(
+            unreadOnly:
+                freezed == unreadOnly
+                    ? _value.unreadOnly
+                    : unreadOnly // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            page:
+                freezed == page
+                    ? _value.page
+                    : page // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            creatorId:
+                freezed == creatorId
+                    ? _value.creatorId
+                    : creatorId // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$GetPrivateMessagesImplCopyWith<$Res>
+    implements $GetPrivateMessagesCopyWith<$Res> {
+  factory _$$GetPrivateMessagesImplCopyWith(
+    _$GetPrivateMessagesImpl value,
+    $Res Function(_$GetPrivateMessagesImpl) then,
+  ) = __$$GetPrivateMessagesImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({
+    bool? unreadOnly,
+    int? page,
+    int? limit,
+    int? creatorId,
+    String? auth,
+  });
 }
 
+/// @nodoc
+class __$$GetPrivateMessagesImplCopyWithImpl<$Res>
+    extends _$GetPrivateMessagesCopyWithImpl<$Res, _$GetPrivateMessagesImpl>
+    implements _$$GetPrivateMessagesImplCopyWith<$Res> {
+  __$$GetPrivateMessagesImplCopyWithImpl(
+    _$GetPrivateMessagesImpl _value,
+    $Res Function(_$GetPrivateMessagesImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [GetPrivateMessages].
-extension GetPrivateMessagesPatterns on GetPrivateMessages {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _GetPrivateMessages value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _GetPrivateMessages() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _GetPrivateMessages value)  $default,){
-final _that = this;
-switch (_that) {
-case _GetPrivateMessages():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _GetPrivateMessages value)?  $default,){
-final _that = this;
-switch (_that) {
-case _GetPrivateMessages() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( bool? unreadOnly,  int? page,  int? limit,  int? creatorId,  String? auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _GetPrivateMessages() when $default != null:
-return $default(_that.unreadOnly,_that.page,_that.limit,_that.creatorId,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( bool? unreadOnly,  int? page,  int? limit,  int? creatorId,  String? auth)  $default,) {final _that = this;
-switch (_that) {
-case _GetPrivateMessages():
-return $default(_that.unreadOnly,_that.page,_that.limit,_that.creatorId,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( bool? unreadOnly,  int? page,  int? limit,  int? creatorId,  String? auth)?  $default,) {final _that = this;
-switch (_that) {
-case _GetPrivateMessages() when $default != null:
-return $default(_that.unreadOnly,_that.page,_that.limit,_that.creatorId,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of GetPrivateMessages
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? unreadOnly = freezed,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? creatorId = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(
+      _$GetPrivateMessagesImpl(
+        unreadOnly:
+            freezed == unreadOnly
+                ? _value.unreadOnly
+                : unreadOnly // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        page:
+            freezed == page
+                ? _value.page
+                : page // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        creatorId:
+            freezed == creatorId
+                ? _value.creatorId
+                : creatorId // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _GetPrivateMessages extends GetPrivateMessages {
-  const _GetPrivateMessages({this.unreadOnly, this.page, this.limit, this.creatorId, this.auth}): super._();
-  factory _GetPrivateMessages.fromJson(Map<String, dynamic> json) => _$GetPrivateMessagesFromJson(json);
+class _$GetPrivateMessagesImpl extends _GetPrivateMessages {
+  const _$GetPrivateMessagesImpl({
+    this.unreadOnly,
+    this.page,
+    this.limit,
+    this.creatorId,
+    this.auth,
+  }) : super._();
 
-@override final  bool? unreadOnly;
-// v0.18.0
-@override final  int? page;
-// v0.18.0
-@override final  int? limit;
-// v0.18.0
-@override final  int? creatorId;
-// v0.19.0 (optional)
-@override final  String? auth;
+  factory _$GetPrivateMessagesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetPrivateMessagesImplFromJson(json);
 
-/// Create a copy of GetPrivateMessages
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$GetPrivateMessagesCopyWith<_GetPrivateMessages> get copyWith => __$GetPrivateMessagesCopyWithImpl<_GetPrivateMessages>(this, _$identity);
+  @override
+  final bool? unreadOnly;
+  // v0.18.0
+  @override
+  final int? page;
+  // v0.18.0
+  @override
+  final int? limit;
+  // v0.18.0
+  @override
+  final int? creatorId;
+  // v0.19.0 (optional)
+  @override
+  final String? auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$GetPrivateMessagesToJson(this, );
+  @override
+  String toString() {
+    return 'GetPrivateMessages(unreadOnly: $unreadOnly, page: $page, limit: $limit, creatorId: $creatorId, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetPrivateMessagesImpl &&
+            (identical(other.unreadOnly, unreadOnly) ||
+                other.unreadOnly == unreadOnly) &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.creatorId, creatorId) ||
+                other.creatorId == creatorId) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, unreadOnly, page, limit, creatorId, auth);
+
+  /// Create a copy of GetPrivateMessages
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetPrivateMessagesImplCopyWith<_$GetPrivateMessagesImpl> get copyWith =>
+      __$$GetPrivateMessagesImplCopyWithImpl<_$GetPrivateMessagesImpl>(
+        this,
+        _$identity,
+      );
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$GetPrivateMessagesImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _GetPrivateMessages&&(identical(other.unreadOnly, unreadOnly) || other.unreadOnly == unreadOnly)&&(identical(other.page, page) || other.page == page)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.creatorId, creatorId) || other.creatorId == creatorId)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _GetPrivateMessages extends GetPrivateMessages {
+  const factory _GetPrivateMessages({
+    final bool? unreadOnly,
+    final int? page,
+    final int? limit,
+    final int? creatorId,
+    final String? auth,
+  }) = _$GetPrivateMessagesImpl;
+  const _GetPrivateMessages._() : super._();
+
+  factory _GetPrivateMessages.fromJson(Map<String, dynamic> json) =
+      _$GetPrivateMessagesImpl.fromJson;
+
+  @override
+  bool? get unreadOnly; // v0.18.0
+  @override
+  int? get page; // v0.18.0
+  @override
+  int? get limit; // v0.18.0
+  @override
+  int? get creatorId; // v0.19.0 (optional)
+  @override
+  String? get auth;
+
+  /// Create a copy of GetPrivateMessages
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetPrivateMessagesImplCopyWith<_$GetPrivateMessagesImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,unreadOnly,page,limit,creatorId,auth);
-
-@override
-String toString() {
-  return 'GetPrivateMessages(unreadOnly: $unreadOnly, page: $page, limit: $limit, creatorId: $creatorId, auth: $auth)';
+CreatePrivateMessage _$CreatePrivateMessageFromJson(Map<String, dynamic> json) {
+  return _CreatePrivateMessage.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$GetPrivateMessagesCopyWith<$Res> implements $GetPrivateMessagesCopyWith<$Res> {
-  factory _$GetPrivateMessagesCopyWith(_GetPrivateMessages value, $Res Function(_GetPrivateMessages) _then) = __$GetPrivateMessagesCopyWithImpl;
-@override @useResult
-$Res call({
- bool? unreadOnly, int? page, int? limit, int? creatorId, String? auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$GetPrivateMessagesCopyWithImpl<$Res>
-    implements _$GetPrivateMessagesCopyWith<$Res> {
-  __$GetPrivateMessagesCopyWithImpl(this._self, this._then);
-
-  final _GetPrivateMessages _self;
-  final $Res Function(_GetPrivateMessages) _then;
-
-/// Create a copy of GetPrivateMessages
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? unreadOnly = freezed,Object? page = freezed,Object? limit = freezed,Object? creatorId = freezed,Object? auth = freezed,}) {
-  return _then(_GetPrivateMessages(
-unreadOnly: freezed == unreadOnly ? _self.unreadOnly : unreadOnly // ignore: cast_nullable_to_non_nullable
-as bool?,page: freezed == page ? _self.page : page // ignore: cast_nullable_to_non_nullable
-as int?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,creatorId: freezed == creatorId ? _self.creatorId : creatorId // ignore: cast_nullable_to_non_nullable
-as int?,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$CreatePrivateMessage {
-
- dynamic get path; dynamic get httpMethod; String get content; int get recipientId; String get auth;
-/// Create a copy of CreatePrivateMessage
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$CreatePrivateMessageCopyWith<CreatePrivateMessage> get copyWith => _$CreatePrivateMessageCopyWithImpl<CreatePrivateMessage>(this as CreatePrivateMessage, _$identity);
+  String get content => throw _privateConstructorUsedError;
+  int get recipientId => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
   /// Serializes this CreatePrivateMessage to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is CreatePrivateMessage&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.content, content) || other.content == content)&&(identical(other.recipientId, recipientId) || other.recipientId == recipientId)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),content,recipientId,auth);
-
-@override
-String toString() {
-  return 'CreatePrivateMessage(path: $path, httpMethod: $httpMethod, content: $content, recipientId: $recipientId, auth: $auth)';
-}
-
-
+  /// Create a copy of CreatePrivateMessage
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $CreatePrivateMessageCopyWith<CreatePrivateMessage> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $CreatePrivateMessageCopyWith<$Res>  {
-  factory $CreatePrivateMessageCopyWith(CreatePrivateMessage value, $Res Function(CreatePrivateMessage) _then) = _$CreatePrivateMessageCopyWithImpl;
-@useResult
-$Res call({
- String content, int recipientId, String auth
-});
-
-
-
-
+abstract class $CreatePrivateMessageCopyWith<$Res> {
+  factory $CreatePrivateMessageCopyWith(
+    CreatePrivateMessage value,
+    $Res Function(CreatePrivateMessage) then,
+  ) = _$CreatePrivateMessageCopyWithImpl<$Res, CreatePrivateMessage>;
+  @useResult
+  $Res call({String content, int recipientId, String auth});
 }
+
 /// @nodoc
-class _$CreatePrivateMessageCopyWithImpl<$Res>
+class _$CreatePrivateMessageCopyWithImpl<
+  $Res,
+  $Val extends CreatePrivateMessage
+>
     implements $CreatePrivateMessageCopyWith<$Res> {
-  _$CreatePrivateMessageCopyWithImpl(this._self, this._then);
+  _$CreatePrivateMessageCopyWithImpl(this._value, this._then);
 
-  final CreatePrivateMessage _self;
-  final $Res Function(CreatePrivateMessage) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of CreatePrivateMessage
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? content = null,Object? recipientId = null,Object? auth = null,}) {
-  return _then(_self.copyWith(
-content: null == content ? _self.content : content // ignore: cast_nullable_to_non_nullable
-as String,recipientId: null == recipientId ? _self.recipientId : recipientId // ignore: cast_nullable_to_non_nullable
-as int,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of CreatePrivateMessage
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? content = null,
+    Object? recipientId = null,
+    Object? auth = null,
+  }) {
+    return _then(
+      _value.copyWith(
+            content:
+                null == content
+                    ? _value.content
+                    : content // ignore: cast_nullable_to_non_nullable
+                        as String,
+            recipientId:
+                null == recipientId
+                    ? _value.recipientId
+                    : recipientId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$CreatePrivateMessageImplCopyWith<$Res>
+    implements $CreatePrivateMessageCopyWith<$Res> {
+  factory _$$CreatePrivateMessageImplCopyWith(
+    _$CreatePrivateMessageImpl value,
+    $Res Function(_$CreatePrivateMessageImpl) then,
+  ) = __$$CreatePrivateMessageImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String content, int recipientId, String auth});
 }
 
+/// @nodoc
+class __$$CreatePrivateMessageImplCopyWithImpl<$Res>
+    extends _$CreatePrivateMessageCopyWithImpl<$Res, _$CreatePrivateMessageImpl>
+    implements _$$CreatePrivateMessageImplCopyWith<$Res> {
+  __$$CreatePrivateMessageImplCopyWithImpl(
+    _$CreatePrivateMessageImpl _value,
+    $Res Function(_$CreatePrivateMessageImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [CreatePrivateMessage].
-extension CreatePrivateMessagePatterns on CreatePrivateMessage {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _CreatePrivateMessage value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _CreatePrivateMessage() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _CreatePrivateMessage value)  $default,){
-final _that = this;
-switch (_that) {
-case _CreatePrivateMessage():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _CreatePrivateMessage value)?  $default,){
-final _that = this;
-switch (_that) {
-case _CreatePrivateMessage() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String content,  int recipientId,  String auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _CreatePrivateMessage() when $default != null:
-return $default(_that.content,_that.recipientId,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String content,  int recipientId,  String auth)  $default,) {final _that = this;
-switch (_that) {
-case _CreatePrivateMessage():
-return $default(_that.content,_that.recipientId,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String content,  int recipientId,  String auth)?  $default,) {final _that = this;
-switch (_that) {
-case _CreatePrivateMessage() when $default != null:
-return $default(_that.content,_that.recipientId,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of CreatePrivateMessage
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? content = null,
+    Object? recipientId = null,
+    Object? auth = null,
+  }) {
+    return _then(
+      _$CreatePrivateMessageImpl(
+        content:
+            null == content
+                ? _value.content
+                : content // ignore: cast_nullable_to_non_nullable
+                    as String,
+        recipientId:
+            null == recipientId
+                ? _value.recipientId
+                : recipientId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _CreatePrivateMessage extends CreatePrivateMessage {
-  const _CreatePrivateMessage({required this.content, required this.recipientId, required this.auth}): super._();
-  factory _CreatePrivateMessage.fromJson(Map<String, dynamic> json) => _$CreatePrivateMessageFromJson(json);
+class _$CreatePrivateMessageImpl extends _CreatePrivateMessage {
+  const _$CreatePrivateMessageImpl({
+    required this.content,
+    required this.recipientId,
+    required this.auth,
+  }) : super._();
 
-@override final  String content;
-@override final  int recipientId;
-@override final  String auth;
+  factory _$CreatePrivateMessageImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CreatePrivateMessageImplFromJson(json);
 
-/// Create a copy of CreatePrivateMessage
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$CreatePrivateMessageCopyWith<_CreatePrivateMessage> get copyWith => __$CreatePrivateMessageCopyWithImpl<_CreatePrivateMessage>(this, _$identity);
+  @override
+  final String content;
+  @override
+  final int recipientId;
+  @override
+  final String auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$CreatePrivateMessageToJson(this, );
+  @override
+  String toString() {
+    return 'CreatePrivateMessage(content: $content, recipientId: $recipientId, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CreatePrivateMessageImpl &&
+            (identical(other.content, content) || other.content == content) &&
+            (identical(other.recipientId, recipientId) ||
+                other.recipientId == recipientId) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, content, recipientId, auth);
+
+  /// Create a copy of CreatePrivateMessage
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CreatePrivateMessageImplCopyWith<_$CreatePrivateMessageImpl>
+  get copyWith =>
+      __$$CreatePrivateMessageImplCopyWithImpl<_$CreatePrivateMessageImpl>(
+        this,
+        _$identity,
+      );
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$CreatePrivateMessageImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CreatePrivateMessage&&(identical(other.content, content) || other.content == content)&&(identical(other.recipientId, recipientId) || other.recipientId == recipientId)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _CreatePrivateMessage extends CreatePrivateMessage {
+  const factory _CreatePrivateMessage({
+    required final String content,
+    required final int recipientId,
+    required final String auth,
+  }) = _$CreatePrivateMessageImpl;
+  const _CreatePrivateMessage._() : super._();
+
+  factory _CreatePrivateMessage.fromJson(Map<String, dynamic> json) =
+      _$CreatePrivateMessageImpl.fromJson;
+
+  @override
+  String get content;
+  @override
+  int get recipientId;
+  @override
+  String get auth;
+
+  /// Create a copy of CreatePrivateMessage
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$CreatePrivateMessageImplCopyWith<_$CreatePrivateMessageImpl>
+  get copyWith => throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,content,recipientId,auth);
-
-@override
-String toString() {
-  return 'CreatePrivateMessage(content: $content, recipientId: $recipientId, auth: $auth)';
+EditPrivateMessage _$EditPrivateMessageFromJson(Map<String, dynamic> json) {
+  return _EditPrivateMessage.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$CreatePrivateMessageCopyWith<$Res> implements $CreatePrivateMessageCopyWith<$Res> {
-  factory _$CreatePrivateMessageCopyWith(_CreatePrivateMessage value, $Res Function(_CreatePrivateMessage) _then) = __$CreatePrivateMessageCopyWithImpl;
-@override @useResult
-$Res call({
- String content, int recipientId, String auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$CreatePrivateMessageCopyWithImpl<$Res>
-    implements _$CreatePrivateMessageCopyWith<$Res> {
-  __$CreatePrivateMessageCopyWithImpl(this._self, this._then);
-
-  final _CreatePrivateMessage _self;
-  final $Res Function(_CreatePrivateMessage) _then;
-
-/// Create a copy of CreatePrivateMessage
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? content = null,Object? recipientId = null,Object? auth = null,}) {
-  return _then(_CreatePrivateMessage(
-content: null == content ? _self.content : content // ignore: cast_nullable_to_non_nullable
-as String,recipientId: null == recipientId ? _self.recipientId : recipientId // ignore: cast_nullable_to_non_nullable
-as int,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$EditPrivateMessage {
-
- dynamic get path; dynamic get httpMethod; int get privateMessageId;// v0.18.0
- String get content;// v0.18.0
- String? get auth;
-/// Create a copy of EditPrivateMessage
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$EditPrivateMessageCopyWith<EditPrivateMessage> get copyWith => _$EditPrivateMessageCopyWithImpl<EditPrivateMessage>(this as EditPrivateMessage, _$identity);
+  int get privateMessageId => throw _privateConstructorUsedError; // v0.18.0
+  String get content => throw _privateConstructorUsedError; // v0.18.0
+  String? get auth => throw _privateConstructorUsedError;
 
   /// Serializes this EditPrivateMessage to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is EditPrivateMessage&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.privateMessageId, privateMessageId) || other.privateMessageId == privateMessageId)&&(identical(other.content, content) || other.content == content)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),privateMessageId,content,auth);
-
-@override
-String toString() {
-  return 'EditPrivateMessage(path: $path, httpMethod: $httpMethod, privateMessageId: $privateMessageId, content: $content, auth: $auth)';
-}
-
-
+  /// Create a copy of EditPrivateMessage
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $EditPrivateMessageCopyWith<EditPrivateMessage> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $EditPrivateMessageCopyWith<$Res>  {
-  factory $EditPrivateMessageCopyWith(EditPrivateMessage value, $Res Function(EditPrivateMessage) _then) = _$EditPrivateMessageCopyWithImpl;
-@useResult
-$Res call({
- int privateMessageId, String content, String? auth
-});
-
-
-
-
+abstract class $EditPrivateMessageCopyWith<$Res> {
+  factory $EditPrivateMessageCopyWith(
+    EditPrivateMessage value,
+    $Res Function(EditPrivateMessage) then,
+  ) = _$EditPrivateMessageCopyWithImpl<$Res, EditPrivateMessage>;
+  @useResult
+  $Res call({int privateMessageId, String content, String? auth});
 }
+
 /// @nodoc
-class _$EditPrivateMessageCopyWithImpl<$Res>
+class _$EditPrivateMessageCopyWithImpl<$Res, $Val extends EditPrivateMessage>
     implements $EditPrivateMessageCopyWith<$Res> {
-  _$EditPrivateMessageCopyWithImpl(this._self, this._then);
+  _$EditPrivateMessageCopyWithImpl(this._value, this._then);
 
-  final EditPrivateMessage _self;
-  final $Res Function(EditPrivateMessage) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of EditPrivateMessage
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? privateMessageId = null,Object? content = null,Object? auth = freezed,}) {
-  return _then(_self.copyWith(
-privateMessageId: null == privateMessageId ? _self.privateMessageId : privateMessageId // ignore: cast_nullable_to_non_nullable
-as int,content: null == content ? _self.content : content // ignore: cast_nullable_to_non_nullable
-as String,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
+  /// Create a copy of EditPrivateMessage
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? privateMessageId = null,
+    Object? content = null,
+    Object? auth = freezed,
+  }) {
+    return _then(
+      _value.copyWith(
+            privateMessageId:
+                null == privateMessageId
+                    ? _value.privateMessageId
+                    : privateMessageId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            content:
+                null == content
+                    ? _value.content
+                    : content // ignore: cast_nullable_to_non_nullable
+                        as String,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$EditPrivateMessageImplCopyWith<$Res>
+    implements $EditPrivateMessageCopyWith<$Res> {
+  factory _$$EditPrivateMessageImplCopyWith(
+    _$EditPrivateMessageImpl value,
+    $Res Function(_$EditPrivateMessageImpl) then,
+  ) = __$$EditPrivateMessageImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int privateMessageId, String content, String? auth});
 }
 
+/// @nodoc
+class __$$EditPrivateMessageImplCopyWithImpl<$Res>
+    extends _$EditPrivateMessageCopyWithImpl<$Res, _$EditPrivateMessageImpl>
+    implements _$$EditPrivateMessageImplCopyWith<$Res> {
+  __$$EditPrivateMessageImplCopyWithImpl(
+    _$EditPrivateMessageImpl _value,
+    $Res Function(_$EditPrivateMessageImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [EditPrivateMessage].
-extension EditPrivateMessagePatterns on EditPrivateMessage {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _EditPrivateMessage value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _EditPrivateMessage() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _EditPrivateMessage value)  $default,){
-final _that = this;
-switch (_that) {
-case _EditPrivateMessage():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _EditPrivateMessage value)?  $default,){
-final _that = this;
-switch (_that) {
-case _EditPrivateMessage() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int privateMessageId,  String content,  String? auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _EditPrivateMessage() when $default != null:
-return $default(_that.privateMessageId,_that.content,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int privateMessageId,  String content,  String? auth)  $default,) {final _that = this;
-switch (_that) {
-case _EditPrivateMessage():
-return $default(_that.privateMessageId,_that.content,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int privateMessageId,  String content,  String? auth)?  $default,) {final _that = this;
-switch (_that) {
-case _EditPrivateMessage() when $default != null:
-return $default(_that.privateMessageId,_that.content,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of EditPrivateMessage
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? privateMessageId = null,
+    Object? content = null,
+    Object? auth = freezed,
+  }) {
+    return _then(
+      _$EditPrivateMessageImpl(
+        privateMessageId:
+            null == privateMessageId
+                ? _value.privateMessageId
+                : privateMessageId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        content:
+            null == content
+                ? _value.content
+                : content // ignore: cast_nullable_to_non_nullable
+                    as String,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _EditPrivateMessage extends EditPrivateMessage {
-  const _EditPrivateMessage({required this.privateMessageId, required this.content, this.auth}): super._();
-  factory _EditPrivateMessage.fromJson(Map<String, dynamic> json) => _$EditPrivateMessageFromJson(json);
+class _$EditPrivateMessageImpl extends _EditPrivateMessage {
+  const _$EditPrivateMessageImpl({
+    required this.privateMessageId,
+    required this.content,
+    this.auth,
+  }) : super._();
 
-@override final  int privateMessageId;
-// v0.18.0
-@override final  String content;
-// v0.18.0
-@override final  String? auth;
+  factory _$EditPrivateMessageImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EditPrivateMessageImplFromJson(json);
 
-/// Create a copy of EditPrivateMessage
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$EditPrivateMessageCopyWith<_EditPrivateMessage> get copyWith => __$EditPrivateMessageCopyWithImpl<_EditPrivateMessage>(this, _$identity);
+  @override
+  final int privateMessageId;
+  // v0.18.0
+  @override
+  final String content;
+  // v0.18.0
+  @override
+  final String? auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$EditPrivateMessageToJson(this, );
+  @override
+  String toString() {
+    return 'EditPrivateMessage(privateMessageId: $privateMessageId, content: $content, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EditPrivateMessageImpl &&
+            (identical(other.privateMessageId, privateMessageId) ||
+                other.privateMessageId == privateMessageId) &&
+            (identical(other.content, content) || other.content == content) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, privateMessageId, content, auth);
+
+  /// Create a copy of EditPrivateMessage
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EditPrivateMessageImplCopyWith<_$EditPrivateMessageImpl> get copyWith =>
+      __$$EditPrivateMessageImplCopyWithImpl<_$EditPrivateMessageImpl>(
+        this,
+        _$identity,
+      );
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$EditPrivateMessageImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _EditPrivateMessage&&(identical(other.privateMessageId, privateMessageId) || other.privateMessageId == privateMessageId)&&(identical(other.content, content) || other.content == content)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _EditPrivateMessage extends EditPrivateMessage {
+  const factory _EditPrivateMessage({
+    required final int privateMessageId,
+    required final String content,
+    final String? auth,
+  }) = _$EditPrivateMessageImpl;
+  const _EditPrivateMessage._() : super._();
+
+  factory _EditPrivateMessage.fromJson(Map<String, dynamic> json) =
+      _$EditPrivateMessageImpl.fromJson;
+
+  @override
+  int get privateMessageId; // v0.18.0
+  @override
+  String get content; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of EditPrivateMessage
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$EditPrivateMessageImplCopyWith<_$EditPrivateMessageImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,privateMessageId,content,auth);
-
-@override
-String toString() {
-  return 'EditPrivateMessage(privateMessageId: $privateMessageId, content: $content, auth: $auth)';
+DeletePrivateMessage _$DeletePrivateMessageFromJson(Map<String, dynamic> json) {
+  return _DeletePrivateMessage.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$EditPrivateMessageCopyWith<$Res> implements $EditPrivateMessageCopyWith<$Res> {
-  factory _$EditPrivateMessageCopyWith(_EditPrivateMessage value, $Res Function(_EditPrivateMessage) _then) = __$EditPrivateMessageCopyWithImpl;
-@override @useResult
-$Res call({
- int privateMessageId, String content, String? auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$EditPrivateMessageCopyWithImpl<$Res>
-    implements _$EditPrivateMessageCopyWith<$Res> {
-  __$EditPrivateMessageCopyWithImpl(this._self, this._then);
-
-  final _EditPrivateMessage _self;
-  final $Res Function(_EditPrivateMessage) _then;
-
-/// Create a copy of EditPrivateMessage
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? privateMessageId = null,Object? content = null,Object? auth = freezed,}) {
-  return _then(_EditPrivateMessage(
-privateMessageId: null == privateMessageId ? _self.privateMessageId : privateMessageId // ignore: cast_nullable_to_non_nullable
-as int,content: null == content ? _self.content : content // ignore: cast_nullable_to_non_nullable
-as String,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$DeletePrivateMessage {
-
- dynamic get path; dynamic get httpMethod; int get privateMessageId;// v0.18.0
- bool get deleted;// v0.18.0
- String? get auth;
-/// Create a copy of DeletePrivateMessage
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$DeletePrivateMessageCopyWith<DeletePrivateMessage> get copyWith => _$DeletePrivateMessageCopyWithImpl<DeletePrivateMessage>(this as DeletePrivateMessage, _$identity);
+  int get privateMessageId => throw _privateConstructorUsedError; // v0.18.0
+  bool get deleted => throw _privateConstructorUsedError; // v0.18.0
+  String? get auth => throw _privateConstructorUsedError;
 
   /// Serializes this DeletePrivateMessage to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is DeletePrivateMessage&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.privateMessageId, privateMessageId) || other.privateMessageId == privateMessageId)&&(identical(other.deleted, deleted) || other.deleted == deleted)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),privateMessageId,deleted,auth);
-
-@override
-String toString() {
-  return 'DeletePrivateMessage(path: $path, httpMethod: $httpMethod, privateMessageId: $privateMessageId, deleted: $deleted, auth: $auth)';
-}
-
-
+  /// Create a copy of DeletePrivateMessage
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $DeletePrivateMessageCopyWith<DeletePrivateMessage> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $DeletePrivateMessageCopyWith<$Res>  {
-  factory $DeletePrivateMessageCopyWith(DeletePrivateMessage value, $Res Function(DeletePrivateMessage) _then) = _$DeletePrivateMessageCopyWithImpl;
-@useResult
-$Res call({
- int privateMessageId, bool deleted, String? auth
-});
-
-
-
-
+abstract class $DeletePrivateMessageCopyWith<$Res> {
+  factory $DeletePrivateMessageCopyWith(
+    DeletePrivateMessage value,
+    $Res Function(DeletePrivateMessage) then,
+  ) = _$DeletePrivateMessageCopyWithImpl<$Res, DeletePrivateMessage>;
+  @useResult
+  $Res call({int privateMessageId, bool deleted, String? auth});
 }
+
 /// @nodoc
-class _$DeletePrivateMessageCopyWithImpl<$Res>
+class _$DeletePrivateMessageCopyWithImpl<
+  $Res,
+  $Val extends DeletePrivateMessage
+>
     implements $DeletePrivateMessageCopyWith<$Res> {
-  _$DeletePrivateMessageCopyWithImpl(this._self, this._then);
+  _$DeletePrivateMessageCopyWithImpl(this._value, this._then);
 
-  final DeletePrivateMessage _self;
-  final $Res Function(DeletePrivateMessage) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of DeletePrivateMessage
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? privateMessageId = null,Object? deleted = null,Object? auth = freezed,}) {
-  return _then(_self.copyWith(
-privateMessageId: null == privateMessageId ? _self.privateMessageId : privateMessageId // ignore: cast_nullable_to_non_nullable
-as int,deleted: null == deleted ? _self.deleted : deleted // ignore: cast_nullable_to_non_nullable
-as bool,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
+  /// Create a copy of DeletePrivateMessage
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? privateMessageId = null,
+    Object? deleted = null,
+    Object? auth = freezed,
+  }) {
+    return _then(
+      _value.copyWith(
+            privateMessageId:
+                null == privateMessageId
+                    ? _value.privateMessageId
+                    : privateMessageId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            deleted:
+                null == deleted
+                    ? _value.deleted
+                    : deleted // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$DeletePrivateMessageImplCopyWith<$Res>
+    implements $DeletePrivateMessageCopyWith<$Res> {
+  factory _$$DeletePrivateMessageImplCopyWith(
+    _$DeletePrivateMessageImpl value,
+    $Res Function(_$DeletePrivateMessageImpl) then,
+  ) = __$$DeletePrivateMessageImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int privateMessageId, bool deleted, String? auth});
 }
 
+/// @nodoc
+class __$$DeletePrivateMessageImplCopyWithImpl<$Res>
+    extends _$DeletePrivateMessageCopyWithImpl<$Res, _$DeletePrivateMessageImpl>
+    implements _$$DeletePrivateMessageImplCopyWith<$Res> {
+  __$$DeletePrivateMessageImplCopyWithImpl(
+    _$DeletePrivateMessageImpl _value,
+    $Res Function(_$DeletePrivateMessageImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [DeletePrivateMessage].
-extension DeletePrivateMessagePatterns on DeletePrivateMessage {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _DeletePrivateMessage value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _DeletePrivateMessage() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _DeletePrivateMessage value)  $default,){
-final _that = this;
-switch (_that) {
-case _DeletePrivateMessage():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _DeletePrivateMessage value)?  $default,){
-final _that = this;
-switch (_that) {
-case _DeletePrivateMessage() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int privateMessageId,  bool deleted,  String? auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _DeletePrivateMessage() when $default != null:
-return $default(_that.privateMessageId,_that.deleted,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int privateMessageId,  bool deleted,  String? auth)  $default,) {final _that = this;
-switch (_that) {
-case _DeletePrivateMessage():
-return $default(_that.privateMessageId,_that.deleted,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int privateMessageId,  bool deleted,  String? auth)?  $default,) {final _that = this;
-switch (_that) {
-case _DeletePrivateMessage() when $default != null:
-return $default(_that.privateMessageId,_that.deleted,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of DeletePrivateMessage
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? privateMessageId = null,
+    Object? deleted = null,
+    Object? auth = freezed,
+  }) {
+    return _then(
+      _$DeletePrivateMessageImpl(
+        privateMessageId:
+            null == privateMessageId
+                ? _value.privateMessageId
+                : privateMessageId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        deleted:
+            null == deleted
+                ? _value.deleted
+                : deleted // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _DeletePrivateMessage extends DeletePrivateMessage {
-  const _DeletePrivateMessage({required this.privateMessageId, required this.deleted, this.auth}): super._();
-  factory _DeletePrivateMessage.fromJson(Map<String, dynamic> json) => _$DeletePrivateMessageFromJson(json);
+class _$DeletePrivateMessageImpl extends _DeletePrivateMessage {
+  const _$DeletePrivateMessageImpl({
+    required this.privateMessageId,
+    required this.deleted,
+    this.auth,
+  }) : super._();
 
-@override final  int privateMessageId;
-// v0.18.0
-@override final  bool deleted;
-// v0.18.0
-@override final  String? auth;
+  factory _$DeletePrivateMessageImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DeletePrivateMessageImplFromJson(json);
 
-/// Create a copy of DeletePrivateMessage
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$DeletePrivateMessageCopyWith<_DeletePrivateMessage> get copyWith => __$DeletePrivateMessageCopyWithImpl<_DeletePrivateMessage>(this, _$identity);
+  @override
+  final int privateMessageId;
+  // v0.18.0
+  @override
+  final bool deleted;
+  // v0.18.0
+  @override
+  final String? auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$DeletePrivateMessageToJson(this, );
+  @override
+  String toString() {
+    return 'DeletePrivateMessage(privateMessageId: $privateMessageId, deleted: $deleted, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DeletePrivateMessageImpl &&
+            (identical(other.privateMessageId, privateMessageId) ||
+                other.privateMessageId == privateMessageId) &&
+            (identical(other.deleted, deleted) || other.deleted == deleted) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, privateMessageId, deleted, auth);
+
+  /// Create a copy of DeletePrivateMessage
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DeletePrivateMessageImplCopyWith<_$DeletePrivateMessageImpl>
+  get copyWith =>
+      __$$DeletePrivateMessageImplCopyWithImpl<_$DeletePrivateMessageImpl>(
+        this,
+        _$identity,
+      );
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$DeletePrivateMessageImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _DeletePrivateMessage&&(identical(other.privateMessageId, privateMessageId) || other.privateMessageId == privateMessageId)&&(identical(other.deleted, deleted) || other.deleted == deleted)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _DeletePrivateMessage extends DeletePrivateMessage {
+  const factory _DeletePrivateMessage({
+    required final int privateMessageId,
+    required final bool deleted,
+    final String? auth,
+  }) = _$DeletePrivateMessageImpl;
+  const _DeletePrivateMessage._() : super._();
+
+  factory _DeletePrivateMessage.fromJson(Map<String, dynamic> json) =
+      _$DeletePrivateMessageImpl.fromJson;
+
+  @override
+  int get privateMessageId; // v0.18.0
+  @override
+  bool get deleted; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of DeletePrivateMessage
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$DeletePrivateMessageImplCopyWith<_$DeletePrivateMessageImpl>
+  get copyWith => throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,privateMessageId,deleted,auth);
-
-@override
-String toString() {
-  return 'DeletePrivateMessage(privateMessageId: $privateMessageId, deleted: $deleted, auth: $auth)';
+MarkPrivateMessageAsRead _$MarkPrivateMessageAsReadFromJson(
+  Map<String, dynamic> json,
+) {
+  return _MarkPrivateMessageAsRead.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$DeletePrivateMessageCopyWith<$Res> implements $DeletePrivateMessageCopyWith<$Res> {
-  factory _$DeletePrivateMessageCopyWith(_DeletePrivateMessage value, $Res Function(_DeletePrivateMessage) _then) = __$DeletePrivateMessageCopyWithImpl;
-@override @useResult
-$Res call({
- int privateMessageId, bool deleted, String? auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$DeletePrivateMessageCopyWithImpl<$Res>
-    implements _$DeletePrivateMessageCopyWith<$Res> {
-  __$DeletePrivateMessageCopyWithImpl(this._self, this._then);
-
-  final _DeletePrivateMessage _self;
-  final $Res Function(_DeletePrivateMessage) _then;
-
-/// Create a copy of DeletePrivateMessage
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? privateMessageId = null,Object? deleted = null,Object? auth = freezed,}) {
-  return _then(_DeletePrivateMessage(
-privateMessageId: null == privateMessageId ? _self.privateMessageId : privateMessageId // ignore: cast_nullable_to_non_nullable
-as int,deleted: null == deleted ? _self.deleted : deleted // ignore: cast_nullable_to_non_nullable
-as bool,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$MarkPrivateMessageAsRead {
-
- dynamic get path; dynamic get httpMethod; int get privateMessageId;// v0.18.0
- bool get read;// v0.18.0
- String? get auth;
-/// Create a copy of MarkPrivateMessageAsRead
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$MarkPrivateMessageAsReadCopyWith<MarkPrivateMessageAsRead> get copyWith => _$MarkPrivateMessageAsReadCopyWithImpl<MarkPrivateMessageAsRead>(this as MarkPrivateMessageAsRead, _$identity);
+  int get privateMessageId => throw _privateConstructorUsedError; // v0.18.0
+  bool get read => throw _privateConstructorUsedError; // v0.18.0
+  String? get auth => throw _privateConstructorUsedError;
 
   /// Serializes this MarkPrivateMessageAsRead to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is MarkPrivateMessageAsRead&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.privateMessageId, privateMessageId) || other.privateMessageId == privateMessageId)&&(identical(other.read, read) || other.read == read)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),privateMessageId,read,auth);
-
-@override
-String toString() {
-  return 'MarkPrivateMessageAsRead(path: $path, httpMethod: $httpMethod, privateMessageId: $privateMessageId, read: $read, auth: $auth)';
-}
-
-
+  /// Create a copy of MarkPrivateMessageAsRead
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $MarkPrivateMessageAsReadCopyWith<MarkPrivateMessageAsRead> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $MarkPrivateMessageAsReadCopyWith<$Res>  {
-  factory $MarkPrivateMessageAsReadCopyWith(MarkPrivateMessageAsRead value, $Res Function(MarkPrivateMessageAsRead) _then) = _$MarkPrivateMessageAsReadCopyWithImpl;
-@useResult
-$Res call({
- int privateMessageId, bool read, String? auth
-});
-
-
-
-
+abstract class $MarkPrivateMessageAsReadCopyWith<$Res> {
+  factory $MarkPrivateMessageAsReadCopyWith(
+    MarkPrivateMessageAsRead value,
+    $Res Function(MarkPrivateMessageAsRead) then,
+  ) = _$MarkPrivateMessageAsReadCopyWithImpl<$Res, MarkPrivateMessageAsRead>;
+  @useResult
+  $Res call({int privateMessageId, bool read, String? auth});
 }
+
 /// @nodoc
-class _$MarkPrivateMessageAsReadCopyWithImpl<$Res>
+class _$MarkPrivateMessageAsReadCopyWithImpl<
+  $Res,
+  $Val extends MarkPrivateMessageAsRead
+>
     implements $MarkPrivateMessageAsReadCopyWith<$Res> {
-  _$MarkPrivateMessageAsReadCopyWithImpl(this._self, this._then);
+  _$MarkPrivateMessageAsReadCopyWithImpl(this._value, this._then);
 
-  final MarkPrivateMessageAsRead _self;
-  final $Res Function(MarkPrivateMessageAsRead) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of MarkPrivateMessageAsRead
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? privateMessageId = null,Object? read = null,Object? auth = freezed,}) {
-  return _then(_self.copyWith(
-privateMessageId: null == privateMessageId ? _self.privateMessageId : privateMessageId // ignore: cast_nullable_to_non_nullable
-as int,read: null == read ? _self.read : read // ignore: cast_nullable_to_non_nullable
-as bool,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
+  /// Create a copy of MarkPrivateMessageAsRead
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? privateMessageId = null,
+    Object? read = null,
+    Object? auth = freezed,
+  }) {
+    return _then(
+      _value.copyWith(
+            privateMessageId:
+                null == privateMessageId
+                    ? _value.privateMessageId
+                    : privateMessageId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            read:
+                null == read
+                    ? _value.read
+                    : read // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$MarkPrivateMessageAsReadImplCopyWith<$Res>
+    implements $MarkPrivateMessageAsReadCopyWith<$Res> {
+  factory _$$MarkPrivateMessageAsReadImplCopyWith(
+    _$MarkPrivateMessageAsReadImpl value,
+    $Res Function(_$MarkPrivateMessageAsReadImpl) then,
+  ) = __$$MarkPrivateMessageAsReadImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int privateMessageId, bool read, String? auth});
 }
 
+/// @nodoc
+class __$$MarkPrivateMessageAsReadImplCopyWithImpl<$Res>
+    extends
+        _$MarkPrivateMessageAsReadCopyWithImpl<
+          $Res,
+          _$MarkPrivateMessageAsReadImpl
+        >
+    implements _$$MarkPrivateMessageAsReadImplCopyWith<$Res> {
+  __$$MarkPrivateMessageAsReadImplCopyWithImpl(
+    _$MarkPrivateMessageAsReadImpl _value,
+    $Res Function(_$MarkPrivateMessageAsReadImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [MarkPrivateMessageAsRead].
-extension MarkPrivateMessageAsReadPatterns on MarkPrivateMessageAsRead {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _MarkPrivateMessageAsRead value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _MarkPrivateMessageAsRead() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _MarkPrivateMessageAsRead value)  $default,){
-final _that = this;
-switch (_that) {
-case _MarkPrivateMessageAsRead():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _MarkPrivateMessageAsRead value)?  $default,){
-final _that = this;
-switch (_that) {
-case _MarkPrivateMessageAsRead() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int privateMessageId,  bool read,  String? auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _MarkPrivateMessageAsRead() when $default != null:
-return $default(_that.privateMessageId,_that.read,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int privateMessageId,  bool read,  String? auth)  $default,) {final _that = this;
-switch (_that) {
-case _MarkPrivateMessageAsRead():
-return $default(_that.privateMessageId,_that.read,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int privateMessageId,  bool read,  String? auth)?  $default,) {final _that = this;
-switch (_that) {
-case _MarkPrivateMessageAsRead() when $default != null:
-return $default(_that.privateMessageId,_that.read,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of MarkPrivateMessageAsRead
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? privateMessageId = null,
+    Object? read = null,
+    Object? auth = freezed,
+  }) {
+    return _then(
+      _$MarkPrivateMessageAsReadImpl(
+        privateMessageId:
+            null == privateMessageId
+                ? _value.privateMessageId
+                : privateMessageId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        read:
+            null == read
+                ? _value.read
+                : read // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _MarkPrivateMessageAsRead extends MarkPrivateMessageAsRead {
-  const _MarkPrivateMessageAsRead({required this.privateMessageId, required this.read, this.auth}): super._();
-  factory _MarkPrivateMessageAsRead.fromJson(Map<String, dynamic> json) => _$MarkPrivateMessageAsReadFromJson(json);
+class _$MarkPrivateMessageAsReadImpl extends _MarkPrivateMessageAsRead {
+  const _$MarkPrivateMessageAsReadImpl({
+    required this.privateMessageId,
+    required this.read,
+    this.auth,
+  }) : super._();
 
-@override final  int privateMessageId;
-// v0.18.0
-@override final  bool read;
-// v0.18.0
-@override final  String? auth;
+  factory _$MarkPrivateMessageAsReadImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MarkPrivateMessageAsReadImplFromJson(json);
 
-/// Create a copy of MarkPrivateMessageAsRead
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$MarkPrivateMessageAsReadCopyWith<_MarkPrivateMessageAsRead> get copyWith => __$MarkPrivateMessageAsReadCopyWithImpl<_MarkPrivateMessageAsRead>(this, _$identity);
+  @override
+  final int privateMessageId;
+  // v0.18.0
+  @override
+  final bool read;
+  // v0.18.0
+  @override
+  final String? auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$MarkPrivateMessageAsReadToJson(this, );
+  @override
+  String toString() {
+    return 'MarkPrivateMessageAsRead(privateMessageId: $privateMessageId, read: $read, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$MarkPrivateMessageAsReadImpl &&
+            (identical(other.privateMessageId, privateMessageId) ||
+                other.privateMessageId == privateMessageId) &&
+            (identical(other.read, read) || other.read == read) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, privateMessageId, read, auth);
+
+  /// Create a copy of MarkPrivateMessageAsRead
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$MarkPrivateMessageAsReadImplCopyWith<_$MarkPrivateMessageAsReadImpl>
+  get copyWith => __$$MarkPrivateMessageAsReadImplCopyWithImpl<
+    _$MarkPrivateMessageAsReadImpl
+  >(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$MarkPrivateMessageAsReadImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _MarkPrivateMessageAsRead&&(identical(other.privateMessageId, privateMessageId) || other.privateMessageId == privateMessageId)&&(identical(other.read, read) || other.read == read)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _MarkPrivateMessageAsRead extends MarkPrivateMessageAsRead {
+  const factory _MarkPrivateMessageAsRead({
+    required final int privateMessageId,
+    required final bool read,
+    final String? auth,
+  }) = _$MarkPrivateMessageAsReadImpl;
+  const _MarkPrivateMessageAsRead._() : super._();
+
+  factory _MarkPrivateMessageAsRead.fromJson(Map<String, dynamic> json) =
+      _$MarkPrivateMessageAsReadImpl.fromJson;
+
+  @override
+  int get privateMessageId; // v0.18.0
+  @override
+  bool get read; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of MarkPrivateMessageAsRead
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$MarkPrivateMessageAsReadImplCopyWith<_$MarkPrivateMessageAsReadImpl>
+  get copyWith => throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,privateMessageId,read,auth);
-
-@override
-String toString() {
-  return 'MarkPrivateMessageAsRead(privateMessageId: $privateMessageId, read: $read, auth: $auth)';
+CreatePrivateMessageReport _$CreatePrivateMessageReportFromJson(
+  Map<String, dynamic> json,
+) {
+  return _CreatePrivateMessageReport.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$MarkPrivateMessageAsReadCopyWith<$Res> implements $MarkPrivateMessageAsReadCopyWith<$Res> {
-  factory _$MarkPrivateMessageAsReadCopyWith(_MarkPrivateMessageAsRead value, $Res Function(_MarkPrivateMessageAsRead) _then) = __$MarkPrivateMessageAsReadCopyWithImpl;
-@override @useResult
-$Res call({
- int privateMessageId, bool read, String? auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$MarkPrivateMessageAsReadCopyWithImpl<$Res>
-    implements _$MarkPrivateMessageAsReadCopyWith<$Res> {
-  __$MarkPrivateMessageAsReadCopyWithImpl(this._self, this._then);
-
-  final _MarkPrivateMessageAsRead _self;
-  final $Res Function(_MarkPrivateMessageAsRead) _then;
-
-/// Create a copy of MarkPrivateMessageAsRead
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? privateMessageId = null,Object? read = null,Object? auth = freezed,}) {
-  return _then(_MarkPrivateMessageAsRead(
-privateMessageId: null == privateMessageId ? _self.privateMessageId : privateMessageId // ignore: cast_nullable_to_non_nullable
-as int,read: null == read ? _self.read : read // ignore: cast_nullable_to_non_nullable
-as bool,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$CreatePrivateMessageReport {
-
- dynamic get path; dynamic get httpMethod; int get privateMessageId;// v0.18.0
- String get reason;// v0.18.0
- String? get auth;
-/// Create a copy of CreatePrivateMessageReport
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$CreatePrivateMessageReportCopyWith<CreatePrivateMessageReport> get copyWith => _$CreatePrivateMessageReportCopyWithImpl<CreatePrivateMessageReport>(this as CreatePrivateMessageReport, _$identity);
+  int get privateMessageId => throw _privateConstructorUsedError; // v0.18.0
+  String get reason => throw _privateConstructorUsedError; // v0.18.0
+  String? get auth => throw _privateConstructorUsedError;
 
   /// Serializes this CreatePrivateMessageReport to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is CreatePrivateMessageReport&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.privateMessageId, privateMessageId) || other.privateMessageId == privateMessageId)&&(identical(other.reason, reason) || other.reason == reason)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),privateMessageId,reason,auth);
-
-@override
-String toString() {
-  return 'CreatePrivateMessageReport(path: $path, httpMethod: $httpMethod, privateMessageId: $privateMessageId, reason: $reason, auth: $auth)';
-}
-
-
+  /// Create a copy of CreatePrivateMessageReport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $CreatePrivateMessageReportCopyWith<CreatePrivateMessageReport>
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $CreatePrivateMessageReportCopyWith<$Res>  {
-  factory $CreatePrivateMessageReportCopyWith(CreatePrivateMessageReport value, $Res Function(CreatePrivateMessageReport) _then) = _$CreatePrivateMessageReportCopyWithImpl;
-@useResult
-$Res call({
- int privateMessageId, String reason, String? auth
-});
-
-
-
-
+abstract class $CreatePrivateMessageReportCopyWith<$Res> {
+  factory $CreatePrivateMessageReportCopyWith(
+    CreatePrivateMessageReport value,
+    $Res Function(CreatePrivateMessageReport) then,
+  ) =
+      _$CreatePrivateMessageReportCopyWithImpl<
+        $Res,
+        CreatePrivateMessageReport
+      >;
+  @useResult
+  $Res call({int privateMessageId, String reason, String? auth});
 }
+
 /// @nodoc
-class _$CreatePrivateMessageReportCopyWithImpl<$Res>
+class _$CreatePrivateMessageReportCopyWithImpl<
+  $Res,
+  $Val extends CreatePrivateMessageReport
+>
     implements $CreatePrivateMessageReportCopyWith<$Res> {
-  _$CreatePrivateMessageReportCopyWithImpl(this._self, this._then);
+  _$CreatePrivateMessageReportCopyWithImpl(this._value, this._then);
 
-  final CreatePrivateMessageReport _self;
-  final $Res Function(CreatePrivateMessageReport) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of CreatePrivateMessageReport
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? privateMessageId = null,Object? reason = null,Object? auth = freezed,}) {
-  return _then(_self.copyWith(
-privateMessageId: null == privateMessageId ? _self.privateMessageId : privateMessageId // ignore: cast_nullable_to_non_nullable
-as int,reason: null == reason ? _self.reason : reason // ignore: cast_nullable_to_non_nullable
-as String,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
+  /// Create a copy of CreatePrivateMessageReport
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? privateMessageId = null,
+    Object? reason = null,
+    Object? auth = freezed,
+  }) {
+    return _then(
+      _value.copyWith(
+            privateMessageId:
+                null == privateMessageId
+                    ? _value.privateMessageId
+                    : privateMessageId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            reason:
+                null == reason
+                    ? _value.reason
+                    : reason // ignore: cast_nullable_to_non_nullable
+                        as String,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$CreatePrivateMessageReportImplCopyWith<$Res>
+    implements $CreatePrivateMessageReportCopyWith<$Res> {
+  factory _$$CreatePrivateMessageReportImplCopyWith(
+    _$CreatePrivateMessageReportImpl value,
+    $Res Function(_$CreatePrivateMessageReportImpl) then,
+  ) = __$$CreatePrivateMessageReportImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int privateMessageId, String reason, String? auth});
 }
 
+/// @nodoc
+class __$$CreatePrivateMessageReportImplCopyWithImpl<$Res>
+    extends
+        _$CreatePrivateMessageReportCopyWithImpl<
+          $Res,
+          _$CreatePrivateMessageReportImpl
+        >
+    implements _$$CreatePrivateMessageReportImplCopyWith<$Res> {
+  __$$CreatePrivateMessageReportImplCopyWithImpl(
+    _$CreatePrivateMessageReportImpl _value,
+    $Res Function(_$CreatePrivateMessageReportImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [CreatePrivateMessageReport].
-extension CreatePrivateMessageReportPatterns on CreatePrivateMessageReport {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _CreatePrivateMessageReport value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _CreatePrivateMessageReport() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _CreatePrivateMessageReport value)  $default,){
-final _that = this;
-switch (_that) {
-case _CreatePrivateMessageReport():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _CreatePrivateMessageReport value)?  $default,){
-final _that = this;
-switch (_that) {
-case _CreatePrivateMessageReport() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int privateMessageId,  String reason,  String? auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _CreatePrivateMessageReport() when $default != null:
-return $default(_that.privateMessageId,_that.reason,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int privateMessageId,  String reason,  String? auth)  $default,) {final _that = this;
-switch (_that) {
-case _CreatePrivateMessageReport():
-return $default(_that.privateMessageId,_that.reason,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int privateMessageId,  String reason,  String? auth)?  $default,) {final _that = this;
-switch (_that) {
-case _CreatePrivateMessageReport() when $default != null:
-return $default(_that.privateMessageId,_that.reason,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of CreatePrivateMessageReport
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? privateMessageId = null,
+    Object? reason = null,
+    Object? auth = freezed,
+  }) {
+    return _then(
+      _$CreatePrivateMessageReportImpl(
+        privateMessageId:
+            null == privateMessageId
+                ? _value.privateMessageId
+                : privateMessageId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        reason:
+            null == reason
+                ? _value.reason
+                : reason // ignore: cast_nullable_to_non_nullable
+                    as String,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _CreatePrivateMessageReport extends CreatePrivateMessageReport {
-  const _CreatePrivateMessageReport({required this.privateMessageId, required this.reason, this.auth}): super._();
-  factory _CreatePrivateMessageReport.fromJson(Map<String, dynamic> json) => _$CreatePrivateMessageReportFromJson(json);
+class _$CreatePrivateMessageReportImpl extends _CreatePrivateMessageReport {
+  const _$CreatePrivateMessageReportImpl({
+    required this.privateMessageId,
+    required this.reason,
+    this.auth,
+  }) : super._();
 
-@override final  int privateMessageId;
-// v0.18.0
-@override final  String reason;
-// v0.18.0
-@override final  String? auth;
+  factory _$CreatePrivateMessageReportImpl.fromJson(
+    Map<String, dynamic> json,
+  ) => _$$CreatePrivateMessageReportImplFromJson(json);
 
-/// Create a copy of CreatePrivateMessageReport
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$CreatePrivateMessageReportCopyWith<_CreatePrivateMessageReport> get copyWith => __$CreatePrivateMessageReportCopyWithImpl<_CreatePrivateMessageReport>(this, _$identity);
+  @override
+  final int privateMessageId;
+  // v0.18.0
+  @override
+  final String reason;
+  // v0.18.0
+  @override
+  final String? auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$CreatePrivateMessageReportToJson(this, );
+  @override
+  String toString() {
+    return 'CreatePrivateMessageReport(privateMessageId: $privateMessageId, reason: $reason, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CreatePrivateMessageReportImpl &&
+            (identical(other.privateMessageId, privateMessageId) ||
+                other.privateMessageId == privateMessageId) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, privateMessageId, reason, auth);
+
+  /// Create a copy of CreatePrivateMessageReport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CreatePrivateMessageReportImplCopyWith<_$CreatePrivateMessageReportImpl>
+  get copyWith => __$$CreatePrivateMessageReportImplCopyWithImpl<
+    _$CreatePrivateMessageReportImpl
+  >(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$CreatePrivateMessageReportImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CreatePrivateMessageReport&&(identical(other.privateMessageId, privateMessageId) || other.privateMessageId == privateMessageId)&&(identical(other.reason, reason) || other.reason == reason)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _CreatePrivateMessageReport extends CreatePrivateMessageReport {
+  const factory _CreatePrivateMessageReport({
+    required final int privateMessageId,
+    required final String reason,
+    final String? auth,
+  }) = _$CreatePrivateMessageReportImpl;
+  const _CreatePrivateMessageReport._() : super._();
+
+  factory _CreatePrivateMessageReport.fromJson(Map<String, dynamic> json) =
+      _$CreatePrivateMessageReportImpl.fromJson;
+
+  @override
+  int get privateMessageId; // v0.18.0
+  @override
+  String get reason; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of CreatePrivateMessageReport
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$CreatePrivateMessageReportImplCopyWith<_$CreatePrivateMessageReportImpl>
+  get copyWith => throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,privateMessageId,reason,auth);
-
-@override
-String toString() {
-  return 'CreatePrivateMessageReport(privateMessageId: $privateMessageId, reason: $reason, auth: $auth)';
+ResolvePrivateMessageReport _$ResolvePrivateMessageReportFromJson(
+  Map<String, dynamic> json,
+) {
+  return _ResolvePrivateMessageReport.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$CreatePrivateMessageReportCopyWith<$Res> implements $CreatePrivateMessageReportCopyWith<$Res> {
-  factory _$CreatePrivateMessageReportCopyWith(_CreatePrivateMessageReport value, $Res Function(_CreatePrivateMessageReport) _then) = __$CreatePrivateMessageReportCopyWithImpl;
-@override @useResult
-$Res call({
- int privateMessageId, String reason, String? auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$CreatePrivateMessageReportCopyWithImpl<$Res>
-    implements _$CreatePrivateMessageReportCopyWith<$Res> {
-  __$CreatePrivateMessageReportCopyWithImpl(this._self, this._then);
-
-  final _CreatePrivateMessageReport _self;
-  final $Res Function(_CreatePrivateMessageReport) _then;
-
-/// Create a copy of CreatePrivateMessageReport
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? privateMessageId = null,Object? reason = null,Object? auth = freezed,}) {
-  return _then(_CreatePrivateMessageReport(
-privateMessageId: null == privateMessageId ? _self.privateMessageId : privateMessageId // ignore: cast_nullable_to_non_nullable
-as int,reason: null == reason ? _self.reason : reason // ignore: cast_nullable_to_non_nullable
-as String,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$ResolvePrivateMessageReport {
-
- dynamic get path; dynamic get httpMethod; int get reportId;// v0.18.0
- bool get resolved;// v0.18.0
- String? get auth;
-/// Create a copy of ResolvePrivateMessageReport
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$ResolvePrivateMessageReportCopyWith<ResolvePrivateMessageReport> get copyWith => _$ResolvePrivateMessageReportCopyWithImpl<ResolvePrivateMessageReport>(this as ResolvePrivateMessageReport, _$identity);
+  int get reportId => throw _privateConstructorUsedError; // v0.18.0
+  bool get resolved => throw _privateConstructorUsedError; // v0.18.0
+  String? get auth => throw _privateConstructorUsedError;
 
   /// Serializes this ResolvePrivateMessageReport to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ResolvePrivateMessageReport&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.reportId, reportId) || other.reportId == reportId)&&(identical(other.resolved, resolved) || other.resolved == resolved)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),reportId,resolved,auth);
-
-@override
-String toString() {
-  return 'ResolvePrivateMessageReport(path: $path, httpMethod: $httpMethod, reportId: $reportId, resolved: $resolved, auth: $auth)';
-}
-
-
+  /// Create a copy of ResolvePrivateMessageReport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $ResolvePrivateMessageReportCopyWith<ResolvePrivateMessageReport>
+  get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $ResolvePrivateMessageReportCopyWith<$Res>  {
-  factory $ResolvePrivateMessageReportCopyWith(ResolvePrivateMessageReport value, $Res Function(ResolvePrivateMessageReport) _then) = _$ResolvePrivateMessageReportCopyWithImpl;
-@useResult
-$Res call({
- int reportId, bool resolved, String? auth
-});
-
-
-
-
+abstract class $ResolvePrivateMessageReportCopyWith<$Res> {
+  factory $ResolvePrivateMessageReportCopyWith(
+    ResolvePrivateMessageReport value,
+    $Res Function(ResolvePrivateMessageReport) then,
+  ) =
+      _$ResolvePrivateMessageReportCopyWithImpl<
+        $Res,
+        ResolvePrivateMessageReport
+      >;
+  @useResult
+  $Res call({int reportId, bool resolved, String? auth});
 }
+
 /// @nodoc
-class _$ResolvePrivateMessageReportCopyWithImpl<$Res>
+class _$ResolvePrivateMessageReportCopyWithImpl<
+  $Res,
+  $Val extends ResolvePrivateMessageReport
+>
     implements $ResolvePrivateMessageReportCopyWith<$Res> {
-  _$ResolvePrivateMessageReportCopyWithImpl(this._self, this._then);
+  _$ResolvePrivateMessageReportCopyWithImpl(this._value, this._then);
 
-  final ResolvePrivateMessageReport _self;
-  final $Res Function(ResolvePrivateMessageReport) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of ResolvePrivateMessageReport
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? reportId = null,Object? resolved = null,Object? auth = freezed,}) {
-  return _then(_self.copyWith(
-reportId: null == reportId ? _self.reportId : reportId // ignore: cast_nullable_to_non_nullable
-as int,resolved: null == resolved ? _self.resolved : resolved // ignore: cast_nullable_to_non_nullable
-as bool,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
+  /// Create a copy of ResolvePrivateMessageReport
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? reportId = null,
+    Object? resolved = null,
+    Object? auth = freezed,
+  }) {
+    return _then(
+      _value.copyWith(
+            reportId:
+                null == reportId
+                    ? _value.reportId
+                    : reportId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            resolved:
+                null == resolved
+                    ? _value.resolved
+                    : resolved // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$ResolvePrivateMessageReportImplCopyWith<$Res>
+    implements $ResolvePrivateMessageReportCopyWith<$Res> {
+  factory _$$ResolvePrivateMessageReportImplCopyWith(
+    _$ResolvePrivateMessageReportImpl value,
+    $Res Function(_$ResolvePrivateMessageReportImpl) then,
+  ) = __$$ResolvePrivateMessageReportImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int reportId, bool resolved, String? auth});
 }
 
+/// @nodoc
+class __$$ResolvePrivateMessageReportImplCopyWithImpl<$Res>
+    extends
+        _$ResolvePrivateMessageReportCopyWithImpl<
+          $Res,
+          _$ResolvePrivateMessageReportImpl
+        >
+    implements _$$ResolvePrivateMessageReportImplCopyWith<$Res> {
+  __$$ResolvePrivateMessageReportImplCopyWithImpl(
+    _$ResolvePrivateMessageReportImpl _value,
+    $Res Function(_$ResolvePrivateMessageReportImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [ResolvePrivateMessageReport].
-extension ResolvePrivateMessageReportPatterns on ResolvePrivateMessageReport {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ResolvePrivateMessageReport value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _ResolvePrivateMessageReport() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ResolvePrivateMessageReport value)  $default,){
-final _that = this;
-switch (_that) {
-case _ResolvePrivateMessageReport():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ResolvePrivateMessageReport value)?  $default,){
-final _that = this;
-switch (_that) {
-case _ResolvePrivateMessageReport() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int reportId,  bool resolved,  String? auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _ResolvePrivateMessageReport() when $default != null:
-return $default(_that.reportId,_that.resolved,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int reportId,  bool resolved,  String? auth)  $default,) {final _that = this;
-switch (_that) {
-case _ResolvePrivateMessageReport():
-return $default(_that.reportId,_that.resolved,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int reportId,  bool resolved,  String? auth)?  $default,) {final _that = this;
-switch (_that) {
-case _ResolvePrivateMessageReport() when $default != null:
-return $default(_that.reportId,_that.resolved,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of ResolvePrivateMessageReport
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? reportId = null,
+    Object? resolved = null,
+    Object? auth = freezed,
+  }) {
+    return _then(
+      _$ResolvePrivateMessageReportImpl(
+        reportId:
+            null == reportId
+                ? _value.reportId
+                : reportId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        resolved:
+            null == resolved
+                ? _value.resolved
+                : resolved // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _ResolvePrivateMessageReport extends ResolvePrivateMessageReport {
-  const _ResolvePrivateMessageReport({required this.reportId, required this.resolved, this.auth}): super._();
-  factory _ResolvePrivateMessageReport.fromJson(Map<String, dynamic> json) => _$ResolvePrivateMessageReportFromJson(json);
+class _$ResolvePrivateMessageReportImpl extends _ResolvePrivateMessageReport {
+  const _$ResolvePrivateMessageReportImpl({
+    required this.reportId,
+    required this.resolved,
+    this.auth,
+  }) : super._();
 
-@override final  int reportId;
-// v0.18.0
-@override final  bool resolved;
-// v0.18.0
-@override final  String? auth;
+  factory _$ResolvePrivateMessageReportImpl.fromJson(
+    Map<String, dynamic> json,
+  ) => _$$ResolvePrivateMessageReportImplFromJson(json);
 
-/// Create a copy of ResolvePrivateMessageReport
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ResolvePrivateMessageReportCopyWith<_ResolvePrivateMessageReport> get copyWith => __$ResolvePrivateMessageReportCopyWithImpl<_ResolvePrivateMessageReport>(this, _$identity);
+  @override
+  final int reportId;
+  // v0.18.0
+  @override
+  final bool resolved;
+  // v0.18.0
+  @override
+  final String? auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$ResolvePrivateMessageReportToJson(this, );
+  @override
+  String toString() {
+    return 'ResolvePrivateMessageReport(reportId: $reportId, resolved: $resolved, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ResolvePrivateMessageReportImpl &&
+            (identical(other.reportId, reportId) ||
+                other.reportId == reportId) &&
+            (identical(other.resolved, resolved) ||
+                other.resolved == resolved) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, reportId, resolved, auth);
+
+  /// Create a copy of ResolvePrivateMessageReport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ResolvePrivateMessageReportImplCopyWith<_$ResolvePrivateMessageReportImpl>
+  get copyWith => __$$ResolvePrivateMessageReportImplCopyWithImpl<
+    _$ResolvePrivateMessageReportImpl
+  >(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ResolvePrivateMessageReportImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ResolvePrivateMessageReport&&(identical(other.reportId, reportId) || other.reportId == reportId)&&(identical(other.resolved, resolved) || other.resolved == resolved)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _ResolvePrivateMessageReport
+    extends ResolvePrivateMessageReport {
+  const factory _ResolvePrivateMessageReport({
+    required final int reportId,
+    required final bool resolved,
+    final String? auth,
+  }) = _$ResolvePrivateMessageReportImpl;
+  const _ResolvePrivateMessageReport._() : super._();
+
+  factory _ResolvePrivateMessageReport.fromJson(Map<String, dynamic> json) =
+      _$ResolvePrivateMessageReportImpl.fromJson;
+
+  @override
+  int get reportId; // v0.18.0
+  @override
+  bool get resolved; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of ResolvePrivateMessageReport
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ResolvePrivateMessageReportImplCopyWith<_$ResolvePrivateMessageReportImpl>
+  get copyWith => throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,reportId,resolved,auth);
-
-@override
-String toString() {
-  return 'ResolvePrivateMessageReport(reportId: $reportId, resolved: $resolved, auth: $auth)';
+ListPrivateMessageReports _$ListPrivateMessageReportsFromJson(
+  Map<String, dynamic> json,
+) {
+  return _ListPrivateMessageReports.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ResolvePrivateMessageReportCopyWith<$Res> implements $ResolvePrivateMessageReportCopyWith<$Res> {
-  factory _$ResolvePrivateMessageReportCopyWith(_ResolvePrivateMessageReport value, $Res Function(_ResolvePrivateMessageReport) _then) = __$ResolvePrivateMessageReportCopyWithImpl;
-@override @useResult
-$Res call({
- int reportId, bool resolved, String? auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$ResolvePrivateMessageReportCopyWithImpl<$Res>
-    implements _$ResolvePrivateMessageReportCopyWith<$Res> {
-  __$ResolvePrivateMessageReportCopyWithImpl(this._self, this._then);
-
-  final _ResolvePrivateMessageReport _self;
-  final $Res Function(_ResolvePrivateMessageReport) _then;
-
-/// Create a copy of ResolvePrivateMessageReport
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? reportId = null,Object? resolved = null,Object? auth = freezed,}) {
-  return _then(_ResolvePrivateMessageReport(
-reportId: null == reportId ? _self.reportId : reportId // ignore: cast_nullable_to_non_nullable
-as int,resolved: null == resolved ? _self.resolved : resolved // ignore: cast_nullable_to_non_nullable
-as bool,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$ListPrivateMessageReports {
-
- dynamic get path; dynamic get httpMethod; int? get page;// v0.18.0
- int? get limit;// v0.18.0
- bool? get unresolvedOnly;// v0.18.0
- int? get communityId; String? get auth;
-/// Create a copy of ListPrivateMessageReports
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$ListPrivateMessageReportsCopyWith<ListPrivateMessageReports> get copyWith => _$ListPrivateMessageReportsCopyWithImpl<ListPrivateMessageReports>(this as ListPrivateMessageReports, _$identity);
+  int? get page => throw _privateConstructorUsedError; // v0.18.0
+  int? get limit => throw _privateConstructorUsedError; // v0.18.0
+  bool? get unresolvedOnly => throw _privateConstructorUsedError; // v0.18.0
+  int? get communityId => throw _privateConstructorUsedError;
+  String? get auth => throw _privateConstructorUsedError;
 
   /// Serializes this ListPrivateMessageReports to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ListPrivateMessageReports&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.page, page) || other.page == page)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.unresolvedOnly, unresolvedOnly) || other.unresolvedOnly == unresolvedOnly)&&(identical(other.communityId, communityId) || other.communityId == communityId)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),page,limit,unresolvedOnly,communityId,auth);
-
-@override
-String toString() {
-  return 'ListPrivateMessageReports(path: $path, httpMethod: $httpMethod, page: $page, limit: $limit, unresolvedOnly: $unresolvedOnly, communityId: $communityId, auth: $auth)';
-}
-
-
+  /// Create a copy of ListPrivateMessageReports
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $ListPrivateMessageReportsCopyWith<ListPrivateMessageReports> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $ListPrivateMessageReportsCopyWith<$Res>  {
-  factory $ListPrivateMessageReportsCopyWith(ListPrivateMessageReports value, $Res Function(ListPrivateMessageReports) _then) = _$ListPrivateMessageReportsCopyWithImpl;
-@useResult
-$Res call({
- int? page, int? limit, bool? unresolvedOnly, int? communityId, String? auth
-});
-
-
-
-
+abstract class $ListPrivateMessageReportsCopyWith<$Res> {
+  factory $ListPrivateMessageReportsCopyWith(
+    ListPrivateMessageReports value,
+    $Res Function(ListPrivateMessageReports) then,
+  ) = _$ListPrivateMessageReportsCopyWithImpl<$Res, ListPrivateMessageReports>;
+  @useResult
+  $Res call({
+    int? page,
+    int? limit,
+    bool? unresolvedOnly,
+    int? communityId,
+    String? auth,
+  });
 }
+
 /// @nodoc
-class _$ListPrivateMessageReportsCopyWithImpl<$Res>
+class _$ListPrivateMessageReportsCopyWithImpl<
+  $Res,
+  $Val extends ListPrivateMessageReports
+>
     implements $ListPrivateMessageReportsCopyWith<$Res> {
-  _$ListPrivateMessageReportsCopyWithImpl(this._self, this._then);
+  _$ListPrivateMessageReportsCopyWithImpl(this._value, this._then);
 
-  final ListPrivateMessageReports _self;
-  final $Res Function(ListPrivateMessageReports) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of ListPrivateMessageReports
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? page = freezed,Object? limit = freezed,Object? unresolvedOnly = freezed,Object? communityId = freezed,Object? auth = freezed,}) {
-  return _then(_self.copyWith(
-page: freezed == page ? _self.page : page // ignore: cast_nullable_to_non_nullable
-as int?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,unresolvedOnly: freezed == unresolvedOnly ? _self.unresolvedOnly : unresolvedOnly // ignore: cast_nullable_to_non_nullable
-as bool?,communityId: freezed == communityId ? _self.communityId : communityId // ignore: cast_nullable_to_non_nullable
-as int?,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
+  /// Create a copy of ListPrivateMessageReports
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? unresolvedOnly = freezed,
+    Object? communityId = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(
+      _value.copyWith(
+            page:
+                freezed == page
+                    ? _value.page
+                    : page // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            unresolvedOnly:
+                freezed == unresolvedOnly
+                    ? _value.unresolvedOnly
+                    : unresolvedOnly // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            communityId:
+                freezed == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$ListPrivateMessageReportsImplCopyWith<$Res>
+    implements $ListPrivateMessageReportsCopyWith<$Res> {
+  factory _$$ListPrivateMessageReportsImplCopyWith(
+    _$ListPrivateMessageReportsImpl value,
+    $Res Function(_$ListPrivateMessageReportsImpl) then,
+  ) = __$$ListPrivateMessageReportsImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({
+    int? page,
+    int? limit,
+    bool? unresolvedOnly,
+    int? communityId,
+    String? auth,
+  });
 }
 
+/// @nodoc
+class __$$ListPrivateMessageReportsImplCopyWithImpl<$Res>
+    extends
+        _$ListPrivateMessageReportsCopyWithImpl<
+          $Res,
+          _$ListPrivateMessageReportsImpl
+        >
+    implements _$$ListPrivateMessageReportsImplCopyWith<$Res> {
+  __$$ListPrivateMessageReportsImplCopyWithImpl(
+    _$ListPrivateMessageReportsImpl _value,
+    $Res Function(_$ListPrivateMessageReportsImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [ListPrivateMessageReports].
-extension ListPrivateMessageReportsPatterns on ListPrivateMessageReports {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ListPrivateMessageReports value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _ListPrivateMessageReports() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ListPrivateMessageReports value)  $default,){
-final _that = this;
-switch (_that) {
-case _ListPrivateMessageReports():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ListPrivateMessageReports value)?  $default,){
-final _that = this;
-switch (_that) {
-case _ListPrivateMessageReports() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? page,  int? limit,  bool? unresolvedOnly,  int? communityId,  String? auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _ListPrivateMessageReports() when $default != null:
-return $default(_that.page,_that.limit,_that.unresolvedOnly,_that.communityId,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? page,  int? limit,  bool? unresolvedOnly,  int? communityId,  String? auth)  $default,) {final _that = this;
-switch (_that) {
-case _ListPrivateMessageReports():
-return $default(_that.page,_that.limit,_that.unresolvedOnly,_that.communityId,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? page,  int? limit,  bool? unresolvedOnly,  int? communityId,  String? auth)?  $default,) {final _that = this;
-switch (_that) {
-case _ListPrivateMessageReports() when $default != null:
-return $default(_that.page,_that.limit,_that.unresolvedOnly,_that.communityId,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of ListPrivateMessageReports
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? unresolvedOnly = freezed,
+    Object? communityId = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(
+      _$ListPrivateMessageReportsImpl(
+        page:
+            freezed == page
+                ? _value.page
+                : page // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        unresolvedOnly:
+            freezed == unresolvedOnly
+                ? _value.unresolvedOnly
+                : unresolvedOnly // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        communityId:
+            freezed == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _ListPrivateMessageReports extends ListPrivateMessageReports {
-  const _ListPrivateMessageReports({this.page, this.limit, this.unresolvedOnly, this.communityId, this.auth}): super._();
-  factory _ListPrivateMessageReports.fromJson(Map<String, dynamic> json) => _$ListPrivateMessageReportsFromJson(json);
+class _$ListPrivateMessageReportsImpl extends _ListPrivateMessageReports {
+  const _$ListPrivateMessageReportsImpl({
+    this.page,
+    this.limit,
+    this.unresolvedOnly,
+    this.communityId,
+    this.auth,
+  }) : super._();
 
-@override final  int? page;
-// v0.18.0
-@override final  int? limit;
-// v0.18.0
-@override final  bool? unresolvedOnly;
-// v0.18.0
-@override final  int? communityId;
-@override final  String? auth;
+  factory _$ListPrivateMessageReportsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ListPrivateMessageReportsImplFromJson(json);
 
-/// Create a copy of ListPrivateMessageReports
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ListPrivateMessageReportsCopyWith<_ListPrivateMessageReports> get copyWith => __$ListPrivateMessageReportsCopyWithImpl<_ListPrivateMessageReports>(this, _$identity);
+  @override
+  final int? page;
+  // v0.18.0
+  @override
+  final int? limit;
+  // v0.18.0
+  @override
+  final bool? unresolvedOnly;
+  // v0.18.0
+  @override
+  final int? communityId;
+  @override
+  final String? auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$ListPrivateMessageReportsToJson(this, );
+  @override
+  String toString() {
+    return 'ListPrivateMessageReports(page: $page, limit: $limit, unresolvedOnly: $unresolvedOnly, communityId: $communityId, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ListPrivateMessageReportsImpl &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.unresolvedOnly, unresolvedOnly) ||
+                other.unresolvedOnly == unresolvedOnly) &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, page, limit, unresolvedOnly, communityId, auth);
+
+  /// Create a copy of ListPrivateMessageReports
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ListPrivateMessageReportsImplCopyWith<_$ListPrivateMessageReportsImpl>
+  get copyWith => __$$ListPrivateMessageReportsImplCopyWithImpl<
+    _$ListPrivateMessageReportsImpl
+  >(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ListPrivateMessageReportsImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ListPrivateMessageReports&&(identical(other.page, page) || other.page == page)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.unresolvedOnly, unresolvedOnly) || other.unresolvedOnly == unresolvedOnly)&&(identical(other.communityId, communityId) || other.communityId == communityId)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _ListPrivateMessageReports extends ListPrivateMessageReports {
+  const factory _ListPrivateMessageReports({
+    final int? page,
+    final int? limit,
+    final bool? unresolvedOnly,
+    final int? communityId,
+    final String? auth,
+  }) = _$ListPrivateMessageReportsImpl;
+  const _ListPrivateMessageReports._() : super._();
+
+  factory _ListPrivateMessageReports.fromJson(Map<String, dynamic> json) =
+      _$ListPrivateMessageReportsImpl.fromJson;
+
+  @override
+  int? get page; // v0.18.0
+  @override
+  int? get limit; // v0.18.0
+  @override
+  bool? get unresolvedOnly; // v0.18.0
+  @override
+  int? get communityId;
+  @override
+  String? get auth;
+
+  /// Create a copy of ListPrivateMessageReports
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ListPrivateMessageReportsImplCopyWith<_$ListPrivateMessageReportsImpl>
+  get copyWith => throw _privateConstructorUsedError;
 }
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,page,limit,unresolvedOnly,communityId,auth);
-
-@override
-String toString() {
-  return 'ListPrivateMessageReports(page: $page, limit: $limit, unresolvedOnly: $unresolvedOnly, communityId: $communityId, auth: $auth)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ListPrivateMessageReportsCopyWith<$Res> implements $ListPrivateMessageReportsCopyWith<$Res> {
-  factory _$ListPrivateMessageReportsCopyWith(_ListPrivateMessageReports value, $Res Function(_ListPrivateMessageReports) _then) = __$ListPrivateMessageReportsCopyWithImpl;
-@override @useResult
-$Res call({
- int? page, int? limit, bool? unresolvedOnly, int? communityId, String? auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$ListPrivateMessageReportsCopyWithImpl<$Res>
-    implements _$ListPrivateMessageReportsCopyWith<$Res> {
-  __$ListPrivateMessageReportsCopyWithImpl(this._self, this._then);
-
-  final _ListPrivateMessageReports _self;
-  final $Res Function(_ListPrivateMessageReports) _then;
-
-/// Create a copy of ListPrivateMessageReports
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? page = freezed,Object? limit = freezed,Object? unresolvedOnly = freezed,Object? communityId = freezed,Object? auth = freezed,}) {
-  return _then(_ListPrivateMessageReports(
-page: freezed == page ? _self.page : page // ignore: cast_nullable_to_non_nullable
-as int?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,unresolvedOnly: freezed == unresolvedOnly ? _self.unresolvedOnly : unresolvedOnly // ignore: cast_nullable_to_non_nullable
-as bool?,communityId: freezed == communityId ? _self.communityId : communityId // ignore: cast_nullable_to_non_nullable
-as int?,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
-
-}
-
-// dart format on

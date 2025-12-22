@@ -1,5 +1,5 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,3019 +9,2746 @@ part of 'community.dart';
 // FreezedGenerator
 // **************************************************************************
 
-// dart format off
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
+
+GetCommunity _$GetCommunityFromJson(Map<String, dynamic> json) {
+  return _GetCommunity.fromJson(json);
+}
 
 /// @nodoc
 mixin _$GetCommunity {
-
- dynamic get path; dynamic get httpMethod; int? get id; String? get name; String? get auth;
-/// Create a copy of GetCommunity
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$GetCommunityCopyWith<GetCommunity> get copyWith => _$GetCommunityCopyWithImpl<GetCommunity>(this as GetCommunity, _$identity);
+  int? get id => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  String? get auth => throw _privateConstructorUsedError;
 
   /// Serializes this GetCommunity to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is GetCommunity&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),id,name,auth);
-
-@override
-String toString() {
-  return 'GetCommunity(path: $path, httpMethod: $httpMethod, id: $id, name: $name, auth: $auth)';
-}
-
-
+  /// Create a copy of GetCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $GetCommunityCopyWith<GetCommunity> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $GetCommunityCopyWith<$Res>  {
-  factory $GetCommunityCopyWith(GetCommunity value, $Res Function(GetCommunity) _then) = _$GetCommunityCopyWithImpl;
-@useResult
-$Res call({
- int? id, String? name, String? auth
-});
-
-
-
-
+abstract class $GetCommunityCopyWith<$Res> {
+  factory $GetCommunityCopyWith(
+    GetCommunity value,
+    $Res Function(GetCommunity) then,
+  ) = _$GetCommunityCopyWithImpl<$Res, GetCommunity>;
+  @useResult
+  $Res call({int? id, String? name, String? auth});
 }
+
 /// @nodoc
-class _$GetCommunityCopyWithImpl<$Res>
+class _$GetCommunityCopyWithImpl<$Res, $Val extends GetCommunity>
     implements $GetCommunityCopyWith<$Res> {
-  _$GetCommunityCopyWithImpl(this._self, this._then);
+  _$GetCommunityCopyWithImpl(this._value, this._then);
 
-  final GetCommunity _self;
-  final $Res Function(GetCommunity) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of GetCommunity
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = freezed,Object? name = freezed,Object? auth = freezed,}) {
-  return _then(_self.copyWith(
-id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as int?,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String?,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
+  /// Create a copy of GetCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(
+      _value.copyWith(
+            id:
+                freezed == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            name:
+                freezed == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$GetCommunityImplCopyWith<$Res>
+    implements $GetCommunityCopyWith<$Res> {
+  factory _$$GetCommunityImplCopyWith(
+    _$GetCommunityImpl value,
+    $Res Function(_$GetCommunityImpl) then,
+  ) = __$$GetCommunityImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int? id, String? name, String? auth});
 }
 
+/// @nodoc
+class __$$GetCommunityImplCopyWithImpl<$Res>
+    extends _$GetCommunityCopyWithImpl<$Res, _$GetCommunityImpl>
+    implements _$$GetCommunityImplCopyWith<$Res> {
+  __$$GetCommunityImplCopyWithImpl(
+    _$GetCommunityImpl _value,
+    $Res Function(_$GetCommunityImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [GetCommunity].
-extension GetCommunityPatterns on GetCommunity {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _GetCommunity value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _GetCommunity() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _GetCommunity value)  $default,){
-final _that = this;
-switch (_that) {
-case _GetCommunity():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _GetCommunity value)?  $default,){
-final _that = this;
-switch (_that) {
-case _GetCommunity() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? id,  String? name,  String? auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _GetCommunity() when $default != null:
-return $default(_that.id,_that.name,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? id,  String? name,  String? auth)  $default,) {final _that = this;
-switch (_that) {
-case _GetCommunity():
-return $default(_that.id,_that.name,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? id,  String? name,  String? auth)?  $default,) {final _that = this;
-switch (_that) {
-case _GetCommunity() when $default != null:
-return $default(_that.id,_that.name,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of GetCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(
+      _$GetCommunityImpl(
+        id:
+            freezed == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        name:
+            freezed == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _GetCommunity extends GetCommunity {
-  const _GetCommunity({this.id, this.name, this.auth}): super._();
-  factory _GetCommunity.fromJson(Map<String, dynamic> json) => _$GetCommunityFromJson(json);
+class _$GetCommunityImpl extends _GetCommunity {
+  const _$GetCommunityImpl({this.id, this.name, this.auth}) : super._();
 
-@override final  int? id;
-@override final  String? name;
-@override final  String? auth;
+  factory _$GetCommunityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetCommunityImplFromJson(json);
 
-/// Create a copy of GetCommunity
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$GetCommunityCopyWith<_GetCommunity> get copyWith => __$GetCommunityCopyWithImpl<_GetCommunity>(this, _$identity);
+  @override
+  final int? id;
+  @override
+  final String? name;
+  @override
+  final String? auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$GetCommunityToJson(this, );
+  @override
+  String toString() {
+    return 'GetCommunity(id: $id, name: $name, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetCommunityImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, id, name, auth);
+
+  /// Create a copy of GetCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetCommunityImplCopyWith<_$GetCommunityImpl> get copyWith =>
+      __$$GetCommunityImplCopyWithImpl<_$GetCommunityImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$GetCommunityImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _GetCommunity&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _GetCommunity extends GetCommunity {
+  const factory _GetCommunity({
+    final int? id,
+    final String? name,
+    final String? auth,
+  }) = _$GetCommunityImpl;
+  const _GetCommunity._() : super._();
+
+  factory _GetCommunity.fromJson(Map<String, dynamic> json) =
+      _$GetCommunityImpl.fromJson;
+
+  @override
+  int? get id;
+  @override
+  String? get name;
+  @override
+  String? get auth;
+
+  /// Create a copy of GetCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetCommunityImplCopyWith<_$GetCommunityImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,id,name,auth);
-
-@override
-String toString() {
-  return 'GetCommunity(id: $id, name: $name, auth: $auth)';
+CreateCommunity _$CreateCommunityFromJson(Map<String, dynamic> json) {
+  return _CreateCommunity.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$GetCommunityCopyWith<$Res> implements $GetCommunityCopyWith<$Res> {
-  factory _$GetCommunityCopyWith(_GetCommunity value, $Res Function(_GetCommunity) _then) = __$GetCommunityCopyWithImpl;
-@override @useResult
-$Res call({
- int? id, String? name, String? auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$GetCommunityCopyWithImpl<$Res>
-    implements _$GetCommunityCopyWith<$Res> {
-  __$GetCommunityCopyWithImpl(this._self, this._then);
-
-  final _GetCommunity _self;
-  final $Res Function(_GetCommunity) _then;
-
-/// Create a copy of GetCommunity
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = freezed,Object? name = freezed,Object? auth = freezed,}) {
-  return _then(_GetCommunity(
-id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as int?,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String?,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$CreateCommunity {
-
- dynamic get path; dynamic get httpMethod; String get name; String get title; String? get description; String? get icon; String? get banner; bool? get nsfw; String get auth;
-/// Create a copy of CreateCommunity
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$CreateCommunityCopyWith<CreateCommunity> get copyWith => _$CreateCommunityCopyWithImpl<CreateCommunity>(this as CreateCommunity, _$identity);
+  String get name => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
+  String? get icon => throw _privateConstructorUsedError;
+  String? get banner => throw _privateConstructorUsedError;
+  bool? get nsfw => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
   /// Serializes this CreateCommunity to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is CreateCommunity&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.name, name) || other.name == name)&&(identical(other.title, title) || other.title == title)&&(identical(other.description, description) || other.description == description)&&(identical(other.icon, icon) || other.icon == icon)&&(identical(other.banner, banner) || other.banner == banner)&&(identical(other.nsfw, nsfw) || other.nsfw == nsfw)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),name,title,description,icon,banner,nsfw,auth);
-
-@override
-String toString() {
-  return 'CreateCommunity(path: $path, httpMethod: $httpMethod, name: $name, title: $title, description: $description, icon: $icon, banner: $banner, nsfw: $nsfw, auth: $auth)';
-}
-
-
+  /// Create a copy of CreateCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $CreateCommunityCopyWith<CreateCommunity> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $CreateCommunityCopyWith<$Res>  {
-  factory $CreateCommunityCopyWith(CreateCommunity value, $Res Function(CreateCommunity) _then) = _$CreateCommunityCopyWithImpl;
-@useResult
-$Res call({
- String name, String title, String? description, String? icon, String? banner, bool? nsfw, String auth
-});
-
-
-
-
+abstract class $CreateCommunityCopyWith<$Res> {
+  factory $CreateCommunityCopyWith(
+    CreateCommunity value,
+    $Res Function(CreateCommunity) then,
+  ) = _$CreateCommunityCopyWithImpl<$Res, CreateCommunity>;
+  @useResult
+  $Res call({
+    String name,
+    String title,
+    String? description,
+    String? icon,
+    String? banner,
+    bool? nsfw,
+    String auth,
+  });
 }
+
 /// @nodoc
-class _$CreateCommunityCopyWithImpl<$Res>
+class _$CreateCommunityCopyWithImpl<$Res, $Val extends CreateCommunity>
     implements $CreateCommunityCopyWith<$Res> {
-  _$CreateCommunityCopyWithImpl(this._self, this._then);
+  _$CreateCommunityCopyWithImpl(this._value, this._then);
 
-  final CreateCommunity _self;
-  final $Res Function(CreateCommunity) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of CreateCommunity
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? name = null,Object? title = null,Object? description = freezed,Object? icon = freezed,Object? banner = freezed,Object? nsfw = freezed,Object? auth = null,}) {
-  return _then(_self.copyWith(
-name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
-as String,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
-as String?,icon: freezed == icon ? _self.icon : icon // ignore: cast_nullable_to_non_nullable
-as String?,banner: freezed == banner ? _self.banner : banner // ignore: cast_nullable_to_non_nullable
-as String?,nsfw: freezed == nsfw ? _self.nsfw : nsfw // ignore: cast_nullable_to_non_nullable
-as bool?,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of CreateCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = null,
+    Object? title = null,
+    Object? description = freezed,
+    Object? icon = freezed,
+    Object? banner = freezed,
+    Object? nsfw = freezed,
+    Object? auth = null,
+  }) {
+    return _then(
+      _value.copyWith(
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            title:
+                null == title
+                    ? _value.title
+                    : title // ignore: cast_nullable_to_non_nullable
+                        as String,
+            description:
+                freezed == description
+                    ? _value.description
+                    : description // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            icon:
+                freezed == icon
+                    ? _value.icon
+                    : icon // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            banner:
+                freezed == banner
+                    ? _value.banner
+                    : banner // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            nsfw:
+                freezed == nsfw
+                    ? _value.nsfw
+                    : nsfw // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$CreateCommunityImplCopyWith<$Res>
+    implements $CreateCommunityCopyWith<$Res> {
+  factory _$$CreateCommunityImplCopyWith(
+    _$CreateCommunityImpl value,
+    $Res Function(_$CreateCommunityImpl) then,
+  ) = __$$CreateCommunityImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({
+    String name,
+    String title,
+    String? description,
+    String? icon,
+    String? banner,
+    bool? nsfw,
+    String auth,
+  });
 }
 
+/// @nodoc
+class __$$CreateCommunityImplCopyWithImpl<$Res>
+    extends _$CreateCommunityCopyWithImpl<$Res, _$CreateCommunityImpl>
+    implements _$$CreateCommunityImplCopyWith<$Res> {
+  __$$CreateCommunityImplCopyWithImpl(
+    _$CreateCommunityImpl _value,
+    $Res Function(_$CreateCommunityImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [CreateCommunity].
-extension CreateCommunityPatterns on CreateCommunity {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _CreateCommunity value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _CreateCommunity() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _CreateCommunity value)  $default,){
-final _that = this;
-switch (_that) {
-case _CreateCommunity():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _CreateCommunity value)?  $default,){
-final _that = this;
-switch (_that) {
-case _CreateCommunity() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String name,  String title,  String? description,  String? icon,  String? banner,  bool? nsfw,  String auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _CreateCommunity() when $default != null:
-return $default(_that.name,_that.title,_that.description,_that.icon,_that.banner,_that.nsfw,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String name,  String title,  String? description,  String? icon,  String? banner,  bool? nsfw,  String auth)  $default,) {final _that = this;
-switch (_that) {
-case _CreateCommunity():
-return $default(_that.name,_that.title,_that.description,_that.icon,_that.banner,_that.nsfw,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String name,  String title,  String? description,  String? icon,  String? banner,  bool? nsfw,  String auth)?  $default,) {final _that = this;
-switch (_that) {
-case _CreateCommunity() when $default != null:
-return $default(_that.name,_that.title,_that.description,_that.icon,_that.banner,_that.nsfw,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of CreateCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = null,
+    Object? title = null,
+    Object? description = freezed,
+    Object? icon = freezed,
+    Object? banner = freezed,
+    Object? nsfw = freezed,
+    Object? auth = null,
+  }) {
+    return _then(
+      _$CreateCommunityImpl(
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        title:
+            null == title
+                ? _value.title
+                : title // ignore: cast_nullable_to_non_nullable
+                    as String,
+        description:
+            freezed == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        icon:
+            freezed == icon
+                ? _value.icon
+                : icon // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        banner:
+            freezed == banner
+                ? _value.banner
+                : banner // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        nsfw:
+            freezed == nsfw
+                ? _value.nsfw
+                : nsfw // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _CreateCommunity extends CreateCommunity {
-  const _CreateCommunity({required this.name, required this.title, this.description, this.icon, this.banner, this.nsfw, required this.auth}): super._();
-  factory _CreateCommunity.fromJson(Map<String, dynamic> json) => _$CreateCommunityFromJson(json);
+class _$CreateCommunityImpl extends _CreateCommunity {
+  const _$CreateCommunityImpl({
+    required this.name,
+    required this.title,
+    this.description,
+    this.icon,
+    this.banner,
+    this.nsfw,
+    required this.auth,
+  }) : super._();
 
-@override final  String name;
-@override final  String title;
-@override final  String? description;
-@override final  String? icon;
-@override final  String? banner;
-@override final  bool? nsfw;
-@override final  String auth;
+  factory _$CreateCommunityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CreateCommunityImplFromJson(json);
 
-/// Create a copy of CreateCommunity
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$CreateCommunityCopyWith<_CreateCommunity> get copyWith => __$CreateCommunityCopyWithImpl<_CreateCommunity>(this, _$identity);
+  @override
+  final String name;
+  @override
+  final String title;
+  @override
+  final String? description;
+  @override
+  final String? icon;
+  @override
+  final String? banner;
+  @override
+  final bool? nsfw;
+  @override
+  final String auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$CreateCommunityToJson(this, );
+  @override
+  String toString() {
+    return 'CreateCommunity(name: $name, title: $title, description: $description, icon: $icon, banner: $banner, nsfw: $nsfw, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CreateCommunityImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.banner, banner) || other.banner == banner) &&
+            (identical(other.nsfw, nsfw) || other.nsfw == nsfw) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+    runtimeType,
+    name,
+    title,
+    description,
+    icon,
+    banner,
+    nsfw,
+    auth,
+  );
+
+  /// Create a copy of CreateCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CreateCommunityImplCopyWith<_$CreateCommunityImpl> get copyWith =>
+      __$$CreateCommunityImplCopyWithImpl<_$CreateCommunityImpl>(
+        this,
+        _$identity,
+      );
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$CreateCommunityImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CreateCommunity&&(identical(other.name, name) || other.name == name)&&(identical(other.title, title) || other.title == title)&&(identical(other.description, description) || other.description == description)&&(identical(other.icon, icon) || other.icon == icon)&&(identical(other.banner, banner) || other.banner == banner)&&(identical(other.nsfw, nsfw) || other.nsfw == nsfw)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _CreateCommunity extends CreateCommunity {
+  const factory _CreateCommunity({
+    required final String name,
+    required final String title,
+    final String? description,
+    final String? icon,
+    final String? banner,
+    final bool? nsfw,
+    required final String auth,
+  }) = _$CreateCommunityImpl;
+  const _CreateCommunity._() : super._();
+
+  factory _CreateCommunity.fromJson(Map<String, dynamic> json) =
+      _$CreateCommunityImpl.fromJson;
+
+  @override
+  String get name;
+  @override
+  String get title;
+  @override
+  String? get description;
+  @override
+  String? get icon;
+  @override
+  String? get banner;
+  @override
+  bool? get nsfw;
+  @override
+  String get auth;
+
+  /// Create a copy of CreateCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$CreateCommunityImplCopyWith<_$CreateCommunityImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,name,title,description,icon,banner,nsfw,auth);
-
-@override
-String toString() {
-  return 'CreateCommunity(name: $name, title: $title, description: $description, icon: $icon, banner: $banner, nsfw: $nsfw, auth: $auth)';
+ListCommunities _$ListCommunitiesFromJson(Map<String, dynamic> json) {
+  return _ListCommunities.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$CreateCommunityCopyWith<$Res> implements $CreateCommunityCopyWith<$Res> {
-  factory _$CreateCommunityCopyWith(_CreateCommunity value, $Res Function(_CreateCommunity) _then) = __$CreateCommunityCopyWithImpl;
-@override @useResult
-$Res call({
- String name, String title, String? description, String? icon, String? banner, bool? nsfw, String auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$CreateCommunityCopyWithImpl<$Res>
-    implements _$CreateCommunityCopyWith<$Res> {
-  __$CreateCommunityCopyWithImpl(this._self, this._then);
-
-  final _CreateCommunity _self;
-  final $Res Function(_CreateCommunity) _then;
-
-/// Create a copy of CreateCommunity
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? name = null,Object? title = null,Object? description = freezed,Object? icon = freezed,Object? banner = freezed,Object? nsfw = freezed,Object? auth = null,}) {
-  return _then(_CreateCommunity(
-name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
-as String,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
-as String?,icon: freezed == icon ? _self.icon : icon // ignore: cast_nullable_to_non_nullable
-as String?,banner: freezed == banner ? _self.banner : banner // ignore: cast_nullable_to_non_nullable
-as String?,nsfw: freezed == nsfw ? _self.nsfw : nsfw // ignore: cast_nullable_to_non_nullable
-as bool?,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$ListCommunities {
-
- dynamic get path; dynamic get httpMethod;@JsonKey(name: 'type_') ListingType? get type; SortType? get sort; bool? get showNsfw; int? get page; int? get limit; String? get auth;
-/// Create a copy of ListCommunities
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$ListCommunitiesCopyWith<ListCommunities> get copyWith => _$ListCommunitiesCopyWithImpl<ListCommunities>(this as ListCommunities, _$identity);
+  @JsonKey(name: 'type_')
+  ListingType? get type => throw _privateConstructorUsedError;
+  SortType? get sort => throw _privateConstructorUsedError;
+  bool? get showNsfw => throw _privateConstructorUsedError;
+  int? get page => throw _privateConstructorUsedError;
+  int? get limit => throw _privateConstructorUsedError;
+  String? get auth => throw _privateConstructorUsedError;
 
   /// Serializes this ListCommunities to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ListCommunities&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.type, type) || other.type == type)&&(identical(other.sort, sort) || other.sort == sort)&&(identical(other.showNsfw, showNsfw) || other.showNsfw == showNsfw)&&(identical(other.page, page) || other.page == page)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),type,sort,showNsfw,page,limit,auth);
-
-@override
-String toString() {
-  return 'ListCommunities(path: $path, httpMethod: $httpMethod, type: $type, sort: $sort, showNsfw: $showNsfw, page: $page, limit: $limit, auth: $auth)';
-}
-
-
+  /// Create a copy of ListCommunities
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $ListCommunitiesCopyWith<ListCommunities> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $ListCommunitiesCopyWith<$Res>  {
-  factory $ListCommunitiesCopyWith(ListCommunities value, $Res Function(ListCommunities) _then) = _$ListCommunitiesCopyWithImpl;
-@useResult
-$Res call({
-@JsonKey(name: 'type_') ListingType? type, SortType? sort, bool? showNsfw, int? page, int? limit, String? auth
-});
-
-
-
-
+abstract class $ListCommunitiesCopyWith<$Res> {
+  factory $ListCommunitiesCopyWith(
+    ListCommunities value,
+    $Res Function(ListCommunities) then,
+  ) = _$ListCommunitiesCopyWithImpl<$Res, ListCommunities>;
+  @useResult
+  $Res call({
+    @JsonKey(name: 'type_') ListingType? type,
+    SortType? sort,
+    bool? showNsfw,
+    int? page,
+    int? limit,
+    String? auth,
+  });
 }
+
 /// @nodoc
-class _$ListCommunitiesCopyWithImpl<$Res>
+class _$ListCommunitiesCopyWithImpl<$Res, $Val extends ListCommunities>
     implements $ListCommunitiesCopyWith<$Res> {
-  _$ListCommunitiesCopyWithImpl(this._self, this._then);
+  _$ListCommunitiesCopyWithImpl(this._value, this._then);
 
-  final ListCommunities _self;
-  final $Res Function(ListCommunities) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of ListCommunities
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? type = freezed,Object? sort = freezed,Object? showNsfw = freezed,Object? page = freezed,Object? limit = freezed,Object? auth = freezed,}) {
-  return _then(_self.copyWith(
-type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as ListingType?,sort: freezed == sort ? _self.sort : sort // ignore: cast_nullable_to_non_nullable
-as SortType?,showNsfw: freezed == showNsfw ? _self.showNsfw : showNsfw // ignore: cast_nullable_to_non_nullable
-as bool?,page: freezed == page ? _self.page : page // ignore: cast_nullable_to_non_nullable
-as int?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
+  /// Create a copy of ListCommunities
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? type = freezed,
+    Object? sort = freezed,
+    Object? showNsfw = freezed,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(
+      _value.copyWith(
+            type:
+                freezed == type
+                    ? _value.type
+                    : type // ignore: cast_nullable_to_non_nullable
+                        as ListingType?,
+            sort:
+                freezed == sort
+                    ? _value.sort
+                    : sort // ignore: cast_nullable_to_non_nullable
+                        as SortType?,
+            showNsfw:
+                freezed == showNsfw
+                    ? _value.showNsfw
+                    : showNsfw // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            page:
+                freezed == page
+                    ? _value.page
+                    : page // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$ListCommunitiesImplCopyWith<$Res>
+    implements $ListCommunitiesCopyWith<$Res> {
+  factory _$$ListCommunitiesImplCopyWith(
+    _$ListCommunitiesImpl value,
+    $Res Function(_$ListCommunitiesImpl) then,
+  ) = __$$ListCommunitiesImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({
+    @JsonKey(name: 'type_') ListingType? type,
+    SortType? sort,
+    bool? showNsfw,
+    int? page,
+    int? limit,
+    String? auth,
+  });
 }
 
+/// @nodoc
+class __$$ListCommunitiesImplCopyWithImpl<$Res>
+    extends _$ListCommunitiesCopyWithImpl<$Res, _$ListCommunitiesImpl>
+    implements _$$ListCommunitiesImplCopyWith<$Res> {
+  __$$ListCommunitiesImplCopyWithImpl(
+    _$ListCommunitiesImpl _value,
+    $Res Function(_$ListCommunitiesImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [ListCommunities].
-extension ListCommunitiesPatterns on ListCommunities {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ListCommunities value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _ListCommunities() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ListCommunities value)  $default,){
-final _that = this;
-switch (_that) {
-case _ListCommunities():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ListCommunities value)?  $default,){
-final _that = this;
-switch (_that) {
-case _ListCommunities() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(name: 'type_')  ListingType? type,  SortType? sort,  bool? showNsfw,  int? page,  int? limit,  String? auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _ListCommunities() when $default != null:
-return $default(_that.type,_that.sort,_that.showNsfw,_that.page,_that.limit,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(name: 'type_')  ListingType? type,  SortType? sort,  bool? showNsfw,  int? page,  int? limit,  String? auth)  $default,) {final _that = this;
-switch (_that) {
-case _ListCommunities():
-return $default(_that.type,_that.sort,_that.showNsfw,_that.page,_that.limit,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(name: 'type_')  ListingType? type,  SortType? sort,  bool? showNsfw,  int? page,  int? limit,  String? auth)?  $default,) {final _that = this;
-switch (_that) {
-case _ListCommunities() when $default != null:
-return $default(_that.type,_that.sort,_that.showNsfw,_that.page,_that.limit,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of ListCommunities
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? type = freezed,
+    Object? sort = freezed,
+    Object? showNsfw = freezed,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(
+      _$ListCommunitiesImpl(
+        type:
+            freezed == type
+                ? _value.type
+                : type // ignore: cast_nullable_to_non_nullable
+                    as ListingType?,
+        sort:
+            freezed == sort
+                ? _value.sort
+                : sort // ignore: cast_nullable_to_non_nullable
+                    as SortType?,
+        showNsfw:
+            freezed == showNsfw
+                ? _value.showNsfw
+                : showNsfw // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        page:
+            freezed == page
+                ? _value.page
+                : page // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _ListCommunities extends ListCommunities {
-  const _ListCommunities({@JsonKey(name: 'type_') this.type, this.sort, this.showNsfw, this.page, this.limit, this.auth}): super._();
-  factory _ListCommunities.fromJson(Map<String, dynamic> json) => _$ListCommunitiesFromJson(json);
+class _$ListCommunitiesImpl extends _ListCommunities {
+  const _$ListCommunitiesImpl({
+    @JsonKey(name: 'type_') this.type,
+    this.sort,
+    this.showNsfw,
+    this.page,
+    this.limit,
+    this.auth,
+  }) : super._();
 
-@override@JsonKey(name: 'type_') final  ListingType? type;
-@override final  SortType? sort;
-@override final  bool? showNsfw;
-@override final  int? page;
-@override final  int? limit;
-@override final  String? auth;
+  factory _$ListCommunitiesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ListCommunitiesImplFromJson(json);
 
-/// Create a copy of ListCommunities
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$ListCommunitiesCopyWith<_ListCommunities> get copyWith => __$ListCommunitiesCopyWithImpl<_ListCommunities>(this, _$identity);
+  @override
+  @JsonKey(name: 'type_')
+  final ListingType? type;
+  @override
+  final SortType? sort;
+  @override
+  final bool? showNsfw;
+  @override
+  final int? page;
+  @override
+  final int? limit;
+  @override
+  final String? auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$ListCommunitiesToJson(this, );
+  @override
+  String toString() {
+    return 'ListCommunities(type: $type, sort: $sort, showNsfw: $showNsfw, page: $page, limit: $limit, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ListCommunitiesImpl &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.sort, sort) || other.sort == sort) &&
+            (identical(other.showNsfw, showNsfw) ||
+                other.showNsfw == showNsfw) &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, type, sort, showNsfw, page, limit, auth);
+
+  /// Create a copy of ListCommunities
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ListCommunitiesImplCopyWith<_$ListCommunitiesImpl> get copyWith =>
+      __$$ListCommunitiesImplCopyWithImpl<_$ListCommunitiesImpl>(
+        this,
+        _$identity,
+      );
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ListCommunitiesImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ListCommunities&&(identical(other.type, type) || other.type == type)&&(identical(other.sort, sort) || other.sort == sort)&&(identical(other.showNsfw, showNsfw) || other.showNsfw == showNsfw)&&(identical(other.page, page) || other.page == page)&&(identical(other.limit, limit) || other.limit == limit)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _ListCommunities extends ListCommunities {
+  const factory _ListCommunities({
+    @JsonKey(name: 'type_') final ListingType? type,
+    final SortType? sort,
+    final bool? showNsfw,
+    final int? page,
+    final int? limit,
+    final String? auth,
+  }) = _$ListCommunitiesImpl;
+  const _ListCommunities._() : super._();
+
+  factory _ListCommunities.fromJson(Map<String, dynamic> json) =
+      _$ListCommunitiesImpl.fromJson;
+
+  @override
+  @JsonKey(name: 'type_')
+  ListingType? get type;
+  @override
+  SortType? get sort;
+  @override
+  bool? get showNsfw;
+  @override
+  int? get page;
+  @override
+  int? get limit;
+  @override
+  String? get auth;
+
+  /// Create a copy of ListCommunities
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ListCommunitiesImplCopyWith<_$ListCommunitiesImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,type,sort,showNsfw,page,limit,auth);
-
-@override
-String toString() {
-  return 'ListCommunities(type: $type, sort: $sort, showNsfw: $showNsfw, page: $page, limit: $limit, auth: $auth)';
+BanFromCommunity _$BanFromCommunityFromJson(Map<String, dynamic> json) {
+  return _BanFromCommunity.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$ListCommunitiesCopyWith<$Res> implements $ListCommunitiesCopyWith<$Res> {
-  factory _$ListCommunitiesCopyWith(_ListCommunities value, $Res Function(_ListCommunities) _then) = __$ListCommunitiesCopyWithImpl;
-@override @useResult
-$Res call({
-@JsonKey(name: 'type_') ListingType? type, SortType? sort, bool? showNsfw, int? page, int? limit, String? auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$ListCommunitiesCopyWithImpl<$Res>
-    implements _$ListCommunitiesCopyWith<$Res> {
-  __$ListCommunitiesCopyWithImpl(this._self, this._then);
-
-  final _ListCommunities _self;
-  final $Res Function(_ListCommunities) _then;
-
-/// Create a copy of ListCommunities
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? type = freezed,Object? sort = freezed,Object? showNsfw = freezed,Object? page = freezed,Object? limit = freezed,Object? auth = freezed,}) {
-  return _then(_ListCommunities(
-type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as ListingType?,sort: freezed == sort ? _self.sort : sort // ignore: cast_nullable_to_non_nullable
-as SortType?,showNsfw: freezed == showNsfw ? _self.showNsfw : showNsfw // ignore: cast_nullable_to_non_nullable
-as bool?,page: freezed == page ? _self.page : page // ignore: cast_nullable_to_non_nullable
-as int?,limit: freezed == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
-as int?,auth: freezed == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$BanFromCommunity {
-
- dynamic get path; dynamic get httpMethod; int get communityId; int get personId; bool get ban; bool? get removeData; String? get reason; int? get expires; String get auth;
-/// Create a copy of BanFromCommunity
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$BanFromCommunityCopyWith<BanFromCommunity> get copyWith => _$BanFromCommunityCopyWithImpl<BanFromCommunity>(this as BanFromCommunity, _$identity);
+  int get communityId => throw _privateConstructorUsedError;
+  int get personId => throw _privateConstructorUsedError;
+  bool get ban => throw _privateConstructorUsedError;
+  bool? get removeData => throw _privateConstructorUsedError;
+  String? get reason => throw _privateConstructorUsedError;
+  int? get expires => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
   /// Serializes this BanFromCommunity to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is BanFromCommunity&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.communityId, communityId) || other.communityId == communityId)&&(identical(other.personId, personId) || other.personId == personId)&&(identical(other.ban, ban) || other.ban == ban)&&(identical(other.removeData, removeData) || other.removeData == removeData)&&(identical(other.reason, reason) || other.reason == reason)&&(identical(other.expires, expires) || other.expires == expires)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),communityId,personId,ban,removeData,reason,expires,auth);
-
-@override
-String toString() {
-  return 'BanFromCommunity(path: $path, httpMethod: $httpMethod, communityId: $communityId, personId: $personId, ban: $ban, removeData: $removeData, reason: $reason, expires: $expires, auth: $auth)';
-}
-
-
+  /// Create a copy of BanFromCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $BanFromCommunityCopyWith<BanFromCommunity> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $BanFromCommunityCopyWith<$Res>  {
-  factory $BanFromCommunityCopyWith(BanFromCommunity value, $Res Function(BanFromCommunity) _then) = _$BanFromCommunityCopyWithImpl;
-@useResult
-$Res call({
- int communityId, int personId, bool ban, bool? removeData, String? reason, int? expires, String auth
-});
-
-
-
-
+abstract class $BanFromCommunityCopyWith<$Res> {
+  factory $BanFromCommunityCopyWith(
+    BanFromCommunity value,
+    $Res Function(BanFromCommunity) then,
+  ) = _$BanFromCommunityCopyWithImpl<$Res, BanFromCommunity>;
+  @useResult
+  $Res call({
+    int communityId,
+    int personId,
+    bool ban,
+    bool? removeData,
+    String? reason,
+    int? expires,
+    String auth,
+  });
 }
+
 /// @nodoc
-class _$BanFromCommunityCopyWithImpl<$Res>
+class _$BanFromCommunityCopyWithImpl<$Res, $Val extends BanFromCommunity>
     implements $BanFromCommunityCopyWith<$Res> {
-  _$BanFromCommunityCopyWithImpl(this._self, this._then);
+  _$BanFromCommunityCopyWithImpl(this._value, this._then);
 
-  final BanFromCommunity _self;
-  final $Res Function(BanFromCommunity) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of BanFromCommunity
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? communityId = null,Object? personId = null,Object? ban = null,Object? removeData = freezed,Object? reason = freezed,Object? expires = freezed,Object? auth = null,}) {
-  return _then(_self.copyWith(
-communityId: null == communityId ? _self.communityId : communityId // ignore: cast_nullable_to_non_nullable
-as int,personId: null == personId ? _self.personId : personId // ignore: cast_nullable_to_non_nullable
-as int,ban: null == ban ? _self.ban : ban // ignore: cast_nullable_to_non_nullable
-as bool,removeData: freezed == removeData ? _self.removeData : removeData // ignore: cast_nullable_to_non_nullable
-as bool?,reason: freezed == reason ? _self.reason : reason // ignore: cast_nullable_to_non_nullable
-as String?,expires: freezed == expires ? _self.expires : expires // ignore: cast_nullable_to_non_nullable
-as int?,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of BanFromCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? communityId = null,
+    Object? personId = null,
+    Object? ban = null,
+    Object? removeData = freezed,
+    Object? reason = freezed,
+    Object? expires = freezed,
+    Object? auth = null,
+  }) {
+    return _then(
+      _value.copyWith(
+            communityId:
+                null == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            personId:
+                null == personId
+                    ? _value.personId
+                    : personId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            ban:
+                null == ban
+                    ? _value.ban
+                    : ban // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            removeData:
+                freezed == removeData
+                    ? _value.removeData
+                    : removeData // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            reason:
+                freezed == reason
+                    ? _value.reason
+                    : reason // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            expires:
+                freezed == expires
+                    ? _value.expires
+                    : expires // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$BanFromCommunityImplCopyWith<$Res>
+    implements $BanFromCommunityCopyWith<$Res> {
+  factory _$$BanFromCommunityImplCopyWith(
+    _$BanFromCommunityImpl value,
+    $Res Function(_$BanFromCommunityImpl) then,
+  ) = __$$BanFromCommunityImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({
+    int communityId,
+    int personId,
+    bool ban,
+    bool? removeData,
+    String? reason,
+    int? expires,
+    String auth,
+  });
 }
 
+/// @nodoc
+class __$$BanFromCommunityImplCopyWithImpl<$Res>
+    extends _$BanFromCommunityCopyWithImpl<$Res, _$BanFromCommunityImpl>
+    implements _$$BanFromCommunityImplCopyWith<$Res> {
+  __$$BanFromCommunityImplCopyWithImpl(
+    _$BanFromCommunityImpl _value,
+    $Res Function(_$BanFromCommunityImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [BanFromCommunity].
-extension BanFromCommunityPatterns on BanFromCommunity {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _BanFromCommunity value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _BanFromCommunity() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _BanFromCommunity value)  $default,){
-final _that = this;
-switch (_that) {
-case _BanFromCommunity():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _BanFromCommunity value)?  $default,){
-final _that = this;
-switch (_that) {
-case _BanFromCommunity() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int communityId,  int personId,  bool ban,  bool? removeData,  String? reason,  int? expires,  String auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _BanFromCommunity() when $default != null:
-return $default(_that.communityId,_that.personId,_that.ban,_that.removeData,_that.reason,_that.expires,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int communityId,  int personId,  bool ban,  bool? removeData,  String? reason,  int? expires,  String auth)  $default,) {final _that = this;
-switch (_that) {
-case _BanFromCommunity():
-return $default(_that.communityId,_that.personId,_that.ban,_that.removeData,_that.reason,_that.expires,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int communityId,  int personId,  bool ban,  bool? removeData,  String? reason,  int? expires,  String auth)?  $default,) {final _that = this;
-switch (_that) {
-case _BanFromCommunity() when $default != null:
-return $default(_that.communityId,_that.personId,_that.ban,_that.removeData,_that.reason,_that.expires,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of BanFromCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? communityId = null,
+    Object? personId = null,
+    Object? ban = null,
+    Object? removeData = freezed,
+    Object? reason = freezed,
+    Object? expires = freezed,
+    Object? auth = null,
+  }) {
+    return _then(
+      _$BanFromCommunityImpl(
+        communityId:
+            null == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        personId:
+            null == personId
+                ? _value.personId
+                : personId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        ban:
+            null == ban
+                ? _value.ban
+                : ban // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        removeData:
+            freezed == removeData
+                ? _value.removeData
+                : removeData // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        reason:
+            freezed == reason
+                ? _value.reason
+                : reason // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        expires:
+            freezed == expires
+                ? _value.expires
+                : expires // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _BanFromCommunity extends BanFromCommunity {
-  const _BanFromCommunity({required this.communityId, required this.personId, required this.ban, this.removeData, this.reason, this.expires, required this.auth}): super._();
-  factory _BanFromCommunity.fromJson(Map<String, dynamic> json) => _$BanFromCommunityFromJson(json);
+class _$BanFromCommunityImpl extends _BanFromCommunity {
+  const _$BanFromCommunityImpl({
+    required this.communityId,
+    required this.personId,
+    required this.ban,
+    this.removeData,
+    this.reason,
+    this.expires,
+    required this.auth,
+  }) : super._();
 
-@override final  int communityId;
-@override final  int personId;
-@override final  bool ban;
-@override final  bool? removeData;
-@override final  String? reason;
-@override final  int? expires;
-@override final  String auth;
+  factory _$BanFromCommunityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$BanFromCommunityImplFromJson(json);
 
-/// Create a copy of BanFromCommunity
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$BanFromCommunityCopyWith<_BanFromCommunity> get copyWith => __$BanFromCommunityCopyWithImpl<_BanFromCommunity>(this, _$identity);
+  @override
+  final int communityId;
+  @override
+  final int personId;
+  @override
+  final bool ban;
+  @override
+  final bool? removeData;
+  @override
+  final String? reason;
+  @override
+  final int? expires;
+  @override
+  final String auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$BanFromCommunityToJson(this, );
+  @override
+  String toString() {
+    return 'BanFromCommunity(communityId: $communityId, personId: $personId, ban: $ban, removeData: $removeData, reason: $reason, expires: $expires, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$BanFromCommunityImpl &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.personId, personId) ||
+                other.personId == personId) &&
+            (identical(other.ban, ban) || other.ban == ban) &&
+            (identical(other.removeData, removeData) ||
+                other.removeData == removeData) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.expires, expires) || other.expires == expires) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+    runtimeType,
+    communityId,
+    personId,
+    ban,
+    removeData,
+    reason,
+    expires,
+    auth,
+  );
+
+  /// Create a copy of BanFromCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$BanFromCommunityImplCopyWith<_$BanFromCommunityImpl> get copyWith =>
+      __$$BanFromCommunityImplCopyWithImpl<_$BanFromCommunityImpl>(
+        this,
+        _$identity,
+      );
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$BanFromCommunityImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _BanFromCommunity&&(identical(other.communityId, communityId) || other.communityId == communityId)&&(identical(other.personId, personId) || other.personId == personId)&&(identical(other.ban, ban) || other.ban == ban)&&(identical(other.removeData, removeData) || other.removeData == removeData)&&(identical(other.reason, reason) || other.reason == reason)&&(identical(other.expires, expires) || other.expires == expires)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _BanFromCommunity extends BanFromCommunity {
+  const factory _BanFromCommunity({
+    required final int communityId,
+    required final int personId,
+    required final bool ban,
+    final bool? removeData,
+    final String? reason,
+    final int? expires,
+    required final String auth,
+  }) = _$BanFromCommunityImpl;
+  const _BanFromCommunity._() : super._();
+
+  factory _BanFromCommunity.fromJson(Map<String, dynamic> json) =
+      _$BanFromCommunityImpl.fromJson;
+
+  @override
+  int get communityId;
+  @override
+  int get personId;
+  @override
+  bool get ban;
+  @override
+  bool? get removeData;
+  @override
+  String? get reason;
+  @override
+  int? get expires;
+  @override
+  String get auth;
+
+  /// Create a copy of BanFromCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$BanFromCommunityImplCopyWith<_$BanFromCommunityImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,communityId,personId,ban,removeData,reason,expires,auth);
-
-@override
-String toString() {
-  return 'BanFromCommunity(communityId: $communityId, personId: $personId, ban: $ban, removeData: $removeData, reason: $reason, expires: $expires, auth: $auth)';
+AddModToCommunity _$AddModToCommunityFromJson(Map<String, dynamic> json) {
+  return _AddModToCommunity.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$BanFromCommunityCopyWith<$Res> implements $BanFromCommunityCopyWith<$Res> {
-  factory _$BanFromCommunityCopyWith(_BanFromCommunity value, $Res Function(_BanFromCommunity) _then) = __$BanFromCommunityCopyWithImpl;
-@override @useResult
-$Res call({
- int communityId, int personId, bool ban, bool? removeData, String? reason, int? expires, String auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$BanFromCommunityCopyWithImpl<$Res>
-    implements _$BanFromCommunityCopyWith<$Res> {
-  __$BanFromCommunityCopyWithImpl(this._self, this._then);
-
-  final _BanFromCommunity _self;
-  final $Res Function(_BanFromCommunity) _then;
-
-/// Create a copy of BanFromCommunity
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? communityId = null,Object? personId = null,Object? ban = null,Object? removeData = freezed,Object? reason = freezed,Object? expires = freezed,Object? auth = null,}) {
-  return _then(_BanFromCommunity(
-communityId: null == communityId ? _self.communityId : communityId // ignore: cast_nullable_to_non_nullable
-as int,personId: null == personId ? _self.personId : personId // ignore: cast_nullable_to_non_nullable
-as int,ban: null == ban ? _self.ban : ban // ignore: cast_nullable_to_non_nullable
-as bool,removeData: freezed == removeData ? _self.removeData : removeData // ignore: cast_nullable_to_non_nullable
-as bool?,reason: freezed == reason ? _self.reason : reason // ignore: cast_nullable_to_non_nullable
-as String?,expires: freezed == expires ? _self.expires : expires // ignore: cast_nullable_to_non_nullable
-as int?,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$AddModToCommunity {
-
- dynamic get path; dynamic get httpMethod; int get communityId; int get personId; bool get added; String get auth;
-/// Create a copy of AddModToCommunity
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$AddModToCommunityCopyWith<AddModToCommunity> get copyWith => _$AddModToCommunityCopyWithImpl<AddModToCommunity>(this as AddModToCommunity, _$identity);
+  int get communityId => throw _privateConstructorUsedError;
+  int get personId => throw _privateConstructorUsedError;
+  bool get added => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
   /// Serializes this AddModToCommunity to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is AddModToCommunity&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.communityId, communityId) || other.communityId == communityId)&&(identical(other.personId, personId) || other.personId == personId)&&(identical(other.added, added) || other.added == added)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),communityId,personId,added,auth);
-
-@override
-String toString() {
-  return 'AddModToCommunity(path: $path, httpMethod: $httpMethod, communityId: $communityId, personId: $personId, added: $added, auth: $auth)';
-}
-
-
+  /// Create a copy of AddModToCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $AddModToCommunityCopyWith<AddModToCommunity> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $AddModToCommunityCopyWith<$Res>  {
-  factory $AddModToCommunityCopyWith(AddModToCommunity value, $Res Function(AddModToCommunity) _then) = _$AddModToCommunityCopyWithImpl;
-@useResult
-$Res call({
- int communityId, int personId, bool added, String auth
-});
-
-
-
-
+abstract class $AddModToCommunityCopyWith<$Res> {
+  factory $AddModToCommunityCopyWith(
+    AddModToCommunity value,
+    $Res Function(AddModToCommunity) then,
+  ) = _$AddModToCommunityCopyWithImpl<$Res, AddModToCommunity>;
+  @useResult
+  $Res call({int communityId, int personId, bool added, String auth});
 }
+
 /// @nodoc
-class _$AddModToCommunityCopyWithImpl<$Res>
+class _$AddModToCommunityCopyWithImpl<$Res, $Val extends AddModToCommunity>
     implements $AddModToCommunityCopyWith<$Res> {
-  _$AddModToCommunityCopyWithImpl(this._self, this._then);
+  _$AddModToCommunityCopyWithImpl(this._value, this._then);
 
-  final AddModToCommunity _self;
-  final $Res Function(AddModToCommunity) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of AddModToCommunity
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? communityId = null,Object? personId = null,Object? added = null,Object? auth = null,}) {
-  return _then(_self.copyWith(
-communityId: null == communityId ? _self.communityId : communityId // ignore: cast_nullable_to_non_nullable
-as int,personId: null == personId ? _self.personId : personId // ignore: cast_nullable_to_non_nullable
-as int,added: null == added ? _self.added : added // ignore: cast_nullable_to_non_nullable
-as bool,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of AddModToCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? communityId = null,
+    Object? personId = null,
+    Object? added = null,
+    Object? auth = null,
+  }) {
+    return _then(
+      _value.copyWith(
+            communityId:
+                null == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            personId:
+                null == personId
+                    ? _value.personId
+                    : personId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            added:
+                null == added
+                    ? _value.added
+                    : added // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$AddModToCommunityImplCopyWith<$Res>
+    implements $AddModToCommunityCopyWith<$Res> {
+  factory _$$AddModToCommunityImplCopyWith(
+    _$AddModToCommunityImpl value,
+    $Res Function(_$AddModToCommunityImpl) then,
+  ) = __$$AddModToCommunityImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int communityId, int personId, bool added, String auth});
 }
 
+/// @nodoc
+class __$$AddModToCommunityImplCopyWithImpl<$Res>
+    extends _$AddModToCommunityCopyWithImpl<$Res, _$AddModToCommunityImpl>
+    implements _$$AddModToCommunityImplCopyWith<$Res> {
+  __$$AddModToCommunityImplCopyWithImpl(
+    _$AddModToCommunityImpl _value,
+    $Res Function(_$AddModToCommunityImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [AddModToCommunity].
-extension AddModToCommunityPatterns on AddModToCommunity {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _AddModToCommunity value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _AddModToCommunity() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _AddModToCommunity value)  $default,){
-final _that = this;
-switch (_that) {
-case _AddModToCommunity():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _AddModToCommunity value)?  $default,){
-final _that = this;
-switch (_that) {
-case _AddModToCommunity() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int communityId,  int personId,  bool added,  String auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _AddModToCommunity() when $default != null:
-return $default(_that.communityId,_that.personId,_that.added,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int communityId,  int personId,  bool added,  String auth)  $default,) {final _that = this;
-switch (_that) {
-case _AddModToCommunity():
-return $default(_that.communityId,_that.personId,_that.added,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int communityId,  int personId,  bool added,  String auth)?  $default,) {final _that = this;
-switch (_that) {
-case _AddModToCommunity() when $default != null:
-return $default(_that.communityId,_that.personId,_that.added,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of AddModToCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? communityId = null,
+    Object? personId = null,
+    Object? added = null,
+    Object? auth = null,
+  }) {
+    return _then(
+      _$AddModToCommunityImpl(
+        communityId:
+            null == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        personId:
+            null == personId
+                ? _value.personId
+                : personId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        added:
+            null == added
+                ? _value.added
+                : added // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _AddModToCommunity extends AddModToCommunity {
-  const _AddModToCommunity({required this.communityId, required this.personId, required this.added, required this.auth}): super._();
-  factory _AddModToCommunity.fromJson(Map<String, dynamic> json) => _$AddModToCommunityFromJson(json);
+class _$AddModToCommunityImpl extends _AddModToCommunity {
+  const _$AddModToCommunityImpl({
+    required this.communityId,
+    required this.personId,
+    required this.added,
+    required this.auth,
+  }) : super._();
 
-@override final  int communityId;
-@override final  int personId;
-@override final  bool added;
-@override final  String auth;
+  factory _$AddModToCommunityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AddModToCommunityImplFromJson(json);
 
-/// Create a copy of AddModToCommunity
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$AddModToCommunityCopyWith<_AddModToCommunity> get copyWith => __$AddModToCommunityCopyWithImpl<_AddModToCommunity>(this, _$identity);
+  @override
+  final int communityId;
+  @override
+  final int personId;
+  @override
+  final bool added;
+  @override
+  final String auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$AddModToCommunityToJson(this, );
+  @override
+  String toString() {
+    return 'AddModToCommunity(communityId: $communityId, personId: $personId, added: $added, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddModToCommunityImpl &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.personId, personId) ||
+                other.personId == personId) &&
+            (identical(other.added, added) || other.added == added) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, communityId, personId, added, auth);
+
+  /// Create a copy of AddModToCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddModToCommunityImplCopyWith<_$AddModToCommunityImpl> get copyWith =>
+      __$$AddModToCommunityImplCopyWithImpl<_$AddModToCommunityImpl>(
+        this,
+        _$identity,
+      );
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$AddModToCommunityImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _AddModToCommunity&&(identical(other.communityId, communityId) || other.communityId == communityId)&&(identical(other.personId, personId) || other.personId == personId)&&(identical(other.added, added) || other.added == added)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _AddModToCommunity extends AddModToCommunity {
+  const factory _AddModToCommunity({
+    required final int communityId,
+    required final int personId,
+    required final bool added,
+    required final String auth,
+  }) = _$AddModToCommunityImpl;
+  const _AddModToCommunity._() : super._();
+
+  factory _AddModToCommunity.fromJson(Map<String, dynamic> json) =
+      _$AddModToCommunityImpl.fromJson;
+
+  @override
+  int get communityId;
+  @override
+  int get personId;
+  @override
+  bool get added;
+  @override
+  String get auth;
+
+  /// Create a copy of AddModToCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AddModToCommunityImplCopyWith<_$AddModToCommunityImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,communityId,personId,added,auth);
-
-@override
-String toString() {
-  return 'AddModToCommunity(communityId: $communityId, personId: $personId, added: $added, auth: $auth)';
+EditCommunity _$EditCommunityFromJson(Map<String, dynamic> json) {
+  return _EditCommunity.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$AddModToCommunityCopyWith<$Res> implements $AddModToCommunityCopyWith<$Res> {
-  factory _$AddModToCommunityCopyWith(_AddModToCommunity value, $Res Function(_AddModToCommunity) _then) = __$AddModToCommunityCopyWithImpl;
-@override @useResult
-$Res call({
- int communityId, int personId, bool added, String auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$AddModToCommunityCopyWithImpl<$Res>
-    implements _$AddModToCommunityCopyWith<$Res> {
-  __$AddModToCommunityCopyWithImpl(this._self, this._then);
-
-  final _AddModToCommunity _self;
-  final $Res Function(_AddModToCommunity) _then;
-
-/// Create a copy of AddModToCommunity
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? communityId = null,Object? personId = null,Object? added = null,Object? auth = null,}) {
-  return _then(_AddModToCommunity(
-communityId: null == communityId ? _self.communityId : communityId // ignore: cast_nullable_to_non_nullable
-as int,personId: null == personId ? _self.personId : personId // ignore: cast_nullable_to_non_nullable
-as int,added: null == added ? _self.added : added // ignore: cast_nullable_to_non_nullable
-as bool,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$EditCommunity {
-
- dynamic get path; dynamic get httpMethod; int get communityId; String? get title; String? get description; String? get icon; String? get banner; bool? get nsfw; String get auth;
-/// Create a copy of EditCommunity
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$EditCommunityCopyWith<EditCommunity> get copyWith => _$EditCommunityCopyWithImpl<EditCommunity>(this as EditCommunity, _$identity);
+  int get communityId => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
+  String? get icon => throw _privateConstructorUsedError;
+  String? get banner => throw _privateConstructorUsedError;
+  bool? get nsfw => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
   /// Serializes this EditCommunity to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is EditCommunity&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.communityId, communityId) || other.communityId == communityId)&&(identical(other.title, title) || other.title == title)&&(identical(other.description, description) || other.description == description)&&(identical(other.icon, icon) || other.icon == icon)&&(identical(other.banner, banner) || other.banner == banner)&&(identical(other.nsfw, nsfw) || other.nsfw == nsfw)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),communityId,title,description,icon,banner,nsfw,auth);
-
-@override
-String toString() {
-  return 'EditCommunity(path: $path, httpMethod: $httpMethod, communityId: $communityId, title: $title, description: $description, icon: $icon, banner: $banner, nsfw: $nsfw, auth: $auth)';
-}
-
-
+  /// Create a copy of EditCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $EditCommunityCopyWith<EditCommunity> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $EditCommunityCopyWith<$Res>  {
-  factory $EditCommunityCopyWith(EditCommunity value, $Res Function(EditCommunity) _then) = _$EditCommunityCopyWithImpl;
-@useResult
-$Res call({
- int communityId, String? title, String? description, String? icon, String? banner, bool? nsfw, String auth
-});
-
-
-
-
+abstract class $EditCommunityCopyWith<$Res> {
+  factory $EditCommunityCopyWith(
+    EditCommunity value,
+    $Res Function(EditCommunity) then,
+  ) = _$EditCommunityCopyWithImpl<$Res, EditCommunity>;
+  @useResult
+  $Res call({
+    int communityId,
+    String? title,
+    String? description,
+    String? icon,
+    String? banner,
+    bool? nsfw,
+    String auth,
+  });
 }
+
 /// @nodoc
-class _$EditCommunityCopyWithImpl<$Res>
+class _$EditCommunityCopyWithImpl<$Res, $Val extends EditCommunity>
     implements $EditCommunityCopyWith<$Res> {
-  _$EditCommunityCopyWithImpl(this._self, this._then);
+  _$EditCommunityCopyWithImpl(this._value, this._then);
 
-  final EditCommunity _self;
-  final $Res Function(EditCommunity) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of EditCommunity
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? communityId = null,Object? title = freezed,Object? description = freezed,Object? icon = freezed,Object? banner = freezed,Object? nsfw = freezed,Object? auth = null,}) {
-  return _then(_self.copyWith(
-communityId: null == communityId ? _self.communityId : communityId // ignore: cast_nullable_to_non_nullable
-as int,title: freezed == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
-as String?,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
-as String?,icon: freezed == icon ? _self.icon : icon // ignore: cast_nullable_to_non_nullable
-as String?,banner: freezed == banner ? _self.banner : banner // ignore: cast_nullable_to_non_nullable
-as String?,nsfw: freezed == nsfw ? _self.nsfw : nsfw // ignore: cast_nullable_to_non_nullable
-as bool?,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of EditCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? communityId = null,
+    Object? title = freezed,
+    Object? description = freezed,
+    Object? icon = freezed,
+    Object? banner = freezed,
+    Object? nsfw = freezed,
+    Object? auth = null,
+  }) {
+    return _then(
+      _value.copyWith(
+            communityId:
+                null == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            title:
+                freezed == title
+                    ? _value.title
+                    : title // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            description:
+                freezed == description
+                    ? _value.description
+                    : description // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            icon:
+                freezed == icon
+                    ? _value.icon
+                    : icon // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            banner:
+                freezed == banner
+                    ? _value.banner
+                    : banner // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            nsfw:
+                freezed == nsfw
+                    ? _value.nsfw
+                    : nsfw // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$EditCommunityImplCopyWith<$Res>
+    implements $EditCommunityCopyWith<$Res> {
+  factory _$$EditCommunityImplCopyWith(
+    _$EditCommunityImpl value,
+    $Res Function(_$EditCommunityImpl) then,
+  ) = __$$EditCommunityImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({
+    int communityId,
+    String? title,
+    String? description,
+    String? icon,
+    String? banner,
+    bool? nsfw,
+    String auth,
+  });
 }
 
+/// @nodoc
+class __$$EditCommunityImplCopyWithImpl<$Res>
+    extends _$EditCommunityCopyWithImpl<$Res, _$EditCommunityImpl>
+    implements _$$EditCommunityImplCopyWith<$Res> {
+  __$$EditCommunityImplCopyWithImpl(
+    _$EditCommunityImpl _value,
+    $Res Function(_$EditCommunityImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [EditCommunity].
-extension EditCommunityPatterns on EditCommunity {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _EditCommunity value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _EditCommunity() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _EditCommunity value)  $default,){
-final _that = this;
-switch (_that) {
-case _EditCommunity():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _EditCommunity value)?  $default,){
-final _that = this;
-switch (_that) {
-case _EditCommunity() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int communityId,  String? title,  String? description,  String? icon,  String? banner,  bool? nsfw,  String auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _EditCommunity() when $default != null:
-return $default(_that.communityId,_that.title,_that.description,_that.icon,_that.banner,_that.nsfw,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int communityId,  String? title,  String? description,  String? icon,  String? banner,  bool? nsfw,  String auth)  $default,) {final _that = this;
-switch (_that) {
-case _EditCommunity():
-return $default(_that.communityId,_that.title,_that.description,_that.icon,_that.banner,_that.nsfw,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int communityId,  String? title,  String? description,  String? icon,  String? banner,  bool? nsfw,  String auth)?  $default,) {final _that = this;
-switch (_that) {
-case _EditCommunity() when $default != null:
-return $default(_that.communityId,_that.title,_that.description,_that.icon,_that.banner,_that.nsfw,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of EditCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? communityId = null,
+    Object? title = freezed,
+    Object? description = freezed,
+    Object? icon = freezed,
+    Object? banner = freezed,
+    Object? nsfw = freezed,
+    Object? auth = null,
+  }) {
+    return _then(
+      _$EditCommunityImpl(
+        communityId:
+            null == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        title:
+            freezed == title
+                ? _value.title
+                : title // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        description:
+            freezed == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        icon:
+            freezed == icon
+                ? _value.icon
+                : icon // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        banner:
+            freezed == banner
+                ? _value.banner
+                : banner // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        nsfw:
+            freezed == nsfw
+                ? _value.nsfw
+                : nsfw // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _EditCommunity extends EditCommunity {
-  const _EditCommunity({required this.communityId, this.title, this.description, this.icon, this.banner, this.nsfw, required this.auth}): super._();
-  factory _EditCommunity.fromJson(Map<String, dynamic> json) => _$EditCommunityFromJson(json);
+class _$EditCommunityImpl extends _EditCommunity {
+  const _$EditCommunityImpl({
+    required this.communityId,
+    this.title,
+    this.description,
+    this.icon,
+    this.banner,
+    this.nsfw,
+    required this.auth,
+  }) : super._();
 
-@override final  int communityId;
-@override final  String? title;
-@override final  String? description;
-@override final  String? icon;
-@override final  String? banner;
-@override final  bool? nsfw;
-@override final  String auth;
+  factory _$EditCommunityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EditCommunityImplFromJson(json);
 
-/// Create a copy of EditCommunity
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$EditCommunityCopyWith<_EditCommunity> get copyWith => __$EditCommunityCopyWithImpl<_EditCommunity>(this, _$identity);
+  @override
+  final int communityId;
+  @override
+  final String? title;
+  @override
+  final String? description;
+  @override
+  final String? icon;
+  @override
+  final String? banner;
+  @override
+  final bool? nsfw;
+  @override
+  final String auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$EditCommunityToJson(this, );
+  @override
+  String toString() {
+    return 'EditCommunity(communityId: $communityId, title: $title, description: $description, icon: $icon, banner: $banner, nsfw: $nsfw, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EditCommunityImpl &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.banner, banner) || other.banner == banner) &&
+            (identical(other.nsfw, nsfw) || other.nsfw == nsfw) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+    runtimeType,
+    communityId,
+    title,
+    description,
+    icon,
+    banner,
+    nsfw,
+    auth,
+  );
+
+  /// Create a copy of EditCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EditCommunityImplCopyWith<_$EditCommunityImpl> get copyWith =>
+      __$$EditCommunityImplCopyWithImpl<_$EditCommunityImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$EditCommunityImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _EditCommunity&&(identical(other.communityId, communityId) || other.communityId == communityId)&&(identical(other.title, title) || other.title == title)&&(identical(other.description, description) || other.description == description)&&(identical(other.icon, icon) || other.icon == icon)&&(identical(other.banner, banner) || other.banner == banner)&&(identical(other.nsfw, nsfw) || other.nsfw == nsfw)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _EditCommunity extends EditCommunity {
+  const factory _EditCommunity({
+    required final int communityId,
+    final String? title,
+    final String? description,
+    final String? icon,
+    final String? banner,
+    final bool? nsfw,
+    required final String auth,
+  }) = _$EditCommunityImpl;
+  const _EditCommunity._() : super._();
+
+  factory _EditCommunity.fromJson(Map<String, dynamic> json) =
+      _$EditCommunityImpl.fromJson;
+
+  @override
+  int get communityId;
+  @override
+  String? get title;
+  @override
+  String? get description;
+  @override
+  String? get icon;
+  @override
+  String? get banner;
+  @override
+  bool? get nsfw;
+  @override
+  String get auth;
+
+  /// Create a copy of EditCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$EditCommunityImplCopyWith<_$EditCommunityImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,communityId,title,description,icon,banner,nsfw,auth);
-
-@override
-String toString() {
-  return 'EditCommunity(communityId: $communityId, title: $title, description: $description, icon: $icon, banner: $banner, nsfw: $nsfw, auth: $auth)';
+DeleteCommunity _$DeleteCommunityFromJson(Map<String, dynamic> json) {
+  return _DeleteCommunity.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$EditCommunityCopyWith<$Res> implements $EditCommunityCopyWith<$Res> {
-  factory _$EditCommunityCopyWith(_EditCommunity value, $Res Function(_EditCommunity) _then) = __$EditCommunityCopyWithImpl;
-@override @useResult
-$Res call({
- int communityId, String? title, String? description, String? icon, String? banner, bool? nsfw, String auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$EditCommunityCopyWithImpl<$Res>
-    implements _$EditCommunityCopyWith<$Res> {
-  __$EditCommunityCopyWithImpl(this._self, this._then);
-
-  final _EditCommunity _self;
-  final $Res Function(_EditCommunity) _then;
-
-/// Create a copy of EditCommunity
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? communityId = null,Object? title = freezed,Object? description = freezed,Object? icon = freezed,Object? banner = freezed,Object? nsfw = freezed,Object? auth = null,}) {
-  return _then(_EditCommunity(
-communityId: null == communityId ? _self.communityId : communityId // ignore: cast_nullable_to_non_nullable
-as int,title: freezed == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
-as String?,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
-as String?,icon: freezed == icon ? _self.icon : icon // ignore: cast_nullable_to_non_nullable
-as String?,banner: freezed == banner ? _self.banner : banner // ignore: cast_nullable_to_non_nullable
-as String?,nsfw: freezed == nsfw ? _self.nsfw : nsfw // ignore: cast_nullable_to_non_nullable
-as bool?,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$DeleteCommunity {
-
- dynamic get path; dynamic get httpMethod; int get communityId; bool get deleted; String get auth;
-/// Create a copy of DeleteCommunity
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$DeleteCommunityCopyWith<DeleteCommunity> get copyWith => _$DeleteCommunityCopyWithImpl<DeleteCommunity>(this as DeleteCommunity, _$identity);
+  int get communityId => throw _privateConstructorUsedError;
+  bool get deleted => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
   /// Serializes this DeleteCommunity to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is DeleteCommunity&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.communityId, communityId) || other.communityId == communityId)&&(identical(other.deleted, deleted) || other.deleted == deleted)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),communityId,deleted,auth);
-
-@override
-String toString() {
-  return 'DeleteCommunity(path: $path, httpMethod: $httpMethod, communityId: $communityId, deleted: $deleted, auth: $auth)';
-}
-
-
+  /// Create a copy of DeleteCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $DeleteCommunityCopyWith<DeleteCommunity> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $DeleteCommunityCopyWith<$Res>  {
-  factory $DeleteCommunityCopyWith(DeleteCommunity value, $Res Function(DeleteCommunity) _then) = _$DeleteCommunityCopyWithImpl;
-@useResult
-$Res call({
- int communityId, bool deleted, String auth
-});
-
-
-
-
+abstract class $DeleteCommunityCopyWith<$Res> {
+  factory $DeleteCommunityCopyWith(
+    DeleteCommunity value,
+    $Res Function(DeleteCommunity) then,
+  ) = _$DeleteCommunityCopyWithImpl<$Res, DeleteCommunity>;
+  @useResult
+  $Res call({int communityId, bool deleted, String auth});
 }
+
 /// @nodoc
-class _$DeleteCommunityCopyWithImpl<$Res>
+class _$DeleteCommunityCopyWithImpl<$Res, $Val extends DeleteCommunity>
     implements $DeleteCommunityCopyWith<$Res> {
-  _$DeleteCommunityCopyWithImpl(this._self, this._then);
+  _$DeleteCommunityCopyWithImpl(this._value, this._then);
 
-  final DeleteCommunity _self;
-  final $Res Function(DeleteCommunity) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of DeleteCommunity
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? communityId = null,Object? deleted = null,Object? auth = null,}) {
-  return _then(_self.copyWith(
-communityId: null == communityId ? _self.communityId : communityId // ignore: cast_nullable_to_non_nullable
-as int,deleted: null == deleted ? _self.deleted : deleted // ignore: cast_nullable_to_non_nullable
-as bool,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of DeleteCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? communityId = null,
+    Object? deleted = null,
+    Object? auth = null,
+  }) {
+    return _then(
+      _value.copyWith(
+            communityId:
+                null == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            deleted:
+                null == deleted
+                    ? _value.deleted
+                    : deleted // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$DeleteCommunityImplCopyWith<$Res>
+    implements $DeleteCommunityCopyWith<$Res> {
+  factory _$$DeleteCommunityImplCopyWith(
+    _$DeleteCommunityImpl value,
+    $Res Function(_$DeleteCommunityImpl) then,
+  ) = __$$DeleteCommunityImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int communityId, bool deleted, String auth});
 }
 
+/// @nodoc
+class __$$DeleteCommunityImplCopyWithImpl<$Res>
+    extends _$DeleteCommunityCopyWithImpl<$Res, _$DeleteCommunityImpl>
+    implements _$$DeleteCommunityImplCopyWith<$Res> {
+  __$$DeleteCommunityImplCopyWithImpl(
+    _$DeleteCommunityImpl _value,
+    $Res Function(_$DeleteCommunityImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [DeleteCommunity].
-extension DeleteCommunityPatterns on DeleteCommunity {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _DeleteCommunity value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _DeleteCommunity() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _DeleteCommunity value)  $default,){
-final _that = this;
-switch (_that) {
-case _DeleteCommunity():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _DeleteCommunity value)?  $default,){
-final _that = this;
-switch (_that) {
-case _DeleteCommunity() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int communityId,  bool deleted,  String auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _DeleteCommunity() when $default != null:
-return $default(_that.communityId,_that.deleted,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int communityId,  bool deleted,  String auth)  $default,) {final _that = this;
-switch (_that) {
-case _DeleteCommunity():
-return $default(_that.communityId,_that.deleted,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int communityId,  bool deleted,  String auth)?  $default,) {final _that = this;
-switch (_that) {
-case _DeleteCommunity() when $default != null:
-return $default(_that.communityId,_that.deleted,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of DeleteCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? communityId = null,
+    Object? deleted = null,
+    Object? auth = null,
+  }) {
+    return _then(
+      _$DeleteCommunityImpl(
+        communityId:
+            null == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        deleted:
+            null == deleted
+                ? _value.deleted
+                : deleted // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _DeleteCommunity extends DeleteCommunity {
-  const _DeleteCommunity({required this.communityId, required this.deleted, required this.auth}): super._();
-  factory _DeleteCommunity.fromJson(Map<String, dynamic> json) => _$DeleteCommunityFromJson(json);
+class _$DeleteCommunityImpl extends _DeleteCommunity {
+  const _$DeleteCommunityImpl({
+    required this.communityId,
+    required this.deleted,
+    required this.auth,
+  }) : super._();
 
-@override final  int communityId;
-@override final  bool deleted;
-@override final  String auth;
+  factory _$DeleteCommunityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DeleteCommunityImplFromJson(json);
 
-/// Create a copy of DeleteCommunity
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$DeleteCommunityCopyWith<_DeleteCommunity> get copyWith => __$DeleteCommunityCopyWithImpl<_DeleteCommunity>(this, _$identity);
+  @override
+  final int communityId;
+  @override
+  final bool deleted;
+  @override
+  final String auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$DeleteCommunityToJson(this, );
+  @override
+  String toString() {
+    return 'DeleteCommunity(communityId: $communityId, deleted: $deleted, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DeleteCommunityImpl &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.deleted, deleted) || other.deleted == deleted) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, communityId, deleted, auth);
+
+  /// Create a copy of DeleteCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DeleteCommunityImplCopyWith<_$DeleteCommunityImpl> get copyWith =>
+      __$$DeleteCommunityImplCopyWithImpl<_$DeleteCommunityImpl>(
+        this,
+        _$identity,
+      );
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$DeleteCommunityImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _DeleteCommunity&&(identical(other.communityId, communityId) || other.communityId == communityId)&&(identical(other.deleted, deleted) || other.deleted == deleted)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _DeleteCommunity extends DeleteCommunity {
+  const factory _DeleteCommunity({
+    required final int communityId,
+    required final bool deleted,
+    required final String auth,
+  }) = _$DeleteCommunityImpl;
+  const _DeleteCommunity._() : super._();
+
+  factory _DeleteCommunity.fromJson(Map<String, dynamic> json) =
+      _$DeleteCommunityImpl.fromJson;
+
+  @override
+  int get communityId;
+  @override
+  bool get deleted;
+  @override
+  String get auth;
+
+  /// Create a copy of DeleteCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$DeleteCommunityImplCopyWith<_$DeleteCommunityImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,communityId,deleted,auth);
-
-@override
-String toString() {
-  return 'DeleteCommunity(communityId: $communityId, deleted: $deleted, auth: $auth)';
+RemoveCommunity _$RemoveCommunityFromJson(Map<String, dynamic> json) {
+  return _RemoveCommunity.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$DeleteCommunityCopyWith<$Res> implements $DeleteCommunityCopyWith<$Res> {
-  factory _$DeleteCommunityCopyWith(_DeleteCommunity value, $Res Function(_DeleteCommunity) _then) = __$DeleteCommunityCopyWithImpl;
-@override @useResult
-$Res call({
- int communityId, bool deleted, String auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$DeleteCommunityCopyWithImpl<$Res>
-    implements _$DeleteCommunityCopyWith<$Res> {
-  __$DeleteCommunityCopyWithImpl(this._self, this._then);
-
-  final _DeleteCommunity _self;
-  final $Res Function(_DeleteCommunity) _then;
-
-/// Create a copy of DeleteCommunity
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? communityId = null,Object? deleted = null,Object? auth = null,}) {
-  return _then(_DeleteCommunity(
-communityId: null == communityId ? _self.communityId : communityId // ignore: cast_nullable_to_non_nullable
-as int,deleted: null == deleted ? _self.deleted : deleted // ignore: cast_nullable_to_non_nullable
-as bool,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$RemoveCommunity {
-
- dynamic get path; dynamic get httpMethod; int get communityId; bool get removed; String? get reason; int? get expires; String get auth;
-/// Create a copy of RemoveCommunity
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$RemoveCommunityCopyWith<RemoveCommunity> get copyWith => _$RemoveCommunityCopyWithImpl<RemoveCommunity>(this as RemoveCommunity, _$identity);
+  int get communityId => throw _privateConstructorUsedError;
+  bool get removed => throw _privateConstructorUsedError;
+  String? get reason => throw _privateConstructorUsedError;
+  int? get expires => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
   /// Serializes this RemoveCommunity to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoveCommunity&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.communityId, communityId) || other.communityId == communityId)&&(identical(other.removed, removed) || other.removed == removed)&&(identical(other.reason, reason) || other.reason == reason)&&(identical(other.expires, expires) || other.expires == expires)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),communityId,removed,reason,expires,auth);
-
-@override
-String toString() {
-  return 'RemoveCommunity(path: $path, httpMethod: $httpMethod, communityId: $communityId, removed: $removed, reason: $reason, expires: $expires, auth: $auth)';
-}
-
-
+  /// Create a copy of RemoveCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $RemoveCommunityCopyWith<RemoveCommunity> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $RemoveCommunityCopyWith<$Res>  {
-  factory $RemoveCommunityCopyWith(RemoveCommunity value, $Res Function(RemoveCommunity) _then) = _$RemoveCommunityCopyWithImpl;
-@useResult
-$Res call({
- int communityId, bool removed, String? reason, int? expires, String auth
-});
-
-
-
-
+abstract class $RemoveCommunityCopyWith<$Res> {
+  factory $RemoveCommunityCopyWith(
+    RemoveCommunity value,
+    $Res Function(RemoveCommunity) then,
+  ) = _$RemoveCommunityCopyWithImpl<$Res, RemoveCommunity>;
+  @useResult
+  $Res call({
+    int communityId,
+    bool removed,
+    String? reason,
+    int? expires,
+    String auth,
+  });
 }
+
 /// @nodoc
-class _$RemoveCommunityCopyWithImpl<$Res>
+class _$RemoveCommunityCopyWithImpl<$Res, $Val extends RemoveCommunity>
     implements $RemoveCommunityCopyWith<$Res> {
-  _$RemoveCommunityCopyWithImpl(this._self, this._then);
+  _$RemoveCommunityCopyWithImpl(this._value, this._then);
 
-  final RemoveCommunity _self;
-  final $Res Function(RemoveCommunity) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of RemoveCommunity
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? communityId = null,Object? removed = null,Object? reason = freezed,Object? expires = freezed,Object? auth = null,}) {
-  return _then(_self.copyWith(
-communityId: null == communityId ? _self.communityId : communityId // ignore: cast_nullable_to_non_nullable
-as int,removed: null == removed ? _self.removed : removed // ignore: cast_nullable_to_non_nullable
-as bool,reason: freezed == reason ? _self.reason : reason // ignore: cast_nullable_to_non_nullable
-as String?,expires: freezed == expires ? _self.expires : expires // ignore: cast_nullable_to_non_nullable
-as int?,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of RemoveCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? communityId = null,
+    Object? removed = null,
+    Object? reason = freezed,
+    Object? expires = freezed,
+    Object? auth = null,
+  }) {
+    return _then(
+      _value.copyWith(
+            communityId:
+                null == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            removed:
+                null == removed
+                    ? _value.removed
+                    : removed // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            reason:
+                freezed == reason
+                    ? _value.reason
+                    : reason // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            expires:
+                freezed == expires
+                    ? _value.expires
+                    : expires // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$RemoveCommunityImplCopyWith<$Res>
+    implements $RemoveCommunityCopyWith<$Res> {
+  factory _$$RemoveCommunityImplCopyWith(
+    _$RemoveCommunityImpl value,
+    $Res Function(_$RemoveCommunityImpl) then,
+  ) = __$$RemoveCommunityImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({
+    int communityId,
+    bool removed,
+    String? reason,
+    int? expires,
+    String auth,
+  });
 }
 
+/// @nodoc
+class __$$RemoveCommunityImplCopyWithImpl<$Res>
+    extends _$RemoveCommunityCopyWithImpl<$Res, _$RemoveCommunityImpl>
+    implements _$$RemoveCommunityImplCopyWith<$Res> {
+  __$$RemoveCommunityImplCopyWithImpl(
+    _$RemoveCommunityImpl _value,
+    $Res Function(_$RemoveCommunityImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [RemoveCommunity].
-extension RemoveCommunityPatterns on RemoveCommunity {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _RemoveCommunity value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _RemoveCommunity() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _RemoveCommunity value)  $default,){
-final _that = this;
-switch (_that) {
-case _RemoveCommunity():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _RemoveCommunity value)?  $default,){
-final _that = this;
-switch (_that) {
-case _RemoveCommunity() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int communityId,  bool removed,  String? reason,  int? expires,  String auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _RemoveCommunity() when $default != null:
-return $default(_that.communityId,_that.removed,_that.reason,_that.expires,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int communityId,  bool removed,  String? reason,  int? expires,  String auth)  $default,) {final _that = this;
-switch (_that) {
-case _RemoveCommunity():
-return $default(_that.communityId,_that.removed,_that.reason,_that.expires,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int communityId,  bool removed,  String? reason,  int? expires,  String auth)?  $default,) {final _that = this;
-switch (_that) {
-case _RemoveCommunity() when $default != null:
-return $default(_that.communityId,_that.removed,_that.reason,_that.expires,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of RemoveCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? communityId = null,
+    Object? removed = null,
+    Object? reason = freezed,
+    Object? expires = freezed,
+    Object? auth = null,
+  }) {
+    return _then(
+      _$RemoveCommunityImpl(
+        communityId:
+            null == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        removed:
+            null == removed
+                ? _value.removed
+                : removed // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        reason:
+            freezed == reason
+                ? _value.reason
+                : reason // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        expires:
+            freezed == expires
+                ? _value.expires
+                : expires // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _RemoveCommunity extends RemoveCommunity {
-  const _RemoveCommunity({required this.communityId, required this.removed, this.reason, this.expires, required this.auth}): super._();
-  factory _RemoveCommunity.fromJson(Map<String, dynamic> json) => _$RemoveCommunityFromJson(json);
+class _$RemoveCommunityImpl extends _RemoveCommunity {
+  const _$RemoveCommunityImpl({
+    required this.communityId,
+    required this.removed,
+    this.reason,
+    this.expires,
+    required this.auth,
+  }) : super._();
 
-@override final  int communityId;
-@override final  bool removed;
-@override final  String? reason;
-@override final  int? expires;
-@override final  String auth;
+  factory _$RemoveCommunityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RemoveCommunityImplFromJson(json);
 
-/// Create a copy of RemoveCommunity
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$RemoveCommunityCopyWith<_RemoveCommunity> get copyWith => __$RemoveCommunityCopyWithImpl<_RemoveCommunity>(this, _$identity);
+  @override
+  final int communityId;
+  @override
+  final bool removed;
+  @override
+  final String? reason;
+  @override
+  final int? expires;
+  @override
+  final String auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$RemoveCommunityToJson(this, );
+  @override
+  String toString() {
+    return 'RemoveCommunity(communityId: $communityId, removed: $removed, reason: $reason, expires: $expires, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$RemoveCommunityImpl &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.removed, removed) || other.removed == removed) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.expires, expires) || other.expires == expires) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, communityId, removed, reason, expires, auth);
+
+  /// Create a copy of RemoveCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$RemoveCommunityImplCopyWith<_$RemoveCommunityImpl> get copyWith =>
+      __$$RemoveCommunityImplCopyWithImpl<_$RemoveCommunityImpl>(
+        this,
+        _$identity,
+      );
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$RemoveCommunityImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RemoveCommunity&&(identical(other.communityId, communityId) || other.communityId == communityId)&&(identical(other.removed, removed) || other.removed == removed)&&(identical(other.reason, reason) || other.reason == reason)&&(identical(other.expires, expires) || other.expires == expires)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _RemoveCommunity extends RemoveCommunity {
+  const factory _RemoveCommunity({
+    required final int communityId,
+    required final bool removed,
+    final String? reason,
+    final int? expires,
+    required final String auth,
+  }) = _$RemoveCommunityImpl;
+  const _RemoveCommunity._() : super._();
+
+  factory _RemoveCommunity.fromJson(Map<String, dynamic> json) =
+      _$RemoveCommunityImpl.fromJson;
+
+  @override
+  int get communityId;
+  @override
+  bool get removed;
+  @override
+  String? get reason;
+  @override
+  int? get expires;
+  @override
+  String get auth;
+
+  /// Create a copy of RemoveCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$RemoveCommunityImplCopyWith<_$RemoveCommunityImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,communityId,removed,reason,expires,auth);
-
-@override
-String toString() {
-  return 'RemoveCommunity(communityId: $communityId, removed: $removed, reason: $reason, expires: $expires, auth: $auth)';
+FollowCommunity _$FollowCommunityFromJson(Map<String, dynamic> json) {
+  return _FollowCommunity.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$RemoveCommunityCopyWith<$Res> implements $RemoveCommunityCopyWith<$Res> {
-  factory _$RemoveCommunityCopyWith(_RemoveCommunity value, $Res Function(_RemoveCommunity) _then) = __$RemoveCommunityCopyWithImpl;
-@override @useResult
-$Res call({
- int communityId, bool removed, String? reason, int? expires, String auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$RemoveCommunityCopyWithImpl<$Res>
-    implements _$RemoveCommunityCopyWith<$Res> {
-  __$RemoveCommunityCopyWithImpl(this._self, this._then);
-
-  final _RemoveCommunity _self;
-  final $Res Function(_RemoveCommunity) _then;
-
-/// Create a copy of RemoveCommunity
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? communityId = null,Object? removed = null,Object? reason = freezed,Object? expires = freezed,Object? auth = null,}) {
-  return _then(_RemoveCommunity(
-communityId: null == communityId ? _self.communityId : communityId // ignore: cast_nullable_to_non_nullable
-as int,removed: null == removed ? _self.removed : removed // ignore: cast_nullable_to_non_nullable
-as bool,reason: freezed == reason ? _self.reason : reason // ignore: cast_nullable_to_non_nullable
-as String?,expires: freezed == expires ? _self.expires : expires // ignore: cast_nullable_to_non_nullable
-as int?,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$FollowCommunity {
-
- dynamic get path; dynamic get httpMethod; int get communityId; bool get follow; String get auth;
-/// Create a copy of FollowCommunity
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$FollowCommunityCopyWith<FollowCommunity> get copyWith => _$FollowCommunityCopyWithImpl<FollowCommunity>(this as FollowCommunity, _$identity);
+  int get communityId => throw _privateConstructorUsedError;
+  bool get follow => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
   /// Serializes this FollowCommunity to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is FollowCommunity&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.communityId, communityId) || other.communityId == communityId)&&(identical(other.follow, follow) || other.follow == follow)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),communityId,follow,auth);
-
-@override
-String toString() {
-  return 'FollowCommunity(path: $path, httpMethod: $httpMethod, communityId: $communityId, follow: $follow, auth: $auth)';
-}
-
-
+  /// Create a copy of FollowCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $FollowCommunityCopyWith<FollowCommunity> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $FollowCommunityCopyWith<$Res>  {
-  factory $FollowCommunityCopyWith(FollowCommunity value, $Res Function(FollowCommunity) _then) = _$FollowCommunityCopyWithImpl;
-@useResult
-$Res call({
- int communityId, bool follow, String auth
-});
-
-
-
-
+abstract class $FollowCommunityCopyWith<$Res> {
+  factory $FollowCommunityCopyWith(
+    FollowCommunity value,
+    $Res Function(FollowCommunity) then,
+  ) = _$FollowCommunityCopyWithImpl<$Res, FollowCommunity>;
+  @useResult
+  $Res call({int communityId, bool follow, String auth});
 }
+
 /// @nodoc
-class _$FollowCommunityCopyWithImpl<$Res>
+class _$FollowCommunityCopyWithImpl<$Res, $Val extends FollowCommunity>
     implements $FollowCommunityCopyWith<$Res> {
-  _$FollowCommunityCopyWithImpl(this._self, this._then);
+  _$FollowCommunityCopyWithImpl(this._value, this._then);
 
-  final FollowCommunity _self;
-  final $Res Function(FollowCommunity) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of FollowCommunity
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? communityId = null,Object? follow = null,Object? auth = null,}) {
-  return _then(_self.copyWith(
-communityId: null == communityId ? _self.communityId : communityId // ignore: cast_nullable_to_non_nullable
-as int,follow: null == follow ? _self.follow : follow // ignore: cast_nullable_to_non_nullable
-as bool,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of FollowCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? communityId = null,
+    Object? follow = null,
+    Object? auth = null,
+  }) {
+    return _then(
+      _value.copyWith(
+            communityId:
+                null == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            follow:
+                null == follow
+                    ? _value.follow
+                    : follow // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$FollowCommunityImplCopyWith<$Res>
+    implements $FollowCommunityCopyWith<$Res> {
+  factory _$$FollowCommunityImplCopyWith(
+    _$FollowCommunityImpl value,
+    $Res Function(_$FollowCommunityImpl) then,
+  ) = __$$FollowCommunityImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int communityId, bool follow, String auth});
 }
 
+/// @nodoc
+class __$$FollowCommunityImplCopyWithImpl<$Res>
+    extends _$FollowCommunityCopyWithImpl<$Res, _$FollowCommunityImpl>
+    implements _$$FollowCommunityImplCopyWith<$Res> {
+  __$$FollowCommunityImplCopyWithImpl(
+    _$FollowCommunityImpl _value,
+    $Res Function(_$FollowCommunityImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [FollowCommunity].
-extension FollowCommunityPatterns on FollowCommunity {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _FollowCommunity value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _FollowCommunity() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _FollowCommunity value)  $default,){
-final _that = this;
-switch (_that) {
-case _FollowCommunity():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _FollowCommunity value)?  $default,){
-final _that = this;
-switch (_that) {
-case _FollowCommunity() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int communityId,  bool follow,  String auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _FollowCommunity() when $default != null:
-return $default(_that.communityId,_that.follow,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int communityId,  bool follow,  String auth)  $default,) {final _that = this;
-switch (_that) {
-case _FollowCommunity():
-return $default(_that.communityId,_that.follow,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int communityId,  bool follow,  String auth)?  $default,) {final _that = this;
-switch (_that) {
-case _FollowCommunity() when $default != null:
-return $default(_that.communityId,_that.follow,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of FollowCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? communityId = null,
+    Object? follow = null,
+    Object? auth = null,
+  }) {
+    return _then(
+      _$FollowCommunityImpl(
+        communityId:
+            null == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        follow:
+            null == follow
+                ? _value.follow
+                : follow // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _FollowCommunity extends FollowCommunity {
-  const _FollowCommunity({required this.communityId, required this.follow, required this.auth}): super._();
-  factory _FollowCommunity.fromJson(Map<String, dynamic> json) => _$FollowCommunityFromJson(json);
+class _$FollowCommunityImpl extends _FollowCommunity {
+  const _$FollowCommunityImpl({
+    required this.communityId,
+    required this.follow,
+    required this.auth,
+  }) : super._();
 
-@override final  int communityId;
-@override final  bool follow;
-@override final  String auth;
+  factory _$FollowCommunityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$FollowCommunityImplFromJson(json);
 
-/// Create a copy of FollowCommunity
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$FollowCommunityCopyWith<_FollowCommunity> get copyWith => __$FollowCommunityCopyWithImpl<_FollowCommunity>(this, _$identity);
+  @override
+  final int communityId;
+  @override
+  final bool follow;
+  @override
+  final String auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$FollowCommunityToJson(this, );
+  @override
+  String toString() {
+    return 'FollowCommunity(communityId: $communityId, follow: $follow, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FollowCommunityImpl &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.follow, follow) || other.follow == follow) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, communityId, follow, auth);
+
+  /// Create a copy of FollowCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FollowCommunityImplCopyWith<_$FollowCommunityImpl> get copyWith =>
+      __$$FollowCommunityImplCopyWithImpl<_$FollowCommunityImpl>(
+        this,
+        _$identity,
+      );
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$FollowCommunityImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _FollowCommunity&&(identical(other.communityId, communityId) || other.communityId == communityId)&&(identical(other.follow, follow) || other.follow == follow)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _FollowCommunity extends FollowCommunity {
+  const factory _FollowCommunity({
+    required final int communityId,
+    required final bool follow,
+    required final String auth,
+  }) = _$FollowCommunityImpl;
+  const _FollowCommunity._() : super._();
+
+  factory _FollowCommunity.fromJson(Map<String, dynamic> json) =
+      _$FollowCommunityImpl.fromJson;
+
+  @override
+  int get communityId;
+  @override
+  bool get follow;
+  @override
+  String get auth;
+
+  /// Create a copy of FollowCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FollowCommunityImplCopyWith<_$FollowCommunityImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,communityId,follow,auth);
-
-@override
-String toString() {
-  return 'FollowCommunity(communityId: $communityId, follow: $follow, auth: $auth)';
+TransferCommunity _$TransferCommunityFromJson(Map<String, dynamic> json) {
+  return _TransferCommunity.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$FollowCommunityCopyWith<$Res> implements $FollowCommunityCopyWith<$Res> {
-  factory _$FollowCommunityCopyWith(_FollowCommunity value, $Res Function(_FollowCommunity) _then) = __$FollowCommunityCopyWithImpl;
-@override @useResult
-$Res call({
- int communityId, bool follow, String auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$FollowCommunityCopyWithImpl<$Res>
-    implements _$FollowCommunityCopyWith<$Res> {
-  __$FollowCommunityCopyWithImpl(this._self, this._then);
-
-  final _FollowCommunity _self;
-  final $Res Function(_FollowCommunity) _then;
-
-/// Create a copy of FollowCommunity
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? communityId = null,Object? follow = null,Object? auth = null,}) {
-  return _then(_FollowCommunity(
-communityId: null == communityId ? _self.communityId : communityId // ignore: cast_nullable_to_non_nullable
-as int,follow: null == follow ? _self.follow : follow // ignore: cast_nullable_to_non_nullable
-as bool,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$TransferCommunity {
-
- dynamic get path; dynamic get httpMethod; int get communityId; int get personId; String get auth;
-/// Create a copy of TransferCommunity
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$TransferCommunityCopyWith<TransferCommunity> get copyWith => _$TransferCommunityCopyWithImpl<TransferCommunity>(this as TransferCommunity, _$identity);
+  int get communityId => throw _privateConstructorUsedError;
+  int get personId => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
   /// Serializes this TransferCommunity to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is TransferCommunity&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.communityId, communityId) || other.communityId == communityId)&&(identical(other.personId, personId) || other.personId == personId)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),communityId,personId,auth);
-
-@override
-String toString() {
-  return 'TransferCommunity(path: $path, httpMethod: $httpMethod, communityId: $communityId, personId: $personId, auth: $auth)';
-}
-
-
+  /// Create a copy of TransferCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $TransferCommunityCopyWith<TransferCommunity> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $TransferCommunityCopyWith<$Res>  {
-  factory $TransferCommunityCopyWith(TransferCommunity value, $Res Function(TransferCommunity) _then) = _$TransferCommunityCopyWithImpl;
-@useResult
-$Res call({
- int communityId, int personId, String auth
-});
-
-
-
-
+abstract class $TransferCommunityCopyWith<$Res> {
+  factory $TransferCommunityCopyWith(
+    TransferCommunity value,
+    $Res Function(TransferCommunity) then,
+  ) = _$TransferCommunityCopyWithImpl<$Res, TransferCommunity>;
+  @useResult
+  $Res call({int communityId, int personId, String auth});
 }
+
 /// @nodoc
-class _$TransferCommunityCopyWithImpl<$Res>
+class _$TransferCommunityCopyWithImpl<$Res, $Val extends TransferCommunity>
     implements $TransferCommunityCopyWith<$Res> {
-  _$TransferCommunityCopyWithImpl(this._self, this._then);
+  _$TransferCommunityCopyWithImpl(this._value, this._then);
 
-  final TransferCommunity _self;
-  final $Res Function(TransferCommunity) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of TransferCommunity
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? communityId = null,Object? personId = null,Object? auth = null,}) {
-  return _then(_self.copyWith(
-communityId: null == communityId ? _self.communityId : communityId // ignore: cast_nullable_to_non_nullable
-as int,personId: null == personId ? _self.personId : personId // ignore: cast_nullable_to_non_nullable
-as int,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of TransferCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? communityId = null,
+    Object? personId = null,
+    Object? auth = null,
+  }) {
+    return _then(
+      _value.copyWith(
+            communityId:
+                null == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            personId:
+                null == personId
+                    ? _value.personId
+                    : personId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$TransferCommunityImplCopyWith<$Res>
+    implements $TransferCommunityCopyWith<$Res> {
+  factory _$$TransferCommunityImplCopyWith(
+    _$TransferCommunityImpl value,
+    $Res Function(_$TransferCommunityImpl) then,
+  ) = __$$TransferCommunityImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int communityId, int personId, String auth});
 }
 
+/// @nodoc
+class __$$TransferCommunityImplCopyWithImpl<$Res>
+    extends _$TransferCommunityCopyWithImpl<$Res, _$TransferCommunityImpl>
+    implements _$$TransferCommunityImplCopyWith<$Res> {
+  __$$TransferCommunityImplCopyWithImpl(
+    _$TransferCommunityImpl _value,
+    $Res Function(_$TransferCommunityImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [TransferCommunity].
-extension TransferCommunityPatterns on TransferCommunity {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _TransferCommunity value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _TransferCommunity() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _TransferCommunity value)  $default,){
-final _that = this;
-switch (_that) {
-case _TransferCommunity():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _TransferCommunity value)?  $default,){
-final _that = this;
-switch (_that) {
-case _TransferCommunity() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int communityId,  int personId,  String auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _TransferCommunity() when $default != null:
-return $default(_that.communityId,_that.personId,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int communityId,  int personId,  String auth)  $default,) {final _that = this;
-switch (_that) {
-case _TransferCommunity():
-return $default(_that.communityId,_that.personId,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int communityId,  int personId,  String auth)?  $default,) {final _that = this;
-switch (_that) {
-case _TransferCommunity() when $default != null:
-return $default(_that.communityId,_that.personId,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of TransferCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? communityId = null,
+    Object? personId = null,
+    Object? auth = null,
+  }) {
+    return _then(
+      _$TransferCommunityImpl(
+        communityId:
+            null == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        personId:
+            null == personId
+                ? _value.personId
+                : personId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _TransferCommunity extends TransferCommunity {
-  const _TransferCommunity({required this.communityId, required this.personId, required this.auth}): super._();
-  factory _TransferCommunity.fromJson(Map<String, dynamic> json) => _$TransferCommunityFromJson(json);
+class _$TransferCommunityImpl extends _TransferCommunity {
+  const _$TransferCommunityImpl({
+    required this.communityId,
+    required this.personId,
+    required this.auth,
+  }) : super._();
 
-@override final  int communityId;
-@override final  int personId;
-@override final  String auth;
+  factory _$TransferCommunityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TransferCommunityImplFromJson(json);
 
-/// Create a copy of TransferCommunity
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$TransferCommunityCopyWith<_TransferCommunity> get copyWith => __$TransferCommunityCopyWithImpl<_TransferCommunity>(this, _$identity);
+  @override
+  final int communityId;
+  @override
+  final int personId;
+  @override
+  final String auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$TransferCommunityToJson(this, );
+  @override
+  String toString() {
+    return 'TransferCommunity(communityId: $communityId, personId: $personId, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TransferCommunityImpl &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.personId, personId) ||
+                other.personId == personId) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, communityId, personId, auth);
+
+  /// Create a copy of TransferCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TransferCommunityImplCopyWith<_$TransferCommunityImpl> get copyWith =>
+      __$$TransferCommunityImplCopyWithImpl<_$TransferCommunityImpl>(
+        this,
+        _$identity,
+      );
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$TransferCommunityImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _TransferCommunity&&(identical(other.communityId, communityId) || other.communityId == communityId)&&(identical(other.personId, personId) || other.personId == personId)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _TransferCommunity extends TransferCommunity {
+  const factory _TransferCommunity({
+    required final int communityId,
+    required final int personId,
+    required final String auth,
+  }) = _$TransferCommunityImpl;
+  const _TransferCommunity._() : super._();
+
+  factory _TransferCommunity.fromJson(Map<String, dynamic> json) =
+      _$TransferCommunityImpl.fromJson;
+
+  @override
+  int get communityId;
+  @override
+  int get personId;
+  @override
+  String get auth;
+
+  /// Create a copy of TransferCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$TransferCommunityImplCopyWith<_$TransferCommunityImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,communityId,personId,auth);
-
-@override
-String toString() {
-  return 'TransferCommunity(communityId: $communityId, personId: $personId, auth: $auth)';
+BlockCommunity _$BlockCommunityFromJson(Map<String, dynamic> json) {
+  return _BlockCommunity.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$TransferCommunityCopyWith<$Res> implements $TransferCommunityCopyWith<$Res> {
-  factory _$TransferCommunityCopyWith(_TransferCommunity value, $Res Function(_TransferCommunity) _then) = __$TransferCommunityCopyWithImpl;
-@override @useResult
-$Res call({
- int communityId, int personId, String auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$TransferCommunityCopyWithImpl<$Res>
-    implements _$TransferCommunityCopyWith<$Res> {
-  __$TransferCommunityCopyWithImpl(this._self, this._then);
-
-  final _TransferCommunity _self;
-  final $Res Function(_TransferCommunity) _then;
-
-/// Create a copy of TransferCommunity
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? communityId = null,Object? personId = null,Object? auth = null,}) {
-  return _then(_TransferCommunity(
-communityId: null == communityId ? _self.communityId : communityId // ignore: cast_nullable_to_non_nullable
-as int,personId: null == personId ? _self.personId : personId // ignore: cast_nullable_to_non_nullable
-as int,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$BlockCommunity {
-
- dynamic get path; dynamic get httpMethod; int get communityId; bool get block; String get auth;
-/// Create a copy of BlockCommunity
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$BlockCommunityCopyWith<BlockCommunity> get copyWith => _$BlockCommunityCopyWithImpl<BlockCommunity>(this as BlockCommunity, _$identity);
+  int get communityId => throw _privateConstructorUsedError;
+  bool get block => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
   /// Serializes this BlockCommunity to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is BlockCommunity&&const DeepCollectionEquality().equals(other.path, path)&&const DeepCollectionEquality().equals(other.httpMethod, httpMethod)&&(identical(other.communityId, communityId) || other.communityId == communityId)&&(identical(other.block, block) || other.block == block)&&(identical(other.auth, auth) || other.auth == auth));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(path),const DeepCollectionEquality().hash(httpMethod),communityId,block,auth);
-
-@override
-String toString() {
-  return 'BlockCommunity(path: $path, httpMethod: $httpMethod, communityId: $communityId, block: $block, auth: $auth)';
-}
-
-
+  /// Create a copy of BlockCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $BlockCommunityCopyWith<BlockCommunity> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $BlockCommunityCopyWith<$Res>  {
-  factory $BlockCommunityCopyWith(BlockCommunity value, $Res Function(BlockCommunity) _then) = _$BlockCommunityCopyWithImpl;
-@useResult
-$Res call({
- int communityId, bool block, String auth
-});
-
-
-
-
+abstract class $BlockCommunityCopyWith<$Res> {
+  factory $BlockCommunityCopyWith(
+    BlockCommunity value,
+    $Res Function(BlockCommunity) then,
+  ) = _$BlockCommunityCopyWithImpl<$Res, BlockCommunity>;
+  @useResult
+  $Res call({int communityId, bool block, String auth});
 }
+
 /// @nodoc
-class _$BlockCommunityCopyWithImpl<$Res>
+class _$BlockCommunityCopyWithImpl<$Res, $Val extends BlockCommunity>
     implements $BlockCommunityCopyWith<$Res> {
-  _$BlockCommunityCopyWithImpl(this._self, this._then);
+  _$BlockCommunityCopyWithImpl(this._value, this._then);
 
-  final BlockCommunity _self;
-  final $Res Function(BlockCommunity) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of BlockCommunity
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? communityId = null,Object? block = null,Object? auth = null,}) {
-  return _then(_self.copyWith(
-communityId: null == communityId ? _self.communityId : communityId // ignore: cast_nullable_to_non_nullable
-as int,block: null == block ? _self.block : block // ignore: cast_nullable_to_non_nullable
-as bool,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of BlockCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? communityId = null,
+    Object? block = null,
+    Object? auth = null,
+  }) {
+    return _then(
+      _value.copyWith(
+            communityId:
+                null == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            block:
+                null == block
+                    ? _value.block
+                    : block // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            auth:
+                null == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$BlockCommunityImplCopyWith<$Res>
+    implements $BlockCommunityCopyWith<$Res> {
+  factory _$$BlockCommunityImplCopyWith(
+    _$BlockCommunityImpl value,
+    $Res Function(_$BlockCommunityImpl) then,
+  ) = __$$BlockCommunityImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int communityId, bool block, String auth});
 }
 
+/// @nodoc
+class __$$BlockCommunityImplCopyWithImpl<$Res>
+    extends _$BlockCommunityCopyWithImpl<$Res, _$BlockCommunityImpl>
+    implements _$$BlockCommunityImplCopyWith<$Res> {
+  __$$BlockCommunityImplCopyWithImpl(
+    _$BlockCommunityImpl _value,
+    $Res Function(_$BlockCommunityImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [BlockCommunity].
-extension BlockCommunityPatterns on BlockCommunity {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _BlockCommunity value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _BlockCommunity() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _BlockCommunity value)  $default,){
-final _that = this;
-switch (_that) {
-case _BlockCommunity():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _BlockCommunity value)?  $default,){
-final _that = this;
-switch (_that) {
-case _BlockCommunity() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int communityId,  bool block,  String auth)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _BlockCommunity() when $default != null:
-return $default(_that.communityId,_that.block,_that.auth);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int communityId,  bool block,  String auth)  $default,) {final _that = this;
-switch (_that) {
-case _BlockCommunity():
-return $default(_that.communityId,_that.block,_that.auth);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int communityId,  bool block,  String auth)?  $default,) {final _that = this;
-switch (_that) {
-case _BlockCommunity() when $default != null:
-return $default(_that.communityId,_that.block,_that.auth);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of BlockCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? communityId = null,
+    Object? block = null,
+    Object? auth = null,
+  }) {
+    return _then(
+      _$BlockCommunityImpl(
+        communityId:
+            null == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        block:
+            null == block
+                ? _value.block
+                : block // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        auth:
+            null == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @apiSerde
-class _BlockCommunity extends BlockCommunity {
-  const _BlockCommunity({required this.communityId, required this.block, required this.auth}): super._();
-  factory _BlockCommunity.fromJson(Map<String, dynamic> json) => _$BlockCommunityFromJson(json);
+class _$BlockCommunityImpl extends _BlockCommunity {
+  const _$BlockCommunityImpl({
+    required this.communityId,
+    required this.block,
+    required this.auth,
+  }) : super._();
 
-@override final  int communityId;
-@override final  bool block;
-@override final  String auth;
+  factory _$BlockCommunityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$BlockCommunityImplFromJson(json);
 
-/// Create a copy of BlockCommunity
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$BlockCommunityCopyWith<_BlockCommunity> get copyWith => __$BlockCommunityCopyWithImpl<_BlockCommunity>(this, _$identity);
+  @override
+  final int communityId;
+  @override
+  final bool block;
+  @override
+  final String auth;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$BlockCommunityToJson(this, );
+  @override
+  String toString() {
+    return 'BlockCommunity(communityId: $communityId, block: $block, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$BlockCommunityImpl &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.block, block) || other.block == block) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, communityId, block, auth);
+
+  /// Create a copy of BlockCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$BlockCommunityImplCopyWith<_$BlockCommunityImpl> get copyWith =>
+      __$$BlockCommunityImplCopyWithImpl<_$BlockCommunityImpl>(
+        this,
+        _$identity,
+      );
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$BlockCommunityImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _BlockCommunity&&(identical(other.communityId, communityId) || other.communityId == communityId)&&(identical(other.block, block) || other.block == block)&&(identical(other.auth, auth) || other.auth == auth));
+abstract class _BlockCommunity extends BlockCommunity {
+  const factory _BlockCommunity({
+    required final int communityId,
+    required final bool block,
+    required final String auth,
+  }) = _$BlockCommunityImpl;
+  const _BlockCommunity._() : super._();
+
+  factory _BlockCommunity.fromJson(Map<String, dynamic> json) =
+      _$BlockCommunityImpl.fromJson;
+
+  @override
+  int get communityId;
+  @override
+  bool get block;
+  @override
+  String get auth;
+
+  /// Create a copy of BlockCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$BlockCommunityImplCopyWith<_$BlockCommunityImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,communityId,block,auth);
-
-@override
-String toString() {
-  return 'BlockCommunity(communityId: $communityId, block: $block, auth: $auth)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$BlockCommunityCopyWith<$Res> implements $BlockCommunityCopyWith<$Res> {
-  factory _$BlockCommunityCopyWith(_BlockCommunity value, $Res Function(_BlockCommunity) _then) = __$BlockCommunityCopyWithImpl;
-@override @useResult
-$Res call({
- int communityId, bool block, String auth
-});
-
-
-
-
-}
-/// @nodoc
-class __$BlockCommunityCopyWithImpl<$Res>
-    implements _$BlockCommunityCopyWith<$Res> {
-  __$BlockCommunityCopyWithImpl(this._self, this._then);
-
-  final _BlockCommunity _self;
-  final $Res Function(_BlockCommunity) _then;
-
-/// Create a copy of BlockCommunity
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? communityId = null,Object? block = null,Object? auth = null,}) {
-  return _then(_BlockCommunity(
-communityId: null == communityId ? _self.communityId : communityId // ignore: cast_nullable_to_non_nullable
-as int,block: null == block ? _self.block : block // ignore: cast_nullable_to_non_nullable
-as bool,auth: null == auth ? _self.auth : auth // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
-// dart format on

@@ -1,5 +1,5 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,547 +9,403 @@ part of 'pictrs.dart';
 // FreezedGenerator
 // **************************************************************************
 
-// dart format off
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
+
+PictrsUploadFile _$PictrsUploadFileFromJson(Map<String, dynamic> json) {
+  return _PictrsUploadFile.fromJson(json);
+}
 
 /// @nodoc
 mixin _$PictrsUploadFile {
-
- String get deleteToken; String get file;
-/// Create a copy of PictrsUploadFile
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$PictrsUploadFileCopyWith<PictrsUploadFile> get copyWith => _$PictrsUploadFileCopyWithImpl<PictrsUploadFile>(this as PictrsUploadFile, _$identity);
+  String get deleteToken => throw _privateConstructorUsedError;
+  String get file => throw _privateConstructorUsedError;
 
   /// Serializes this PictrsUploadFile to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PictrsUploadFile&&(identical(other.deleteToken, deleteToken) || other.deleteToken == deleteToken)&&(identical(other.file, file) || other.file == file));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,deleteToken,file);
-
-@override
-String toString() {
-  return 'PictrsUploadFile(deleteToken: $deleteToken, file: $file)';
-}
-
-
+  /// Create a copy of PictrsUploadFile
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $PictrsUploadFileCopyWith<PictrsUploadFile> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $PictrsUploadFileCopyWith<$Res>  {
-  factory $PictrsUploadFileCopyWith(PictrsUploadFile value, $Res Function(PictrsUploadFile) _then) = _$PictrsUploadFileCopyWithImpl;
-@useResult
-$Res call({
- String deleteToken, String file
-});
-
-
-
-
+abstract class $PictrsUploadFileCopyWith<$Res> {
+  factory $PictrsUploadFileCopyWith(
+    PictrsUploadFile value,
+    $Res Function(PictrsUploadFile) then,
+  ) = _$PictrsUploadFileCopyWithImpl<$Res, PictrsUploadFile>;
+  @useResult
+  $Res call({String deleteToken, String file});
 }
+
 /// @nodoc
-class _$PictrsUploadFileCopyWithImpl<$Res>
+class _$PictrsUploadFileCopyWithImpl<$Res, $Val extends PictrsUploadFile>
     implements $PictrsUploadFileCopyWith<$Res> {
-  _$PictrsUploadFileCopyWithImpl(this._self, this._then);
+  _$PictrsUploadFileCopyWithImpl(this._value, this._then);
 
-  final PictrsUploadFile _self;
-  final $Res Function(PictrsUploadFile) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of PictrsUploadFile
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? deleteToken = null,Object? file = null,}) {
-  return _then(_self.copyWith(
-deleteToken: null == deleteToken ? _self.deleteToken : deleteToken // ignore: cast_nullable_to_non_nullable
-as String,file: null == file ? _self.file : file // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of PictrsUploadFile
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? deleteToken = null, Object? file = null}) {
+    return _then(
+      _value.copyWith(
+            deleteToken:
+                null == deleteToken
+                    ? _value.deleteToken
+                    : deleteToken // ignore: cast_nullable_to_non_nullable
+                        as String,
+            file:
+                null == file
+                    ? _value.file
+                    : file // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$PictrsUploadFileImplCopyWith<$Res>
+    implements $PictrsUploadFileCopyWith<$Res> {
+  factory _$$PictrsUploadFileImplCopyWith(
+    _$PictrsUploadFileImpl value,
+    $Res Function(_$PictrsUploadFileImpl) then,
+  ) = __$$PictrsUploadFileImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String deleteToken, String file});
 }
 
+/// @nodoc
+class __$$PictrsUploadFileImplCopyWithImpl<$Res>
+    extends _$PictrsUploadFileCopyWithImpl<$Res, _$PictrsUploadFileImpl>
+    implements _$$PictrsUploadFileImplCopyWith<$Res> {
+  __$$PictrsUploadFileImplCopyWithImpl(
+    _$PictrsUploadFileImpl _value,
+    $Res Function(_$PictrsUploadFileImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [PictrsUploadFile].
-extension PictrsUploadFilePatterns on PictrsUploadFile {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _PictrsUploadFile value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _PictrsUploadFile() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _PictrsUploadFile value)  $default,){
-final _that = this;
-switch (_that) {
-case _PictrsUploadFile():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _PictrsUploadFile value)?  $default,){
-final _that = this;
-switch (_that) {
-case _PictrsUploadFile() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String deleteToken,  String file)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _PictrsUploadFile() when $default != null:
-return $default(_that.deleteToken,_that.file);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String deleteToken,  String file)  $default,) {final _that = this;
-switch (_that) {
-case _PictrsUploadFile():
-return $default(_that.deleteToken,_that.file);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String deleteToken,  String file)?  $default,) {final _that = this;
-switch (_that) {
-case _PictrsUploadFile() when $default != null:
-return $default(_that.deleteToken,_that.file);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of PictrsUploadFile
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? deleteToken = null, Object? file = null}) {
+    return _then(
+      _$PictrsUploadFileImpl(
+        deleteToken:
+            null == deleteToken
+                ? _value.deleteToken
+                : deleteToken // ignore: cast_nullable_to_non_nullable
+                    as String,
+        file:
+            null == file
+                ? _value.file
+                : file // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @JsonSerializable(fieldRename: FieldRename.snake)
-class _PictrsUploadFile extends PictrsUploadFile {
-  const _PictrsUploadFile({required this.deleteToken, required this.file}): super._();
-  factory _PictrsUploadFile.fromJson(Map<String, dynamic> json) => _$PictrsUploadFileFromJson(json);
+class _$PictrsUploadFileImpl extends _PictrsUploadFile {
+  const _$PictrsUploadFileImpl({required this.deleteToken, required this.file})
+    : super._();
 
-@override final  String deleteToken;
-@override final  String file;
+  factory _$PictrsUploadFileImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PictrsUploadFileImplFromJson(json);
 
-/// Create a copy of PictrsUploadFile
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$PictrsUploadFileCopyWith<_PictrsUploadFile> get copyWith => __$PictrsUploadFileCopyWithImpl<_PictrsUploadFile>(this, _$identity);
+  @override
+  final String deleteToken;
+  @override
+  final String file;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$PictrsUploadFileToJson(this, );
+  @override
+  String toString() {
+    return 'PictrsUploadFile(deleteToken: $deleteToken, file: $file)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PictrsUploadFileImpl &&
+            (identical(other.deleteToken, deleteToken) ||
+                other.deleteToken == deleteToken) &&
+            (identical(other.file, file) || other.file == file));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, deleteToken, file);
+
+  /// Create a copy of PictrsUploadFile
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PictrsUploadFileImplCopyWith<_$PictrsUploadFileImpl> get copyWith =>
+      __$$PictrsUploadFileImplCopyWithImpl<_$PictrsUploadFileImpl>(
+        this,
+        _$identity,
+      );
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$PictrsUploadFileImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PictrsUploadFile&&(identical(other.deleteToken, deleteToken) || other.deleteToken == deleteToken)&&(identical(other.file, file) || other.file == file));
+abstract class _PictrsUploadFile extends PictrsUploadFile {
+  const factory _PictrsUploadFile({
+    required final String deleteToken,
+    required final String file,
+  }) = _$PictrsUploadFileImpl;
+  const _PictrsUploadFile._() : super._();
+
+  factory _PictrsUploadFile.fromJson(Map<String, dynamic> json) =
+      _$PictrsUploadFileImpl.fromJson;
+
+  @override
+  String get deleteToken;
+  @override
+  String get file;
+
+  /// Create a copy of PictrsUploadFile
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$PictrsUploadFileImplCopyWith<_$PictrsUploadFileImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,deleteToken,file);
-
-@override
-String toString() {
-  return 'PictrsUploadFile(deleteToken: $deleteToken, file: $file)';
+PictrsUpload _$PictrsUploadFromJson(Map<String, dynamic> json) {
+  return _PictrsUpload.fromJson(json);
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$PictrsUploadFileCopyWith<$Res> implements $PictrsUploadFileCopyWith<$Res> {
-  factory _$PictrsUploadFileCopyWith(_PictrsUploadFile value, $Res Function(_PictrsUploadFile) _then) = __$PictrsUploadFileCopyWithImpl;
-@override @useResult
-$Res call({
- String deleteToken, String file
-});
-
-
-
-
-}
-/// @nodoc
-class __$PictrsUploadFileCopyWithImpl<$Res>
-    implements _$PictrsUploadFileCopyWith<$Res> {
-  __$PictrsUploadFileCopyWithImpl(this._self, this._then);
-
-  final _PictrsUploadFile _self;
-  final $Res Function(_PictrsUploadFile) _then;
-
-/// Create a copy of PictrsUploadFile
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? deleteToken = null,Object? file = null,}) {
-  return _then(_PictrsUploadFile(
-deleteToken: null == deleteToken ? _self.deleteToken : deleteToken // ignore: cast_nullable_to_non_nullable
-as String,file: null == file ? _self.file : file // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
 
 /// @nodoc
 mixin _$PictrsUpload {
-
- String get msg; List<PictrsUploadFile> get files; String get instanceHost;
-/// Create a copy of PictrsUpload
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$PictrsUploadCopyWith<PictrsUpload> get copyWith => _$PictrsUploadCopyWithImpl<PictrsUpload>(this as PictrsUpload, _$identity);
+  String get msg => throw _privateConstructorUsedError;
+  List<PictrsUploadFile> get files => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   /// Serializes this PictrsUpload to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PictrsUpload&&(identical(other.msg, msg) || other.msg == msg)&&const DeepCollectionEquality().equals(other.files, files)&&(identical(other.instanceHost, instanceHost) || other.instanceHost == instanceHost));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,msg,const DeepCollectionEquality().hash(files),instanceHost);
-
-@override
-String toString() {
-  return 'PictrsUpload(msg: $msg, files: $files, instanceHost: $instanceHost)';
-}
-
-
+  /// Create a copy of PictrsUpload
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $PictrsUploadCopyWith<PictrsUpload> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $PictrsUploadCopyWith<$Res>  {
-  factory $PictrsUploadCopyWith(PictrsUpload value, $Res Function(PictrsUpload) _then) = _$PictrsUploadCopyWithImpl;
-@useResult
-$Res call({
- String msg, List<PictrsUploadFile> files, String instanceHost
-});
-
-
-
-
+abstract class $PictrsUploadCopyWith<$Res> {
+  factory $PictrsUploadCopyWith(
+    PictrsUpload value,
+    $Res Function(PictrsUpload) then,
+  ) = _$PictrsUploadCopyWithImpl<$Res, PictrsUpload>;
+  @useResult
+  $Res call({String msg, List<PictrsUploadFile> files, String instanceHost});
 }
+
 /// @nodoc
-class _$PictrsUploadCopyWithImpl<$Res>
+class _$PictrsUploadCopyWithImpl<$Res, $Val extends PictrsUpload>
     implements $PictrsUploadCopyWith<$Res> {
-  _$PictrsUploadCopyWithImpl(this._self, this._then);
+  _$PictrsUploadCopyWithImpl(this._value, this._then);
 
-  final PictrsUpload _self;
-  final $Res Function(PictrsUpload) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of PictrsUpload
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? msg = null,Object? files = null,Object? instanceHost = null,}) {
-  return _then(_self.copyWith(
-msg: null == msg ? _self.msg : msg // ignore: cast_nullable_to_non_nullable
-as String,files: null == files ? _self.files : files // ignore: cast_nullable_to_non_nullable
-as List<PictrsUploadFile>,instanceHost: null == instanceHost ? _self.instanceHost : instanceHost // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
+  /// Create a copy of PictrsUpload
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? msg = null,
+    Object? files = null,
+    Object? instanceHost = null,
+  }) {
+    return _then(
+      _value.copyWith(
+            msg:
+                null == msg
+                    ? _value.msg
+                    : msg // ignore: cast_nullable_to_non_nullable
+                        as String,
+            files:
+                null == files
+                    ? _value.files
+                    : files // ignore: cast_nullable_to_non_nullable
+                        as List<PictrsUploadFile>,
+            instanceHost:
+                null == instanceHost
+                    ? _value.instanceHost
+                    : instanceHost // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$PictrsUploadImplCopyWith<$Res>
+    implements $PictrsUploadCopyWith<$Res> {
+  factory _$$PictrsUploadImplCopyWith(
+    _$PictrsUploadImpl value,
+    $Res Function(_$PictrsUploadImpl) then,
+  ) = __$$PictrsUploadImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String msg, List<PictrsUploadFile> files, String instanceHost});
 }
 
+/// @nodoc
+class __$$PictrsUploadImplCopyWithImpl<$Res>
+    extends _$PictrsUploadCopyWithImpl<$Res, _$PictrsUploadImpl>
+    implements _$$PictrsUploadImplCopyWith<$Res> {
+  __$$PictrsUploadImplCopyWithImpl(
+    _$PictrsUploadImpl _value,
+    $Res Function(_$PictrsUploadImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [PictrsUpload].
-extension PictrsUploadPatterns on PictrsUpload {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _PictrsUpload value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _PictrsUpload() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _PictrsUpload value)  $default,){
-final _that = this;
-switch (_that) {
-case _PictrsUpload():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _PictrsUpload value)?  $default,){
-final _that = this;
-switch (_that) {
-case _PictrsUpload() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String msg,  List<PictrsUploadFile> files,  String instanceHost)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _PictrsUpload() when $default != null:
-return $default(_that.msg,_that.files,_that.instanceHost);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String msg,  List<PictrsUploadFile> files,  String instanceHost)  $default,) {final _that = this;
-switch (_that) {
-case _PictrsUpload():
-return $default(_that.msg,_that.files,_that.instanceHost);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String msg,  List<PictrsUploadFile> files,  String instanceHost)?  $default,) {final _that = this;
-switch (_that) {
-case _PictrsUpload() when $default != null:
-return $default(_that.msg,_that.files,_that.instanceHost);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of PictrsUpload
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? msg = null,
+    Object? files = null,
+    Object? instanceHost = null,
+  }) {
+    return _then(
+      _$PictrsUploadImpl(
+        msg:
+            null == msg
+                ? _value.msg
+                : msg // ignore: cast_nullable_to_non_nullable
+                    as String,
+        files:
+            null == files
+                ? _value._files
+                : files // ignore: cast_nullable_to_non_nullable
+                    as List<PictrsUploadFile>,
+        instanceHost:
+            null == instanceHost
+                ? _value.instanceHost
+                : instanceHost // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @JsonSerializable(fieldRename: FieldRename.snake)
-class _PictrsUpload extends PictrsUpload {
-  const _PictrsUpload({required this.msg, required final  List<PictrsUploadFile> files, required this.instanceHost}): _files = files,super._();
-  factory _PictrsUpload.fromJson(Map<String, dynamic> json) => _$PictrsUploadFromJson(json);
+class _$PictrsUploadImpl extends _PictrsUpload {
+  const _$PictrsUploadImpl({
+    required this.msg,
+    required final List<PictrsUploadFile> files,
+    required this.instanceHost,
+  }) : _files = files,
+       super._();
 
-@override final  String msg;
- final  List<PictrsUploadFile> _files;
-@override List<PictrsUploadFile> get files {
-  if (_files is EqualUnmodifiableListView) return _files;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_files);
+  factory _$PictrsUploadImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PictrsUploadImplFromJson(json);
+
+  @override
+  final String msg;
+  final List<PictrsUploadFile> _files;
+  @override
+  List<PictrsUploadFile> get files {
+    if (_files is EqualUnmodifiableListView) return _files;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_files);
+  }
+
+  @override
+  final String instanceHost;
+
+  @override
+  String toString() {
+    return 'PictrsUpload(msg: $msg, files: $files, instanceHost: $instanceHost)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PictrsUploadImpl &&
+            (identical(other.msg, msg) || other.msg == msg) &&
+            const DeepCollectionEquality().equals(other._files, _files) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+    runtimeType,
+    msg,
+    const DeepCollectionEquality().hash(_files),
+    instanceHost,
+  );
+
+  /// Create a copy of PictrsUpload
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PictrsUploadImplCopyWith<_$PictrsUploadImpl> get copyWith =>
+      __$$PictrsUploadImplCopyWithImpl<_$PictrsUploadImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$PictrsUploadImplToJson(this);
+  }
 }
 
-@override final  String instanceHost;
+abstract class _PictrsUpload extends PictrsUpload {
+  const factory _PictrsUpload({
+    required final String msg,
+    required final List<PictrsUploadFile> files,
+    required final String instanceHost,
+  }) = _$PictrsUploadImpl;
+  const _PictrsUpload._() : super._();
 
-/// Create a copy of PictrsUpload
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$PictrsUploadCopyWith<_PictrsUpload> get copyWith => __$PictrsUploadCopyWithImpl<_PictrsUpload>(this, _$identity);
+  factory _PictrsUpload.fromJson(Map<String, dynamic> json) =
+      _$PictrsUploadImpl.fromJson;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$PictrsUploadToJson(this, );
+  @override
+  String get msg;
+  @override
+  List<PictrsUploadFile> get files;
+  @override
+  String get instanceHost;
+
+  /// Create a copy of PictrsUpload
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$PictrsUploadImplCopyWith<_$PictrsUploadImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PictrsUpload&&(identical(other.msg, msg) || other.msg == msg)&&const DeepCollectionEquality().equals(other._files, _files)&&(identical(other.instanceHost, instanceHost) || other.instanceHost == instanceHost));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,msg,const DeepCollectionEquality().hash(_files),instanceHost);
-
-@override
-String toString() {
-  return 'PictrsUpload(msg: $msg, files: $files, instanceHost: $instanceHost)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$PictrsUploadCopyWith<$Res> implements $PictrsUploadCopyWith<$Res> {
-  factory _$PictrsUploadCopyWith(_PictrsUpload value, $Res Function(_PictrsUpload) _then) = __$PictrsUploadCopyWithImpl;
-@override @useResult
-$Res call({
- String msg, List<PictrsUploadFile> files, String instanceHost
-});
-
-
-
-
-}
-/// @nodoc
-class __$PictrsUploadCopyWithImpl<$Res>
-    implements _$PictrsUploadCopyWith<$Res> {
-  __$PictrsUploadCopyWithImpl(this._self, this._then);
-
-  final _PictrsUpload _self;
-  final $Res Function(_PictrsUpload) _then;
-
-/// Create a copy of PictrsUpload
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? msg = null,Object? files = null,Object? instanceHost = null,}) {
-  return _then(_PictrsUpload(
-msg: null == msg ? _self.msg : msg // ignore: cast_nullable_to_non_nullable
-as String,files: null == files ? _self._files : files // ignore: cast_nullable_to_non_nullable
-as List<PictrsUploadFile>,instanceHost: null == instanceHost ? _self.instanceHost : instanceHost // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
-
-}
-
-// dart format on

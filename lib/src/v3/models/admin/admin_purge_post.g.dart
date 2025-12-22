@@ -6,8 +6,8 @@ part of 'admin_purge_post.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_AdminPurgePost _$AdminPurgePostFromJson(Map<String, dynamic> json) =>
-    _AdminPurgePost(
+_$AdminPurgePostImpl _$$AdminPurgePostImplFromJson(Map<String, dynamic> json) =>
+    _$AdminPurgePostImpl(
       id: (json['id'] as num).toInt(),
       adminPersonId: (json['admin_person_id'] as num).toInt(),
       communityId: (json['community_id'] as num).toInt(),
@@ -15,11 +15,12 @@ _AdminPurgePost _$AdminPurgePostFromJson(Map<String, dynamic> json) =>
       when: json['when_'] as String,
     );
 
-Map<String, dynamic> _$AdminPurgePostToJson(_AdminPurgePost instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'admin_person_id': instance.adminPersonId,
-      'community_id': instance.communityId,
-      'reason': instance.reason,
-      'when_': instance.when,
-    };
+Map<String, dynamic> _$$AdminPurgePostImplToJson(
+  _$AdminPurgePostImpl instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'admin_person_id': instance.adminPersonId,
+  'community_id': instance.communityId,
+  'reason': instance.reason,
+  'when_': instance.when,
+};

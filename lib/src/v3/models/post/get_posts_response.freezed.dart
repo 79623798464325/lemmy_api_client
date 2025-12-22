@@ -1,5 +1,5 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,280 +9,201 @@ part of 'get_posts_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
-// dart format off
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
+
+GetPostsResponse _$GetPostsResponseFromJson(Map<String, dynamic> json) {
+  return _GetPostsResponse.fromJson(json);
+}
 
 /// @nodoc
 mixin _$GetPostsResponse {
-
- List<PostView> get posts;// v0.18.0
- String? get nextPage;
-/// Create a copy of GetPostsResponse
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$GetPostsResponseCopyWith<GetPostsResponse> get copyWith => _$GetPostsResponseCopyWithImpl<GetPostsResponse>(this as GetPostsResponse, _$identity);
+  List<PostView> get posts => throw _privateConstructorUsedError; // v0.18.0
+  String? get nextPage => throw _privateConstructorUsedError;
 
   /// Serializes this GetPostsResponse to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is GetPostsResponse&&const DeepCollectionEquality().equals(other.posts, posts)&&(identical(other.nextPage, nextPage) || other.nextPage == nextPage));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(posts),nextPage);
-
-@override
-String toString() {
-  return 'GetPostsResponse(posts: $posts, nextPage: $nextPage)';
-}
-
-
+  /// Create a copy of GetPostsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $GetPostsResponseCopyWith<GetPostsResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $GetPostsResponseCopyWith<$Res>  {
-  factory $GetPostsResponseCopyWith(GetPostsResponse value, $Res Function(GetPostsResponse) _then) = _$GetPostsResponseCopyWithImpl;
-@useResult
-$Res call({
- List<PostView> posts, String? nextPage
-});
-
-
-
-
+abstract class $GetPostsResponseCopyWith<$Res> {
+  factory $GetPostsResponseCopyWith(
+    GetPostsResponse value,
+    $Res Function(GetPostsResponse) then,
+  ) = _$GetPostsResponseCopyWithImpl<$Res, GetPostsResponse>;
+  @useResult
+  $Res call({List<PostView> posts, String? nextPage});
 }
+
 /// @nodoc
-class _$GetPostsResponseCopyWithImpl<$Res>
+class _$GetPostsResponseCopyWithImpl<$Res, $Val extends GetPostsResponse>
     implements $GetPostsResponseCopyWith<$Res> {
-  _$GetPostsResponseCopyWithImpl(this._self, this._then);
+  _$GetPostsResponseCopyWithImpl(this._value, this._then);
 
-  final GetPostsResponse _self;
-  final $Res Function(GetPostsResponse) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of GetPostsResponse
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? posts = null,Object? nextPage = freezed,}) {
-  return _then(_self.copyWith(
-posts: null == posts ? _self.posts : posts // ignore: cast_nullable_to_non_nullable
-as List<PostView>,nextPage: freezed == nextPage ? _self.nextPage : nextPage // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
+  /// Create a copy of GetPostsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? posts = null, Object? nextPage = freezed}) {
+    return _then(
+      _value.copyWith(
+            posts:
+                null == posts
+                    ? _value.posts
+                    : posts // ignore: cast_nullable_to_non_nullable
+                        as List<PostView>,
+            nextPage:
+                freezed == nextPage
+                    ? _value.nextPage
+                    : nextPage // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$GetPostsResponseImplCopyWith<$Res>
+    implements $GetPostsResponseCopyWith<$Res> {
+  factory _$$GetPostsResponseImplCopyWith(
+    _$GetPostsResponseImpl value,
+    $Res Function(_$GetPostsResponseImpl) then,
+  ) = __$$GetPostsResponseImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({List<PostView> posts, String? nextPage});
 }
 
+/// @nodoc
+class __$$GetPostsResponseImplCopyWithImpl<$Res>
+    extends _$GetPostsResponseCopyWithImpl<$Res, _$GetPostsResponseImpl>
+    implements _$$GetPostsResponseImplCopyWith<$Res> {
+  __$$GetPostsResponseImplCopyWithImpl(
+    _$GetPostsResponseImpl _value,
+    $Res Function(_$GetPostsResponseImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [GetPostsResponse].
-extension GetPostsResponsePatterns on GetPostsResponse {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _GetPostsResponse value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _GetPostsResponse() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _GetPostsResponse value)  $default,){
-final _that = this;
-switch (_that) {
-case _GetPostsResponse():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _GetPostsResponse value)?  $default,){
-final _that = this;
-switch (_that) {
-case _GetPostsResponse() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( List<PostView> posts,  String? nextPage)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _GetPostsResponse() when $default != null:
-return $default(_that.posts,_that.nextPage);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( List<PostView> posts,  String? nextPage)  $default,) {final _that = this;
-switch (_that) {
-case _GetPostsResponse():
-return $default(_that.posts,_that.nextPage);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( List<PostView> posts,  String? nextPage)?  $default,) {final _that = this;
-switch (_that) {
-case _GetPostsResponse() when $default != null:
-return $default(_that.posts,_that.nextPage);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of GetPostsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? posts = null, Object? nextPage = freezed}) {
+    return _then(
+      _$GetPostsResponseImpl(
+        posts:
+            null == posts
+                ? _value._posts
+                : posts // ignore: cast_nullable_to_non_nullable
+                    as List<PostView>,
+        nextPage:
+            freezed == nextPage
+                ? _value.nextPage
+                : nextPage // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @modelSerde
-class _GetPostsResponse extends GetPostsResponse {
-  const _GetPostsResponse({required final  List<PostView> posts, this.nextPage}): _posts = posts,super._();
-  factory _GetPostsResponse.fromJson(Map<String, dynamic> json) => _$GetPostsResponseFromJson(json);
+class _$GetPostsResponseImpl extends _GetPostsResponse {
+  const _$GetPostsResponseImpl({
+    required final List<PostView> posts,
+    this.nextPage,
+  }) : _posts = posts,
+       super._();
 
- final  List<PostView> _posts;
-@override List<PostView> get posts {
-  if (_posts is EqualUnmodifiableListView) return _posts;
-  // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(_posts);
+  factory _$GetPostsResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetPostsResponseImplFromJson(json);
+
+  final List<PostView> _posts;
+  @override
+  List<PostView> get posts {
+    if (_posts is EqualUnmodifiableListView) return _posts;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_posts);
+  }
+
+  // v0.18.0
+  @override
+  final String? nextPage;
+
+  @override
+  String toString() {
+    return 'GetPostsResponse(posts: $posts, nextPage: $nextPage)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetPostsResponseImpl &&
+            const DeepCollectionEquality().equals(other._posts, _posts) &&
+            (identical(other.nextPage, nextPage) ||
+                other.nextPage == nextPage));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+    runtimeType,
+    const DeepCollectionEquality().hash(_posts),
+    nextPage,
+  );
+
+  /// Create a copy of GetPostsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetPostsResponseImplCopyWith<_$GetPostsResponseImpl> get copyWith =>
+      __$$GetPostsResponseImplCopyWithImpl<_$GetPostsResponseImpl>(
+        this,
+        _$identity,
+      );
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$GetPostsResponseImplToJson(this);
+  }
 }
 
-// v0.18.0
-@override final  String? nextPage;
+abstract class _GetPostsResponse extends GetPostsResponse {
+  const factory _GetPostsResponse({
+    required final List<PostView> posts,
+    final String? nextPage,
+  }) = _$GetPostsResponseImpl;
+  const _GetPostsResponse._() : super._();
 
-/// Create a copy of GetPostsResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$GetPostsResponseCopyWith<_GetPostsResponse> get copyWith => __$GetPostsResponseCopyWithImpl<_GetPostsResponse>(this, _$identity);
+  factory _GetPostsResponse.fromJson(Map<String, dynamic> json) =
+      _$GetPostsResponseImpl.fromJson;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$GetPostsResponseToJson(this, );
+  @override
+  List<PostView> get posts; // v0.18.0
+  @override
+  String? get nextPage;
+
+  /// Create a copy of GetPostsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetPostsResponseImplCopyWith<_$GetPostsResponseImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _GetPostsResponse&&const DeepCollectionEquality().equals(other._posts, _posts)&&(identical(other.nextPage, nextPage) || other.nextPage == nextPage));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_posts),nextPage);
-
-@override
-String toString() {
-  return 'GetPostsResponse(posts: $posts, nextPage: $nextPage)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$GetPostsResponseCopyWith<$Res> implements $GetPostsResponseCopyWith<$Res> {
-  factory _$GetPostsResponseCopyWith(_GetPostsResponse value, $Res Function(_GetPostsResponse) _then) = __$GetPostsResponseCopyWithImpl;
-@override @useResult
-$Res call({
- List<PostView> posts, String? nextPage
-});
-
-
-
-
-}
-/// @nodoc
-class __$GetPostsResponseCopyWithImpl<$Res>
-    implements _$GetPostsResponseCopyWith<$Res> {
-  __$GetPostsResponseCopyWithImpl(this._self, this._then);
-
-  final _GetPostsResponse _self;
-  final $Res Function(_GetPostsResponse) _then;
-
-/// Create a copy of GetPostsResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? posts = null,Object? nextPage = freezed,}) {
-  return _then(_GetPostsResponse(
-posts: null == posts ? _self._posts : posts // ignore: cast_nullable_to_non_nullable
-as List<PostView>,nextPage: freezed == nextPage ? _self.nextPage : nextPage // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
-
-}
-
-// dart format on

@@ -1,5 +1,5 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,278 +9,269 @@ part of 'save_user_settings_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
-// dart format off
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
+
+SaveUserSettingsResponse _$SaveUserSettingsResponseFromJson(
+  Map<String, dynamic> json,
+) {
+  return _SaveUserSettingsResponse.fromJson(json);
+}
 
 /// @nodoc
 mixin _$SaveUserSettingsResponse {
-
-@deprecated String? get jwt;@deprecated bool? get registrationCreated;@deprecated bool? get verifyEmailSent; bool? get success;
-/// Create a copy of SaveUserSettingsResponse
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$SaveUserSettingsResponseCopyWith<SaveUserSettingsResponse> get copyWith => _$SaveUserSettingsResponseCopyWithImpl<SaveUserSettingsResponse>(this as SaveUserSettingsResponse, _$identity);
+  @deprecated
+  String? get jwt => throw _privateConstructorUsedError;
+  @deprecated
+  bool? get registrationCreated => throw _privateConstructorUsedError;
+  @deprecated
+  bool? get verifyEmailSent => throw _privateConstructorUsedError;
+  bool? get success => throw _privateConstructorUsedError;
 
   /// Serializes this SaveUserSettingsResponse to a JSON map.
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is SaveUserSettingsResponse&&(identical(other.jwt, jwt) || other.jwt == jwt)&&(identical(other.registrationCreated, registrationCreated) || other.registrationCreated == registrationCreated)&&(identical(other.verifyEmailSent, verifyEmailSent) || other.verifyEmailSent == verifyEmailSent)&&(identical(other.success, success) || other.success == success));
-}
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,jwt,registrationCreated,verifyEmailSent,success);
-
-@override
-String toString() {
-  return 'SaveUserSettingsResponse(jwt: $jwt, registrationCreated: $registrationCreated, verifyEmailSent: $verifyEmailSent, success: $success)';
-}
-
-
+  /// Create a copy of SaveUserSettingsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $SaveUserSettingsResponseCopyWith<SaveUserSettingsResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $SaveUserSettingsResponseCopyWith<$Res>  {
-  factory $SaveUserSettingsResponseCopyWith(SaveUserSettingsResponse value, $Res Function(SaveUserSettingsResponse) _then) = _$SaveUserSettingsResponseCopyWithImpl;
-@useResult
-$Res call({
-@deprecated String? jwt,@deprecated bool? registrationCreated,@deprecated bool? verifyEmailSent, bool? success
-});
-
-
-
-
+abstract class $SaveUserSettingsResponseCopyWith<$Res> {
+  factory $SaveUserSettingsResponseCopyWith(
+    SaveUserSettingsResponse value,
+    $Res Function(SaveUserSettingsResponse) then,
+  ) = _$SaveUserSettingsResponseCopyWithImpl<$Res, SaveUserSettingsResponse>;
+  @useResult
+  $Res call({
+    @deprecated String? jwt,
+    @deprecated bool? registrationCreated,
+    @deprecated bool? verifyEmailSent,
+    bool? success,
+  });
 }
+
 /// @nodoc
-class _$SaveUserSettingsResponseCopyWithImpl<$Res>
+class _$SaveUserSettingsResponseCopyWithImpl<
+  $Res,
+  $Val extends SaveUserSettingsResponse
+>
     implements $SaveUserSettingsResponseCopyWith<$Res> {
-  _$SaveUserSettingsResponseCopyWithImpl(this._self, this._then);
+  _$SaveUserSettingsResponseCopyWithImpl(this._value, this._then);
 
-  final SaveUserSettingsResponse _self;
-  final $Res Function(SaveUserSettingsResponse) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of SaveUserSettingsResponse
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? jwt = freezed,Object? registrationCreated = freezed,Object? verifyEmailSent = freezed,Object? success = freezed,}) {
-  return _then(_self.copyWith(
-jwt: freezed == jwt ? _self.jwt : jwt // ignore: cast_nullable_to_non_nullable
-as String?,registrationCreated: freezed == registrationCreated ? _self.registrationCreated : registrationCreated // ignore: cast_nullable_to_non_nullable
-as bool?,verifyEmailSent: freezed == verifyEmailSent ? _self.verifyEmailSent : verifyEmailSent // ignore: cast_nullable_to_non_nullable
-as bool?,success: freezed == success ? _self.success : success // ignore: cast_nullable_to_non_nullable
-as bool?,
-  ));
+  /// Create a copy of SaveUserSettingsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? jwt = freezed,
+    Object? registrationCreated = freezed,
+    Object? verifyEmailSent = freezed,
+    Object? success = freezed,
+  }) {
+    return _then(
+      _value.copyWith(
+            jwt:
+                freezed == jwt
+                    ? _value.jwt
+                    : jwt // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            registrationCreated:
+                freezed == registrationCreated
+                    ? _value.registrationCreated
+                    : registrationCreated // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            verifyEmailSent:
+                freezed == verifyEmailSent
+                    ? _value.verifyEmailSent
+                    : verifyEmailSent // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            success:
+                freezed == success
+                    ? _value.success
+                    : success // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$SaveUserSettingsResponseImplCopyWith<$Res>
+    implements $SaveUserSettingsResponseCopyWith<$Res> {
+  factory _$$SaveUserSettingsResponseImplCopyWith(
+    _$SaveUserSettingsResponseImpl value,
+    $Res Function(_$SaveUserSettingsResponseImpl) then,
+  ) = __$$SaveUserSettingsResponseImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({
+    @deprecated String? jwt,
+    @deprecated bool? registrationCreated,
+    @deprecated bool? verifyEmailSent,
+    bool? success,
+  });
 }
 
+/// @nodoc
+class __$$SaveUserSettingsResponseImplCopyWithImpl<$Res>
+    extends
+        _$SaveUserSettingsResponseCopyWithImpl<
+          $Res,
+          _$SaveUserSettingsResponseImpl
+        >
+    implements _$$SaveUserSettingsResponseImplCopyWith<$Res> {
+  __$$SaveUserSettingsResponseImplCopyWithImpl(
+    _$SaveUserSettingsResponseImpl _value,
+    $Res Function(_$SaveUserSettingsResponseImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [SaveUserSettingsResponse].
-extension SaveUserSettingsResponsePatterns on SaveUserSettingsResponse {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _SaveUserSettingsResponse value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _SaveUserSettingsResponse() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _SaveUserSettingsResponse value)  $default,){
-final _that = this;
-switch (_that) {
-case _SaveUserSettingsResponse():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _SaveUserSettingsResponse value)?  $default,){
-final _that = this;
-switch (_that) {
-case _SaveUserSettingsResponse() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@deprecated  String? jwt, @deprecated  bool? registrationCreated, @deprecated  bool? verifyEmailSent,  bool? success)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _SaveUserSettingsResponse() when $default != null:
-return $default(_that.jwt,_that.registrationCreated,_that.verifyEmailSent,_that.success);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@deprecated  String? jwt, @deprecated  bool? registrationCreated, @deprecated  bool? verifyEmailSent,  bool? success)  $default,) {final _that = this;
-switch (_that) {
-case _SaveUserSettingsResponse():
-return $default(_that.jwt,_that.registrationCreated,_that.verifyEmailSent,_that.success);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@deprecated  String? jwt, @deprecated  bool? registrationCreated, @deprecated  bool? verifyEmailSent,  bool? success)?  $default,) {final _that = this;
-switch (_that) {
-case _SaveUserSettingsResponse() when $default != null:
-return $default(_that.jwt,_that.registrationCreated,_that.verifyEmailSent,_that.success);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of SaveUserSettingsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? jwt = freezed,
+    Object? registrationCreated = freezed,
+    Object? verifyEmailSent = freezed,
+    Object? success = freezed,
+  }) {
+    return _then(
+      _$SaveUserSettingsResponseImpl(
+        jwt:
+            freezed == jwt
+                ? _value.jwt
+                : jwt // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        registrationCreated:
+            freezed == registrationCreated
+                ? _value.registrationCreated
+                : registrationCreated // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        verifyEmailSent:
+            freezed == verifyEmailSent
+                ? _value.verifyEmailSent
+                : verifyEmailSent // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        success:
+            freezed == success
+                ? _value.success
+                : success // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
 @modelSerde
-class _SaveUserSettingsResponse extends SaveUserSettingsResponse {
-  const _SaveUserSettingsResponse({@deprecated this.jwt, @deprecated this.registrationCreated, @deprecated this.verifyEmailSent, this.success}): super._();
-  factory _SaveUserSettingsResponse.fromJson(Map<String, dynamic> json) => _$SaveUserSettingsResponseFromJson(json);
+class _$SaveUserSettingsResponseImpl extends _SaveUserSettingsResponse {
+  const _$SaveUserSettingsResponseImpl({
+    @deprecated this.jwt,
+    @deprecated this.registrationCreated,
+    @deprecated this.verifyEmailSent,
+    this.success,
+  }) : super._();
 
-@override@deprecated final  String? jwt;
-@override@deprecated final  bool? registrationCreated;
-@override@deprecated final  bool? verifyEmailSent;
-@override final  bool? success;
+  factory _$SaveUserSettingsResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SaveUserSettingsResponseImplFromJson(json);
 
-/// Create a copy of SaveUserSettingsResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$SaveUserSettingsResponseCopyWith<_SaveUserSettingsResponse> get copyWith => __$SaveUserSettingsResponseCopyWithImpl<_SaveUserSettingsResponse>(this, _$identity);
+  @override
+  @deprecated
+  final String? jwt;
+  @override
+  @deprecated
+  final bool? registrationCreated;
+  @override
+  @deprecated
+  final bool? verifyEmailSent;
+  @override
+  final bool? success;
 
-@override
-Map<String, dynamic> toJson() {
-  return _$SaveUserSettingsResponseToJson(this, );
+  @override
+  String toString() {
+    return 'SaveUserSettingsResponse(jwt: $jwt, registrationCreated: $registrationCreated, verifyEmailSent: $verifyEmailSent, success: $success)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SaveUserSettingsResponseImpl &&
+            (identical(other.jwt, jwt) || other.jwt == jwt) &&
+            (identical(other.registrationCreated, registrationCreated) ||
+                other.registrationCreated == registrationCreated) &&
+            (identical(other.verifyEmailSent, verifyEmailSent) ||
+                other.verifyEmailSent == verifyEmailSent) &&
+            (identical(other.success, success) || other.success == success));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+    runtimeType,
+    jwt,
+    registrationCreated,
+    verifyEmailSent,
+    success,
+  );
+
+  /// Create a copy of SaveUserSettingsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SaveUserSettingsResponseImplCopyWith<_$SaveUserSettingsResponseImpl>
+  get copyWith => __$$SaveUserSettingsResponseImplCopyWithImpl<
+    _$SaveUserSettingsResponseImpl
+  >(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$SaveUserSettingsResponseImplToJson(this);
+  }
 }
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _SaveUserSettingsResponse&&(identical(other.jwt, jwt) || other.jwt == jwt)&&(identical(other.registrationCreated, registrationCreated) || other.registrationCreated == registrationCreated)&&(identical(other.verifyEmailSent, verifyEmailSent) || other.verifyEmailSent == verifyEmailSent)&&(identical(other.success, success) || other.success == success));
+abstract class _SaveUserSettingsResponse extends SaveUserSettingsResponse {
+  const factory _SaveUserSettingsResponse({
+    @deprecated final String? jwt,
+    @deprecated final bool? registrationCreated,
+    @deprecated final bool? verifyEmailSent,
+    final bool? success,
+  }) = _$SaveUserSettingsResponseImpl;
+  const _SaveUserSettingsResponse._() : super._();
+
+  factory _SaveUserSettingsResponse.fromJson(Map<String, dynamic> json) =
+      _$SaveUserSettingsResponseImpl.fromJson;
+
+  @override
+  @deprecated
+  String? get jwt;
+  @override
+  @deprecated
+  bool? get registrationCreated;
+  @override
+  @deprecated
+  bool? get verifyEmailSent;
+  @override
+  bool? get success;
+
+  /// Create a copy of SaveUserSettingsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SaveUserSettingsResponseImplCopyWith<_$SaveUserSettingsResponseImpl>
+  get copyWith => throw _privateConstructorUsedError;
 }
-
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-int get hashCode => Object.hash(runtimeType,jwt,registrationCreated,verifyEmailSent,success);
-
-@override
-String toString() {
-  return 'SaveUserSettingsResponse(jwt: $jwt, registrationCreated: $registrationCreated, verifyEmailSent: $verifyEmailSent, success: $success)';
-}
-
-
-}
-
-/// @nodoc
-abstract mixin class _$SaveUserSettingsResponseCopyWith<$Res> implements $SaveUserSettingsResponseCopyWith<$Res> {
-  factory _$SaveUserSettingsResponseCopyWith(_SaveUserSettingsResponse value, $Res Function(_SaveUserSettingsResponse) _then) = __$SaveUserSettingsResponseCopyWithImpl;
-@override @useResult
-$Res call({
-@deprecated String? jwt,@deprecated bool? registrationCreated,@deprecated bool? verifyEmailSent, bool? success
-});
-
-
-
-
-}
-/// @nodoc
-class __$SaveUserSettingsResponseCopyWithImpl<$Res>
-    implements _$SaveUserSettingsResponseCopyWith<$Res> {
-  __$SaveUserSettingsResponseCopyWithImpl(this._self, this._then);
-
-  final _SaveUserSettingsResponse _self;
-  final $Res Function(_SaveUserSettingsResponse) _then;
-
-/// Create a copy of SaveUserSettingsResponse
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? jwt = freezed,Object? registrationCreated = freezed,Object? verifyEmailSent = freezed,Object? success = freezed,}) {
-  return _then(_SaveUserSettingsResponse(
-jwt: freezed == jwt ? _self.jwt : jwt // ignore: cast_nullable_to_non_nullable
-as String?,registrationCreated: freezed == registrationCreated ? _self.registrationCreated : registrationCreated // ignore: cast_nullable_to_non_nullable
-as bool?,verifyEmailSent: freezed == verifyEmailSent ? _self.verifyEmailSent : verifyEmailSent // ignore: cast_nullable_to_non_nullable
-as bool?,success: freezed == success ? _self.success : success // ignore: cast_nullable_to_non_nullable
-as bool?,
-  ));
-}
-
-
-}
-
-// dart format on

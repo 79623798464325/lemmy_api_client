@@ -6,102 +6,110 @@ part of 'community.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_GetCommunity _$GetCommunityFromJson(Map<String, dynamic> json) =>
-    _GetCommunity(
+_$GetCommunityImpl _$$GetCommunityImplFromJson(Map<String, dynamic> json) =>
+    _$GetCommunityImpl(
       id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$GetCommunityToJson(_GetCommunity instance) =>
+Map<String, dynamic> _$$GetCommunityImplToJson(_$GetCommunityImpl instance) =>
     <String, dynamic>{
-      'id': ?instance.id,
-      'name': ?instance.name,
-      'auth': ?instance.auth,
+      if (instance.id case final value?) 'id': value,
+      if (instance.name case final value?) 'name': value,
+      if (instance.auth case final value?) 'auth': value,
     };
 
-_CreateCommunity _$CreateCommunityFromJson(Map<String, dynamic> json) =>
-    _CreateCommunity(
-      name: json['name'] as String,
-      title: json['title'] as String,
-      description: json['description'] as String?,
-      icon: json['icon'] as String?,
-      banner: json['banner'] as String?,
-      nsfw: json['nsfw'] as bool?,
-      auth: json['auth'] as String,
-    );
+_$CreateCommunityImpl _$$CreateCommunityImplFromJson(
+  Map<String, dynamic> json,
+) => _$CreateCommunityImpl(
+  name: json['name'] as String,
+  title: json['title'] as String,
+  description: json['description'] as String?,
+  icon: json['icon'] as String?,
+  banner: json['banner'] as String?,
+  nsfw: json['nsfw'] as bool?,
+  auth: json['auth'] as String,
+);
 
-Map<String, dynamic> _$CreateCommunityToJson(_CreateCommunity instance) =>
-    <String, dynamic>{
-      'name': instance.name,
-      'title': instance.title,
-      'description': ?instance.description,
-      'icon': ?instance.icon,
-      'banner': ?instance.banner,
-      'nsfw': ?instance.nsfw,
-      'auth': instance.auth,
-    };
+Map<String, dynamic> _$$CreateCommunityImplToJson(
+  _$CreateCommunityImpl instance,
+) => <String, dynamic>{
+  'name': instance.name,
+  'title': instance.title,
+  if (instance.description case final value?) 'description': value,
+  if (instance.icon case final value?) 'icon': value,
+  if (instance.banner case final value?) 'banner': value,
+  if (instance.nsfw case final value?) 'nsfw': value,
+  'auth': instance.auth,
+};
 
-_ListCommunities _$ListCommunitiesFromJson(Map<String, dynamic> json) =>
-    _ListCommunities(
-      type: json['type_'] == null ? null : ListingType.fromJson(json['type_']),
-      sort: json['sort'] == null ? null : SortType.fromJson(json['sort']),
-      showNsfw: json['show_nsfw'] as bool?,
-      page: (json['page'] as num?)?.toInt(),
-      limit: (json['limit'] as num?)?.toInt(),
-      auth: json['auth'] as String?,
-    );
+_$ListCommunitiesImpl _$$ListCommunitiesImplFromJson(
+  Map<String, dynamic> json,
+) => _$ListCommunitiesImpl(
+  type: json['type_'] == null ? null : ListingType.fromJson(json['type_']),
+  sort: json['sort'] == null ? null : SortType.fromJson(json['sort']),
+  showNsfw: json['show_nsfw'] as bool?,
+  page: (json['page'] as num?)?.toInt(),
+  limit: (json['limit'] as num?)?.toInt(),
+  auth: json['auth'] as String?,
+);
 
-Map<String, dynamic> _$ListCommunitiesToJson(_ListCommunities instance) =>
-    <String, dynamic>{
-      'type_': ?instance.type?.toJson(),
-      'sort': ?instance.sort?.toJson(),
-      'show_nsfw': ?instance.showNsfw,
-      'page': ?instance.page,
-      'limit': ?instance.limit,
-      'auth': ?instance.auth,
-    };
+Map<String, dynamic> _$$ListCommunitiesImplToJson(
+  _$ListCommunitiesImpl instance,
+) => <String, dynamic>{
+  if (instance.type?.toJson() case final value?) 'type_': value,
+  if (instance.sort?.toJson() case final value?) 'sort': value,
+  if (instance.showNsfw case final value?) 'show_nsfw': value,
+  if (instance.page case final value?) 'page': value,
+  if (instance.limit case final value?) 'limit': value,
+  if (instance.auth case final value?) 'auth': value,
+};
 
-_BanFromCommunity _$BanFromCommunityFromJson(Map<String, dynamic> json) =>
-    _BanFromCommunity(
-      communityId: (json['community_id'] as num).toInt(),
-      personId: (json['person_id'] as num).toInt(),
-      ban: json['ban'] as bool,
-      removeData: json['remove_data'] as bool?,
-      reason: json['reason'] as String?,
-      expires: (json['expires'] as num?)?.toInt(),
-      auth: json['auth'] as String,
-    );
+_$BanFromCommunityImpl _$$BanFromCommunityImplFromJson(
+  Map<String, dynamic> json,
+) => _$BanFromCommunityImpl(
+  communityId: (json['community_id'] as num).toInt(),
+  personId: (json['person_id'] as num).toInt(),
+  ban: json['ban'] as bool,
+  removeData: json['remove_data'] as bool?,
+  reason: json['reason'] as String?,
+  expires: (json['expires'] as num?)?.toInt(),
+  auth: json['auth'] as String,
+);
 
-Map<String, dynamic> _$BanFromCommunityToJson(_BanFromCommunity instance) =>
-    <String, dynamic>{
-      'community_id': instance.communityId,
-      'person_id': instance.personId,
-      'ban': instance.ban,
-      'remove_data': ?instance.removeData,
-      'reason': ?instance.reason,
-      'expires': ?instance.expires,
-      'auth': instance.auth,
-    };
+Map<String, dynamic> _$$BanFromCommunityImplToJson(
+  _$BanFromCommunityImpl instance,
+) => <String, dynamic>{
+  'community_id': instance.communityId,
+  'person_id': instance.personId,
+  'ban': instance.ban,
+  if (instance.removeData case final value?) 'remove_data': value,
+  if (instance.reason case final value?) 'reason': value,
+  if (instance.expires case final value?) 'expires': value,
+  'auth': instance.auth,
+};
 
-_AddModToCommunity _$AddModToCommunityFromJson(Map<String, dynamic> json) =>
-    _AddModToCommunity(
-      communityId: (json['community_id'] as num).toInt(),
-      personId: (json['person_id'] as num).toInt(),
-      added: json['added'] as bool,
-      auth: json['auth'] as String,
-    );
+_$AddModToCommunityImpl _$$AddModToCommunityImplFromJson(
+  Map<String, dynamic> json,
+) => _$AddModToCommunityImpl(
+  communityId: (json['community_id'] as num).toInt(),
+  personId: (json['person_id'] as num).toInt(),
+  added: json['added'] as bool,
+  auth: json['auth'] as String,
+);
 
-Map<String, dynamic> _$AddModToCommunityToJson(_AddModToCommunity instance) =>
-    <String, dynamic>{
-      'community_id': instance.communityId,
-      'person_id': instance.personId,
-      'added': instance.added,
-      'auth': instance.auth,
-    };
+Map<String, dynamic> _$$AddModToCommunityImplToJson(
+  _$AddModToCommunityImpl instance,
+) => <String, dynamic>{
+  'community_id': instance.communityId,
+  'person_id': instance.personId,
+  'added': instance.added,
+  'auth': instance.auth,
+};
 
-_EditCommunity _$EditCommunityFromJson(Map<String, dynamic> json) =>
-    _EditCommunity(
+_$EditCommunityImpl _$$EditCommunityImplFromJson(Map<String, dynamic> json) =>
+    _$EditCommunityImpl(
       communityId: (json['community_id'] as num).toInt(),
       title: json['title'] as String?,
       description: json['description'] as String?,
@@ -111,87 +119,96 @@ _EditCommunity _$EditCommunityFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String,
     );
 
-Map<String, dynamic> _$EditCommunityToJson(_EditCommunity instance) =>
+Map<String, dynamic> _$$EditCommunityImplToJson(_$EditCommunityImpl instance) =>
     <String, dynamic>{
       'community_id': instance.communityId,
-      'title': ?instance.title,
-      'description': ?instance.description,
-      'icon': ?instance.icon,
-      'banner': ?instance.banner,
-      'nsfw': ?instance.nsfw,
+      if (instance.title case final value?) 'title': value,
+      if (instance.description case final value?) 'description': value,
+      if (instance.icon case final value?) 'icon': value,
+      if (instance.banner case final value?) 'banner': value,
+      if (instance.nsfw case final value?) 'nsfw': value,
       'auth': instance.auth,
     };
 
-_DeleteCommunity _$DeleteCommunityFromJson(Map<String, dynamic> json) =>
-    _DeleteCommunity(
-      communityId: (json['community_id'] as num).toInt(),
-      deleted: json['deleted'] as bool,
-      auth: json['auth'] as String,
-    );
+_$DeleteCommunityImpl _$$DeleteCommunityImplFromJson(
+  Map<String, dynamic> json,
+) => _$DeleteCommunityImpl(
+  communityId: (json['community_id'] as num).toInt(),
+  deleted: json['deleted'] as bool,
+  auth: json['auth'] as String,
+);
 
-Map<String, dynamic> _$DeleteCommunityToJson(_DeleteCommunity instance) =>
-    <String, dynamic>{
-      'community_id': instance.communityId,
-      'deleted': instance.deleted,
-      'auth': instance.auth,
-    };
+Map<String, dynamic> _$$DeleteCommunityImplToJson(
+  _$DeleteCommunityImpl instance,
+) => <String, dynamic>{
+  'community_id': instance.communityId,
+  'deleted': instance.deleted,
+  'auth': instance.auth,
+};
 
-_RemoveCommunity _$RemoveCommunityFromJson(Map<String, dynamic> json) =>
-    _RemoveCommunity(
-      communityId: (json['community_id'] as num).toInt(),
-      removed: json['removed'] as bool,
-      reason: json['reason'] as String?,
-      expires: (json['expires'] as num?)?.toInt(),
-      auth: json['auth'] as String,
-    );
+_$RemoveCommunityImpl _$$RemoveCommunityImplFromJson(
+  Map<String, dynamic> json,
+) => _$RemoveCommunityImpl(
+  communityId: (json['community_id'] as num).toInt(),
+  removed: json['removed'] as bool,
+  reason: json['reason'] as String?,
+  expires: (json['expires'] as num?)?.toInt(),
+  auth: json['auth'] as String,
+);
 
-Map<String, dynamic> _$RemoveCommunityToJson(_RemoveCommunity instance) =>
-    <String, dynamic>{
-      'community_id': instance.communityId,
-      'removed': instance.removed,
-      'reason': ?instance.reason,
-      'expires': ?instance.expires,
-      'auth': instance.auth,
-    };
+Map<String, dynamic> _$$RemoveCommunityImplToJson(
+  _$RemoveCommunityImpl instance,
+) => <String, dynamic>{
+  'community_id': instance.communityId,
+  'removed': instance.removed,
+  if (instance.reason case final value?) 'reason': value,
+  if (instance.expires case final value?) 'expires': value,
+  'auth': instance.auth,
+};
 
-_FollowCommunity _$FollowCommunityFromJson(Map<String, dynamic> json) =>
-    _FollowCommunity(
-      communityId: (json['community_id'] as num).toInt(),
-      follow: json['follow'] as bool,
-      auth: json['auth'] as String,
-    );
+_$FollowCommunityImpl _$$FollowCommunityImplFromJson(
+  Map<String, dynamic> json,
+) => _$FollowCommunityImpl(
+  communityId: (json['community_id'] as num).toInt(),
+  follow: json['follow'] as bool,
+  auth: json['auth'] as String,
+);
 
-Map<String, dynamic> _$FollowCommunityToJson(_FollowCommunity instance) =>
-    <String, dynamic>{
-      'community_id': instance.communityId,
-      'follow': instance.follow,
-      'auth': instance.auth,
-    };
+Map<String, dynamic> _$$FollowCommunityImplToJson(
+  _$FollowCommunityImpl instance,
+) => <String, dynamic>{
+  'community_id': instance.communityId,
+  'follow': instance.follow,
+  'auth': instance.auth,
+};
 
-_TransferCommunity _$TransferCommunityFromJson(Map<String, dynamic> json) =>
-    _TransferCommunity(
-      communityId: (json['community_id'] as num).toInt(),
-      personId: (json['person_id'] as num).toInt(),
-      auth: json['auth'] as String,
-    );
+_$TransferCommunityImpl _$$TransferCommunityImplFromJson(
+  Map<String, dynamic> json,
+) => _$TransferCommunityImpl(
+  communityId: (json['community_id'] as num).toInt(),
+  personId: (json['person_id'] as num).toInt(),
+  auth: json['auth'] as String,
+);
 
-Map<String, dynamic> _$TransferCommunityToJson(_TransferCommunity instance) =>
-    <String, dynamic>{
-      'community_id': instance.communityId,
-      'person_id': instance.personId,
-      'auth': instance.auth,
-    };
+Map<String, dynamic> _$$TransferCommunityImplToJson(
+  _$TransferCommunityImpl instance,
+) => <String, dynamic>{
+  'community_id': instance.communityId,
+  'person_id': instance.personId,
+  'auth': instance.auth,
+};
 
-_BlockCommunity _$BlockCommunityFromJson(Map<String, dynamic> json) =>
-    _BlockCommunity(
+_$BlockCommunityImpl _$$BlockCommunityImplFromJson(Map<String, dynamic> json) =>
+    _$BlockCommunityImpl(
       communityId: (json['community_id'] as num).toInt(),
       block: json['block'] as bool,
       auth: json['auth'] as String,
     );
 
-Map<String, dynamic> _$BlockCommunityToJson(_BlockCommunity instance) =>
-    <String, dynamic>{
-      'community_id': instance.communityId,
-      'block': instance.block,
-      'auth': instance.auth,
-    };
+Map<String, dynamic> _$$BlockCommunityImplToJson(
+  _$BlockCommunityImpl instance,
+) => <String, dynamic>{
+  'community_id': instance.communityId,
+  'block': instance.block,
+  'auth': instance.auth,
+};
