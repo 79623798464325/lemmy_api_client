@@ -156,15 +156,25 @@ class LockPost with _$LockPost implements LemmyApiQuery<PostView> {
   PostView responseFactory(Map<String, dynamic> json) => PostView.fromJson(json['post_view']);
 }
 
+/// Feature a post (pin to top).
+///
+/// In v0.19+, this replaced the old `StickyPost` endpoint.
+///
+/// `HTTP.POST /post/feature`
 @freezed
-class StickyPost with _$StickyPost implements LemmyApiQuery<PostView> {
+class FeaturePost with _$FeaturePost implements LemmyApiQuery<PostView> {
   @apiSerde
-  const factory StickyPost({required int postId, required bool stickied, required String auth}) = _StickyPost;
+  const factory FeaturePost({
+    required int postId, // v0.19.0
+    required bool featured, // v0.19.0
+    required PostFeatureType featureType, // v0.19.0
+    required String auth,
+  }) = _FeaturePost;
 
-  const StickyPost._();
-  factory StickyPost.fromJson(Map<String, dynamic> json) => _$StickyPostFromJson(json);
+  const FeaturePost._();
+  factory FeaturePost.fromJson(Map<String, dynamic> json) => _$FeaturePostFromJson(json);
 
-  final path = '/post/sticky';
+  final path = '/post/feature';
 
   final httpMethod = HttpMethod.post;
 

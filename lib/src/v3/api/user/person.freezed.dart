@@ -807,6 +807,165 @@ abstract class _ValidateAuth extends ValidateAuth {
       throw _privateConstructorUsedError;
 }
 
+GenerateTotpSecret _$GenerateTotpSecretFromJson(Map<String, dynamic> json) {
+  return _GenerateTotpSecret.fromJson(json);
+}
+
+/// @nodoc
+mixin _$GenerateTotpSecret {
+  String? get auth => throw _privateConstructorUsedError;
+
+  /// Serializes this GenerateTotpSecret to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of GenerateTotpSecret
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $GenerateTotpSecretCopyWith<GenerateTotpSecret> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $GenerateTotpSecretCopyWith<$Res> {
+  factory $GenerateTotpSecretCopyWith(
+    GenerateTotpSecret value,
+    $Res Function(GenerateTotpSecret) then,
+  ) = _$GenerateTotpSecretCopyWithImpl<$Res, GenerateTotpSecret>;
+  @useResult
+  $Res call({String? auth});
+}
+
+/// @nodoc
+class _$GenerateTotpSecretCopyWithImpl<$Res, $Val extends GenerateTotpSecret>
+    implements $GenerateTotpSecretCopyWith<$Res> {
+  _$GenerateTotpSecretCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of GenerateTotpSecret
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? auth = freezed}) {
+    return _then(
+      _value.copyWith(
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
+  }
+}
+
+/// @nodoc
+abstract class _$$GenerateTotpSecretImplCopyWith<$Res>
+    implements $GenerateTotpSecretCopyWith<$Res> {
+  factory _$$GenerateTotpSecretImplCopyWith(
+    _$GenerateTotpSecretImpl value,
+    $Res Function(_$GenerateTotpSecretImpl) then,
+  ) = __$$GenerateTotpSecretImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String? auth});
+}
+
+/// @nodoc
+class __$$GenerateTotpSecretImplCopyWithImpl<$Res>
+    extends _$GenerateTotpSecretCopyWithImpl<$Res, _$GenerateTotpSecretImpl>
+    implements _$$GenerateTotpSecretImplCopyWith<$Res> {
+  __$$GenerateTotpSecretImplCopyWithImpl(
+    _$GenerateTotpSecretImpl _value,
+    $Res Function(_$GenerateTotpSecretImpl) _then,
+  ) : super(_value, _then);
+
+  /// Create a copy of GenerateTotpSecret
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({Object? auth = freezed}) {
+    return _then(
+      _$GenerateTotpSecretImpl(
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
+  }
+}
+
+/// @nodoc
+
+@apiSerde
+class _$GenerateTotpSecretImpl extends _GenerateTotpSecret {
+  const _$GenerateTotpSecretImpl({this.auth}) : super._();
+
+  factory _$GenerateTotpSecretImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GenerateTotpSecretImplFromJson(json);
+
+  @override
+  final String? auth;
+
+  @override
+  String toString() {
+    return 'GenerateTotpSecret(auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GenerateTotpSecretImpl &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, auth);
+
+  /// Create a copy of GenerateTotpSecret
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GenerateTotpSecretImplCopyWith<_$GenerateTotpSecretImpl> get copyWith =>
+      __$$GenerateTotpSecretImplCopyWithImpl<_$GenerateTotpSecretImpl>(
+        this,
+        _$identity,
+      );
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$GenerateTotpSecretImplToJson(this);
+  }
+}
+
+abstract class _GenerateTotpSecret extends GenerateTotpSecret {
+  const factory _GenerateTotpSecret({final String? auth}) =
+      _$GenerateTotpSecretImpl;
+  const _GenerateTotpSecret._() : super._();
+
+  factory _GenerateTotpSecret.fromJson(Map<String, dynamic> json) =
+      _$GenerateTotpSecretImpl.fromJson;
+
+  @override
+  String? get auth;
+
+  /// Create a copy of GenerateTotpSecret
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GenerateTotpSecretImplCopyWith<_$GenerateTotpSecretImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 UpdateTotp _$UpdateTotpFromJson(Map<String, dynamic> json) {
   return _UpdateTotp.fromJson(json);
 }

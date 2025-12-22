@@ -2226,53 +2226,61 @@ abstract class _LockPost extends LockPost {
       throw _privateConstructorUsedError;
 }
 
-StickyPost _$StickyPostFromJson(Map<String, dynamic> json) {
-  return _StickyPost.fromJson(json);
+FeaturePost _$FeaturePostFromJson(Map<String, dynamic> json) {
+  return _FeaturePost.fromJson(json);
 }
 
 /// @nodoc
-mixin _$StickyPost {
-  int get postId => throw _privateConstructorUsedError;
-  bool get stickied => throw _privateConstructorUsedError;
+mixin _$FeaturePost {
+  int get postId => throw _privateConstructorUsedError; // v0.19.0
+  bool get featured => throw _privateConstructorUsedError; // v0.19.0
+  PostFeatureType get featureType =>
+      throw _privateConstructorUsedError; // v0.19.0
   String get auth => throw _privateConstructorUsedError;
 
-  /// Serializes this StickyPost to a JSON map.
+  /// Serializes this FeaturePost to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-  /// Create a copy of StickyPost
+  /// Create a copy of FeaturePost
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $StickyPostCopyWith<StickyPost> get copyWith =>
+  $FeaturePostCopyWith<FeaturePost> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $StickyPostCopyWith<$Res> {
-  factory $StickyPostCopyWith(
-    StickyPost value,
-    $Res Function(StickyPost) then,
-  ) = _$StickyPostCopyWithImpl<$Res, StickyPost>;
+abstract class $FeaturePostCopyWith<$Res> {
+  factory $FeaturePostCopyWith(
+    FeaturePost value,
+    $Res Function(FeaturePost) then,
+  ) = _$FeaturePostCopyWithImpl<$Res, FeaturePost>;
   @useResult
-  $Res call({int postId, bool stickied, String auth});
+  $Res call({
+    int postId,
+    bool featured,
+    PostFeatureType featureType,
+    String auth,
+  });
 }
 
 /// @nodoc
-class _$StickyPostCopyWithImpl<$Res, $Val extends StickyPost>
-    implements $StickyPostCopyWith<$Res> {
-  _$StickyPostCopyWithImpl(this._value, this._then);
+class _$FeaturePostCopyWithImpl<$Res, $Val extends FeaturePost>
+    implements $FeaturePostCopyWith<$Res> {
+  _$FeaturePostCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of StickyPost
+  /// Create a copy of FeaturePost
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? postId = null,
-    Object? stickied = null,
+    Object? featured = null,
+    Object? featureType = null,
     Object? auth = null,
   }) {
     return _then(
@@ -2282,11 +2290,16 @@ class _$StickyPostCopyWithImpl<$Res, $Val extends StickyPost>
                     ? _value.postId
                     : postId // ignore: cast_nullable_to_non_nullable
                         as int,
-            stickied:
-                null == stickied
-                    ? _value.stickied
-                    : stickied // ignore: cast_nullable_to_non_nullable
+            featured:
+                null == featured
+                    ? _value.featured
+                    : featured // ignore: cast_nullable_to_non_nullable
                         as bool,
+            featureType:
+                null == featureType
+                    ? _value.featureType
+                    : featureType // ignore: cast_nullable_to_non_nullable
+                        as PostFeatureType,
             auth:
                 null == auth
                     ? _value.auth
@@ -2299,47 +2312,58 @@ class _$StickyPostCopyWithImpl<$Res, $Val extends StickyPost>
 }
 
 /// @nodoc
-abstract class _$$StickyPostImplCopyWith<$Res>
-    implements $StickyPostCopyWith<$Res> {
-  factory _$$StickyPostImplCopyWith(
-    _$StickyPostImpl value,
-    $Res Function(_$StickyPostImpl) then,
-  ) = __$$StickyPostImplCopyWithImpl<$Res>;
+abstract class _$$FeaturePostImplCopyWith<$Res>
+    implements $FeaturePostCopyWith<$Res> {
+  factory _$$FeaturePostImplCopyWith(
+    _$FeaturePostImpl value,
+    $Res Function(_$FeaturePostImpl) then,
+  ) = __$$FeaturePostImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int postId, bool stickied, String auth});
+  $Res call({
+    int postId,
+    bool featured,
+    PostFeatureType featureType,
+    String auth,
+  });
 }
 
 /// @nodoc
-class __$$StickyPostImplCopyWithImpl<$Res>
-    extends _$StickyPostCopyWithImpl<$Res, _$StickyPostImpl>
-    implements _$$StickyPostImplCopyWith<$Res> {
-  __$$StickyPostImplCopyWithImpl(
-    _$StickyPostImpl _value,
-    $Res Function(_$StickyPostImpl) _then,
+class __$$FeaturePostImplCopyWithImpl<$Res>
+    extends _$FeaturePostCopyWithImpl<$Res, _$FeaturePostImpl>
+    implements _$$FeaturePostImplCopyWith<$Res> {
+  __$$FeaturePostImplCopyWithImpl(
+    _$FeaturePostImpl _value,
+    $Res Function(_$FeaturePostImpl) _then,
   ) : super(_value, _then);
 
-  /// Create a copy of StickyPost
+  /// Create a copy of FeaturePost
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? postId = null,
-    Object? stickied = null,
+    Object? featured = null,
+    Object? featureType = null,
     Object? auth = null,
   }) {
     return _then(
-      _$StickyPostImpl(
+      _$FeaturePostImpl(
         postId:
             null == postId
                 ? _value.postId
                 : postId // ignore: cast_nullable_to_non_nullable
                     as int,
-        stickied:
-            null == stickied
-                ? _value.stickied
-                : stickied // ignore: cast_nullable_to_non_nullable
+        featured:
+            null == featured
+                ? _value.featured
+                : featured // ignore: cast_nullable_to_non_nullable
                     as bool,
+        featureType:
+            null == featureType
+                ? _value.featureType
+                : featureType // ignore: cast_nullable_to_non_nullable
+                    as PostFeatureType,
         auth:
             null == auth
                 ? _value.auth
@@ -2353,80 +2377,92 @@ class __$$StickyPostImplCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$StickyPostImpl extends _StickyPost {
-  const _$StickyPostImpl({
+class _$FeaturePostImpl extends _FeaturePost {
+  const _$FeaturePostImpl({
     required this.postId,
-    required this.stickied,
+    required this.featured,
+    required this.featureType,
     required this.auth,
   }) : super._();
 
-  factory _$StickyPostImpl.fromJson(Map<String, dynamic> json) =>
-      _$$StickyPostImplFromJson(json);
+  factory _$FeaturePostImpl.fromJson(Map<String, dynamic> json) =>
+      _$$FeaturePostImplFromJson(json);
 
   @override
   final int postId;
+  // v0.19.0
   @override
-  final bool stickied;
+  final bool featured;
+  // v0.19.0
+  @override
+  final PostFeatureType featureType;
+  // v0.19.0
   @override
   final String auth;
 
   @override
   String toString() {
-    return 'StickyPost(postId: $postId, stickied: $stickied, auth: $auth)';
+    return 'FeaturePost(postId: $postId, featured: $featured, featureType: $featureType, auth: $auth)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$StickyPostImpl &&
+            other is _$FeaturePostImpl &&
             (identical(other.postId, postId) || other.postId == postId) &&
-            (identical(other.stickied, stickied) ||
-                other.stickied == stickied) &&
+            (identical(other.featured, featured) ||
+                other.featured == featured) &&
+            (identical(other.featureType, featureType) ||
+                other.featureType == featureType) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, postId, stickied, auth);
+  int get hashCode =>
+      Object.hash(runtimeType, postId, featured, featureType, auth);
 
-  /// Create a copy of StickyPost
+  /// Create a copy of FeaturePost
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$StickyPostImplCopyWith<_$StickyPostImpl> get copyWith =>
-      __$$StickyPostImplCopyWithImpl<_$StickyPostImpl>(this, _$identity);
+  _$$FeaturePostImplCopyWith<_$FeaturePostImpl> get copyWith =>
+      __$$FeaturePostImplCopyWithImpl<_$FeaturePostImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$StickyPostImplToJson(this);
+    return _$$FeaturePostImplToJson(this);
   }
 }
 
-abstract class _StickyPost extends StickyPost {
-  const factory _StickyPost({
+abstract class _FeaturePost extends FeaturePost {
+  const factory _FeaturePost({
     required final int postId,
-    required final bool stickied,
+    required final bool featured,
+    required final PostFeatureType featureType,
     required final String auth,
-  }) = _$StickyPostImpl;
-  const _StickyPost._() : super._();
+  }) = _$FeaturePostImpl;
+  const _FeaturePost._() : super._();
 
-  factory _StickyPost.fromJson(Map<String, dynamic> json) =
-      _$StickyPostImpl.fromJson;
+  factory _FeaturePost.fromJson(Map<String, dynamic> json) =
+      _$FeaturePostImpl.fromJson;
 
   @override
-  int get postId;
+  int get postId; // v0.19.0
   @override
-  bool get stickied;
+  bool get featured; // v0.19.0
+  @override
+  PostFeatureType get featureType; // v0.19.0
   @override
   String get auth;
 
-  /// Create a copy of StickyPost
+  /// Create a copy of FeaturePost
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$StickyPostImplCopyWith<_$StickyPostImpl> get copyWith =>
+  _$$FeaturePostImplCopyWith<_$FeaturePostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

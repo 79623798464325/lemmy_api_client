@@ -630,28 +630,6 @@ Map<String, dynamic> _$$ModRemovePostViewImplToJson(
   'instance_host': instance.instanceHost,
 };
 
-_$ModStickyPostViewImpl _$$ModStickyPostViewImplFromJson(
-  Map<String, dynamic> json,
-) => _$ModStickyPostViewImpl(
-  modStickyPost: ModStickyPost.fromJson(
-    json['mod_sticky_post'] as Map<String, dynamic>,
-  ),
-  moderator: Person.fromJson(json['moderator'] as Map<String, dynamic>),
-  post: Post.fromJson(json['post'] as Map<String, dynamic>),
-  community: CommunitySafe.fromJson(json['community'] as Map<String, dynamic>),
-  instanceHost: json['instance_host'] as String,
-);
-
-Map<String, dynamic> _$$ModStickyPostViewImplToJson(
-  _$ModStickyPostViewImpl instance,
-) => <String, dynamic>{
-  'mod_sticky_post': instance.modStickyPost.toJson(),
-  'moderator': instance.moderator.toJson(),
-  'post': instance.post.toJson(),
-  'community': instance.community.toJson(),
-  'instance_host': instance.instanceHost,
-};
-
 _$CommunityFollowerViewImpl _$$CommunityFollowerViewImplFromJson(
   Map<String, dynamic> json,
 ) => _$CommunityFollowerViewImpl(

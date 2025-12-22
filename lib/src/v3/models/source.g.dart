@@ -286,26 +286,6 @@ Map<String, dynamic> _$$ModLockPostImplToJson(_$ModLockPostImpl instance) =>
       'instance_host': instance.instanceHost,
     };
 
-_$ModStickyPostImpl _$$ModStickyPostImplFromJson(Map<String, dynamic> json) =>
-    _$ModStickyPostImpl(
-      id: (json['id'] as num).toInt(),
-      modPersonId: (json['mod_person_id'] as num).toInt(),
-      postId: (json['post_id'] as num).toInt(),
-      stickied: json['stickied'] as bool?,
-      when: const ForceUtcDateTime().fromJson(json['when_'] as String),
-      instanceHost: json['instance_host'] as String,
-    );
-
-Map<String, dynamic> _$$ModStickyPostImplToJson(_$ModStickyPostImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'mod_person_id': instance.modPersonId,
-      'post_id': instance.postId,
-      'stickied': instance.stickied,
-      'when_': const ForceUtcDateTime().toJson(instance.when),
-      'instance_host': instance.instanceHost,
-    };
-
 _$ModRemoveCommentImpl _$$ModRemoveCommentImplFromJson(
   Map<String, dynamic> json,
 ) => _$ModRemoveCommentImpl(

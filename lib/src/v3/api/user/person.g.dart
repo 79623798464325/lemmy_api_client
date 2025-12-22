@@ -47,6 +47,14 @@ _$ValidateAuthImpl _$$ValidateAuthImplFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$ValidateAuthImplToJson(_$ValidateAuthImpl instance) =>
     <String, dynamic>{if (instance.auth case final value?) 'auth': value};
 
+_$GenerateTotpSecretImpl _$$GenerateTotpSecretImplFromJson(
+  Map<String, dynamic> json,
+) => _$GenerateTotpSecretImpl(auth: json['auth'] as String?);
+
+Map<String, dynamic> _$$GenerateTotpSecretImplToJson(
+  _$GenerateTotpSecretImpl instance,
+) => <String, dynamic>{if (instance.auth case final value?) 'auth': value};
+
 _$UpdateTotpImpl _$$UpdateTotpImplFromJson(Map<String, dynamic> json) =>
     _$UpdateTotpImpl(
       auth: json['auth'] as String?,

@@ -165,15 +165,7 @@ class ModLockPost with _$ModLockPost {
   factory ModLockPost.fromJson(Map<String, dynamic> json) => _$ModLockPostFromJson(json);
 }
 
-@freezed
-class ModStickyPost with _$ModStickyPost {
-  @modelSerde
-  const factory ModStickyPost({required int id, required int modPersonId, required int postId, bool? stickied, @JsonKey(name: 'when_') required DateTime when, required String instanceHost}) =
-      _ModStickyPost;
-
-  const ModStickyPost._();
-  factory ModStickyPost.fromJson(Map<String, dynamic> json) => _$ModStickyPostFromJson(json);
-}
+// ModStickyPost was removed in v0.19 - use ModFeaturePost instead (defined in views.dart)
 
 @freezed
 class ModRemoveComment with _$ModRemoveComment {
