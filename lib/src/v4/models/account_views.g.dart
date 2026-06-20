@@ -44,7 +44,7 @@ _$LocalUserImpl _$$LocalUserImplFromJson(
   id: (json['id'] as num).toInt(),
   personId: (json['person_id'] as num).toInt(),
   showNsfw: json['show_nsfw'] as bool,
-  theme: json['theme'] as String?,
+  theme: json['theme'] as String,
   email: json['email'] as String?,
   invitedByLocalUserId: (json['invited_by_local_user_id'] as num?)?.toInt(),
   defaultListingType: json['default_listing_type'] as String,
@@ -134,46 +134,4 @@ Map<String, dynamic> _$$CommunityFollowerViewImplToJson(
 ) => <String, dynamic>{
   'community': instance.community.toJson(),
   'follower': instance.follower.toJson(),
-};
-
-_$CommunityBlockViewImpl _$$CommunityBlockViewImplFromJson(
-  Map<String, dynamic> json,
-) => _$CommunityBlockViewImpl(
-  person: Person.fromJson(json['person'] as Map<String, dynamic>),
-  community: Community.fromJson(json['community'] as Map<String, dynamic>),
-);
-
-Map<String, dynamic> _$$CommunityBlockViewImplToJson(
-  _$CommunityBlockViewImpl instance,
-) => <String, dynamic>{
-  'person': instance.person.toJson(),
-  'community': instance.community.toJson(),
-};
-
-_$PersonBlockViewImpl _$$PersonBlockViewImplFromJson(
-  Map<String, dynamic> json,
-) => _$PersonBlockViewImpl(
-  person: Person.fromJson(json['person'] as Map<String, dynamic>),
-  target: Person.fromJson(json['target'] as Map<String, dynamic>),
-);
-
-Map<String, dynamic> _$$PersonBlockViewImplToJson(
-  _$PersonBlockViewImpl instance,
-) => <String, dynamic>{
-  'person': instance.person.toJson(),
-  'target': instance.target.toJson(),
-};
-
-_$InstanceBlockViewImpl _$$InstanceBlockViewImplFromJson(
-  Map<String, dynamic> json,
-) => _$InstanceBlockViewImpl(
-  person: Person.fromJson(json['person'] as Map<String, dynamic>),
-  instance: Instance.fromJson(json['instance'] as Map<String, dynamic>),
-);
-
-Map<String, dynamic> _$$InstanceBlockViewImplToJson(
-  _$InstanceBlockViewImpl instance,
-) => <String, dynamic>{
-  'person': instance.person.toJson(),
-  'instance': instance.instance.toJson(),
 };

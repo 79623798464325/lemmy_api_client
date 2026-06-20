@@ -246,13 +246,12 @@ mixin _$GetMyUserResponse {
   List<CommunityFollowerView> get follows => throw _privateConstructorUsedError;
   List<CommunityModeratorView> get moderates =>
       throw _privateConstructorUsedError;
-  List<CommunityBlockView> get communityBlocks =>
-      throw _privateConstructorUsedError;
+  List<Community> get communityBlocks => throw _privateConstructorUsedError;
   List<Instance> get instanceCommunitiesBlocks =>
       throw _privateConstructorUsedError;
   List<Instance> get instancePersonsBlocks =>
       throw _privateConstructorUsedError;
-  List<PersonBlockView> get personBlocks => throw _privateConstructorUsedError;
+  List<Person> get personBlocks => throw _privateConstructorUsedError;
   List<int> get discussionLanguages => throw _privateConstructorUsedError;
   List<String> get keywordBlocks => throw _privateConstructorUsedError;
   List<MultiCommunityView> get multiCommunityFollows =>
@@ -279,10 +278,10 @@ abstract class $GetMyUserResponseCopyWith<$Res> {
     LocalUserView localUserView,
     List<CommunityFollowerView> follows,
     List<CommunityModeratorView> moderates,
-    List<CommunityBlockView> communityBlocks,
+    List<Community> communityBlocks,
     List<Instance> instanceCommunitiesBlocks,
     List<Instance> instancePersonsBlocks,
-    List<PersonBlockView> personBlocks,
+    List<Person> personBlocks,
     List<int> discussionLanguages,
     List<String> keywordBlocks,
     List<MultiCommunityView> multiCommunityFollows,
@@ -338,7 +337,7 @@ class _$GetMyUserResponseCopyWithImpl<$Res, $Val extends GetMyUserResponse>
                 null == communityBlocks
                     ? _value.communityBlocks
                     : communityBlocks // ignore: cast_nullable_to_non_nullable
-                        as List<CommunityBlockView>,
+                        as List<Community>,
             instanceCommunitiesBlocks:
                 null == instanceCommunitiesBlocks
                     ? _value.instanceCommunitiesBlocks
@@ -353,7 +352,7 @@ class _$GetMyUserResponseCopyWithImpl<$Res, $Val extends GetMyUserResponse>
                 null == personBlocks
                     ? _value.personBlocks
                     : personBlocks // ignore: cast_nullable_to_non_nullable
-                        as List<PersonBlockView>,
+                        as List<Person>,
             discussionLanguages:
                 null == discussionLanguages
                     ? _value.discussionLanguages
@@ -398,10 +397,10 @@ abstract class _$$GetMyUserResponseImplCopyWith<$Res>
     LocalUserView localUserView,
     List<CommunityFollowerView> follows,
     List<CommunityModeratorView> moderates,
-    List<CommunityBlockView> communityBlocks,
+    List<Community> communityBlocks,
     List<Instance> instanceCommunitiesBlocks,
     List<Instance> instancePersonsBlocks,
-    List<PersonBlockView> personBlocks,
+    List<Person> personBlocks,
     List<int> discussionLanguages,
     List<String> keywordBlocks,
     List<MultiCommunityView> multiCommunityFollows,
@@ -457,7 +456,7 @@ class __$$GetMyUserResponseImplCopyWithImpl<$Res>
             null == communityBlocks
                 ? _value._communityBlocks
                 : communityBlocks // ignore: cast_nullable_to_non_nullable
-                    as List<CommunityBlockView>,
+                    as List<Community>,
         instanceCommunitiesBlocks:
             null == instanceCommunitiesBlocks
                 ? _value._instanceCommunitiesBlocks
@@ -472,7 +471,7 @@ class __$$GetMyUserResponseImplCopyWithImpl<$Res>
             null == personBlocks
                 ? _value._personBlocks
                 : personBlocks // ignore: cast_nullable_to_non_nullable
-                    as List<PersonBlockView>,
+                    as List<Person>,
         discussionLanguages:
             null == discussionLanguages
                 ? _value._discussionLanguages
@@ -501,10 +500,10 @@ class _$GetMyUserResponseImpl extends _GetMyUserResponse {
     required this.localUserView,
     required final List<CommunityFollowerView> follows,
     required final List<CommunityModeratorView> moderates,
-    required final List<CommunityBlockView> communityBlocks,
+    required final List<Community> communityBlocks,
     required final List<Instance> instanceCommunitiesBlocks,
     required final List<Instance> instancePersonsBlocks,
-    required final List<PersonBlockView> personBlocks,
+    required final List<Person> personBlocks,
     required final List<int> discussionLanguages,
     required final List<String> keywordBlocks,
     required final List<MultiCommunityView> multiCommunityFollows,
@@ -540,9 +539,9 @@ class _$GetMyUserResponseImpl extends _GetMyUserResponse {
     return EqualUnmodifiableListView(_moderates);
   }
 
-  final List<CommunityBlockView> _communityBlocks;
+  final List<Community> _communityBlocks;
   @override
-  List<CommunityBlockView> get communityBlocks {
+  List<Community> get communityBlocks {
     if (_communityBlocks is EqualUnmodifiableListView) return _communityBlocks;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_communityBlocks);
@@ -566,9 +565,9 @@ class _$GetMyUserResponseImpl extends _GetMyUserResponse {
     return EqualUnmodifiableListView(_instancePersonsBlocks);
   }
 
-  final List<PersonBlockView> _personBlocks;
+  final List<Person> _personBlocks;
   @override
-  List<PersonBlockView> get personBlocks {
+  List<Person> get personBlocks {
     if (_personBlocks is EqualUnmodifiableListView) return _personBlocks;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_personBlocks);
@@ -685,10 +684,10 @@ abstract class _GetMyUserResponse extends GetMyUserResponse {
     required final LocalUserView localUserView,
     required final List<CommunityFollowerView> follows,
     required final List<CommunityModeratorView> moderates,
-    required final List<CommunityBlockView> communityBlocks,
+    required final List<Community> communityBlocks,
     required final List<Instance> instanceCommunitiesBlocks,
     required final List<Instance> instancePersonsBlocks,
-    required final List<PersonBlockView> personBlocks,
+    required final List<Person> personBlocks,
     required final List<int> discussionLanguages,
     required final List<String> keywordBlocks,
     required final List<MultiCommunityView> multiCommunityFollows,
@@ -705,13 +704,13 @@ abstract class _GetMyUserResponse extends GetMyUserResponse {
   @override
   List<CommunityModeratorView> get moderates;
   @override
-  List<CommunityBlockView> get communityBlocks;
+  List<Community> get communityBlocks;
   @override
   List<Instance> get instanceCommunitiesBlocks;
   @override
   List<Instance> get instancePersonsBlocks;
   @override
-  List<PersonBlockView> get personBlocks;
+  List<Person> get personBlocks;
   @override
   List<int> get discussionLanguages;
   @override

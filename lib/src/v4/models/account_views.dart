@@ -24,8 +24,8 @@ class LocalUser with _$LocalUser {
     required int id,
     required int personId,
     required bool showNsfw,
-    /// Optional theme name (null when unset).
-    String? theme,
+    /// Theme name (required per spec).
+    required String theme,
     /// Sensitive email address (optional).
     String? email,
     /// Optional invited-by user ID.
@@ -78,32 +78,3 @@ class CommunityFollowerView with _$CommunityFollowerView {
   factory CommunityFollowerView.fromJson(Map<String, dynamic> json) => _$CommunityFollowerViewFromJson(json);
 }
 
-/// Community block view.
-@freezed
-class CommunityBlockView with _$CommunityBlockView {
-  @modelSerde
-  const factory CommunityBlockView({required Person person, required Community community}) = _CommunityBlockView;
-
-  const CommunityBlockView._();
-  factory CommunityBlockView.fromJson(Map<String, dynamic> json) => _$CommunityBlockViewFromJson(json);
-}
-
-/// Person block view.
-@freezed
-class PersonBlockView with _$PersonBlockView {
-  @modelSerde
-  const factory PersonBlockView({required Person person, required Person target}) = _PersonBlockView;
-
-  const PersonBlockView._();
-  factory PersonBlockView.fromJson(Map<String, dynamic> json) => _$PersonBlockViewFromJson(json);
-}
-
-/// Instance block view.
-@freezed
-class InstanceBlockView with _$InstanceBlockView {
-  @modelSerde
-  const factory InstanceBlockView({required Person person, required Instance instance}) = _InstanceBlockView;
-
-  const InstanceBlockView._();
-  factory InstanceBlockView.fromJson(Map<String, dynamic> json) => _$InstanceBlockViewFromJson(json);
-}

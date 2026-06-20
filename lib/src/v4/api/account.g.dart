@@ -38,7 +38,7 @@ _$GetMyUserResponseImpl _$$GetMyUserResponseImplFromJson(
           .toList(),
   communityBlocks:
       (json['community_blocks'] as List<dynamic>)
-          .map((e) => CommunityBlockView.fromJson(e as Map<String, dynamic>))
+          .map((e) => Community.fromJson(e as Map<String, dynamic>))
           .toList(),
   instanceCommunitiesBlocks:
       (json['instance_communities_blocks'] as List<dynamic>)
@@ -50,7 +50,7 @@ _$GetMyUserResponseImpl _$$GetMyUserResponseImplFromJson(
           .toList(),
   personBlocks:
       (json['person_blocks'] as List<dynamic>)
-          .map((e) => PersonBlockView.fromJson(e as Map<String, dynamic>))
+          .map((e) => Person.fromJson(e as Map<String, dynamic>))
           .toList(),
   discussionLanguages:
       (json['discussion_languages'] as List<dynamic>)

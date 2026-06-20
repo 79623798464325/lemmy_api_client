@@ -289,8 +289,8 @@ mixin _$LocalUser {
   int get personId => throw _privateConstructorUsedError;
   bool get showNsfw => throw _privateConstructorUsedError;
 
-  /// Optional theme name (null when unset).
-  String? get theme => throw _privateConstructorUsedError;
+  /// Theme name (required per spec).
+  String get theme => throw _privateConstructorUsedError;
 
   /// Sensitive email address (optional).
   String? get email => throw _privateConstructorUsedError;
@@ -354,7 +354,7 @@ abstract class $LocalUserCopyWith<$Res> {
     int id,
     int personId,
     bool showNsfw,
-    String? theme,
+    String theme,
     String? email,
     int? invitedByLocalUserId,
     String defaultListingType,
@@ -409,7 +409,7 @@ class _$LocalUserCopyWithImpl<$Res, $Val extends LocalUser>
     Object? id = null,
     Object? personId = null,
     Object? showNsfw = null,
-    Object? theme = freezed,
+    Object? theme = null,
     Object? email = freezed,
     Object? invitedByLocalUserId = freezed,
     Object? defaultListingType = null,
@@ -461,10 +461,10 @@ class _$LocalUserCopyWithImpl<$Res, $Val extends LocalUser>
                     : showNsfw // ignore: cast_nullable_to_non_nullable
                         as bool,
             theme:
-                freezed == theme
+                null == theme
                     ? _value.theme
                     : theme // ignore: cast_nullable_to_non_nullable
-                        as String?,
+                        as String,
             email:
                 freezed == email
                     ? _value.email
@@ -644,7 +644,7 @@ abstract class _$$LocalUserImplCopyWith<$Res>
     int id,
     int personId,
     bool showNsfw,
-    String? theme,
+    String theme,
     String? email,
     int? invitedByLocalUserId,
     String defaultListingType,
@@ -698,7 +698,7 @@ class __$$LocalUserImplCopyWithImpl<$Res>
     Object? id = null,
     Object? personId = null,
     Object? showNsfw = null,
-    Object? theme = freezed,
+    Object? theme = null,
     Object? email = freezed,
     Object? invitedByLocalUserId = freezed,
     Object? defaultListingType = null,
@@ -750,10 +750,10 @@ class __$$LocalUserImplCopyWithImpl<$Res>
                 : showNsfw // ignore: cast_nullable_to_non_nullable
                     as bool,
         theme:
-            freezed == theme
+            null == theme
                 ? _value.theme
                 : theme // ignore: cast_nullable_to_non_nullable
-                    as String?,
+                    as String,
         email:
             freezed == email
                 ? _value.email
@@ -927,7 +927,7 @@ class _$LocalUserImpl extends _LocalUser {
     required this.id,
     required this.personId,
     required this.showNsfw,
-    this.theme,
+    required this.theme,
     this.email,
     this.invitedByLocalUserId,
     required this.defaultListingType,
@@ -974,9 +974,9 @@ class _$LocalUserImpl extends _LocalUser {
   @override
   final bool showNsfw;
 
-  /// Optional theme name (null when unset).
+  /// Theme name (required per spec).
   @override
-  final String? theme;
+  final String theme;
 
   /// Sensitive email address (optional).
   @override
@@ -1209,7 +1209,7 @@ abstract class _LocalUser extends LocalUser {
     required final int id,
     required final int personId,
     required final bool showNsfw,
-    final String? theme,
+    required final String theme,
     final String? email,
     final int? invitedByLocalUserId,
     required final String defaultListingType,
@@ -1258,9 +1258,9 @@ abstract class _LocalUser extends LocalUser {
   @override
   bool get showNsfw;
 
-  /// Optional theme name (null when unset).
+  /// Theme name (required per spec).
   @override
-  String? get theme;
+  String get theme;
 
   /// Sensitive email address (optional).
   @override
@@ -1558,626 +1558,4 @@ abstract class _CommunityFollowerView extends CommunityFollowerView {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CommunityFollowerViewImplCopyWith<_$CommunityFollowerViewImpl>
   get copyWith => throw _privateConstructorUsedError;
-}
-
-CommunityBlockView _$CommunityBlockViewFromJson(Map<String, dynamic> json) {
-  return _CommunityBlockView.fromJson(json);
-}
-
-/// @nodoc
-mixin _$CommunityBlockView {
-  Person get person => throw _privateConstructorUsedError;
-  Community get community => throw _privateConstructorUsedError;
-
-  /// Serializes this CommunityBlockView to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of CommunityBlockView
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $CommunityBlockViewCopyWith<CommunityBlockView> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $CommunityBlockViewCopyWith<$Res> {
-  factory $CommunityBlockViewCopyWith(
-    CommunityBlockView value,
-    $Res Function(CommunityBlockView) then,
-  ) = _$CommunityBlockViewCopyWithImpl<$Res, CommunityBlockView>;
-  @useResult
-  $Res call({Person person, Community community});
-
-  $PersonCopyWith<$Res> get person;
-  $CommunityCopyWith<$Res> get community;
-}
-
-/// @nodoc
-class _$CommunityBlockViewCopyWithImpl<$Res, $Val extends CommunityBlockView>
-    implements $CommunityBlockViewCopyWith<$Res> {
-  _$CommunityBlockViewCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of CommunityBlockView
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? person = null, Object? community = null}) {
-    return _then(
-      _value.copyWith(
-            person:
-                null == person
-                    ? _value.person
-                    : person // ignore: cast_nullable_to_non_nullable
-                        as Person,
-            community:
-                null == community
-                    ? _value.community
-                    : community // ignore: cast_nullable_to_non_nullable
-                        as Community,
-          )
-          as $Val,
-    );
-  }
-
-  /// Create a copy of CommunityBlockView
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $PersonCopyWith<$Res> get person {
-    return $PersonCopyWith<$Res>(_value.person, (value) {
-      return _then(_value.copyWith(person: value) as $Val);
-    });
-  }
-
-  /// Create a copy of CommunityBlockView
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $CommunityCopyWith<$Res> get community {
-    return $CommunityCopyWith<$Res>(_value.community, (value) {
-      return _then(_value.copyWith(community: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$CommunityBlockViewImplCopyWith<$Res>
-    implements $CommunityBlockViewCopyWith<$Res> {
-  factory _$$CommunityBlockViewImplCopyWith(
-    _$CommunityBlockViewImpl value,
-    $Res Function(_$CommunityBlockViewImpl) then,
-  ) = __$$CommunityBlockViewImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({Person person, Community community});
-
-  @override
-  $PersonCopyWith<$Res> get person;
-  @override
-  $CommunityCopyWith<$Res> get community;
-}
-
-/// @nodoc
-class __$$CommunityBlockViewImplCopyWithImpl<$Res>
-    extends _$CommunityBlockViewCopyWithImpl<$Res, _$CommunityBlockViewImpl>
-    implements _$$CommunityBlockViewImplCopyWith<$Res> {
-  __$$CommunityBlockViewImplCopyWithImpl(
-    _$CommunityBlockViewImpl _value,
-    $Res Function(_$CommunityBlockViewImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of CommunityBlockView
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? person = null, Object? community = null}) {
-    return _then(
-      _$CommunityBlockViewImpl(
-        person:
-            null == person
-                ? _value.person
-                : person // ignore: cast_nullable_to_non_nullable
-                    as Person,
-        community:
-            null == community
-                ? _value.community
-                : community // ignore: cast_nullable_to_non_nullable
-                    as Community,
-      ),
-    );
-  }
-}
-
-/// @nodoc
-
-@modelSerde
-class _$CommunityBlockViewImpl extends _CommunityBlockView {
-  const _$CommunityBlockViewImpl({
-    required this.person,
-    required this.community,
-  }) : super._();
-
-  factory _$CommunityBlockViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CommunityBlockViewImplFromJson(json);
-
-  @override
-  final Person person;
-  @override
-  final Community community;
-
-  @override
-  String toString() {
-    return 'CommunityBlockView(person: $person, community: $community)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CommunityBlockViewImpl &&
-            (identical(other.person, person) || other.person == person) &&
-            (identical(other.community, community) ||
-                other.community == community));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, person, community);
-
-  /// Create a copy of CommunityBlockView
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CommunityBlockViewImplCopyWith<_$CommunityBlockViewImpl> get copyWith =>
-      __$$CommunityBlockViewImplCopyWithImpl<_$CommunityBlockViewImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$CommunityBlockViewImplToJson(this);
-  }
-}
-
-abstract class _CommunityBlockView extends CommunityBlockView {
-  const factory _CommunityBlockView({
-    required final Person person,
-    required final Community community,
-  }) = _$CommunityBlockViewImpl;
-  const _CommunityBlockView._() : super._();
-
-  factory _CommunityBlockView.fromJson(Map<String, dynamic> json) =
-      _$CommunityBlockViewImpl.fromJson;
-
-  @override
-  Person get person;
-  @override
-  Community get community;
-
-  /// Create a copy of CommunityBlockView
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CommunityBlockViewImplCopyWith<_$CommunityBlockViewImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-PersonBlockView _$PersonBlockViewFromJson(Map<String, dynamic> json) {
-  return _PersonBlockView.fromJson(json);
-}
-
-/// @nodoc
-mixin _$PersonBlockView {
-  Person get person => throw _privateConstructorUsedError;
-  Person get target => throw _privateConstructorUsedError;
-
-  /// Serializes this PersonBlockView to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of PersonBlockView
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $PersonBlockViewCopyWith<PersonBlockView> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $PersonBlockViewCopyWith<$Res> {
-  factory $PersonBlockViewCopyWith(
-    PersonBlockView value,
-    $Res Function(PersonBlockView) then,
-  ) = _$PersonBlockViewCopyWithImpl<$Res, PersonBlockView>;
-  @useResult
-  $Res call({Person person, Person target});
-
-  $PersonCopyWith<$Res> get person;
-  $PersonCopyWith<$Res> get target;
-}
-
-/// @nodoc
-class _$PersonBlockViewCopyWithImpl<$Res, $Val extends PersonBlockView>
-    implements $PersonBlockViewCopyWith<$Res> {
-  _$PersonBlockViewCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of PersonBlockView
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? person = null, Object? target = null}) {
-    return _then(
-      _value.copyWith(
-            person:
-                null == person
-                    ? _value.person
-                    : person // ignore: cast_nullable_to_non_nullable
-                        as Person,
-            target:
-                null == target
-                    ? _value.target
-                    : target // ignore: cast_nullable_to_non_nullable
-                        as Person,
-          )
-          as $Val,
-    );
-  }
-
-  /// Create a copy of PersonBlockView
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $PersonCopyWith<$Res> get person {
-    return $PersonCopyWith<$Res>(_value.person, (value) {
-      return _then(_value.copyWith(person: value) as $Val);
-    });
-  }
-
-  /// Create a copy of PersonBlockView
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $PersonCopyWith<$Res> get target {
-    return $PersonCopyWith<$Res>(_value.target, (value) {
-      return _then(_value.copyWith(target: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$PersonBlockViewImplCopyWith<$Res>
-    implements $PersonBlockViewCopyWith<$Res> {
-  factory _$$PersonBlockViewImplCopyWith(
-    _$PersonBlockViewImpl value,
-    $Res Function(_$PersonBlockViewImpl) then,
-  ) = __$$PersonBlockViewImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({Person person, Person target});
-
-  @override
-  $PersonCopyWith<$Res> get person;
-  @override
-  $PersonCopyWith<$Res> get target;
-}
-
-/// @nodoc
-class __$$PersonBlockViewImplCopyWithImpl<$Res>
-    extends _$PersonBlockViewCopyWithImpl<$Res, _$PersonBlockViewImpl>
-    implements _$$PersonBlockViewImplCopyWith<$Res> {
-  __$$PersonBlockViewImplCopyWithImpl(
-    _$PersonBlockViewImpl _value,
-    $Res Function(_$PersonBlockViewImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of PersonBlockView
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? person = null, Object? target = null}) {
-    return _then(
-      _$PersonBlockViewImpl(
-        person:
-            null == person
-                ? _value.person
-                : person // ignore: cast_nullable_to_non_nullable
-                    as Person,
-        target:
-            null == target
-                ? _value.target
-                : target // ignore: cast_nullable_to_non_nullable
-                    as Person,
-      ),
-    );
-  }
-}
-
-/// @nodoc
-
-@modelSerde
-class _$PersonBlockViewImpl extends _PersonBlockView {
-  const _$PersonBlockViewImpl({required this.person, required this.target})
-    : super._();
-
-  factory _$PersonBlockViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PersonBlockViewImplFromJson(json);
-
-  @override
-  final Person person;
-  @override
-  final Person target;
-
-  @override
-  String toString() {
-    return 'PersonBlockView(person: $person, target: $target)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$PersonBlockViewImpl &&
-            (identical(other.person, person) || other.person == person) &&
-            (identical(other.target, target) || other.target == target));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, person, target);
-
-  /// Create a copy of PersonBlockView
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$PersonBlockViewImplCopyWith<_$PersonBlockViewImpl> get copyWith =>
-      __$$PersonBlockViewImplCopyWithImpl<_$PersonBlockViewImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$PersonBlockViewImplToJson(this);
-  }
-}
-
-abstract class _PersonBlockView extends PersonBlockView {
-  const factory _PersonBlockView({
-    required final Person person,
-    required final Person target,
-  }) = _$PersonBlockViewImpl;
-  const _PersonBlockView._() : super._();
-
-  factory _PersonBlockView.fromJson(Map<String, dynamic> json) =
-      _$PersonBlockViewImpl.fromJson;
-
-  @override
-  Person get person;
-  @override
-  Person get target;
-
-  /// Create a copy of PersonBlockView
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PersonBlockViewImplCopyWith<_$PersonBlockViewImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-InstanceBlockView _$InstanceBlockViewFromJson(Map<String, dynamic> json) {
-  return _InstanceBlockView.fromJson(json);
-}
-
-/// @nodoc
-mixin _$InstanceBlockView {
-  Person get person => throw _privateConstructorUsedError;
-  Instance get instance => throw _privateConstructorUsedError;
-
-  /// Serializes this InstanceBlockView to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of InstanceBlockView
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $InstanceBlockViewCopyWith<InstanceBlockView> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $InstanceBlockViewCopyWith<$Res> {
-  factory $InstanceBlockViewCopyWith(
-    InstanceBlockView value,
-    $Res Function(InstanceBlockView) then,
-  ) = _$InstanceBlockViewCopyWithImpl<$Res, InstanceBlockView>;
-  @useResult
-  $Res call({Person person, Instance instance});
-
-  $PersonCopyWith<$Res> get person;
-  $InstanceCopyWith<$Res> get instance;
-}
-
-/// @nodoc
-class _$InstanceBlockViewCopyWithImpl<$Res, $Val extends InstanceBlockView>
-    implements $InstanceBlockViewCopyWith<$Res> {
-  _$InstanceBlockViewCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of InstanceBlockView
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? person = null, Object? instance = null}) {
-    return _then(
-      _value.copyWith(
-            person:
-                null == person
-                    ? _value.person
-                    : person // ignore: cast_nullable_to_non_nullable
-                        as Person,
-            instance:
-                null == instance
-                    ? _value.instance
-                    : instance // ignore: cast_nullable_to_non_nullable
-                        as Instance,
-          )
-          as $Val,
-    );
-  }
-
-  /// Create a copy of InstanceBlockView
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $PersonCopyWith<$Res> get person {
-    return $PersonCopyWith<$Res>(_value.person, (value) {
-      return _then(_value.copyWith(person: value) as $Val);
-    });
-  }
-
-  /// Create a copy of InstanceBlockView
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $InstanceCopyWith<$Res> get instance {
-    return $InstanceCopyWith<$Res>(_value.instance, (value) {
-      return _then(_value.copyWith(instance: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$InstanceBlockViewImplCopyWith<$Res>
-    implements $InstanceBlockViewCopyWith<$Res> {
-  factory _$$InstanceBlockViewImplCopyWith(
-    _$InstanceBlockViewImpl value,
-    $Res Function(_$InstanceBlockViewImpl) then,
-  ) = __$$InstanceBlockViewImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({Person person, Instance instance});
-
-  @override
-  $PersonCopyWith<$Res> get person;
-  @override
-  $InstanceCopyWith<$Res> get instance;
-}
-
-/// @nodoc
-class __$$InstanceBlockViewImplCopyWithImpl<$Res>
-    extends _$InstanceBlockViewCopyWithImpl<$Res, _$InstanceBlockViewImpl>
-    implements _$$InstanceBlockViewImplCopyWith<$Res> {
-  __$$InstanceBlockViewImplCopyWithImpl(
-    _$InstanceBlockViewImpl _value,
-    $Res Function(_$InstanceBlockViewImpl) _then,
-  ) : super(_value, _then);
-
-  /// Create a copy of InstanceBlockView
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? person = null, Object? instance = null}) {
-    return _then(
-      _$InstanceBlockViewImpl(
-        person:
-            null == person
-                ? _value.person
-                : person // ignore: cast_nullable_to_non_nullable
-                    as Person,
-        instance:
-            null == instance
-                ? _value.instance
-                : instance // ignore: cast_nullable_to_non_nullable
-                    as Instance,
-      ),
-    );
-  }
-}
-
-/// @nodoc
-
-@modelSerde
-class _$InstanceBlockViewImpl extends _InstanceBlockView {
-  const _$InstanceBlockViewImpl({required this.person, required this.instance})
-    : super._();
-
-  factory _$InstanceBlockViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$InstanceBlockViewImplFromJson(json);
-
-  @override
-  final Person person;
-  @override
-  final Instance instance;
-
-  @override
-  String toString() {
-    return 'InstanceBlockView(person: $person, instance: $instance)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$InstanceBlockViewImpl &&
-            (identical(other.person, person) || other.person == person) &&
-            (identical(other.instance, instance) ||
-                other.instance == instance));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, person, instance);
-
-  /// Create a copy of InstanceBlockView
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$InstanceBlockViewImplCopyWith<_$InstanceBlockViewImpl> get copyWith =>
-      __$$InstanceBlockViewImplCopyWithImpl<_$InstanceBlockViewImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$InstanceBlockViewImplToJson(this);
-  }
-}
-
-abstract class _InstanceBlockView extends InstanceBlockView {
-  const factory _InstanceBlockView({
-    required final Person person,
-    required final Instance instance,
-  }) = _$InstanceBlockViewImpl;
-  const _InstanceBlockView._() : super._();
-
-  factory _InstanceBlockView.fromJson(Map<String, dynamic> json) =
-      _$InstanceBlockViewImpl.fromJson;
-
-  @override
-  Person get person;
-  @override
-  Instance get instance;
-
-  /// Create a copy of InstanceBlockView
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$InstanceBlockViewImplCopyWith<_$InstanceBlockViewImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
