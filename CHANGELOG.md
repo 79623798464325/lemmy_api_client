@@ -1,3 +1,9 @@
+## v0.68.1 - 2026-06-20
+
+### Fixed
+
+- Formatting and lint fixes across the entire codebase to satisfy CI checks.
+
 ## v0.68.0 - 2026-06-20
 
 ### Fixed
