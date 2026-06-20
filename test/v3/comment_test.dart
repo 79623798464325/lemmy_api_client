@@ -1,4 +1,3 @@
-import 'package:lemmy_api_client2/src/v3/api/comment/comment.dart';
 import 'package:lemmy_api_client2/v3.dart';
 import 'package:test/test.dart';
 

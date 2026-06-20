@@ -9,9 +9,9 @@ part 'save_user_settings_response.g.dart';
 class SaveUserSettingsResponse with _$SaveUserSettingsResponse {
   @modelSerde
   const factory SaveUserSettingsResponse({
-    @deprecated String? jwt,
-    @deprecated bool? registrationCreated,
-    @deprecated bool? verifyEmailSent,
+    @Deprecated('Use success instead') String? jwt,
+    @Deprecated('Use success instead') bool? registrationCreated,
+    @Deprecated('Use success instead') bool? verifyEmailSent,
     bool? success, // Only available in lemmy v0.19.0 and above
   }) = _SaveUserSettingsResponse;
 

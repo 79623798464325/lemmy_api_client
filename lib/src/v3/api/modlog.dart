@@ -19,8 +19,10 @@ class GetModlog with _$GetModlog implements LemmyApiQuery<Modlog> {
 
   factory GetModlog.fromJson(Map<String, dynamic> json) => _$GetModlogFromJson(json);
 
+  @override
   final path = '/modlog';
 
+  @override
   final httpMethod = HttpMethod.get;
 
   @override

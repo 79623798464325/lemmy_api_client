@@ -6,7 +6,6 @@ import '../../models/private_message/list_private_message_reports_response.dart'
 import '../../models/private_message/private_message_report_response.dart';
 import '../../models/private_message/private_message_response.dart';
 import '../../models/private_message/private_messages_response.dart';
-import '../../query.dart';
 
 part 'private_message.freezed.dart';
 part 'private_message.g.dart';
@@ -28,8 +27,10 @@ class GetPrivateMessages with _$GetPrivateMessages implements LemmyApiQuery<Priv
   const GetPrivateMessages._();
   factory GetPrivateMessages.fromJson(Map<String, dynamic> json) => _$GetPrivateMessagesFromJson(json);
 
+  @override
   final path = '/private_message/list';
 
+  @override
   final httpMethod = HttpMethod.get;
 
   @override
@@ -44,8 +45,10 @@ class CreatePrivateMessage with _$CreatePrivateMessage implements LemmyApiQuery<
   const CreatePrivateMessage._();
   factory CreatePrivateMessage.fromJson(Map<String, dynamic> json) => _$CreatePrivateMessageFromJson(json);
 
+  @override
   final path = '/private_message';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -67,8 +70,10 @@ class EditPrivateMessage with _$EditPrivateMessage implements LemmyApiQuery<Priv
   const EditPrivateMessage._();
   factory EditPrivateMessage.fromJson(Map<String, dynamic> json) => _$EditPrivateMessageFromJson(json);
 
+  @override
   final path = '/private_message';
 
+  @override
   final httpMethod = HttpMethod.put;
 
   @override
@@ -90,8 +95,10 @@ class DeletePrivateMessage with _$DeletePrivateMessage implements LemmyApiQuery<
   const DeletePrivateMessage._();
   factory DeletePrivateMessage.fromJson(Map<String, dynamic> json) => _$DeletePrivateMessageFromJson(json);
 
+  @override
   final path = '/private_message/delete';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -113,8 +120,10 @@ class MarkPrivateMessageAsRead with _$MarkPrivateMessageAsRead implements LemmyA
   const MarkPrivateMessageAsRead._();
   factory MarkPrivateMessageAsRead.fromJson(Map<String, dynamic> json) => _$MarkPrivateMessageAsReadFromJson(json);
 
+  @override
   final path = '/private_message/mark_as_read';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -136,8 +145,10 @@ class CreatePrivateMessageReport with _$CreatePrivateMessageReport implements Le
   const CreatePrivateMessageReport._();
   factory CreatePrivateMessageReport.fromJson(Map<String, dynamic> json) => _$CreatePrivateMessageReportFromJson(json);
 
+  @override
   final path = '/private_message/report';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -159,8 +170,10 @@ class ResolvePrivateMessageReport with _$ResolvePrivateMessageReport implements 
   const ResolvePrivateMessageReport._();
   factory ResolvePrivateMessageReport.fromJson(Map<String, dynamic> json) => _$ResolvePrivateMessageReportFromJson(json);
 
+  @override
   final path = '/private_message/report/resolve';
 
+  @override
   final httpMethod = HttpMethod.put;
 
   @override
@@ -184,8 +197,10 @@ class ListPrivateMessageReports with _$ListPrivateMessageReports implements Lemm
   const ListPrivateMessageReports._();
   factory ListPrivateMessageReports.fromJson(Map<String, dynamic> json) => _$ListPrivateMessageReportsFromJson(json);
 
+  @override
   final path = '/private_message/report/list';
 
+  @override
   final httpMethod = HttpMethod.get;
 
   @override

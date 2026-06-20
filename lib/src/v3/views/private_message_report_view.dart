@@ -2,7 +2,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../utils/serde.dart';
 import '../models/models.dart';
-import '../models/private_message/private_message_report.dart';
 
 part 'private_message_report_view.freezed.dart';
 part 'private_message_report_view.g.dart';

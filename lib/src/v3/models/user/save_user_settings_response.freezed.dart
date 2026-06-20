@@ -21,11 +21,11 @@ SaveUserSettingsResponse _$SaveUserSettingsResponseFromJson(Map<String, dynamic>
 
 /// @nodoc
 mixin _$SaveUserSettingsResponse {
-  @deprecated
+  @Deprecated('Use success instead')
   String? get jwt => throw _privateConstructorUsedError;
-  @deprecated
+  @Deprecated('Use success instead')
   bool? get registrationCreated => throw _privateConstructorUsedError;
-  @deprecated
+  @Deprecated('Use success instead')
   bool? get verifyEmailSent => throw _privateConstructorUsedError;
   bool? get success => throw _privateConstructorUsedError;
 
@@ -42,7 +42,7 @@ mixin _$SaveUserSettingsResponse {
 abstract class $SaveUserSettingsResponseCopyWith<$Res> {
   factory $SaveUserSettingsResponseCopyWith(SaveUserSettingsResponse value, $Res Function(SaveUserSettingsResponse) then) = _$SaveUserSettingsResponseCopyWithImpl<$Res, SaveUserSettingsResponse>;
   @useResult
-  $Res call({@deprecated String? jwt, @deprecated bool? registrationCreated, @deprecated bool? verifyEmailSent, bool? success});
+  $Res call({@Deprecated('Use success instead') String? jwt, @Deprecated('Use success instead') bool? registrationCreated, @Deprecated('Use success instead') bool? verifyEmailSent, bool? success});
 }
 
 /// @nodoc
@@ -92,7 +92,7 @@ abstract class _$$SaveUserSettingsResponseImplCopyWith<$Res> implements $SaveUse
   factory _$$SaveUserSettingsResponseImplCopyWith(_$SaveUserSettingsResponseImpl value, $Res Function(_$SaveUserSettingsResponseImpl) then) = __$$SaveUserSettingsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@deprecated String? jwt, @deprecated bool? registrationCreated, @deprecated bool? verifyEmailSent, bool? success});
+  $Res call({@Deprecated('Use success instead') String? jwt, @Deprecated('Use success instead') bool? registrationCreated, @Deprecated('Use success instead') bool? verifyEmailSent, bool? success});
 }
 
 /// @nodoc
@@ -135,18 +135,23 @@ class __$$SaveUserSettingsResponseImplCopyWithImpl<$Res> extends _$SaveUserSetti
 
 @modelSerde
 class _$SaveUserSettingsResponseImpl extends _SaveUserSettingsResponse {
-  const _$SaveUserSettingsResponseImpl({@deprecated this.jwt, @deprecated this.registrationCreated, @deprecated this.verifyEmailSent, this.success}) : super._();
+  const _$SaveUserSettingsResponseImpl({
+    @Deprecated('Use success instead') this.jwt,
+    @Deprecated('Use success instead') this.registrationCreated,
+    @Deprecated('Use success instead') this.verifyEmailSent,
+    this.success,
+  }) : super._();
 
   factory _$SaveUserSettingsResponseImpl.fromJson(Map<String, dynamic> json) => _$$SaveUserSettingsResponseImplFromJson(json);
 
   @override
-  @deprecated
+  @Deprecated('Use success instead')
   final String? jwt;
   @override
-  @deprecated
+  @Deprecated('Use success instead')
   final bool? registrationCreated;
   @override
-  @deprecated
+  @Deprecated('Use success instead')
   final bool? verifyEmailSent;
   @override
   final bool? success;
@@ -185,20 +190,24 @@ class _$SaveUserSettingsResponseImpl extends _SaveUserSettingsResponse {
 }
 
 abstract class _SaveUserSettingsResponse extends SaveUserSettingsResponse {
-  const factory _SaveUserSettingsResponse({@deprecated final String? jwt, @deprecated final bool? registrationCreated, @deprecated final bool? verifyEmailSent, final bool? success}) =
-      _$SaveUserSettingsResponseImpl;
+  const factory _SaveUserSettingsResponse({
+    @Deprecated('Use success instead') final String? jwt,
+    @Deprecated('Use success instead') final bool? registrationCreated,
+    @Deprecated('Use success instead') final bool? verifyEmailSent,
+    final bool? success,
+  }) = _$SaveUserSettingsResponseImpl;
   const _SaveUserSettingsResponse._() : super._();
 
   factory _SaveUserSettingsResponse.fromJson(Map<String, dynamic> json) = _$SaveUserSettingsResponseImpl.fromJson;
 
   @override
-  @deprecated
+  @Deprecated('Use success instead')
   String? get jwt;
   @override
-  @deprecated
+  @Deprecated('Use success instead')
   bool? get registrationCreated;
   @override
-  @deprecated
+  @Deprecated('Use success instead')
   bool? get verifyEmailSent;
   @override
   bool? get success;

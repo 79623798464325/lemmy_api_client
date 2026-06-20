@@ -31,8 +31,10 @@ class Search with _$Search implements LemmyApiQuery<SearchResults> {
 
   factory Search.fromJson(Map<String, dynamic> json) => _$SearchFromJson(json);
 
+  @override
   final path = '/search';
 
+  @override
   final httpMethod = HttpMethod.get;
 
   @override
@@ -64,8 +66,10 @@ class CreateSite with _$CreateSite implements LemmyApiQuery<SiteView> {
 
   factory CreateSite.fromJson(Map<String, dynamic> json) => _$CreateSiteFromJson(json);
 
+  @override
   final path = '/site';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -97,8 +101,10 @@ class EditSite with _$EditSite implements LemmyApiQuery<SiteView> {
 
   factory EditSite.fromJson(Map<String, dynamic> json) => _$EditSiteFromJson(json);
 
+  @override
   final path = '/site';
 
+  @override
   final httpMethod = HttpMethod.put;
 
   @override
@@ -114,8 +120,10 @@ class GetSite with _$GetSite implements LemmyApiQuery<FullSiteView> {
 
   factory GetSite.fromJson(Map<String, dynamic> json) => _$GetSiteFromJson(json);
 
+  @override
   final path = '/site';
 
+  @override
   final httpMethod = HttpMethod.get;
 
   @override
@@ -131,8 +139,10 @@ class LeaveAdmin with _$LeaveAdmin implements LemmyApiQuery<FullSiteView> {
 
   factory LeaveAdmin.fromJson(Map<String, dynamic> json) => _$LeaveAdminFromJson(json);
 
+  @override
   final path = '/user/leave_admin';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -148,8 +158,10 @@ class GetSiteConfig with _$GetSiteConfig implements LemmyApiQuery<String> {
 
   factory GetSiteConfig.fromJson(Map<String, dynamic> json) => _$GetSiteConfigFromJson(json);
 
+  @override
   final path = '/site/config';
 
+  @override
   final httpMethod = HttpMethod.get;
 
   @override
@@ -165,8 +177,10 @@ class SaveSiteConfig with _$SaveSiteConfig implements LemmyApiQuery<String> {
 
   factory SaveSiteConfig.fromJson(Map<String, dynamic> json) => _$SaveSiteConfigFromJson(json);
 
+  @override
   final path = '/site/config';
 
+  @override
   final httpMethod = HttpMethod.put;
 
   @override
@@ -182,8 +196,10 @@ class ResolveObject with _$ResolveObject implements LemmyApiQuery<ResolveObjectR
 
   factory ResolveObject.fromJson(Map<String, dynamic> json) => _$ResolveObjectFromJson(json);
 
+  @override
   final path = '/resolve_object';
 
+  @override
   final httpMethod = HttpMethod.get;
 
   @override
@@ -199,8 +215,10 @@ class GetUnreadRegistrationApplicationCount with _$GetUnreadRegistrationApplicat
 
   factory GetUnreadRegistrationApplicationCount.fromJson(Map<String, dynamic> json) => _$GetUnreadRegistrationApplicationCountFromJson(json);
 
+  @override
   final path = '/admin/registration_application/count';
 
+  @override
   final httpMethod = HttpMethod.get;
 
   @override
@@ -216,8 +234,10 @@ class ListRegistrationApplications with _$ListRegistrationApplications implement
 
   factory ListRegistrationApplications.fromJson(Map<String, dynamic> json) => _$ListRegistrationApplicationsFromJson(json);
 
+  @override
   final path = '/admin/registration_application/list';
 
+  @override
   final httpMethod = HttpMethod.get;
 
   @override
@@ -233,8 +253,10 @@ class ApproveRegistrationApplication with _$ApproveRegistrationApplication imple
 
   factory ApproveRegistrationApplication.fromJson(Map<String, dynamic> json) => _$ApproveRegistrationApplicationFromJson(json);
 
+  @override
   final path = '/admin/registration_application/approve';
 
+  @override
   final httpMethod = HttpMethod.put;
 
   @override

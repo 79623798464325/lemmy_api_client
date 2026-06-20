@@ -21,7 +21,7 @@ MarkPostAsReadResponse _$MarkPostAsReadResponseFromJson(Map<String, dynamic> jso
 
 /// @nodoc
 mixin _$MarkPostAsReadResponse {
-  @deprecated
+  @Deprecated('Use success instead')
   PostView? get postView => throw _privateConstructorUsedError;
   bool? get success => throw _privateConstructorUsedError;
 
@@ -38,7 +38,7 @@ mixin _$MarkPostAsReadResponse {
 abstract class $MarkPostAsReadResponseCopyWith<$Res> {
   factory $MarkPostAsReadResponseCopyWith(MarkPostAsReadResponse value, $Res Function(MarkPostAsReadResponse) then) = _$MarkPostAsReadResponseCopyWithImpl<$Res, MarkPostAsReadResponse>;
   @useResult
-  $Res call({@deprecated PostView? postView, bool? success});
+  $Res call({@Deprecated('Use success instead') PostView? postView, bool? success});
 
   $PostViewCopyWith<$Res>? get postView;
 }
@@ -94,7 +94,7 @@ abstract class _$$MarkPostAsReadResponseImplCopyWith<$Res> implements $MarkPostA
   factory _$$MarkPostAsReadResponseImplCopyWith(_$MarkPostAsReadResponseImpl value, $Res Function(_$MarkPostAsReadResponseImpl) then) = __$$MarkPostAsReadResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@deprecated PostView? postView, bool? success});
+  $Res call({@Deprecated('Use success instead') PostView? postView, bool? success});
 
   @override
   $PostViewCopyWith<$Res>? get postView;
@@ -130,12 +130,12 @@ class __$$MarkPostAsReadResponseImplCopyWithImpl<$Res> extends _$MarkPostAsReadR
 
 @modelSerde
 class _$MarkPostAsReadResponseImpl extends _MarkPostAsReadResponse {
-  const _$MarkPostAsReadResponseImpl({@deprecated this.postView, this.success}) : super._();
+  const _$MarkPostAsReadResponseImpl({@Deprecated('Use success instead') this.postView, this.success}) : super._();
 
   factory _$MarkPostAsReadResponseImpl.fromJson(Map<String, dynamic> json) => _$$MarkPostAsReadResponseImplFromJson(json);
 
   @override
-  @deprecated
+  @Deprecated('Use success instead')
   final PostView? postView;
   @override
   final bool? success;
@@ -172,13 +172,13 @@ class _$MarkPostAsReadResponseImpl extends _MarkPostAsReadResponse {
 }
 
 abstract class _MarkPostAsReadResponse extends MarkPostAsReadResponse {
-  const factory _MarkPostAsReadResponse({@deprecated final PostView? postView, final bool? success}) = _$MarkPostAsReadResponseImpl;
+  const factory _MarkPostAsReadResponse({@Deprecated('Use success instead') final PostView? postView, final bool? success}) = _$MarkPostAsReadResponseImpl;
   const _MarkPostAsReadResponse._() : super._();
 
   factory _MarkPostAsReadResponse.fromJson(Map<String, dynamic> json) = _$MarkPostAsReadResponseImpl.fromJson;
 
   @override
-  @deprecated
+  @Deprecated('Use success instead')
   PostView? get postView;
   @override
   bool? get success;

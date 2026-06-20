@@ -761,7 +761,7 @@ MarkCommentAsRead _$MarkCommentAsReadFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MarkCommentAsRead {
-  int get CommentReplyId => throw _privateConstructorUsedError;
+  int get commentReplyId => throw _privateConstructorUsedError;
   bool get read => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
@@ -778,7 +778,7 @@ mixin _$MarkCommentAsRead {
 abstract class $MarkCommentAsReadCopyWith<$Res> {
   factory $MarkCommentAsReadCopyWith(MarkCommentAsRead value, $Res Function(MarkCommentAsRead) then) = _$MarkCommentAsReadCopyWithImpl<$Res, MarkCommentAsRead>;
   @useResult
-  $Res call({int CommentReplyId, bool read, String auth});
+  $Res call({int commentReplyId, bool read, String auth});
 }
 
 /// @nodoc
@@ -794,13 +794,13 @@ class _$MarkCommentAsReadCopyWithImpl<$Res, $Val extends MarkCommentAsRead> impl
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? CommentReplyId = null, Object? read = null, Object? auth = null}) {
+  $Res call({Object? commentReplyId = null, Object? read = null, Object? auth = null}) {
     return _then(
       _value.copyWith(
-            CommentReplyId:
-                null == CommentReplyId
-                    ? _value.CommentReplyId
-                    : CommentReplyId // ignore: cast_nullable_to_non_nullable
+            commentReplyId:
+                null == commentReplyId
+                    ? _value.commentReplyId
+                    : commentReplyId // ignore: cast_nullable_to_non_nullable
                         as int,
             read:
                 null == read
@@ -823,7 +823,7 @@ abstract class _$$MarkCommentAsReadImplCopyWith<$Res> implements $MarkCommentAsR
   factory _$$MarkCommentAsReadImplCopyWith(_$MarkCommentAsReadImpl value, $Res Function(_$MarkCommentAsReadImpl) then) = __$$MarkCommentAsReadImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int CommentReplyId, bool read, String auth});
+  $Res call({int commentReplyId, bool read, String auth});
 }
 
 /// @nodoc
@@ -834,13 +834,13 @@ class __$$MarkCommentAsReadImplCopyWithImpl<$Res> extends _$MarkCommentAsReadCop
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? CommentReplyId = null, Object? read = null, Object? auth = null}) {
+  $Res call({Object? commentReplyId = null, Object? read = null, Object? auth = null}) {
     return _then(
       _$MarkCommentAsReadImpl(
-        CommentReplyId:
-            null == CommentReplyId
-                ? _value.CommentReplyId
-                : CommentReplyId // ignore: cast_nullable_to_non_nullable
+        commentReplyId:
+            null == commentReplyId
+                ? _value.commentReplyId
+                : commentReplyId // ignore: cast_nullable_to_non_nullable
                     as int,
         read:
             null == read
@@ -861,12 +861,12 @@ class __$$MarkCommentAsReadImplCopyWithImpl<$Res> extends _$MarkCommentAsReadCop
 
 @apiSerde
 class _$MarkCommentAsReadImpl extends _MarkCommentAsRead {
-  const _$MarkCommentAsReadImpl({required this.CommentReplyId, required this.read, required this.auth}) : super._();
+  const _$MarkCommentAsReadImpl({required this.commentReplyId, required this.read, required this.auth}) : super._();
 
   factory _$MarkCommentAsReadImpl.fromJson(Map<String, dynamic> json) => _$$MarkCommentAsReadImplFromJson(json);
 
   @override
-  final int CommentReplyId;
+  final int commentReplyId;
   @override
   final bool read;
   @override
@@ -874,7 +874,7 @@ class _$MarkCommentAsReadImpl extends _MarkCommentAsRead {
 
   @override
   String toString() {
-    return 'MarkCommentAsRead(CommentReplyId: $CommentReplyId, read: $read, auth: $auth)';
+    return 'MarkCommentAsRead(commentReplyId: $commentReplyId, read: $read, auth: $auth)';
   }
 
   @override
@@ -882,14 +882,14 @@ class _$MarkCommentAsReadImpl extends _MarkCommentAsRead {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MarkCommentAsReadImpl &&
-            (identical(other.CommentReplyId, CommentReplyId) || other.CommentReplyId == CommentReplyId) &&
+            (identical(other.commentReplyId, commentReplyId) || other.commentReplyId == commentReplyId) &&
             (identical(other.read, read) || other.read == read) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, CommentReplyId, read, auth);
+  int get hashCode => Object.hash(runtimeType, commentReplyId, read, auth);
 
   /// Create a copy of MarkCommentAsRead
   /// with the given fields replaced by the non-null parameter values.
@@ -905,13 +905,13 @@ class _$MarkCommentAsReadImpl extends _MarkCommentAsRead {
 }
 
 abstract class _MarkCommentAsRead extends MarkCommentAsRead {
-  const factory _MarkCommentAsRead({required final int CommentReplyId, required final bool read, required final String auth}) = _$MarkCommentAsReadImpl;
+  const factory _MarkCommentAsRead({required final int commentReplyId, required final bool read, required final String auth}) = _$MarkCommentAsReadImpl;
   const _MarkCommentAsRead._() : super._();
 
   factory _MarkCommentAsRead.fromJson(Map<String, dynamic> json) = _$MarkCommentAsReadImpl.fromJson;
 
   @override
-  int get CommentReplyId;
+  int get commentReplyId;
   @override
   bool get read;
   @override

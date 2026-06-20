@@ -13,5 +13,6 @@ enum SearchType {
 
   String toJson() => value;
 
+  @override
   String toString() => value;
 }

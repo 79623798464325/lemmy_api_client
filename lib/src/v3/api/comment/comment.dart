@@ -16,8 +16,10 @@ class CreateComment with _$CreateComment implements LemmyApiQuery<FullCommentVie
   const CreateComment._();
   factory CreateComment.fromJson(Map<String, dynamic> json) => _$CreateCommentFromJson(json);
 
+  @override
   final path = '/comment';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -32,8 +34,10 @@ class EditComment with _$EditComment implements LemmyApiQuery<FullCommentView> {
   const EditComment._();
   factory EditComment.fromJson(Map<String, dynamic> json) => _$EditCommentFromJson(json);
 
+  @override
   final path = '/comment';
 
+  @override
   final httpMethod = HttpMethod.put;
 
   @override
@@ -48,8 +52,10 @@ class DeleteComment with _$DeleteComment implements LemmyApiQuery<FullCommentVie
   const DeleteComment._();
   factory DeleteComment.fromJson(Map<String, dynamic> json) => _$DeleteCommentFromJson(json);
 
+  @override
   final path = '/comment/delete';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -64,8 +70,10 @@ class RemoveComment with _$RemoveComment implements LemmyApiQuery<FullCommentVie
   const RemoveComment._();
   factory RemoveComment.fromJson(Map<String, dynamic> json) => _$RemoveCommentFromJson(json);
 
+  @override
   final path = '/comment/remove';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -75,13 +83,15 @@ class RemoveComment with _$RemoveComment implements LemmyApiQuery<FullCommentVie
 @freezed
 class MarkCommentAsRead with _$MarkCommentAsRead implements LemmyApiQuery<CommentReplyView> {
   @apiSerde
-  const factory MarkCommentAsRead({required int CommentReplyId, required bool read, required String auth}) = _MarkCommentAsRead;
+  const factory MarkCommentAsRead({required int commentReplyId, required bool read, required String auth}) = _MarkCommentAsRead;
 
   const MarkCommentAsRead._();
   factory MarkCommentAsRead.fromJson(Map<String, dynamic> json) => _$MarkCommentAsReadFromJson(json);
 
+  @override
   final path = '/comment/mark_as_read';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -96,8 +106,10 @@ class SaveComment with _$SaveComment implements LemmyApiQuery<FullCommentView> {
   const SaveComment._();
   factory SaveComment.fromJson(Map<String, dynamic> json) => _$SaveCommentFromJson(json);
 
+  @override
   final path = '/comment/save';
 
+  @override
   final httpMethod = HttpMethod.put;
 
   @override
@@ -112,8 +124,10 @@ class CreateCommentLike with _$CreateCommentLike implements LemmyApiQuery<FullCo
   const CreateCommentLike._();
   factory CreateCommentLike.fromJson(Map<String, dynamic> json) => _$CreateCommentLikeFromJson(json);
 
+  @override
   final path = '/comment/like';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -128,8 +142,10 @@ class GetComment with _$GetComment implements LemmyApiQuery<FullCommentView> {
   const GetComment._();
   factory GetComment.fromJson(Map<String, dynamic> json) => _$GetCommentFromJson(json);
 
+  @override
   final path = '/comment';
 
+  @override
   final httpMethod = HttpMethod.get;
 
   @override
@@ -161,8 +177,10 @@ class GetComments with _$GetComments implements LemmyApiQuery<GetCommentsRespons
   const GetComments._();
   factory GetComments.fromJson(Map<String, dynamic> json) => _$GetCommentsFromJson(json);
 
+  @override
   final path = '/comment/list';
 
+  @override
   final httpMethod = HttpMethod.get;
 
   @override
@@ -177,8 +195,10 @@ class CreateCommentReport with _$CreateCommentReport implements LemmyApiQuery<Co
   const CreateCommentReport._();
   factory CreateCommentReport.fromJson(Map<String, dynamic> json) => _$CreateCommentReportFromJson(json);
 
+  @override
   final path = '/comment/report';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -193,8 +213,10 @@ class ResolveCommentReport with _$ResolveCommentReport implements LemmyApiQuery<
   const ResolveCommentReport._();
   factory ResolveCommentReport.fromJson(Map<String, dynamic> json) => _$ResolveCommentReportFromJson(json);
 
+  @override
   final path = '/comment/report/resolve';
 
+  @override
   final httpMethod = HttpMethod.put;
 
   @override
@@ -209,8 +231,10 @@ class ListCommentReports with _$ListCommentReports implements LemmyApiQuery<List
   const ListCommentReports._();
   factory ListCommentReports.fromJson(Map<String, dynamic> json) => _$ListCommentReportsFromJson(json);
 
+  @override
   final path = '/comment/report/list';
 
+  @override
   final httpMethod = HttpMethod.get;
 
   @override
@@ -234,8 +258,10 @@ class DistinguishComment with _$DistinguishComment implements LemmyApiQuery<Full
   const DistinguishComment._();
   factory DistinguishComment.fromJson(Map<String, dynamic> json) => _$DistinguishCommentFromJson(json);
 
+  @override
   final path = '/comment/distinguish';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override

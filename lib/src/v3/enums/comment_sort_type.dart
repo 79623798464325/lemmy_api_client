@@ -14,5 +14,6 @@ enum CommentSortType {
 
   String toJson() => value;
 
+  @override
   String toString() => value;
 }

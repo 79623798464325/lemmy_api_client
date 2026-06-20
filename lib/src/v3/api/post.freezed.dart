@@ -473,7 +473,7 @@ mixin _$GetPosts {
   int? get communityId => throw _privateConstructorUsedError; // v0.18.0
   String? get communityName => throw _privateConstructorUsedError; // v0.18.0
   bool? get savedOnly => throw _privateConstructorUsedError; // v0.18.0
-  @deprecated
+  @Deprecated('Deprecated in v0.19.0')
   bool? get moderatorView => throw _privateConstructorUsedError; // v0.18.3 [deprecated in v0.19.0]
   String? get auth => throw _privateConstructorUsedError;
   bool? get likedOnly => throw _privateConstructorUsedError; // v0.19.0 (optional)
@@ -504,7 +504,7 @@ abstract class $GetPostsCopyWith<$Res> {
     int? communityId,
     String? communityName,
     bool? savedOnly,
-    @deprecated bool? moderatorView,
+    @Deprecated('Deprecated in v0.19.0') bool? moderatorView,
     String? auth,
     bool? likedOnly,
     bool? dislikedOnly,
@@ -641,7 +641,7 @@ abstract class _$$GetPostsImplCopyWith<$Res> implements $GetPostsCopyWith<$Res> 
     int? communityId,
     String? communityName,
     bool? savedOnly,
-    @deprecated bool? moderatorView,
+    @Deprecated('Deprecated in v0.19.0') bool? moderatorView,
     String? auth,
     bool? likedOnly,
     bool? dislikedOnly,
@@ -771,7 +771,7 @@ class _$GetPostsImpl extends _GetPosts {
     this.communityId,
     this.communityName,
     this.savedOnly,
-    @deprecated this.moderatorView,
+    @Deprecated('Deprecated in v0.19.0') this.moderatorView,
     this.auth,
     this.likedOnly,
     this.dislikedOnly,
@@ -806,7 +806,7 @@ class _$GetPostsImpl extends _GetPosts {
   final bool? savedOnly;
   // v0.18.0
   @override
-  @deprecated
+  @Deprecated('Deprecated in v0.19.0')
   final bool? moderatorView;
   // v0.18.3 [deprecated in v0.19.0]
   @override
@@ -883,7 +883,7 @@ abstract class _GetPosts extends GetPosts {
     final int? communityId,
     final String? communityName,
     final bool? savedOnly,
-    @deprecated final bool? moderatorView,
+    @Deprecated('Deprecated in v0.19.0') final bool? moderatorView,
     final String? auth,
     final bool? likedOnly,
     final bool? dislikedOnly,
@@ -912,7 +912,7 @@ abstract class _GetPosts extends GetPosts {
   @override
   bool? get savedOnly; // v0.18.0
   @override
-  @deprecated
+  @Deprecated('Deprecated in v0.19.0')
   bool? get moderatorView; // v0.18.3 [deprecated in v0.19.0]
   @override
   String? get auth;
@@ -2940,7 +2940,7 @@ MarkPostAsRead _$MarkPostAsReadFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MarkPostAsRead {
-  @deprecated
+  @Deprecated('Deprecated in v0.19.4')
   int? get postId => throw _privateConstructorUsedError; // v0.18.0 (required), v0.19.0 (optional) [deprecated in v0.19.4]
   List<int>? get postIds => throw _privateConstructorUsedError; // v0.19.0 (optional)
   bool get read => throw _privateConstructorUsedError; // v0.18.0
@@ -2959,7 +2959,7 @@ mixin _$MarkPostAsRead {
 abstract class $MarkPostAsReadCopyWith<$Res> {
   factory $MarkPostAsReadCopyWith(MarkPostAsRead value, $Res Function(MarkPostAsRead) then) = _$MarkPostAsReadCopyWithImpl<$Res, MarkPostAsRead>;
   @useResult
-  $Res call({@deprecated int? postId, List<int>? postIds, bool read, String? auth});
+  $Res call({@Deprecated('Deprecated in v0.19.4') int? postId, List<int>? postIds, bool read, String? auth});
 }
 
 /// @nodoc
@@ -3009,7 +3009,7 @@ abstract class _$$MarkPostAsReadImplCopyWith<$Res> implements $MarkPostAsReadCop
   factory _$$MarkPostAsReadImplCopyWith(_$MarkPostAsReadImpl value, $Res Function(_$MarkPostAsReadImpl) then) = __$$MarkPostAsReadImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@deprecated int? postId, List<int>? postIds, bool read, String? auth});
+  $Res call({@Deprecated('Deprecated in v0.19.4') int? postId, List<int>? postIds, bool read, String? auth});
 }
 
 /// @nodoc
@@ -3052,12 +3052,12 @@ class __$$MarkPostAsReadImplCopyWithImpl<$Res> extends _$MarkPostAsReadCopyWithI
 
 @apiSerde
 class _$MarkPostAsReadImpl extends _MarkPostAsRead {
-  const _$MarkPostAsReadImpl({@deprecated this.postId, final List<int>? postIds, required this.read, this.auth}) : _postIds = postIds, super._();
+  const _$MarkPostAsReadImpl({@Deprecated('Deprecated in v0.19.4') this.postId, final List<int>? postIds, required this.read, this.auth}) : _postIds = postIds, super._();
 
   factory _$MarkPostAsReadImpl.fromJson(Map<String, dynamic> json) => _$$MarkPostAsReadImplFromJson(json);
 
   @override
-  @deprecated
+  @Deprecated('Deprecated in v0.19.4')
   final int? postId;
   // v0.18.0 (required), v0.19.0 (optional) [deprecated in v0.19.4]
   final List<int>? _postIds;
@@ -3112,13 +3112,13 @@ class _$MarkPostAsReadImpl extends _MarkPostAsRead {
 }
 
 abstract class _MarkPostAsRead extends MarkPostAsRead {
-  const factory _MarkPostAsRead({@deprecated final int? postId, final List<int>? postIds, required final bool read, final String? auth}) = _$MarkPostAsReadImpl;
+  const factory _MarkPostAsRead({@Deprecated('Deprecated in v0.19.4') final int? postId, final List<int>? postIds, required final bool read, final String? auth}) = _$MarkPostAsReadImpl;
   const _MarkPostAsRead._() : super._();
 
   factory _MarkPostAsRead.fromJson(Map<String, dynamic> json) = _$MarkPostAsReadImpl.fromJson;
 
   @override
-  @deprecated
+  @Deprecated('Deprecated in v0.19.4')
   int? get postId; // v0.18.0 (required), v0.19.0 (optional) [deprecated in v0.19.4]
   @override
   List<int>? get postIds; // v0.19.0 (optional)

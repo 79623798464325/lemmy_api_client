@@ -1,7 +1,7 @@
 #!/usr/bin/env dart
 
-/// Script to generate a JWT token for V4 API testing.
-/// Usage: dart run tool/get_v4_jwt.dart
+// Script to generate a JWT token for V4 API testing.
+// Usage: dart run tool/get_v4_jwt.dart
 import 'dart:convert';
 import 'dart:io';
 

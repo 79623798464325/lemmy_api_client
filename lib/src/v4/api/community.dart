@@ -5,7 +5,6 @@ import '../../shared/utils/serde.dart';
 import '../enums/enums.dart';
 import '../models/api.dart';
 import '../models/source.dart';
-import '../models/views.dart';
 import 'account.dart';
 
 part 'community.freezed.dart';

@@ -10,7 +10,7 @@ part 'mark_post_as_read_response.g.dart';
 class MarkPostAsReadResponse with _$MarkPostAsReadResponse {
   @modelSerde
   const factory MarkPostAsReadResponse({
-    @deprecated PostView? postView,
+    @Deprecated('Use success instead') PostView? postView,
     bool? success, // Only available in lemmy v0.19.0 and above
   }) = _MarkPostAsReadResponse;
 

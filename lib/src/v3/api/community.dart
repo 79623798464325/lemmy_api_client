@@ -21,8 +21,10 @@ class GetCommunity with _$GetCommunity implements LemmyApiQuery<FullCommunityVie
 
   factory GetCommunity.fromJson(Map<String, dynamic> json) => _$GetCommunityFromJson(json);
 
+  @override
   final path = '/community';
 
+  @override
   final httpMethod = HttpMethod.get;
 
   @override
@@ -38,8 +40,10 @@ class CreateCommunity with _$CreateCommunity implements LemmyApiQuery<CommunityV
 
   factory CreateCommunity.fromJson(Map<String, dynamic> json) => _$CreateCommunityFromJson(json);
 
+  @override
   final path = '/community';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -55,8 +59,10 @@ class ListCommunities with _$ListCommunities implements LemmyApiQuery<List<Commu
 
   factory ListCommunities.fromJson(Map<String, dynamic> json) => _$ListCommunitiesFromJson(json);
 
+  @override
   final path = '/community/list';
 
+  @override
   final httpMethod = HttpMethod.get;
 
   @override
@@ -72,8 +78,10 @@ class BanFromCommunity with _$BanFromCommunity implements LemmyApiQuery<BannedCo
 
   factory BanFromCommunity.fromJson(Map<String, dynamic> json) => _$BanFromCommunityFromJson(json);
 
+  @override
   final path = '/community/ban_user';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -89,8 +97,10 @@ class AddModToCommunity with _$AddModToCommunity implements LemmyApiQuery<List<C
 
   factory AddModToCommunity.fromJson(Map<String, dynamic> json) => _$AddModToCommunityFromJson(json);
 
+  @override
   final path = '/community/mod';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -106,8 +116,10 @@ class EditCommunity with _$EditCommunity implements LemmyApiQuery<CommunityView>
 
   factory EditCommunity.fromJson(Map<String, dynamic> json) => _$EditCommunityFromJson(json);
 
+  @override
   final path = '/community';
 
+  @override
   final httpMethod = HttpMethod.put;
 
   @override
@@ -123,8 +135,10 @@ class DeleteCommunity with _$DeleteCommunity implements LemmyApiQuery<CommunityV
 
   factory DeleteCommunity.fromJson(Map<String, dynamic> json) => _$DeleteCommunityFromJson(json);
 
+  @override
   final path = '/community/delete';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -140,8 +154,10 @@ class RemoveCommunity with _$RemoveCommunity implements LemmyApiQuery<CommunityV
 
   factory RemoveCommunity.fromJson(Map<String, dynamic> json) => _$RemoveCommunityFromJson(json);
 
+  @override
   final path = '/community/remove';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -157,8 +173,10 @@ class FollowCommunity with _$FollowCommunity implements LemmyApiQuery<CommunityV
 
   factory FollowCommunity.fromJson(Map<String, dynamic> json) => _$FollowCommunityFromJson(json);
 
+  @override
   final path = '/community/follow';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -174,8 +192,10 @@ class TransferCommunity with _$TransferCommunity implements LemmyApiQuery<FullCo
 
   factory TransferCommunity.fromJson(Map<String, dynamic> json) => _$TransferCommunityFromJson(json);
 
+  @override
   final path = '/community/transfer';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -191,8 +211,10 @@ class BlockCommunity with _$BlockCommunity implements LemmyApiQuery<BlockedCommu
 
   factory BlockCommunity.fromJson(Map<String, dynamic> json) => _$BlockCommunityFromJson(json);
 
+  @override
   final path = '/community/block';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -217,8 +239,10 @@ class HideCommunity with _$HideCommunity implements LemmyApiQuery<SuccessRespons
   const HideCommunity._();
   factory HideCommunity.fromJson(Map<String, dynamic> json) => _$HideCommunityFromJson(json);
 
+  @override
   final path = '/community/hide';
 
+  @override
   final httpMethod = HttpMethod.put;
 
   @override

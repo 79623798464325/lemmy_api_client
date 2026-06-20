@@ -26,8 +26,10 @@ class BlockInstance with _$BlockInstance implements LemmyApiQuery<BlockInstanceR
   const BlockInstance._();
   factory BlockInstance.fromJson(Map<String, dynamic> json) => _$BlockInstanceFromJson(json);
 
+  @override
   final path = '/site/block';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override

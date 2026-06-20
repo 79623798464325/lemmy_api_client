@@ -4,7 +4,6 @@ import '../../shared/query.dart';
 import '../../shared/utils/serde.dart';
 import '../enums/enums.dart';
 import '../models/api.dart';
-import 'account.dart';
 
 part 'comment.freezed.dart';
 part 'comment.g.dart';

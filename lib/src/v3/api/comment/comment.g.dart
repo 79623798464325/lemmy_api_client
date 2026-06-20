@@ -48,9 +48,9 @@ Map<String, dynamic> _$$RemoveCommentImplToJson(_$RemoveCommentImpl instance) =>
 };
 
 _$MarkCommentAsReadImpl _$$MarkCommentAsReadImplFromJson(Map<String, dynamic> json) =>
-    _$MarkCommentAsReadImpl(CommentReplyId: (json['comment_reply_id'] as num).toInt(), read: json['read'] as bool, auth: json['auth'] as String);
+    _$MarkCommentAsReadImpl(commentReplyId: (json['comment_reply_id'] as num).toInt(), read: json['read'] as bool, auth: json['auth'] as String);
 
-Map<String, dynamic> _$$MarkCommentAsReadImplToJson(_$MarkCommentAsReadImpl instance) => <String, dynamic>{'comment_reply_id': instance.CommentReplyId, 'read': instance.read, 'auth': instance.auth};
+Map<String, dynamic> _$$MarkCommentAsReadImplToJson(_$MarkCommentAsReadImpl instance) => <String, dynamic>{'comment_reply_id': instance.commentReplyId, 'read': instance.read, 'auth': instance.auth};
 
 _$SaveCommentImpl _$$SaveCommentImplFromJson(Map<String, dynamic> json) => _$SaveCommentImpl(commentId: (json['comment_id'] as num).toInt(), save: json['save'] as bool, auth: json['auth'] as String);
 

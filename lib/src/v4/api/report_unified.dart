@@ -4,7 +4,6 @@ import '../../shared/query.dart';
 import '../../shared/utils/serde.dart';
 import '../enums/enums.dart';
 import '../models/api.dart';
-import '../models/views.dart';
 import '../models/source.dart';
 
 part 'report_unified.freezed.dart';

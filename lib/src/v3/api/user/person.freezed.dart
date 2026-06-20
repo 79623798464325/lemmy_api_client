@@ -1392,10 +1392,10 @@ mixin _$SaveUserSettings {
   bool? get botAccount => throw _privateConstructorUsedError; // v0.18.0
   bool? get showBotAccounts => throw _privateConstructorUsedError; // v0.18.0
   bool? get showReadPosts => throw _privateConstructorUsedError; // v0.18.0
-  @deprecated
+  @Deprecated('Deprecated in v0.19.0')
   bool? get showNewPostNotifs => throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
   List<int>? get discussionLanguages => throw _privateConstructorUsedError; // v0.18.0
-  @deprecated
+  @Deprecated('Deprecated in v0.19.0')
   bool? get generateTotp2fa => throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
   String? get auth => throw _privateConstructorUsedError;
   bool? get openLinksInNewTab => throw _privateConstructorUsedError; // v0.18.1
@@ -1441,9 +1441,9 @@ abstract class $SaveUserSettingsCopyWith<$Res> {
     bool? botAccount,
     bool? showBotAccounts,
     bool? showReadPosts,
-    @deprecated bool? showNewPostNotifs,
+    @Deprecated('Deprecated in v0.19.0') bool? showNewPostNotifs,
     List<int>? discussionLanguages,
-    @deprecated bool? generateTotp2fa,
+    @Deprecated('Deprecated in v0.19.0') bool? generateTotp2fa,
     String? auth,
     bool? openLinksInNewTab,
     bool? infiniteScrollEnabled,
@@ -1697,9 +1697,9 @@ abstract class _$$SaveUserSettingsImplCopyWith<$Res> implements $SaveUserSetting
     bool? botAccount,
     bool? showBotAccounts,
     bool? showReadPosts,
-    @deprecated bool? showNewPostNotifs,
+    @Deprecated('Deprecated in v0.19.0') bool? showNewPostNotifs,
     List<int>? discussionLanguages,
-    @deprecated bool? generateTotp2fa,
+    @Deprecated('Deprecated in v0.19.0') bool? generateTotp2fa,
     String? auth,
     bool? openLinksInNewTab,
     bool? infiniteScrollEnabled,
@@ -1946,9 +1946,9 @@ class _$SaveUserSettingsImpl extends _SaveUserSettings {
     this.botAccount,
     this.showBotAccounts,
     this.showReadPosts,
-    @deprecated this.showNewPostNotifs,
+    @Deprecated('Deprecated in v0.19.0') this.showNewPostNotifs,
     final List<int>? discussionLanguages,
-    @deprecated this.generateTotp2fa,
+    @Deprecated('Deprecated in v0.19.0') this.generateTotp2fa,
     this.auth,
     this.openLinksInNewTab,
     this.infiniteScrollEnabled,
@@ -2020,7 +2020,7 @@ class _$SaveUserSettingsImpl extends _SaveUserSettings {
   final bool? showReadPosts;
   // v0.18.0
   @override
-  @deprecated
+  @Deprecated('Deprecated in v0.19.0')
   final bool? showNewPostNotifs;
   // v0.18.0 [deprecated in v0.19.0]
   final List<int>? _discussionLanguages;
@@ -2036,7 +2036,7 @@ class _$SaveUserSettingsImpl extends _SaveUserSettings {
 
   // v0.18.0
   @override
-  @deprecated
+  @Deprecated('Deprecated in v0.19.0')
   final bool? generateTotp2fa;
   // v0.18.0 [deprecated in v0.19.0]
   @override
@@ -2186,9 +2186,9 @@ abstract class _SaveUserSettings extends SaveUserSettings {
     final bool? botAccount,
     final bool? showBotAccounts,
     final bool? showReadPosts,
-    @deprecated final bool? showNewPostNotifs,
+    @Deprecated('Deprecated in v0.19.0') final bool? showNewPostNotifs,
     final List<int>? discussionLanguages,
-    @deprecated final bool? generateTotp2fa,
+    @Deprecated('Deprecated in v0.19.0') final bool? generateTotp2fa,
     final String? auth,
     final bool? openLinksInNewTab,
     final bool? infiniteScrollEnabled,
@@ -2242,12 +2242,12 @@ abstract class _SaveUserSettings extends SaveUserSettings {
   @override
   bool? get showReadPosts; // v0.18.0
   @override
-  @deprecated
+  @Deprecated('Deprecated in v0.19.0')
   bool? get showNewPostNotifs; // v0.18.0 [deprecated in v0.19.0]
   @override
   List<int>? get discussionLanguages; // v0.18.0
   @override
-  @deprecated
+  @Deprecated('Deprecated in v0.19.0')
   bool? get generateTotp2fa; // v0.18.0 [deprecated in v0.19.0]
   @override
   String? get auth;

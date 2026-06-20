@@ -1,6 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../utils/force_utc_datetime.dart';
 import '../../../utils/serde.dart';
 
 part 'private_message_report.freezed.dart';

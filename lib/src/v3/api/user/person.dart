@@ -4,13 +4,10 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:lemmy_api_client2/src/v3/enums/enums.dart';
 
 import '../../../utils/serde.dart';
-import '../../models/api.dart';
-import '../../models/jwt.dart';
 import '../../models/models.dart';
 import '../../models/user/success_response.dart';
 import '../../models/user/update_totp_response.dart';
 import '../../models/user/generate_totp_secret_response.dart';
-import '../../models/views.dart';
 import '../../query.dart';
 import '../../views/views.dart';
 
@@ -32,8 +29,10 @@ class Login with _$Login implements LemmyApiQuery<LoginResponse> {
   const Login._();
   factory Login.fromJson(Map<String, dynamic> json) => _$LoginFromJson(json);
 
+  @override
   final path = '/user/login';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -53,8 +52,10 @@ class Logout with _$Logout implements LemmyApiQuery<SuccessResponse> {
   const Logout._();
   factory Logout.fromJson(Map<String, dynamic> json) => _$LogoutFromJson(json);
 
+  @override
   final path = '/user/logout';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -76,8 +77,10 @@ class ExportSettings with _$ExportSettings implements LemmyApiQuery<dynamic>, Le
   const ExportSettings._();
   factory ExportSettings.fromJson(Map<String, dynamic> json) => _$ExportSettingsFromJson(json);
 
+  @override
   final path = '/user/export_settings';
 
+  @override
   final httpMethod = HttpMethod.get;
 
   @override
@@ -97,8 +100,10 @@ class ImportSettings with _$ImportSettings implements LemmyApiQuery<SuccessRespo
   const ImportSettings._();
   factory ImportSettings.fromJson(Map<String, dynamic> json) => _$ImportSettingsFromJson(json);
 
+  @override
   final path = '/user/import_settings';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -121,8 +126,10 @@ class ValidateAuth with _$ValidateAuth implements LemmyApiQuery<SuccessResponse>
   const ValidateAuth._();
   factory ValidateAuth.fromJson(Map<String, dynamic> json) => _$ValidateAuthFromJson(json);
 
+  @override
   final path = '/user/validate_auth';
 
+  @override
   final httpMethod = HttpMethod.get;
 
   @override
@@ -146,8 +153,10 @@ class GenerateTotpSecret with _$GenerateTotpSecret implements LemmyApiQuery<Gene
   const GenerateTotpSecret._();
   factory GenerateTotpSecret.fromJson(Map<String, dynamic> json) => _$GenerateTotpSecretFromJson(json);
 
+  @override
   final path = '/user/totp/generate';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -175,8 +184,10 @@ class UpdateTotp with _$UpdateTotp implements LemmyApiQuery<UpdateTotpResponse>,
   const UpdateTotp._();
   factory UpdateTotp.fromJson(Map<String, dynamic> json) => _$UpdateTotpFromJson(json);
 
+  @override
   final path = '/user/totp/update';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -201,8 +212,10 @@ class Register with _$Register implements LemmyApiQuery<Jwt> {
   const Register._();
   factory Register.fromJson(Map<String, dynamic> json) => _$RegisterFromJson(json);
 
+  @override
   final path = '/user/register';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -217,8 +230,10 @@ class GetCaptcha with _$GetCaptcha implements LemmyApiQuery<Captcha> {
   const GetCaptcha._();
   factory GetCaptcha.fromJson(Map<String, dynamic> json) => _$GetCaptchaFromJson(json);
 
+  @override
   final path = '/user/get_captcha';
 
+  @override
   final httpMethod = HttpMethod.get;
 
   @override
@@ -250,9 +265,9 @@ class SaveUserSettings with _$SaveUserSettings implements LemmyApiQuery<SaveUser
     bool? botAccount, // v0.18.0
     bool? showBotAccounts, // v0.18.0
     bool? showReadPosts, // v0.18.0
-    @deprecated bool? showNewPostNotifs, // v0.18.0 [deprecated in v0.19.0]
+    @Deprecated('Deprecated in v0.19.0') bool? showNewPostNotifs, // v0.18.0 [deprecated in v0.19.0]
     List<int>? discussionLanguages, // v0.18.0
-    @deprecated bool? generateTotp2fa, // v0.18.0 [deprecated in v0.19.0]
+    @Deprecated('Deprecated in v0.19.0') bool? generateTotp2fa, // v0.18.0 [deprecated in v0.19.0]
     String? auth,
     bool? openLinksInNewTab, // v0.18.1
     bool? infiniteScrollEnabled, // v0.19.0 (optional)
@@ -269,8 +284,10 @@ class SaveUserSettings with _$SaveUserSettings implements LemmyApiQuery<SaveUser
   const SaveUserSettings._();
   factory SaveUserSettings.fromJson(Map<String, dynamic> json) => _$SaveUserSettingsFromJson(json);
 
+  @override
   final path = '/user/save_user_settings';
 
+  @override
   final httpMethod = HttpMethod.put;
 
   @override
@@ -285,8 +302,10 @@ class ChangePassword with _$ChangePassword implements LemmyApiQuery<Jwt> {
   const ChangePassword._();
   factory ChangePassword.fromJson(Map<String, dynamic> json) => _$ChangePasswordFromJson(json);
 
+  @override
   final path = '/user/change_password';
 
+  @override
   final httpMethod = HttpMethod.put;
 
   @override
@@ -301,8 +320,10 @@ class GetPersonDetails with _$GetPersonDetails implements LemmyApiQuery<FullPers
   const GetPersonDetails._();
   factory GetPersonDetails.fromJson(Map<String, dynamic> json) => _$GetPersonDetailsFromJson(json);
 
+  @override
   final path = '/user';
 
+  @override
   final httpMethod = HttpMethod.get;
 
   @override
@@ -317,8 +338,10 @@ class MarkAllAsRead with _$MarkAllAsRead implements LemmyApiQuery<List<CommentVi
   const MarkAllAsRead._();
   factory MarkAllAsRead.fromJson(Map<String, dynamic> json) => _$MarkAllAsReadFromJson(json);
 
+  @override
   final path = '/user/mark_all_as_read';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -333,8 +356,10 @@ class AddAdmin with _$AddAdmin implements LemmyApiQuery<List<PersonViewSafe>> {
   const AddAdmin._();
   factory AddAdmin.fromJson(Map<String, dynamic> json) => _$AddAdminFromJson(json);
 
+  @override
   final path = '/admin/add';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -349,8 +374,10 @@ class BanPerson with _$BanPerson implements LemmyApiQuery<BannedPerson> {
   const BanPerson._();
   factory BanPerson.fromJson(Map<String, dynamic> json) => _$BanPersonFromJson(json);
 
+  @override
   final path = '/user/ban';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -365,8 +392,10 @@ class GetReplies with _$GetReplies implements LemmyApiQuery<List<CommentReplyVie
   const GetReplies._();
   factory GetReplies.fromJson(Map<String, dynamic> json) => _$GetRepliesFromJson(json);
 
+  @override
   final path = '/user/replies';
 
+  @override
   final httpMethod = HttpMethod.get;
 
   @override
@@ -381,8 +410,10 @@ class GetPersonMentions with _$GetPersonMentions implements LemmyApiQuery<List<P
   const GetPersonMentions._();
   factory GetPersonMentions.fromJson(Map<String, dynamic> json) => _$GetPersonMentionsFromJson(json);
 
+  @override
   final path = '/user/mention';
 
+  @override
   final httpMethod = HttpMethod.get;
 
   @override
@@ -397,8 +428,10 @@ class MarkPersonMentionAsRead with _$MarkPersonMentionAsRead implements LemmyApi
   const MarkPersonMentionAsRead._();
   factory MarkPersonMentionAsRead.fromJson(Map<String, dynamic> json) => _$MarkPersonMentionAsReadFromJson(json);
 
+  @override
   final path = '/user/mention/mark_as_read';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -413,8 +446,10 @@ class DeleteAccount with _$DeleteAccount implements LemmyApiQuery<void> {
   const DeleteAccount._();
   factory DeleteAccount.fromJson(Map<String, dynamic> json) => _$DeleteAccountFromJson(json);
 
+  @override
   final path = '/user/delete_account';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -429,8 +464,10 @@ class PasswordReset with _$PasswordReset implements LemmyApiQuery<Null> {
   const PasswordReset._();
   factory PasswordReset.fromJson(Map<String, dynamic> json) => _$PasswordResetFromJson(json);
 
+  @override
   final path = '/user/password_reset';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -445,8 +482,10 @@ class PasswordChange with _$PasswordChange implements LemmyApiQuery<Jwt> {
   const PasswordChange._();
   factory PasswordChange.fromJson(Map<String, dynamic> json) => _$PasswordChangeFromJson(json);
 
+  @override
   final path = '/user/password_change';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -462,8 +501,10 @@ class BlockPerson with _$BlockPerson implements LemmyApiQuery<BlockedPerson> {
 
   factory BlockPerson.fromJson(Map<String, dynamic> json) => _$BlockPersonFromJson(json);
 
+  @override
   final path = '/user/block';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -479,8 +520,10 @@ class GetUnreadCount with _$GetUnreadCount implements LemmyApiQuery<UnreadCount>
 
   factory GetUnreadCount.fromJson(Map<String, dynamic> json) => _$GetUnreadCountFromJson(json);
 
+  @override
   final path = '/user/unread_count';
 
+  @override
   final httpMethod = HttpMethod.get;
 
   @override
@@ -495,8 +538,10 @@ class GetReportCount with _$GetReportCount implements LemmyApiQuery<ReportCount>
   const GetReportCount._();
   factory GetReportCount.fromJson(Map<String, dynamic> json) => _$GetReportCountFromJson(json);
 
+  @override
   final path = '/user/report_count';
 
+  @override
   final httpMethod = HttpMethod.get;
 
   @override
@@ -511,8 +556,10 @@ class GetBannedPersons with _$GetBannedPersons implements LemmyApiQuery<List<Per
   const GetBannedPersons._();
   factory GetBannedPersons.fromJson(Map<String, dynamic> json) => _$GetBannedPersonsFromJson(json);
 
+  @override
   final path = '/user/banned';
 
+  @override
   final httpMethod = HttpMethod.get;
 
   @override
@@ -527,8 +574,10 @@ class VerifyEmail with _$VerifyEmail implements LemmyApiQuery<void> {
   const VerifyEmail._();
   factory VerifyEmail.fromJson(Map<String, dynamic> json) => _$VerifyEmailFromJson(json);
 
+  @override
   final path = '/user/verify_email';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override

@@ -19,8 +19,10 @@ class GetPost with _$GetPost implements LemmyApiQuery<FullPostView> {
   const GetPost._();
   factory GetPost.fromJson(Map<String, dynamic> json) => _$GetPostFromJson(json);
 
+  @override
   final path = '/post';
 
+  @override
   final httpMethod = HttpMethod.get;
 
   @override
@@ -36,8 +38,10 @@ class CreatePost with _$CreatePost implements LemmyApiQuery<PostView> {
   const CreatePost._();
   factory CreatePost.fromJson(Map<String, dynamic> json) => _$CreatePostFromJson(json);
 
+  @override
   final path = '/post';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -55,7 +59,7 @@ class GetPosts with _$GetPosts implements LemmyApiQuery<GetPostsResponse> {
     int? communityId, // v0.18.0
     String? communityName, // v0.18.0
     bool? savedOnly, // v0.18.0
-    @deprecated bool? moderatorView, // v0.18.3 [deprecated in v0.19.0]
+    @Deprecated('Deprecated in v0.19.0') bool? moderatorView, // v0.18.3 [deprecated in v0.19.0]
     String? auth,
     bool? likedOnly, // v0.19.0 (optional)
     bool? dislikedOnly, // v0.19.0 (optional)
@@ -68,8 +72,10 @@ class GetPosts with _$GetPosts implements LemmyApiQuery<GetPostsResponse> {
   const GetPosts._();
   factory GetPosts.fromJson(Map<String, dynamic> json) => _$GetPostsFromJson(json);
 
+  @override
   final path = '/post/list';
 
+  @override
   final httpMethod = HttpMethod.get;
 
   @override
@@ -84,8 +90,10 @@ class CreatePostLike with _$CreatePostLike implements LemmyApiQuery<PostView> {
   const CreatePostLike._();
   factory CreatePostLike.fromJson(Map<String, dynamic> json) => _$CreatePostLikeFromJson(json);
 
+  @override
   final path = '/post/like';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -100,8 +108,10 @@ class EditPost with _$EditPost implements LemmyApiQuery<PostView> {
   const EditPost._();
   factory EditPost.fromJson(Map<String, dynamic> json) => _$EditPostFromJson(json);
 
+  @override
   final path = '/post';
 
+  @override
   final httpMethod = HttpMethod.put;
 
   @override
@@ -116,8 +126,10 @@ class DeletePost with _$DeletePost implements LemmyApiQuery<PostView> {
   const DeletePost._();
   factory DeletePost.fromJson(Map<String, dynamic> json) => _$DeletePostFromJson(json);
 
+  @override
   final path = '/post/delete';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -132,8 +144,10 @@ class RemovePost with _$RemovePost implements LemmyApiQuery<PostView> {
   const RemovePost._();
   factory RemovePost.fromJson(Map<String, dynamic> json) => _$RemovePostFromJson(json);
 
+  @override
   final path = '/post/remove';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -148,8 +162,10 @@ class LockPost with _$LockPost implements LemmyApiQuery<PostView> {
   const LockPost._();
   factory LockPost.fromJson(Map<String, dynamic> json) => _$LockPostFromJson(json);
 
+  @override
   final path = '/post/lock';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -174,8 +190,10 @@ class FeaturePost with _$FeaturePost implements LemmyApiQuery<PostView> {
   const FeaturePost._();
   factory FeaturePost.fromJson(Map<String, dynamic> json) => _$FeaturePostFromJson(json);
 
+  @override
   final path = '/post/feature';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -190,8 +208,10 @@ class SavePost with _$SavePost implements LemmyApiQuery<PostView> {
   const SavePost._();
   factory SavePost.fromJson(Map<String, dynamic> json) => _$SavePostFromJson(json);
 
+  @override
   final path = '/post/save';
 
+  @override
   final httpMethod = HttpMethod.put;
 
   @override
@@ -206,8 +226,10 @@ class GetSiteMetadata with _$GetSiteMetadata implements LemmyApiQuery<SiteMetada
   const GetSiteMetadata._();
   factory GetSiteMetadata.fromJson(Map<String, dynamic> json) => _$GetSiteMetadataFromJson(json);
 
+  @override
   final path = '/post/site_metadata';
 
+  @override
   final httpMethod = HttpMethod.get;
 
   @override
@@ -222,8 +244,10 @@ class CreatePostReport with _$CreatePostReport implements LemmyApiQuery<PostRepo
   const CreatePostReport._();
   factory CreatePostReport.fromJson(Map<String, dynamic> json) => _$CreatePostReportFromJson(json);
 
+  @override
   final path = '/post/report';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -238,8 +262,10 @@ class ResolvePostReport with _$ResolvePostReport implements LemmyApiQuery<PostRe
   const ResolvePostReport._();
   factory ResolvePostReport.fromJson(Map<String, dynamic> json) => _$ResolvePostReportFromJson(json);
 
+  @override
   final path = '/post/report/resolve';
 
+  @override
   final httpMethod = HttpMethod.put;
 
   @override
@@ -254,8 +280,10 @@ class ListPostReports with _$ListPostReports implements LemmyApiQuery<List<PostR
   const ListPostReports._();
   factory ListPostReports.fromJson(Map<String, dynamic> json) => _$ListPostReportsFromJson(json);
 
+  @override
   final path = '/post/report/list';
 
+  @override
   final httpMethod = HttpMethod.get;
 
   @override
@@ -269,7 +297,7 @@ class ListPostReports with _$ListPostReports implements LemmyApiQuery<List<PostR
 class MarkPostAsRead with _$MarkPostAsRead implements LemmyApiQuery<MarkPostAsReadResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory MarkPostAsRead({
-    @deprecated int? postId, // v0.18.0 (required), v0.19.0 (optional) [deprecated in v0.19.4]
+    @Deprecated('Deprecated in v0.19.4') int? postId, // v0.18.0 (required), v0.19.0 (optional) [deprecated in v0.19.4]
     List<int>? postIds, // v0.19.0 (optional)
     required bool read, // v0.18.0
     String? auth,
@@ -278,8 +306,10 @@ class MarkPostAsRead with _$MarkPostAsRead implements LemmyApiQuery<MarkPostAsRe
   const MarkPostAsRead._();
   factory MarkPostAsRead.fromJson(Map<String, dynamic> json) => _$MarkPostAsReadFromJson(json);
 
+  @override
   final path = '/post/mark_as_read';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
@@ -303,8 +333,10 @@ class HidePost with _$HidePost implements LemmyApiQuery<SuccessResponse> {
   const HidePost._();
   factory HidePost.fromJson(Map<String, dynamic> json) => _$HidePostFromJson(json);
 
+  @override
   final path = '/post/hide';
 
+  @override
   final httpMethod = HttpMethod.post;
 
   @override
