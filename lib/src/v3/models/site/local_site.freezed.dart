@@ -26,37 +26,26 @@ mixin _$LocalSite {
   bool get siteSetup => throw _privateConstructorUsedError; // v0.19.0
   bool get enableDownvotes => throw _privateConstructorUsedError; // v0.19.0
   bool get enableNsfw => throw _privateConstructorUsedError; // v0.19.0
-  bool get communityCreationAdminOnly =>
-      throw _privateConstructorUsedError; // v0.19.0
-  bool get requireEmailVerification =>
-      throw _privateConstructorUsedError; // v0.19.0
-  String? get applicationQuestion =>
-      throw _privateConstructorUsedError; // v0.19.0 (optional)
+  bool get communityCreationAdminOnly => throw _privateConstructorUsedError; // v0.19.0
+  bool get requireEmailVerification => throw _privateConstructorUsedError; // v0.19.0
+  String? get applicationQuestion => throw _privateConstructorUsedError; // v0.19.0 (optional)
   bool get privateInstance => throw _privateConstructorUsedError; // v0.19.0
   String get defaultTheme => throw _privateConstructorUsedError; // v0.19.0
-  String get defaultPostListingType =>
-      throw _privateConstructorUsedError; // v0.19.0 (ListingType)
-  String? get legalInformation =>
-      throw _privateConstructorUsedError; // v0.19.0 (optional)
+  String get defaultPostListingType => throw _privateConstructorUsedError; // v0.19.0 (ListingType)
+  String? get legalInformation => throw _privateConstructorUsedError; // v0.19.0 (optional)
   bool get hideModlogModNames => throw _privateConstructorUsedError; // v0.19.0
-  bool get applicationEmailAdmins =>
-      throw _privateConstructorUsedError; // v0.19.0
-  String? get slurFilterRegex =>
-      throw _privateConstructorUsedError; // v0.19.0 (optional)
+  bool get applicationEmailAdmins => throw _privateConstructorUsedError; // v0.19.0
+  String? get slurFilterRegex => throw _privateConstructorUsedError; // v0.19.0 (optional)
   int get actorNameMaxLength => throw _privateConstructorUsedError; // v0.19.0
   bool get federationEnabled => throw _privateConstructorUsedError; // v0.19.0
   bool get captchaEnabled => throw _privateConstructorUsedError; // v0.19.0
   String get captchaDifficulty => throw _privateConstructorUsedError; // v0.19.0
   DateTime get published => throw _privateConstructorUsedError; // v0.19.0
-  DateTime? get updated =>
-      throw _privateConstructorUsedError; // v0.19.0 (optional)
-  String get registrationMode =>
-      throw _privateConstructorUsedError; // v0.19.0 (RegistrationMode)
+  DateTime? get updated => throw _privateConstructorUsedError; // v0.19.0 (optional)
+  String get registrationMode => throw _privateConstructorUsedError; // v0.19.0 (RegistrationMode)
   bool get reportsEmailAdmins => throw _privateConstructorUsedError; // v0.19.0
-  bool get federationSignedFetch =>
-      throw _privateConstructorUsedError; // v0.19.0
-  String? get defaultPostListingMode =>
-      throw _privateConstructorUsedError; // v0.19.0 (optional, PostListingMode)
+  bool get federationSignedFetch => throw _privateConstructorUsedError; // v0.19.0
+  String? get defaultPostListingMode => throw _privateConstructorUsedError; // v0.19.0 (optional, PostListingMode)
   String get defaultSortType => throw _privateConstructorUsedError;
 
   /// Serializes this LocalSite to a JSON map.
@@ -65,14 +54,12 @@ mixin _$LocalSite {
   /// Create a copy of LocalSite
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $LocalSiteCopyWith<LocalSite> get copyWith =>
-      throw _privateConstructorUsedError;
+  $LocalSiteCopyWith<LocalSite> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $LocalSiteCopyWith<$Res> {
-  factory $LocalSiteCopyWith(LocalSite value, $Res Function(LocalSite) then) =
-      _$LocalSiteCopyWithImpl<$Res, LocalSite>;
+  factory $LocalSiteCopyWith(LocalSite value, $Res Function(LocalSite) then) = _$LocalSiteCopyWithImpl<$Res, LocalSite>;
   @useResult
   $Res call({
     int id,
@@ -105,8 +92,7 @@ abstract class $LocalSiteCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$LocalSiteCopyWithImpl<$Res, $Val extends LocalSite>
-    implements $LocalSiteCopyWith<$Res> {
+class _$LocalSiteCopyWithImpl<$Res, $Val extends LocalSite> implements $LocalSiteCopyWith<$Res> {
   _$LocalSiteCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -285,12 +271,8 @@ class _$LocalSiteCopyWithImpl<$Res, $Val extends LocalSite>
 }
 
 /// @nodoc
-abstract class _$$LocalSiteImplCopyWith<$Res>
-    implements $LocalSiteCopyWith<$Res> {
-  factory _$$LocalSiteImplCopyWith(
-    _$LocalSiteImpl value,
-    $Res Function(_$LocalSiteImpl) then,
-  ) = __$$LocalSiteImplCopyWithImpl<$Res>;
+abstract class _$$LocalSiteImplCopyWith<$Res> implements $LocalSiteCopyWith<$Res> {
+  factory _$$LocalSiteImplCopyWith(_$LocalSiteImpl value, $Res Function(_$LocalSiteImpl) then) = __$$LocalSiteImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({
@@ -324,13 +306,8 @@ abstract class _$$LocalSiteImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$LocalSiteImplCopyWithImpl<$Res>
-    extends _$LocalSiteCopyWithImpl<$Res, _$LocalSiteImpl>
-    implements _$$LocalSiteImplCopyWith<$Res> {
-  __$$LocalSiteImplCopyWithImpl(
-    _$LocalSiteImpl _value,
-    $Res Function(_$LocalSiteImpl) _then,
-  ) : super(_value, _then);
+class __$$LocalSiteImplCopyWithImpl<$Res> extends _$LocalSiteCopyWithImpl<$Res, _$LocalSiteImpl> implements _$$LocalSiteImplCopyWith<$Res> {
+  __$$LocalSiteImplCopyWithImpl(_$LocalSiteImpl _value, $Res Function(_$LocalSiteImpl) _then) : super(_value, _then);
 
   /// Create a copy of LocalSite
   /// with the given fields replaced by the non-null parameter values.
@@ -534,8 +511,7 @@ class _$LocalSiteImpl extends _LocalSite {
     required this.defaultSortType,
   }) : super._();
 
-  factory _$LocalSiteImpl.fromJson(Map<String, dynamic> json) =>
-      _$$LocalSiteImplFromJson(json);
+  factory _$LocalSiteImpl.fromJson(Map<String, dynamic> json) => _$$LocalSiteImplFromJson(json);
 
   @override
   final int id;
@@ -627,60 +603,30 @@ class _$LocalSiteImpl extends _LocalSite {
             other is _$LocalSiteImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.siteId, siteId) || other.siteId == siteId) &&
-            (identical(other.siteSetup, siteSetup) ||
-                other.siteSetup == siteSetup) &&
-            (identical(other.enableDownvotes, enableDownvotes) ||
-                other.enableDownvotes == enableDownvotes) &&
-            (identical(other.enableNsfw, enableNsfw) ||
-                other.enableNsfw == enableNsfw) &&
-            (identical(
-                  other.communityCreationAdminOnly,
-                  communityCreationAdminOnly,
-                ) ||
-                other.communityCreationAdminOnly ==
-                    communityCreationAdminOnly) &&
-            (identical(
-                  other.requireEmailVerification,
-                  requireEmailVerification,
-                ) ||
-                other.requireEmailVerification == requireEmailVerification) &&
-            (identical(other.applicationQuestion, applicationQuestion) ||
-                other.applicationQuestion == applicationQuestion) &&
-            (identical(other.privateInstance, privateInstance) ||
-                other.privateInstance == privateInstance) &&
-            (identical(other.defaultTheme, defaultTheme) ||
-                other.defaultTheme == defaultTheme) &&
-            (identical(other.defaultPostListingType, defaultPostListingType) ||
-                other.defaultPostListingType == defaultPostListingType) &&
-            (identical(other.legalInformation, legalInformation) ||
-                other.legalInformation == legalInformation) &&
-            (identical(other.hideModlogModNames, hideModlogModNames) ||
-                other.hideModlogModNames == hideModlogModNames) &&
-            (identical(other.applicationEmailAdmins, applicationEmailAdmins) ||
-                other.applicationEmailAdmins == applicationEmailAdmins) &&
-            (identical(other.slurFilterRegex, slurFilterRegex) ||
-                other.slurFilterRegex == slurFilterRegex) &&
-            (identical(other.actorNameMaxLength, actorNameMaxLength) ||
-                other.actorNameMaxLength == actorNameMaxLength) &&
-            (identical(other.federationEnabled, federationEnabled) ||
-                other.federationEnabled == federationEnabled) &&
-            (identical(other.captchaEnabled, captchaEnabled) ||
-                other.captchaEnabled == captchaEnabled) &&
-            (identical(other.captchaDifficulty, captchaDifficulty) ||
-                other.captchaDifficulty == captchaDifficulty) &&
-            (identical(other.published, published) ||
-                other.published == published) &&
+            (identical(other.siteSetup, siteSetup) || other.siteSetup == siteSetup) &&
+            (identical(other.enableDownvotes, enableDownvotes) || other.enableDownvotes == enableDownvotes) &&
+            (identical(other.enableNsfw, enableNsfw) || other.enableNsfw == enableNsfw) &&
+            (identical(other.communityCreationAdminOnly, communityCreationAdminOnly) || other.communityCreationAdminOnly == communityCreationAdminOnly) &&
+            (identical(other.requireEmailVerification, requireEmailVerification) || other.requireEmailVerification == requireEmailVerification) &&
+            (identical(other.applicationQuestion, applicationQuestion) || other.applicationQuestion == applicationQuestion) &&
+            (identical(other.privateInstance, privateInstance) || other.privateInstance == privateInstance) &&
+            (identical(other.defaultTheme, defaultTheme) || other.defaultTheme == defaultTheme) &&
+            (identical(other.defaultPostListingType, defaultPostListingType) || other.defaultPostListingType == defaultPostListingType) &&
+            (identical(other.legalInformation, legalInformation) || other.legalInformation == legalInformation) &&
+            (identical(other.hideModlogModNames, hideModlogModNames) || other.hideModlogModNames == hideModlogModNames) &&
+            (identical(other.applicationEmailAdmins, applicationEmailAdmins) || other.applicationEmailAdmins == applicationEmailAdmins) &&
+            (identical(other.slurFilterRegex, slurFilterRegex) || other.slurFilterRegex == slurFilterRegex) &&
+            (identical(other.actorNameMaxLength, actorNameMaxLength) || other.actorNameMaxLength == actorNameMaxLength) &&
+            (identical(other.federationEnabled, federationEnabled) || other.federationEnabled == federationEnabled) &&
+            (identical(other.captchaEnabled, captchaEnabled) || other.captchaEnabled == captchaEnabled) &&
+            (identical(other.captchaDifficulty, captchaDifficulty) || other.captchaDifficulty == captchaDifficulty) &&
+            (identical(other.published, published) || other.published == published) &&
             (identical(other.updated, updated) || other.updated == updated) &&
-            (identical(other.registrationMode, registrationMode) ||
-                other.registrationMode == registrationMode) &&
-            (identical(other.reportsEmailAdmins, reportsEmailAdmins) ||
-                other.reportsEmailAdmins == reportsEmailAdmins) &&
-            (identical(other.federationSignedFetch, federationSignedFetch) ||
-                other.federationSignedFetch == federationSignedFetch) &&
-            (identical(other.defaultPostListingMode, defaultPostListingMode) ||
-                other.defaultPostListingMode == defaultPostListingMode) &&
-            (identical(other.defaultSortType, defaultSortType) ||
-                other.defaultSortType == defaultSortType));
+            (identical(other.registrationMode, registrationMode) || other.registrationMode == registrationMode) &&
+            (identical(other.reportsEmailAdmins, reportsEmailAdmins) || other.reportsEmailAdmins == reportsEmailAdmins) &&
+            (identical(other.federationSignedFetch, federationSignedFetch) || other.federationSignedFetch == federationSignedFetch) &&
+            (identical(other.defaultPostListingMode, defaultPostListingMode) || other.defaultPostListingMode == defaultPostListingMode) &&
+            (identical(other.defaultSortType, defaultSortType) || other.defaultSortType == defaultSortType));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -720,8 +666,7 @@ class _$LocalSiteImpl extends _LocalSite {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$LocalSiteImplCopyWith<_$LocalSiteImpl> get copyWith =>
-      __$$LocalSiteImplCopyWithImpl<_$LocalSiteImpl>(this, _$identity);
+  _$$LocalSiteImplCopyWith<_$LocalSiteImpl> get copyWith => __$$LocalSiteImplCopyWithImpl<_$LocalSiteImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -760,8 +705,7 @@ abstract class _LocalSite extends LocalSite {
   }) = _$LocalSiteImpl;
   const _LocalSite._() : super._();
 
-  factory _LocalSite.fromJson(Map<String, dynamic> json) =
-      _$LocalSiteImpl.fromJson;
+  factory _LocalSite.fromJson(Map<String, dynamic> json) = _$LocalSiteImpl.fromJson;
 
   @override
   int get id; // v0.19.0
@@ -820,6 +764,5 @@ abstract class _LocalSite extends LocalSite {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LocalSiteImplCopyWith<_$LocalSiteImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$LocalSiteImplCopyWith<_$LocalSiteImpl> get copyWith => throw _privateConstructorUsedError;
 }

@@ -169,11 +169,7 @@ class SaveComment with _$SaveComment implements LemmyApiQuery<CommentResponse> {
 @freezed
 class LockComment with _$LockComment implements LemmyApiQuery<CommentResponse> {
   @apiSerde
-  const factory LockComment({
-    required int commentId,
-    required bool locked,
-    String? reason,
-  }) = _LockComment;
+  const factory LockComment({required int commentId, required bool locked, String? reason}) = _LockComment;
 
   const LockComment._();
   factory LockComment.fromJson(Map<String, dynamic> json) => _$LockCommentFromJson(json);
@@ -192,10 +188,7 @@ class LockComment with _$LockComment implements LemmyApiQuery<CommentResponse> {
 @freezed
 class WarnComment with _$WarnComment implements LemmyApiQuery<CommentResponse> {
   @apiSerde
-  const factory WarnComment({
-    required int commentId,
-    required String reason,
-  }) = _WarnComment;
+  const factory WarnComment({required int commentId, required String reason}) = _WarnComment;
 
   const WarnComment._();
   factory WarnComment.fromJson(Map<String, dynamic> json) => _$WarnCommentFromJson(json);
@@ -214,11 +207,7 @@ class WarnComment with _$WarnComment implements LemmyApiQuery<CommentResponse> {
 @freezed
 class ListCommentLikes with _$ListCommentLikes implements LemmyApiQuery<ListVotesResponse> {
   @apiSerde
-  const factory ListCommentLikes({
-    required int commentId,
-    int? limit,
-    String? pageCursor,
-  }) = _ListCommentLikes;
+  const factory ListCommentLikes({required int commentId, int? limit, String? pageCursor}) = _ListCommentLikes;
 
   const ListCommentLikes._();
   factory ListCommentLikes.fromJson(Map<String, dynamic> json) => _$ListCommentLikesFromJson(json);

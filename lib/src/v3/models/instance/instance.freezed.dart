@@ -34,28 +34,18 @@ mixin _$Instance {
   /// Create a copy of Instance
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $InstanceCopyWith<Instance> get copyWith =>
-      throw _privateConstructorUsedError;
+  $InstanceCopyWith<Instance> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $InstanceCopyWith<$Res> {
-  factory $InstanceCopyWith(Instance value, $Res Function(Instance) then) =
-      _$InstanceCopyWithImpl<$Res, Instance>;
+  factory $InstanceCopyWith(Instance value, $Res Function(Instance) then) = _$InstanceCopyWithImpl<$Res, Instance>;
   @useResult
-  $Res call({
-    int id,
-    String domain,
-    DateTime published,
-    DateTime? updated,
-    String? software,
-    String? version,
-  });
+  $Res call({int id, String domain, DateTime published, DateTime? updated, String? software, String? version});
 }
 
 /// @nodoc
-class _$InstanceCopyWithImpl<$Res, $Val extends Instance>
-    implements $InstanceCopyWith<$Res> {
+class _$InstanceCopyWithImpl<$Res, $Val extends Instance> implements $InstanceCopyWith<$Res> {
   _$InstanceCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -67,14 +57,7 @@ class _$InstanceCopyWithImpl<$Res, $Val extends Instance>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? domain = null,
-    Object? published = null,
-    Object? updated = freezed,
-    Object? software = freezed,
-    Object? version = freezed,
-  }) {
+  $Res call({Object? id = null, Object? domain = null, Object? published = null, Object? updated = freezed, Object? software = freezed, Object? version = freezed}) {
     return _then(
       _value.copyWith(
             id:
@@ -114,45 +97,22 @@ class _$InstanceCopyWithImpl<$Res, $Val extends Instance>
 }
 
 /// @nodoc
-abstract class _$$InstanceImplCopyWith<$Res>
-    implements $InstanceCopyWith<$Res> {
-  factory _$$InstanceImplCopyWith(
-    _$InstanceImpl value,
-    $Res Function(_$InstanceImpl) then,
-  ) = __$$InstanceImplCopyWithImpl<$Res>;
+abstract class _$$InstanceImplCopyWith<$Res> implements $InstanceCopyWith<$Res> {
+  factory _$$InstanceImplCopyWith(_$InstanceImpl value, $Res Function(_$InstanceImpl) then) = __$$InstanceImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    int id,
-    String domain,
-    DateTime published,
-    DateTime? updated,
-    String? software,
-    String? version,
-  });
+  $Res call({int id, String domain, DateTime published, DateTime? updated, String? software, String? version});
 }
 
 /// @nodoc
-class __$$InstanceImplCopyWithImpl<$Res>
-    extends _$InstanceCopyWithImpl<$Res, _$InstanceImpl>
-    implements _$$InstanceImplCopyWith<$Res> {
-  __$$InstanceImplCopyWithImpl(
-    _$InstanceImpl _value,
-    $Res Function(_$InstanceImpl) _then,
-  ) : super(_value, _then);
+class __$$InstanceImplCopyWithImpl<$Res> extends _$InstanceCopyWithImpl<$Res, _$InstanceImpl> implements _$$InstanceImplCopyWith<$Res> {
+  __$$InstanceImplCopyWithImpl(_$InstanceImpl _value, $Res Function(_$InstanceImpl) _then) : super(_value, _then);
 
   /// Create a copy of Instance
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? domain = null,
-    Object? published = null,
-    Object? updated = freezed,
-    Object? software = freezed,
-    Object? version = freezed,
-  }) {
+  $Res call({Object? id = null, Object? domain = null, Object? published = null, Object? updated = freezed, Object? software = freezed, Object? version = freezed}) {
     return _then(
       _$InstanceImpl(
         id:
@@ -194,17 +154,9 @@ class __$$InstanceImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$InstanceImpl extends _Instance {
-  const _$InstanceImpl({
-    required this.id,
-    required this.domain,
-    required this.published,
-    this.updated,
-    this.software,
-    this.version,
-  }) : super._();
+  const _$InstanceImpl({required this.id, required this.domain, required this.published, this.updated, this.software, this.version}) : super._();
 
-  factory _$InstanceImpl.fromJson(Map<String, dynamic> json) =>
-      _$$InstanceImplFromJson(json);
+  factory _$InstanceImpl.fromJson(Map<String, dynamic> json) => _$$InstanceImplFromJson(json);
 
   @override
   final int id;
@@ -236,33 +188,22 @@ class _$InstanceImpl extends _Instance {
             other is _$InstanceImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.domain, domain) || other.domain == domain) &&
-            (identical(other.published, published) ||
-                other.published == published) &&
+            (identical(other.published, published) || other.published == published) &&
             (identical(other.updated, updated) || other.updated == updated) &&
-            (identical(other.software, software) ||
-                other.software == software) &&
+            (identical(other.software, software) || other.software == software) &&
             (identical(other.version, version) || other.version == version));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    id,
-    domain,
-    published,
-    updated,
-    software,
-    version,
-  );
+  int get hashCode => Object.hash(runtimeType, id, domain, published, updated, software, version);
 
   /// Create a copy of Instance
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$InstanceImplCopyWith<_$InstanceImpl> get copyWith =>
-      __$$InstanceImplCopyWithImpl<_$InstanceImpl>(this, _$identity);
+  _$$InstanceImplCopyWith<_$InstanceImpl> get copyWith => __$$InstanceImplCopyWithImpl<_$InstanceImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -271,18 +212,11 @@ class _$InstanceImpl extends _Instance {
 }
 
 abstract class _Instance extends Instance {
-  const factory _Instance({
-    required final int id,
-    required final String domain,
-    required final DateTime published,
-    final DateTime? updated,
-    final String? software,
-    final String? version,
-  }) = _$InstanceImpl;
+  const factory _Instance({required final int id, required final String domain, required final DateTime published, final DateTime? updated, final String? software, final String? version}) =
+      _$InstanceImpl;
   const _Instance._() : super._();
 
-  factory _Instance.fromJson(Map<String, dynamic> json) =
-      _$InstanceImpl.fromJson;
+  factory _Instance.fromJson(Map<String, dynamic> json) = _$InstanceImpl.fromJson;
 
   @override
   int get id; // v0.19.0
@@ -301,6 +235,5 @@ abstract class _Instance extends Instance {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$InstanceImplCopyWith<_$InstanceImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$InstanceImplCopyWith<_$InstanceImpl> get copyWith => throw _privateConstructorUsedError;
 }

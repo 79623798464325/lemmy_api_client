@@ -15,9 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
   'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
 );
 
-AuthenticateWithOAuth _$AuthenticateWithOAuthFromJson(
-  Map<String, dynamic> json,
-) {
+AuthenticateWithOAuth _$AuthenticateWithOAuthFromJson(Map<String, dynamic> json) {
   return _AuthenticateWithOAuth.fromJson(json);
 }
 
@@ -38,35 +36,18 @@ mixin _$AuthenticateWithOAuth {
   /// Create a copy of AuthenticateWithOAuth
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $AuthenticateWithOAuthCopyWith<AuthenticateWithOAuth> get copyWith =>
-      throw _privateConstructorUsedError;
+  $AuthenticateWithOAuthCopyWith<AuthenticateWithOAuth> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AuthenticateWithOAuthCopyWith<$Res> {
-  factory $AuthenticateWithOAuthCopyWith(
-    AuthenticateWithOAuth value,
-    $Res Function(AuthenticateWithOAuth) then,
-  ) = _$AuthenticateWithOAuthCopyWithImpl<$Res, AuthenticateWithOAuth>;
+  factory $AuthenticateWithOAuthCopyWith(AuthenticateWithOAuth value, $Res Function(AuthenticateWithOAuth) then) = _$AuthenticateWithOAuthCopyWithImpl<$Res, AuthenticateWithOAuth>;
   @useResult
-  $Res call({
-    String code,
-    int oauthProviderId,
-    String redirectUri,
-    bool? showNsfw,
-    String? username,
-    String? answer,
-    String? pkceCodeVerifier,
-    bool? stayLoggedIn,
-  });
+  $Res call({String code, int oauthProviderId, String redirectUri, bool? showNsfw, String? username, String? answer, String? pkceCodeVerifier, bool? stayLoggedIn});
 }
 
 /// @nodoc
-class _$AuthenticateWithOAuthCopyWithImpl<
-  $Res,
-  $Val extends AuthenticateWithOAuth
->
-    implements $AuthenticateWithOAuthCopyWith<$Res> {
+class _$AuthenticateWithOAuthCopyWithImpl<$Res, $Val extends AuthenticateWithOAuth> implements $AuthenticateWithOAuthCopyWith<$Res> {
   _$AuthenticateWithOAuthCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -137,35 +118,16 @@ class _$AuthenticateWithOAuthCopyWithImpl<
 }
 
 /// @nodoc
-abstract class _$$AuthenticateWithOAuthImplCopyWith<$Res>
-    implements $AuthenticateWithOAuthCopyWith<$Res> {
-  factory _$$AuthenticateWithOAuthImplCopyWith(
-    _$AuthenticateWithOAuthImpl value,
-    $Res Function(_$AuthenticateWithOAuthImpl) then,
-  ) = __$$AuthenticateWithOAuthImplCopyWithImpl<$Res>;
+abstract class _$$AuthenticateWithOAuthImplCopyWith<$Res> implements $AuthenticateWithOAuthCopyWith<$Res> {
+  factory _$$AuthenticateWithOAuthImplCopyWith(_$AuthenticateWithOAuthImpl value, $Res Function(_$AuthenticateWithOAuthImpl) then) = __$$AuthenticateWithOAuthImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    String code,
-    int oauthProviderId,
-    String redirectUri,
-    bool? showNsfw,
-    String? username,
-    String? answer,
-    String? pkceCodeVerifier,
-    bool? stayLoggedIn,
-  });
+  $Res call({String code, int oauthProviderId, String redirectUri, bool? showNsfw, String? username, String? answer, String? pkceCodeVerifier, bool? stayLoggedIn});
 }
 
 /// @nodoc
-class __$$AuthenticateWithOAuthImplCopyWithImpl<$Res>
-    extends
-        _$AuthenticateWithOAuthCopyWithImpl<$Res, _$AuthenticateWithOAuthImpl>
-    implements _$$AuthenticateWithOAuthImplCopyWith<$Res> {
-  __$$AuthenticateWithOAuthImplCopyWithImpl(
-    _$AuthenticateWithOAuthImpl _value,
-    $Res Function(_$AuthenticateWithOAuthImpl) _then,
-  ) : super(_value, _then);
+class __$$AuthenticateWithOAuthImplCopyWithImpl<$Res> extends _$AuthenticateWithOAuthCopyWithImpl<$Res, _$AuthenticateWithOAuthImpl> implements _$$AuthenticateWithOAuthImplCopyWith<$Res> {
+  __$$AuthenticateWithOAuthImplCopyWithImpl(_$AuthenticateWithOAuthImpl _value, $Res Function(_$AuthenticateWithOAuthImpl) _then) : super(_value, _then);
 
   /// Create a copy of AuthenticateWithOAuth
   /// with the given fields replaced by the non-null parameter values.
@@ -232,19 +194,10 @@ class __$$AuthenticateWithOAuthImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$AuthenticateWithOAuthImpl extends _AuthenticateWithOAuth {
-  const _$AuthenticateWithOAuthImpl({
-    required this.code,
-    required this.oauthProviderId,
-    required this.redirectUri,
-    this.showNsfw,
-    this.username,
-    this.answer,
-    this.pkceCodeVerifier,
-    this.stayLoggedIn,
-  }) : super._();
+  const _$AuthenticateWithOAuthImpl({required this.code, required this.oauthProviderId, required this.redirectUri, this.showNsfw, this.username, this.answer, this.pkceCodeVerifier, this.stayLoggedIn})
+    : super._();
 
-  factory _$AuthenticateWithOAuthImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AuthenticateWithOAuthImplFromJson(json);
+  factory _$AuthenticateWithOAuthImpl.fromJson(Map<String, dynamic> json) => _$$AuthenticateWithOAuthImplFromJson(json);
 
   @override
   final String code;
@@ -274,46 +227,25 @@ class _$AuthenticateWithOAuthImpl extends _AuthenticateWithOAuth {
         (other.runtimeType == runtimeType &&
             other is _$AuthenticateWithOAuthImpl &&
             (identical(other.code, code) || other.code == code) &&
-            (identical(other.oauthProviderId, oauthProviderId) ||
-                other.oauthProviderId == oauthProviderId) &&
-            (identical(other.redirectUri, redirectUri) ||
-                other.redirectUri == redirectUri) &&
-            (identical(other.showNsfw, showNsfw) ||
-                other.showNsfw == showNsfw) &&
-            (identical(other.username, username) ||
-                other.username == username) &&
+            (identical(other.oauthProviderId, oauthProviderId) || other.oauthProviderId == oauthProviderId) &&
+            (identical(other.redirectUri, redirectUri) || other.redirectUri == redirectUri) &&
+            (identical(other.showNsfw, showNsfw) || other.showNsfw == showNsfw) &&
+            (identical(other.username, username) || other.username == username) &&
             (identical(other.answer, answer) || other.answer == answer) &&
-            (identical(other.pkceCodeVerifier, pkceCodeVerifier) ||
-                other.pkceCodeVerifier == pkceCodeVerifier) &&
-            (identical(other.stayLoggedIn, stayLoggedIn) ||
-                other.stayLoggedIn == stayLoggedIn));
+            (identical(other.pkceCodeVerifier, pkceCodeVerifier) || other.pkceCodeVerifier == pkceCodeVerifier) &&
+            (identical(other.stayLoggedIn, stayLoggedIn) || other.stayLoggedIn == stayLoggedIn));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    code,
-    oauthProviderId,
-    redirectUri,
-    showNsfw,
-    username,
-    answer,
-    pkceCodeVerifier,
-    stayLoggedIn,
-  );
+  int get hashCode => Object.hash(runtimeType, code, oauthProviderId, redirectUri, showNsfw, username, answer, pkceCodeVerifier, stayLoggedIn);
 
   /// Create a copy of AuthenticateWithOAuth
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$AuthenticateWithOAuthImplCopyWith<_$AuthenticateWithOAuthImpl>
-  get copyWith =>
-      __$$AuthenticateWithOAuthImplCopyWithImpl<_$AuthenticateWithOAuthImpl>(
-        this,
-        _$identity,
-      );
+  _$$AuthenticateWithOAuthImplCopyWith<_$AuthenticateWithOAuthImpl> get copyWith => __$$AuthenticateWithOAuthImplCopyWithImpl<_$AuthenticateWithOAuthImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -334,8 +266,7 @@ abstract class _AuthenticateWithOAuth extends AuthenticateWithOAuth {
   }) = _$AuthenticateWithOAuthImpl;
   const _AuthenticateWithOAuth._() : super._();
 
-  factory _AuthenticateWithOAuth.fromJson(Map<String, dynamic> json) =
-      _$AuthenticateWithOAuthImpl.fromJson;
+  factory _AuthenticateWithOAuth.fromJson(Map<String, dynamic> json) = _$AuthenticateWithOAuthImpl.fromJson;
 
   @override
   String get code;
@@ -358,8 +289,7 @@ abstract class _AuthenticateWithOAuth extends AuthenticateWithOAuth {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AuthenticateWithOAuthImplCopyWith<_$AuthenticateWithOAuthImpl>
-  get copyWith => throw _privateConstructorUsedError;
+  _$$AuthenticateWithOAuthImplCopyWith<_$AuthenticateWithOAuthImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 CreateOAuthProvider _$CreateOAuthProviderFromJson(Map<String, dynamic> json) {
@@ -388,16 +318,12 @@ mixin _$CreateOAuthProvider {
   /// Create a copy of CreateOAuthProvider
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $CreateOAuthProviderCopyWith<CreateOAuthProvider> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CreateOAuthProviderCopyWith<CreateOAuthProvider> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CreateOAuthProviderCopyWith<$Res> {
-  factory $CreateOAuthProviderCopyWith(
-    CreateOAuthProvider value,
-    $Res Function(CreateOAuthProvider) then,
-  ) = _$CreateOAuthProviderCopyWithImpl<$Res, CreateOAuthProvider>;
+  factory $CreateOAuthProviderCopyWith(CreateOAuthProvider value, $Res Function(CreateOAuthProvider) then) = _$CreateOAuthProviderCopyWithImpl<$Res, CreateOAuthProvider>;
   @useResult
   $Res call({
     String displayName,
@@ -417,8 +343,7 @@ abstract class $CreateOAuthProviderCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CreateOAuthProviderCopyWithImpl<$Res, $Val extends CreateOAuthProvider>
-    implements $CreateOAuthProviderCopyWith<$Res> {
+class _$CreateOAuthProviderCopyWithImpl<$Res, $Val extends CreateOAuthProvider> implements $CreateOAuthProviderCopyWith<$Res> {
   _$CreateOAuthProviderCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -519,12 +444,8 @@ class _$CreateOAuthProviderCopyWithImpl<$Res, $Val extends CreateOAuthProvider>
 }
 
 /// @nodoc
-abstract class _$$CreateOAuthProviderImplCopyWith<$Res>
-    implements $CreateOAuthProviderCopyWith<$Res> {
-  factory _$$CreateOAuthProviderImplCopyWith(
-    _$CreateOAuthProviderImpl value,
-    $Res Function(_$CreateOAuthProviderImpl) then,
-  ) = __$$CreateOAuthProviderImplCopyWithImpl<$Res>;
+abstract class _$$CreateOAuthProviderImplCopyWith<$Res> implements $CreateOAuthProviderCopyWith<$Res> {
+  factory _$$CreateOAuthProviderImplCopyWith(_$CreateOAuthProviderImpl value, $Res Function(_$CreateOAuthProviderImpl) then) = __$$CreateOAuthProviderImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({
@@ -545,13 +466,8 @@ abstract class _$$CreateOAuthProviderImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$CreateOAuthProviderImplCopyWithImpl<$Res>
-    extends _$CreateOAuthProviderCopyWithImpl<$Res, _$CreateOAuthProviderImpl>
-    implements _$$CreateOAuthProviderImplCopyWith<$Res> {
-  __$$CreateOAuthProviderImplCopyWithImpl(
-    _$CreateOAuthProviderImpl _value,
-    $Res Function(_$CreateOAuthProviderImpl) _then,
-  ) : super(_value, _then);
+class __$$CreateOAuthProviderImplCopyWithImpl<$Res> extends _$CreateOAuthProviderCopyWithImpl<$Res, _$CreateOAuthProviderImpl> implements _$$CreateOAuthProviderImplCopyWith<$Res> {
+  __$$CreateOAuthProviderImplCopyWithImpl(_$CreateOAuthProviderImpl _value, $Res Function(_$CreateOAuthProviderImpl) _then) : super(_value, _then);
 
   /// Create a copy of CreateOAuthProvider
   /// with the given fields replaced by the non-null parameter values.
@@ -664,8 +580,7 @@ class _$CreateOAuthProviderImpl extends _CreateOAuthProvider {
     required this.enabled,
   }) : super._();
 
-  factory _$CreateOAuthProviderImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CreateOAuthProviderImplFromJson(json);
+  factory _$CreateOAuthProviderImpl.fromJson(Map<String, dynamic> json) => _$$CreateOAuthProviderImplFromJson(json);
 
   @override
   final String displayName;
@@ -704,25 +619,17 @@ class _$CreateOAuthProviderImpl extends _CreateOAuthProvider {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CreateOAuthProviderImpl &&
-            (identical(other.displayName, displayName) ||
-                other.displayName == displayName) &&
+            (identical(other.displayName, displayName) || other.displayName == displayName) &&
             (identical(other.issuer, issuer) || other.issuer == issuer) &&
-            (identical(other.authorizationEndpoint, authorizationEndpoint) ||
-                other.authorizationEndpoint == authorizationEndpoint) &&
-            (identical(other.tokenEndpoint, tokenEndpoint) ||
-                other.tokenEndpoint == tokenEndpoint) &&
-            (identical(other.userinfoEndpoint, userinfoEndpoint) ||
-                other.userinfoEndpoint == userinfoEndpoint) &&
+            (identical(other.authorizationEndpoint, authorizationEndpoint) || other.authorizationEndpoint == authorizationEndpoint) &&
+            (identical(other.tokenEndpoint, tokenEndpoint) || other.tokenEndpoint == tokenEndpoint) &&
+            (identical(other.userinfoEndpoint, userinfoEndpoint) || other.userinfoEndpoint == userinfoEndpoint) &&
             (identical(other.idClaim, idClaim) || other.idClaim == idClaim) &&
-            (identical(other.clientId, clientId) ||
-                other.clientId == clientId) &&
-            (identical(other.clientSecret, clientSecret) ||
-                other.clientSecret == clientSecret) &&
+            (identical(other.clientId, clientId) || other.clientId == clientId) &&
+            (identical(other.clientSecret, clientSecret) || other.clientSecret == clientSecret) &&
             (identical(other.scopes, scopes) || other.scopes == scopes) &&
-            (identical(other.autoVerifyEmail, autoVerifyEmail) ||
-                other.autoVerifyEmail == autoVerifyEmail) &&
-            (identical(other.accountLinkingEnabled, accountLinkingEnabled) ||
-                other.accountLinkingEnabled == accountLinkingEnabled) &&
+            (identical(other.autoVerifyEmail, autoVerifyEmail) || other.autoVerifyEmail == autoVerifyEmail) &&
+            (identical(other.accountLinkingEnabled, accountLinkingEnabled) || other.accountLinkingEnabled == accountLinkingEnabled) &&
             (identical(other.usePkce, usePkce) || other.usePkce == usePkce) &&
             (identical(other.enabled, enabled) || other.enabled == enabled));
   }
@@ -751,11 +658,7 @@ class _$CreateOAuthProviderImpl extends _CreateOAuthProvider {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$CreateOAuthProviderImplCopyWith<_$CreateOAuthProviderImpl> get copyWith =>
-      __$$CreateOAuthProviderImplCopyWithImpl<_$CreateOAuthProviderImpl>(
-        this,
-        _$identity,
-      );
+  _$$CreateOAuthProviderImplCopyWith<_$CreateOAuthProviderImpl> get copyWith => __$$CreateOAuthProviderImplCopyWithImpl<_$CreateOAuthProviderImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -781,8 +684,7 @@ abstract class _CreateOAuthProvider extends CreateOAuthProvider {
   }) = _$CreateOAuthProviderImpl;
   const _CreateOAuthProvider._() : super._();
 
-  factory _CreateOAuthProvider.fromJson(Map<String, dynamic> json) =
-      _$CreateOAuthProviderImpl.fromJson;
+  factory _CreateOAuthProvider.fromJson(Map<String, dynamic> json) = _$CreateOAuthProviderImpl.fromJson;
 
   @override
   String get displayName;
@@ -815,8 +717,7 @@ abstract class _CreateOAuthProvider extends CreateOAuthProvider {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CreateOAuthProviderImplCopyWith<_$CreateOAuthProviderImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CreateOAuthProviderImplCopyWith<_$CreateOAuthProviderImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 EditOAuthProvider _$EditOAuthProviderFromJson(Map<String, dynamic> json) {
@@ -844,16 +745,12 @@ mixin _$EditOAuthProvider {
   /// Create a copy of EditOAuthProvider
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $EditOAuthProviderCopyWith<EditOAuthProvider> get copyWith =>
-      throw _privateConstructorUsedError;
+  $EditOAuthProviderCopyWith<EditOAuthProvider> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $EditOAuthProviderCopyWith<$Res> {
-  factory $EditOAuthProviderCopyWith(
-    EditOAuthProvider value,
-    $Res Function(EditOAuthProvider) then,
-  ) = _$EditOAuthProviderCopyWithImpl<$Res, EditOAuthProvider>;
+  factory $EditOAuthProviderCopyWith(EditOAuthProvider value, $Res Function(EditOAuthProvider) then) = _$EditOAuthProviderCopyWithImpl<$Res, EditOAuthProvider>;
   @useResult
   $Res call({
     int id,
@@ -872,8 +769,7 @@ abstract class $EditOAuthProviderCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$EditOAuthProviderCopyWithImpl<$Res, $Val extends EditOAuthProvider>
-    implements $EditOAuthProviderCopyWith<$Res> {
+class _$EditOAuthProviderCopyWithImpl<$Res, $Val extends EditOAuthProvider> implements $EditOAuthProviderCopyWith<$Res> {
   _$EditOAuthProviderCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -968,12 +864,8 @@ class _$EditOAuthProviderCopyWithImpl<$Res, $Val extends EditOAuthProvider>
 }
 
 /// @nodoc
-abstract class _$$EditOAuthProviderImplCopyWith<$Res>
-    implements $EditOAuthProviderCopyWith<$Res> {
-  factory _$$EditOAuthProviderImplCopyWith(
-    _$EditOAuthProviderImpl value,
-    $Res Function(_$EditOAuthProviderImpl) then,
-  ) = __$$EditOAuthProviderImplCopyWithImpl<$Res>;
+abstract class _$$EditOAuthProviderImplCopyWith<$Res> implements $EditOAuthProviderCopyWith<$Res> {
+  factory _$$EditOAuthProviderImplCopyWith(_$EditOAuthProviderImpl value, $Res Function(_$EditOAuthProviderImpl) then) = __$$EditOAuthProviderImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({
@@ -993,13 +885,8 @@ abstract class _$$EditOAuthProviderImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$EditOAuthProviderImplCopyWithImpl<$Res>
-    extends _$EditOAuthProviderCopyWithImpl<$Res, _$EditOAuthProviderImpl>
-    implements _$$EditOAuthProviderImplCopyWith<$Res> {
-  __$$EditOAuthProviderImplCopyWithImpl(
-    _$EditOAuthProviderImpl _value,
-    $Res Function(_$EditOAuthProviderImpl) _then,
-  ) : super(_value, _then);
+class __$$EditOAuthProviderImplCopyWithImpl<$Res> extends _$EditOAuthProviderCopyWithImpl<$Res, _$EditOAuthProviderImpl> implements _$$EditOAuthProviderImplCopyWith<$Res> {
+  __$$EditOAuthProviderImplCopyWithImpl(_$EditOAuthProviderImpl _value, $Res Function(_$EditOAuthProviderImpl) _then) : super(_value, _then);
 
   /// Create a copy of EditOAuthProvider
   /// with the given fields replaced by the non-null parameter values.
@@ -1105,8 +992,7 @@ class _$EditOAuthProviderImpl extends _EditOAuthProvider {
     required this.enabled,
   }) : super._();
 
-  factory _$EditOAuthProviderImpl.fromJson(Map<String, dynamic> json) =>
-      _$$EditOAuthProviderImplFromJson(json);
+  factory _$EditOAuthProviderImpl.fromJson(Map<String, dynamic> json) => _$$EditOAuthProviderImplFromJson(json);
 
   @override
   final int id;
@@ -1144,54 +1030,30 @@ class _$EditOAuthProviderImpl extends _EditOAuthProvider {
         (other.runtimeType == runtimeType &&
             other is _$EditOAuthProviderImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.displayName, displayName) ||
-                other.displayName == displayName) &&
-            (identical(other.authorizationEndpoint, authorizationEndpoint) ||
-                other.authorizationEndpoint == authorizationEndpoint) &&
-            (identical(other.tokenEndpoint, tokenEndpoint) ||
-                other.tokenEndpoint == tokenEndpoint) &&
-            (identical(other.userinfoEndpoint, userinfoEndpoint) ||
-                other.userinfoEndpoint == userinfoEndpoint) &&
+            (identical(other.displayName, displayName) || other.displayName == displayName) &&
+            (identical(other.authorizationEndpoint, authorizationEndpoint) || other.authorizationEndpoint == authorizationEndpoint) &&
+            (identical(other.tokenEndpoint, tokenEndpoint) || other.tokenEndpoint == tokenEndpoint) &&
+            (identical(other.userinfoEndpoint, userinfoEndpoint) || other.userinfoEndpoint == userinfoEndpoint) &&
             (identical(other.idClaim, idClaim) || other.idClaim == idClaim) &&
-            (identical(other.clientSecret, clientSecret) ||
-                other.clientSecret == clientSecret) &&
+            (identical(other.clientSecret, clientSecret) || other.clientSecret == clientSecret) &&
             (identical(other.scopes, scopes) || other.scopes == scopes) &&
-            (identical(other.autoVerifyEmail, autoVerifyEmail) ||
-                other.autoVerifyEmail == autoVerifyEmail) &&
-            (identical(other.accountLinkingEnabled, accountLinkingEnabled) ||
-                other.accountLinkingEnabled == accountLinkingEnabled) &&
+            (identical(other.autoVerifyEmail, autoVerifyEmail) || other.autoVerifyEmail == autoVerifyEmail) &&
+            (identical(other.accountLinkingEnabled, accountLinkingEnabled) || other.accountLinkingEnabled == accountLinkingEnabled) &&
             (identical(other.usePkce, usePkce) || other.usePkce == usePkce) &&
             (identical(other.enabled, enabled) || other.enabled == enabled));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    id,
-    displayName,
-    authorizationEndpoint,
-    tokenEndpoint,
-    userinfoEndpoint,
-    idClaim,
-    clientSecret,
-    scopes,
-    autoVerifyEmail,
-    accountLinkingEnabled,
-    usePkce,
-    enabled,
-  );
+  int get hashCode =>
+      Object.hash(runtimeType, id, displayName, authorizationEndpoint, tokenEndpoint, userinfoEndpoint, idClaim, clientSecret, scopes, autoVerifyEmail, accountLinkingEnabled, usePkce, enabled);
 
   /// Create a copy of EditOAuthProvider
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$EditOAuthProviderImplCopyWith<_$EditOAuthProviderImpl> get copyWith =>
-      __$$EditOAuthProviderImplCopyWithImpl<_$EditOAuthProviderImpl>(
-        this,
-        _$identity,
-      );
+  _$$EditOAuthProviderImplCopyWith<_$EditOAuthProviderImpl> get copyWith => __$$EditOAuthProviderImplCopyWithImpl<_$EditOAuthProviderImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1216,8 +1078,7 @@ abstract class _EditOAuthProvider extends EditOAuthProvider {
   }) = _$EditOAuthProviderImpl;
   const _EditOAuthProvider._() : super._();
 
-  factory _EditOAuthProvider.fromJson(Map<String, dynamic> json) =
-      _$EditOAuthProviderImpl.fromJson;
+  factory _EditOAuthProvider.fromJson(Map<String, dynamic> json) = _$EditOAuthProviderImpl.fromJson;
 
   @override
   int get id;
@@ -1248,8 +1109,7 @@ abstract class _EditOAuthProvider extends EditOAuthProvider {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$EditOAuthProviderImplCopyWith<_$EditOAuthProviderImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$EditOAuthProviderImplCopyWith<_$EditOAuthProviderImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 DeleteOAuthProvider _$DeleteOAuthProviderFromJson(Map<String, dynamic> json) {
@@ -1266,23 +1126,18 @@ mixin _$DeleteOAuthProvider {
   /// Create a copy of DeleteOAuthProvider
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $DeleteOAuthProviderCopyWith<DeleteOAuthProvider> get copyWith =>
-      throw _privateConstructorUsedError;
+  $DeleteOAuthProviderCopyWith<DeleteOAuthProvider> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $DeleteOAuthProviderCopyWith<$Res> {
-  factory $DeleteOAuthProviderCopyWith(
-    DeleteOAuthProvider value,
-    $Res Function(DeleteOAuthProvider) then,
-  ) = _$DeleteOAuthProviderCopyWithImpl<$Res, DeleteOAuthProvider>;
+  factory $DeleteOAuthProviderCopyWith(DeleteOAuthProvider value, $Res Function(DeleteOAuthProvider) then) = _$DeleteOAuthProviderCopyWithImpl<$Res, DeleteOAuthProvider>;
   @useResult
   $Res call({int id});
 }
 
 /// @nodoc
-class _$DeleteOAuthProviderCopyWithImpl<$Res, $Val extends DeleteOAuthProvider>
-    implements $DeleteOAuthProviderCopyWith<$Res> {
+class _$DeleteOAuthProviderCopyWithImpl<$Res, $Val extends DeleteOAuthProvider> implements $DeleteOAuthProviderCopyWith<$Res> {
   _$DeleteOAuthProviderCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1309,25 +1164,16 @@ class _$DeleteOAuthProviderCopyWithImpl<$Res, $Val extends DeleteOAuthProvider>
 }
 
 /// @nodoc
-abstract class _$$DeleteOAuthProviderImplCopyWith<$Res>
-    implements $DeleteOAuthProviderCopyWith<$Res> {
-  factory _$$DeleteOAuthProviderImplCopyWith(
-    _$DeleteOAuthProviderImpl value,
-    $Res Function(_$DeleteOAuthProviderImpl) then,
-  ) = __$$DeleteOAuthProviderImplCopyWithImpl<$Res>;
+abstract class _$$DeleteOAuthProviderImplCopyWith<$Res> implements $DeleteOAuthProviderCopyWith<$Res> {
+  factory _$$DeleteOAuthProviderImplCopyWith(_$DeleteOAuthProviderImpl value, $Res Function(_$DeleteOAuthProviderImpl) then) = __$$DeleteOAuthProviderImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int id});
 }
 
 /// @nodoc
-class __$$DeleteOAuthProviderImplCopyWithImpl<$Res>
-    extends _$DeleteOAuthProviderCopyWithImpl<$Res, _$DeleteOAuthProviderImpl>
-    implements _$$DeleteOAuthProviderImplCopyWith<$Res> {
-  __$$DeleteOAuthProviderImplCopyWithImpl(
-    _$DeleteOAuthProviderImpl _value,
-    $Res Function(_$DeleteOAuthProviderImpl) _then,
-  ) : super(_value, _then);
+class __$$DeleteOAuthProviderImplCopyWithImpl<$Res> extends _$DeleteOAuthProviderCopyWithImpl<$Res, _$DeleteOAuthProviderImpl> implements _$$DeleteOAuthProviderImplCopyWith<$Res> {
+  __$$DeleteOAuthProviderImplCopyWithImpl(_$DeleteOAuthProviderImpl _value, $Res Function(_$DeleteOAuthProviderImpl) _then) : super(_value, _then);
 
   /// Create a copy of DeleteOAuthProvider
   /// with the given fields replaced by the non-null parameter values.
@@ -1352,8 +1198,7 @@ class __$$DeleteOAuthProviderImplCopyWithImpl<$Res>
 class _$DeleteOAuthProviderImpl extends _DeleteOAuthProvider {
   const _$DeleteOAuthProviderImpl({required this.id}) : super._();
 
-  factory _$DeleteOAuthProviderImpl.fromJson(Map<String, dynamic> json) =>
-      _$$DeleteOAuthProviderImplFromJson(json);
+  factory _$DeleteOAuthProviderImpl.fromJson(Map<String, dynamic> json) => _$$DeleteOAuthProviderImplFromJson(json);
 
   @override
   final int id;
@@ -1365,10 +1210,7 @@ class _$DeleteOAuthProviderImpl extends _DeleteOAuthProvider {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$DeleteOAuthProviderImpl &&
-            (identical(other.id, id) || other.id == id));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$DeleteOAuthProviderImpl && (identical(other.id, id) || other.id == id));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -1380,11 +1222,7 @@ class _$DeleteOAuthProviderImpl extends _DeleteOAuthProvider {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$DeleteOAuthProviderImplCopyWith<_$DeleteOAuthProviderImpl> get copyWith =>
-      __$$DeleteOAuthProviderImplCopyWithImpl<_$DeleteOAuthProviderImpl>(
-        this,
-        _$identity,
-      );
+  _$$DeleteOAuthProviderImplCopyWith<_$DeleteOAuthProviderImpl> get copyWith => __$$DeleteOAuthProviderImplCopyWithImpl<_$DeleteOAuthProviderImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1393,12 +1231,10 @@ class _$DeleteOAuthProviderImpl extends _DeleteOAuthProvider {
 }
 
 abstract class _DeleteOAuthProvider extends DeleteOAuthProvider {
-  const factory _DeleteOAuthProvider({required final int id}) =
-      _$DeleteOAuthProviderImpl;
+  const factory _DeleteOAuthProvider({required final int id}) = _$DeleteOAuthProviderImpl;
   const _DeleteOAuthProvider._() : super._();
 
-  factory _DeleteOAuthProvider.fromJson(Map<String, dynamic> json) =
-      _$DeleteOAuthProviderImpl.fromJson;
+  factory _DeleteOAuthProvider.fromJson(Map<String, dynamic> json) = _$DeleteOAuthProviderImpl.fromJson;
 
   @override
   int get id;
@@ -1407,6 +1243,5 @@ abstract class _DeleteOAuthProvider extends DeleteOAuthProvider {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DeleteOAuthProviderImplCopyWith<_$DeleteOAuthProviderImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$DeleteOAuthProviderImplCopyWith<_$DeleteOAuthProviderImpl> get copyWith => throw _privateConstructorUsedError;
 }

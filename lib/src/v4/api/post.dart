@@ -181,10 +181,7 @@ class SavePost with _$SavePost implements LemmyApiQuery<PostResponse> {
 @freezed
 class WarnPost with _$WarnPost implements LemmyApiQuery<PostResponse> {
   @apiSerde
-  const factory WarnPost({
-    required int postId,
-    required String reason,
-  }) = _WarnPost;
+  const factory WarnPost({required int postId, required String reason}) = _WarnPost;
 
   const WarnPost._();
   factory WarnPost.fromJson(Map<String, dynamic> json) => _$WarnPostFromJson(json);
@@ -203,11 +200,7 @@ class WarnPost with _$WarnPost implements LemmyApiQuery<PostResponse> {
 @freezed
 class ModEditPost with _$ModEditPost implements LemmyApiQuery<PostResponse> {
   @apiSerde
-  const factory ModEditPost({
-    required int postId,
-    bool? nsfw,
-    List<int>? tags,
-  }) = _ModEditPost;
+  const factory ModEditPost({required int postId, bool? nsfw, List<int>? tags}) = _ModEditPost;
 
   const ModEditPost._();
   factory ModEditPost.fromJson(Map<String, dynamic> json) => _$ModEditPostFromJson(json);
@@ -226,10 +219,7 @@ class ModEditPost with _$ModEditPost implements LemmyApiQuery<PostResponse> {
 @freezed
 class EditPostNotifications with _$EditPostNotifications implements LemmyApiQuery<SuccessResponse> {
   @apiSerde
-  const factory EditPostNotifications({
-    required int postId,
-    required String mode,
-  }) = _EditPostNotifications;
+  const factory EditPostNotifications({required int postId, required String mode}) = _EditPostNotifications;
 
   const EditPostNotifications._();
   factory EditPostNotifications.fromJson(Map<String, dynamic> json) => _$EditPostNotificationsFromJson(json);
@@ -248,11 +238,7 @@ class EditPostNotifications with _$EditPostNotifications implements LemmyApiQuer
 @freezed
 class ListPostLikes with _$ListPostLikes implements LemmyApiQuery<ListVotesResponse> {
   @apiSerde
-  const factory ListPostLikes({
-    required int postId,
-    int? limit,
-    String? pageCursor,
-  }) = _ListPostLikes;
+  const factory ListPostLikes({required int postId, int? limit, String? pageCursor}) = _ListPostLikes;
 
   const ListPostLikes._();
   factory ListPostLikes.fromJson(Map<String, dynamic> json) => _$ListPostLikesFromJson(json);
@@ -271,10 +257,7 @@ class ListPostLikes with _$ListPostLikes implements LemmyApiQuery<ListVotesRespo
 @freezed
 class HidePost with _$HidePost implements LemmyApiQuery<PostResponse> {
   @apiSerde
-  const factory HidePost({
-    required int postId,
-    required bool hide,
-  }) = _HidePost;
+  const factory HidePost({required int postId, required bool hide}) = _HidePost;
 
   const HidePost._();
   factory HidePost.fromJson(Map<String, dynamic> json) => _$HidePostFromJson(json);
@@ -293,10 +276,7 @@ class HidePost with _$HidePost implements LemmyApiQuery<PostResponse> {
 @freezed
 class MarkPostAsRead with _$MarkPostAsRead implements LemmyApiQuery<PostResponse> {
   @apiSerde
-  const factory MarkPostAsRead({
-    required int postId,
-    required bool read,
-  }) = _MarkPostAsRead;
+  const factory MarkPostAsRead({required int postId, required bool read}) = _MarkPostAsRead;
 
   const MarkPostAsRead._();
   factory MarkPostAsRead.fromJson(Map<String, dynamic> json) => _$MarkPostAsReadFromJson(json);
@@ -315,10 +295,7 @@ class MarkPostAsRead with _$MarkPostAsRead implements LemmyApiQuery<PostResponse
 @freezed
 class MarkManyPostsAsRead with _$MarkManyPostsAsRead implements LemmyApiQuery<SuccessResponse> {
   @apiSerde
-  const factory MarkManyPostsAsRead({
-    required List<int> postIds,
-    required bool read,
-  }) = _MarkManyPostsAsRead;
+  const factory MarkManyPostsAsRead({required List<int> postIds, required bool read}) = _MarkManyPostsAsRead;
 
   const MarkManyPostsAsRead._();
   factory MarkManyPostsAsRead.fromJson(Map<String, dynamic> json) => _$MarkManyPostsAsReadFromJson(json);

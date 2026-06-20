@@ -151,10 +151,7 @@ class EditCommunity with _$EditCommunity implements LemmyApiQuery<CommunityRespo
 @freezed
 class DeleteCommunity with _$DeleteCommunity implements LemmyApiQuery<CommunityResponse> {
   @apiSerde
-  const factory DeleteCommunity({
-    required int communityId,
-    required bool deleted,
-  }) = _DeleteCommunity;
+  const factory DeleteCommunity({required int communityId, required bool deleted}) = _DeleteCommunity;
 
   const DeleteCommunity._();
   factory DeleteCommunity.fromJson(Map<String, dynamic> json) => _$DeleteCommunityFromJson(json);
@@ -173,11 +170,7 @@ class DeleteCommunity with _$DeleteCommunity implements LemmyApiQuery<CommunityR
 @freezed
 class RemoveCommunity with _$RemoveCommunity implements LemmyApiQuery<CommunityResponse> {
   @apiSerde
-  const factory RemoveCommunity({
-    required int communityId,
-    required bool removed,
-    String? reason,
-  }) = _RemoveCommunity;
+  const factory RemoveCommunity({required int communityId, required bool removed, String? reason}) = _RemoveCommunity;
 
   const RemoveCommunity._();
   factory RemoveCommunity.fromJson(Map<String, dynamic> json) => _$RemoveCommunityFromJson(json);
@@ -196,10 +189,7 @@ class RemoveCommunity with _$RemoveCommunity implements LemmyApiQuery<CommunityR
 @freezed
 class TransferCommunity with _$TransferCommunity implements LemmyApiQuery<GetCommunityResponse> {
   @apiSerde
-  const factory TransferCommunity({
-    required int communityId,
-    required int personId,
-  }) = _TransferCommunity;
+  const factory TransferCommunity({required int communityId, required int personId}) = _TransferCommunity;
 
   const TransferCommunity._();
   factory TransferCommunity.fromJson(Map<String, dynamic> json) => _$TransferCommunityFromJson(json);
@@ -218,11 +208,7 @@ class TransferCommunity with _$TransferCommunity implements LemmyApiQuery<GetCom
 @freezed
 class HideCommunity with _$HideCommunity implements LemmyApiQuery<SuccessResponse> {
   @apiSerde
-  const factory HideCommunity({
-    required int communityId,
-    required bool hidden,
-    String? reason,
-  }) = _HideCommunity;
+  const factory HideCommunity({required int communityId, required bool hidden, String? reason}) = _HideCommunity;
 
   const HideCommunity._();
   factory HideCommunity.fromJson(Map<String, dynamic> json) => _$HideCommunityFromJson(json);
@@ -241,10 +227,7 @@ class HideCommunity with _$HideCommunity implements LemmyApiQuery<SuccessRespons
 @freezed
 class GetRandomCommunity with _$GetRandomCommunity implements LemmyApiQuery<CommunityResponse> {
   @apiSerde
-  const factory GetRandomCommunity({
-    ListingType? type,
-    bool? showNsfw,
-  }) = _GetRandomCommunity;
+  const factory GetRandomCommunity({ListingType? type, bool? showNsfw}) = _GetRandomCommunity;
 
   const GetRandomCommunity._();
   factory GetRandomCommunity.fromJson(Map<String, dynamic> json) => _$GetRandomCommunityFromJson(json);
@@ -267,13 +250,7 @@ class GetRandomCommunity with _$GetRandomCommunity implements LemmyApiQuery<Comm
 @freezed
 class CreateCommunityTag with _$CreateCommunityTag implements LemmyApiQuery<CommunityTag> {
   @apiSerde
-  const factory CreateCommunityTag({
-    required int communityId,
-    required String name,
-    required String displayName,
-    String? summary,
-    required String color,
-  }) = _CreateCommunityTag;
+  const factory CreateCommunityTag({required int communityId, required String name, required String displayName, String? summary, required String color}) = _CreateCommunityTag;
 
   const CreateCommunityTag._();
   factory CreateCommunityTag.fromJson(Map<String, dynamic> json) => _$CreateCommunityTagFromJson(json);
@@ -292,12 +269,7 @@ class CreateCommunityTag with _$CreateCommunityTag implements LemmyApiQuery<Comm
 @freezed
 class EditCommunityTag with _$EditCommunityTag implements LemmyApiQuery<CommunityTag> {
   @apiSerde
-  const factory EditCommunityTag({
-    required int tagId,
-    String? displayName,
-    String? summary,
-    String? color,
-  }) = _EditCommunityTag;
+  const factory EditCommunityTag({required int tagId, String? displayName, String? summary, String? color}) = _EditCommunityTag;
 
   const EditCommunityTag._();
   factory EditCommunityTag.fromJson(Map<String, dynamic> json) => _$EditCommunityTagFromJson(json);
@@ -316,10 +288,7 @@ class EditCommunityTag with _$EditCommunityTag implements LemmyApiQuery<Communit
 @freezed
 class DeleteCommunityTag with _$DeleteCommunityTag implements LemmyApiQuery<CommunityTag> {
   @apiSerde
-  const factory DeleteCommunityTag({
-    required int tagId,
-    required bool delete,
-  }) = _DeleteCommunityTag;
+  const factory DeleteCommunityTag({required int tagId, required bool delete}) = _DeleteCommunityTag;
 
   const DeleteCommunityTag._();
   factory DeleteCommunityTag.fromJson(Map<String, dynamic> json) => _$DeleteCommunityTagFromJson(json);
@@ -342,10 +311,7 @@ class DeleteCommunityTag with _$DeleteCommunityTag implements LemmyApiQuery<Comm
 @freezed
 class CreateCommunityReport with _$CreateCommunityReport implements LemmyApiQuery<CommunityReportResponse> {
   @apiSerde
-  const factory CreateCommunityReport({
-    required int communityId,
-    required String reason,
-  }) = _CreateCommunityReport;
+  const factory CreateCommunityReport({required int communityId, required String reason}) = _CreateCommunityReport;
 
   const CreateCommunityReport._();
   factory CreateCommunityReport.fromJson(Map<String, dynamic> json) => _$CreateCommunityReportFromJson(json);
@@ -364,10 +330,7 @@ class CreateCommunityReport with _$CreateCommunityReport implements LemmyApiQuer
 @freezed
 class ResolveCommunityReport with _$ResolveCommunityReport implements LemmyApiQuery<CommunityReportResponse> {
   @apiSerde
-  const factory ResolveCommunityReport({
-    required int reportId,
-    required bool resolved,
-  }) = _ResolveCommunityReport;
+  const factory ResolveCommunityReport({required int reportId, required bool resolved}) = _ResolveCommunityReport;
 
   const ResolveCommunityReport._();
   factory ResolveCommunityReport.fromJson(Map<String, dynamic> json) => _$ResolveCommunityReportFromJson(json);
@@ -386,10 +349,7 @@ class ResolveCommunityReport with _$ResolveCommunityReport implements LemmyApiQu
 @freezed
 class EditCommunityNotifications with _$EditCommunityNotifications implements LemmyApiQuery<SuccessResponse> {
   @apiSerde
-  const factory EditCommunityNotifications({
-    required int communityId,
-    required String mode,
-  }) = _EditCommunityNotifications;
+  const factory EditCommunityNotifications({required int communityId, required String mode}) = _EditCommunityNotifications;
 
   const EditCommunityNotifications._();
   factory EditCommunityNotifications.fromJson(Map<String, dynamic> json) => _$EditCommunityNotificationsFromJson(json);
@@ -412,11 +372,7 @@ class EditCommunityNotifications with _$EditCommunityNotifications implements Le
 @freezed
 class ApproveCommunityPendingFollow with _$ApproveCommunityPendingFollow implements LemmyApiQuery<SuccessResponse> {
   @apiSerde
-  const factory ApproveCommunityPendingFollow({
-    required int communityId,
-    required int followerId,
-    required bool approve,
-  }) = _ApproveCommunityPendingFollow;
+  const factory ApproveCommunityPendingFollow({required int communityId, required int followerId, required bool approve}) = _ApproveCommunityPendingFollow;
 
   const ApproveCommunityPendingFollow._();
   factory ApproveCommunityPendingFollow.fromJson(Map<String, dynamic> json) => _$ApproveCommunityPendingFollowFromJson(json);
@@ -435,12 +391,7 @@ class ApproveCommunityPendingFollow with _$ApproveCommunityPendingFollow impleme
 @freezed
 class ListCommunityPendingFollows with _$ListCommunityPendingFollows implements LemmyApiQuery<ListPendingFollowsResponse> {
   @apiSerde
-  const factory ListCommunityPendingFollows({
-    int? limit,
-    String? pageCursor,
-    bool? allCommunities,
-    bool? unreadOnly,
-  }) = _ListCommunityPendingFollows;
+  const factory ListCommunityPendingFollows({int? limit, String? pageCursor, bool? allCommunities, bool? unreadOnly}) = _ListCommunityPendingFollows;
 
   const ListCommunityPendingFollows._();
   factory ListCommunityPendingFollows.fromJson(Map<String, dynamic> json) => _$ListCommunityPendingFollowsFromJson(json);
@@ -534,4 +485,3 @@ class DeleteCommunityBanner with _$DeleteCommunityBanner implements LemmyApiQuer
   @override
   SuccessResponse responseFactory(Map<String, dynamic> json) => SuccessResponse.fromJson(json);
 }
-

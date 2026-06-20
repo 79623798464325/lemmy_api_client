@@ -10,12 +10,7 @@ part 'account_views.g.dart';
 @freezed
 class LocalUserView with _$LocalUserView {
   @modelSerde
-  const factory LocalUserView({
-    required LocalUser localUser,
-    required Person person,
-    bool? banned,
-    DateTime? banExpiresAt,
-  }) = _LocalUserView;
+  const factory LocalUserView({required LocalUser localUser, required Person person, bool? banned, DateTime? banExpiresAt}) = _LocalUserView;
   const LocalUserView._();
   factory LocalUserView.fromJson(Map<String, dynamic> json) => _$LocalUserViewFromJson(json);
 }
@@ -94,5 +89,3 @@ class InstanceBlockView with _$InstanceBlockView {
   const InstanceBlockView._();
   factory InstanceBlockView.fromJson(Map<String, dynamic> json) => _$InstanceBlockViewFromJson(json);
 }
-
-

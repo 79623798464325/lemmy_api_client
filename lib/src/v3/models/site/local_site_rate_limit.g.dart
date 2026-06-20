@@ -6,9 +6,7 @@ part of 'local_site_rate_limit.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$LocalSiteRateLimitImpl _$$LocalSiteRateLimitImplFromJson(
-  Map<String, dynamic> json,
-) => _$LocalSiteRateLimitImpl(
+_$LocalSiteRateLimitImpl _$$LocalSiteRateLimitImplFromJson(Map<String, dynamic> json) => _$LocalSiteRateLimitImpl(
   localSiteId: (json['local_site_id'] as num).toInt(),
   message: (json['message'] as num).toInt(),
   messagePerSecond: (json['message_per_second'] as num).toInt(),
@@ -23,18 +21,12 @@ _$LocalSiteRateLimitImpl _$$LocalSiteRateLimitImplFromJson(
   search: (json['search'] as num).toInt(),
   searchPerSecond: (json['search_per_second'] as num).toInt(),
   importUserSettings: (json['import_user_settings'] as num).toInt(),
-  importUserSettingsPerSecond:
-      (json['import_user_settings_per_second'] as num).toInt(),
+  importUserSettingsPerSecond: (json['import_user_settings_per_second'] as num).toInt(),
   published: const ForceUtcDateTime().fromJson(json['published'] as String),
-  updated: _$JsonConverterFromJson<String, DateTime>(
-    json['updated'],
-    const ForceUtcDateTime().fromJson,
-  ),
+  updated: _$JsonConverterFromJson<String, DateTime>(json['updated'], const ForceUtcDateTime().fromJson),
 );
 
-Map<String, dynamic> _$$LocalSiteRateLimitImplToJson(
-  _$LocalSiteRateLimitImpl instance,
-) => <String, dynamic>{
+Map<String, dynamic> _$$LocalSiteRateLimitImplToJson(_$LocalSiteRateLimitImpl instance) => <String, dynamic>{
   'local_site_id': instance.localSiteId,
   'message': instance.message,
   'message_per_second': instance.messagePerSecond,
@@ -51,18 +43,9 @@ Map<String, dynamic> _$$LocalSiteRateLimitImplToJson(
   'import_user_settings': instance.importUserSettings,
   'import_user_settings_per_second': instance.importUserSettingsPerSecond,
   'published': const ForceUtcDateTime().toJson(instance.published),
-  'updated': _$JsonConverterToJson<String, DateTime>(
-    instance.updated,
-    const ForceUtcDateTime().toJson,
-  ),
+  'updated': _$JsonConverterToJson<String, DateTime>(instance.updated, const ForceUtcDateTime().toJson),
 };
 
-Value? _$JsonConverterFromJson<Json, Value>(
-  Object? json,
-  Value? Function(Json json) fromJson,
-) => json == null ? null : fromJson(json as Json);
+Value? _$JsonConverterFromJson<Json, Value>(Object? json, Value? Function(Json json) fromJson) => json == null ? null : fromJson(json as Json);
 
-Json? _$JsonConverterToJson<Json, Value>(
-  Value? value,
-  Json? Function(Value value) toJson,
-) => value == null ? null : toJson(value);
+Json? _$JsonConverterToJson<Json, Value>(Value? value, Json? Function(Value value) toJson) => value == null ? null : toJson(value);

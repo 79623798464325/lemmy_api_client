@@ -12,13 +12,7 @@ part 'custom_emoji.g.dart';
 @freezed
 class CreateCustomEmoji with _$CreateCustomEmoji implements LemmyApiQuery<CustomEmojiResponse> {
   @apiSerde
-  const factory CreateCustomEmoji({
-    required String category,
-    required String shortcode,
-    required String imageUrl,
-    required String altText,
-    required List<String> keywords,
-  }) = _CreateCustomEmoji;
+  const factory CreateCustomEmoji({required String category, required String shortcode, required String imageUrl, required String altText, required List<String> keywords}) = _CreateCustomEmoji;
 
   const CreateCustomEmoji._();
   factory CreateCustomEmoji.fromJson(Map<String, dynamic> json) => _$CreateCustomEmojiFromJson(json);
@@ -37,14 +31,8 @@ class CreateCustomEmoji with _$CreateCustomEmoji implements LemmyApiQuery<Custom
 @freezed
 class EditCustomEmoji with _$EditCustomEmoji implements LemmyApiQuery<CustomEmojiResponse> {
   @apiSerde
-  const factory EditCustomEmoji({
-    required int id,
-    required String category,
-    required String shortcode,
-    required String imageUrl,
-    required String altText,
-    required List<String> keywords,
-  }) = _EditCustomEmoji;
+  const factory EditCustomEmoji({required int id, required String category, required String shortcode, required String imageUrl, required String altText, required List<String> keywords}) =
+      _EditCustomEmoji;
 
   const EditCustomEmoji._();
   factory EditCustomEmoji.fromJson(Map<String, dynamic> json) => _$EditCustomEmojiFromJson(json);
@@ -63,9 +51,7 @@ class EditCustomEmoji with _$EditCustomEmoji implements LemmyApiQuery<CustomEmoj
 @freezed
 class DeleteCustomEmoji with _$DeleteCustomEmoji implements LemmyApiQuery<SuccessResponse> {
   @apiSerde
-  const factory DeleteCustomEmoji({
-    required int id,
-  }) = _DeleteCustomEmoji;
+  const factory DeleteCustomEmoji({required int id}) = _DeleteCustomEmoji;
 
   const DeleteCustomEmoji._();
   factory DeleteCustomEmoji.fromJson(Map<String, dynamic> json) => _$DeleteCustomEmojiFromJson(json);
@@ -84,9 +70,7 @@ class DeleteCustomEmoji with _$DeleteCustomEmoji implements LemmyApiQuery<Succes
 @freezed
 class ListCustomEmojis with _$ListCustomEmojis implements LemmyApiQuery<ListCustomEmojisResponse> {
   @apiSerde
-  const factory ListCustomEmojis({
-    String? category,
-  }) = _ListCustomEmojis;
+  const factory ListCustomEmojis({String? category}) = _ListCustomEmojis;
 
   const ListCustomEmojis._();
   factory ListCustomEmojis.fromJson(Map<String, dynamic> json) => _$ListCustomEmojisFromJson(json);

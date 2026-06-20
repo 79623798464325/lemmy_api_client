@@ -34,10 +34,7 @@ class GetSiteResponse with _$GetSiteResponse {
 @freezed
 class GetPostsResponse with _$GetPostsResponse {
   @modelSerde
-  const factory GetPostsResponse({
-    @JsonKey(name: 'items') @Default([]) List<PostView> posts,
-    String? nextPage,
-  }) = _GetPostsResponse;
+  const factory GetPostsResponse({@JsonKey(name: 'items') @Default([]) List<PostView> posts, String? nextPage}) = _GetPostsResponse;
 
   const GetPostsResponse._();
   factory GetPostsResponse.fromJson(Map<String, dynamic> json) => _$GetPostsResponseFromJson(json);
@@ -47,11 +44,7 @@ class GetPostsResponse with _$GetPostsResponse {
 @freezed
 class GetPostResponse with _$GetPostResponse {
   @modelSerde
-  const factory GetPostResponse({
-    required PostView postView,
-    required CommunityView communityView,
-    @Default([]) List<PostView> crossPosts,
-  }) = _GetPostResponse;
+  const factory GetPostResponse({required PostView postView, required CommunityView communityView, @Default([]) List<PostView> crossPosts}) = _GetPostResponse;
 
   const GetPostResponse._();
   factory GetPostResponse.fromJson(Map<String, dynamic> json) => _$GetPostResponseFromJson(json);
@@ -61,9 +54,7 @@ class GetPostResponse with _$GetPostResponse {
 @freezed
 class GetCommentsResponse with _$GetCommentsResponse {
   @modelSerde
-  const factory GetCommentsResponse({
-    @JsonKey(name: 'items') @Default([]) List<CommentView> comments,
-  }) = _GetCommentsResponse;
+  const factory GetCommentsResponse({@JsonKey(name: 'items') @Default([]) List<CommentView> comments}) = _GetCommentsResponse;
 
   const GetCommentsResponse._();
   factory GetCommentsResponse.fromJson(Map<String, dynamic> json) => _$GetCommentsResponseFromJson(json);
@@ -73,10 +64,7 @@ class GetCommentsResponse with _$GetCommentsResponse {
 @freezed
 class GetCommentsSlimResponse with _$GetCommentsSlimResponse {
   @modelSerde
-  const factory GetCommentsSlimResponse({
-    @JsonKey(name: 'items') @Default([]) List<CommentSlimView> comments,
-    String? nextPage,
-  }) = _GetCommentsSlimResponse;
+  const factory GetCommentsSlimResponse({@JsonKey(name: 'items') @Default([]) List<CommentSlimView> comments, String? nextPage}) = _GetCommentsSlimResponse;
 
   const GetCommentsSlimResponse._();
   factory GetCommentsSlimResponse.fromJson(Map<String, dynamic> json) => _$GetCommentsSlimResponseFromJson(json);
@@ -106,11 +94,7 @@ class GetCommunityResponse with _$GetCommunityResponse {
 @freezed
 class ListCommunitiesResponse with _$ListCommunitiesResponse {
   @modelSerde
-  const factory ListCommunitiesResponse({
-    @JsonKey(name: 'items') @Default([]) List<CommunityView> communities,
-    String? prevPage,
-    String? nextPage,
-  }) = _ListCommunitiesResponse;
+  const factory ListCommunitiesResponse({@JsonKey(name: 'items') @Default([]) List<CommunityView> communities, String? prevPage, String? nextPage}) = _ListCommunitiesResponse;
 
   const ListCommunitiesResponse._();
   factory ListCommunitiesResponse.fromJson(Map<String, dynamic> json) => _$ListCommunitiesResponseFromJson(json);
@@ -515,10 +499,7 @@ class ListPersonsResponse with _$ListPersonsResponse {
 @freezed
 class PostCommentCombinedView with _$PostCommentCombinedView {
   @modelSerde
-  const factory PostCommentCombinedView({
-    PostView? post,
-    CommentView? comment,
-  }) = _PostCommentCombinedView;
+  const factory PostCommentCombinedView({PostView? post, CommentView? comment}) = _PostCommentCombinedView;
 
   const PostCommentCombinedView._();
   factory PostCommentCombinedView.fromJson(Map<String, dynamic> json) => _$PostCommentCombinedViewFromJson(json);
@@ -529,10 +510,7 @@ class PostCommentCombinedView with _$PostCommentCombinedView {
 @freezed
 class ListPersonContentResponse with _$ListPersonContentResponse {
   @modelSerde
-  const factory ListPersonContentResponse({
-    @Default([]) List<PostCommentCombinedView> items,
-    String? nextPage,
-  }) = _ListPersonContentResponse;
+  const factory ListPersonContentResponse({@Default([]) List<PostCommentCombinedView> items, String? nextPage}) = _ListPersonContentResponse;
 
   const ListPersonContentResponse._();
   factory ListPersonContentResponse.fromJson(Map<String, dynamic> json) => _$ListPersonContentResponseFromJson(json);
@@ -542,11 +520,7 @@ class ListPersonContentResponse with _$ListPersonContentResponse {
 @freezed
 class UnreadCountsResponse with _$UnreadCountsResponse {
   @modelSerde
-  const factory UnreadCountsResponse({
-    required int replies,
-    required int mentions,
-    required int privateMessages,
-  }) = _UnreadCountsResponse;
+  const factory UnreadCountsResponse({required int replies, required int mentions, required int privateMessages}) = _UnreadCountsResponse;
 
   const UnreadCountsResponse._();
   factory UnreadCountsResponse.fromJson(Map<String, dynamic> json) => _$UnreadCountsResponseFromJson(json);
@@ -566,11 +540,7 @@ class CommunityReportResponse with _$CommunityReportResponse {
 @freezed
 class ListPendingFollowsResponse with _$ListPendingFollowsResponse {
   @modelSerde
-  const factory ListPendingFollowsResponse({
-    @Default([]) List<PendingFollowerView> items,
-    String? prevPage,
-    String? nextPage,
-  }) = _ListPendingFollowsResponse;
+  const factory ListPendingFollowsResponse({@Default([]) List<PendingFollowerView> items, String? prevPage, String? nextPage}) = _ListPendingFollowsResponse;
 
   const ListPendingFollowsResponse._();
   factory ListPendingFollowsResponse.fromJson(Map<String, dynamic> json) => _$ListPendingFollowsResponseFromJson(json);
@@ -614,10 +584,7 @@ class RegistrationApplicationResponse with _$RegistrationApplicationResponse {
 @freezed
 class UploadImageResponse with _$UploadImageResponse {
   @modelSerde
-  const factory UploadImageResponse({
-    required String filename,
-    required String imageUrl,
-  }) = _UploadImageResponse;
+  const factory UploadImageResponse({required String filename, required String imageUrl}) = _UploadImageResponse;
 
   const UploadImageResponse._();
   factory UploadImageResponse.fromJson(Map<String, dynamic> json) => _$UploadImageResponseFromJson(json);
@@ -627,11 +594,7 @@ class UploadImageResponse with _$UploadImageResponse {
 @freezed
 class ListVotesResponse with _$ListVotesResponse {
   @modelSerde
-  const factory ListVotesResponse({
-    @Default([]) List<VoteView> items,
-    String? prevPage,
-    String? nextPage,
-  }) = _ListVotesResponse;
+  const factory ListVotesResponse({@Default([]) List<VoteView> items, String? prevPage, String? nextPage}) = _ListVotesResponse;
 
   const ListVotesResponse._();
   factory ListVotesResponse.fromJson(Map<String, dynamic> json) => _$ListVotesResponseFromJson(json);
@@ -641,11 +604,7 @@ class ListVotesResponse with _$ListVotesResponse {
 @freezed
 class ListLocalUsersResponse with _$ListLocalUsersResponse {
   @modelSerde
-  const factory ListLocalUsersResponse({
-    @Default([]) List<LocalUserView> items,
-    String? prevPage,
-    String? nextPage,
-  }) = _ListLocalUsersResponse;
+  const factory ListLocalUsersResponse({@Default([]) List<LocalUserView> items, String? prevPage, String? nextPage}) = _ListLocalUsersResponse;
 
   const ListLocalUsersResponse._();
   factory ListLocalUsersResponse.fromJson(Map<String, dynamic> json) => _$ListLocalUsersResponseFromJson(json);
@@ -655,11 +614,7 @@ class ListLocalUsersResponse with _$ListLocalUsersResponse {
 @freezed
 class ListTaglinesResponse with _$ListTaglinesResponse {
   @modelSerde
-  const factory ListTaglinesResponse({
-    @Default([]) List<Tagline> items,
-    String? prevPage,
-    String? nextPage,
-  }) = _ListTaglinesResponse;
+  const factory ListTaglinesResponse({@Default([]) List<Tagline> items, String? prevPage, String? nextPage}) = _ListTaglinesResponse;
 
   const ListTaglinesResponse._();
   factory ListTaglinesResponse.fromJson(Map<String, dynamic> json) => _$ListTaglinesResponseFromJson(json);
@@ -669,11 +624,7 @@ class ListTaglinesResponse with _$ListTaglinesResponse {
 @freezed
 class ListMediaResponse with _$ListMediaResponse {
   @modelSerde
-  const factory ListMediaResponse({
-    @Default([]) List<LocalImageView> items,
-    String? prevPage,
-    String? nextPage,
-  }) = _ListMediaResponse;
+  const factory ListMediaResponse({@Default([]) List<LocalImageView> items, String? prevPage, String? nextPage}) = _ListMediaResponse;
 
   const ListMediaResponse._();
   factory ListMediaResponse.fromJson(Map<String, dynamic> json) => _$ListMediaResponseFromJson(json);
@@ -687,9 +638,7 @@ class ListMediaResponse with _$ListMediaResponse {
 @freezed
 class MultiCommunityResponse with _$MultiCommunityResponse {
   @modelSerde
-  const factory MultiCommunityResponse({
-    required MultiCommunityView multiCommunityView,
-  }) = _MultiCommunityResponse;
+  const factory MultiCommunityResponse({required MultiCommunityView multiCommunityView}) = _MultiCommunityResponse;
 
   const MultiCommunityResponse._();
   factory MultiCommunityResponse.fromJson(Map<String, dynamic> json) => _$MultiCommunityResponseFromJson(json);
@@ -699,10 +648,7 @@ class MultiCommunityResponse with _$MultiCommunityResponse {
 @freezed
 class GetMultiCommunityResponse with _$GetMultiCommunityResponse {
   @modelSerde
-  const factory GetMultiCommunityResponse({
-    required MultiCommunityView multiCommunityView,
-    @Default([]) List<CommunityView> communities,
-  }) = _GetMultiCommunityResponse;
+  const factory GetMultiCommunityResponse({required MultiCommunityView multiCommunityView, @Default([]) List<CommunityView> communities}) = _GetMultiCommunityResponse;
 
   const GetMultiCommunityResponse._();
   factory GetMultiCommunityResponse.fromJson(Map<String, dynamic> json) => _$GetMultiCommunityResponseFromJson(json);
@@ -712,9 +658,7 @@ class GetMultiCommunityResponse with _$GetMultiCommunityResponse {
 @freezed
 class CustomEmojiResponse with _$CustomEmojiResponse {
   @modelSerde
-  const factory CustomEmojiResponse({
-    required CustomEmojiView customEmoji,
-  }) = _CustomEmojiResponse;
+  const factory CustomEmojiResponse({required CustomEmojiView customEmoji}) = _CustomEmojiResponse;
 
   const CustomEmojiResponse._();
   factory CustomEmojiResponse.fromJson(Map<String, dynamic> json) => _$CustomEmojiResponseFromJson(json);
@@ -724,9 +668,7 @@ class CustomEmojiResponse with _$CustomEmojiResponse {
 @freezed
 class ListCustomEmojisResponse with _$ListCustomEmojisResponse {
   @modelSerde
-  const factory ListCustomEmojisResponse({
-    @Default([]) List<CustomEmojiView> customEmojis,
-  }) = _ListCustomEmojisResponse;
+  const factory ListCustomEmojisResponse({@Default([]) List<CustomEmojiView> customEmojis}) = _ListCustomEmojisResponse;
 
   const ListCustomEmojisResponse._();
   factory ListCustomEmojisResponse.fromJson(Map<String, dynamic> json) => _$ListCustomEmojisResponseFromJson(json);
@@ -736,9 +678,7 @@ class ListCustomEmojisResponse with _$ListCustomEmojisResponse {
 @freezed
 class ListLoginsResponse with _$ListLoginsResponse {
   @modelSerde
-  const factory ListLoginsResponse({
-    @Default([]) List<LoginToken> logins,
-  }) = _ListLoginsResponse;
+  const factory ListLoginsResponse({@Default([]) List<LoginToken> logins}) = _ListLoginsResponse;
 
   const ListLoginsResponse._();
   factory ListLoginsResponse.fromJson(Map<String, dynamic> json) => _$ListLoginsResponseFromJson(json);
@@ -748,9 +688,7 @@ class ListLoginsResponse with _$ListLoginsResponse {
 @freezed
 class CreateInvitationResponse with _$CreateInvitationResponse {
   @modelSerde
-  const factory CreateInvitationResponse({
-    required LocalUserInvite invite,
-  }) = _CreateInvitationResponse;
+  const factory CreateInvitationResponse({required LocalUserInvite invite}) = _CreateInvitationResponse;
 
   const CreateInvitationResponse._();
   factory CreateInvitationResponse.fromJson(Map<String, dynamic> json) => _$CreateInvitationResponseFromJson(json);
@@ -760,11 +698,7 @@ class CreateInvitationResponse with _$CreateInvitationResponse {
 @freezed
 class ListInvitationsResponse with _$ListInvitationsResponse {
   @modelSerde
-  const factory ListInvitationsResponse({
-    @Default([]) List<LocalUserInvite> items,
-    String? prevPage,
-    String? nextPage,
-  }) = _ListInvitationsResponse;
+  const factory ListInvitationsResponse({@Default([]) List<LocalUserInvite> items, String? prevPage, String? nextPage}) = _ListInvitationsResponse;
 
   const ListInvitationsResponse._();
   factory ListInvitationsResponse.fromJson(Map<String, dynamic> json) => _$ListInvitationsResponseFromJson(json);
@@ -774,9 +708,7 @@ class ListInvitationsResponse with _$ListInvitationsResponse {
 @freezed
 class GenerateTotpSecretResponse with _$GenerateTotpSecretResponse {
   @modelSerde
-  const factory GenerateTotpSecretResponse({
-    required String totpSecretUrl,
-  }) = _GenerateTotpSecretResponse;
+  const factory GenerateTotpSecretResponse({required String totpSecretUrl}) = _GenerateTotpSecretResponse;
 
   const GenerateTotpSecretResponse._();
   factory GenerateTotpSecretResponse.fromJson(Map<String, dynamic> json) => _$GenerateTotpSecretResponseFromJson(json);
@@ -786,9 +718,7 @@ class GenerateTotpSecretResponse with _$GenerateTotpSecretResponse {
 @freezed
 class EditTotpResponse with _$EditTotpResponse {
   @modelSerde
-  const factory EditTotpResponse({
-    required bool enabled,
-  }) = _EditTotpResponse;
+  const factory EditTotpResponse({required bool enabled}) = _EditTotpResponse;
 
   const EditTotpResponse._();
   factory EditTotpResponse.fromJson(Map<String, dynamic> json) => _$EditTotpResponseFromJson(json);
@@ -798,11 +728,7 @@ class EditTotpResponse with _$EditTotpResponse {
 @freezed
 class ListMultiCommunitiesResponse with _$ListMultiCommunitiesResponse {
   @modelSerde
-  const factory ListMultiCommunitiesResponse({
-    @Default([]) List<MultiCommunityView> items,
-    String? prevPage,
-    String? nextPage,
-  }) = _ListMultiCommunitiesResponse;
+  const factory ListMultiCommunitiesResponse({@Default([]) List<MultiCommunityView> items, String? prevPage, String? nextPage}) = _ListMultiCommunitiesResponse;
 
   const ListMultiCommunitiesResponse._();
   factory ListMultiCommunitiesResponse.fromJson(Map<String, dynamic> json) => _$ListMultiCommunitiesResponseFromJson(json);
@@ -876,10 +802,7 @@ class ApproveRegistrationApplicationResponse with _$ApproveRegistrationApplicati
 @freezed
 class ListRegistrationApplicationsResponse with _$ListRegistrationApplicationsResponse {
   @modelSerde
-  const factory ListRegistrationApplicationsResponse({
-    @Default([]) List<RegistrationApplicationView> registrationApplications,
-    String? nextPage,
-  }) = _ListRegistrationApplicationsResponse;
+  const factory ListRegistrationApplicationsResponse({@Default([]) List<RegistrationApplicationView> registrationApplications, String? nextPage}) = _ListRegistrationApplicationsResponse;
 
   const ListRegistrationApplicationsResponse._();
   factory ListRegistrationApplicationsResponse.fromJson(Map<String, dynamic> json) => _$ListRegistrationApplicationsResponseFromJson(json);

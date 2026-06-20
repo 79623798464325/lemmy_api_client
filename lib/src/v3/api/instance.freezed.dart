@@ -31,23 +31,18 @@ mixin _$BlockInstance {
   /// Create a copy of BlockInstance
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $BlockInstanceCopyWith<BlockInstance> get copyWith =>
-      throw _privateConstructorUsedError;
+  $BlockInstanceCopyWith<BlockInstance> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $BlockInstanceCopyWith<$Res> {
-  factory $BlockInstanceCopyWith(
-    BlockInstance value,
-    $Res Function(BlockInstance) then,
-  ) = _$BlockInstanceCopyWithImpl<$Res, BlockInstance>;
+  factory $BlockInstanceCopyWith(BlockInstance value, $Res Function(BlockInstance) then) = _$BlockInstanceCopyWithImpl<$Res, BlockInstance>;
   @useResult
   $Res call({int instanceId, bool block, String? auth});
 }
 
 /// @nodoc
-class _$BlockInstanceCopyWithImpl<$Res, $Val extends BlockInstance>
-    implements $BlockInstanceCopyWith<$Res> {
+class _$BlockInstanceCopyWithImpl<$Res, $Val extends BlockInstance> implements $BlockInstanceCopyWith<$Res> {
   _$BlockInstanceCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -59,11 +54,7 @@ class _$BlockInstanceCopyWithImpl<$Res, $Val extends BlockInstance>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? instanceId = null,
-    Object? block = null,
-    Object? auth = freezed,
-  }) {
+  $Res call({Object? instanceId = null, Object? block = null, Object? auth = freezed}) {
     return _then(
       _value.copyWith(
             instanceId:
@@ -88,35 +79,22 @@ class _$BlockInstanceCopyWithImpl<$Res, $Val extends BlockInstance>
 }
 
 /// @nodoc
-abstract class _$$BlockInstanceImplCopyWith<$Res>
-    implements $BlockInstanceCopyWith<$Res> {
-  factory _$$BlockInstanceImplCopyWith(
-    _$BlockInstanceImpl value,
-    $Res Function(_$BlockInstanceImpl) then,
-  ) = __$$BlockInstanceImplCopyWithImpl<$Res>;
+abstract class _$$BlockInstanceImplCopyWith<$Res> implements $BlockInstanceCopyWith<$Res> {
+  factory _$$BlockInstanceImplCopyWith(_$BlockInstanceImpl value, $Res Function(_$BlockInstanceImpl) then) = __$$BlockInstanceImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int instanceId, bool block, String? auth});
 }
 
 /// @nodoc
-class __$$BlockInstanceImplCopyWithImpl<$Res>
-    extends _$BlockInstanceCopyWithImpl<$Res, _$BlockInstanceImpl>
-    implements _$$BlockInstanceImplCopyWith<$Res> {
-  __$$BlockInstanceImplCopyWithImpl(
-    _$BlockInstanceImpl _value,
-    $Res Function(_$BlockInstanceImpl) _then,
-  ) : super(_value, _then);
+class __$$BlockInstanceImplCopyWithImpl<$Res> extends _$BlockInstanceCopyWithImpl<$Res, _$BlockInstanceImpl> implements _$$BlockInstanceImplCopyWith<$Res> {
+  __$$BlockInstanceImplCopyWithImpl(_$BlockInstanceImpl _value, $Res Function(_$BlockInstanceImpl) _then) : super(_value, _then);
 
   /// Create a copy of BlockInstance
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? instanceId = null,
-    Object? block = null,
-    Object? auth = freezed,
-  }) {
+  $Res call({Object? instanceId = null, Object? block = null, Object? auth = freezed}) {
     return _then(
       _$BlockInstanceImpl(
         instanceId:
@@ -143,14 +121,9 @@ class __$$BlockInstanceImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$BlockInstanceImpl extends _BlockInstance {
-  const _$BlockInstanceImpl({
-    required this.instanceId,
-    required this.block,
-    this.auth,
-  }) : super._();
+  const _$BlockInstanceImpl({required this.instanceId, required this.block, this.auth}) : super._();
 
-  factory _$BlockInstanceImpl.fromJson(Map<String, dynamic> json) =>
-      _$$BlockInstanceImplFromJson(json);
+  factory _$BlockInstanceImpl.fromJson(Map<String, dynamic> json) => _$$BlockInstanceImplFromJson(json);
 
   @override
   final int instanceId;
@@ -171,8 +144,7 @@ class _$BlockInstanceImpl extends _BlockInstance {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BlockInstanceImpl &&
-            (identical(other.instanceId, instanceId) ||
-                other.instanceId == instanceId) &&
+            (identical(other.instanceId, instanceId) || other.instanceId == instanceId) &&
             (identical(other.block, block) || other.block == block) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
@@ -186,8 +158,7 @@ class _$BlockInstanceImpl extends _BlockInstance {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$BlockInstanceImplCopyWith<_$BlockInstanceImpl> get copyWith =>
-      __$$BlockInstanceImplCopyWithImpl<_$BlockInstanceImpl>(this, _$identity);
+  _$$BlockInstanceImplCopyWith<_$BlockInstanceImpl> get copyWith => __$$BlockInstanceImplCopyWithImpl<_$BlockInstanceImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -196,15 +167,10 @@ class _$BlockInstanceImpl extends _BlockInstance {
 }
 
 abstract class _BlockInstance extends BlockInstance {
-  const factory _BlockInstance({
-    required final int instanceId,
-    required final bool block,
-    final String? auth,
-  }) = _$BlockInstanceImpl;
+  const factory _BlockInstance({required final int instanceId, required final bool block, final String? auth}) = _$BlockInstanceImpl;
   const _BlockInstance._() : super._();
 
-  factory _BlockInstance.fromJson(Map<String, dynamic> json) =
-      _$BlockInstanceImpl.fromJson;
+  factory _BlockInstance.fromJson(Map<String, dynamic> json) = _$BlockInstanceImpl.fromJson;
 
   @override
   int get instanceId; // v0.19.0
@@ -217,6 +183,5 @@ abstract class _BlockInstance extends BlockInstance {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$BlockInstanceImplCopyWith<_$BlockInstanceImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$BlockInstanceImplCopyWith<_$BlockInstanceImpl> get copyWith => throw _privateConstructorUsedError;
 }

@@ -30,16 +30,12 @@ mixin _$InstanceBlockView {
   /// Create a copy of InstanceBlockView
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $InstanceBlockViewCopyWith<InstanceBlockView> get copyWith =>
-      throw _privateConstructorUsedError;
+  $InstanceBlockViewCopyWith<InstanceBlockView> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $InstanceBlockViewCopyWith<$Res> {
-  factory $InstanceBlockViewCopyWith(
-    InstanceBlockView value,
-    $Res Function(InstanceBlockView) then,
-  ) = _$InstanceBlockViewCopyWithImpl<$Res, InstanceBlockView>;
+  factory $InstanceBlockViewCopyWith(InstanceBlockView value, $Res Function(InstanceBlockView) then) = _$InstanceBlockViewCopyWithImpl<$Res, InstanceBlockView>;
   @useResult
   $Res call({Instance instance, int personId});
 
@@ -47,8 +43,7 @@ abstract class $InstanceBlockViewCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$InstanceBlockViewCopyWithImpl<$Res, $Val extends InstanceBlockView>
-    implements $InstanceBlockViewCopyWith<$Res> {
+class _$InstanceBlockViewCopyWithImpl<$Res, $Val extends InstanceBlockView> implements $InstanceBlockViewCopyWith<$Res> {
   _$InstanceBlockViewCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -90,12 +85,8 @@ class _$InstanceBlockViewCopyWithImpl<$Res, $Val extends InstanceBlockView>
 }
 
 /// @nodoc
-abstract class _$$InstanceBlockViewImplCopyWith<$Res>
-    implements $InstanceBlockViewCopyWith<$Res> {
-  factory _$$InstanceBlockViewImplCopyWith(
-    _$InstanceBlockViewImpl value,
-    $Res Function(_$InstanceBlockViewImpl) then,
-  ) = __$$InstanceBlockViewImplCopyWithImpl<$Res>;
+abstract class _$$InstanceBlockViewImplCopyWith<$Res> implements $InstanceBlockViewCopyWith<$Res> {
+  factory _$$InstanceBlockViewImplCopyWith(_$InstanceBlockViewImpl value, $Res Function(_$InstanceBlockViewImpl) then) = __$$InstanceBlockViewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Instance instance, int personId});
@@ -105,13 +96,8 @@ abstract class _$$InstanceBlockViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$InstanceBlockViewImplCopyWithImpl<$Res>
-    extends _$InstanceBlockViewCopyWithImpl<$Res, _$InstanceBlockViewImpl>
-    implements _$$InstanceBlockViewImplCopyWith<$Res> {
-  __$$InstanceBlockViewImplCopyWithImpl(
-    _$InstanceBlockViewImpl _value,
-    $Res Function(_$InstanceBlockViewImpl) _then,
-  ) : super(_value, _then);
+class __$$InstanceBlockViewImplCopyWithImpl<$Res> extends _$InstanceBlockViewCopyWithImpl<$Res, _$InstanceBlockViewImpl> implements _$$InstanceBlockViewImplCopyWith<$Res> {
+  __$$InstanceBlockViewImplCopyWithImpl(_$InstanceBlockViewImpl _value, $Res Function(_$InstanceBlockViewImpl) _then) : super(_value, _then);
 
   /// Create a copy of InstanceBlockView
   /// with the given fields replaced by the non-null parameter values.
@@ -139,13 +125,9 @@ class __$$InstanceBlockViewImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$InstanceBlockViewImpl extends _InstanceBlockView {
-  const _$InstanceBlockViewImpl({
-    required this.instance,
-    required this.personId,
-  }) : super._();
+  const _$InstanceBlockViewImpl({required this.instance, required this.personId}) : super._();
 
-  factory _$InstanceBlockViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$InstanceBlockViewImplFromJson(json);
+  factory _$InstanceBlockViewImpl.fromJson(Map<String, dynamic> json) => _$$InstanceBlockViewImplFromJson(json);
 
   @override
   final Instance instance;
@@ -163,10 +145,8 @@ class _$InstanceBlockViewImpl extends _InstanceBlockView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InstanceBlockViewImpl &&
-            (identical(other.instance, instance) ||
-                other.instance == instance) &&
-            (identical(other.personId, personId) ||
-                other.personId == personId));
+            (identical(other.instance, instance) || other.instance == instance) &&
+            (identical(other.personId, personId) || other.personId == personId));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -178,11 +158,7 @@ class _$InstanceBlockViewImpl extends _InstanceBlockView {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$InstanceBlockViewImplCopyWith<_$InstanceBlockViewImpl> get copyWith =>
-      __$$InstanceBlockViewImplCopyWithImpl<_$InstanceBlockViewImpl>(
-        this,
-        _$identity,
-      );
+  _$$InstanceBlockViewImplCopyWith<_$InstanceBlockViewImpl> get copyWith => __$$InstanceBlockViewImplCopyWithImpl<_$InstanceBlockViewImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -191,14 +167,10 @@ class _$InstanceBlockViewImpl extends _InstanceBlockView {
 }
 
 abstract class _InstanceBlockView extends InstanceBlockView {
-  const factory _InstanceBlockView({
-    required final Instance instance,
-    required final int personId,
-  }) = _$InstanceBlockViewImpl;
+  const factory _InstanceBlockView({required final Instance instance, required final int personId}) = _$InstanceBlockViewImpl;
   const _InstanceBlockView._() : super._();
 
-  factory _InstanceBlockView.fromJson(Map<String, dynamic> json) =
-      _$InstanceBlockViewImpl.fromJson;
+  factory _InstanceBlockView.fromJson(Map<String, dynamic> json) = _$InstanceBlockViewImpl.fromJson;
 
   @override
   Instance get instance; // v0.19.0
@@ -209,6 +181,5 @@ abstract class _InstanceBlockView extends InstanceBlockView {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$InstanceBlockViewImplCopyWith<_$InstanceBlockViewImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$InstanceBlockViewImplCopyWith<_$InstanceBlockViewImpl> get copyWith => throw _privateConstructorUsedError;
 }

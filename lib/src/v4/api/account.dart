@@ -338,10 +338,7 @@ class ListLogins with _$ListLogins implements LemmyApiQuery<ListLoginsResponse> 
 @freezed
 class CreateRegistrationInvitation with _$CreateRegistrationInvitation implements LemmyApiQuery<CreateInvitationResponse> {
   @apiSerde
-  const factory CreateRegistrationInvitation({
-    required int maxUses,
-    DateTime? expiresAt,
-  }) = _CreateRegistrationInvitation;
+  const factory CreateRegistrationInvitation({required int maxUses, DateTime? expiresAt}) = _CreateRegistrationInvitation;
 
   const CreateRegistrationInvitation._();
   factory CreateRegistrationInvitation.fromJson(Map<String, dynamic> json) => _$CreateRegistrationInvitationFromJson(json);
@@ -360,10 +357,7 @@ class CreateRegistrationInvitation with _$CreateRegistrationInvitation implement
 @freezed
 class ListRegistrationInvitations with _$ListRegistrationInvitations implements LemmyApiQuery<ListInvitationsResponse> {
   @apiSerde
-  const factory ListRegistrationInvitations({
-    int? limit,
-    String? pageCursor,
-  }) = _ListRegistrationInvitations;
+  const factory ListRegistrationInvitations({int? limit, String? pageCursor}) = _ListRegistrationInvitations;
 
   const ListRegistrationInvitations._();
   factory ListRegistrationInvitations.fromJson(Map<String, dynamic> json) => _$ListRegistrationInvitationsFromJson(json);
@@ -382,9 +376,7 @@ class ListRegistrationInvitations with _$ListRegistrationInvitations implements 
 @freezed
 class RevokeRegistrationInvitation with _$RevokeRegistrationInvitation implements LemmyApiQuery<SuccessResponse> {
   @apiSerde
-  const factory RevokeRegistrationInvitation({
-    required String token,
-  }) = _RevokeRegistrationInvitation;
+  const factory RevokeRegistrationInvitation({required String token}) = _RevokeRegistrationInvitation;
 
   const RevokeRegistrationInvitation._();
   factory RevokeRegistrationInvitation.fromJson(Map<String, dynamic> json) => _$RevokeRegistrationInvitationFromJson(json);
@@ -422,10 +414,7 @@ class MarkDonationDialogShown with _$MarkDonationDialogShown implements LemmyApi
 @freezed
 class UserBlockInstanceCommunities with _$UserBlockInstanceCommunities implements LemmyApiQuery<SuccessResponse> {
   @apiSerde
-  const factory UserBlockInstanceCommunities({
-    required int instanceId,
-    required bool block,
-  }) = _UserBlockInstanceCommunities;
+  const factory UserBlockInstanceCommunities({required int instanceId, required bool block}) = _UserBlockInstanceCommunities;
 
   const UserBlockInstanceCommunities._();
   factory UserBlockInstanceCommunities.fromJson(Map<String, dynamic> json) => _$UserBlockInstanceCommunitiesFromJson(json);
@@ -444,10 +433,7 @@ class UserBlockInstanceCommunities with _$UserBlockInstanceCommunities implement
 @freezed
 class UserBlockInstancePersons with _$UserBlockInstancePersons implements LemmyApiQuery<SuccessResponse> {
   @apiSerde
-  const factory UserBlockInstancePersons({
-    required int instanceId,
-    required bool block,
-  }) = _UserBlockInstancePersons;
+  const factory UserBlockInstancePersons({required int instanceId, required bool block}) = _UserBlockInstancePersons;
 
   const UserBlockInstancePersons._();
   factory UserBlockInstancePersons.fromJson(Map<String, dynamic> json) => _$UserBlockInstancePersonsFromJson(json);
@@ -540,10 +526,7 @@ class GenerateTotpSecret with _$GenerateTotpSecret implements LemmyApiQuery<Gene
 @freezed
 class EditTotp with _$EditTotp implements LemmyApiQuery<EditTotpResponse> {
   @apiSerde
-  const factory EditTotp({
-    required String totpToken,
-    required bool enabled,
-  }) = _EditTotp;
+  const factory EditTotp({required String totpToken, required bool enabled}) = _EditTotp;
 
   const EditTotp._();
   factory EditTotp.fromJson(Map<String, dynamic> json) => _$EditTotpFromJson(json);
@@ -576,4 +559,3 @@ class ValidateAuth with _$ValidateAuth implements LemmyApiQuery<SuccessResponse>
   @override
   SuccessResponse responseFactory(Map<String, dynamic> json) => SuccessResponse.fromJson(json);
 }
-

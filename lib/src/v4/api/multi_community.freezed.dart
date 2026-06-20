@@ -32,26 +32,18 @@ mixin _$CreateMultiCommunity {
   /// Create a copy of CreateMultiCommunity
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $CreateMultiCommunityCopyWith<CreateMultiCommunity> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CreateMultiCommunityCopyWith<CreateMultiCommunity> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CreateMultiCommunityCopyWith<$Res> {
-  factory $CreateMultiCommunityCopyWith(
-    CreateMultiCommunity value,
-    $Res Function(CreateMultiCommunity) then,
-  ) = _$CreateMultiCommunityCopyWithImpl<$Res, CreateMultiCommunity>;
+  factory $CreateMultiCommunityCopyWith(CreateMultiCommunity value, $Res Function(CreateMultiCommunity) then) = _$CreateMultiCommunityCopyWithImpl<$Res, CreateMultiCommunity>;
   @useResult
   $Res call({String name, String title, String? summary, String? sidebar});
 }
 
 /// @nodoc
-class _$CreateMultiCommunityCopyWithImpl<
-  $Res,
-  $Val extends CreateMultiCommunity
->
-    implements $CreateMultiCommunityCopyWith<$Res> {
+class _$CreateMultiCommunityCopyWithImpl<$Res, $Val extends CreateMultiCommunity> implements $CreateMultiCommunityCopyWith<$Res> {
   _$CreateMultiCommunityCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -63,12 +55,7 @@ class _$CreateMultiCommunityCopyWithImpl<
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = null,
-    Object? title = null,
-    Object? summary = freezed,
-    Object? sidebar = freezed,
-  }) {
+  $Res call({Object? name = null, Object? title = null, Object? summary = freezed, Object? sidebar = freezed}) {
     return _then(
       _value.copyWith(
             name:
@@ -98,36 +85,22 @@ class _$CreateMultiCommunityCopyWithImpl<
 }
 
 /// @nodoc
-abstract class _$$CreateMultiCommunityImplCopyWith<$Res>
-    implements $CreateMultiCommunityCopyWith<$Res> {
-  factory _$$CreateMultiCommunityImplCopyWith(
-    _$CreateMultiCommunityImpl value,
-    $Res Function(_$CreateMultiCommunityImpl) then,
-  ) = __$$CreateMultiCommunityImplCopyWithImpl<$Res>;
+abstract class _$$CreateMultiCommunityImplCopyWith<$Res> implements $CreateMultiCommunityCopyWith<$Res> {
+  factory _$$CreateMultiCommunityImplCopyWith(_$CreateMultiCommunityImpl value, $Res Function(_$CreateMultiCommunityImpl) then) = __$$CreateMultiCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String name, String title, String? summary, String? sidebar});
 }
 
 /// @nodoc
-class __$$CreateMultiCommunityImplCopyWithImpl<$Res>
-    extends _$CreateMultiCommunityCopyWithImpl<$Res, _$CreateMultiCommunityImpl>
-    implements _$$CreateMultiCommunityImplCopyWith<$Res> {
-  __$$CreateMultiCommunityImplCopyWithImpl(
-    _$CreateMultiCommunityImpl _value,
-    $Res Function(_$CreateMultiCommunityImpl) _then,
-  ) : super(_value, _then);
+class __$$CreateMultiCommunityImplCopyWithImpl<$Res> extends _$CreateMultiCommunityCopyWithImpl<$Res, _$CreateMultiCommunityImpl> implements _$$CreateMultiCommunityImplCopyWith<$Res> {
+  __$$CreateMultiCommunityImplCopyWithImpl(_$CreateMultiCommunityImpl _value, $Res Function(_$CreateMultiCommunityImpl) _then) : super(_value, _then);
 
   /// Create a copy of CreateMultiCommunity
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = null,
-    Object? title = null,
-    Object? summary = freezed,
-    Object? sidebar = freezed,
-  }) {
+  $Res call({Object? name = null, Object? title = null, Object? summary = freezed, Object? sidebar = freezed}) {
     return _then(
       _$CreateMultiCommunityImpl(
         name:
@@ -159,15 +132,9 @@ class __$$CreateMultiCommunityImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$CreateMultiCommunityImpl extends _CreateMultiCommunity {
-  const _$CreateMultiCommunityImpl({
-    required this.name,
-    required this.title,
-    this.summary,
-    this.sidebar,
-  }) : super._();
+  const _$CreateMultiCommunityImpl({required this.name, required this.title, this.summary, this.sidebar}) : super._();
 
-  factory _$CreateMultiCommunityImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CreateMultiCommunityImplFromJson(json);
+  factory _$CreateMultiCommunityImpl.fromJson(Map<String, dynamic> json) => _$$CreateMultiCommunityImplFromJson(json);
 
   @override
   final String name;
@@ -203,12 +170,7 @@ class _$CreateMultiCommunityImpl extends _CreateMultiCommunity {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$CreateMultiCommunityImplCopyWith<_$CreateMultiCommunityImpl>
-  get copyWith =>
-      __$$CreateMultiCommunityImplCopyWithImpl<_$CreateMultiCommunityImpl>(
-        this,
-        _$identity,
-      );
+  _$$CreateMultiCommunityImplCopyWith<_$CreateMultiCommunityImpl> get copyWith => __$$CreateMultiCommunityImplCopyWithImpl<_$CreateMultiCommunityImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -217,16 +179,10 @@ class _$CreateMultiCommunityImpl extends _CreateMultiCommunity {
 }
 
 abstract class _CreateMultiCommunity extends CreateMultiCommunity {
-  const factory _CreateMultiCommunity({
-    required final String name,
-    required final String title,
-    final String? summary,
-    final String? sidebar,
-  }) = _$CreateMultiCommunityImpl;
+  const factory _CreateMultiCommunity({required final String name, required final String title, final String? summary, final String? sidebar}) = _$CreateMultiCommunityImpl;
   const _CreateMultiCommunity._() : super._();
 
-  factory _CreateMultiCommunity.fromJson(Map<String, dynamic> json) =
-      _$CreateMultiCommunityImpl.fromJson;
+  factory _CreateMultiCommunity.fromJson(Map<String, dynamic> json) = _$CreateMultiCommunityImpl.fromJson;
 
   @override
   String get name;
@@ -241,8 +197,7 @@ abstract class _CreateMultiCommunity extends CreateMultiCommunity {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CreateMultiCommunityImplCopyWith<_$CreateMultiCommunityImpl>
-  get copyWith => throw _privateConstructorUsedError;
+  _$$CreateMultiCommunityImplCopyWith<_$CreateMultiCommunityImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 EditMultiCommunity _$EditMultiCommunityFromJson(Map<String, dynamic> json) {
@@ -263,29 +218,18 @@ mixin _$EditMultiCommunity {
   /// Create a copy of EditMultiCommunity
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $EditMultiCommunityCopyWith<EditMultiCommunity> get copyWith =>
-      throw _privateConstructorUsedError;
+  $EditMultiCommunityCopyWith<EditMultiCommunity> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $EditMultiCommunityCopyWith<$Res> {
-  factory $EditMultiCommunityCopyWith(
-    EditMultiCommunity value,
-    $Res Function(EditMultiCommunity) then,
-  ) = _$EditMultiCommunityCopyWithImpl<$Res, EditMultiCommunity>;
+  factory $EditMultiCommunityCopyWith(EditMultiCommunity value, $Res Function(EditMultiCommunity) then) = _$EditMultiCommunityCopyWithImpl<$Res, EditMultiCommunity>;
   @useResult
-  $Res call({
-    int id,
-    String? title,
-    String? summary,
-    String? sidebar,
-    bool? deleted,
-  });
+  $Res call({int id, String? title, String? summary, String? sidebar, bool? deleted});
 }
 
 /// @nodoc
-class _$EditMultiCommunityCopyWithImpl<$Res, $Val extends EditMultiCommunity>
-    implements $EditMultiCommunityCopyWith<$Res> {
+class _$EditMultiCommunityCopyWithImpl<$Res, $Val extends EditMultiCommunity> implements $EditMultiCommunityCopyWith<$Res> {
   _$EditMultiCommunityCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -297,13 +241,7 @@ class _$EditMultiCommunityCopyWithImpl<$Res, $Val extends EditMultiCommunity>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? title = freezed,
-    Object? summary = freezed,
-    Object? sidebar = freezed,
-    Object? deleted = freezed,
-  }) {
+  $Res call({Object? id = null, Object? title = freezed, Object? summary = freezed, Object? sidebar = freezed, Object? deleted = freezed}) {
     return _then(
       _value.copyWith(
             id:
@@ -338,43 +276,22 @@ class _$EditMultiCommunityCopyWithImpl<$Res, $Val extends EditMultiCommunity>
 }
 
 /// @nodoc
-abstract class _$$EditMultiCommunityImplCopyWith<$Res>
-    implements $EditMultiCommunityCopyWith<$Res> {
-  factory _$$EditMultiCommunityImplCopyWith(
-    _$EditMultiCommunityImpl value,
-    $Res Function(_$EditMultiCommunityImpl) then,
-  ) = __$$EditMultiCommunityImplCopyWithImpl<$Res>;
+abstract class _$$EditMultiCommunityImplCopyWith<$Res> implements $EditMultiCommunityCopyWith<$Res> {
+  factory _$$EditMultiCommunityImplCopyWith(_$EditMultiCommunityImpl value, $Res Function(_$EditMultiCommunityImpl) then) = __$$EditMultiCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    int id,
-    String? title,
-    String? summary,
-    String? sidebar,
-    bool? deleted,
-  });
+  $Res call({int id, String? title, String? summary, String? sidebar, bool? deleted});
 }
 
 /// @nodoc
-class __$$EditMultiCommunityImplCopyWithImpl<$Res>
-    extends _$EditMultiCommunityCopyWithImpl<$Res, _$EditMultiCommunityImpl>
-    implements _$$EditMultiCommunityImplCopyWith<$Res> {
-  __$$EditMultiCommunityImplCopyWithImpl(
-    _$EditMultiCommunityImpl _value,
-    $Res Function(_$EditMultiCommunityImpl) _then,
-  ) : super(_value, _then);
+class __$$EditMultiCommunityImplCopyWithImpl<$Res> extends _$EditMultiCommunityCopyWithImpl<$Res, _$EditMultiCommunityImpl> implements _$$EditMultiCommunityImplCopyWith<$Res> {
+  __$$EditMultiCommunityImplCopyWithImpl(_$EditMultiCommunityImpl _value, $Res Function(_$EditMultiCommunityImpl) _then) : super(_value, _then);
 
   /// Create a copy of EditMultiCommunity
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? title = freezed,
-    Object? summary = freezed,
-    Object? sidebar = freezed,
-    Object? deleted = freezed,
-  }) {
+  $Res call({Object? id = null, Object? title = freezed, Object? summary = freezed, Object? sidebar = freezed, Object? deleted = freezed}) {
     return _then(
       _$EditMultiCommunityImpl(
         id:
@@ -411,16 +328,9 @@ class __$$EditMultiCommunityImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$EditMultiCommunityImpl extends _EditMultiCommunity {
-  const _$EditMultiCommunityImpl({
-    required this.id,
-    this.title,
-    this.summary,
-    this.sidebar,
-    this.deleted,
-  }) : super._();
+  const _$EditMultiCommunityImpl({required this.id, this.title, this.summary, this.sidebar, this.deleted}) : super._();
 
-  factory _$EditMultiCommunityImpl.fromJson(Map<String, dynamic> json) =>
-      _$$EditMultiCommunityImplFromJson(json);
+  factory _$EditMultiCommunityImpl.fromJson(Map<String, dynamic> json) => _$$EditMultiCommunityImplFromJson(json);
 
   @override
   final int id;
@@ -452,19 +362,14 @@ class _$EditMultiCommunityImpl extends _EditMultiCommunity {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, title, summary, sidebar, deleted);
+  int get hashCode => Object.hash(runtimeType, id, title, summary, sidebar, deleted);
 
   /// Create a copy of EditMultiCommunity
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$EditMultiCommunityImplCopyWith<_$EditMultiCommunityImpl> get copyWith =>
-      __$$EditMultiCommunityImplCopyWithImpl<_$EditMultiCommunityImpl>(
-        this,
-        _$identity,
-      );
+  _$$EditMultiCommunityImplCopyWith<_$EditMultiCommunityImpl> get copyWith => __$$EditMultiCommunityImplCopyWithImpl<_$EditMultiCommunityImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -473,17 +378,10 @@ class _$EditMultiCommunityImpl extends _EditMultiCommunity {
 }
 
 abstract class _EditMultiCommunity extends EditMultiCommunity {
-  const factory _EditMultiCommunity({
-    required final int id,
-    final String? title,
-    final String? summary,
-    final String? sidebar,
-    final bool? deleted,
-  }) = _$EditMultiCommunityImpl;
+  const factory _EditMultiCommunity({required final int id, final String? title, final String? summary, final String? sidebar, final bool? deleted}) = _$EditMultiCommunityImpl;
   const _EditMultiCommunity._() : super._();
 
-  factory _EditMultiCommunity.fromJson(Map<String, dynamic> json) =
-      _$EditMultiCommunityImpl.fromJson;
+  factory _EditMultiCommunity.fromJson(Map<String, dynamic> json) = _$EditMultiCommunityImpl.fromJson;
 
   @override
   int get id;
@@ -500,8 +398,7 @@ abstract class _EditMultiCommunity extends EditMultiCommunity {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$EditMultiCommunityImplCopyWith<_$EditMultiCommunityImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$EditMultiCommunityImplCopyWith<_$EditMultiCommunityImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 GetMultiCommunity _$GetMultiCommunityFromJson(Map<String, dynamic> json) {
@@ -519,23 +416,18 @@ mixin _$GetMultiCommunity {
   /// Create a copy of GetMultiCommunity
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $GetMultiCommunityCopyWith<GetMultiCommunity> get copyWith =>
-      throw _privateConstructorUsedError;
+  $GetMultiCommunityCopyWith<GetMultiCommunity> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GetMultiCommunityCopyWith<$Res> {
-  factory $GetMultiCommunityCopyWith(
-    GetMultiCommunity value,
-    $Res Function(GetMultiCommunity) then,
-  ) = _$GetMultiCommunityCopyWithImpl<$Res, GetMultiCommunity>;
+  factory $GetMultiCommunityCopyWith(GetMultiCommunity value, $Res Function(GetMultiCommunity) then) = _$GetMultiCommunityCopyWithImpl<$Res, GetMultiCommunity>;
   @useResult
   $Res call({int? id, String? name});
 }
 
 /// @nodoc
-class _$GetMultiCommunityCopyWithImpl<$Res, $Val extends GetMultiCommunity>
-    implements $GetMultiCommunityCopyWith<$Res> {
+class _$GetMultiCommunityCopyWithImpl<$Res, $Val extends GetMultiCommunity> implements $GetMultiCommunityCopyWith<$Res> {
   _$GetMultiCommunityCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -567,25 +459,16 @@ class _$GetMultiCommunityCopyWithImpl<$Res, $Val extends GetMultiCommunity>
 }
 
 /// @nodoc
-abstract class _$$GetMultiCommunityImplCopyWith<$Res>
-    implements $GetMultiCommunityCopyWith<$Res> {
-  factory _$$GetMultiCommunityImplCopyWith(
-    _$GetMultiCommunityImpl value,
-    $Res Function(_$GetMultiCommunityImpl) then,
-  ) = __$$GetMultiCommunityImplCopyWithImpl<$Res>;
+abstract class _$$GetMultiCommunityImplCopyWith<$Res> implements $GetMultiCommunityCopyWith<$Res> {
+  factory _$$GetMultiCommunityImplCopyWith(_$GetMultiCommunityImpl value, $Res Function(_$GetMultiCommunityImpl) then) = __$$GetMultiCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? id, String? name});
 }
 
 /// @nodoc
-class __$$GetMultiCommunityImplCopyWithImpl<$Res>
-    extends _$GetMultiCommunityCopyWithImpl<$Res, _$GetMultiCommunityImpl>
-    implements _$$GetMultiCommunityImplCopyWith<$Res> {
-  __$$GetMultiCommunityImplCopyWithImpl(
-    _$GetMultiCommunityImpl _value,
-    $Res Function(_$GetMultiCommunityImpl) _then,
-  ) : super(_value, _then);
+class __$$GetMultiCommunityImplCopyWithImpl<$Res> extends _$GetMultiCommunityCopyWithImpl<$Res, _$GetMultiCommunityImpl> implements _$$GetMultiCommunityImplCopyWith<$Res> {
+  __$$GetMultiCommunityImplCopyWithImpl(_$GetMultiCommunityImpl _value, $Res Function(_$GetMultiCommunityImpl) _then) : super(_value, _then);
 
   /// Create a copy of GetMultiCommunity
   /// with the given fields replaced by the non-null parameter values.
@@ -615,8 +498,7 @@ class __$$GetMultiCommunityImplCopyWithImpl<$Res>
 class _$GetMultiCommunityImpl extends _GetMultiCommunity {
   const _$GetMultiCommunityImpl({this.id, this.name}) : super._();
 
-  factory _$GetMultiCommunityImpl.fromJson(Map<String, dynamic> json) =>
-      _$$GetMultiCommunityImplFromJson(json);
+  factory _$GetMultiCommunityImpl.fromJson(Map<String, dynamic> json) => _$$GetMultiCommunityImplFromJson(json);
 
   @override
   final int? id;
@@ -631,10 +513,7 @@ class _$GetMultiCommunityImpl extends _GetMultiCommunity {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$GetMultiCommunityImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.name, name) || other.name == name));
+        (other.runtimeType == runtimeType && other is _$GetMultiCommunityImpl && (identical(other.id, id) || other.id == id) && (identical(other.name, name) || other.name == name));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -646,11 +525,7 @@ class _$GetMultiCommunityImpl extends _GetMultiCommunity {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetMultiCommunityImplCopyWith<_$GetMultiCommunityImpl> get copyWith =>
-      __$$GetMultiCommunityImplCopyWithImpl<_$GetMultiCommunityImpl>(
-        this,
-        _$identity,
-      );
+  _$$GetMultiCommunityImplCopyWith<_$GetMultiCommunityImpl> get copyWith => __$$GetMultiCommunityImplCopyWithImpl<_$GetMultiCommunityImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -659,12 +534,10 @@ class _$GetMultiCommunityImpl extends _GetMultiCommunity {
 }
 
 abstract class _GetMultiCommunity extends GetMultiCommunity {
-  const factory _GetMultiCommunity({final int? id, final String? name}) =
-      _$GetMultiCommunityImpl;
+  const factory _GetMultiCommunity({final int? id, final String? name}) = _$GetMultiCommunityImpl;
   const _GetMultiCommunity._() : super._();
 
-  factory _GetMultiCommunity.fromJson(Map<String, dynamic> json) =
-      _$GetMultiCommunityImpl.fromJson;
+  factory _GetMultiCommunity.fromJson(Map<String, dynamic> json) = _$GetMultiCommunityImpl.fromJson;
 
   @override
   int? get id;
@@ -675,13 +548,10 @@ abstract class _GetMultiCommunity extends GetMultiCommunity {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetMultiCommunityImplCopyWith<_$GetMultiCommunityImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GetMultiCommunityImplCopyWith<_$GetMultiCommunityImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
-CreateMultiCommunityEntry _$CreateMultiCommunityEntryFromJson(
-  Map<String, dynamic> json,
-) {
+CreateMultiCommunityEntry _$CreateMultiCommunityEntryFromJson(Map<String, dynamic> json) {
   return _CreateMultiCommunityEntry.fromJson(json);
 }
 
@@ -696,26 +566,18 @@ mixin _$CreateMultiCommunityEntry {
   /// Create a copy of CreateMultiCommunityEntry
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $CreateMultiCommunityEntryCopyWith<CreateMultiCommunityEntry> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CreateMultiCommunityEntryCopyWith<CreateMultiCommunityEntry> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CreateMultiCommunityEntryCopyWith<$Res> {
-  factory $CreateMultiCommunityEntryCopyWith(
-    CreateMultiCommunityEntry value,
-    $Res Function(CreateMultiCommunityEntry) then,
-  ) = _$CreateMultiCommunityEntryCopyWithImpl<$Res, CreateMultiCommunityEntry>;
+  factory $CreateMultiCommunityEntryCopyWith(CreateMultiCommunityEntry value, $Res Function(CreateMultiCommunityEntry) then) = _$CreateMultiCommunityEntryCopyWithImpl<$Res, CreateMultiCommunityEntry>;
   @useResult
   $Res call({int id, int communityId});
 }
 
 /// @nodoc
-class _$CreateMultiCommunityEntryCopyWithImpl<
-  $Res,
-  $Val extends CreateMultiCommunityEntry
->
-    implements $CreateMultiCommunityEntryCopyWith<$Res> {
+class _$CreateMultiCommunityEntryCopyWithImpl<$Res, $Val extends CreateMultiCommunityEntry> implements $CreateMultiCommunityEntryCopyWith<$Res> {
   _$CreateMultiCommunityEntryCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -747,29 +609,17 @@ class _$CreateMultiCommunityEntryCopyWithImpl<
 }
 
 /// @nodoc
-abstract class _$$CreateMultiCommunityEntryImplCopyWith<$Res>
-    implements $CreateMultiCommunityEntryCopyWith<$Res> {
-  factory _$$CreateMultiCommunityEntryImplCopyWith(
-    _$CreateMultiCommunityEntryImpl value,
-    $Res Function(_$CreateMultiCommunityEntryImpl) then,
-  ) = __$$CreateMultiCommunityEntryImplCopyWithImpl<$Res>;
+abstract class _$$CreateMultiCommunityEntryImplCopyWith<$Res> implements $CreateMultiCommunityEntryCopyWith<$Res> {
+  factory _$$CreateMultiCommunityEntryImplCopyWith(_$CreateMultiCommunityEntryImpl value, $Res Function(_$CreateMultiCommunityEntryImpl) then) = __$$CreateMultiCommunityEntryImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int id, int communityId});
 }
 
 /// @nodoc
-class __$$CreateMultiCommunityEntryImplCopyWithImpl<$Res>
-    extends
-        _$CreateMultiCommunityEntryCopyWithImpl<
-          $Res,
-          _$CreateMultiCommunityEntryImpl
-        >
+class __$$CreateMultiCommunityEntryImplCopyWithImpl<$Res> extends _$CreateMultiCommunityEntryCopyWithImpl<$Res, _$CreateMultiCommunityEntryImpl>
     implements _$$CreateMultiCommunityEntryImplCopyWith<$Res> {
-  __$$CreateMultiCommunityEntryImplCopyWithImpl(
-    _$CreateMultiCommunityEntryImpl _value,
-    $Res Function(_$CreateMultiCommunityEntryImpl) _then,
-  ) : super(_value, _then);
+  __$$CreateMultiCommunityEntryImplCopyWithImpl(_$CreateMultiCommunityEntryImpl _value, $Res Function(_$CreateMultiCommunityEntryImpl) _then) : super(_value, _then);
 
   /// Create a copy of CreateMultiCommunityEntry
   /// with the given fields replaced by the non-null parameter values.
@@ -797,13 +647,9 @@ class __$$CreateMultiCommunityEntryImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$CreateMultiCommunityEntryImpl extends _CreateMultiCommunityEntry {
-  const _$CreateMultiCommunityEntryImpl({
-    required this.id,
-    required this.communityId,
-  }) : super._();
+  const _$CreateMultiCommunityEntryImpl({required this.id, required this.communityId}) : super._();
 
-  factory _$CreateMultiCommunityEntryImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CreateMultiCommunityEntryImplFromJson(json);
+  factory _$CreateMultiCommunityEntryImpl.fromJson(Map<String, dynamic> json) => _$$CreateMultiCommunityEntryImplFromJson(json);
 
   @override
   final int id;
@@ -821,8 +667,7 @@ class _$CreateMultiCommunityEntryImpl extends _CreateMultiCommunityEntry {
         (other.runtimeType == runtimeType &&
             other is _$CreateMultiCommunityEntryImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.communityId, communityId) ||
-                other.communityId == communityId));
+            (identical(other.communityId, communityId) || other.communityId == communityId));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -834,10 +679,7 @@ class _$CreateMultiCommunityEntryImpl extends _CreateMultiCommunityEntry {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$CreateMultiCommunityEntryImplCopyWith<_$CreateMultiCommunityEntryImpl>
-  get copyWith => __$$CreateMultiCommunityEntryImplCopyWithImpl<
-    _$CreateMultiCommunityEntryImpl
-  >(this, _$identity);
+  _$$CreateMultiCommunityEntryImplCopyWith<_$CreateMultiCommunityEntryImpl> get copyWith => __$$CreateMultiCommunityEntryImplCopyWithImpl<_$CreateMultiCommunityEntryImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -846,14 +688,10 @@ class _$CreateMultiCommunityEntryImpl extends _CreateMultiCommunityEntry {
 }
 
 abstract class _CreateMultiCommunityEntry extends CreateMultiCommunityEntry {
-  const factory _CreateMultiCommunityEntry({
-    required final int id,
-    required final int communityId,
-  }) = _$CreateMultiCommunityEntryImpl;
+  const factory _CreateMultiCommunityEntry({required final int id, required final int communityId}) = _$CreateMultiCommunityEntryImpl;
   const _CreateMultiCommunityEntry._() : super._();
 
-  factory _CreateMultiCommunityEntry.fromJson(Map<String, dynamic> json) =
-      _$CreateMultiCommunityEntryImpl.fromJson;
+  factory _CreateMultiCommunityEntry.fromJson(Map<String, dynamic> json) = _$CreateMultiCommunityEntryImpl.fromJson;
 
   @override
   int get id;
@@ -864,13 +702,10 @@ abstract class _CreateMultiCommunityEntry extends CreateMultiCommunityEntry {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CreateMultiCommunityEntryImplCopyWith<_$CreateMultiCommunityEntryImpl>
-  get copyWith => throw _privateConstructorUsedError;
+  _$$CreateMultiCommunityEntryImplCopyWith<_$CreateMultiCommunityEntryImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
-DeleteMultiCommunityEntry _$DeleteMultiCommunityEntryFromJson(
-  Map<String, dynamic> json,
-) {
+DeleteMultiCommunityEntry _$DeleteMultiCommunityEntryFromJson(Map<String, dynamic> json) {
   return _DeleteMultiCommunityEntry.fromJson(json);
 }
 
@@ -885,26 +720,18 @@ mixin _$DeleteMultiCommunityEntry {
   /// Create a copy of DeleteMultiCommunityEntry
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $DeleteMultiCommunityEntryCopyWith<DeleteMultiCommunityEntry> get copyWith =>
-      throw _privateConstructorUsedError;
+  $DeleteMultiCommunityEntryCopyWith<DeleteMultiCommunityEntry> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $DeleteMultiCommunityEntryCopyWith<$Res> {
-  factory $DeleteMultiCommunityEntryCopyWith(
-    DeleteMultiCommunityEntry value,
-    $Res Function(DeleteMultiCommunityEntry) then,
-  ) = _$DeleteMultiCommunityEntryCopyWithImpl<$Res, DeleteMultiCommunityEntry>;
+  factory $DeleteMultiCommunityEntryCopyWith(DeleteMultiCommunityEntry value, $Res Function(DeleteMultiCommunityEntry) then) = _$DeleteMultiCommunityEntryCopyWithImpl<$Res, DeleteMultiCommunityEntry>;
   @useResult
   $Res call({int id, int communityId});
 }
 
 /// @nodoc
-class _$DeleteMultiCommunityEntryCopyWithImpl<
-  $Res,
-  $Val extends DeleteMultiCommunityEntry
->
-    implements $DeleteMultiCommunityEntryCopyWith<$Res> {
+class _$DeleteMultiCommunityEntryCopyWithImpl<$Res, $Val extends DeleteMultiCommunityEntry> implements $DeleteMultiCommunityEntryCopyWith<$Res> {
   _$DeleteMultiCommunityEntryCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -936,29 +763,17 @@ class _$DeleteMultiCommunityEntryCopyWithImpl<
 }
 
 /// @nodoc
-abstract class _$$DeleteMultiCommunityEntryImplCopyWith<$Res>
-    implements $DeleteMultiCommunityEntryCopyWith<$Res> {
-  factory _$$DeleteMultiCommunityEntryImplCopyWith(
-    _$DeleteMultiCommunityEntryImpl value,
-    $Res Function(_$DeleteMultiCommunityEntryImpl) then,
-  ) = __$$DeleteMultiCommunityEntryImplCopyWithImpl<$Res>;
+abstract class _$$DeleteMultiCommunityEntryImplCopyWith<$Res> implements $DeleteMultiCommunityEntryCopyWith<$Res> {
+  factory _$$DeleteMultiCommunityEntryImplCopyWith(_$DeleteMultiCommunityEntryImpl value, $Res Function(_$DeleteMultiCommunityEntryImpl) then) = __$$DeleteMultiCommunityEntryImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int id, int communityId});
 }
 
 /// @nodoc
-class __$$DeleteMultiCommunityEntryImplCopyWithImpl<$Res>
-    extends
-        _$DeleteMultiCommunityEntryCopyWithImpl<
-          $Res,
-          _$DeleteMultiCommunityEntryImpl
-        >
+class __$$DeleteMultiCommunityEntryImplCopyWithImpl<$Res> extends _$DeleteMultiCommunityEntryCopyWithImpl<$Res, _$DeleteMultiCommunityEntryImpl>
     implements _$$DeleteMultiCommunityEntryImplCopyWith<$Res> {
-  __$$DeleteMultiCommunityEntryImplCopyWithImpl(
-    _$DeleteMultiCommunityEntryImpl _value,
-    $Res Function(_$DeleteMultiCommunityEntryImpl) _then,
-  ) : super(_value, _then);
+  __$$DeleteMultiCommunityEntryImplCopyWithImpl(_$DeleteMultiCommunityEntryImpl _value, $Res Function(_$DeleteMultiCommunityEntryImpl) _then) : super(_value, _then);
 
   /// Create a copy of DeleteMultiCommunityEntry
   /// with the given fields replaced by the non-null parameter values.
@@ -986,13 +801,9 @@ class __$$DeleteMultiCommunityEntryImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$DeleteMultiCommunityEntryImpl extends _DeleteMultiCommunityEntry {
-  const _$DeleteMultiCommunityEntryImpl({
-    required this.id,
-    required this.communityId,
-  }) : super._();
+  const _$DeleteMultiCommunityEntryImpl({required this.id, required this.communityId}) : super._();
 
-  factory _$DeleteMultiCommunityEntryImpl.fromJson(Map<String, dynamic> json) =>
-      _$$DeleteMultiCommunityEntryImplFromJson(json);
+  factory _$DeleteMultiCommunityEntryImpl.fromJson(Map<String, dynamic> json) => _$$DeleteMultiCommunityEntryImplFromJson(json);
 
   @override
   final int id;
@@ -1010,8 +821,7 @@ class _$DeleteMultiCommunityEntryImpl extends _DeleteMultiCommunityEntry {
         (other.runtimeType == runtimeType &&
             other is _$DeleteMultiCommunityEntryImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.communityId, communityId) ||
-                other.communityId == communityId));
+            (identical(other.communityId, communityId) || other.communityId == communityId));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -1023,10 +833,7 @@ class _$DeleteMultiCommunityEntryImpl extends _DeleteMultiCommunityEntry {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$DeleteMultiCommunityEntryImplCopyWith<_$DeleteMultiCommunityEntryImpl>
-  get copyWith => __$$DeleteMultiCommunityEntryImplCopyWithImpl<
-    _$DeleteMultiCommunityEntryImpl
-  >(this, _$identity);
+  _$$DeleteMultiCommunityEntryImplCopyWith<_$DeleteMultiCommunityEntryImpl> get copyWith => __$$DeleteMultiCommunityEntryImplCopyWithImpl<_$DeleteMultiCommunityEntryImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1035,14 +842,10 @@ class _$DeleteMultiCommunityEntryImpl extends _DeleteMultiCommunityEntry {
 }
 
 abstract class _DeleteMultiCommunityEntry extends DeleteMultiCommunityEntry {
-  const factory _DeleteMultiCommunityEntry({
-    required final int id,
-    required final int communityId,
-  }) = _$DeleteMultiCommunityEntryImpl;
+  const factory _DeleteMultiCommunityEntry({required final int id, required final int communityId}) = _$DeleteMultiCommunityEntryImpl;
   const _DeleteMultiCommunityEntry._() : super._();
 
-  factory _DeleteMultiCommunityEntry.fromJson(Map<String, dynamic> json) =
-      _$DeleteMultiCommunityEntryImpl.fromJson;
+  factory _DeleteMultiCommunityEntry.fromJson(Map<String, dynamic> json) = _$DeleteMultiCommunityEntryImpl.fromJson;
 
   @override
   int get id;
@@ -1053,8 +856,7 @@ abstract class _DeleteMultiCommunityEntry extends DeleteMultiCommunityEntry {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DeleteMultiCommunityEntryImplCopyWith<_$DeleteMultiCommunityEntryImpl>
-  get copyWith => throw _privateConstructorUsedError;
+  _$$DeleteMultiCommunityEntryImplCopyWith<_$DeleteMultiCommunityEntryImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 FollowMultiCommunity _$FollowMultiCommunityFromJson(Map<String, dynamic> json) {
@@ -1072,26 +874,18 @@ mixin _$FollowMultiCommunity {
   /// Create a copy of FollowMultiCommunity
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $FollowMultiCommunityCopyWith<FollowMultiCommunity> get copyWith =>
-      throw _privateConstructorUsedError;
+  $FollowMultiCommunityCopyWith<FollowMultiCommunity> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $FollowMultiCommunityCopyWith<$Res> {
-  factory $FollowMultiCommunityCopyWith(
-    FollowMultiCommunity value,
-    $Res Function(FollowMultiCommunity) then,
-  ) = _$FollowMultiCommunityCopyWithImpl<$Res, FollowMultiCommunity>;
+  factory $FollowMultiCommunityCopyWith(FollowMultiCommunity value, $Res Function(FollowMultiCommunity) then) = _$FollowMultiCommunityCopyWithImpl<$Res, FollowMultiCommunity>;
   @useResult
   $Res call({int multiCommunityId, bool follow});
 }
 
 /// @nodoc
-class _$FollowMultiCommunityCopyWithImpl<
-  $Res,
-  $Val extends FollowMultiCommunity
->
-    implements $FollowMultiCommunityCopyWith<$Res> {
+class _$FollowMultiCommunityCopyWithImpl<$Res, $Val extends FollowMultiCommunity> implements $FollowMultiCommunityCopyWith<$Res> {
   _$FollowMultiCommunityCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1123,25 +917,16 @@ class _$FollowMultiCommunityCopyWithImpl<
 }
 
 /// @nodoc
-abstract class _$$FollowMultiCommunityImplCopyWith<$Res>
-    implements $FollowMultiCommunityCopyWith<$Res> {
-  factory _$$FollowMultiCommunityImplCopyWith(
-    _$FollowMultiCommunityImpl value,
-    $Res Function(_$FollowMultiCommunityImpl) then,
-  ) = __$$FollowMultiCommunityImplCopyWithImpl<$Res>;
+abstract class _$$FollowMultiCommunityImplCopyWith<$Res> implements $FollowMultiCommunityCopyWith<$Res> {
+  factory _$$FollowMultiCommunityImplCopyWith(_$FollowMultiCommunityImpl value, $Res Function(_$FollowMultiCommunityImpl) then) = __$$FollowMultiCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int multiCommunityId, bool follow});
 }
 
 /// @nodoc
-class __$$FollowMultiCommunityImplCopyWithImpl<$Res>
-    extends _$FollowMultiCommunityCopyWithImpl<$Res, _$FollowMultiCommunityImpl>
-    implements _$$FollowMultiCommunityImplCopyWith<$Res> {
-  __$$FollowMultiCommunityImplCopyWithImpl(
-    _$FollowMultiCommunityImpl _value,
-    $Res Function(_$FollowMultiCommunityImpl) _then,
-  ) : super(_value, _then);
+class __$$FollowMultiCommunityImplCopyWithImpl<$Res> extends _$FollowMultiCommunityCopyWithImpl<$Res, _$FollowMultiCommunityImpl> implements _$$FollowMultiCommunityImplCopyWith<$Res> {
+  __$$FollowMultiCommunityImplCopyWithImpl(_$FollowMultiCommunityImpl _value, $Res Function(_$FollowMultiCommunityImpl) _then) : super(_value, _then);
 
   /// Create a copy of FollowMultiCommunity
   /// with the given fields replaced by the non-null parameter values.
@@ -1169,13 +954,9 @@ class __$$FollowMultiCommunityImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$FollowMultiCommunityImpl extends _FollowMultiCommunity {
-  const _$FollowMultiCommunityImpl({
-    required this.multiCommunityId,
-    required this.follow,
-  }) : super._();
+  const _$FollowMultiCommunityImpl({required this.multiCommunityId, required this.follow}) : super._();
 
-  factory _$FollowMultiCommunityImpl.fromJson(Map<String, dynamic> json) =>
-      _$$FollowMultiCommunityImplFromJson(json);
+  factory _$FollowMultiCommunityImpl.fromJson(Map<String, dynamic> json) => _$$FollowMultiCommunityImplFromJson(json);
 
   @override
   final int multiCommunityId;
@@ -1192,8 +973,7 @@ class _$FollowMultiCommunityImpl extends _FollowMultiCommunity {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FollowMultiCommunityImpl &&
-            (identical(other.multiCommunityId, multiCommunityId) ||
-                other.multiCommunityId == multiCommunityId) &&
+            (identical(other.multiCommunityId, multiCommunityId) || other.multiCommunityId == multiCommunityId) &&
             (identical(other.follow, follow) || other.follow == follow));
   }
 
@@ -1206,12 +986,7 @@ class _$FollowMultiCommunityImpl extends _FollowMultiCommunity {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$FollowMultiCommunityImplCopyWith<_$FollowMultiCommunityImpl>
-  get copyWith =>
-      __$$FollowMultiCommunityImplCopyWithImpl<_$FollowMultiCommunityImpl>(
-        this,
-        _$identity,
-      );
+  _$$FollowMultiCommunityImplCopyWith<_$FollowMultiCommunityImpl> get copyWith => __$$FollowMultiCommunityImplCopyWithImpl<_$FollowMultiCommunityImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1220,14 +995,10 @@ class _$FollowMultiCommunityImpl extends _FollowMultiCommunity {
 }
 
 abstract class _FollowMultiCommunity extends FollowMultiCommunity {
-  const factory _FollowMultiCommunity({
-    required final int multiCommunityId,
-    required final bool follow,
-  }) = _$FollowMultiCommunityImpl;
+  const factory _FollowMultiCommunity({required final int multiCommunityId, required final bool follow}) = _$FollowMultiCommunityImpl;
   const _FollowMultiCommunity._() : super._();
 
-  factory _FollowMultiCommunity.fromJson(Map<String, dynamic> json) =
-      _$FollowMultiCommunityImpl.fromJson;
+  factory _FollowMultiCommunity.fromJson(Map<String, dynamic> json) = _$FollowMultiCommunityImpl.fromJson;
 
   @override
   int get multiCommunityId;
@@ -1238,8 +1009,7 @@ abstract class _FollowMultiCommunity extends FollowMultiCommunity {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$FollowMultiCommunityImplCopyWith<_$FollowMultiCommunityImpl>
-  get copyWith => throw _privateConstructorUsedError;
+  _$$FollowMultiCommunityImplCopyWith<_$FollowMultiCommunityImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 ListMultiCommunities _$ListMultiCommunitiesFromJson(Map<String, dynamic> json) {
@@ -1262,34 +1032,18 @@ mixin _$ListMultiCommunities {
   /// Create a copy of ListMultiCommunities
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ListMultiCommunitiesCopyWith<ListMultiCommunities> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ListMultiCommunitiesCopyWith<ListMultiCommunities> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ListMultiCommunitiesCopyWith<$Res> {
-  factory $ListMultiCommunitiesCopyWith(
-    ListMultiCommunities value,
-    $Res Function(ListMultiCommunities) then,
-  ) = _$ListMultiCommunitiesCopyWithImpl<$Res, ListMultiCommunities>;
+  factory $ListMultiCommunitiesCopyWith(ListMultiCommunities value, $Res Function(ListMultiCommunities) then) = _$ListMultiCommunitiesCopyWithImpl<$Res, ListMultiCommunities>;
   @useResult
-  $Res call({
-    int? creatorId,
-    SortType? sort,
-    int? timeRangeSeconds,
-    int? limit,
-    String? pageCursor,
-    String? searchTerm,
-    bool? searchTitleOnly,
-  });
+  $Res call({int? creatorId, SortType? sort, int? timeRangeSeconds, int? limit, String? pageCursor, String? searchTerm, bool? searchTitleOnly});
 }
 
 /// @nodoc
-class _$ListMultiCommunitiesCopyWithImpl<
-  $Res,
-  $Val extends ListMultiCommunities
->
-    implements $ListMultiCommunitiesCopyWith<$Res> {
+class _$ListMultiCommunitiesCopyWithImpl<$Res, $Val extends ListMultiCommunities> implements $ListMultiCommunitiesCopyWith<$Res> {
   _$ListMultiCommunitiesCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1354,33 +1108,16 @@ class _$ListMultiCommunitiesCopyWithImpl<
 }
 
 /// @nodoc
-abstract class _$$ListMultiCommunitiesImplCopyWith<$Res>
-    implements $ListMultiCommunitiesCopyWith<$Res> {
-  factory _$$ListMultiCommunitiesImplCopyWith(
-    _$ListMultiCommunitiesImpl value,
-    $Res Function(_$ListMultiCommunitiesImpl) then,
-  ) = __$$ListMultiCommunitiesImplCopyWithImpl<$Res>;
+abstract class _$$ListMultiCommunitiesImplCopyWith<$Res> implements $ListMultiCommunitiesCopyWith<$Res> {
+  factory _$$ListMultiCommunitiesImplCopyWith(_$ListMultiCommunitiesImpl value, $Res Function(_$ListMultiCommunitiesImpl) then) = __$$ListMultiCommunitiesImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    int? creatorId,
-    SortType? sort,
-    int? timeRangeSeconds,
-    int? limit,
-    String? pageCursor,
-    String? searchTerm,
-    bool? searchTitleOnly,
-  });
+  $Res call({int? creatorId, SortType? sort, int? timeRangeSeconds, int? limit, String? pageCursor, String? searchTerm, bool? searchTitleOnly});
 }
 
 /// @nodoc
-class __$$ListMultiCommunitiesImplCopyWithImpl<$Res>
-    extends _$ListMultiCommunitiesCopyWithImpl<$Res, _$ListMultiCommunitiesImpl>
-    implements _$$ListMultiCommunitiesImplCopyWith<$Res> {
-  __$$ListMultiCommunitiesImplCopyWithImpl(
-    _$ListMultiCommunitiesImpl _value,
-    $Res Function(_$ListMultiCommunitiesImpl) _then,
-  ) : super(_value, _then);
+class __$$ListMultiCommunitiesImplCopyWithImpl<$Res> extends _$ListMultiCommunitiesCopyWithImpl<$Res, _$ListMultiCommunitiesImpl> implements _$$ListMultiCommunitiesImplCopyWith<$Res> {
+  __$$ListMultiCommunitiesImplCopyWithImpl(_$ListMultiCommunitiesImpl _value, $Res Function(_$ListMultiCommunitiesImpl) _then) : super(_value, _then);
 
   /// Create a copy of ListMultiCommunities
   /// with the given fields replaced by the non-null parameter values.
@@ -1441,18 +1178,9 @@ class __$$ListMultiCommunitiesImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$ListMultiCommunitiesImpl extends _ListMultiCommunities {
-  const _$ListMultiCommunitiesImpl({
-    this.creatorId,
-    this.sort,
-    this.timeRangeSeconds,
-    this.limit,
-    this.pageCursor,
-    this.searchTerm,
-    this.searchTitleOnly,
-  }) : super._();
+  const _$ListMultiCommunitiesImpl({this.creatorId, this.sort, this.timeRangeSeconds, this.limit, this.pageCursor, this.searchTerm, this.searchTitleOnly}) : super._();
 
-  factory _$ListMultiCommunitiesImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ListMultiCommunitiesImplFromJson(json);
+  factory _$ListMultiCommunitiesImpl.fromJson(Map<String, dynamic> json) => _$$ListMultiCommunitiesImplFromJson(json);
 
   @override
   final int? creatorId;
@@ -1479,44 +1207,25 @@ class _$ListMultiCommunitiesImpl extends _ListMultiCommunities {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ListMultiCommunitiesImpl &&
-            (identical(other.creatorId, creatorId) ||
-                other.creatorId == creatorId) &&
+            (identical(other.creatorId, creatorId) || other.creatorId == creatorId) &&
             (identical(other.sort, sort) || other.sort == sort) &&
-            (identical(other.timeRangeSeconds, timeRangeSeconds) ||
-                other.timeRangeSeconds == timeRangeSeconds) &&
+            (identical(other.timeRangeSeconds, timeRangeSeconds) || other.timeRangeSeconds == timeRangeSeconds) &&
             (identical(other.limit, limit) || other.limit == limit) &&
-            (identical(other.pageCursor, pageCursor) ||
-                other.pageCursor == pageCursor) &&
-            (identical(other.searchTerm, searchTerm) ||
-                other.searchTerm == searchTerm) &&
-            (identical(other.searchTitleOnly, searchTitleOnly) ||
-                other.searchTitleOnly == searchTitleOnly));
+            (identical(other.pageCursor, pageCursor) || other.pageCursor == pageCursor) &&
+            (identical(other.searchTerm, searchTerm) || other.searchTerm == searchTerm) &&
+            (identical(other.searchTitleOnly, searchTitleOnly) || other.searchTitleOnly == searchTitleOnly));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    creatorId,
-    sort,
-    timeRangeSeconds,
-    limit,
-    pageCursor,
-    searchTerm,
-    searchTitleOnly,
-  );
+  int get hashCode => Object.hash(runtimeType, creatorId, sort, timeRangeSeconds, limit, pageCursor, searchTerm, searchTitleOnly);
 
   /// Create a copy of ListMultiCommunities
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ListMultiCommunitiesImplCopyWith<_$ListMultiCommunitiesImpl>
-  get copyWith =>
-      __$$ListMultiCommunitiesImplCopyWithImpl<_$ListMultiCommunitiesImpl>(
-        this,
-        _$identity,
-      );
+  _$$ListMultiCommunitiesImplCopyWith<_$ListMultiCommunitiesImpl> get copyWith => __$$ListMultiCommunitiesImplCopyWithImpl<_$ListMultiCommunitiesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1536,8 +1245,7 @@ abstract class _ListMultiCommunities extends ListMultiCommunities {
   }) = _$ListMultiCommunitiesImpl;
   const _ListMultiCommunities._() : super._();
 
-  factory _ListMultiCommunities.fromJson(Map<String, dynamic> json) =
-      _$ListMultiCommunitiesImpl.fromJson;
+  factory _ListMultiCommunities.fromJson(Map<String, dynamic> json) = _$ListMultiCommunitiesImpl.fromJson;
 
   @override
   int? get creatorId;
@@ -1558,6 +1266,5 @@ abstract class _ListMultiCommunities extends ListMultiCommunities {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ListMultiCommunitiesImplCopyWith<_$ListMultiCommunitiesImpl>
-  get copyWith => throw _privateConstructorUsedError;
+  _$$ListMultiCommunitiesImplCopyWith<_$ListMultiCommunitiesImpl> get copyWith => throw _privateConstructorUsedError;
 }

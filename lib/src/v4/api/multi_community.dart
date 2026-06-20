@@ -13,12 +13,7 @@ part 'multi_community.g.dart';
 @freezed
 class CreateMultiCommunity with _$CreateMultiCommunity implements LemmyApiQuery<MultiCommunityResponse> {
   @apiSerde
-  const factory CreateMultiCommunity({
-    required String name,
-    required String title,
-    String? summary,
-    String? sidebar,
-  }) = _CreateMultiCommunity;
+  const factory CreateMultiCommunity({required String name, required String title, String? summary, String? sidebar}) = _CreateMultiCommunity;
 
   const CreateMultiCommunity._();
   factory CreateMultiCommunity.fromJson(Map<String, dynamic> json) => _$CreateMultiCommunityFromJson(json);
@@ -37,13 +32,7 @@ class CreateMultiCommunity with _$CreateMultiCommunity implements LemmyApiQuery<
 @freezed
 class EditMultiCommunity with _$EditMultiCommunity implements LemmyApiQuery<MultiCommunityResponse> {
   @apiSerde
-  const factory EditMultiCommunity({
-    required int id,
-    String? title,
-    String? summary,
-    String? sidebar,
-    bool? deleted,
-  }) = _EditMultiCommunity;
+  const factory EditMultiCommunity({required int id, String? title, String? summary, String? sidebar, bool? deleted}) = _EditMultiCommunity;
 
   const EditMultiCommunity._();
   factory EditMultiCommunity.fromJson(Map<String, dynamic> json) => _$EditMultiCommunityFromJson(json);
@@ -62,10 +51,7 @@ class EditMultiCommunity with _$EditMultiCommunity implements LemmyApiQuery<Mult
 @freezed
 class GetMultiCommunity with _$GetMultiCommunity implements LemmyApiQuery<GetMultiCommunityResponse> {
   @apiSerde
-  const factory GetMultiCommunity({
-    int? id,
-    String? name,
-  }) = _GetMultiCommunity;
+  const factory GetMultiCommunity({int? id, String? name}) = _GetMultiCommunity;
 
   const GetMultiCommunity._();
   factory GetMultiCommunity.fromJson(Map<String, dynamic> json) => _$GetMultiCommunityFromJson(json);
@@ -84,10 +70,7 @@ class GetMultiCommunity with _$GetMultiCommunity implements LemmyApiQuery<GetMul
 @freezed
 class CreateMultiCommunityEntry with _$CreateMultiCommunityEntry implements LemmyApiQuery<SuccessResponse> {
   @apiSerde
-  const factory CreateMultiCommunityEntry({
-    required int id,
-    required int communityId,
-  }) = _CreateMultiCommunityEntry;
+  const factory CreateMultiCommunityEntry({required int id, required int communityId}) = _CreateMultiCommunityEntry;
 
   const CreateMultiCommunityEntry._();
   factory CreateMultiCommunityEntry.fromJson(Map<String, dynamic> json) => _$CreateMultiCommunityEntryFromJson(json);
@@ -106,10 +89,7 @@ class CreateMultiCommunityEntry with _$CreateMultiCommunityEntry implements Lemm
 @freezed
 class DeleteMultiCommunityEntry with _$DeleteMultiCommunityEntry implements LemmyApiQuery<SuccessResponse> {
   @apiSerde
-  const factory DeleteMultiCommunityEntry({
-    required int id,
-    required int communityId,
-  }) = _DeleteMultiCommunityEntry;
+  const factory DeleteMultiCommunityEntry({required int id, required int communityId}) = _DeleteMultiCommunityEntry;
 
   const DeleteMultiCommunityEntry._();
   factory DeleteMultiCommunityEntry.fromJson(Map<String, dynamic> json) => _$DeleteMultiCommunityEntryFromJson(json);
@@ -128,10 +108,7 @@ class DeleteMultiCommunityEntry with _$DeleteMultiCommunityEntry implements Lemm
 @freezed
 class FollowMultiCommunity with _$FollowMultiCommunity implements LemmyApiQuery<MultiCommunityResponse> {
   @apiSerde
-  const factory FollowMultiCommunity({
-    required int multiCommunityId,
-    required bool follow,
-  }) = _FollowMultiCommunity;
+  const factory FollowMultiCommunity({required int multiCommunityId, required bool follow}) = _FollowMultiCommunity;
 
   const FollowMultiCommunity._();
   factory FollowMultiCommunity.fromJson(Map<String, dynamic> json) => _$FollowMultiCommunityFromJson(json);
@@ -150,15 +127,7 @@ class FollowMultiCommunity with _$FollowMultiCommunity implements LemmyApiQuery<
 @freezed
 class ListMultiCommunities with _$ListMultiCommunities implements LemmyApiQuery<ListMultiCommunitiesResponse> {
   @apiSerde
-  const factory ListMultiCommunities({
-    int? creatorId,
-    SortType? sort,
-    int? timeRangeSeconds,
-    int? limit,
-    String? pageCursor,
-    String? searchTerm,
-    bool? searchTitleOnly,
-  }) = _ListMultiCommunities;
+  const factory ListMultiCommunities({int? creatorId, SortType? sort, int? timeRangeSeconds, int? limit, String? pageCursor, String? searchTerm, bool? searchTitleOnly}) = _ListMultiCommunities;
 
   const ListMultiCommunities._();
   factory ListMultiCommunities.fromJson(Map<String, dynamic> json) => _$ListMultiCommunitiesFromJson(json);

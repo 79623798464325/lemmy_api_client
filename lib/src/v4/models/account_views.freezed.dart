@@ -32,31 +32,21 @@ mixin _$LocalUserView {
   /// Create a copy of LocalUserView
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $LocalUserViewCopyWith<LocalUserView> get copyWith =>
-      throw _privateConstructorUsedError;
+  $LocalUserViewCopyWith<LocalUserView> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $LocalUserViewCopyWith<$Res> {
-  factory $LocalUserViewCopyWith(
-    LocalUserView value,
-    $Res Function(LocalUserView) then,
-  ) = _$LocalUserViewCopyWithImpl<$Res, LocalUserView>;
+  factory $LocalUserViewCopyWith(LocalUserView value, $Res Function(LocalUserView) then) = _$LocalUserViewCopyWithImpl<$Res, LocalUserView>;
   @useResult
-  $Res call({
-    LocalUser localUser,
-    Person person,
-    bool? banned,
-    DateTime? banExpiresAt,
-  });
+  $Res call({LocalUser localUser, Person person, bool? banned, DateTime? banExpiresAt});
 
   $LocalUserCopyWith<$Res> get localUser;
   $PersonCopyWith<$Res> get person;
 }
 
 /// @nodoc
-class _$LocalUserViewCopyWithImpl<$Res, $Val extends LocalUserView>
-    implements $LocalUserViewCopyWith<$Res> {
+class _$LocalUserViewCopyWithImpl<$Res, $Val extends LocalUserView> implements $LocalUserViewCopyWith<$Res> {
   _$LocalUserViewCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -68,12 +58,7 @@ class _$LocalUserViewCopyWithImpl<$Res, $Val extends LocalUserView>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? localUser = null,
-    Object? person = null,
-    Object? banned = freezed,
-    Object? banExpiresAt = freezed,
-  }) {
+  $Res call({Object? localUser = null, Object? person = null, Object? banned = freezed, Object? banExpiresAt = freezed}) {
     return _then(
       _value.copyWith(
             localUser:
@@ -123,20 +108,11 @@ class _$LocalUserViewCopyWithImpl<$Res, $Val extends LocalUserView>
 }
 
 /// @nodoc
-abstract class _$$LocalUserViewImplCopyWith<$Res>
-    implements $LocalUserViewCopyWith<$Res> {
-  factory _$$LocalUserViewImplCopyWith(
-    _$LocalUserViewImpl value,
-    $Res Function(_$LocalUserViewImpl) then,
-  ) = __$$LocalUserViewImplCopyWithImpl<$Res>;
+abstract class _$$LocalUserViewImplCopyWith<$Res> implements $LocalUserViewCopyWith<$Res> {
+  factory _$$LocalUserViewImplCopyWith(_$LocalUserViewImpl value, $Res Function(_$LocalUserViewImpl) then) = __$$LocalUserViewImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    LocalUser localUser,
-    Person person,
-    bool? banned,
-    DateTime? banExpiresAt,
-  });
+  $Res call({LocalUser localUser, Person person, bool? banned, DateTime? banExpiresAt});
 
   @override
   $LocalUserCopyWith<$Res> get localUser;
@@ -145,24 +121,14 @@ abstract class _$$LocalUserViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$LocalUserViewImplCopyWithImpl<$Res>
-    extends _$LocalUserViewCopyWithImpl<$Res, _$LocalUserViewImpl>
-    implements _$$LocalUserViewImplCopyWith<$Res> {
-  __$$LocalUserViewImplCopyWithImpl(
-    _$LocalUserViewImpl _value,
-    $Res Function(_$LocalUserViewImpl) _then,
-  ) : super(_value, _then);
+class __$$LocalUserViewImplCopyWithImpl<$Res> extends _$LocalUserViewCopyWithImpl<$Res, _$LocalUserViewImpl> implements _$$LocalUserViewImplCopyWith<$Res> {
+  __$$LocalUserViewImplCopyWithImpl(_$LocalUserViewImpl _value, $Res Function(_$LocalUserViewImpl) _then) : super(_value, _then);
 
   /// Create a copy of LocalUserView
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? localUser = null,
-    Object? person = null,
-    Object? banned = freezed,
-    Object? banExpiresAt = freezed,
-  }) {
+  $Res call({Object? localUser = null, Object? person = null, Object? banned = freezed, Object? banExpiresAt = freezed}) {
     return _then(
       _$LocalUserViewImpl(
         localUser:
@@ -194,15 +160,9 @@ class __$$LocalUserViewImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$LocalUserViewImpl extends _LocalUserView {
-  const _$LocalUserViewImpl({
-    required this.localUser,
-    required this.person,
-    this.banned,
-    this.banExpiresAt,
-  }) : super._();
+  const _$LocalUserViewImpl({required this.localUser, required this.person, this.banned, this.banExpiresAt}) : super._();
 
-  factory _$LocalUserViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$LocalUserViewImplFromJson(json);
+  factory _$LocalUserViewImpl.fromJson(Map<String, dynamic> json) => _$$LocalUserViewImplFromJson(json);
 
   @override
   final LocalUser localUser;
@@ -223,26 +183,22 @@ class _$LocalUserViewImpl extends _LocalUserView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LocalUserViewImpl &&
-            (identical(other.localUser, localUser) ||
-                other.localUser == localUser) &&
+            (identical(other.localUser, localUser) || other.localUser == localUser) &&
             (identical(other.person, person) || other.person == person) &&
             (identical(other.banned, banned) || other.banned == banned) &&
-            (identical(other.banExpiresAt, banExpiresAt) ||
-                other.banExpiresAt == banExpiresAt));
+            (identical(other.banExpiresAt, banExpiresAt) || other.banExpiresAt == banExpiresAt));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, localUser, person, banned, banExpiresAt);
+  int get hashCode => Object.hash(runtimeType, localUser, person, banned, banExpiresAt);
 
   /// Create a copy of LocalUserView
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$LocalUserViewImplCopyWith<_$LocalUserViewImpl> get copyWith =>
-      __$$LocalUserViewImplCopyWithImpl<_$LocalUserViewImpl>(this, _$identity);
+  _$$LocalUserViewImplCopyWith<_$LocalUserViewImpl> get copyWith => __$$LocalUserViewImplCopyWithImpl<_$LocalUserViewImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -251,16 +207,10 @@ class _$LocalUserViewImpl extends _LocalUserView {
 }
 
 abstract class _LocalUserView extends LocalUserView {
-  const factory _LocalUserView({
-    required final LocalUser localUser,
-    required final Person person,
-    final bool? banned,
-    final DateTime? banExpiresAt,
-  }) = _$LocalUserViewImpl;
+  const factory _LocalUserView({required final LocalUser localUser, required final Person person, final bool? banned, final DateTime? banExpiresAt}) = _$LocalUserViewImpl;
   const _LocalUserView._() : super._();
 
-  factory _LocalUserView.fromJson(Map<String, dynamic> json) =
-      _$LocalUserViewImpl.fromJson;
+  factory _LocalUserView.fromJson(Map<String, dynamic> json) = _$LocalUserViewImpl.fromJson;
 
   @override
   LocalUser get localUser;
@@ -275,8 +225,7 @@ abstract class _LocalUserView extends LocalUserView {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LocalUserViewImplCopyWith<_$LocalUserViewImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$LocalUserViewImplCopyWith<_$LocalUserViewImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 LocalUser _$LocalUserFromJson(Map<String, dynamic> json) {
@@ -316,14 +265,12 @@ mixin _$LocalUser {
   /// Create a copy of LocalUser
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $LocalUserCopyWith<LocalUser> get copyWith =>
-      throw _privateConstructorUsedError;
+  $LocalUserCopyWith<LocalUser> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $LocalUserCopyWith<$Res> {
-  factory $LocalUserCopyWith(LocalUser value, $Res Function(LocalUser) then) =
-      _$LocalUserCopyWithImpl<$Res, LocalUser>;
+  factory $LocalUserCopyWith(LocalUser value, $Res Function(LocalUser) then) = _$LocalUserCopyWithImpl<$Res, LocalUser>;
   @useResult
   $Res call({
     int id,
@@ -354,8 +301,7 @@ abstract class $LocalUserCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$LocalUserCopyWithImpl<$Res, $Val extends LocalUser>
-    implements $LocalUserCopyWith<$Res> {
+class _$LocalUserCopyWithImpl<$Res, $Val extends LocalUser> implements $LocalUserCopyWith<$Res> {
   _$LocalUserCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -522,12 +468,8 @@ class _$LocalUserCopyWithImpl<$Res, $Val extends LocalUser>
 }
 
 /// @nodoc
-abstract class _$$LocalUserImplCopyWith<$Res>
-    implements $LocalUserCopyWith<$Res> {
-  factory _$$LocalUserImplCopyWith(
-    _$LocalUserImpl value,
-    $Res Function(_$LocalUserImpl) then,
-  ) = __$$LocalUserImplCopyWithImpl<$Res>;
+abstract class _$$LocalUserImplCopyWith<$Res> implements $LocalUserCopyWith<$Res> {
+  factory _$$LocalUserImplCopyWith(_$LocalUserImpl value, $Res Function(_$LocalUserImpl) then) = __$$LocalUserImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({
@@ -559,13 +501,8 @@ abstract class _$$LocalUserImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$LocalUserImplCopyWithImpl<$Res>
-    extends _$LocalUserCopyWithImpl<$Res, _$LocalUserImpl>
-    implements _$$LocalUserImplCopyWith<$Res> {
-  __$$LocalUserImplCopyWithImpl(
-    _$LocalUserImpl _value,
-    $Res Function(_$LocalUserImpl) _then,
-  ) : super(_value, _then);
+class __$$LocalUserImplCopyWithImpl<$Res> extends _$LocalUserCopyWithImpl<$Res, _$LocalUserImpl> implements _$$LocalUserImplCopyWith<$Res> {
+  __$$LocalUserImplCopyWithImpl(_$LocalUserImpl _value, $Res Function(_$LocalUserImpl) _then) : super(_value, _then);
 
   /// Create a copy of LocalUser
   /// with the given fields replaced by the non-null parameter values.
@@ -755,8 +692,7 @@ class _$LocalUserImpl extends _LocalUser {
     required this.collapseBotComments,
   }) : super._();
 
-  factory _$LocalUserImpl.fromJson(Map<String, dynamic> json) =>
-      _$$LocalUserImplFromJson(json);
+  factory _$LocalUserImpl.fromJson(Map<String, dynamic> json) => _$$LocalUserImplFromJson(json);
 
   @override
   final int id;
@@ -818,56 +754,29 @@ class _$LocalUserImpl extends _LocalUser {
         (other.runtimeType == runtimeType &&
             other is _$LocalUserImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.personId, personId) ||
-                other.personId == personId) &&
-            (identical(other.showNsfw, showNsfw) ||
-                other.showNsfw == showNsfw) &&
+            (identical(other.personId, personId) || other.personId == personId) &&
+            (identical(other.showNsfw, showNsfw) || other.showNsfw == showNsfw) &&
             (identical(other.theme, theme) || other.theme == theme) &&
-            (identical(other.defaultSortType, defaultSortType) ||
-                other.defaultSortType == defaultSortType) &&
-            (identical(other.defaultListingType, defaultListingType) ||
-                other.defaultListingType == defaultListingType) &&
-            (identical(other.interfaceLanguage, interfaceLanguage) ||
-                other.interfaceLanguage == interfaceLanguage) &&
-            (identical(other.showAvatars, showAvatars) ||
-                other.showAvatars == showAvatars) &&
-            (identical(
-                  other.sendNotificationsToEmail,
-                  sendNotificationsToEmail,
-                ) ||
-                other.sendNotificationsToEmail == sendNotificationsToEmail) &&
-            (identical(other.showScores, showScores) ||
-                other.showScores == showScores) &&
-            (identical(other.showBotAccounts, showBotAccounts) ||
-                other.showBotAccounts == showBotAccounts) &&
-            (identical(other.showReadPosts, showReadPosts) ||
-                other.showReadPosts == showReadPosts) &&
-            (identical(other.emailVerified, emailVerified) ||
-                other.emailVerified == emailVerified) &&
-            (identical(other.acceptedApplication, acceptedApplication) ||
-                other.acceptedApplication == acceptedApplication) &&
-            (identical(other.openLinksInNewTab, openLinksInNewTab) ||
-                other.openLinksInNewTab == openLinksInNewTab) &&
-            (identical(other.blurNsfw, blurNsfw) ||
-                other.blurNsfw == blurNsfw) &&
-            (identical(other.autoExpand, autoExpand) ||
-                other.autoExpand == autoExpand) &&
-            (identical(other.infiniteScrollEnabled, infiniteScrollEnabled) ||
-                other.infiniteScrollEnabled == infiniteScrollEnabled) &&
+            (identical(other.defaultSortType, defaultSortType) || other.defaultSortType == defaultSortType) &&
+            (identical(other.defaultListingType, defaultListingType) || other.defaultListingType == defaultListingType) &&
+            (identical(other.interfaceLanguage, interfaceLanguage) || other.interfaceLanguage == interfaceLanguage) &&
+            (identical(other.showAvatars, showAvatars) || other.showAvatars == showAvatars) &&
+            (identical(other.sendNotificationsToEmail, sendNotificationsToEmail) || other.sendNotificationsToEmail == sendNotificationsToEmail) &&
+            (identical(other.showScores, showScores) || other.showScores == showScores) &&
+            (identical(other.showBotAccounts, showBotAccounts) || other.showBotAccounts == showBotAccounts) &&
+            (identical(other.showReadPosts, showReadPosts) || other.showReadPosts == showReadPosts) &&
+            (identical(other.emailVerified, emailVerified) || other.emailVerified == emailVerified) &&
+            (identical(other.acceptedApplication, acceptedApplication) || other.acceptedApplication == acceptedApplication) &&
+            (identical(other.openLinksInNewTab, openLinksInNewTab) || other.openLinksInNewTab == openLinksInNewTab) &&
+            (identical(other.blurNsfw, blurNsfw) || other.blurNsfw == blurNsfw) &&
+            (identical(other.autoExpand, autoExpand) || other.autoExpand == autoExpand) &&
+            (identical(other.infiniteScrollEnabled, infiniteScrollEnabled) || other.infiniteScrollEnabled == infiniteScrollEnabled) &&
             (identical(other.admin, admin) || other.admin == admin) &&
-            (identical(other.postListingMode, postListingMode) ||
-                other.postListingMode == postListingMode) &&
-            (identical(other.totpEnabled, totpEnabled) ||
-                other.totpEnabled == totpEnabled) &&
-            (identical(
-                  other.enableKeyboardNavigation,
-                  enableKeyboardNavigation,
-                ) ||
-                other.enableKeyboardNavigation == enableKeyboardNavigation) &&
-            (identical(other.enableAnimatedImages, enableAnimatedImages) ||
-                other.enableAnimatedImages == enableAnimatedImages) &&
-            (identical(other.collapseBotComments, collapseBotComments) ||
-                other.collapseBotComments == collapseBotComments));
+            (identical(other.postListingMode, postListingMode) || other.postListingMode == postListingMode) &&
+            (identical(other.totpEnabled, totpEnabled) || other.totpEnabled == totpEnabled) &&
+            (identical(other.enableKeyboardNavigation, enableKeyboardNavigation) || other.enableKeyboardNavigation == enableKeyboardNavigation) &&
+            (identical(other.enableAnimatedImages, enableAnimatedImages) || other.enableAnimatedImages == enableAnimatedImages) &&
+            (identical(other.collapseBotComments, collapseBotComments) || other.collapseBotComments == collapseBotComments));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -905,8 +814,7 @@ class _$LocalUserImpl extends _LocalUser {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$LocalUserImplCopyWith<_$LocalUserImpl> get copyWith =>
-      __$$LocalUserImplCopyWithImpl<_$LocalUserImpl>(this, _$identity);
+  _$$LocalUserImplCopyWith<_$LocalUserImpl> get copyWith => __$$LocalUserImplCopyWithImpl<_$LocalUserImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -943,8 +851,7 @@ abstract class _LocalUser extends LocalUser {
   }) = _$LocalUserImpl;
   const _LocalUser._() : super._();
 
-  factory _LocalUser.fromJson(Map<String, dynamic> json) =
-      _$LocalUserImpl.fromJson;
+  factory _LocalUser.fromJson(Map<String, dynamic> json) = _$LocalUserImpl.fromJson;
 
   @override
   int get id;
@@ -999,13 +906,10 @@ abstract class _LocalUser extends LocalUser {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LocalUserImplCopyWith<_$LocalUserImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$LocalUserImplCopyWith<_$LocalUserImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
-CommunityFollowerView _$CommunityFollowerViewFromJson(
-  Map<String, dynamic> json,
-) {
+CommunityFollowerView _$CommunityFollowerViewFromJson(Map<String, dynamic> json) {
   return _CommunityFollowerView.fromJson(json);
 }
 
@@ -1020,16 +924,12 @@ mixin _$CommunityFollowerView {
   /// Create a copy of CommunityFollowerView
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $CommunityFollowerViewCopyWith<CommunityFollowerView> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CommunityFollowerViewCopyWith<CommunityFollowerView> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CommunityFollowerViewCopyWith<$Res> {
-  factory $CommunityFollowerViewCopyWith(
-    CommunityFollowerView value,
-    $Res Function(CommunityFollowerView) then,
-  ) = _$CommunityFollowerViewCopyWithImpl<$Res, CommunityFollowerView>;
+  factory $CommunityFollowerViewCopyWith(CommunityFollowerView value, $Res Function(CommunityFollowerView) then) = _$CommunityFollowerViewCopyWithImpl<$Res, CommunityFollowerView>;
   @useResult
   $Res call({Community community, Person follower});
 
@@ -1038,11 +938,7 @@ abstract class $CommunityFollowerViewCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CommunityFollowerViewCopyWithImpl<
-  $Res,
-  $Val extends CommunityFollowerView
->
-    implements $CommunityFollowerViewCopyWith<$Res> {
+class _$CommunityFollowerViewCopyWithImpl<$Res, $Val extends CommunityFollowerView> implements $CommunityFollowerViewCopyWith<$Res> {
   _$CommunityFollowerViewCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1094,12 +990,8 @@ class _$CommunityFollowerViewCopyWithImpl<
 }
 
 /// @nodoc
-abstract class _$$CommunityFollowerViewImplCopyWith<$Res>
-    implements $CommunityFollowerViewCopyWith<$Res> {
-  factory _$$CommunityFollowerViewImplCopyWith(
-    _$CommunityFollowerViewImpl value,
-    $Res Function(_$CommunityFollowerViewImpl) then,
-  ) = __$$CommunityFollowerViewImplCopyWithImpl<$Res>;
+abstract class _$$CommunityFollowerViewImplCopyWith<$Res> implements $CommunityFollowerViewCopyWith<$Res> {
+  factory _$$CommunityFollowerViewImplCopyWith(_$CommunityFollowerViewImpl value, $Res Function(_$CommunityFollowerViewImpl) then) = __$$CommunityFollowerViewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Community community, Person follower});
@@ -1111,14 +1003,8 @@ abstract class _$$CommunityFollowerViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$CommunityFollowerViewImplCopyWithImpl<$Res>
-    extends
-        _$CommunityFollowerViewCopyWithImpl<$Res, _$CommunityFollowerViewImpl>
-    implements _$$CommunityFollowerViewImplCopyWith<$Res> {
-  __$$CommunityFollowerViewImplCopyWithImpl(
-    _$CommunityFollowerViewImpl _value,
-    $Res Function(_$CommunityFollowerViewImpl) _then,
-  ) : super(_value, _then);
+class __$$CommunityFollowerViewImplCopyWithImpl<$Res> extends _$CommunityFollowerViewCopyWithImpl<$Res, _$CommunityFollowerViewImpl> implements _$$CommunityFollowerViewImplCopyWith<$Res> {
+  __$$CommunityFollowerViewImplCopyWithImpl(_$CommunityFollowerViewImpl _value, $Res Function(_$CommunityFollowerViewImpl) _then) : super(_value, _then);
 
   /// Create a copy of CommunityFollowerView
   /// with the given fields replaced by the non-null parameter values.
@@ -1146,13 +1032,9 @@ class __$$CommunityFollowerViewImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$CommunityFollowerViewImpl extends _CommunityFollowerView {
-  const _$CommunityFollowerViewImpl({
-    required this.community,
-    required this.follower,
-  }) : super._();
+  const _$CommunityFollowerViewImpl({required this.community, required this.follower}) : super._();
 
-  factory _$CommunityFollowerViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CommunityFollowerViewImplFromJson(json);
+  factory _$CommunityFollowerViewImpl.fromJson(Map<String, dynamic> json) => _$$CommunityFollowerViewImplFromJson(json);
 
   @override
   final Community community;
@@ -1169,10 +1051,8 @@ class _$CommunityFollowerViewImpl extends _CommunityFollowerView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CommunityFollowerViewImpl &&
-            (identical(other.community, community) ||
-                other.community == community) &&
-            (identical(other.follower, follower) ||
-                other.follower == follower));
+            (identical(other.community, community) || other.community == community) &&
+            (identical(other.follower, follower) || other.follower == follower));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -1184,12 +1064,7 @@ class _$CommunityFollowerViewImpl extends _CommunityFollowerView {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$CommunityFollowerViewImplCopyWith<_$CommunityFollowerViewImpl>
-  get copyWith =>
-      __$$CommunityFollowerViewImplCopyWithImpl<_$CommunityFollowerViewImpl>(
-        this,
-        _$identity,
-      );
+  _$$CommunityFollowerViewImplCopyWith<_$CommunityFollowerViewImpl> get copyWith => __$$CommunityFollowerViewImplCopyWithImpl<_$CommunityFollowerViewImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1198,14 +1073,10 @@ class _$CommunityFollowerViewImpl extends _CommunityFollowerView {
 }
 
 abstract class _CommunityFollowerView extends CommunityFollowerView {
-  const factory _CommunityFollowerView({
-    required final Community community,
-    required final Person follower,
-  }) = _$CommunityFollowerViewImpl;
+  const factory _CommunityFollowerView({required final Community community, required final Person follower}) = _$CommunityFollowerViewImpl;
   const _CommunityFollowerView._() : super._();
 
-  factory _CommunityFollowerView.fromJson(Map<String, dynamic> json) =
-      _$CommunityFollowerViewImpl.fromJson;
+  factory _CommunityFollowerView.fromJson(Map<String, dynamic> json) = _$CommunityFollowerViewImpl.fromJson;
 
   @override
   Community get community;
@@ -1216,8 +1087,7 @@ abstract class _CommunityFollowerView extends CommunityFollowerView {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CommunityFollowerViewImplCopyWith<_$CommunityFollowerViewImpl>
-  get copyWith => throw _privateConstructorUsedError;
+  _$$CommunityFollowerViewImplCopyWith<_$CommunityFollowerViewImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 CommunityBlockView _$CommunityBlockViewFromJson(Map<String, dynamic> json) {
@@ -1235,16 +1105,12 @@ mixin _$CommunityBlockView {
   /// Create a copy of CommunityBlockView
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $CommunityBlockViewCopyWith<CommunityBlockView> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CommunityBlockViewCopyWith<CommunityBlockView> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CommunityBlockViewCopyWith<$Res> {
-  factory $CommunityBlockViewCopyWith(
-    CommunityBlockView value,
-    $Res Function(CommunityBlockView) then,
-  ) = _$CommunityBlockViewCopyWithImpl<$Res, CommunityBlockView>;
+  factory $CommunityBlockViewCopyWith(CommunityBlockView value, $Res Function(CommunityBlockView) then) = _$CommunityBlockViewCopyWithImpl<$Res, CommunityBlockView>;
   @useResult
   $Res call({Person person, Community community});
 
@@ -1253,8 +1119,7 @@ abstract class $CommunityBlockViewCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CommunityBlockViewCopyWithImpl<$Res, $Val extends CommunityBlockView>
-    implements $CommunityBlockViewCopyWith<$Res> {
+class _$CommunityBlockViewCopyWithImpl<$Res, $Val extends CommunityBlockView> implements $CommunityBlockViewCopyWith<$Res> {
   _$CommunityBlockViewCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1306,12 +1171,8 @@ class _$CommunityBlockViewCopyWithImpl<$Res, $Val extends CommunityBlockView>
 }
 
 /// @nodoc
-abstract class _$$CommunityBlockViewImplCopyWith<$Res>
-    implements $CommunityBlockViewCopyWith<$Res> {
-  factory _$$CommunityBlockViewImplCopyWith(
-    _$CommunityBlockViewImpl value,
-    $Res Function(_$CommunityBlockViewImpl) then,
-  ) = __$$CommunityBlockViewImplCopyWithImpl<$Res>;
+abstract class _$$CommunityBlockViewImplCopyWith<$Res> implements $CommunityBlockViewCopyWith<$Res> {
+  factory _$$CommunityBlockViewImplCopyWith(_$CommunityBlockViewImpl value, $Res Function(_$CommunityBlockViewImpl) then) = __$$CommunityBlockViewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Person person, Community community});
@@ -1323,13 +1184,8 @@ abstract class _$$CommunityBlockViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$CommunityBlockViewImplCopyWithImpl<$Res>
-    extends _$CommunityBlockViewCopyWithImpl<$Res, _$CommunityBlockViewImpl>
-    implements _$$CommunityBlockViewImplCopyWith<$Res> {
-  __$$CommunityBlockViewImplCopyWithImpl(
-    _$CommunityBlockViewImpl _value,
-    $Res Function(_$CommunityBlockViewImpl) _then,
-  ) : super(_value, _then);
+class __$$CommunityBlockViewImplCopyWithImpl<$Res> extends _$CommunityBlockViewCopyWithImpl<$Res, _$CommunityBlockViewImpl> implements _$$CommunityBlockViewImplCopyWith<$Res> {
+  __$$CommunityBlockViewImplCopyWithImpl(_$CommunityBlockViewImpl _value, $Res Function(_$CommunityBlockViewImpl) _then) : super(_value, _then);
 
   /// Create a copy of CommunityBlockView
   /// with the given fields replaced by the non-null parameter values.
@@ -1357,13 +1213,9 @@ class __$$CommunityBlockViewImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$CommunityBlockViewImpl extends _CommunityBlockView {
-  const _$CommunityBlockViewImpl({
-    required this.person,
-    required this.community,
-  }) : super._();
+  const _$CommunityBlockViewImpl({required this.person, required this.community}) : super._();
 
-  factory _$CommunityBlockViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CommunityBlockViewImplFromJson(json);
+  factory _$CommunityBlockViewImpl.fromJson(Map<String, dynamic> json) => _$$CommunityBlockViewImplFromJson(json);
 
   @override
   final Person person;
@@ -1381,8 +1233,7 @@ class _$CommunityBlockViewImpl extends _CommunityBlockView {
         (other.runtimeType == runtimeType &&
             other is _$CommunityBlockViewImpl &&
             (identical(other.person, person) || other.person == person) &&
-            (identical(other.community, community) ||
-                other.community == community));
+            (identical(other.community, community) || other.community == community));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -1394,11 +1245,7 @@ class _$CommunityBlockViewImpl extends _CommunityBlockView {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$CommunityBlockViewImplCopyWith<_$CommunityBlockViewImpl> get copyWith =>
-      __$$CommunityBlockViewImplCopyWithImpl<_$CommunityBlockViewImpl>(
-        this,
-        _$identity,
-      );
+  _$$CommunityBlockViewImplCopyWith<_$CommunityBlockViewImpl> get copyWith => __$$CommunityBlockViewImplCopyWithImpl<_$CommunityBlockViewImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1407,14 +1254,10 @@ class _$CommunityBlockViewImpl extends _CommunityBlockView {
 }
 
 abstract class _CommunityBlockView extends CommunityBlockView {
-  const factory _CommunityBlockView({
-    required final Person person,
-    required final Community community,
-  }) = _$CommunityBlockViewImpl;
+  const factory _CommunityBlockView({required final Person person, required final Community community}) = _$CommunityBlockViewImpl;
   const _CommunityBlockView._() : super._();
 
-  factory _CommunityBlockView.fromJson(Map<String, dynamic> json) =
-      _$CommunityBlockViewImpl.fromJson;
+  factory _CommunityBlockView.fromJson(Map<String, dynamic> json) = _$CommunityBlockViewImpl.fromJson;
 
   @override
   Person get person;
@@ -1425,8 +1268,7 @@ abstract class _CommunityBlockView extends CommunityBlockView {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CommunityBlockViewImplCopyWith<_$CommunityBlockViewImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CommunityBlockViewImplCopyWith<_$CommunityBlockViewImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 PersonBlockView _$PersonBlockViewFromJson(Map<String, dynamic> json) {
@@ -1444,16 +1286,12 @@ mixin _$PersonBlockView {
   /// Create a copy of PersonBlockView
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $PersonBlockViewCopyWith<PersonBlockView> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PersonBlockViewCopyWith<PersonBlockView> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PersonBlockViewCopyWith<$Res> {
-  factory $PersonBlockViewCopyWith(
-    PersonBlockView value,
-    $Res Function(PersonBlockView) then,
-  ) = _$PersonBlockViewCopyWithImpl<$Res, PersonBlockView>;
+  factory $PersonBlockViewCopyWith(PersonBlockView value, $Res Function(PersonBlockView) then) = _$PersonBlockViewCopyWithImpl<$Res, PersonBlockView>;
   @useResult
   $Res call({Person person, Person target});
 
@@ -1462,8 +1300,7 @@ abstract class $PersonBlockViewCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PersonBlockViewCopyWithImpl<$Res, $Val extends PersonBlockView>
-    implements $PersonBlockViewCopyWith<$Res> {
+class _$PersonBlockViewCopyWithImpl<$Res, $Val extends PersonBlockView> implements $PersonBlockViewCopyWith<$Res> {
   _$PersonBlockViewCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1515,12 +1352,8 @@ class _$PersonBlockViewCopyWithImpl<$Res, $Val extends PersonBlockView>
 }
 
 /// @nodoc
-abstract class _$$PersonBlockViewImplCopyWith<$Res>
-    implements $PersonBlockViewCopyWith<$Res> {
-  factory _$$PersonBlockViewImplCopyWith(
-    _$PersonBlockViewImpl value,
-    $Res Function(_$PersonBlockViewImpl) then,
-  ) = __$$PersonBlockViewImplCopyWithImpl<$Res>;
+abstract class _$$PersonBlockViewImplCopyWith<$Res> implements $PersonBlockViewCopyWith<$Res> {
+  factory _$$PersonBlockViewImplCopyWith(_$PersonBlockViewImpl value, $Res Function(_$PersonBlockViewImpl) then) = __$$PersonBlockViewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Person person, Person target});
@@ -1532,13 +1365,8 @@ abstract class _$$PersonBlockViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PersonBlockViewImplCopyWithImpl<$Res>
-    extends _$PersonBlockViewCopyWithImpl<$Res, _$PersonBlockViewImpl>
-    implements _$$PersonBlockViewImplCopyWith<$Res> {
-  __$$PersonBlockViewImplCopyWithImpl(
-    _$PersonBlockViewImpl _value,
-    $Res Function(_$PersonBlockViewImpl) _then,
-  ) : super(_value, _then);
+class __$$PersonBlockViewImplCopyWithImpl<$Res> extends _$PersonBlockViewCopyWithImpl<$Res, _$PersonBlockViewImpl> implements _$$PersonBlockViewImplCopyWith<$Res> {
+  __$$PersonBlockViewImplCopyWithImpl(_$PersonBlockViewImpl _value, $Res Function(_$PersonBlockViewImpl) _then) : super(_value, _then);
 
   /// Create a copy of PersonBlockView
   /// with the given fields replaced by the non-null parameter values.
@@ -1566,11 +1394,9 @@ class __$$PersonBlockViewImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$PersonBlockViewImpl extends _PersonBlockView {
-  const _$PersonBlockViewImpl({required this.person, required this.target})
-    : super._();
+  const _$PersonBlockViewImpl({required this.person, required this.target}) : super._();
 
-  factory _$PersonBlockViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PersonBlockViewImplFromJson(json);
+  factory _$PersonBlockViewImpl.fromJson(Map<String, dynamic> json) => _$$PersonBlockViewImplFromJson(json);
 
   @override
   final Person person;
@@ -1600,11 +1426,7 @@ class _$PersonBlockViewImpl extends _PersonBlockView {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$PersonBlockViewImplCopyWith<_$PersonBlockViewImpl> get copyWith =>
-      __$$PersonBlockViewImplCopyWithImpl<_$PersonBlockViewImpl>(
-        this,
-        _$identity,
-      );
+  _$$PersonBlockViewImplCopyWith<_$PersonBlockViewImpl> get copyWith => __$$PersonBlockViewImplCopyWithImpl<_$PersonBlockViewImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1613,14 +1435,10 @@ class _$PersonBlockViewImpl extends _PersonBlockView {
 }
 
 abstract class _PersonBlockView extends PersonBlockView {
-  const factory _PersonBlockView({
-    required final Person person,
-    required final Person target,
-  }) = _$PersonBlockViewImpl;
+  const factory _PersonBlockView({required final Person person, required final Person target}) = _$PersonBlockViewImpl;
   const _PersonBlockView._() : super._();
 
-  factory _PersonBlockView.fromJson(Map<String, dynamic> json) =
-      _$PersonBlockViewImpl.fromJson;
+  factory _PersonBlockView.fromJson(Map<String, dynamic> json) = _$PersonBlockViewImpl.fromJson;
 
   @override
   Person get person;
@@ -1631,8 +1449,7 @@ abstract class _PersonBlockView extends PersonBlockView {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PersonBlockViewImplCopyWith<_$PersonBlockViewImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PersonBlockViewImplCopyWith<_$PersonBlockViewImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 InstanceBlockView _$InstanceBlockViewFromJson(Map<String, dynamic> json) {
@@ -1650,16 +1467,12 @@ mixin _$InstanceBlockView {
   /// Create a copy of InstanceBlockView
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $InstanceBlockViewCopyWith<InstanceBlockView> get copyWith =>
-      throw _privateConstructorUsedError;
+  $InstanceBlockViewCopyWith<InstanceBlockView> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $InstanceBlockViewCopyWith<$Res> {
-  factory $InstanceBlockViewCopyWith(
-    InstanceBlockView value,
-    $Res Function(InstanceBlockView) then,
-  ) = _$InstanceBlockViewCopyWithImpl<$Res, InstanceBlockView>;
+  factory $InstanceBlockViewCopyWith(InstanceBlockView value, $Res Function(InstanceBlockView) then) = _$InstanceBlockViewCopyWithImpl<$Res, InstanceBlockView>;
   @useResult
   $Res call({Person person, Instance instance});
 
@@ -1668,8 +1481,7 @@ abstract class $InstanceBlockViewCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$InstanceBlockViewCopyWithImpl<$Res, $Val extends InstanceBlockView>
-    implements $InstanceBlockViewCopyWith<$Res> {
+class _$InstanceBlockViewCopyWithImpl<$Res, $Val extends InstanceBlockView> implements $InstanceBlockViewCopyWith<$Res> {
   _$InstanceBlockViewCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1721,12 +1533,8 @@ class _$InstanceBlockViewCopyWithImpl<$Res, $Val extends InstanceBlockView>
 }
 
 /// @nodoc
-abstract class _$$InstanceBlockViewImplCopyWith<$Res>
-    implements $InstanceBlockViewCopyWith<$Res> {
-  factory _$$InstanceBlockViewImplCopyWith(
-    _$InstanceBlockViewImpl value,
-    $Res Function(_$InstanceBlockViewImpl) then,
-  ) = __$$InstanceBlockViewImplCopyWithImpl<$Res>;
+abstract class _$$InstanceBlockViewImplCopyWith<$Res> implements $InstanceBlockViewCopyWith<$Res> {
+  factory _$$InstanceBlockViewImplCopyWith(_$InstanceBlockViewImpl value, $Res Function(_$InstanceBlockViewImpl) then) = __$$InstanceBlockViewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Person person, Instance instance});
@@ -1738,13 +1546,8 @@ abstract class _$$InstanceBlockViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$InstanceBlockViewImplCopyWithImpl<$Res>
-    extends _$InstanceBlockViewCopyWithImpl<$Res, _$InstanceBlockViewImpl>
-    implements _$$InstanceBlockViewImplCopyWith<$Res> {
-  __$$InstanceBlockViewImplCopyWithImpl(
-    _$InstanceBlockViewImpl _value,
-    $Res Function(_$InstanceBlockViewImpl) _then,
-  ) : super(_value, _then);
+class __$$InstanceBlockViewImplCopyWithImpl<$Res> extends _$InstanceBlockViewCopyWithImpl<$Res, _$InstanceBlockViewImpl> implements _$$InstanceBlockViewImplCopyWith<$Res> {
+  __$$InstanceBlockViewImplCopyWithImpl(_$InstanceBlockViewImpl _value, $Res Function(_$InstanceBlockViewImpl) _then) : super(_value, _then);
 
   /// Create a copy of InstanceBlockView
   /// with the given fields replaced by the non-null parameter values.
@@ -1772,11 +1575,9 @@ class __$$InstanceBlockViewImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$InstanceBlockViewImpl extends _InstanceBlockView {
-  const _$InstanceBlockViewImpl({required this.person, required this.instance})
-    : super._();
+  const _$InstanceBlockViewImpl({required this.person, required this.instance}) : super._();
 
-  factory _$InstanceBlockViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$InstanceBlockViewImplFromJson(json);
+  factory _$InstanceBlockViewImpl.fromJson(Map<String, dynamic> json) => _$$InstanceBlockViewImplFromJson(json);
 
   @override
   final Person person;
@@ -1794,8 +1595,7 @@ class _$InstanceBlockViewImpl extends _InstanceBlockView {
         (other.runtimeType == runtimeType &&
             other is _$InstanceBlockViewImpl &&
             (identical(other.person, person) || other.person == person) &&
-            (identical(other.instance, instance) ||
-                other.instance == instance));
+            (identical(other.instance, instance) || other.instance == instance));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -1807,11 +1607,7 @@ class _$InstanceBlockViewImpl extends _InstanceBlockView {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$InstanceBlockViewImplCopyWith<_$InstanceBlockViewImpl> get copyWith =>
-      __$$InstanceBlockViewImplCopyWithImpl<_$InstanceBlockViewImpl>(
-        this,
-        _$identity,
-      );
+  _$$InstanceBlockViewImplCopyWith<_$InstanceBlockViewImpl> get copyWith => __$$InstanceBlockViewImplCopyWithImpl<_$InstanceBlockViewImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1820,14 +1616,10 @@ class _$InstanceBlockViewImpl extends _InstanceBlockView {
 }
 
 abstract class _InstanceBlockView extends InstanceBlockView {
-  const factory _InstanceBlockView({
-    required final Person person,
-    required final Instance instance,
-  }) = _$InstanceBlockViewImpl;
+  const factory _InstanceBlockView({required final Person person, required final Instance instance}) = _$InstanceBlockViewImpl;
   const _InstanceBlockView._() : super._();
 
-  factory _InstanceBlockView.fromJson(Map<String, dynamic> json) =
-      _$InstanceBlockViewImpl.fromJson;
+  factory _InstanceBlockView.fromJson(Map<String, dynamic> json) = _$InstanceBlockViewImpl.fromJson;
 
   @override
   Person get person;
@@ -1838,6 +1630,5 @@ abstract class _InstanceBlockView extends InstanceBlockView {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$InstanceBlockViewImplCopyWith<_$InstanceBlockViewImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$InstanceBlockViewImplCopyWith<_$InstanceBlockViewImpl> get copyWith => throw _privateConstructorUsedError;
 }

@@ -53,14 +53,7 @@ class BlockPerson with _$BlockPerson implements LemmyApiQuery<BlockPersonRespons
 @freezed
 class ListPersons with _$ListPersons implements LemmyApiQuery<ListPersonsResponse> {
   @apiSerde
-  const factory ListPersons({
-    int? limit,
-    String? pageCursor,
-    bool? searchTitleOnly,
-    String? searchTerm,
-    PersonSortType? sort,
-    PersonListingType? type,
-  }) = _ListPersons;
+  const factory ListPersons({int? limit, String? pageCursor, bool? searchTitleOnly, String? searchTerm, PersonSortType? sort, PersonListingType? type}) = _ListPersons;
 
   const ListPersons._();
   factory ListPersons.fromJson(Map<String, dynamic> json) => _$ListPersonsFromJson(json);
@@ -79,15 +72,7 @@ class ListPersons with _$ListPersons implements LemmyApiQuery<ListPersonsRespons
 @freezed
 class ListPersonContent with _$ListPersonContent implements LemmyApiQuery<ListPersonContentResponse> {
   @apiSerde
-  const factory ListPersonContent({
-    int? limit,
-    String? pageCursor,
-    String? communityName,
-    int? communityId,
-    String? username,
-    int? personId,
-    PersonContentType? type,
-  }) = _ListPersonContent;
+  const factory ListPersonContent({int? limit, String? pageCursor, String? communityName, int? communityId, String? username, int? personId, PersonContentType? type}) = _ListPersonContent;
 
   const ListPersonContent._();
   factory ListPersonContent.fromJson(Map<String, dynamic> json) => _$ListPersonContentFromJson(json);
@@ -106,10 +91,7 @@ class ListPersonContent with _$ListPersonContent implements LemmyApiQuery<ListPe
 @freezed
 class NotePerson with _$NotePerson implements LemmyApiQuery<SuccessResponse> {
   @apiSerde
-  const factory NotePerson({
-    required int personId,
-    required String note,
-  }) = _NotePerson;
+  const factory NotePerson({required int personId, required String note}) = _NotePerson;
 
   const NotePerson._();
   factory NotePerson.fromJson(Map<String, dynamic> json) => _$NotePersonFromJson(json);

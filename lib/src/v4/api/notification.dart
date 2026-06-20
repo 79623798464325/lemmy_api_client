@@ -19,13 +19,7 @@ part 'notification.g.dart';
 @freezed
 class Notification with _$Notification {
   @modelSerde
-  const factory Notification({
-    required int id,
-    required int recipientId,
-    required String notificationType,
-    required bool read,
-    required DateTime published,
-  }) = _Notification;
+  const factory Notification({required int id, required int recipientId, required String notificationType, required bool read, required DateTime published}) = _Notification;
 
   const Notification._();
   factory Notification.fromJson(Map<String, dynamic> json) => _$NotificationFromJson(json);
@@ -58,10 +52,7 @@ class NotificationView with _$NotificationView {
 @freezed
 class ListNotificationsResponse with _$ListNotificationsResponse {
   @modelSerde
-  const factory ListNotificationsResponse({
-    required List<NotificationView> notifications,
-    String? nextPage,
-  }) = _ListNotificationsResponse;
+  const factory ListNotificationsResponse({required List<NotificationView> notifications, String? nextPage}) = _ListNotificationsResponse;
 
   const ListNotificationsResponse._();
   factory ListNotificationsResponse.fromJson(Map<String, dynamic> json) => _$ListNotificationsResponseFromJson(json);
@@ -75,13 +66,7 @@ class ListNotificationsResponse with _$ListNotificationsResponse {
 @freezed
 class ListNotifications with _$ListNotifications implements LemmyApiQuery<ListNotificationsResponse> {
   @apiSerde
-  const factory ListNotifications({
-    bool? unreadOnly,
-    @JsonKey(name: 'type_') NotificationType? type,
-    int? creatorId,
-    int? limit,
-    String? pageCursor,
-  }) = _ListNotifications;
+  const factory ListNotifications({bool? unreadOnly, @JsonKey(name: 'type_') NotificationType? type, int? creatorId, int? limit, String? pageCursor}) = _ListNotifications;
 
   const ListNotifications._();
   factory ListNotifications.fromJson(Map<String, dynamic> json) => _$ListNotificationsFromJson(json);
@@ -100,10 +85,7 @@ class ListNotifications with _$ListNotifications implements LemmyApiQuery<ListNo
 @freezed
 class MarkNotificationAsRead with _$MarkNotificationAsRead implements LemmyApiQuery<SuccessResponse> {
   @apiSerde
-  const factory MarkNotificationAsRead({
-    required int notificationId,
-    required bool read,
-  }) = _MarkNotificationAsRead;
+  const factory MarkNotificationAsRead({required int notificationId, required bool read}) = _MarkNotificationAsRead;
 
   const MarkNotificationAsRead._();
   factory MarkNotificationAsRead.fromJson(Map<String, dynamic> json) => _$MarkNotificationAsReadFromJson(json);

@@ -104,14 +104,7 @@ class LocalSiteRateLimit with _$LocalSiteRateLimit {
 @freezed
 class Instance with _$Instance {
   @modelSerde
-  const factory Instance({
-    required int id,
-    required String domain,
-    required DateTime publishedAt,
-    DateTime? updatedAt,
-    String? software,
-    String? version,
-  }) = _Instance;
+  const factory Instance({required int id, required String domain, required DateTime publishedAt, DateTime? updatedAt, String? software, String? version}) = _Instance;
 
   const Instance._();
   factory Instance.fromJson(Map<String, dynamic> json) => _$InstanceFromJson(json);
@@ -279,7 +272,6 @@ class Tagline with _$Tagline {
   factory Tagline.fromJson(Map<String, dynamic> json) => _$TaglineFromJson(json);
 }
 
-
 /// Community tag model.
 @freezed
 class CommunityTag with _$CommunityTag {
@@ -330,15 +322,8 @@ class CommunityReport with _$CommunityReport {
 @freezed
 class RegistrationApplication with _$RegistrationApplication {
   @modelSerde
-  const factory RegistrationApplication({
-    required int id,
-    required int localUserId,
-    required String answer,
-    int? adminId,
-    String? denyReason,
-    required DateTime publishedAt,
-    DateTime? updatedAt,
-  }) = _RegistrationApplication;
+  const factory RegistrationApplication({required int id, required int localUserId, required String answer, int? adminId, String? denyReason, required DateTime publishedAt, DateTime? updatedAt}) =
+      _RegistrationApplication;
 
   const RegistrationApplication._();
   factory RegistrationApplication.fromJson(Map<String, dynamic> json) => _$RegistrationApplicationFromJson(json);
@@ -348,12 +333,7 @@ class RegistrationApplication with _$RegistrationApplication {
 @freezed
 class LocalImage with _$LocalImage {
   @modelSerde
-  const factory LocalImage({
-    required String pictrsAlias,
-    required DateTime publishedAt,
-    required int personId,
-    int? thumbnailForPostId,
-  }) = _LocalImage;
+  const factory LocalImage({required String pictrsAlias, required DateTime publishedAt, required int personId, int? thumbnailForPostId}) = _LocalImage;
 
   const LocalImage._();
   factory LocalImage.fromJson(Map<String, dynamic> json) => _$LocalImageFromJson(json);
@@ -412,10 +392,7 @@ class CustomEmoji with _$CustomEmoji {
 @freezed
 class CustomEmojiKeyword with _$CustomEmojiKeyword {
   @modelSerde
-  const factory CustomEmojiKeyword({
-    required int customEmojiId,
-    required String keyword,
-  }) = _CustomEmojiKeyword;
+  const factory CustomEmojiKeyword({required int customEmojiId, required String keyword}) = _CustomEmojiKeyword;
 
   const CustomEmojiKeyword._();
   factory CustomEmojiKeyword.fromJson(Map<String, dynamic> json) => _$CustomEmojiKeywordFromJson(json);
@@ -451,14 +428,8 @@ class AdminOAuthProvider with _$AdminOAuthProvider {
 @freezed
 class PublicOAuthProvider with _$PublicOAuthProvider {
   @modelSerde
-  const factory PublicOAuthProvider({
-    required int id,
-    required String displayName,
-    required String authorizationEndpoint,
-    required String clientId,
-    required String scopes,
-    required bool usePkce,
-  }) = _PublicOAuthProvider;
+  const factory PublicOAuthProvider({required int id, required String displayName, required String authorizationEndpoint, required String clientId, required String scopes, required bool usePkce}) =
+      _PublicOAuthProvider;
 
   const PublicOAuthProvider._();
   factory PublicOAuthProvider.fromJson(Map<String, dynamic> json) => _$PublicOAuthProviderFromJson(json);
@@ -468,12 +439,7 @@ class PublicOAuthProvider with _$PublicOAuthProvider {
 @freezed
 class LoginToken with _$LoginToken {
   @modelSerde
-  const factory LoginToken({
-    required int userId,
-    required DateTime publishedAt,
-    required String ip,
-    String? userAgent,
-  }) = _LoginToken;
+  const factory LoginToken({required int userId, required DateTime publishedAt, required String ip, String? userAgent}) = _LoginToken;
 
   const LoginToken._();
   factory LoginToken.fromJson(Map<String, dynamic> json) => _$LoginTokenFromJson(json);
@@ -483,19 +449,9 @@ class LoginToken with _$LoginToken {
 @freezed
 class LocalUserInvite with _$LocalUserInvite {
   @modelSerde
-  const factory LocalUserInvite({
-    required int id,
-    required String token,
-    required int localUserId,
-    required int maxUses,
-    required int usesCount,
-    DateTime? expiresAt,
-    required DateTime publishedAt,
-  }) = _LocalUserInvite;
+  const factory LocalUserInvite({required int id, required String token, required int localUserId, required int maxUses, required int usesCount, DateTime? expiresAt, required DateTime publishedAt}) =
+      _LocalUserInvite;
 
   const LocalUserInvite._();
   factory LocalUserInvite.fromJson(Map<String, dynamic> json) => _$LocalUserInviteFromJson(json);
 }
-
-
-

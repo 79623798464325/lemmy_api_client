@@ -15,9 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
   'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
 );
 
-BlockInstanceResponse _$BlockInstanceResponseFromJson(
-  Map<String, dynamic> json,
-) {
+BlockInstanceResponse _$BlockInstanceResponseFromJson(Map<String, dynamic> json) {
   return _BlockInstanceResponse.fromJson(json);
 }
 
@@ -31,26 +29,18 @@ mixin _$BlockInstanceResponse {
   /// Create a copy of BlockInstanceResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $BlockInstanceResponseCopyWith<BlockInstanceResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  $BlockInstanceResponseCopyWith<BlockInstanceResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $BlockInstanceResponseCopyWith<$Res> {
-  factory $BlockInstanceResponseCopyWith(
-    BlockInstanceResponse value,
-    $Res Function(BlockInstanceResponse) then,
-  ) = _$BlockInstanceResponseCopyWithImpl<$Res, BlockInstanceResponse>;
+  factory $BlockInstanceResponseCopyWith(BlockInstanceResponse value, $Res Function(BlockInstanceResponse) then) = _$BlockInstanceResponseCopyWithImpl<$Res, BlockInstanceResponse>;
   @useResult
   $Res call({bool blocked});
 }
 
 /// @nodoc
-class _$BlockInstanceResponseCopyWithImpl<
-  $Res,
-  $Val extends BlockInstanceResponse
->
-    implements $BlockInstanceResponseCopyWith<$Res> {
+class _$BlockInstanceResponseCopyWithImpl<$Res, $Val extends BlockInstanceResponse> implements $BlockInstanceResponseCopyWith<$Res> {
   _$BlockInstanceResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -77,26 +67,16 @@ class _$BlockInstanceResponseCopyWithImpl<
 }
 
 /// @nodoc
-abstract class _$$BlockInstanceResponseImplCopyWith<$Res>
-    implements $BlockInstanceResponseCopyWith<$Res> {
-  factory _$$BlockInstanceResponseImplCopyWith(
-    _$BlockInstanceResponseImpl value,
-    $Res Function(_$BlockInstanceResponseImpl) then,
-  ) = __$$BlockInstanceResponseImplCopyWithImpl<$Res>;
+abstract class _$$BlockInstanceResponseImplCopyWith<$Res> implements $BlockInstanceResponseCopyWith<$Res> {
+  factory _$$BlockInstanceResponseImplCopyWith(_$BlockInstanceResponseImpl value, $Res Function(_$BlockInstanceResponseImpl) then) = __$$BlockInstanceResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool blocked});
 }
 
 /// @nodoc
-class __$$BlockInstanceResponseImplCopyWithImpl<$Res>
-    extends
-        _$BlockInstanceResponseCopyWithImpl<$Res, _$BlockInstanceResponseImpl>
-    implements _$$BlockInstanceResponseImplCopyWith<$Res> {
-  __$$BlockInstanceResponseImplCopyWithImpl(
-    _$BlockInstanceResponseImpl _value,
-    $Res Function(_$BlockInstanceResponseImpl) _then,
-  ) : super(_value, _then);
+class __$$BlockInstanceResponseImplCopyWithImpl<$Res> extends _$BlockInstanceResponseCopyWithImpl<$Res, _$BlockInstanceResponseImpl> implements _$$BlockInstanceResponseImplCopyWith<$Res> {
+  __$$BlockInstanceResponseImplCopyWithImpl(_$BlockInstanceResponseImpl _value, $Res Function(_$BlockInstanceResponseImpl) _then) : super(_value, _then);
 
   /// Create a copy of BlockInstanceResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -121,8 +101,7 @@ class __$$BlockInstanceResponseImplCopyWithImpl<$Res>
 class _$BlockInstanceResponseImpl extends _BlockInstanceResponse {
   const _$BlockInstanceResponseImpl({required this.blocked}) : super._();
 
-  factory _$BlockInstanceResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$BlockInstanceResponseImplFromJson(json);
+  factory _$BlockInstanceResponseImpl.fromJson(Map<String, dynamic> json) => _$$BlockInstanceResponseImplFromJson(json);
 
   @override
   final bool blocked;
@@ -134,10 +113,7 @@ class _$BlockInstanceResponseImpl extends _BlockInstanceResponse {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$BlockInstanceResponseImpl &&
-            (identical(other.blocked, blocked) || other.blocked == blocked));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$BlockInstanceResponseImpl && (identical(other.blocked, blocked) || other.blocked == blocked));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -149,12 +125,7 @@ class _$BlockInstanceResponseImpl extends _BlockInstanceResponse {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$BlockInstanceResponseImplCopyWith<_$BlockInstanceResponseImpl>
-  get copyWith =>
-      __$$BlockInstanceResponseImplCopyWithImpl<_$BlockInstanceResponseImpl>(
-        this,
-        _$identity,
-      );
+  _$$BlockInstanceResponseImplCopyWith<_$BlockInstanceResponseImpl> get copyWith => __$$BlockInstanceResponseImplCopyWithImpl<_$BlockInstanceResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -163,12 +134,10 @@ class _$BlockInstanceResponseImpl extends _BlockInstanceResponse {
 }
 
 abstract class _BlockInstanceResponse extends BlockInstanceResponse {
-  const factory _BlockInstanceResponse({required final bool blocked}) =
-      _$BlockInstanceResponseImpl;
+  const factory _BlockInstanceResponse({required final bool blocked}) = _$BlockInstanceResponseImpl;
   const _BlockInstanceResponse._() : super._();
 
-  factory _BlockInstanceResponse.fromJson(Map<String, dynamic> json) =
-      _$BlockInstanceResponseImpl.fromJson;
+  factory _BlockInstanceResponse.fromJson(Map<String, dynamic> json) = _$BlockInstanceResponseImpl.fromJson;
 
   @override
   bool get blocked;
@@ -177,6 +146,5 @@ abstract class _BlockInstanceResponse extends BlockInstanceResponse {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$BlockInstanceResponseImplCopyWith<_$BlockInstanceResponseImpl>
-  get copyWith => throw _privateConstructorUsedError;
+  _$$BlockInstanceResponseImplCopyWith<_$BlockInstanceResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }

@@ -85,12 +85,7 @@ class GetModlog with _$GetModlog implements LemmyApiQuery<GetModlogResponse> {
 @freezed
 class GetFederatedInstances with _$GetFederatedInstances implements LemmyApiQuery<GetFederatedInstancesResponse> {
   @apiSerde
-  const factory GetFederatedInstances({
-    GetFederatedInstancesKind? kind,
-    String? domainFilter,
-    String? pageCursor,
-    int? limit,
-  }) = _GetFederatedInstances;
+  const factory GetFederatedInstances({GetFederatedInstancesKind? kind, String? domainFilter, String? pageCursor, int? limit}) = _GetFederatedInstances;
 
   const GetFederatedInstances._();
   factory GetFederatedInstances.fromJson(Map<String, dynamic> json) => _$GetFederatedInstancesFromJson(json);
@@ -207,4 +202,3 @@ class GetNodeinfo with _$GetNodeinfo implements LemmyApiQuery<NodeInfo> {
   @override
   NodeInfo responseFactory(Map<String, dynamic> json) => NodeInfo.fromJson(json);
 }
-

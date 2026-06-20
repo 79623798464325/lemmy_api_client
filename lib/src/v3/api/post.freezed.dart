@@ -35,15 +35,13 @@ mixin _$GetPost {
 
 /// @nodoc
 abstract class $GetPostCopyWith<$Res> {
-  factory $GetPostCopyWith(GetPost value, $Res Function(GetPost) then) =
-      _$GetPostCopyWithImpl<$Res, GetPost>;
+  factory $GetPostCopyWith(GetPost value, $Res Function(GetPost) then) = _$GetPostCopyWithImpl<$Res, GetPost>;
   @useResult
   $Res call({int id, String? auth});
 }
 
 /// @nodoc
-class _$GetPostCopyWithImpl<$Res, $Val extends GetPost>
-    implements $GetPostCopyWith<$Res> {
+class _$GetPostCopyWithImpl<$Res, $Val extends GetPost> implements $GetPostCopyWith<$Res> {
   _$GetPostCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -76,23 +74,15 @@ class _$GetPostCopyWithImpl<$Res, $Val extends GetPost>
 
 /// @nodoc
 abstract class _$$GetPostImplCopyWith<$Res> implements $GetPostCopyWith<$Res> {
-  factory _$$GetPostImplCopyWith(
-    _$GetPostImpl value,
-    $Res Function(_$GetPostImpl) then,
-  ) = __$$GetPostImplCopyWithImpl<$Res>;
+  factory _$$GetPostImplCopyWith(_$GetPostImpl value, $Res Function(_$GetPostImpl) then) = __$$GetPostImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int id, String? auth});
 }
 
 /// @nodoc
-class __$$GetPostImplCopyWithImpl<$Res>
-    extends _$GetPostCopyWithImpl<$Res, _$GetPostImpl>
-    implements _$$GetPostImplCopyWith<$Res> {
-  __$$GetPostImplCopyWithImpl(
-    _$GetPostImpl _value,
-    $Res Function(_$GetPostImpl) _then,
-  ) : super(_value, _then);
+class __$$GetPostImplCopyWithImpl<$Res> extends _$GetPostCopyWithImpl<$Res, _$GetPostImpl> implements _$$GetPostImplCopyWith<$Res> {
+  __$$GetPostImplCopyWithImpl(_$GetPostImpl _value, $Res Function(_$GetPostImpl) _then) : super(_value, _then);
 
   /// Create a copy of GetPost
   /// with the given fields replaced by the non-null parameter values.
@@ -122,8 +112,7 @@ class __$$GetPostImplCopyWithImpl<$Res>
 class _$GetPostImpl extends _GetPost {
   const _$GetPostImpl({required this.id, this.auth}) : super._();
 
-  factory _$GetPostImpl.fromJson(Map<String, dynamic> json) =>
-      _$$GetPostImplFromJson(json);
+  factory _$GetPostImpl.fromJson(Map<String, dynamic> json) => _$$GetPostImplFromJson(json);
 
   @override
   final int id;
@@ -137,11 +126,7 @@ class _$GetPostImpl extends _GetPost {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$GetPostImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.auth, auth) || other.auth == auth));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$GetPostImpl && (identical(other.id, id) || other.id == id) && (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -153,8 +138,7 @@ class _$GetPostImpl extends _GetPost {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetPostImplCopyWith<_$GetPostImpl> get copyWith =>
-      __$$GetPostImplCopyWithImpl<_$GetPostImpl>(this, _$identity);
+  _$$GetPostImplCopyWith<_$GetPostImpl> get copyWith => __$$GetPostImplCopyWithImpl<_$GetPostImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -163,8 +147,7 @@ class _$GetPostImpl extends _GetPost {
 }
 
 abstract class _GetPost extends GetPost {
-  const factory _GetPost({required final int id, final String? auth}) =
-      _$GetPostImpl;
+  const factory _GetPost({required final int id, final String? auth}) = _$GetPostImpl;
   const _GetPost._() : super._();
 
   factory _GetPost.fromJson(Map<String, dynamic> json) = _$GetPostImpl.fromJson;
@@ -178,8 +161,7 @@ abstract class _GetPost extends GetPost {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetPostImplCopyWith<_$GetPostImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GetPostImplCopyWith<_$GetPostImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 CreatePost _$CreatePostFromJson(Map<String, dynamic> json) {
@@ -204,33 +186,18 @@ mixin _$CreatePost {
   /// Create a copy of CreatePost
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $CreatePostCopyWith<CreatePost> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CreatePostCopyWith<CreatePost> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CreatePostCopyWith<$Res> {
-  factory $CreatePostCopyWith(
-    CreatePost value,
-    $Res Function(CreatePost) then,
-  ) = _$CreatePostCopyWithImpl<$Res, CreatePost>;
+  factory $CreatePostCopyWith(CreatePost value, $Res Function(CreatePost) then) = _$CreatePostCopyWithImpl<$Res, CreatePost>;
   @useResult
-  $Res call({
-    String name,
-    String? url,
-    String? body,
-    bool? nsfw,
-    String? altText,
-    String? customThumbnail,
-    int communityId,
-    String auth,
-    String? honeypot,
-  });
+  $Res call({String name, String? url, String? body, bool? nsfw, String? altText, String? customThumbnail, int communityId, String auth, String? honeypot});
 }
 
 /// @nodoc
-class _$CreatePostCopyWithImpl<$Res, $Val extends CreatePost>
-    implements $CreatePostCopyWith<$Res> {
+class _$CreatePostCopyWithImpl<$Res, $Val extends CreatePost> implements $CreatePostCopyWith<$Res> {
   _$CreatePostCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -307,35 +274,16 @@ class _$CreatePostCopyWithImpl<$Res, $Val extends CreatePost>
 }
 
 /// @nodoc
-abstract class _$$CreatePostImplCopyWith<$Res>
-    implements $CreatePostCopyWith<$Res> {
-  factory _$$CreatePostImplCopyWith(
-    _$CreatePostImpl value,
-    $Res Function(_$CreatePostImpl) then,
-  ) = __$$CreatePostImplCopyWithImpl<$Res>;
+abstract class _$$CreatePostImplCopyWith<$Res> implements $CreatePostCopyWith<$Res> {
+  factory _$$CreatePostImplCopyWith(_$CreatePostImpl value, $Res Function(_$CreatePostImpl) then) = __$$CreatePostImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    String name,
-    String? url,
-    String? body,
-    bool? nsfw,
-    String? altText,
-    String? customThumbnail,
-    int communityId,
-    String auth,
-    String? honeypot,
-  });
+  $Res call({String name, String? url, String? body, bool? nsfw, String? altText, String? customThumbnail, int communityId, String auth, String? honeypot});
 }
 
 /// @nodoc
-class __$$CreatePostImplCopyWithImpl<$Res>
-    extends _$CreatePostCopyWithImpl<$Res, _$CreatePostImpl>
-    implements _$$CreatePostImplCopyWith<$Res> {
-  __$$CreatePostImplCopyWithImpl(
-    _$CreatePostImpl _value,
-    $Res Function(_$CreatePostImpl) _then,
-  ) : super(_value, _then);
+class __$$CreatePostImplCopyWithImpl<$Res> extends _$CreatePostCopyWithImpl<$Res, _$CreatePostImpl> implements _$$CreatePostImplCopyWith<$Res> {
+  __$$CreatePostImplCopyWithImpl(_$CreatePostImpl _value, $Res Function(_$CreatePostImpl) _then) : super(_value, _then);
 
   /// Create a copy of CreatePost
   /// with the given fields replaced by the non-null parameter values.
@@ -408,20 +356,9 @@ class __$$CreatePostImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$CreatePostImpl extends _CreatePost {
-  const _$CreatePostImpl({
-    required this.name,
-    this.url,
-    this.body,
-    this.nsfw,
-    this.altText,
-    this.customThumbnail,
-    required this.communityId,
-    required this.auth,
-    this.honeypot,
-  }) : super._();
+  const _$CreatePostImpl({required this.name, this.url, this.body, this.nsfw, this.altText, this.customThumbnail, required this.communityId, required this.auth, this.honeypot}) : super._();
 
-  factory _$CreatePostImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CreatePostImplFromJson(json);
+  factory _$CreatePostImpl.fromJson(Map<String, dynamic> json) => _$$CreatePostImplFromJson(json);
 
   @override
   final String name;
@@ -457,37 +394,22 @@ class _$CreatePostImpl extends _CreatePost {
             (identical(other.body, body) || other.body == body) &&
             (identical(other.nsfw, nsfw) || other.nsfw == nsfw) &&
             (identical(other.altText, altText) || other.altText == altText) &&
-            (identical(other.customThumbnail, customThumbnail) ||
-                other.customThumbnail == customThumbnail) &&
-            (identical(other.communityId, communityId) ||
-                other.communityId == communityId) &&
+            (identical(other.customThumbnail, customThumbnail) || other.customThumbnail == customThumbnail) &&
+            (identical(other.communityId, communityId) || other.communityId == communityId) &&
             (identical(other.auth, auth) || other.auth == auth) &&
-            (identical(other.honeypot, honeypot) ||
-                other.honeypot == honeypot));
+            (identical(other.honeypot, honeypot) || other.honeypot == honeypot));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    name,
-    url,
-    body,
-    nsfw,
-    altText,
-    customThumbnail,
-    communityId,
-    auth,
-    honeypot,
-  );
+  int get hashCode => Object.hash(runtimeType, name, url, body, nsfw, altText, customThumbnail, communityId, auth, honeypot);
 
   /// Create a copy of CreatePost
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$CreatePostImplCopyWith<_$CreatePostImpl> get copyWith =>
-      __$$CreatePostImplCopyWithImpl<_$CreatePostImpl>(this, _$identity);
+  _$$CreatePostImplCopyWith<_$CreatePostImpl> get copyWith => __$$CreatePostImplCopyWithImpl<_$CreatePostImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -509,8 +431,7 @@ abstract class _CreatePost extends CreatePost {
   }) = _$CreatePostImpl;
   const _CreatePost._() : super._();
 
-  factory _CreatePost.fromJson(Map<String, dynamic> json) =
-      _$CreatePostImpl.fromJson;
+  factory _CreatePost.fromJson(Map<String, dynamic> json) = _$CreatePostImpl.fromJson;
 
   @override
   String get name;
@@ -535,8 +456,7 @@ abstract class _CreatePost extends CreatePost {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CreatePostImplCopyWith<_$CreatePostImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CreatePostImplCopyWith<_$CreatePostImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 GetPosts _$GetPostsFromJson(Map<String, dynamic> json) {
@@ -556,16 +476,11 @@ mixin _$GetPosts {
   @deprecated
   bool? get moderatorView => throw _privateConstructorUsedError; // v0.18.3 [deprecated in v0.19.0]
   String? get auth => throw _privateConstructorUsedError;
-  bool? get likedOnly =>
-      throw _privateConstructorUsedError; // v0.19.0 (optional)
-  bool? get dislikedOnly =>
-      throw _privateConstructorUsedError; // v0.19.0 (optional)
-  bool? get showHidden =>
-      throw _privateConstructorUsedError; // v0.19.4 (optional)
-  bool? get showRead =>
-      throw _privateConstructorUsedError; // v0.19.6 (optional)
-  bool? get showNsfw =>
-      throw _privateConstructorUsedError; // v0.19.6 (optional)
+  bool? get likedOnly => throw _privateConstructorUsedError; // v0.19.0 (optional)
+  bool? get dislikedOnly => throw _privateConstructorUsedError; // v0.19.0 (optional)
+  bool? get showHidden => throw _privateConstructorUsedError; // v0.19.4 (optional)
+  bool? get showRead => throw _privateConstructorUsedError; // v0.19.6 (optional)
+  bool? get showNsfw => throw _privateConstructorUsedError; // v0.19.6 (optional)
   String? get pageCursor => throw _privateConstructorUsedError;
 
   /// Serializes this GetPosts to a JSON map.
@@ -574,14 +489,12 @@ mixin _$GetPosts {
   /// Create a copy of GetPosts
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $GetPostsCopyWith<GetPosts> get copyWith =>
-      throw _privateConstructorUsedError;
+  $GetPostsCopyWith<GetPosts> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GetPostsCopyWith<$Res> {
-  factory $GetPostsCopyWith(GetPosts value, $Res Function(GetPosts) then) =
-      _$GetPostsCopyWithImpl<$Res, GetPosts>;
+  factory $GetPostsCopyWith(GetPosts value, $Res Function(GetPosts) then) = _$GetPostsCopyWithImpl<$Res, GetPosts>;
   @useResult
   $Res call({
     @JsonKey(name: 'type_') ListingType? type,
@@ -603,8 +516,7 @@ abstract class $GetPostsCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$GetPostsCopyWithImpl<$Res, $Val extends GetPosts>
-    implements $GetPostsCopyWith<$Res> {
+class _$GetPostsCopyWithImpl<$Res, $Val extends GetPosts> implements $GetPostsCopyWith<$Res> {
   _$GetPostsCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -717,12 +629,8 @@ class _$GetPostsCopyWithImpl<$Res, $Val extends GetPosts>
 }
 
 /// @nodoc
-abstract class _$$GetPostsImplCopyWith<$Res>
-    implements $GetPostsCopyWith<$Res> {
-  factory _$$GetPostsImplCopyWith(
-    _$GetPostsImpl value,
-    $Res Function(_$GetPostsImpl) then,
-  ) = __$$GetPostsImplCopyWithImpl<$Res>;
+abstract class _$$GetPostsImplCopyWith<$Res> implements $GetPostsCopyWith<$Res> {
+  factory _$$GetPostsImplCopyWith(_$GetPostsImpl value, $Res Function(_$GetPostsImpl) then) = __$$GetPostsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({
@@ -745,13 +653,8 @@ abstract class _$$GetPostsImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$GetPostsImplCopyWithImpl<$Res>
-    extends _$GetPostsCopyWithImpl<$Res, _$GetPostsImpl>
-    implements _$$GetPostsImplCopyWith<$Res> {
-  __$$GetPostsImplCopyWithImpl(
-    _$GetPostsImpl _value,
-    $Res Function(_$GetPostsImpl) _then,
-  ) : super(_value, _then);
+class __$$GetPostsImplCopyWithImpl<$Res> extends _$GetPostsCopyWithImpl<$Res, _$GetPostsImpl> implements _$$GetPostsImplCopyWith<$Res> {
+  __$$GetPostsImplCopyWithImpl(_$GetPostsImpl _value, $Res Function(_$GetPostsImpl) _then) : super(_value, _then);
 
   /// Create a copy of GetPosts
   /// with the given fields replaced by the non-null parameter values.
@@ -878,8 +781,7 @@ class _$GetPostsImpl extends _GetPosts {
     this.pageCursor,
   }) : super._();
 
-  factory _$GetPostsImpl.fromJson(Map<String, dynamic> json) =>
-      _$$GetPostsImplFromJson(json);
+  factory _$GetPostsImpl.fromJson(Map<String, dynamic> json) => _$$GetPostsImplFromJson(json);
 
   @override
   @JsonKey(name: 'type_')
@@ -941,57 +843,30 @@ class _$GetPostsImpl extends _GetPosts {
             (identical(other.sort, sort) || other.sort == sort) &&
             (identical(other.page, page) || other.page == page) &&
             (identical(other.limit, limit) || other.limit == limit) &&
-            (identical(other.communityId, communityId) ||
-                other.communityId == communityId) &&
-            (identical(other.communityName, communityName) ||
-                other.communityName == communityName) &&
-            (identical(other.savedOnly, savedOnly) ||
-                other.savedOnly == savedOnly) &&
-            (identical(other.moderatorView, moderatorView) ||
-                other.moderatorView == moderatorView) &&
+            (identical(other.communityId, communityId) || other.communityId == communityId) &&
+            (identical(other.communityName, communityName) || other.communityName == communityName) &&
+            (identical(other.savedOnly, savedOnly) || other.savedOnly == savedOnly) &&
+            (identical(other.moderatorView, moderatorView) || other.moderatorView == moderatorView) &&
             (identical(other.auth, auth) || other.auth == auth) &&
-            (identical(other.likedOnly, likedOnly) ||
-                other.likedOnly == likedOnly) &&
-            (identical(other.dislikedOnly, dislikedOnly) ||
-                other.dislikedOnly == dislikedOnly) &&
-            (identical(other.showHidden, showHidden) ||
-                other.showHidden == showHidden) &&
-            (identical(other.showRead, showRead) ||
-                other.showRead == showRead) &&
-            (identical(other.showNsfw, showNsfw) ||
-                other.showNsfw == showNsfw) &&
-            (identical(other.pageCursor, pageCursor) ||
-                other.pageCursor == pageCursor));
+            (identical(other.likedOnly, likedOnly) || other.likedOnly == likedOnly) &&
+            (identical(other.dislikedOnly, dislikedOnly) || other.dislikedOnly == dislikedOnly) &&
+            (identical(other.showHidden, showHidden) || other.showHidden == showHidden) &&
+            (identical(other.showRead, showRead) || other.showRead == showRead) &&
+            (identical(other.showNsfw, showNsfw) || other.showNsfw == showNsfw) &&
+            (identical(other.pageCursor, pageCursor) || other.pageCursor == pageCursor));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    type,
-    sort,
-    page,
-    limit,
-    communityId,
-    communityName,
-    savedOnly,
-    moderatorView,
-    auth,
-    likedOnly,
-    dislikedOnly,
-    showHidden,
-    showRead,
-    showNsfw,
-    pageCursor,
-  );
+  int get hashCode =>
+      Object.hash(runtimeType, type, sort, page, limit, communityId, communityName, savedOnly, moderatorView, auth, likedOnly, dislikedOnly, showHidden, showRead, showNsfw, pageCursor);
 
   /// Create a copy of GetPosts
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetPostsImplCopyWith<_$GetPostsImpl> get copyWith =>
-      __$$GetPostsImplCopyWithImpl<_$GetPostsImpl>(this, _$identity);
+  _$$GetPostsImplCopyWith<_$GetPostsImpl> get copyWith => __$$GetPostsImplCopyWithImpl<_$GetPostsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1019,8 +894,7 @@ abstract class _GetPosts extends GetPosts {
   }) = _$GetPostsImpl;
   const _GetPosts._() : super._();
 
-  factory _GetPosts.fromJson(Map<String, dynamic> json) =
-      _$GetPostsImpl.fromJson;
+  factory _GetPosts.fromJson(Map<String, dynamic> json) = _$GetPostsImpl.fromJson;
 
   @override
   @JsonKey(name: 'type_')
@@ -1059,8 +933,7 @@ abstract class _GetPosts extends GetPosts {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetPostsImplCopyWith<_$GetPostsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GetPostsImplCopyWith<_$GetPostsImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 CreatePostLike _$CreatePostLikeFromJson(Map<String, dynamic> json) {
@@ -1079,23 +952,18 @@ mixin _$CreatePostLike {
   /// Create a copy of CreatePostLike
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $CreatePostLikeCopyWith<CreatePostLike> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CreatePostLikeCopyWith<CreatePostLike> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CreatePostLikeCopyWith<$Res> {
-  factory $CreatePostLikeCopyWith(
-    CreatePostLike value,
-    $Res Function(CreatePostLike) then,
-  ) = _$CreatePostLikeCopyWithImpl<$Res, CreatePostLike>;
+  factory $CreatePostLikeCopyWith(CreatePostLike value, $Res Function(CreatePostLike) then) = _$CreatePostLikeCopyWithImpl<$Res, CreatePostLike>;
   @useResult
   $Res call({int postId, num score, String auth});
 }
 
 /// @nodoc
-class _$CreatePostLikeCopyWithImpl<$Res, $Val extends CreatePostLike>
-    implements $CreatePostLikeCopyWith<$Res> {
+class _$CreatePostLikeCopyWithImpl<$Res, $Val extends CreatePostLike> implements $CreatePostLikeCopyWith<$Res> {
   _$CreatePostLikeCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1107,11 +975,7 @@ class _$CreatePostLikeCopyWithImpl<$Res, $Val extends CreatePostLike>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postId = null,
-    Object? score = null,
-    Object? auth = null,
-  }) {
+  $Res call({Object? postId = null, Object? score = null, Object? auth = null}) {
     return _then(
       _value.copyWith(
             postId:
@@ -1136,35 +1000,22 @@ class _$CreatePostLikeCopyWithImpl<$Res, $Val extends CreatePostLike>
 }
 
 /// @nodoc
-abstract class _$$CreatePostLikeImplCopyWith<$Res>
-    implements $CreatePostLikeCopyWith<$Res> {
-  factory _$$CreatePostLikeImplCopyWith(
-    _$CreatePostLikeImpl value,
-    $Res Function(_$CreatePostLikeImpl) then,
-  ) = __$$CreatePostLikeImplCopyWithImpl<$Res>;
+abstract class _$$CreatePostLikeImplCopyWith<$Res> implements $CreatePostLikeCopyWith<$Res> {
+  factory _$$CreatePostLikeImplCopyWith(_$CreatePostLikeImpl value, $Res Function(_$CreatePostLikeImpl) then) = __$$CreatePostLikeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int postId, num score, String auth});
 }
 
 /// @nodoc
-class __$$CreatePostLikeImplCopyWithImpl<$Res>
-    extends _$CreatePostLikeCopyWithImpl<$Res, _$CreatePostLikeImpl>
-    implements _$$CreatePostLikeImplCopyWith<$Res> {
-  __$$CreatePostLikeImplCopyWithImpl(
-    _$CreatePostLikeImpl _value,
-    $Res Function(_$CreatePostLikeImpl) _then,
-  ) : super(_value, _then);
+class __$$CreatePostLikeImplCopyWithImpl<$Res> extends _$CreatePostLikeCopyWithImpl<$Res, _$CreatePostLikeImpl> implements _$$CreatePostLikeImplCopyWith<$Res> {
+  __$$CreatePostLikeImplCopyWithImpl(_$CreatePostLikeImpl _value, $Res Function(_$CreatePostLikeImpl) _then) : super(_value, _then);
 
   /// Create a copy of CreatePostLike
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postId = null,
-    Object? score = null,
-    Object? auth = null,
-  }) {
+  $Res call({Object? postId = null, Object? score = null, Object? auth = null}) {
     return _then(
       _$CreatePostLikeImpl(
         postId:
@@ -1191,14 +1042,9 @@ class __$$CreatePostLikeImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$CreatePostLikeImpl extends _CreatePostLike {
-  const _$CreatePostLikeImpl({
-    required this.postId,
-    required this.score,
-    required this.auth,
-  }) : super._();
+  const _$CreatePostLikeImpl({required this.postId, required this.score, required this.auth}) : super._();
 
-  factory _$CreatePostLikeImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CreatePostLikeImplFromJson(json);
+  factory _$CreatePostLikeImpl.fromJson(Map<String, dynamic> json) => _$$CreatePostLikeImplFromJson(json);
 
   @override
   final int postId;
@@ -1231,11 +1077,7 @@ class _$CreatePostLikeImpl extends _CreatePostLike {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$CreatePostLikeImplCopyWith<_$CreatePostLikeImpl> get copyWith =>
-      __$$CreatePostLikeImplCopyWithImpl<_$CreatePostLikeImpl>(
-        this,
-        _$identity,
-      );
+  _$$CreatePostLikeImplCopyWith<_$CreatePostLikeImpl> get copyWith => __$$CreatePostLikeImplCopyWithImpl<_$CreatePostLikeImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1244,15 +1086,10 @@ class _$CreatePostLikeImpl extends _CreatePostLike {
 }
 
 abstract class _CreatePostLike extends CreatePostLike {
-  const factory _CreatePostLike({
-    required final int postId,
-    required final num score,
-    required final String auth,
-  }) = _$CreatePostLikeImpl;
+  const factory _CreatePostLike({required final int postId, required final num score, required final String auth}) = _$CreatePostLikeImpl;
   const _CreatePostLike._() : super._();
 
-  factory _CreatePostLike.fromJson(Map<String, dynamic> json) =
-      _$CreatePostLikeImpl.fromJson;
+  factory _CreatePostLike.fromJson(Map<String, dynamic> json) = _$CreatePostLikeImpl.fromJson;
 
   @override
   int get postId;
@@ -1265,8 +1102,7 @@ abstract class _CreatePostLike extends CreatePostLike {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CreatePostLikeImplCopyWith<_$CreatePostLikeImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CreatePostLikeImplCopyWith<_$CreatePostLikeImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 EditPost _$EditPostFromJson(Map<String, dynamic> json) {
@@ -1290,30 +1126,18 @@ mixin _$EditPost {
   /// Create a copy of EditPost
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $EditPostCopyWith<EditPost> get copyWith =>
-      throw _privateConstructorUsedError;
+  $EditPostCopyWith<EditPost> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $EditPostCopyWith<$Res> {
-  factory $EditPostCopyWith(EditPost value, $Res Function(EditPost) then) =
-      _$EditPostCopyWithImpl<$Res, EditPost>;
+  factory $EditPostCopyWith(EditPost value, $Res Function(EditPost) then) = _$EditPostCopyWithImpl<$Res, EditPost>;
   @useResult
-  $Res call({
-    int postId,
-    String? name,
-    String? url,
-    String? body,
-    String? altText,
-    String? customThumbnail,
-    bool? nsfw,
-    String auth,
-  });
+  $Res call({int postId, String? name, String? url, String? body, String? altText, String? customThumbnail, bool? nsfw, String auth});
 }
 
 /// @nodoc
-class _$EditPostCopyWithImpl<$Res, $Val extends EditPost>
-    implements $EditPostCopyWith<$Res> {
+class _$EditPostCopyWithImpl<$Res, $Val extends EditPost> implements $EditPostCopyWith<$Res> {
   _$EditPostCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1384,34 +1208,16 @@ class _$EditPostCopyWithImpl<$Res, $Val extends EditPost>
 }
 
 /// @nodoc
-abstract class _$$EditPostImplCopyWith<$Res>
-    implements $EditPostCopyWith<$Res> {
-  factory _$$EditPostImplCopyWith(
-    _$EditPostImpl value,
-    $Res Function(_$EditPostImpl) then,
-  ) = __$$EditPostImplCopyWithImpl<$Res>;
+abstract class _$$EditPostImplCopyWith<$Res> implements $EditPostCopyWith<$Res> {
+  factory _$$EditPostImplCopyWith(_$EditPostImpl value, $Res Function(_$EditPostImpl) then) = __$$EditPostImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    int postId,
-    String? name,
-    String? url,
-    String? body,
-    String? altText,
-    String? customThumbnail,
-    bool? nsfw,
-    String auth,
-  });
+  $Res call({int postId, String? name, String? url, String? body, String? altText, String? customThumbnail, bool? nsfw, String auth});
 }
 
 /// @nodoc
-class __$$EditPostImplCopyWithImpl<$Res>
-    extends _$EditPostCopyWithImpl<$Res, _$EditPostImpl>
-    implements _$$EditPostImplCopyWith<$Res> {
-  __$$EditPostImplCopyWithImpl(
-    _$EditPostImpl _value,
-    $Res Function(_$EditPostImpl) _then,
-  ) : super(_value, _then);
+class __$$EditPostImplCopyWithImpl<$Res> extends _$EditPostCopyWithImpl<$Res, _$EditPostImpl> implements _$$EditPostImplCopyWith<$Res> {
+  __$$EditPostImplCopyWithImpl(_$EditPostImpl _value, $Res Function(_$EditPostImpl) _then) : super(_value, _then);
 
   /// Create a copy of EditPost
   /// with the given fields replaced by the non-null parameter values.
@@ -1478,19 +1284,9 @@ class __$$EditPostImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$EditPostImpl extends _EditPost {
-  const _$EditPostImpl({
-    required this.postId,
-    this.name,
-    this.url,
-    this.body,
-    this.altText,
-    this.customThumbnail,
-    this.nsfw,
-    required this.auth,
-  }) : super._();
+  const _$EditPostImpl({required this.postId, this.name, this.url, this.body, this.altText, this.customThumbnail, this.nsfw, required this.auth}) : super._();
 
-  factory _$EditPostImpl.fromJson(Map<String, dynamic> json) =>
-      _$$EditPostImplFromJson(json);
+  factory _$EditPostImpl.fromJson(Map<String, dynamic> json) => _$$EditPostImplFromJson(json);
 
   @override
   final int postId;
@@ -1524,33 +1320,21 @@ class _$EditPostImpl extends _EditPost {
             (identical(other.url, url) || other.url == url) &&
             (identical(other.body, body) || other.body == body) &&
             (identical(other.altText, altText) || other.altText == altText) &&
-            (identical(other.customThumbnail, customThumbnail) ||
-                other.customThumbnail == customThumbnail) &&
+            (identical(other.customThumbnail, customThumbnail) || other.customThumbnail == customThumbnail) &&
             (identical(other.nsfw, nsfw) || other.nsfw == nsfw) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    postId,
-    name,
-    url,
-    body,
-    altText,
-    customThumbnail,
-    nsfw,
-    auth,
-  );
+  int get hashCode => Object.hash(runtimeType, postId, name, url, body, altText, customThumbnail, nsfw, auth);
 
   /// Create a copy of EditPost
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$EditPostImplCopyWith<_$EditPostImpl> get copyWith =>
-      __$$EditPostImplCopyWithImpl<_$EditPostImpl>(this, _$identity);
+  _$$EditPostImplCopyWith<_$EditPostImpl> get copyWith => __$$EditPostImplCopyWithImpl<_$EditPostImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1571,8 +1355,7 @@ abstract class _EditPost extends EditPost {
   }) = _$EditPostImpl;
   const _EditPost._() : super._();
 
-  factory _EditPost.fromJson(Map<String, dynamic> json) =
-      _$EditPostImpl.fromJson;
+  factory _EditPost.fromJson(Map<String, dynamic> json) = _$EditPostImpl.fromJson;
 
   @override
   int get postId;
@@ -1595,8 +1378,7 @@ abstract class _EditPost extends EditPost {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$EditPostImplCopyWith<_$EditPostImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$EditPostImplCopyWith<_$EditPostImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 DeletePost _$DeletePostFromJson(Map<String, dynamic> json) {
@@ -1615,23 +1397,18 @@ mixin _$DeletePost {
   /// Create a copy of DeletePost
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $DeletePostCopyWith<DeletePost> get copyWith =>
-      throw _privateConstructorUsedError;
+  $DeletePostCopyWith<DeletePost> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $DeletePostCopyWith<$Res> {
-  factory $DeletePostCopyWith(
-    DeletePost value,
-    $Res Function(DeletePost) then,
-  ) = _$DeletePostCopyWithImpl<$Res, DeletePost>;
+  factory $DeletePostCopyWith(DeletePost value, $Res Function(DeletePost) then) = _$DeletePostCopyWithImpl<$Res, DeletePost>;
   @useResult
   $Res call({int postId, bool deleted, String auth});
 }
 
 /// @nodoc
-class _$DeletePostCopyWithImpl<$Res, $Val extends DeletePost>
-    implements $DeletePostCopyWith<$Res> {
+class _$DeletePostCopyWithImpl<$Res, $Val extends DeletePost> implements $DeletePostCopyWith<$Res> {
   _$DeletePostCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1643,11 +1420,7 @@ class _$DeletePostCopyWithImpl<$Res, $Val extends DeletePost>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postId = null,
-    Object? deleted = null,
-    Object? auth = null,
-  }) {
+  $Res call({Object? postId = null, Object? deleted = null, Object? auth = null}) {
     return _then(
       _value.copyWith(
             postId:
@@ -1672,35 +1445,22 @@ class _$DeletePostCopyWithImpl<$Res, $Val extends DeletePost>
 }
 
 /// @nodoc
-abstract class _$$DeletePostImplCopyWith<$Res>
-    implements $DeletePostCopyWith<$Res> {
-  factory _$$DeletePostImplCopyWith(
-    _$DeletePostImpl value,
-    $Res Function(_$DeletePostImpl) then,
-  ) = __$$DeletePostImplCopyWithImpl<$Res>;
+abstract class _$$DeletePostImplCopyWith<$Res> implements $DeletePostCopyWith<$Res> {
+  factory _$$DeletePostImplCopyWith(_$DeletePostImpl value, $Res Function(_$DeletePostImpl) then) = __$$DeletePostImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int postId, bool deleted, String auth});
 }
 
 /// @nodoc
-class __$$DeletePostImplCopyWithImpl<$Res>
-    extends _$DeletePostCopyWithImpl<$Res, _$DeletePostImpl>
-    implements _$$DeletePostImplCopyWith<$Res> {
-  __$$DeletePostImplCopyWithImpl(
-    _$DeletePostImpl _value,
-    $Res Function(_$DeletePostImpl) _then,
-  ) : super(_value, _then);
+class __$$DeletePostImplCopyWithImpl<$Res> extends _$DeletePostCopyWithImpl<$Res, _$DeletePostImpl> implements _$$DeletePostImplCopyWith<$Res> {
+  __$$DeletePostImplCopyWithImpl(_$DeletePostImpl _value, $Res Function(_$DeletePostImpl) _then) : super(_value, _then);
 
   /// Create a copy of DeletePost
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postId = null,
-    Object? deleted = null,
-    Object? auth = null,
-  }) {
+  $Res call({Object? postId = null, Object? deleted = null, Object? auth = null}) {
     return _then(
       _$DeletePostImpl(
         postId:
@@ -1727,14 +1487,9 @@ class __$$DeletePostImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$DeletePostImpl extends _DeletePost {
-  const _$DeletePostImpl({
-    required this.postId,
-    required this.deleted,
-    required this.auth,
-  }) : super._();
+  const _$DeletePostImpl({required this.postId, required this.deleted, required this.auth}) : super._();
 
-  factory _$DeletePostImpl.fromJson(Map<String, dynamic> json) =>
-      _$$DeletePostImplFromJson(json);
+  factory _$DeletePostImpl.fromJson(Map<String, dynamic> json) => _$$DeletePostImplFromJson(json);
 
   @override
   final int postId;
@@ -1767,8 +1522,7 @@ class _$DeletePostImpl extends _DeletePost {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$DeletePostImplCopyWith<_$DeletePostImpl> get copyWith =>
-      __$$DeletePostImplCopyWithImpl<_$DeletePostImpl>(this, _$identity);
+  _$$DeletePostImplCopyWith<_$DeletePostImpl> get copyWith => __$$DeletePostImplCopyWithImpl<_$DeletePostImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1777,15 +1531,10 @@ class _$DeletePostImpl extends _DeletePost {
 }
 
 abstract class _DeletePost extends DeletePost {
-  const factory _DeletePost({
-    required final int postId,
-    required final bool deleted,
-    required final String auth,
-  }) = _$DeletePostImpl;
+  const factory _DeletePost({required final int postId, required final bool deleted, required final String auth}) = _$DeletePostImpl;
   const _DeletePost._() : super._();
 
-  factory _DeletePost.fromJson(Map<String, dynamic> json) =
-      _$DeletePostImpl.fromJson;
+  factory _DeletePost.fromJson(Map<String, dynamic> json) = _$DeletePostImpl.fromJson;
 
   @override
   int get postId;
@@ -1798,8 +1547,7 @@ abstract class _DeletePost extends DeletePost {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DeletePostImplCopyWith<_$DeletePostImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$DeletePostImplCopyWith<_$DeletePostImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 RemovePost _$RemovePostFromJson(Map<String, dynamic> json) {
@@ -1819,23 +1567,18 @@ mixin _$RemovePost {
   /// Create a copy of RemovePost
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $RemovePostCopyWith<RemovePost> get copyWith =>
-      throw _privateConstructorUsedError;
+  $RemovePostCopyWith<RemovePost> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $RemovePostCopyWith<$Res> {
-  factory $RemovePostCopyWith(
-    RemovePost value,
-    $Res Function(RemovePost) then,
-  ) = _$RemovePostCopyWithImpl<$Res, RemovePost>;
+  factory $RemovePostCopyWith(RemovePost value, $Res Function(RemovePost) then) = _$RemovePostCopyWithImpl<$Res, RemovePost>;
   @useResult
   $Res call({int postId, bool removed, String? reason, String auth});
 }
 
 /// @nodoc
-class _$RemovePostCopyWithImpl<$Res, $Val extends RemovePost>
-    implements $RemovePostCopyWith<$Res> {
+class _$RemovePostCopyWithImpl<$Res, $Val extends RemovePost> implements $RemovePostCopyWith<$Res> {
   _$RemovePostCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1847,12 +1590,7 @@ class _$RemovePostCopyWithImpl<$Res, $Val extends RemovePost>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postId = null,
-    Object? removed = null,
-    Object? reason = freezed,
-    Object? auth = null,
-  }) {
+  $Res call({Object? postId = null, Object? removed = null, Object? reason = freezed, Object? auth = null}) {
     return _then(
       _value.copyWith(
             postId:
@@ -1882,36 +1620,22 @@ class _$RemovePostCopyWithImpl<$Res, $Val extends RemovePost>
 }
 
 /// @nodoc
-abstract class _$$RemovePostImplCopyWith<$Res>
-    implements $RemovePostCopyWith<$Res> {
-  factory _$$RemovePostImplCopyWith(
-    _$RemovePostImpl value,
-    $Res Function(_$RemovePostImpl) then,
-  ) = __$$RemovePostImplCopyWithImpl<$Res>;
+abstract class _$$RemovePostImplCopyWith<$Res> implements $RemovePostCopyWith<$Res> {
+  factory _$$RemovePostImplCopyWith(_$RemovePostImpl value, $Res Function(_$RemovePostImpl) then) = __$$RemovePostImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int postId, bool removed, String? reason, String auth});
 }
 
 /// @nodoc
-class __$$RemovePostImplCopyWithImpl<$Res>
-    extends _$RemovePostCopyWithImpl<$Res, _$RemovePostImpl>
-    implements _$$RemovePostImplCopyWith<$Res> {
-  __$$RemovePostImplCopyWithImpl(
-    _$RemovePostImpl _value,
-    $Res Function(_$RemovePostImpl) _then,
-  ) : super(_value, _then);
+class __$$RemovePostImplCopyWithImpl<$Res> extends _$RemovePostCopyWithImpl<$Res, _$RemovePostImpl> implements _$$RemovePostImplCopyWith<$Res> {
+  __$$RemovePostImplCopyWithImpl(_$RemovePostImpl _value, $Res Function(_$RemovePostImpl) _then) : super(_value, _then);
 
   /// Create a copy of RemovePost
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postId = null,
-    Object? removed = null,
-    Object? reason = freezed,
-    Object? auth = null,
-  }) {
+  $Res call({Object? postId = null, Object? removed = null, Object? reason = freezed, Object? auth = null}) {
     return _then(
       _$RemovePostImpl(
         postId:
@@ -1943,15 +1667,9 @@ class __$$RemovePostImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$RemovePostImpl extends _RemovePost {
-  const _$RemovePostImpl({
-    required this.postId,
-    required this.removed,
-    this.reason,
-    required this.auth,
-  }) : super._();
+  const _$RemovePostImpl({required this.postId, required this.removed, this.reason, required this.auth}) : super._();
 
-  factory _$RemovePostImpl.fromJson(Map<String, dynamic> json) =>
-      _$$RemovePostImplFromJson(json);
+  factory _$RemovePostImpl.fromJson(Map<String, dynamic> json) => _$$RemovePostImplFromJson(json);
 
   @override
   final int postId;
@@ -1987,8 +1705,7 @@ class _$RemovePostImpl extends _RemovePost {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$RemovePostImplCopyWith<_$RemovePostImpl> get copyWith =>
-      __$$RemovePostImplCopyWithImpl<_$RemovePostImpl>(this, _$identity);
+  _$$RemovePostImplCopyWith<_$RemovePostImpl> get copyWith => __$$RemovePostImplCopyWithImpl<_$RemovePostImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1997,16 +1714,10 @@ class _$RemovePostImpl extends _RemovePost {
 }
 
 abstract class _RemovePost extends RemovePost {
-  const factory _RemovePost({
-    required final int postId,
-    required final bool removed,
-    final String? reason,
-    required final String auth,
-  }) = _$RemovePostImpl;
+  const factory _RemovePost({required final int postId, required final bool removed, final String? reason, required final String auth}) = _$RemovePostImpl;
   const _RemovePost._() : super._();
 
-  factory _RemovePost.fromJson(Map<String, dynamic> json) =
-      _$RemovePostImpl.fromJson;
+  factory _RemovePost.fromJson(Map<String, dynamic> json) = _$RemovePostImpl.fromJson;
 
   @override
   int get postId;
@@ -2021,8 +1732,7 @@ abstract class _RemovePost extends RemovePost {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RemovePostImplCopyWith<_$RemovePostImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$RemovePostImplCopyWith<_$RemovePostImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 LockPost _$LockPostFromJson(Map<String, dynamic> json) {
@@ -2041,21 +1751,18 @@ mixin _$LockPost {
   /// Create a copy of LockPost
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $LockPostCopyWith<LockPost> get copyWith =>
-      throw _privateConstructorUsedError;
+  $LockPostCopyWith<LockPost> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $LockPostCopyWith<$Res> {
-  factory $LockPostCopyWith(LockPost value, $Res Function(LockPost) then) =
-      _$LockPostCopyWithImpl<$Res, LockPost>;
+  factory $LockPostCopyWith(LockPost value, $Res Function(LockPost) then) = _$LockPostCopyWithImpl<$Res, LockPost>;
   @useResult
   $Res call({int postId, bool locked, String auth});
 }
 
 /// @nodoc
-class _$LockPostCopyWithImpl<$Res, $Val extends LockPost>
-    implements $LockPostCopyWith<$Res> {
+class _$LockPostCopyWithImpl<$Res, $Val extends LockPost> implements $LockPostCopyWith<$Res> {
   _$LockPostCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -2067,11 +1774,7 @@ class _$LockPostCopyWithImpl<$Res, $Val extends LockPost>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postId = null,
-    Object? locked = null,
-    Object? auth = null,
-  }) {
+  $Res call({Object? postId = null, Object? locked = null, Object? auth = null}) {
     return _then(
       _value.copyWith(
             postId:
@@ -2096,35 +1799,22 @@ class _$LockPostCopyWithImpl<$Res, $Val extends LockPost>
 }
 
 /// @nodoc
-abstract class _$$LockPostImplCopyWith<$Res>
-    implements $LockPostCopyWith<$Res> {
-  factory _$$LockPostImplCopyWith(
-    _$LockPostImpl value,
-    $Res Function(_$LockPostImpl) then,
-  ) = __$$LockPostImplCopyWithImpl<$Res>;
+abstract class _$$LockPostImplCopyWith<$Res> implements $LockPostCopyWith<$Res> {
+  factory _$$LockPostImplCopyWith(_$LockPostImpl value, $Res Function(_$LockPostImpl) then) = __$$LockPostImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int postId, bool locked, String auth});
 }
 
 /// @nodoc
-class __$$LockPostImplCopyWithImpl<$Res>
-    extends _$LockPostCopyWithImpl<$Res, _$LockPostImpl>
-    implements _$$LockPostImplCopyWith<$Res> {
-  __$$LockPostImplCopyWithImpl(
-    _$LockPostImpl _value,
-    $Res Function(_$LockPostImpl) _then,
-  ) : super(_value, _then);
+class __$$LockPostImplCopyWithImpl<$Res> extends _$LockPostCopyWithImpl<$Res, _$LockPostImpl> implements _$$LockPostImplCopyWith<$Res> {
+  __$$LockPostImplCopyWithImpl(_$LockPostImpl _value, $Res Function(_$LockPostImpl) _then) : super(_value, _then);
 
   /// Create a copy of LockPost
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postId = null,
-    Object? locked = null,
-    Object? auth = null,
-  }) {
+  $Res call({Object? postId = null, Object? locked = null, Object? auth = null}) {
     return _then(
       _$LockPostImpl(
         postId:
@@ -2151,14 +1841,9 @@ class __$$LockPostImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$LockPostImpl extends _LockPost {
-  const _$LockPostImpl({
-    required this.postId,
-    required this.locked,
-    required this.auth,
-  }) : super._();
+  const _$LockPostImpl({required this.postId, required this.locked, required this.auth}) : super._();
 
-  factory _$LockPostImpl.fromJson(Map<String, dynamic> json) =>
-      _$$LockPostImplFromJson(json);
+  factory _$LockPostImpl.fromJson(Map<String, dynamic> json) => _$$LockPostImplFromJson(json);
 
   @override
   final int postId;
@@ -2191,8 +1876,7 @@ class _$LockPostImpl extends _LockPost {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$LockPostImplCopyWith<_$LockPostImpl> get copyWith =>
-      __$$LockPostImplCopyWithImpl<_$LockPostImpl>(this, _$identity);
+  _$$LockPostImplCopyWith<_$LockPostImpl> get copyWith => __$$LockPostImplCopyWithImpl<_$LockPostImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2201,15 +1885,10 @@ class _$LockPostImpl extends _LockPost {
 }
 
 abstract class _LockPost extends LockPost {
-  const factory _LockPost({
-    required final int postId,
-    required final bool locked,
-    required final String auth,
-  }) = _$LockPostImpl;
+  const factory _LockPost({required final int postId, required final bool locked, required final String auth}) = _$LockPostImpl;
   const _LockPost._() : super._();
 
-  factory _LockPost.fromJson(Map<String, dynamic> json) =
-      _$LockPostImpl.fromJson;
+  factory _LockPost.fromJson(Map<String, dynamic> json) = _$LockPostImpl.fromJson;
 
   @override
   int get postId;
@@ -2222,8 +1901,7 @@ abstract class _LockPost extends LockPost {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LockPostImplCopyWith<_$LockPostImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$LockPostImplCopyWith<_$LockPostImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 FeaturePost _$FeaturePostFromJson(Map<String, dynamic> json) {
@@ -2234,8 +1912,7 @@ FeaturePost _$FeaturePostFromJson(Map<String, dynamic> json) {
 mixin _$FeaturePost {
   int get postId => throw _privateConstructorUsedError; // v0.19.0
   bool get featured => throw _privateConstructorUsedError; // v0.19.0
-  PostFeatureType get featureType =>
-      throw _privateConstructorUsedError; // v0.19.0
+  PostFeatureType get featureType => throw _privateConstructorUsedError; // v0.19.0
   String get auth => throw _privateConstructorUsedError;
 
   /// Serializes this FeaturePost to a JSON map.
@@ -2244,28 +1921,18 @@ mixin _$FeaturePost {
   /// Create a copy of FeaturePost
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $FeaturePostCopyWith<FeaturePost> get copyWith =>
-      throw _privateConstructorUsedError;
+  $FeaturePostCopyWith<FeaturePost> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $FeaturePostCopyWith<$Res> {
-  factory $FeaturePostCopyWith(
-    FeaturePost value,
-    $Res Function(FeaturePost) then,
-  ) = _$FeaturePostCopyWithImpl<$Res, FeaturePost>;
+  factory $FeaturePostCopyWith(FeaturePost value, $Res Function(FeaturePost) then) = _$FeaturePostCopyWithImpl<$Res, FeaturePost>;
   @useResult
-  $Res call({
-    int postId,
-    bool featured,
-    PostFeatureType featureType,
-    String auth,
-  });
+  $Res call({int postId, bool featured, PostFeatureType featureType, String auth});
 }
 
 /// @nodoc
-class _$FeaturePostCopyWithImpl<$Res, $Val extends FeaturePost>
-    implements $FeaturePostCopyWith<$Res> {
+class _$FeaturePostCopyWithImpl<$Res, $Val extends FeaturePost> implements $FeaturePostCopyWith<$Res> {
   _$FeaturePostCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -2277,12 +1944,7 @@ class _$FeaturePostCopyWithImpl<$Res, $Val extends FeaturePost>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postId = null,
-    Object? featured = null,
-    Object? featureType = null,
-    Object? auth = null,
-  }) {
+  $Res call({Object? postId = null, Object? featured = null, Object? featureType = null, Object? auth = null}) {
     return _then(
       _value.copyWith(
             postId:
@@ -2312,41 +1974,22 @@ class _$FeaturePostCopyWithImpl<$Res, $Val extends FeaturePost>
 }
 
 /// @nodoc
-abstract class _$$FeaturePostImplCopyWith<$Res>
-    implements $FeaturePostCopyWith<$Res> {
-  factory _$$FeaturePostImplCopyWith(
-    _$FeaturePostImpl value,
-    $Res Function(_$FeaturePostImpl) then,
-  ) = __$$FeaturePostImplCopyWithImpl<$Res>;
+abstract class _$$FeaturePostImplCopyWith<$Res> implements $FeaturePostCopyWith<$Res> {
+  factory _$$FeaturePostImplCopyWith(_$FeaturePostImpl value, $Res Function(_$FeaturePostImpl) then) = __$$FeaturePostImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    int postId,
-    bool featured,
-    PostFeatureType featureType,
-    String auth,
-  });
+  $Res call({int postId, bool featured, PostFeatureType featureType, String auth});
 }
 
 /// @nodoc
-class __$$FeaturePostImplCopyWithImpl<$Res>
-    extends _$FeaturePostCopyWithImpl<$Res, _$FeaturePostImpl>
-    implements _$$FeaturePostImplCopyWith<$Res> {
-  __$$FeaturePostImplCopyWithImpl(
-    _$FeaturePostImpl _value,
-    $Res Function(_$FeaturePostImpl) _then,
-  ) : super(_value, _then);
+class __$$FeaturePostImplCopyWithImpl<$Res> extends _$FeaturePostCopyWithImpl<$Res, _$FeaturePostImpl> implements _$$FeaturePostImplCopyWith<$Res> {
+  __$$FeaturePostImplCopyWithImpl(_$FeaturePostImpl _value, $Res Function(_$FeaturePostImpl) _then) : super(_value, _then);
 
   /// Create a copy of FeaturePost
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postId = null,
-    Object? featured = null,
-    Object? featureType = null,
-    Object? auth = null,
-  }) {
+  $Res call({Object? postId = null, Object? featured = null, Object? featureType = null, Object? auth = null}) {
     return _then(
       _$FeaturePostImpl(
         postId:
@@ -2378,15 +2021,9 @@ class __$$FeaturePostImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$FeaturePostImpl extends _FeaturePost {
-  const _$FeaturePostImpl({
-    required this.postId,
-    required this.featured,
-    required this.featureType,
-    required this.auth,
-  }) : super._();
+  const _$FeaturePostImpl({required this.postId, required this.featured, required this.featureType, required this.auth}) : super._();
 
-  factory _$FeaturePostImpl.fromJson(Map<String, dynamic> json) =>
-      _$$FeaturePostImplFromJson(json);
+  factory _$FeaturePostImpl.fromJson(Map<String, dynamic> json) => _$$FeaturePostImplFromJson(json);
 
   @override
   final int postId;
@@ -2411,25 +2048,21 @@ class _$FeaturePostImpl extends _FeaturePost {
         (other.runtimeType == runtimeType &&
             other is _$FeaturePostImpl &&
             (identical(other.postId, postId) || other.postId == postId) &&
-            (identical(other.featured, featured) ||
-                other.featured == featured) &&
-            (identical(other.featureType, featureType) ||
-                other.featureType == featureType) &&
+            (identical(other.featured, featured) || other.featured == featured) &&
+            (identical(other.featureType, featureType) || other.featureType == featureType) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, postId, featured, featureType, auth);
+  int get hashCode => Object.hash(runtimeType, postId, featured, featureType, auth);
 
   /// Create a copy of FeaturePost
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$FeaturePostImplCopyWith<_$FeaturePostImpl> get copyWith =>
-      __$$FeaturePostImplCopyWithImpl<_$FeaturePostImpl>(this, _$identity);
+  _$$FeaturePostImplCopyWith<_$FeaturePostImpl> get copyWith => __$$FeaturePostImplCopyWithImpl<_$FeaturePostImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2438,16 +2071,10 @@ class _$FeaturePostImpl extends _FeaturePost {
 }
 
 abstract class _FeaturePost extends FeaturePost {
-  const factory _FeaturePost({
-    required final int postId,
-    required final bool featured,
-    required final PostFeatureType featureType,
-    required final String auth,
-  }) = _$FeaturePostImpl;
+  const factory _FeaturePost({required final int postId, required final bool featured, required final PostFeatureType featureType, required final String auth}) = _$FeaturePostImpl;
   const _FeaturePost._() : super._();
 
-  factory _FeaturePost.fromJson(Map<String, dynamic> json) =
-      _$FeaturePostImpl.fromJson;
+  factory _FeaturePost.fromJson(Map<String, dynamic> json) = _$FeaturePostImpl.fromJson;
 
   @override
   int get postId; // v0.19.0
@@ -2462,8 +2089,7 @@ abstract class _FeaturePost extends FeaturePost {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$FeaturePostImplCopyWith<_$FeaturePostImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$FeaturePostImplCopyWith<_$FeaturePostImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 SavePost _$SavePostFromJson(Map<String, dynamic> json) {
@@ -2482,21 +2108,18 @@ mixin _$SavePost {
   /// Create a copy of SavePost
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $SavePostCopyWith<SavePost> get copyWith =>
-      throw _privateConstructorUsedError;
+  $SavePostCopyWith<SavePost> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SavePostCopyWith<$Res> {
-  factory $SavePostCopyWith(SavePost value, $Res Function(SavePost) then) =
-      _$SavePostCopyWithImpl<$Res, SavePost>;
+  factory $SavePostCopyWith(SavePost value, $Res Function(SavePost) then) = _$SavePostCopyWithImpl<$Res, SavePost>;
   @useResult
   $Res call({int postId, bool save, String auth});
 }
 
 /// @nodoc
-class _$SavePostCopyWithImpl<$Res, $Val extends SavePost>
-    implements $SavePostCopyWith<$Res> {
+class _$SavePostCopyWithImpl<$Res, $Val extends SavePost> implements $SavePostCopyWith<$Res> {
   _$SavePostCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -2533,25 +2156,16 @@ class _$SavePostCopyWithImpl<$Res, $Val extends SavePost>
 }
 
 /// @nodoc
-abstract class _$$SavePostImplCopyWith<$Res>
-    implements $SavePostCopyWith<$Res> {
-  factory _$$SavePostImplCopyWith(
-    _$SavePostImpl value,
-    $Res Function(_$SavePostImpl) then,
-  ) = __$$SavePostImplCopyWithImpl<$Res>;
+abstract class _$$SavePostImplCopyWith<$Res> implements $SavePostCopyWith<$Res> {
+  factory _$$SavePostImplCopyWith(_$SavePostImpl value, $Res Function(_$SavePostImpl) then) = __$$SavePostImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int postId, bool save, String auth});
 }
 
 /// @nodoc
-class __$$SavePostImplCopyWithImpl<$Res>
-    extends _$SavePostCopyWithImpl<$Res, _$SavePostImpl>
-    implements _$$SavePostImplCopyWith<$Res> {
-  __$$SavePostImplCopyWithImpl(
-    _$SavePostImpl _value,
-    $Res Function(_$SavePostImpl) _then,
-  ) : super(_value, _then);
+class __$$SavePostImplCopyWithImpl<$Res> extends _$SavePostCopyWithImpl<$Res, _$SavePostImpl> implements _$$SavePostImplCopyWith<$Res> {
+  __$$SavePostImplCopyWithImpl(_$SavePostImpl _value, $Res Function(_$SavePostImpl) _then) : super(_value, _then);
 
   /// Create a copy of SavePost
   /// with the given fields replaced by the non-null parameter values.
@@ -2584,14 +2198,9 @@ class __$$SavePostImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$SavePostImpl extends _SavePost {
-  const _$SavePostImpl({
-    required this.postId,
-    required this.save,
-    required this.auth,
-  }) : super._();
+  const _$SavePostImpl({required this.postId, required this.save, required this.auth}) : super._();
 
-  factory _$SavePostImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SavePostImplFromJson(json);
+  factory _$SavePostImpl.fromJson(Map<String, dynamic> json) => _$$SavePostImplFromJson(json);
 
   @override
   final int postId;
@@ -2624,8 +2233,7 @@ class _$SavePostImpl extends _SavePost {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$SavePostImplCopyWith<_$SavePostImpl> get copyWith =>
-      __$$SavePostImplCopyWithImpl<_$SavePostImpl>(this, _$identity);
+  _$$SavePostImplCopyWith<_$SavePostImpl> get copyWith => __$$SavePostImplCopyWithImpl<_$SavePostImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2634,15 +2242,10 @@ class _$SavePostImpl extends _SavePost {
 }
 
 abstract class _SavePost extends SavePost {
-  const factory _SavePost({
-    required final int postId,
-    required final bool save,
-    required final String auth,
-  }) = _$SavePostImpl;
+  const factory _SavePost({required final int postId, required final bool save, required final String auth}) = _$SavePostImpl;
   const _SavePost._() : super._();
 
-  factory _SavePost.fromJson(Map<String, dynamic> json) =
-      _$SavePostImpl.fromJson;
+  factory _SavePost.fromJson(Map<String, dynamic> json) = _$SavePostImpl.fromJson;
 
   @override
   int get postId;
@@ -2655,8 +2258,7 @@ abstract class _SavePost extends SavePost {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SavePostImplCopyWith<_$SavePostImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SavePostImplCopyWith<_$SavePostImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 GetSiteMetadata _$GetSiteMetadataFromJson(Map<String, dynamic> json) {
@@ -2673,23 +2275,18 @@ mixin _$GetSiteMetadata {
   /// Create a copy of GetSiteMetadata
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $GetSiteMetadataCopyWith<GetSiteMetadata> get copyWith =>
-      throw _privateConstructorUsedError;
+  $GetSiteMetadataCopyWith<GetSiteMetadata> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GetSiteMetadataCopyWith<$Res> {
-  factory $GetSiteMetadataCopyWith(
-    GetSiteMetadata value,
-    $Res Function(GetSiteMetadata) then,
-  ) = _$GetSiteMetadataCopyWithImpl<$Res, GetSiteMetadata>;
+  factory $GetSiteMetadataCopyWith(GetSiteMetadata value, $Res Function(GetSiteMetadata) then) = _$GetSiteMetadataCopyWithImpl<$Res, GetSiteMetadata>;
   @useResult
   $Res call({String url});
 }
 
 /// @nodoc
-class _$GetSiteMetadataCopyWithImpl<$Res, $Val extends GetSiteMetadata>
-    implements $GetSiteMetadataCopyWith<$Res> {
+class _$GetSiteMetadataCopyWithImpl<$Res, $Val extends GetSiteMetadata> implements $GetSiteMetadataCopyWith<$Res> {
   _$GetSiteMetadataCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -2716,25 +2313,16 @@ class _$GetSiteMetadataCopyWithImpl<$Res, $Val extends GetSiteMetadata>
 }
 
 /// @nodoc
-abstract class _$$GetSiteMetadataImplCopyWith<$Res>
-    implements $GetSiteMetadataCopyWith<$Res> {
-  factory _$$GetSiteMetadataImplCopyWith(
-    _$GetSiteMetadataImpl value,
-    $Res Function(_$GetSiteMetadataImpl) then,
-  ) = __$$GetSiteMetadataImplCopyWithImpl<$Res>;
+abstract class _$$GetSiteMetadataImplCopyWith<$Res> implements $GetSiteMetadataCopyWith<$Res> {
+  factory _$$GetSiteMetadataImplCopyWith(_$GetSiteMetadataImpl value, $Res Function(_$GetSiteMetadataImpl) then) = __$$GetSiteMetadataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String url});
 }
 
 /// @nodoc
-class __$$GetSiteMetadataImplCopyWithImpl<$Res>
-    extends _$GetSiteMetadataCopyWithImpl<$Res, _$GetSiteMetadataImpl>
-    implements _$$GetSiteMetadataImplCopyWith<$Res> {
-  __$$GetSiteMetadataImplCopyWithImpl(
-    _$GetSiteMetadataImpl _value,
-    $Res Function(_$GetSiteMetadataImpl) _then,
-  ) : super(_value, _then);
+class __$$GetSiteMetadataImplCopyWithImpl<$Res> extends _$GetSiteMetadataCopyWithImpl<$Res, _$GetSiteMetadataImpl> implements _$$GetSiteMetadataImplCopyWith<$Res> {
+  __$$GetSiteMetadataImplCopyWithImpl(_$GetSiteMetadataImpl _value, $Res Function(_$GetSiteMetadataImpl) _then) : super(_value, _then);
 
   /// Create a copy of GetSiteMetadata
   /// with the given fields replaced by the non-null parameter values.
@@ -2759,8 +2347,7 @@ class __$$GetSiteMetadataImplCopyWithImpl<$Res>
 class _$GetSiteMetadataImpl extends _GetSiteMetadata {
   const _$GetSiteMetadataImpl({required this.url}) : super._();
 
-  factory _$GetSiteMetadataImpl.fromJson(Map<String, dynamic> json) =>
-      _$$GetSiteMetadataImplFromJson(json);
+  factory _$GetSiteMetadataImpl.fromJson(Map<String, dynamic> json) => _$$GetSiteMetadataImplFromJson(json);
 
   @override
   final String url;
@@ -2772,10 +2359,7 @@ class _$GetSiteMetadataImpl extends _GetSiteMetadata {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$GetSiteMetadataImpl &&
-            (identical(other.url, url) || other.url == url));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$GetSiteMetadataImpl && (identical(other.url, url) || other.url == url));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -2787,11 +2371,7 @@ class _$GetSiteMetadataImpl extends _GetSiteMetadata {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetSiteMetadataImplCopyWith<_$GetSiteMetadataImpl> get copyWith =>
-      __$$GetSiteMetadataImplCopyWithImpl<_$GetSiteMetadataImpl>(
-        this,
-        _$identity,
-      );
+  _$$GetSiteMetadataImplCopyWith<_$GetSiteMetadataImpl> get copyWith => __$$GetSiteMetadataImplCopyWithImpl<_$GetSiteMetadataImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2800,12 +2380,10 @@ class _$GetSiteMetadataImpl extends _GetSiteMetadata {
 }
 
 abstract class _GetSiteMetadata extends GetSiteMetadata {
-  const factory _GetSiteMetadata({required final String url}) =
-      _$GetSiteMetadataImpl;
+  const factory _GetSiteMetadata({required final String url}) = _$GetSiteMetadataImpl;
   const _GetSiteMetadata._() : super._();
 
-  factory _GetSiteMetadata.fromJson(Map<String, dynamic> json) =
-      _$GetSiteMetadataImpl.fromJson;
+  factory _GetSiteMetadata.fromJson(Map<String, dynamic> json) = _$GetSiteMetadataImpl.fromJson;
 
   @override
   String get url;
@@ -2814,8 +2392,7 @@ abstract class _GetSiteMetadata extends GetSiteMetadata {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetSiteMetadataImplCopyWith<_$GetSiteMetadataImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GetSiteMetadataImplCopyWith<_$GetSiteMetadataImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 CreatePostReport _$CreatePostReportFromJson(Map<String, dynamic> json) {
@@ -2834,23 +2411,18 @@ mixin _$CreatePostReport {
   /// Create a copy of CreatePostReport
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $CreatePostReportCopyWith<CreatePostReport> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CreatePostReportCopyWith<CreatePostReport> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CreatePostReportCopyWith<$Res> {
-  factory $CreatePostReportCopyWith(
-    CreatePostReport value,
-    $Res Function(CreatePostReport) then,
-  ) = _$CreatePostReportCopyWithImpl<$Res, CreatePostReport>;
+  factory $CreatePostReportCopyWith(CreatePostReport value, $Res Function(CreatePostReport) then) = _$CreatePostReportCopyWithImpl<$Res, CreatePostReport>;
   @useResult
   $Res call({int postId, String reason, String auth});
 }
 
 /// @nodoc
-class _$CreatePostReportCopyWithImpl<$Res, $Val extends CreatePostReport>
-    implements $CreatePostReportCopyWith<$Res> {
+class _$CreatePostReportCopyWithImpl<$Res, $Val extends CreatePostReport> implements $CreatePostReportCopyWith<$Res> {
   _$CreatePostReportCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -2862,11 +2434,7 @@ class _$CreatePostReportCopyWithImpl<$Res, $Val extends CreatePostReport>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postId = null,
-    Object? reason = null,
-    Object? auth = null,
-  }) {
+  $Res call({Object? postId = null, Object? reason = null, Object? auth = null}) {
     return _then(
       _value.copyWith(
             postId:
@@ -2891,35 +2459,22 @@ class _$CreatePostReportCopyWithImpl<$Res, $Val extends CreatePostReport>
 }
 
 /// @nodoc
-abstract class _$$CreatePostReportImplCopyWith<$Res>
-    implements $CreatePostReportCopyWith<$Res> {
-  factory _$$CreatePostReportImplCopyWith(
-    _$CreatePostReportImpl value,
-    $Res Function(_$CreatePostReportImpl) then,
-  ) = __$$CreatePostReportImplCopyWithImpl<$Res>;
+abstract class _$$CreatePostReportImplCopyWith<$Res> implements $CreatePostReportCopyWith<$Res> {
+  factory _$$CreatePostReportImplCopyWith(_$CreatePostReportImpl value, $Res Function(_$CreatePostReportImpl) then) = __$$CreatePostReportImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int postId, String reason, String auth});
 }
 
 /// @nodoc
-class __$$CreatePostReportImplCopyWithImpl<$Res>
-    extends _$CreatePostReportCopyWithImpl<$Res, _$CreatePostReportImpl>
-    implements _$$CreatePostReportImplCopyWith<$Res> {
-  __$$CreatePostReportImplCopyWithImpl(
-    _$CreatePostReportImpl _value,
-    $Res Function(_$CreatePostReportImpl) _then,
-  ) : super(_value, _then);
+class __$$CreatePostReportImplCopyWithImpl<$Res> extends _$CreatePostReportCopyWithImpl<$Res, _$CreatePostReportImpl> implements _$$CreatePostReportImplCopyWith<$Res> {
+  __$$CreatePostReportImplCopyWithImpl(_$CreatePostReportImpl _value, $Res Function(_$CreatePostReportImpl) _then) : super(_value, _then);
 
   /// Create a copy of CreatePostReport
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postId = null,
-    Object? reason = null,
-    Object? auth = null,
-  }) {
+  $Res call({Object? postId = null, Object? reason = null, Object? auth = null}) {
     return _then(
       _$CreatePostReportImpl(
         postId:
@@ -2946,14 +2501,9 @@ class __$$CreatePostReportImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$CreatePostReportImpl extends _CreatePostReport {
-  const _$CreatePostReportImpl({
-    required this.postId,
-    required this.reason,
-    required this.auth,
-  }) : super._();
+  const _$CreatePostReportImpl({required this.postId, required this.reason, required this.auth}) : super._();
 
-  factory _$CreatePostReportImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CreatePostReportImplFromJson(json);
+  factory _$CreatePostReportImpl.fromJson(Map<String, dynamic> json) => _$$CreatePostReportImplFromJson(json);
 
   @override
   final int postId;
@@ -2986,11 +2536,7 @@ class _$CreatePostReportImpl extends _CreatePostReport {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$CreatePostReportImplCopyWith<_$CreatePostReportImpl> get copyWith =>
-      __$$CreatePostReportImplCopyWithImpl<_$CreatePostReportImpl>(
-        this,
-        _$identity,
-      );
+  _$$CreatePostReportImplCopyWith<_$CreatePostReportImpl> get copyWith => __$$CreatePostReportImplCopyWithImpl<_$CreatePostReportImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2999,15 +2545,10 @@ class _$CreatePostReportImpl extends _CreatePostReport {
 }
 
 abstract class _CreatePostReport extends CreatePostReport {
-  const factory _CreatePostReport({
-    required final int postId,
-    required final String reason,
-    required final String auth,
-  }) = _$CreatePostReportImpl;
+  const factory _CreatePostReport({required final int postId, required final String reason, required final String auth}) = _$CreatePostReportImpl;
   const _CreatePostReport._() : super._();
 
-  factory _CreatePostReport.fromJson(Map<String, dynamic> json) =
-      _$CreatePostReportImpl.fromJson;
+  factory _CreatePostReport.fromJson(Map<String, dynamic> json) = _$CreatePostReportImpl.fromJson;
 
   @override
   int get postId;
@@ -3020,8 +2561,7 @@ abstract class _CreatePostReport extends CreatePostReport {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CreatePostReportImplCopyWith<_$CreatePostReportImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CreatePostReportImplCopyWith<_$CreatePostReportImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 ResolvePostReport _$ResolvePostReportFromJson(Map<String, dynamic> json) {
@@ -3040,23 +2580,18 @@ mixin _$ResolvePostReport {
   /// Create a copy of ResolvePostReport
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ResolvePostReportCopyWith<ResolvePostReport> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ResolvePostReportCopyWith<ResolvePostReport> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ResolvePostReportCopyWith<$Res> {
-  factory $ResolvePostReportCopyWith(
-    ResolvePostReport value,
-    $Res Function(ResolvePostReport) then,
-  ) = _$ResolvePostReportCopyWithImpl<$Res, ResolvePostReport>;
+  factory $ResolvePostReportCopyWith(ResolvePostReport value, $Res Function(ResolvePostReport) then) = _$ResolvePostReportCopyWithImpl<$Res, ResolvePostReport>;
   @useResult
   $Res call({int reportId, bool resolved, String auth});
 }
 
 /// @nodoc
-class _$ResolvePostReportCopyWithImpl<$Res, $Val extends ResolvePostReport>
-    implements $ResolvePostReportCopyWith<$Res> {
+class _$ResolvePostReportCopyWithImpl<$Res, $Val extends ResolvePostReport> implements $ResolvePostReportCopyWith<$Res> {
   _$ResolvePostReportCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -3068,11 +2603,7 @@ class _$ResolvePostReportCopyWithImpl<$Res, $Val extends ResolvePostReport>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? reportId = null,
-    Object? resolved = null,
-    Object? auth = null,
-  }) {
+  $Res call({Object? reportId = null, Object? resolved = null, Object? auth = null}) {
     return _then(
       _value.copyWith(
             reportId:
@@ -3097,35 +2628,22 @@ class _$ResolvePostReportCopyWithImpl<$Res, $Val extends ResolvePostReport>
 }
 
 /// @nodoc
-abstract class _$$ResolvePostReportImplCopyWith<$Res>
-    implements $ResolvePostReportCopyWith<$Res> {
-  factory _$$ResolvePostReportImplCopyWith(
-    _$ResolvePostReportImpl value,
-    $Res Function(_$ResolvePostReportImpl) then,
-  ) = __$$ResolvePostReportImplCopyWithImpl<$Res>;
+abstract class _$$ResolvePostReportImplCopyWith<$Res> implements $ResolvePostReportCopyWith<$Res> {
+  factory _$$ResolvePostReportImplCopyWith(_$ResolvePostReportImpl value, $Res Function(_$ResolvePostReportImpl) then) = __$$ResolvePostReportImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int reportId, bool resolved, String auth});
 }
 
 /// @nodoc
-class __$$ResolvePostReportImplCopyWithImpl<$Res>
-    extends _$ResolvePostReportCopyWithImpl<$Res, _$ResolvePostReportImpl>
-    implements _$$ResolvePostReportImplCopyWith<$Res> {
-  __$$ResolvePostReportImplCopyWithImpl(
-    _$ResolvePostReportImpl _value,
-    $Res Function(_$ResolvePostReportImpl) _then,
-  ) : super(_value, _then);
+class __$$ResolvePostReportImplCopyWithImpl<$Res> extends _$ResolvePostReportCopyWithImpl<$Res, _$ResolvePostReportImpl> implements _$$ResolvePostReportImplCopyWith<$Res> {
+  __$$ResolvePostReportImplCopyWithImpl(_$ResolvePostReportImpl _value, $Res Function(_$ResolvePostReportImpl) _then) : super(_value, _then);
 
   /// Create a copy of ResolvePostReport
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? reportId = null,
-    Object? resolved = null,
-    Object? auth = null,
-  }) {
+  $Res call({Object? reportId = null, Object? resolved = null, Object? auth = null}) {
     return _then(
       _$ResolvePostReportImpl(
         reportId:
@@ -3152,14 +2670,9 @@ class __$$ResolvePostReportImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$ResolvePostReportImpl extends _ResolvePostReport {
-  const _$ResolvePostReportImpl({
-    required this.reportId,
-    required this.resolved,
-    required this.auth,
-  }) : super._();
+  const _$ResolvePostReportImpl({required this.reportId, required this.resolved, required this.auth}) : super._();
 
-  factory _$ResolvePostReportImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ResolvePostReportImplFromJson(json);
+  factory _$ResolvePostReportImpl.fromJson(Map<String, dynamic> json) => _$$ResolvePostReportImplFromJson(json);
 
   @override
   final int reportId;
@@ -3178,10 +2691,8 @@ class _$ResolvePostReportImpl extends _ResolvePostReport {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ResolvePostReportImpl &&
-            (identical(other.reportId, reportId) ||
-                other.reportId == reportId) &&
-            (identical(other.resolved, resolved) ||
-                other.resolved == resolved) &&
+            (identical(other.reportId, reportId) || other.reportId == reportId) &&
+            (identical(other.resolved, resolved) || other.resolved == resolved) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
@@ -3194,11 +2705,7 @@ class _$ResolvePostReportImpl extends _ResolvePostReport {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ResolvePostReportImplCopyWith<_$ResolvePostReportImpl> get copyWith =>
-      __$$ResolvePostReportImplCopyWithImpl<_$ResolvePostReportImpl>(
-        this,
-        _$identity,
-      );
+  _$$ResolvePostReportImplCopyWith<_$ResolvePostReportImpl> get copyWith => __$$ResolvePostReportImplCopyWithImpl<_$ResolvePostReportImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -3207,15 +2714,10 @@ class _$ResolvePostReportImpl extends _ResolvePostReport {
 }
 
 abstract class _ResolvePostReport extends ResolvePostReport {
-  const factory _ResolvePostReport({
-    required final int reportId,
-    required final bool resolved,
-    required final String auth,
-  }) = _$ResolvePostReportImpl;
+  const factory _ResolvePostReport({required final int reportId, required final bool resolved, required final String auth}) = _$ResolvePostReportImpl;
   const _ResolvePostReport._() : super._();
 
-  factory _ResolvePostReport.fromJson(Map<String, dynamic> json) =
-      _$ResolvePostReportImpl.fromJson;
+  factory _ResolvePostReport.fromJson(Map<String, dynamic> json) = _$ResolvePostReportImpl.fromJson;
 
   @override
   int get reportId;
@@ -3228,8 +2730,7 @@ abstract class _ResolvePostReport extends ResolvePostReport {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ResolvePostReportImplCopyWith<_$ResolvePostReportImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ResolvePostReportImplCopyWith<_$ResolvePostReportImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 ListPostReports _$ListPostReportsFromJson(Map<String, dynamic> json) {
@@ -3250,29 +2751,18 @@ mixin _$ListPostReports {
   /// Create a copy of ListPostReports
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ListPostReportsCopyWith<ListPostReports> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ListPostReportsCopyWith<ListPostReports> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ListPostReportsCopyWith<$Res> {
-  factory $ListPostReportsCopyWith(
-    ListPostReports value,
-    $Res Function(ListPostReports) then,
-  ) = _$ListPostReportsCopyWithImpl<$Res, ListPostReports>;
+  factory $ListPostReportsCopyWith(ListPostReports value, $Res Function(ListPostReports) then) = _$ListPostReportsCopyWithImpl<$Res, ListPostReports>;
   @useResult
-  $Res call({
-    int? page,
-    int? limit,
-    int? communityId,
-    bool? unresolvedOnly,
-    String auth,
-  });
+  $Res call({int? page, int? limit, int? communityId, bool? unresolvedOnly, String auth});
 }
 
 /// @nodoc
-class _$ListPostReportsCopyWithImpl<$Res, $Val extends ListPostReports>
-    implements $ListPostReportsCopyWith<$Res> {
+class _$ListPostReportsCopyWithImpl<$Res, $Val extends ListPostReports> implements $ListPostReportsCopyWith<$Res> {
   _$ListPostReportsCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -3284,13 +2774,7 @@ class _$ListPostReportsCopyWithImpl<$Res, $Val extends ListPostReports>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? page = freezed,
-    Object? limit = freezed,
-    Object? communityId = freezed,
-    Object? unresolvedOnly = freezed,
-    Object? auth = null,
-  }) {
+  $Res call({Object? page = freezed, Object? limit = freezed, Object? communityId = freezed, Object? unresolvedOnly = freezed, Object? auth = null}) {
     return _then(
       _value.copyWith(
             page:
@@ -3325,43 +2809,22 @@ class _$ListPostReportsCopyWithImpl<$Res, $Val extends ListPostReports>
 }
 
 /// @nodoc
-abstract class _$$ListPostReportsImplCopyWith<$Res>
-    implements $ListPostReportsCopyWith<$Res> {
-  factory _$$ListPostReportsImplCopyWith(
-    _$ListPostReportsImpl value,
-    $Res Function(_$ListPostReportsImpl) then,
-  ) = __$$ListPostReportsImplCopyWithImpl<$Res>;
+abstract class _$$ListPostReportsImplCopyWith<$Res> implements $ListPostReportsCopyWith<$Res> {
+  factory _$$ListPostReportsImplCopyWith(_$ListPostReportsImpl value, $Res Function(_$ListPostReportsImpl) then) = __$$ListPostReportsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    int? page,
-    int? limit,
-    int? communityId,
-    bool? unresolvedOnly,
-    String auth,
-  });
+  $Res call({int? page, int? limit, int? communityId, bool? unresolvedOnly, String auth});
 }
 
 /// @nodoc
-class __$$ListPostReportsImplCopyWithImpl<$Res>
-    extends _$ListPostReportsCopyWithImpl<$Res, _$ListPostReportsImpl>
-    implements _$$ListPostReportsImplCopyWith<$Res> {
-  __$$ListPostReportsImplCopyWithImpl(
-    _$ListPostReportsImpl _value,
-    $Res Function(_$ListPostReportsImpl) _then,
-  ) : super(_value, _then);
+class __$$ListPostReportsImplCopyWithImpl<$Res> extends _$ListPostReportsCopyWithImpl<$Res, _$ListPostReportsImpl> implements _$$ListPostReportsImplCopyWith<$Res> {
+  __$$ListPostReportsImplCopyWithImpl(_$ListPostReportsImpl _value, $Res Function(_$ListPostReportsImpl) _then) : super(_value, _then);
 
   /// Create a copy of ListPostReports
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? page = freezed,
-    Object? limit = freezed,
-    Object? communityId = freezed,
-    Object? unresolvedOnly = freezed,
-    Object? auth = null,
-  }) {
+  $Res call({Object? page = freezed, Object? limit = freezed, Object? communityId = freezed, Object? unresolvedOnly = freezed, Object? auth = null}) {
     return _then(
       _$ListPostReportsImpl(
         page:
@@ -3398,16 +2861,9 @@ class __$$ListPostReportsImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$ListPostReportsImpl extends _ListPostReports {
-  const _$ListPostReportsImpl({
-    this.page,
-    this.limit,
-    this.communityId,
-    this.unresolvedOnly,
-    required this.auth,
-  }) : super._();
+  const _$ListPostReportsImpl({this.page, this.limit, this.communityId, this.unresolvedOnly, required this.auth}) : super._();
 
-  factory _$ListPostReportsImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ListPostReportsImplFromJson(json);
+  factory _$ListPostReportsImpl.fromJson(Map<String, dynamic> json) => _$$ListPostReportsImplFromJson(json);
 
   @override
   final int? page;
@@ -3432,28 +2888,21 @@ class _$ListPostReportsImpl extends _ListPostReports {
             other is _$ListPostReportsImpl &&
             (identical(other.page, page) || other.page == page) &&
             (identical(other.limit, limit) || other.limit == limit) &&
-            (identical(other.communityId, communityId) ||
-                other.communityId == communityId) &&
-            (identical(other.unresolvedOnly, unresolvedOnly) ||
-                other.unresolvedOnly == unresolvedOnly) &&
+            (identical(other.communityId, communityId) || other.communityId == communityId) &&
+            (identical(other.unresolvedOnly, unresolvedOnly) || other.unresolvedOnly == unresolvedOnly) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, page, limit, communityId, unresolvedOnly, auth);
+  int get hashCode => Object.hash(runtimeType, page, limit, communityId, unresolvedOnly, auth);
 
   /// Create a copy of ListPostReports
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ListPostReportsImplCopyWith<_$ListPostReportsImpl> get copyWith =>
-      __$$ListPostReportsImplCopyWithImpl<_$ListPostReportsImpl>(
-        this,
-        _$identity,
-      );
+  _$$ListPostReportsImplCopyWith<_$ListPostReportsImpl> get copyWith => __$$ListPostReportsImplCopyWithImpl<_$ListPostReportsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -3462,17 +2911,10 @@ class _$ListPostReportsImpl extends _ListPostReports {
 }
 
 abstract class _ListPostReports extends ListPostReports {
-  const factory _ListPostReports({
-    final int? page,
-    final int? limit,
-    final int? communityId,
-    final bool? unresolvedOnly,
-    required final String auth,
-  }) = _$ListPostReportsImpl;
+  const factory _ListPostReports({final int? page, final int? limit, final int? communityId, final bool? unresolvedOnly, required final String auth}) = _$ListPostReportsImpl;
   const _ListPostReports._() : super._();
 
-  factory _ListPostReports.fromJson(Map<String, dynamic> json) =
-      _$ListPostReportsImpl.fromJson;
+  factory _ListPostReports.fromJson(Map<String, dynamic> json) = _$ListPostReportsImpl.fromJson;
 
   @override
   int? get page;
@@ -3489,8 +2931,7 @@ abstract class _ListPostReports extends ListPostReports {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ListPostReportsImplCopyWith<_$ListPostReportsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ListPostReportsImplCopyWith<_$ListPostReportsImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 MarkPostAsRead _$MarkPostAsReadFromJson(Map<String, dynamic> json) {
@@ -3501,8 +2942,7 @@ MarkPostAsRead _$MarkPostAsReadFromJson(Map<String, dynamic> json) {
 mixin _$MarkPostAsRead {
   @deprecated
   int? get postId => throw _privateConstructorUsedError; // v0.18.0 (required), v0.19.0 (optional) [deprecated in v0.19.4]
-  List<int>? get postIds =>
-      throw _privateConstructorUsedError; // v0.19.0 (optional)
+  List<int>? get postIds => throw _privateConstructorUsedError; // v0.19.0 (optional)
   bool get read => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
@@ -3512,28 +2952,18 @@ mixin _$MarkPostAsRead {
   /// Create a copy of MarkPostAsRead
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $MarkPostAsReadCopyWith<MarkPostAsRead> get copyWith =>
-      throw _privateConstructorUsedError;
+  $MarkPostAsReadCopyWith<MarkPostAsRead> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $MarkPostAsReadCopyWith<$Res> {
-  factory $MarkPostAsReadCopyWith(
-    MarkPostAsRead value,
-    $Res Function(MarkPostAsRead) then,
-  ) = _$MarkPostAsReadCopyWithImpl<$Res, MarkPostAsRead>;
+  factory $MarkPostAsReadCopyWith(MarkPostAsRead value, $Res Function(MarkPostAsRead) then) = _$MarkPostAsReadCopyWithImpl<$Res, MarkPostAsRead>;
   @useResult
-  $Res call({
-    @deprecated int? postId,
-    List<int>? postIds,
-    bool read,
-    String? auth,
-  });
+  $Res call({@deprecated int? postId, List<int>? postIds, bool read, String? auth});
 }
 
 /// @nodoc
-class _$MarkPostAsReadCopyWithImpl<$Res, $Val extends MarkPostAsRead>
-    implements $MarkPostAsReadCopyWith<$Res> {
+class _$MarkPostAsReadCopyWithImpl<$Res, $Val extends MarkPostAsRead> implements $MarkPostAsReadCopyWith<$Res> {
   _$MarkPostAsReadCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -3545,12 +2975,7 @@ class _$MarkPostAsReadCopyWithImpl<$Res, $Val extends MarkPostAsRead>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postId = freezed,
-    Object? postIds = freezed,
-    Object? read = null,
-    Object? auth = freezed,
-  }) {
+  $Res call({Object? postId = freezed, Object? postIds = freezed, Object? read = null, Object? auth = freezed}) {
     return _then(
       _value.copyWith(
             postId:
@@ -3580,41 +3005,22 @@ class _$MarkPostAsReadCopyWithImpl<$Res, $Val extends MarkPostAsRead>
 }
 
 /// @nodoc
-abstract class _$$MarkPostAsReadImplCopyWith<$Res>
-    implements $MarkPostAsReadCopyWith<$Res> {
-  factory _$$MarkPostAsReadImplCopyWith(
-    _$MarkPostAsReadImpl value,
-    $Res Function(_$MarkPostAsReadImpl) then,
-  ) = __$$MarkPostAsReadImplCopyWithImpl<$Res>;
+abstract class _$$MarkPostAsReadImplCopyWith<$Res> implements $MarkPostAsReadCopyWith<$Res> {
+  factory _$$MarkPostAsReadImplCopyWith(_$MarkPostAsReadImpl value, $Res Function(_$MarkPostAsReadImpl) then) = __$$MarkPostAsReadImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @deprecated int? postId,
-    List<int>? postIds,
-    bool read,
-    String? auth,
-  });
+  $Res call({@deprecated int? postId, List<int>? postIds, bool read, String? auth});
 }
 
 /// @nodoc
-class __$$MarkPostAsReadImplCopyWithImpl<$Res>
-    extends _$MarkPostAsReadCopyWithImpl<$Res, _$MarkPostAsReadImpl>
-    implements _$$MarkPostAsReadImplCopyWith<$Res> {
-  __$$MarkPostAsReadImplCopyWithImpl(
-    _$MarkPostAsReadImpl _value,
-    $Res Function(_$MarkPostAsReadImpl) _then,
-  ) : super(_value, _then);
+class __$$MarkPostAsReadImplCopyWithImpl<$Res> extends _$MarkPostAsReadCopyWithImpl<$Res, _$MarkPostAsReadImpl> implements _$$MarkPostAsReadImplCopyWith<$Res> {
+  __$$MarkPostAsReadImplCopyWithImpl(_$MarkPostAsReadImpl _value, $Res Function(_$MarkPostAsReadImpl) _then) : super(_value, _then);
 
   /// Create a copy of MarkPostAsRead
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postId = freezed,
-    Object? postIds = freezed,
-    Object? read = null,
-    Object? auth = freezed,
-  }) {
+  $Res call({Object? postId = freezed, Object? postIds = freezed, Object? read = null, Object? auth = freezed}) {
     return _then(
       _$MarkPostAsReadImpl(
         postId:
@@ -3646,16 +3052,9 @@ class __$$MarkPostAsReadImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$MarkPostAsReadImpl extends _MarkPostAsRead {
-  const _$MarkPostAsReadImpl({
-    @deprecated this.postId,
-    final List<int>? postIds,
-    required this.read,
-    this.auth,
-  }) : _postIds = postIds,
-       super._();
+  const _$MarkPostAsReadImpl({@deprecated this.postId, final List<int>? postIds, required this.read, this.auth}) : _postIds = postIds, super._();
 
-  factory _$MarkPostAsReadImpl.fromJson(Map<String, dynamic> json) =>
-      _$$MarkPostAsReadImplFromJson(json);
+  factory _$MarkPostAsReadImpl.fromJson(Map<String, dynamic> json) => _$$MarkPostAsReadImplFromJson(json);
 
   @override
   @deprecated
@@ -3697,24 +3096,14 @@ class _$MarkPostAsReadImpl extends _MarkPostAsRead {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    postId,
-    const DeepCollectionEquality().hash(_postIds),
-    read,
-    auth,
-  );
+  int get hashCode => Object.hash(runtimeType, postId, const DeepCollectionEquality().hash(_postIds), read, auth);
 
   /// Create a copy of MarkPostAsRead
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$MarkPostAsReadImplCopyWith<_$MarkPostAsReadImpl> get copyWith =>
-      __$$MarkPostAsReadImplCopyWithImpl<_$MarkPostAsReadImpl>(
-        this,
-        _$identity,
-      );
+  _$$MarkPostAsReadImplCopyWith<_$MarkPostAsReadImpl> get copyWith => __$$MarkPostAsReadImplCopyWithImpl<_$MarkPostAsReadImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -3723,16 +3112,10 @@ class _$MarkPostAsReadImpl extends _MarkPostAsRead {
 }
 
 abstract class _MarkPostAsRead extends MarkPostAsRead {
-  const factory _MarkPostAsRead({
-    @deprecated final int? postId,
-    final List<int>? postIds,
-    required final bool read,
-    final String? auth,
-  }) = _$MarkPostAsReadImpl;
+  const factory _MarkPostAsRead({@deprecated final int? postId, final List<int>? postIds, required final bool read, final String? auth}) = _$MarkPostAsReadImpl;
   const _MarkPostAsRead._() : super._();
 
-  factory _MarkPostAsRead.fromJson(Map<String, dynamic> json) =
-      _$MarkPostAsReadImpl.fromJson;
+  factory _MarkPostAsRead.fromJson(Map<String, dynamic> json) = _$MarkPostAsReadImpl.fromJson;
 
   @override
   @deprecated
@@ -3748,8 +3131,7 @@ abstract class _MarkPostAsRead extends MarkPostAsRead {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$MarkPostAsReadImplCopyWith<_$MarkPostAsReadImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$MarkPostAsReadImplCopyWith<_$MarkPostAsReadImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 HidePost _$HidePostFromJson(Map<String, dynamic> json) {
@@ -3758,8 +3140,7 @@ HidePost _$HidePostFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$HidePost {
-  List<int> get postIds =>
-      throw _privateConstructorUsedError; // v0.19.4 (required)
+  List<int> get postIds => throw _privateConstructorUsedError; // v0.19.4 (required)
   bool get hide => throw _privateConstructorUsedError; // v0.19.4 (required)
   String? get auth => throw _privateConstructorUsedError;
 
@@ -3769,21 +3150,18 @@ mixin _$HidePost {
   /// Create a copy of HidePost
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $HidePostCopyWith<HidePost> get copyWith =>
-      throw _privateConstructorUsedError;
+  $HidePostCopyWith<HidePost> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $HidePostCopyWith<$Res> {
-  factory $HidePostCopyWith(HidePost value, $Res Function(HidePost) then) =
-      _$HidePostCopyWithImpl<$Res, HidePost>;
+  factory $HidePostCopyWith(HidePost value, $Res Function(HidePost) then) = _$HidePostCopyWithImpl<$Res, HidePost>;
   @useResult
   $Res call({List<int> postIds, bool hide, String? auth});
 }
 
 /// @nodoc
-class _$HidePostCopyWithImpl<$Res, $Val extends HidePost>
-    implements $HidePostCopyWith<$Res> {
+class _$HidePostCopyWithImpl<$Res, $Val extends HidePost> implements $HidePostCopyWith<$Res> {
   _$HidePostCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -3795,11 +3173,7 @@ class _$HidePostCopyWithImpl<$Res, $Val extends HidePost>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postIds = null,
-    Object? hide = null,
-    Object? auth = freezed,
-  }) {
+  $Res call({Object? postIds = null, Object? hide = null, Object? auth = freezed}) {
     return _then(
       _value.copyWith(
             postIds:
@@ -3824,35 +3198,22 @@ class _$HidePostCopyWithImpl<$Res, $Val extends HidePost>
 }
 
 /// @nodoc
-abstract class _$$HidePostImplCopyWith<$Res>
-    implements $HidePostCopyWith<$Res> {
-  factory _$$HidePostImplCopyWith(
-    _$HidePostImpl value,
-    $Res Function(_$HidePostImpl) then,
-  ) = __$$HidePostImplCopyWithImpl<$Res>;
+abstract class _$$HidePostImplCopyWith<$Res> implements $HidePostCopyWith<$Res> {
+  factory _$$HidePostImplCopyWith(_$HidePostImpl value, $Res Function(_$HidePostImpl) then) = __$$HidePostImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<int> postIds, bool hide, String? auth});
 }
 
 /// @nodoc
-class __$$HidePostImplCopyWithImpl<$Res>
-    extends _$HidePostCopyWithImpl<$Res, _$HidePostImpl>
-    implements _$$HidePostImplCopyWith<$Res> {
-  __$$HidePostImplCopyWithImpl(
-    _$HidePostImpl _value,
-    $Res Function(_$HidePostImpl) _then,
-  ) : super(_value, _then);
+class __$$HidePostImplCopyWithImpl<$Res> extends _$HidePostCopyWithImpl<$Res, _$HidePostImpl> implements _$$HidePostImplCopyWith<$Res> {
+  __$$HidePostImplCopyWithImpl(_$HidePostImpl _value, $Res Function(_$HidePostImpl) _then) : super(_value, _then);
 
   /// Create a copy of HidePost
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postIds = null,
-    Object? hide = null,
-    Object? auth = freezed,
-  }) {
+  $Res call({Object? postIds = null, Object? hide = null, Object? auth = freezed}) {
     return _then(
       _$HidePostImpl(
         postIds:
@@ -3879,15 +3240,9 @@ class __$$HidePostImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$HidePostImpl extends _HidePost {
-  const _$HidePostImpl({
-    required final List<int> postIds,
-    required this.hide,
-    this.auth,
-  }) : _postIds = postIds,
-       super._();
+  const _$HidePostImpl({required final List<int> postIds, required this.hide, this.auth}) : _postIds = postIds, super._();
 
-  factory _$HidePostImpl.fromJson(Map<String, dynamic> json) =>
-      _$$HidePostImplFromJson(json);
+  factory _$HidePostImpl.fromJson(Map<String, dynamic> json) => _$$HidePostImplFromJson(json);
 
   final List<int> _postIds;
   @override
@@ -3921,20 +3276,14 @@ class _$HidePostImpl extends _HidePost {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    const DeepCollectionEquality().hash(_postIds),
-    hide,
-    auth,
-  );
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_postIds), hide, auth);
 
   /// Create a copy of HidePost
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$HidePostImplCopyWith<_$HidePostImpl> get copyWith =>
-      __$$HidePostImplCopyWithImpl<_$HidePostImpl>(this, _$identity);
+  _$$HidePostImplCopyWith<_$HidePostImpl> get copyWith => __$$HidePostImplCopyWithImpl<_$HidePostImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -3943,15 +3292,10 @@ class _$HidePostImpl extends _HidePost {
 }
 
 abstract class _HidePost extends HidePost {
-  const factory _HidePost({
-    required final List<int> postIds,
-    required final bool hide,
-    final String? auth,
-  }) = _$HidePostImpl;
+  const factory _HidePost({required final List<int> postIds, required final bool hide, final String? auth}) = _$HidePostImpl;
   const _HidePost._() : super._();
 
-  factory _HidePost.fromJson(Map<String, dynamic> json) =
-      _$HidePostImpl.fromJson;
+  factory _HidePost.fromJson(Map<String, dynamic> json) = _$HidePostImpl.fromJson;
 
   @override
   List<int> get postIds; // v0.19.4 (required)
@@ -3964,6 +3308,5 @@ abstract class _HidePost extends HidePost {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$HidePostImplCopyWith<_$HidePostImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$HidePostImplCopyWith<_$HidePostImpl> get copyWith => throw _privateConstructorUsedError;
 }

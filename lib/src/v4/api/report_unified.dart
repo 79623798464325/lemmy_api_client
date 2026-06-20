@@ -44,10 +44,7 @@ class ReportCombinedView with _$ReportCombinedView {
 @freezed
 class ListReportsResponse with _$ListReportsResponse {
   @modelSerde
-  const factory ListReportsResponse({
-    required List<ReportCombinedView> reports,
-    String? nextPage,
-  }) = _ListReportsResponse;
+  const factory ListReportsResponse({required List<ReportCombinedView> reports, String? nextPage}) = _ListReportsResponse;
 
   const ListReportsResponse._();
   factory ListReportsResponse.fromJson(Map<String, dynamic> json) => _$ListReportsResponseFromJson(json);

@@ -6,23 +6,15 @@ part of 'site.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GetSiteImpl _$$GetSiteImplFromJson(Map<String, dynamic> json) =>
-    _$GetSiteImpl();
+_$GetSiteImpl _$$GetSiteImplFromJson(Map<String, dynamic> json) => _$GetSiteImpl();
 
-Map<String, dynamic> _$$GetSiteImplToJson(_$GetSiteImpl instance) =>
-    <String, dynamic>{};
+Map<String, dynamic> _$$GetSiteImplToJson(_$GetSiteImpl instance) => <String, dynamic>{};
 
-_$GetSiteMetadataImpl _$$GetSiteMetadataImplFromJson(
-  Map<String, dynamic> json,
-) => _$GetSiteMetadataImpl(url: json['url'] as String);
+_$GetSiteMetadataImpl _$$GetSiteMetadataImplFromJson(Map<String, dynamic> json) => _$GetSiteMetadataImpl(url: json['url'] as String);
 
-Map<String, dynamic> _$$GetSiteMetadataImplToJson(
-  _$GetSiteMetadataImpl instance,
-) => <String, dynamic>{'url': instance.url};
+Map<String, dynamic> _$$GetSiteMetadataImplToJson(_$GetSiteMetadataImpl instance) => <String, dynamic>{'url': instance.url};
 
-_$CreateSiteImpl _$$CreateSiteImplFromJson(
-  Map<String, dynamic> json,
-) => _$CreateSiteImpl(
+_$CreateSiteImpl _$$CreateSiteImplFromJson(Map<String, dynamic> json) => _$CreateSiteImpl(
   name: json['name'] as String,
   sidebar: json['sidebar'] as String?,
   description: json['description'] as String?,
@@ -39,49 +31,32 @@ _$CreateSiteImpl _$$CreateSiteImplFromJson(
   legalInformation: json['legal_information'] as String?,
   applicationEmailAdmins: json['application_email_admins'] as bool?,
   hideModlogModNames: json['hide_modlog_mod_names'] as bool?,
-  discussionLanguages:
-      (json['discussion_languages'] as List<dynamic>?)
-          ?.map((e) => (e as num).toInt())
-          .toList(),
+  discussionLanguages: (json['discussion_languages'] as List<dynamic>?)?.map((e) => (e as num).toInt()).toList(),
   slurFilterRegex: json['slur_filter_regex'] as String?,
   actorNameMaxLength: (json['actor_name_max_length'] as num?)?.toInt(),
   rateLimitMessage: (json['rate_limit_message'] as num?)?.toInt(),
-  rateLimitMessagePerSecond:
-      (json['rate_limit_message_per_second'] as num?)?.toInt(),
+  rateLimitMessagePerSecond: (json['rate_limit_message_per_second'] as num?)?.toInt(),
   rateLimitPost: (json['rate_limit_post'] as num?)?.toInt(),
   rateLimitPostPerSecond: (json['rate_limit_post_per_second'] as num?)?.toInt(),
   rateLimitRegister: (json['rate_limit_register'] as num?)?.toInt(),
-  rateLimitRegisterPerSecond:
-      (json['rate_limit_register_per_second'] as num?)?.toInt(),
+  rateLimitRegisterPerSecond: (json['rate_limit_register_per_second'] as num?)?.toInt(),
   rateLimitImage: (json['rate_limit_image'] as num?)?.toInt(),
-  rateLimitImagePerSecond:
-      (json['rate_limit_image_per_second'] as num?)?.toInt(),
+  rateLimitImagePerSecond: (json['rate_limit_image_per_second'] as num?)?.toInt(),
   rateLimitComment: (json['rate_limit_comment'] as num?)?.toInt(),
-  rateLimitCommentPerSecond:
-      (json['rate_limit_comment_per_second'] as num?)?.toInt(),
+  rateLimitCommentPerSecond: (json['rate_limit_comment_per_second'] as num?)?.toInt(),
   rateLimitSearch: (json['rate_limit_search'] as num?)?.toInt(),
-  rateLimitSearchPerSecond:
-      (json['rate_limit_search_per_second'] as num?)?.toInt(),
+  rateLimitSearchPerSecond: (json['rate_limit_search_per_second'] as num?)?.toInt(),
   federationEnabled: json['federation_enabled'] as bool?,
   federationDebug: json['federation_debug'] as bool?,
   captchaEnabled: json['captcha_enabled'] as bool?,
   captchaDifficulty: json['captcha_difficulty'] as String?,
-  allowedInstances:
-      (json['allowed_instances'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-  blockedInstances:
-      (json['blocked_instances'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-  taglines:
-      (json['taglines'] as List<dynamic>?)?.map((e) => e as String).toList(),
+  allowedInstances: (json['allowed_instances'] as List<dynamic>?)?.map((e) => e as String).toList(),
+  blockedInstances: (json['blocked_instances'] as List<dynamic>?)?.map((e) => e as String).toList(),
+  taglines: (json['taglines'] as List<dynamic>?)?.map((e) => e as String).toList(),
   registrationMode: json['registration_mode'] as String?,
 );
 
-Map<String, dynamic> _$$CreateSiteImplToJson(
-  _$CreateSiteImpl instance,
-) => <String, dynamic>{
+Map<String, dynamic> _$$CreateSiteImplToJson(_$CreateSiteImpl instance) => <String, dynamic>{
   'name': instance.name,
   if (instance.sidebar case final value?) 'sidebar': value,
   if (instance.description case final value?) 'description': value,
@@ -89,45 +64,30 @@ Map<String, dynamic> _$$CreateSiteImplToJson(
   if (instance.banner case final value?) 'banner': value,
   if (instance.enableDownvotes case final value?) 'enable_downvotes': value,
   if (instance.enableNsfw case final value?) 'enable_nsfw': value,
-  if (instance.communityCreationAdminOnly case final value?)
-    'community_creation_admin_only': value,
-  if (instance.requireEmailVerification case final value?)
-    'require_email_verification': value,
-  if (instance.applicationQuestion case final value?)
-    'application_question': value,
+  if (instance.communityCreationAdminOnly case final value?) 'community_creation_admin_only': value,
+  if (instance.requireEmailVerification case final value?) 'require_email_verification': value,
+  if (instance.applicationQuestion case final value?) 'application_question': value,
   if (instance.privateInstance case final value?) 'private_instance': value,
   if (instance.defaultTheme case final value?) 'default_theme': value,
-  if (instance.defaultPostListingType case final value?)
-    'default_post_listing_type': value,
+  if (instance.defaultPostListingType case final value?) 'default_post_listing_type': value,
   if (instance.legalInformation case final value?) 'legal_information': value,
-  if (instance.applicationEmailAdmins case final value?)
-    'application_email_admins': value,
-  if (instance.hideModlogModNames case final value?)
-    'hide_modlog_mod_names': value,
-  if (instance.discussionLanguages case final value?)
-    'discussion_languages': value,
+  if (instance.applicationEmailAdmins case final value?) 'application_email_admins': value,
+  if (instance.hideModlogModNames case final value?) 'hide_modlog_mod_names': value,
+  if (instance.discussionLanguages case final value?) 'discussion_languages': value,
   if (instance.slurFilterRegex case final value?) 'slur_filter_regex': value,
-  if (instance.actorNameMaxLength case final value?)
-    'actor_name_max_length': value,
+  if (instance.actorNameMaxLength case final value?) 'actor_name_max_length': value,
   if (instance.rateLimitMessage case final value?) 'rate_limit_message': value,
-  if (instance.rateLimitMessagePerSecond case final value?)
-    'rate_limit_message_per_second': value,
+  if (instance.rateLimitMessagePerSecond case final value?) 'rate_limit_message_per_second': value,
   if (instance.rateLimitPost case final value?) 'rate_limit_post': value,
-  if (instance.rateLimitPostPerSecond case final value?)
-    'rate_limit_post_per_second': value,
-  if (instance.rateLimitRegister case final value?)
-    'rate_limit_register': value,
-  if (instance.rateLimitRegisterPerSecond case final value?)
-    'rate_limit_register_per_second': value,
+  if (instance.rateLimitPostPerSecond case final value?) 'rate_limit_post_per_second': value,
+  if (instance.rateLimitRegister case final value?) 'rate_limit_register': value,
+  if (instance.rateLimitRegisterPerSecond case final value?) 'rate_limit_register_per_second': value,
   if (instance.rateLimitImage case final value?) 'rate_limit_image': value,
-  if (instance.rateLimitImagePerSecond case final value?)
-    'rate_limit_image_per_second': value,
+  if (instance.rateLimitImagePerSecond case final value?) 'rate_limit_image_per_second': value,
   if (instance.rateLimitComment case final value?) 'rate_limit_comment': value,
-  if (instance.rateLimitCommentPerSecond case final value?)
-    'rate_limit_comment_per_second': value,
+  if (instance.rateLimitCommentPerSecond case final value?) 'rate_limit_comment_per_second': value,
   if (instance.rateLimitSearch case final value?) 'rate_limit_search': value,
-  if (instance.rateLimitSearchPerSecond case final value?)
-    'rate_limit_search_per_second': value,
+  if (instance.rateLimitSearchPerSecond case final value?) 'rate_limit_search_per_second': value,
   if (instance.federationEnabled case final value?) 'federation_enabled': value,
   if (instance.federationDebug case final value?) 'federation_debug': value,
   if (instance.captchaEnabled case final value?) 'captcha_enabled': value,
@@ -138,9 +98,7 @@ Map<String, dynamic> _$$CreateSiteImplToJson(
   if (instance.registrationMode case final value?) 'registration_mode': value,
 };
 
-_$EditSiteImpl _$$EditSiteImplFromJson(
-  Map<String, dynamic> json,
-) => _$EditSiteImpl(
+_$EditSiteImpl _$$EditSiteImplFromJson(Map<String, dynamic> json) => _$EditSiteImpl(
   name: json['name'] as String?,
   sidebar: json['sidebar'] as String?,
   description: json['description'] as String?,
@@ -157,49 +115,32 @@ _$EditSiteImpl _$$EditSiteImplFromJson(
   legalInformation: json['legal_information'] as String?,
   applicationEmailAdmins: json['application_email_admins'] as bool?,
   hideModlogModNames: json['hide_modlog_mod_names'] as bool?,
-  discussionLanguages:
-      (json['discussion_languages'] as List<dynamic>?)
-          ?.map((e) => (e as num).toInt())
-          .toList(),
+  discussionLanguages: (json['discussion_languages'] as List<dynamic>?)?.map((e) => (e as num).toInt()).toList(),
   slurFilterRegex: json['slur_filter_regex'] as String?,
   actorNameMaxLength: (json['actor_name_max_length'] as num?)?.toInt(),
   rateLimitMessage: (json['rate_limit_message'] as num?)?.toInt(),
-  rateLimitMessagePerSecond:
-      (json['rate_limit_message_per_second'] as num?)?.toInt(),
+  rateLimitMessagePerSecond: (json['rate_limit_message_per_second'] as num?)?.toInt(),
   rateLimitPost: (json['rate_limit_post'] as num?)?.toInt(),
   rateLimitPostPerSecond: (json['rate_limit_post_per_second'] as num?)?.toInt(),
   rateLimitRegister: (json['rate_limit_register'] as num?)?.toInt(),
-  rateLimitRegisterPerSecond:
-      (json['rate_limit_register_per_second'] as num?)?.toInt(),
+  rateLimitRegisterPerSecond: (json['rate_limit_register_per_second'] as num?)?.toInt(),
   rateLimitImage: (json['rate_limit_image'] as num?)?.toInt(),
-  rateLimitImagePerSecond:
-      (json['rate_limit_image_per_second'] as num?)?.toInt(),
+  rateLimitImagePerSecond: (json['rate_limit_image_per_second'] as num?)?.toInt(),
   rateLimitComment: (json['rate_limit_comment'] as num?)?.toInt(),
-  rateLimitCommentPerSecond:
-      (json['rate_limit_comment_per_second'] as num?)?.toInt(),
+  rateLimitCommentPerSecond: (json['rate_limit_comment_per_second'] as num?)?.toInt(),
   rateLimitSearch: (json['rate_limit_search'] as num?)?.toInt(),
-  rateLimitSearchPerSecond:
-      (json['rate_limit_search_per_second'] as num?)?.toInt(),
+  rateLimitSearchPerSecond: (json['rate_limit_search_per_second'] as num?)?.toInt(),
   federationEnabled: json['federation_enabled'] as bool?,
   federationDebug: json['federation_debug'] as bool?,
   captchaEnabled: json['captcha_enabled'] as bool?,
   captchaDifficulty: json['captcha_difficulty'] as String?,
-  allowedInstances:
-      (json['allowed_instances'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-  blockedInstances:
-      (json['blocked_instances'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-  taglines:
-      (json['taglines'] as List<dynamic>?)?.map((e) => e as String).toList(),
+  allowedInstances: (json['allowed_instances'] as List<dynamic>?)?.map((e) => e as String).toList(),
+  blockedInstances: (json['blocked_instances'] as List<dynamic>?)?.map((e) => e as String).toList(),
+  taglines: (json['taglines'] as List<dynamic>?)?.map((e) => e as String).toList(),
   registrationMode: json['registration_mode'] as String?,
 );
 
-Map<String, dynamic> _$$EditSiteImplToJson(
-  _$EditSiteImpl instance,
-) => <String, dynamic>{
+Map<String, dynamic> _$$EditSiteImplToJson(_$EditSiteImpl instance) => <String, dynamic>{
   if (instance.name case final value?) 'name': value,
   if (instance.sidebar case final value?) 'sidebar': value,
   if (instance.description case final value?) 'description': value,
@@ -207,45 +148,30 @@ Map<String, dynamic> _$$EditSiteImplToJson(
   if (instance.banner case final value?) 'banner': value,
   if (instance.enableDownvotes case final value?) 'enable_downvotes': value,
   if (instance.enableNsfw case final value?) 'enable_nsfw': value,
-  if (instance.communityCreationAdminOnly case final value?)
-    'community_creation_admin_only': value,
-  if (instance.requireEmailVerification case final value?)
-    'require_email_verification': value,
-  if (instance.applicationQuestion case final value?)
-    'application_question': value,
+  if (instance.communityCreationAdminOnly case final value?) 'community_creation_admin_only': value,
+  if (instance.requireEmailVerification case final value?) 'require_email_verification': value,
+  if (instance.applicationQuestion case final value?) 'application_question': value,
   if (instance.privateInstance case final value?) 'private_instance': value,
   if (instance.defaultTheme case final value?) 'default_theme': value,
-  if (instance.defaultPostListingType case final value?)
-    'default_post_listing_type': value,
+  if (instance.defaultPostListingType case final value?) 'default_post_listing_type': value,
   if (instance.legalInformation case final value?) 'legal_information': value,
-  if (instance.applicationEmailAdmins case final value?)
-    'application_email_admins': value,
-  if (instance.hideModlogModNames case final value?)
-    'hide_modlog_mod_names': value,
-  if (instance.discussionLanguages case final value?)
-    'discussion_languages': value,
+  if (instance.applicationEmailAdmins case final value?) 'application_email_admins': value,
+  if (instance.hideModlogModNames case final value?) 'hide_modlog_mod_names': value,
+  if (instance.discussionLanguages case final value?) 'discussion_languages': value,
   if (instance.slurFilterRegex case final value?) 'slur_filter_regex': value,
-  if (instance.actorNameMaxLength case final value?)
-    'actor_name_max_length': value,
+  if (instance.actorNameMaxLength case final value?) 'actor_name_max_length': value,
   if (instance.rateLimitMessage case final value?) 'rate_limit_message': value,
-  if (instance.rateLimitMessagePerSecond case final value?)
-    'rate_limit_message_per_second': value,
+  if (instance.rateLimitMessagePerSecond case final value?) 'rate_limit_message_per_second': value,
   if (instance.rateLimitPost case final value?) 'rate_limit_post': value,
-  if (instance.rateLimitPostPerSecond case final value?)
-    'rate_limit_post_per_second': value,
-  if (instance.rateLimitRegister case final value?)
-    'rate_limit_register': value,
-  if (instance.rateLimitRegisterPerSecond case final value?)
-    'rate_limit_register_per_second': value,
+  if (instance.rateLimitPostPerSecond case final value?) 'rate_limit_post_per_second': value,
+  if (instance.rateLimitRegister case final value?) 'rate_limit_register': value,
+  if (instance.rateLimitRegisterPerSecond case final value?) 'rate_limit_register_per_second': value,
   if (instance.rateLimitImage case final value?) 'rate_limit_image': value,
-  if (instance.rateLimitImagePerSecond case final value?)
-    'rate_limit_image_per_second': value,
+  if (instance.rateLimitImagePerSecond case final value?) 'rate_limit_image_per_second': value,
   if (instance.rateLimitComment case final value?) 'rate_limit_comment': value,
-  if (instance.rateLimitCommentPerSecond case final value?)
-    'rate_limit_comment_per_second': value,
+  if (instance.rateLimitCommentPerSecond case final value?) 'rate_limit_comment_per_second': value,
   if (instance.rateLimitSearch case final value?) 'rate_limit_search': value,
-  if (instance.rateLimitSearchPerSecond case final value?)
-    'rate_limit_search_per_second': value,
+  if (instance.rateLimitSearchPerSecond case final value?) 'rate_limit_search_per_second': value,
   if (instance.federationEnabled case final value?) 'federation_enabled': value,
   if (instance.federationDebug case final value?) 'federation_debug': value,
   if (instance.captchaEnabled case final value?) 'captcha_enabled': value,
@@ -256,32 +182,18 @@ Map<String, dynamic> _$$EditSiteImplToJson(
   if (instance.registrationMode case final value?) 'registration_mode': value,
 };
 
-_$UploadSiteIconImpl _$$UploadSiteIconImplFromJson(Map<String, dynamic> json) =>
-    _$UploadSiteIconImpl();
+_$UploadSiteIconImpl _$$UploadSiteIconImplFromJson(Map<String, dynamic> json) => _$UploadSiteIconImpl();
 
-Map<String, dynamic> _$$UploadSiteIconImplToJson(
-  _$UploadSiteIconImpl instance,
-) => <String, dynamic>{};
+Map<String, dynamic> _$$UploadSiteIconImplToJson(_$UploadSiteIconImpl instance) => <String, dynamic>{};
 
-_$DeleteSiteIconImpl _$$DeleteSiteIconImplFromJson(Map<String, dynamic> json) =>
-    _$DeleteSiteIconImpl();
+_$DeleteSiteIconImpl _$$DeleteSiteIconImplFromJson(Map<String, dynamic> json) => _$DeleteSiteIconImpl();
 
-Map<String, dynamic> _$$DeleteSiteIconImplToJson(
-  _$DeleteSiteIconImpl instance,
-) => <String, dynamic>{};
+Map<String, dynamic> _$$DeleteSiteIconImplToJson(_$DeleteSiteIconImpl instance) => <String, dynamic>{};
 
-_$UploadSiteBannerImpl _$$UploadSiteBannerImplFromJson(
-  Map<String, dynamic> json,
-) => _$UploadSiteBannerImpl();
+_$UploadSiteBannerImpl _$$UploadSiteBannerImplFromJson(Map<String, dynamic> json) => _$UploadSiteBannerImpl();
 
-Map<String, dynamic> _$$UploadSiteBannerImplToJson(
-  _$UploadSiteBannerImpl instance,
-) => <String, dynamic>{};
+Map<String, dynamic> _$$UploadSiteBannerImplToJson(_$UploadSiteBannerImpl instance) => <String, dynamic>{};
 
-_$DeleteSiteBannerImpl _$$DeleteSiteBannerImplFromJson(
-  Map<String, dynamic> json,
-) => _$DeleteSiteBannerImpl();
+_$DeleteSiteBannerImpl _$$DeleteSiteBannerImplFromJson(Map<String, dynamic> json) => _$DeleteSiteBannerImpl();
 
-Map<String, dynamic> _$$DeleteSiteBannerImplToJson(
-  _$DeleteSiteBannerImpl instance,
-) => <String, dynamic>{};
+Map<String, dynamic> _$$DeleteSiteBannerImplToJson(_$DeleteSiteBannerImpl instance) => <String, dynamic>{};

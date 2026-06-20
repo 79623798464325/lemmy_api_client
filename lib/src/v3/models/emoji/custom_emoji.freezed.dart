@@ -36,32 +36,18 @@ mixin _$CustomEmoji {
   /// Create a copy of CustomEmoji
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $CustomEmojiCopyWith<CustomEmoji> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CustomEmojiCopyWith<CustomEmoji> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CustomEmojiCopyWith<$Res> {
-  factory $CustomEmojiCopyWith(
-    CustomEmoji value,
-    $Res Function(CustomEmoji) then,
-  ) = _$CustomEmojiCopyWithImpl<$Res, CustomEmoji>;
+  factory $CustomEmojiCopyWith(CustomEmoji value, $Res Function(CustomEmoji) then) = _$CustomEmojiCopyWithImpl<$Res, CustomEmoji>;
   @useResult
-  $Res call({
-    int id,
-    int localSiteId,
-    String shortcode,
-    String imageUrl,
-    String altText,
-    String category,
-    DateTime published,
-    DateTime? updated,
-  });
+  $Res call({int id, int localSiteId, String shortcode, String imageUrl, String altText, String category, DateTime published, DateTime? updated});
 }
 
 /// @nodoc
-class _$CustomEmojiCopyWithImpl<$Res, $Val extends CustomEmoji>
-    implements $CustomEmojiCopyWith<$Res> {
+class _$CustomEmojiCopyWithImpl<$Res, $Val extends CustomEmoji> implements $CustomEmojiCopyWith<$Res> {
   _$CustomEmojiCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -132,34 +118,16 @@ class _$CustomEmojiCopyWithImpl<$Res, $Val extends CustomEmoji>
 }
 
 /// @nodoc
-abstract class _$$CustomEmojiImplCopyWith<$Res>
-    implements $CustomEmojiCopyWith<$Res> {
-  factory _$$CustomEmojiImplCopyWith(
-    _$CustomEmojiImpl value,
-    $Res Function(_$CustomEmojiImpl) then,
-  ) = __$$CustomEmojiImplCopyWithImpl<$Res>;
+abstract class _$$CustomEmojiImplCopyWith<$Res> implements $CustomEmojiCopyWith<$Res> {
+  factory _$$CustomEmojiImplCopyWith(_$CustomEmojiImpl value, $Res Function(_$CustomEmojiImpl) then) = __$$CustomEmojiImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    int id,
-    int localSiteId,
-    String shortcode,
-    String imageUrl,
-    String altText,
-    String category,
-    DateTime published,
-    DateTime? updated,
-  });
+  $Res call({int id, int localSiteId, String shortcode, String imageUrl, String altText, String category, DateTime published, DateTime? updated});
 }
 
 /// @nodoc
-class __$$CustomEmojiImplCopyWithImpl<$Res>
-    extends _$CustomEmojiCopyWithImpl<$Res, _$CustomEmojiImpl>
-    implements _$$CustomEmojiImplCopyWith<$Res> {
-  __$$CustomEmojiImplCopyWithImpl(
-    _$CustomEmojiImpl _value,
-    $Res Function(_$CustomEmojiImpl) _then,
-  ) : super(_value, _then);
+class __$$CustomEmojiImplCopyWithImpl<$Res> extends _$CustomEmojiCopyWithImpl<$Res, _$CustomEmojiImpl> implements _$$CustomEmojiImplCopyWith<$Res> {
+  __$$CustomEmojiImplCopyWithImpl(_$CustomEmojiImpl _value, $Res Function(_$CustomEmojiImpl) _then) : super(_value, _then);
 
   /// Create a copy of CustomEmoji
   /// with the given fields replaced by the non-null parameter values.
@@ -237,8 +205,7 @@ class _$CustomEmojiImpl extends _CustomEmoji {
     this.updated,
   }) : super._();
 
-  factory _$CustomEmojiImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CustomEmojiImplFromJson(json);
+  factory _$CustomEmojiImpl.fromJson(Map<String, dynamic> json) => _$$CustomEmojiImplFromJson(json);
 
   @override
   final int id;
@@ -275,41 +242,25 @@ class _$CustomEmojiImpl extends _CustomEmoji {
         (other.runtimeType == runtimeType &&
             other is _$CustomEmojiImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.localSiteId, localSiteId) ||
-                other.localSiteId == localSiteId) &&
-            (identical(other.shortcode, shortcode) ||
-                other.shortcode == shortcode) &&
-            (identical(other.imageUrl, imageUrl) ||
-                other.imageUrl == imageUrl) &&
+            (identical(other.localSiteId, localSiteId) || other.localSiteId == localSiteId) &&
+            (identical(other.shortcode, shortcode) || other.shortcode == shortcode) &&
+            (identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl) &&
             (identical(other.altText, altText) || other.altText == altText) &&
-            (identical(other.category, category) ||
-                other.category == category) &&
-            (identical(other.published, published) ||
-                other.published == published) &&
+            (identical(other.category, category) || other.category == category) &&
+            (identical(other.published, published) || other.published == published) &&
             (identical(other.updated, updated) || other.updated == updated));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    id,
-    localSiteId,
-    shortcode,
-    imageUrl,
-    altText,
-    category,
-    published,
-    updated,
-  );
+  int get hashCode => Object.hash(runtimeType, id, localSiteId, shortcode, imageUrl, altText, category, published, updated);
 
   /// Create a copy of CustomEmoji
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$CustomEmojiImplCopyWith<_$CustomEmojiImpl> get copyWith =>
-      __$$CustomEmojiImplCopyWithImpl<_$CustomEmojiImpl>(this, _$identity);
+  _$$CustomEmojiImplCopyWith<_$CustomEmojiImpl> get copyWith => __$$CustomEmojiImplCopyWithImpl<_$CustomEmojiImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -330,8 +281,7 @@ abstract class _CustomEmoji extends CustomEmoji {
   }) = _$CustomEmojiImpl;
   const _CustomEmoji._() : super._();
 
-  factory _CustomEmoji.fromJson(Map<String, dynamic> json) =
-      _$CustomEmojiImpl.fromJson;
+  factory _CustomEmoji.fromJson(Map<String, dynamic> json) = _$CustomEmojiImpl.fromJson;
 
   @override
   int get id; // v0.19.0
@@ -354,6 +304,5 @@ abstract class _CustomEmoji extends CustomEmoji {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CustomEmojiImplCopyWith<_$CustomEmojiImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CustomEmojiImplCopyWith<_$CustomEmojiImpl> get copyWith => throw _privateConstructorUsedError;
 }

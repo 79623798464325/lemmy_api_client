@@ -21,6 +21,5 @@ void main() {
       expect(result.allLanguages, isNotEmpty);
       expect(result.discussionLanguages, isNotEmpty);
     });
-
   });
 }

@@ -11,12 +11,7 @@ part 'views.g.dart';
 @freezed
 class SiteView with _$SiteView {
   @modelSerde
-  const factory SiteView({
-    required Site site,
-    required LocalSite localSite,
-    required LocalSiteRateLimit localSiteRateLimit,
-    Instance? instance,
-  }) = _SiteView;
+  const factory SiteView({required Site site, required LocalSite localSite, required LocalSiteRateLimit localSiteRateLimit, Instance? instance}) = _SiteView;
 
   const SiteView._();
   factory SiteView.fromJson(Map<String, dynamic> json) => _$SiteViewFromJson(json);
@@ -26,13 +21,7 @@ class SiteView with _$SiteView {
 @freezed
 class PersonView with _$PersonView {
   @modelSerde
-  const factory PersonView({
-    required Person person,
-    bool? isAdmin,
-    bool? banned,
-    DateTime? banExpiresAt,
-    PersonActions? personActions,
-  }) = _PersonView;
+  const factory PersonView({required Person person, bool? isAdmin, bool? banned, DateTime? banExpiresAt, PersonActions? personActions}) = _PersonView;
 
   const PersonView._();
   factory PersonView.fromJson(Map<String, dynamic> json) => _$PersonViewFromJson(json);
@@ -42,14 +31,7 @@ class PersonView with _$PersonView {
 @freezed
 class PersonActions with _$PersonActions {
   @modelSerde
-  const factory PersonActions({
-    DateTime? blockedAt,
-    DateTime? notedAt,
-    String? note,
-    DateTime? votedAt,
-    int? upvotes,
-    int? downvotes,
-  }) = _PersonActions;
+  const factory PersonActions({DateTime? blockedAt, DateTime? notedAt, String? note, DateTime? votedAt, int? upvotes, int? downvotes}) = _PersonActions;
 
   const PersonActions._();
   factory PersonActions.fromJson(Map<String, dynamic> json) => _$PersonActionsFromJson(json);
@@ -59,12 +41,7 @@ class PersonActions with _$PersonActions {
 @freezed
 class CommunityView with _$CommunityView {
   @modelSerde
-  const factory CommunityView({
-    required Community community,
-    @JsonKey(name: 'tags') @Default([]) List<CommunityTag> tags,
-    bool? canMod,
-    CommunityActions? communityActions,
-  }) = _CommunityView;
+  const factory CommunityView({required Community community, @JsonKey(name: 'tags') @Default([]) List<CommunityTag> tags, bool? canMod, CommunityActions? communityActions}) = _CommunityView;
 
   const CommunityView._();
   factory CommunityView.fromJson(Map<String, dynamic> json) => _$CommunityViewFromJson(json);
@@ -165,11 +142,7 @@ class CommentView with _$CommentView {
 @freezed
 class CommentActions with _$CommentActions {
   @modelSerde
-  const factory CommentActions({
-    DateTime? savedAt,
-    DateTime? votedAt,
-    bool? voteIsUpvote,
-  }) = _CommentActions;
+  const factory CommentActions({DateTime? savedAt, DateTime? votedAt, bool? voteIsUpvote}) = _CommentActions;
 
   const CommentActions._();
   factory CommentActions.fromJson(Map<String, dynamic> json) => _$CommentActionsFromJson(json);
@@ -209,12 +182,7 @@ class CommunityModeratorView with _$CommunityModeratorView {
 @freezed
 class PendingFollowerView with _$PendingFollowerView {
   @modelSerde
-  const factory PendingFollowerView({
-    required Person person,
-    required Community community,
-    required CommunityFollowerState followState,
-    required bool isNewInstance,
-  }) = _PendingFollowerView;
+  const factory PendingFollowerView({required Person person, required Community community, required CommunityFollowerState followState, required bool isNewInstance}) = _PendingFollowerView;
 
   const PendingFollowerView._();
   factory PendingFollowerView.fromJson(Map<String, dynamic> json) => _$PendingFollowerViewFromJson(json);
@@ -260,11 +228,7 @@ class RegistrationApplicationView with _$RegistrationApplicationView {
 @freezed
 class LocalImageView with _$LocalImageView {
   @modelSerde
-  const factory LocalImageView({
-    required LocalImage localImage,
-    required Person person,
-    Post? post,
-  }) = _LocalImageView;
+  const factory LocalImageView({required LocalImage localImage, required Person person, Post? post}) = _LocalImageView;
 
   const LocalImageView._();
   factory LocalImageView.fromJson(Map<String, dynamic> json) => _$LocalImageViewFromJson(json);
@@ -274,12 +238,7 @@ class LocalImageView with _$LocalImageView {
 @freezed
 class VoteView with _$VoteView {
   @modelSerde
-  const factory VoteView({
-    required Person creator,
-    required bool isUpvote,
-    required bool creatorBannedFromCommunity,
-    required bool creatorBanned,
-  }) = _VoteView;
+  const factory VoteView({required Person creator, required bool isUpvote, required bool creatorBannedFromCommunity, required bool creatorBanned}) = _VoteView;
 
   const VoteView._();
   factory VoteView.fromJson(Map<String, dynamic> json) => _$VoteViewFromJson(json);
@@ -293,11 +252,7 @@ class VoteView with _$VoteView {
 @freezed
 class MultiCommunityView with _$MultiCommunityView {
   @modelSerde
-  const factory MultiCommunityView({
-    required MultiCommunity multi,
-    required Person owner,
-    required CommunityFollowerState followState,
-  }) = _MultiCommunityView;
+  const factory MultiCommunityView({required MultiCommunity multi, required Person owner, required CommunityFollowerState followState}) = _MultiCommunityView;
 
   const MultiCommunityView._();
   factory MultiCommunityView.fromJson(Map<String, dynamic> json) => _$MultiCommunityViewFromJson(json);
@@ -307,10 +262,7 @@ class MultiCommunityView with _$MultiCommunityView {
 @freezed
 class CustomEmojiView with _$CustomEmojiView {
   @modelSerde
-  const factory CustomEmojiView({
-    required CustomEmoji customEmoji,
-    required List<CustomEmojiKeyword> keywords,
-  }) = _CustomEmojiView;
+  const factory CustomEmojiView({required CustomEmoji customEmoji, required List<CustomEmojiKeyword> keywords}) = _CustomEmojiView;
 
   const CustomEmojiView._();
   factory CustomEmojiView.fromJson(Map<String, dynamic> json) => _$CustomEmojiViewFromJson(json);
@@ -337,12 +289,7 @@ class NodeInfo with _$NodeInfo {
 @freezed
 class NodeInfoSoftware with _$NodeInfoSoftware {
   @modelSerde
-  const factory NodeInfoSoftware({
-    required String name,
-    required String version,
-    String? repository,
-    String? homepage,
-  }) = _NodeInfoSoftware;
+  const factory NodeInfoSoftware({required String name, required String version, String? repository, String? homepage}) = _NodeInfoSoftware;
 
   const NodeInfoSoftware._();
   factory NodeInfoSoftware.fromJson(Map<String, dynamic> json) => _$NodeInfoSoftwareFromJson(json);
@@ -351,11 +298,7 @@ class NodeInfoSoftware with _$NodeInfoSoftware {
 @freezed
 class NodeInfoUsage with _$NodeInfoUsage {
   @modelSerde
-  const factory NodeInfoUsage({
-    required NodeInfoUsers users,
-    required int localPosts,
-    required int localComments,
-  }) = _NodeInfoUsage;
+  const factory NodeInfoUsage({required NodeInfoUsers users, required int localPosts, required int localComments}) = _NodeInfoUsage;
 
   const NodeInfoUsage._();
   factory NodeInfoUsage.fromJson(Map<String, dynamic> json) => _$NodeInfoUsageFromJson(json);
@@ -364,11 +307,7 @@ class NodeInfoUsage with _$NodeInfoUsage {
 @freezed
 class NodeInfoUsers with _$NodeInfoUsers {
   @modelSerde
-  const factory NodeInfoUsers({
-    required int total,
-    required int activeHalfyear,
-    required int activeMonth,
-  }) = _NodeInfoUsers;
+  const factory NodeInfoUsers({required int total, required int activeHalfyear, required int activeMonth}) = _NodeInfoUsers;
 
   const NodeInfoUsers._();
   factory NodeInfoUsers.fromJson(Map<String, dynamic> json) => _$NodeInfoUsersFromJson(json);
@@ -377,14 +316,8 @@ class NodeInfoUsers with _$NodeInfoUsers {
 @freezed
 class NodeInfoServices with _$NodeInfoServices {
   @modelSerde
-  const factory NodeInfoServices({
-    required List<String> inbound,
-    required List<String> outbound,
-  }) = _NodeInfoServices;
+  const factory NodeInfoServices({required List<String> inbound, required List<String> outbound}) = _NodeInfoServices;
 
   const NodeInfoServices._();
   factory NodeInfoServices.fromJson(Map<String, dynamic> json) => _$NodeInfoServicesFromJson(json);
 }
-
-
-

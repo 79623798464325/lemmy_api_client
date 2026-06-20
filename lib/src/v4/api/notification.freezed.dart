@@ -33,29 +33,18 @@ mixin _$Notification {
   /// Create a copy of Notification
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $NotificationCopyWith<Notification> get copyWith =>
-      throw _privateConstructorUsedError;
+  $NotificationCopyWith<Notification> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $NotificationCopyWith<$Res> {
-  factory $NotificationCopyWith(
-    Notification value,
-    $Res Function(Notification) then,
-  ) = _$NotificationCopyWithImpl<$Res, Notification>;
+  factory $NotificationCopyWith(Notification value, $Res Function(Notification) then) = _$NotificationCopyWithImpl<$Res, Notification>;
   @useResult
-  $Res call({
-    int id,
-    int recipientId,
-    String notificationType,
-    bool read,
-    DateTime published,
-  });
+  $Res call({int id, int recipientId, String notificationType, bool read, DateTime published});
 }
 
 /// @nodoc
-class _$NotificationCopyWithImpl<$Res, $Val extends Notification>
-    implements $NotificationCopyWith<$Res> {
+class _$NotificationCopyWithImpl<$Res, $Val extends Notification> implements $NotificationCopyWith<$Res> {
   _$NotificationCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -67,13 +56,7 @@ class _$NotificationCopyWithImpl<$Res, $Val extends Notification>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? recipientId = null,
-    Object? notificationType = null,
-    Object? read = null,
-    Object? published = null,
-  }) {
+  $Res call({Object? id = null, Object? recipientId = null, Object? notificationType = null, Object? read = null, Object? published = null}) {
     return _then(
       _value.copyWith(
             id:
@@ -108,43 +91,22 @@ class _$NotificationCopyWithImpl<$Res, $Val extends Notification>
 }
 
 /// @nodoc
-abstract class _$$NotificationImplCopyWith<$Res>
-    implements $NotificationCopyWith<$Res> {
-  factory _$$NotificationImplCopyWith(
-    _$NotificationImpl value,
-    $Res Function(_$NotificationImpl) then,
-  ) = __$$NotificationImplCopyWithImpl<$Res>;
+abstract class _$$NotificationImplCopyWith<$Res> implements $NotificationCopyWith<$Res> {
+  factory _$$NotificationImplCopyWith(_$NotificationImpl value, $Res Function(_$NotificationImpl) then) = __$$NotificationImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    int id,
-    int recipientId,
-    String notificationType,
-    bool read,
-    DateTime published,
-  });
+  $Res call({int id, int recipientId, String notificationType, bool read, DateTime published});
 }
 
 /// @nodoc
-class __$$NotificationImplCopyWithImpl<$Res>
-    extends _$NotificationCopyWithImpl<$Res, _$NotificationImpl>
-    implements _$$NotificationImplCopyWith<$Res> {
-  __$$NotificationImplCopyWithImpl(
-    _$NotificationImpl _value,
-    $Res Function(_$NotificationImpl) _then,
-  ) : super(_value, _then);
+class __$$NotificationImplCopyWithImpl<$Res> extends _$NotificationCopyWithImpl<$Res, _$NotificationImpl> implements _$$NotificationImplCopyWith<$Res> {
+  __$$NotificationImplCopyWithImpl(_$NotificationImpl _value, $Res Function(_$NotificationImpl) _then) : super(_value, _then);
 
   /// Create a copy of Notification
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? recipientId = null,
-    Object? notificationType = null,
-    Object? read = null,
-    Object? published = null,
-  }) {
+  $Res call({Object? id = null, Object? recipientId = null, Object? notificationType = null, Object? read = null, Object? published = null}) {
     return _then(
       _$NotificationImpl(
         id:
@@ -181,16 +143,9 @@ class __$$NotificationImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$NotificationImpl extends _Notification {
-  const _$NotificationImpl({
-    required this.id,
-    required this.recipientId,
-    required this.notificationType,
-    required this.read,
-    required this.published,
-  }) : super._();
+  const _$NotificationImpl({required this.id, required this.recipientId, required this.notificationType, required this.read, required this.published}) : super._();
 
-  factory _$NotificationImpl.fromJson(Map<String, dynamic> json) =>
-      _$$NotificationImplFromJson(json);
+  factory _$NotificationImpl.fromJson(Map<String, dynamic> json) => _$$NotificationImplFromJson(json);
 
   @override
   final int id;
@@ -214,33 +169,22 @@ class _$NotificationImpl extends _Notification {
         (other.runtimeType == runtimeType &&
             other is _$NotificationImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.recipientId, recipientId) ||
-                other.recipientId == recipientId) &&
-            (identical(other.notificationType, notificationType) ||
-                other.notificationType == notificationType) &&
+            (identical(other.recipientId, recipientId) || other.recipientId == recipientId) &&
+            (identical(other.notificationType, notificationType) || other.notificationType == notificationType) &&
             (identical(other.read, read) || other.read == read) &&
-            (identical(other.published, published) ||
-                other.published == published));
+            (identical(other.published, published) || other.published == published));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    id,
-    recipientId,
-    notificationType,
-    read,
-    published,
-  );
+  int get hashCode => Object.hash(runtimeType, id, recipientId, notificationType, read, published);
 
   /// Create a copy of Notification
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$NotificationImplCopyWith<_$NotificationImpl> get copyWith =>
-      __$$NotificationImplCopyWithImpl<_$NotificationImpl>(this, _$identity);
+  _$$NotificationImplCopyWith<_$NotificationImpl> get copyWith => __$$NotificationImplCopyWithImpl<_$NotificationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -249,17 +193,11 @@ class _$NotificationImpl extends _Notification {
 }
 
 abstract class _Notification extends Notification {
-  const factory _Notification({
-    required final int id,
-    required final int recipientId,
-    required final String notificationType,
-    required final bool read,
-    required final DateTime published,
-  }) = _$NotificationImpl;
+  const factory _Notification({required final int id, required final int recipientId, required final String notificationType, required final bool read, required final DateTime published}) =
+      _$NotificationImpl;
   const _Notification._() : super._();
 
-  factory _Notification.fromJson(Map<String, dynamic> json) =
-      _$NotificationImpl.fromJson;
+  factory _Notification.fromJson(Map<String, dynamic> json) = _$NotificationImpl.fromJson;
 
   @override
   int get id;
@@ -276,8 +214,7 @@ abstract class _Notification extends Notification {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NotificationImplCopyWith<_$NotificationImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$NotificationImplCopyWith<_$NotificationImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 NotificationView _$NotificationViewFromJson(Map<String, dynamic> json) {
@@ -287,14 +224,12 @@ NotificationView _$NotificationViewFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$NotificationView {
   // The notification itself
-  Notification get notification =>
-      throw _privateConstructorUsedError; // Common fields
+  Notification get notification => throw _privateConstructorUsedError; // Common fields
   Person? get creator => throw _privateConstructorUsedError;
   Community? get community => throw _privateConstructorUsedError;
   Post? get post => throw _privateConstructorUsedError;
   Comment? get comment => throw _privateConstructorUsedError;
-  PrivateMessage? get privateMessage =>
-      throw _privateConstructorUsedError; // The person view associated with the notification
+  PrivateMessage? get privateMessage => throw _privateConstructorUsedError; // The person view associated with the notification
   PersonView? get personView => throw _privateConstructorUsedError;
 
   /// Serializes this NotificationView to a JSON map.
@@ -303,26 +238,14 @@ mixin _$NotificationView {
   /// Create a copy of NotificationView
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $NotificationViewCopyWith<NotificationView> get copyWith =>
-      throw _privateConstructorUsedError;
+  $NotificationViewCopyWith<NotificationView> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $NotificationViewCopyWith<$Res> {
-  factory $NotificationViewCopyWith(
-    NotificationView value,
-    $Res Function(NotificationView) then,
-  ) = _$NotificationViewCopyWithImpl<$Res, NotificationView>;
+  factory $NotificationViewCopyWith(NotificationView value, $Res Function(NotificationView) then) = _$NotificationViewCopyWithImpl<$Res, NotificationView>;
   @useResult
-  $Res call({
-    Notification notification,
-    Person? creator,
-    Community? community,
-    Post? post,
-    Comment? comment,
-    PrivateMessage? privateMessage,
-    PersonView? personView,
-  });
+  $Res call({Notification notification, Person? creator, Community? community, Post? post, Comment? comment, PrivateMessage? privateMessage, PersonView? personView});
 
   $NotificationCopyWith<$Res> get notification;
   $PersonCopyWith<$Res>? get creator;
@@ -334,8 +257,7 @@ abstract class $NotificationViewCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$NotificationViewCopyWithImpl<$Res, $Val extends NotificationView>
-    implements $NotificationViewCopyWith<$Res> {
+class _$NotificationViewCopyWithImpl<$Res, $Val extends NotificationView> implements $NotificationViewCopyWith<$Res> {
   _$NotificationViewCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -494,23 +416,11 @@ class _$NotificationViewCopyWithImpl<$Res, $Val extends NotificationView>
 }
 
 /// @nodoc
-abstract class _$$NotificationViewImplCopyWith<$Res>
-    implements $NotificationViewCopyWith<$Res> {
-  factory _$$NotificationViewImplCopyWith(
-    _$NotificationViewImpl value,
-    $Res Function(_$NotificationViewImpl) then,
-  ) = __$$NotificationViewImplCopyWithImpl<$Res>;
+abstract class _$$NotificationViewImplCopyWith<$Res> implements $NotificationViewCopyWith<$Res> {
+  factory _$$NotificationViewImplCopyWith(_$NotificationViewImpl value, $Res Function(_$NotificationViewImpl) then) = __$$NotificationViewImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    Notification notification,
-    Person? creator,
-    Community? community,
-    Post? post,
-    Comment? comment,
-    PrivateMessage? privateMessage,
-    PersonView? personView,
-  });
+  $Res call({Notification notification, Person? creator, Community? community, Post? post, Comment? comment, PrivateMessage? privateMessage, PersonView? personView});
 
   @override
   $NotificationCopyWith<$Res> get notification;
@@ -529,13 +439,8 @@ abstract class _$$NotificationViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$NotificationViewImplCopyWithImpl<$Res>
-    extends _$NotificationViewCopyWithImpl<$Res, _$NotificationViewImpl>
-    implements _$$NotificationViewImplCopyWith<$Res> {
-  __$$NotificationViewImplCopyWithImpl(
-    _$NotificationViewImpl _value,
-    $Res Function(_$NotificationViewImpl) _then,
-  ) : super(_value, _then);
+class __$$NotificationViewImplCopyWithImpl<$Res> extends _$NotificationViewCopyWithImpl<$Res, _$NotificationViewImpl> implements _$$NotificationViewImplCopyWith<$Res> {
+  __$$NotificationViewImplCopyWithImpl(_$NotificationViewImpl _value, $Res Function(_$NotificationViewImpl) _then) : super(_value, _then);
 
   /// Create a copy of NotificationView
   /// with the given fields replaced by the non-null parameter values.
@@ -596,18 +501,9 @@ class __$$NotificationViewImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$NotificationViewImpl extends _NotificationView {
-  const _$NotificationViewImpl({
-    required this.notification,
-    this.creator,
-    this.community,
-    this.post,
-    this.comment,
-    this.privateMessage,
-    this.personView,
-  }) : super._();
+  const _$NotificationViewImpl({required this.notification, this.creator, this.community, this.post, this.comment, this.privateMessage, this.personView}) : super._();
 
-  factory _$NotificationViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$NotificationViewImplFromJson(json);
+  factory _$NotificationViewImpl.fromJson(Map<String, dynamic> json) => _$$NotificationViewImplFromJson(json);
 
   // The notification itself
   @override
@@ -637,42 +533,25 @@ class _$NotificationViewImpl extends _NotificationView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$NotificationViewImpl &&
-            (identical(other.notification, notification) ||
-                other.notification == notification) &&
+            (identical(other.notification, notification) || other.notification == notification) &&
             (identical(other.creator, creator) || other.creator == creator) &&
-            (identical(other.community, community) ||
-                other.community == community) &&
+            (identical(other.community, community) || other.community == community) &&
             (identical(other.post, post) || other.post == post) &&
             (identical(other.comment, comment) || other.comment == comment) &&
-            (identical(other.privateMessage, privateMessage) ||
-                other.privateMessage == privateMessage) &&
-            (identical(other.personView, personView) ||
-                other.personView == personView));
+            (identical(other.privateMessage, privateMessage) || other.privateMessage == privateMessage) &&
+            (identical(other.personView, personView) || other.personView == personView));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    notification,
-    creator,
-    community,
-    post,
-    comment,
-    privateMessage,
-    personView,
-  );
+  int get hashCode => Object.hash(runtimeType, notification, creator, community, post, comment, privateMessage, personView);
 
   /// Create a copy of NotificationView
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$NotificationViewImplCopyWith<_$NotificationViewImpl> get copyWith =>
-      __$$NotificationViewImplCopyWithImpl<_$NotificationViewImpl>(
-        this,
-        _$identity,
-      );
+  _$$NotificationViewImplCopyWith<_$NotificationViewImpl> get copyWith => __$$NotificationViewImplCopyWithImpl<_$NotificationViewImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -692,8 +571,7 @@ abstract class _NotificationView extends NotificationView {
   }) = _$NotificationViewImpl;
   const _NotificationView._() : super._();
 
-  factory _NotificationView.fromJson(Map<String, dynamic> json) =
-      _$NotificationViewImpl.fromJson;
+  factory _NotificationView.fromJson(Map<String, dynamic> json) = _$NotificationViewImpl.fromJson;
 
   // The notification itself
   @override
@@ -715,20 +593,16 @@ abstract class _NotificationView extends NotificationView {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NotificationViewImplCopyWith<_$NotificationViewImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$NotificationViewImplCopyWith<_$NotificationViewImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
-ListNotificationsResponse _$ListNotificationsResponseFromJson(
-  Map<String, dynamic> json,
-) {
+ListNotificationsResponse _$ListNotificationsResponseFromJson(Map<String, dynamic> json) {
   return _ListNotificationsResponse.fromJson(json);
 }
 
 /// @nodoc
 mixin _$ListNotificationsResponse {
-  List<NotificationView> get notifications =>
-      throw _privateConstructorUsedError;
+  List<NotificationView> get notifications => throw _privateConstructorUsedError;
   String? get nextPage => throw _privateConstructorUsedError;
 
   /// Serializes this ListNotificationsResponse to a JSON map.
@@ -737,26 +611,18 @@ mixin _$ListNotificationsResponse {
   /// Create a copy of ListNotificationsResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ListNotificationsResponseCopyWith<ListNotificationsResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ListNotificationsResponseCopyWith<ListNotificationsResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ListNotificationsResponseCopyWith<$Res> {
-  factory $ListNotificationsResponseCopyWith(
-    ListNotificationsResponse value,
-    $Res Function(ListNotificationsResponse) then,
-  ) = _$ListNotificationsResponseCopyWithImpl<$Res, ListNotificationsResponse>;
+  factory $ListNotificationsResponseCopyWith(ListNotificationsResponse value, $Res Function(ListNotificationsResponse) then) = _$ListNotificationsResponseCopyWithImpl<$Res, ListNotificationsResponse>;
   @useResult
   $Res call({List<NotificationView> notifications, String? nextPage});
 }
 
 /// @nodoc
-class _$ListNotificationsResponseCopyWithImpl<
-  $Res,
-  $Val extends ListNotificationsResponse
->
-    implements $ListNotificationsResponseCopyWith<$Res> {
+class _$ListNotificationsResponseCopyWithImpl<$Res, $Val extends ListNotificationsResponse> implements $ListNotificationsResponseCopyWith<$Res> {
   _$ListNotificationsResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -788,29 +654,17 @@ class _$ListNotificationsResponseCopyWithImpl<
 }
 
 /// @nodoc
-abstract class _$$ListNotificationsResponseImplCopyWith<$Res>
-    implements $ListNotificationsResponseCopyWith<$Res> {
-  factory _$$ListNotificationsResponseImplCopyWith(
-    _$ListNotificationsResponseImpl value,
-    $Res Function(_$ListNotificationsResponseImpl) then,
-  ) = __$$ListNotificationsResponseImplCopyWithImpl<$Res>;
+abstract class _$$ListNotificationsResponseImplCopyWith<$Res> implements $ListNotificationsResponseCopyWith<$Res> {
+  factory _$$ListNotificationsResponseImplCopyWith(_$ListNotificationsResponseImpl value, $Res Function(_$ListNotificationsResponseImpl) then) = __$$ListNotificationsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<NotificationView> notifications, String? nextPage});
 }
 
 /// @nodoc
-class __$$ListNotificationsResponseImplCopyWithImpl<$Res>
-    extends
-        _$ListNotificationsResponseCopyWithImpl<
-          $Res,
-          _$ListNotificationsResponseImpl
-        >
+class __$$ListNotificationsResponseImplCopyWithImpl<$Res> extends _$ListNotificationsResponseCopyWithImpl<$Res, _$ListNotificationsResponseImpl>
     implements _$$ListNotificationsResponseImplCopyWith<$Res> {
-  __$$ListNotificationsResponseImplCopyWithImpl(
-    _$ListNotificationsResponseImpl _value,
-    $Res Function(_$ListNotificationsResponseImpl) _then,
-  ) : super(_value, _then);
+  __$$ListNotificationsResponseImplCopyWithImpl(_$ListNotificationsResponseImpl _value, $Res Function(_$ListNotificationsResponseImpl) _then) : super(_value, _then);
 
   /// Create a copy of ListNotificationsResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -838,14 +692,9 @@ class __$$ListNotificationsResponseImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$ListNotificationsResponseImpl extends _ListNotificationsResponse {
-  const _$ListNotificationsResponseImpl({
-    required final List<NotificationView> notifications,
-    this.nextPage,
-  }) : _notifications = notifications,
-       super._();
+  const _$ListNotificationsResponseImpl({required final List<NotificationView> notifications, this.nextPage}) : _notifications = notifications, super._();
 
-  factory _$ListNotificationsResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ListNotificationsResponseImplFromJson(json);
+  factory _$ListNotificationsResponseImpl.fromJson(Map<String, dynamic> json) => _$$ListNotificationsResponseImplFromJson(json);
 
   final List<NotificationView> _notifications;
   @override
@@ -868,31 +717,20 @@ class _$ListNotificationsResponseImpl extends _ListNotificationsResponse {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ListNotificationsResponseImpl &&
-            const DeepCollectionEquality().equals(
-              other._notifications,
-              _notifications,
-            ) &&
-            (identical(other.nextPage, nextPage) ||
-                other.nextPage == nextPage));
+            const DeepCollectionEquality().equals(other._notifications, _notifications) &&
+            (identical(other.nextPage, nextPage) || other.nextPage == nextPage));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    const DeepCollectionEquality().hash(_notifications),
-    nextPage,
-  );
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_notifications), nextPage);
 
   /// Create a copy of ListNotificationsResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ListNotificationsResponseImplCopyWith<_$ListNotificationsResponseImpl>
-  get copyWith => __$$ListNotificationsResponseImplCopyWithImpl<
-    _$ListNotificationsResponseImpl
-  >(this, _$identity);
+  _$$ListNotificationsResponseImplCopyWith<_$ListNotificationsResponseImpl> get copyWith => __$$ListNotificationsResponseImplCopyWithImpl<_$ListNotificationsResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -901,14 +739,10 @@ class _$ListNotificationsResponseImpl extends _ListNotificationsResponse {
 }
 
 abstract class _ListNotificationsResponse extends ListNotificationsResponse {
-  const factory _ListNotificationsResponse({
-    required final List<NotificationView> notifications,
-    final String? nextPage,
-  }) = _$ListNotificationsResponseImpl;
+  const factory _ListNotificationsResponse({required final List<NotificationView> notifications, final String? nextPage}) = _$ListNotificationsResponseImpl;
   const _ListNotificationsResponse._() : super._();
 
-  factory _ListNotificationsResponse.fromJson(Map<String, dynamic> json) =
-      _$ListNotificationsResponseImpl.fromJson;
+  factory _ListNotificationsResponse.fromJson(Map<String, dynamic> json) = _$ListNotificationsResponseImpl.fromJson;
 
   @override
   List<NotificationView> get notifications;
@@ -919,8 +753,7 @@ abstract class _ListNotificationsResponse extends ListNotificationsResponse {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ListNotificationsResponseImplCopyWith<_$ListNotificationsResponseImpl>
-  get copyWith => throw _privateConstructorUsedError;
+  _$$ListNotificationsResponseImplCopyWith<_$ListNotificationsResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 ListNotifications _$ListNotificationsFromJson(Map<String, dynamic> json) {
@@ -942,29 +775,18 @@ mixin _$ListNotifications {
   /// Create a copy of ListNotifications
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ListNotificationsCopyWith<ListNotifications> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ListNotificationsCopyWith<ListNotifications> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ListNotificationsCopyWith<$Res> {
-  factory $ListNotificationsCopyWith(
-    ListNotifications value,
-    $Res Function(ListNotifications) then,
-  ) = _$ListNotificationsCopyWithImpl<$Res, ListNotifications>;
+  factory $ListNotificationsCopyWith(ListNotifications value, $Res Function(ListNotifications) then) = _$ListNotificationsCopyWithImpl<$Res, ListNotifications>;
   @useResult
-  $Res call({
-    bool? unreadOnly,
-    @JsonKey(name: 'type_') NotificationType? type,
-    int? creatorId,
-    int? limit,
-    String? pageCursor,
-  });
+  $Res call({bool? unreadOnly, @JsonKey(name: 'type_') NotificationType? type, int? creatorId, int? limit, String? pageCursor});
 }
 
 /// @nodoc
-class _$ListNotificationsCopyWithImpl<$Res, $Val extends ListNotifications>
-    implements $ListNotificationsCopyWith<$Res> {
+class _$ListNotificationsCopyWithImpl<$Res, $Val extends ListNotifications> implements $ListNotificationsCopyWith<$Res> {
   _$ListNotificationsCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -976,13 +798,7 @@ class _$ListNotificationsCopyWithImpl<$Res, $Val extends ListNotifications>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? unreadOnly = freezed,
-    Object? type = freezed,
-    Object? creatorId = freezed,
-    Object? limit = freezed,
-    Object? pageCursor = freezed,
-  }) {
+  $Res call({Object? unreadOnly = freezed, Object? type = freezed, Object? creatorId = freezed, Object? limit = freezed, Object? pageCursor = freezed}) {
     return _then(
       _value.copyWith(
             unreadOnly:
@@ -1017,43 +833,22 @@ class _$ListNotificationsCopyWithImpl<$Res, $Val extends ListNotifications>
 }
 
 /// @nodoc
-abstract class _$$ListNotificationsImplCopyWith<$Res>
-    implements $ListNotificationsCopyWith<$Res> {
-  factory _$$ListNotificationsImplCopyWith(
-    _$ListNotificationsImpl value,
-    $Res Function(_$ListNotificationsImpl) then,
-  ) = __$$ListNotificationsImplCopyWithImpl<$Res>;
+abstract class _$$ListNotificationsImplCopyWith<$Res> implements $ListNotificationsCopyWith<$Res> {
+  factory _$$ListNotificationsImplCopyWith(_$ListNotificationsImpl value, $Res Function(_$ListNotificationsImpl) then) = __$$ListNotificationsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    bool? unreadOnly,
-    @JsonKey(name: 'type_') NotificationType? type,
-    int? creatorId,
-    int? limit,
-    String? pageCursor,
-  });
+  $Res call({bool? unreadOnly, @JsonKey(name: 'type_') NotificationType? type, int? creatorId, int? limit, String? pageCursor});
 }
 
 /// @nodoc
-class __$$ListNotificationsImplCopyWithImpl<$Res>
-    extends _$ListNotificationsCopyWithImpl<$Res, _$ListNotificationsImpl>
-    implements _$$ListNotificationsImplCopyWith<$Res> {
-  __$$ListNotificationsImplCopyWithImpl(
-    _$ListNotificationsImpl _value,
-    $Res Function(_$ListNotificationsImpl) _then,
-  ) : super(_value, _then);
+class __$$ListNotificationsImplCopyWithImpl<$Res> extends _$ListNotificationsCopyWithImpl<$Res, _$ListNotificationsImpl> implements _$$ListNotificationsImplCopyWith<$Res> {
+  __$$ListNotificationsImplCopyWithImpl(_$ListNotificationsImpl _value, $Res Function(_$ListNotificationsImpl) _then) : super(_value, _then);
 
   /// Create a copy of ListNotifications
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? unreadOnly = freezed,
-    Object? type = freezed,
-    Object? creatorId = freezed,
-    Object? limit = freezed,
-    Object? pageCursor = freezed,
-  }) {
+  $Res call({Object? unreadOnly = freezed, Object? type = freezed, Object? creatorId = freezed, Object? limit = freezed, Object? pageCursor = freezed}) {
     return _then(
       _$ListNotificationsImpl(
         unreadOnly:
@@ -1090,16 +885,9 @@ class __$$ListNotificationsImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$ListNotificationsImpl extends _ListNotifications {
-  const _$ListNotificationsImpl({
-    this.unreadOnly,
-    @JsonKey(name: 'type_') this.type,
-    this.creatorId,
-    this.limit,
-    this.pageCursor,
-  }) : super._();
+  const _$ListNotificationsImpl({this.unreadOnly, @JsonKey(name: 'type_') this.type, this.creatorId, this.limit, this.pageCursor}) : super._();
 
-  factory _$ListNotificationsImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ListNotificationsImplFromJson(json);
+  factory _$ListNotificationsImpl.fromJson(Map<String, dynamic> json) => _$$ListNotificationsImplFromJson(json);
 
   @override
   final bool? unreadOnly;
@@ -1123,31 +911,23 @@ class _$ListNotificationsImpl extends _ListNotifications {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ListNotificationsImpl &&
-            (identical(other.unreadOnly, unreadOnly) ||
-                other.unreadOnly == unreadOnly) &&
+            (identical(other.unreadOnly, unreadOnly) || other.unreadOnly == unreadOnly) &&
             (identical(other.type, type) || other.type == type) &&
-            (identical(other.creatorId, creatorId) ||
-                other.creatorId == creatorId) &&
+            (identical(other.creatorId, creatorId) || other.creatorId == creatorId) &&
             (identical(other.limit, limit) || other.limit == limit) &&
-            (identical(other.pageCursor, pageCursor) ||
-                other.pageCursor == pageCursor));
+            (identical(other.pageCursor, pageCursor) || other.pageCursor == pageCursor));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, unreadOnly, type, creatorId, limit, pageCursor);
+  int get hashCode => Object.hash(runtimeType, unreadOnly, type, creatorId, limit, pageCursor);
 
   /// Create a copy of ListNotifications
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ListNotificationsImplCopyWith<_$ListNotificationsImpl> get copyWith =>
-      __$$ListNotificationsImplCopyWithImpl<_$ListNotificationsImpl>(
-        this,
-        _$identity,
-      );
+  _$$ListNotificationsImplCopyWith<_$ListNotificationsImpl> get copyWith => __$$ListNotificationsImplCopyWithImpl<_$ListNotificationsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1156,17 +936,11 @@ class _$ListNotificationsImpl extends _ListNotifications {
 }
 
 abstract class _ListNotifications extends ListNotifications {
-  const factory _ListNotifications({
-    final bool? unreadOnly,
-    @JsonKey(name: 'type_') final NotificationType? type,
-    final int? creatorId,
-    final int? limit,
-    final String? pageCursor,
-  }) = _$ListNotificationsImpl;
+  const factory _ListNotifications({final bool? unreadOnly, @JsonKey(name: 'type_') final NotificationType? type, final int? creatorId, final int? limit, final String? pageCursor}) =
+      _$ListNotificationsImpl;
   const _ListNotifications._() : super._();
 
-  factory _ListNotifications.fromJson(Map<String, dynamic> json) =
-      _$ListNotificationsImpl.fromJson;
+  factory _ListNotifications.fromJson(Map<String, dynamic> json) = _$ListNotificationsImpl.fromJson;
 
   @override
   bool? get unreadOnly;
@@ -1184,13 +958,10 @@ abstract class _ListNotifications extends ListNotifications {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ListNotificationsImplCopyWith<_$ListNotificationsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ListNotificationsImplCopyWith<_$ListNotificationsImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
-MarkNotificationAsRead _$MarkNotificationAsReadFromJson(
-  Map<String, dynamic> json,
-) {
+MarkNotificationAsRead _$MarkNotificationAsReadFromJson(Map<String, dynamic> json) {
   return _MarkNotificationAsRead.fromJson(json);
 }
 
@@ -1205,26 +976,18 @@ mixin _$MarkNotificationAsRead {
   /// Create a copy of MarkNotificationAsRead
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $MarkNotificationAsReadCopyWith<MarkNotificationAsRead> get copyWith =>
-      throw _privateConstructorUsedError;
+  $MarkNotificationAsReadCopyWith<MarkNotificationAsRead> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $MarkNotificationAsReadCopyWith<$Res> {
-  factory $MarkNotificationAsReadCopyWith(
-    MarkNotificationAsRead value,
-    $Res Function(MarkNotificationAsRead) then,
-  ) = _$MarkNotificationAsReadCopyWithImpl<$Res, MarkNotificationAsRead>;
+  factory $MarkNotificationAsReadCopyWith(MarkNotificationAsRead value, $Res Function(MarkNotificationAsRead) then) = _$MarkNotificationAsReadCopyWithImpl<$Res, MarkNotificationAsRead>;
   @useResult
   $Res call({int notificationId, bool read});
 }
 
 /// @nodoc
-class _$MarkNotificationAsReadCopyWithImpl<
-  $Res,
-  $Val extends MarkNotificationAsRead
->
-    implements $MarkNotificationAsReadCopyWith<$Res> {
+class _$MarkNotificationAsReadCopyWithImpl<$Res, $Val extends MarkNotificationAsRead> implements $MarkNotificationAsReadCopyWith<$Res> {
   _$MarkNotificationAsReadCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1256,26 +1019,16 @@ class _$MarkNotificationAsReadCopyWithImpl<
 }
 
 /// @nodoc
-abstract class _$$MarkNotificationAsReadImplCopyWith<$Res>
-    implements $MarkNotificationAsReadCopyWith<$Res> {
-  factory _$$MarkNotificationAsReadImplCopyWith(
-    _$MarkNotificationAsReadImpl value,
-    $Res Function(_$MarkNotificationAsReadImpl) then,
-  ) = __$$MarkNotificationAsReadImplCopyWithImpl<$Res>;
+abstract class _$$MarkNotificationAsReadImplCopyWith<$Res> implements $MarkNotificationAsReadCopyWith<$Res> {
+  factory _$$MarkNotificationAsReadImplCopyWith(_$MarkNotificationAsReadImpl value, $Res Function(_$MarkNotificationAsReadImpl) then) = __$$MarkNotificationAsReadImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int notificationId, bool read});
 }
 
 /// @nodoc
-class __$$MarkNotificationAsReadImplCopyWithImpl<$Res>
-    extends
-        _$MarkNotificationAsReadCopyWithImpl<$Res, _$MarkNotificationAsReadImpl>
-    implements _$$MarkNotificationAsReadImplCopyWith<$Res> {
-  __$$MarkNotificationAsReadImplCopyWithImpl(
-    _$MarkNotificationAsReadImpl _value,
-    $Res Function(_$MarkNotificationAsReadImpl) _then,
-  ) : super(_value, _then);
+class __$$MarkNotificationAsReadImplCopyWithImpl<$Res> extends _$MarkNotificationAsReadCopyWithImpl<$Res, _$MarkNotificationAsReadImpl> implements _$$MarkNotificationAsReadImplCopyWith<$Res> {
+  __$$MarkNotificationAsReadImplCopyWithImpl(_$MarkNotificationAsReadImpl _value, $Res Function(_$MarkNotificationAsReadImpl) _then) : super(_value, _then);
 
   /// Create a copy of MarkNotificationAsRead
   /// with the given fields replaced by the non-null parameter values.
@@ -1303,13 +1056,9 @@ class __$$MarkNotificationAsReadImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$MarkNotificationAsReadImpl extends _MarkNotificationAsRead {
-  const _$MarkNotificationAsReadImpl({
-    required this.notificationId,
-    required this.read,
-  }) : super._();
+  const _$MarkNotificationAsReadImpl({required this.notificationId, required this.read}) : super._();
 
-  factory _$MarkNotificationAsReadImpl.fromJson(Map<String, dynamic> json) =>
-      _$$MarkNotificationAsReadImplFromJson(json);
+  factory _$MarkNotificationAsReadImpl.fromJson(Map<String, dynamic> json) => _$$MarkNotificationAsReadImplFromJson(json);
 
   @override
   final int notificationId;
@@ -1326,8 +1075,7 @@ class _$MarkNotificationAsReadImpl extends _MarkNotificationAsRead {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MarkNotificationAsReadImpl &&
-            (identical(other.notificationId, notificationId) ||
-                other.notificationId == notificationId) &&
+            (identical(other.notificationId, notificationId) || other.notificationId == notificationId) &&
             (identical(other.read, read) || other.read == read));
   }
 
@@ -1340,12 +1088,7 @@ class _$MarkNotificationAsReadImpl extends _MarkNotificationAsRead {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$MarkNotificationAsReadImplCopyWith<_$MarkNotificationAsReadImpl>
-  get copyWith =>
-      __$$MarkNotificationAsReadImplCopyWithImpl<_$MarkNotificationAsReadImpl>(
-        this,
-        _$identity,
-      );
+  _$$MarkNotificationAsReadImplCopyWith<_$MarkNotificationAsReadImpl> get copyWith => __$$MarkNotificationAsReadImplCopyWithImpl<_$MarkNotificationAsReadImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1354,14 +1097,10 @@ class _$MarkNotificationAsReadImpl extends _MarkNotificationAsRead {
 }
 
 abstract class _MarkNotificationAsRead extends MarkNotificationAsRead {
-  const factory _MarkNotificationAsRead({
-    required final int notificationId,
-    required final bool read,
-  }) = _$MarkNotificationAsReadImpl;
+  const factory _MarkNotificationAsRead({required final int notificationId, required final bool read}) = _$MarkNotificationAsReadImpl;
   const _MarkNotificationAsRead._() : super._();
 
-  factory _MarkNotificationAsRead.fromJson(Map<String, dynamic> json) =
-      _$MarkNotificationAsReadImpl.fromJson;
+  factory _MarkNotificationAsRead.fromJson(Map<String, dynamic> json) = _$MarkNotificationAsReadImpl.fromJson;
 
   @override
   int get notificationId;
@@ -1372,13 +1111,10 @@ abstract class _MarkNotificationAsRead extends MarkNotificationAsRead {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$MarkNotificationAsReadImplCopyWith<_$MarkNotificationAsReadImpl>
-  get copyWith => throw _privateConstructorUsedError;
+  _$$MarkNotificationAsReadImplCopyWith<_$MarkNotificationAsReadImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
-MarkAllNotificationsAsRead _$MarkAllNotificationsAsReadFromJson(
-  Map<String, dynamic> json,
-) {
+MarkAllNotificationsAsRead _$MarkAllNotificationsAsReadFromJson(Map<String, dynamic> json) {
   return _MarkAllNotificationsAsRead.fromJson(json);
 }
 
@@ -1390,22 +1126,12 @@ mixin _$MarkAllNotificationsAsRead {
 
 /// @nodoc
 abstract class $MarkAllNotificationsAsReadCopyWith<$Res> {
-  factory $MarkAllNotificationsAsReadCopyWith(
-    MarkAllNotificationsAsRead value,
-    $Res Function(MarkAllNotificationsAsRead) then,
-  ) =
-      _$MarkAllNotificationsAsReadCopyWithImpl<
-        $Res,
-        MarkAllNotificationsAsRead
-      >;
+  factory $MarkAllNotificationsAsReadCopyWith(MarkAllNotificationsAsRead value, $Res Function(MarkAllNotificationsAsRead) then) =
+      _$MarkAllNotificationsAsReadCopyWithImpl<$Res, MarkAllNotificationsAsRead>;
 }
 
 /// @nodoc
-class _$MarkAllNotificationsAsReadCopyWithImpl<
-  $Res,
-  $Val extends MarkAllNotificationsAsRead
->
-    implements $MarkAllNotificationsAsReadCopyWith<$Res> {
+class _$MarkAllNotificationsAsReadCopyWithImpl<$Res, $Val extends MarkAllNotificationsAsRead> implements $MarkAllNotificationsAsReadCopyWith<$Res> {
   _$MarkAllNotificationsAsReadCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1419,24 +1145,14 @@ class _$MarkAllNotificationsAsReadCopyWithImpl<
 
 /// @nodoc
 abstract class _$$MarkAllNotificationsAsReadImplCopyWith<$Res> {
-  factory _$$MarkAllNotificationsAsReadImplCopyWith(
-    _$MarkAllNotificationsAsReadImpl value,
-    $Res Function(_$MarkAllNotificationsAsReadImpl) then,
-  ) = __$$MarkAllNotificationsAsReadImplCopyWithImpl<$Res>;
+  factory _$$MarkAllNotificationsAsReadImplCopyWith(_$MarkAllNotificationsAsReadImpl value, $Res Function(_$MarkAllNotificationsAsReadImpl) then) =
+      __$$MarkAllNotificationsAsReadImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$MarkAllNotificationsAsReadImplCopyWithImpl<$Res>
-    extends
-        _$MarkAllNotificationsAsReadCopyWithImpl<
-          $Res,
-          _$MarkAllNotificationsAsReadImpl
-        >
+class __$$MarkAllNotificationsAsReadImplCopyWithImpl<$Res> extends _$MarkAllNotificationsAsReadCopyWithImpl<$Res, _$MarkAllNotificationsAsReadImpl>
     implements _$$MarkAllNotificationsAsReadImplCopyWith<$Res> {
-  __$$MarkAllNotificationsAsReadImplCopyWithImpl(
-    _$MarkAllNotificationsAsReadImpl _value,
-    $Res Function(_$MarkAllNotificationsAsReadImpl) _then,
-  ) : super(_value, _then);
+  __$$MarkAllNotificationsAsReadImplCopyWithImpl(_$MarkAllNotificationsAsReadImpl _value, $Res Function(_$MarkAllNotificationsAsReadImpl) _then) : super(_value, _then);
 
   /// Create a copy of MarkAllNotificationsAsRead
   /// with the given fields replaced by the non-null parameter values.
@@ -1448,9 +1164,7 @@ class __$$MarkAllNotificationsAsReadImplCopyWithImpl<$Res>
 class _$MarkAllNotificationsAsReadImpl extends _MarkAllNotificationsAsRead {
   const _$MarkAllNotificationsAsReadImpl() : super._();
 
-  factory _$MarkAllNotificationsAsReadImpl.fromJson(
-    Map<String, dynamic> json,
-  ) => _$$MarkAllNotificationsAsReadImplFromJson(json);
+  factory _$MarkAllNotificationsAsReadImpl.fromJson(Map<String, dynamic> json) => _$$MarkAllNotificationsAsReadImplFromJson(json);
 
   @override
   String toString() {
@@ -1459,9 +1173,7 @@ class _$MarkAllNotificationsAsReadImpl extends _MarkAllNotificationsAsRead {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$MarkAllNotificationsAsReadImpl);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$MarkAllNotificationsAsReadImpl);
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -1475,10 +1187,8 @@ class _$MarkAllNotificationsAsReadImpl extends _MarkAllNotificationsAsRead {
 }
 
 abstract class _MarkAllNotificationsAsRead extends MarkAllNotificationsAsRead {
-  const factory _MarkAllNotificationsAsRead() =
-      _$MarkAllNotificationsAsReadImpl;
+  const factory _MarkAllNotificationsAsRead() = _$MarkAllNotificationsAsReadImpl;
   const _MarkAllNotificationsAsRead._() : super._();
 
-  factory _MarkAllNotificationsAsRead.fromJson(Map<String, dynamic> json) =
-      _$MarkAllNotificationsAsReadImpl.fromJson;
+  factory _MarkAllNotificationsAsRead.fromJson(Map<String, dynamic> json) = _$MarkAllNotificationsAsReadImpl.fromJson;
 }

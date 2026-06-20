@@ -243,4 +243,3 @@ class DeleteSiteBanner with _$DeleteSiteBanner implements LemmyApiQuery<SuccessR
   @override
   SuccessResponse responseFactory(Map<String, dynamic> json) => SuccessResponse.fromJson(json);
 }
-

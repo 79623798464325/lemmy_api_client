@@ -105,9 +105,7 @@ class EditOAuthProvider with _$EditOAuthProvider implements LemmyApiQuery<AdminO
 @freezed
 class DeleteOAuthProvider with _$DeleteOAuthProvider implements LemmyApiQuery<SuccessResponse> {
   @apiSerde
-  const factory DeleteOAuthProvider({
-    required int id,
-  }) = _DeleteOAuthProvider;
+  const factory DeleteOAuthProvider({required int id}) = _DeleteOAuthProvider;
 
   const DeleteOAuthProvider._();
   factory DeleteOAuthProvider.fromJson(Map<String, dynamic> json) => _$DeleteOAuthProviderFromJson(json);

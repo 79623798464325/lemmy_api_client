@@ -35,31 +35,18 @@ mixin _$GetPersonDetails {
   /// Create a copy of GetPersonDetails
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $GetPersonDetailsCopyWith<GetPersonDetails> get copyWith =>
-      throw _privateConstructorUsedError;
+  $GetPersonDetailsCopyWith<GetPersonDetails> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GetPersonDetailsCopyWith<$Res> {
-  factory $GetPersonDetailsCopyWith(
-    GetPersonDetails value,
-    $Res Function(GetPersonDetails) then,
-  ) = _$GetPersonDetailsCopyWithImpl<$Res, GetPersonDetails>;
+  factory $GetPersonDetailsCopyWith(GetPersonDetails value, $Res Function(GetPersonDetails) then) = _$GetPersonDetailsCopyWithImpl<$Res, GetPersonDetails>;
   @useResult
-  $Res call({
-    int? personId,
-    String? username,
-    SortType? sort,
-    int? page,
-    int? limit,
-    int? communityId,
-    bool? savedOnly,
-  });
+  $Res call({int? personId, String? username, SortType? sort, int? page, int? limit, int? communityId, bool? savedOnly});
 }
 
 /// @nodoc
-class _$GetPersonDetailsCopyWithImpl<$Res, $Val extends GetPersonDetails>
-    implements $GetPersonDetailsCopyWith<$Res> {
+class _$GetPersonDetailsCopyWithImpl<$Res, $Val extends GetPersonDetails> implements $GetPersonDetailsCopyWith<$Res> {
   _$GetPersonDetailsCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -124,33 +111,16 @@ class _$GetPersonDetailsCopyWithImpl<$Res, $Val extends GetPersonDetails>
 }
 
 /// @nodoc
-abstract class _$$GetPersonDetailsImplCopyWith<$Res>
-    implements $GetPersonDetailsCopyWith<$Res> {
-  factory _$$GetPersonDetailsImplCopyWith(
-    _$GetPersonDetailsImpl value,
-    $Res Function(_$GetPersonDetailsImpl) then,
-  ) = __$$GetPersonDetailsImplCopyWithImpl<$Res>;
+abstract class _$$GetPersonDetailsImplCopyWith<$Res> implements $GetPersonDetailsCopyWith<$Res> {
+  factory _$$GetPersonDetailsImplCopyWith(_$GetPersonDetailsImpl value, $Res Function(_$GetPersonDetailsImpl) then) = __$$GetPersonDetailsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    int? personId,
-    String? username,
-    SortType? sort,
-    int? page,
-    int? limit,
-    int? communityId,
-    bool? savedOnly,
-  });
+  $Res call({int? personId, String? username, SortType? sort, int? page, int? limit, int? communityId, bool? savedOnly});
 }
 
 /// @nodoc
-class __$$GetPersonDetailsImplCopyWithImpl<$Res>
-    extends _$GetPersonDetailsCopyWithImpl<$Res, _$GetPersonDetailsImpl>
-    implements _$$GetPersonDetailsImplCopyWith<$Res> {
-  __$$GetPersonDetailsImplCopyWithImpl(
-    _$GetPersonDetailsImpl _value,
-    $Res Function(_$GetPersonDetailsImpl) _then,
-  ) : super(_value, _then);
+class __$$GetPersonDetailsImplCopyWithImpl<$Res> extends _$GetPersonDetailsCopyWithImpl<$Res, _$GetPersonDetailsImpl> implements _$$GetPersonDetailsImplCopyWith<$Res> {
+  __$$GetPersonDetailsImplCopyWithImpl(_$GetPersonDetailsImpl _value, $Res Function(_$GetPersonDetailsImpl) _then) : super(_value, _then);
 
   /// Create a copy of GetPersonDetails
   /// with the given fields replaced by the non-null parameter values.
@@ -211,18 +181,9 @@ class __$$GetPersonDetailsImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$GetPersonDetailsImpl extends _GetPersonDetails {
-  const _$GetPersonDetailsImpl({
-    this.personId,
-    this.username,
-    this.sort,
-    this.page,
-    this.limit,
-    this.communityId,
-    this.savedOnly,
-  }) : super._();
+  const _$GetPersonDetailsImpl({this.personId, this.username, this.sort, this.page, this.limit, this.communityId, this.savedOnly}) : super._();
 
-  factory _$GetPersonDetailsImpl.fromJson(Map<String, dynamic> json) =>
-      _$$GetPersonDetailsImplFromJson(json);
+  factory _$GetPersonDetailsImpl.fromJson(Map<String, dynamic> json) => _$$GetPersonDetailsImplFromJson(json);
 
   @override
   final int? personId;
@@ -249,42 +210,25 @@ class _$GetPersonDetailsImpl extends _GetPersonDetails {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetPersonDetailsImpl &&
-            (identical(other.personId, personId) ||
-                other.personId == personId) &&
-            (identical(other.username, username) ||
-                other.username == username) &&
+            (identical(other.personId, personId) || other.personId == personId) &&
+            (identical(other.username, username) || other.username == username) &&
             (identical(other.sort, sort) || other.sort == sort) &&
             (identical(other.page, page) || other.page == page) &&
             (identical(other.limit, limit) || other.limit == limit) &&
-            (identical(other.communityId, communityId) ||
-                other.communityId == communityId) &&
-            (identical(other.savedOnly, savedOnly) ||
-                other.savedOnly == savedOnly));
+            (identical(other.communityId, communityId) || other.communityId == communityId) &&
+            (identical(other.savedOnly, savedOnly) || other.savedOnly == savedOnly));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    personId,
-    username,
-    sort,
-    page,
-    limit,
-    communityId,
-    savedOnly,
-  );
+  int get hashCode => Object.hash(runtimeType, personId, username, sort, page, limit, communityId, savedOnly);
 
   /// Create a copy of GetPersonDetails
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetPersonDetailsImplCopyWith<_$GetPersonDetailsImpl> get copyWith =>
-      __$$GetPersonDetailsImplCopyWithImpl<_$GetPersonDetailsImpl>(
-        this,
-        _$identity,
-      );
+  _$$GetPersonDetailsImplCopyWith<_$GetPersonDetailsImpl> get copyWith => __$$GetPersonDetailsImplCopyWithImpl<_$GetPersonDetailsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -293,19 +237,11 @@ class _$GetPersonDetailsImpl extends _GetPersonDetails {
 }
 
 abstract class _GetPersonDetails extends GetPersonDetails {
-  const factory _GetPersonDetails({
-    final int? personId,
-    final String? username,
-    final SortType? sort,
-    final int? page,
-    final int? limit,
-    final int? communityId,
-    final bool? savedOnly,
-  }) = _$GetPersonDetailsImpl;
+  const factory _GetPersonDetails({final int? personId, final String? username, final SortType? sort, final int? page, final int? limit, final int? communityId, final bool? savedOnly}) =
+      _$GetPersonDetailsImpl;
   const _GetPersonDetails._() : super._();
 
-  factory _GetPersonDetails.fromJson(Map<String, dynamic> json) =
-      _$GetPersonDetailsImpl.fromJson;
+  factory _GetPersonDetails.fromJson(Map<String, dynamic> json) = _$GetPersonDetailsImpl.fromJson;
 
   @override
   int? get personId;
@@ -326,8 +262,7 @@ abstract class _GetPersonDetails extends GetPersonDetails {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetPersonDetailsImplCopyWith<_$GetPersonDetailsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GetPersonDetailsImplCopyWith<_$GetPersonDetailsImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 BlockPerson _$BlockPersonFromJson(Map<String, dynamic> json) {
@@ -345,23 +280,18 @@ mixin _$BlockPerson {
   /// Create a copy of BlockPerson
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $BlockPersonCopyWith<BlockPerson> get copyWith =>
-      throw _privateConstructorUsedError;
+  $BlockPersonCopyWith<BlockPerson> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $BlockPersonCopyWith<$Res> {
-  factory $BlockPersonCopyWith(
-    BlockPerson value,
-    $Res Function(BlockPerson) then,
-  ) = _$BlockPersonCopyWithImpl<$Res, BlockPerson>;
+  factory $BlockPersonCopyWith(BlockPerson value, $Res Function(BlockPerson) then) = _$BlockPersonCopyWithImpl<$Res, BlockPerson>;
   @useResult
   $Res call({int personId, bool block});
 }
 
 /// @nodoc
-class _$BlockPersonCopyWithImpl<$Res, $Val extends BlockPerson>
-    implements $BlockPersonCopyWith<$Res> {
+class _$BlockPersonCopyWithImpl<$Res, $Val extends BlockPerson> implements $BlockPersonCopyWith<$Res> {
   _$BlockPersonCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -393,25 +323,16 @@ class _$BlockPersonCopyWithImpl<$Res, $Val extends BlockPerson>
 }
 
 /// @nodoc
-abstract class _$$BlockPersonImplCopyWith<$Res>
-    implements $BlockPersonCopyWith<$Res> {
-  factory _$$BlockPersonImplCopyWith(
-    _$BlockPersonImpl value,
-    $Res Function(_$BlockPersonImpl) then,
-  ) = __$$BlockPersonImplCopyWithImpl<$Res>;
+abstract class _$$BlockPersonImplCopyWith<$Res> implements $BlockPersonCopyWith<$Res> {
+  factory _$$BlockPersonImplCopyWith(_$BlockPersonImpl value, $Res Function(_$BlockPersonImpl) then) = __$$BlockPersonImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int personId, bool block});
 }
 
 /// @nodoc
-class __$$BlockPersonImplCopyWithImpl<$Res>
-    extends _$BlockPersonCopyWithImpl<$Res, _$BlockPersonImpl>
-    implements _$$BlockPersonImplCopyWith<$Res> {
-  __$$BlockPersonImplCopyWithImpl(
-    _$BlockPersonImpl _value,
-    $Res Function(_$BlockPersonImpl) _then,
-  ) : super(_value, _then);
+class __$$BlockPersonImplCopyWithImpl<$Res> extends _$BlockPersonCopyWithImpl<$Res, _$BlockPersonImpl> implements _$$BlockPersonImplCopyWith<$Res> {
+  __$$BlockPersonImplCopyWithImpl(_$BlockPersonImpl _value, $Res Function(_$BlockPersonImpl) _then) : super(_value, _then);
 
   /// Create a copy of BlockPerson
   /// with the given fields replaced by the non-null parameter values.
@@ -439,11 +360,9 @@ class __$$BlockPersonImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$BlockPersonImpl extends _BlockPerson {
-  const _$BlockPersonImpl({required this.personId, required this.block})
-    : super._();
+  const _$BlockPersonImpl({required this.personId, required this.block}) : super._();
 
-  factory _$BlockPersonImpl.fromJson(Map<String, dynamic> json) =>
-      _$$BlockPersonImplFromJson(json);
+  factory _$BlockPersonImpl.fromJson(Map<String, dynamic> json) => _$$BlockPersonImplFromJson(json);
 
   @override
   final int personId;
@@ -460,8 +379,7 @@ class _$BlockPersonImpl extends _BlockPerson {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BlockPersonImpl &&
-            (identical(other.personId, personId) ||
-                other.personId == personId) &&
+            (identical(other.personId, personId) || other.personId == personId) &&
             (identical(other.block, block) || other.block == block));
   }
 
@@ -474,8 +392,7 @@ class _$BlockPersonImpl extends _BlockPerson {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$BlockPersonImplCopyWith<_$BlockPersonImpl> get copyWith =>
-      __$$BlockPersonImplCopyWithImpl<_$BlockPersonImpl>(this, _$identity);
+  _$$BlockPersonImplCopyWith<_$BlockPersonImpl> get copyWith => __$$BlockPersonImplCopyWithImpl<_$BlockPersonImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -484,14 +401,10 @@ class _$BlockPersonImpl extends _BlockPerson {
 }
 
 abstract class _BlockPerson extends BlockPerson {
-  const factory _BlockPerson({
-    required final int personId,
-    required final bool block,
-  }) = _$BlockPersonImpl;
+  const factory _BlockPerson({required final int personId, required final bool block}) = _$BlockPersonImpl;
   const _BlockPerson._() : super._();
 
-  factory _BlockPerson.fromJson(Map<String, dynamic> json) =
-      _$BlockPersonImpl.fromJson;
+  factory _BlockPerson.fromJson(Map<String, dynamic> json) = _$BlockPersonImpl.fromJson;
 
   @override
   int get personId;
@@ -502,8 +415,7 @@ abstract class _BlockPerson extends BlockPerson {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$BlockPersonImplCopyWith<_$BlockPersonImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$BlockPersonImplCopyWith<_$BlockPersonImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 ListPersons _$ListPersonsFromJson(Map<String, dynamic> json) {
@@ -525,30 +437,18 @@ mixin _$ListPersons {
   /// Create a copy of ListPersons
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ListPersonsCopyWith<ListPersons> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ListPersonsCopyWith<ListPersons> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ListPersonsCopyWith<$Res> {
-  factory $ListPersonsCopyWith(
-    ListPersons value,
-    $Res Function(ListPersons) then,
-  ) = _$ListPersonsCopyWithImpl<$Res, ListPersons>;
+  factory $ListPersonsCopyWith(ListPersons value, $Res Function(ListPersons) then) = _$ListPersonsCopyWithImpl<$Res, ListPersons>;
   @useResult
-  $Res call({
-    int? limit,
-    String? pageCursor,
-    bool? searchTitleOnly,
-    String? searchTerm,
-    PersonSortType? sort,
-    PersonListingType? type,
-  });
+  $Res call({int? limit, String? pageCursor, bool? searchTitleOnly, String? searchTerm, PersonSortType? sort, PersonListingType? type});
 }
 
 /// @nodoc
-class _$ListPersonsCopyWithImpl<$Res, $Val extends ListPersons>
-    implements $ListPersonsCopyWith<$Res> {
+class _$ListPersonsCopyWithImpl<$Res, $Val extends ListPersons> implements $ListPersonsCopyWith<$Res> {
   _$ListPersonsCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -560,14 +460,7 @@ class _$ListPersonsCopyWithImpl<$Res, $Val extends ListPersons>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? limit = freezed,
-    Object? pageCursor = freezed,
-    Object? searchTitleOnly = freezed,
-    Object? searchTerm = freezed,
-    Object? sort = freezed,
-    Object? type = freezed,
-  }) {
+  $Res call({Object? limit = freezed, Object? pageCursor = freezed, Object? searchTitleOnly = freezed, Object? searchTerm = freezed, Object? sort = freezed, Object? type = freezed}) {
     return _then(
       _value.copyWith(
             limit:
@@ -607,45 +500,22 @@ class _$ListPersonsCopyWithImpl<$Res, $Val extends ListPersons>
 }
 
 /// @nodoc
-abstract class _$$ListPersonsImplCopyWith<$Res>
-    implements $ListPersonsCopyWith<$Res> {
-  factory _$$ListPersonsImplCopyWith(
-    _$ListPersonsImpl value,
-    $Res Function(_$ListPersonsImpl) then,
-  ) = __$$ListPersonsImplCopyWithImpl<$Res>;
+abstract class _$$ListPersonsImplCopyWith<$Res> implements $ListPersonsCopyWith<$Res> {
+  factory _$$ListPersonsImplCopyWith(_$ListPersonsImpl value, $Res Function(_$ListPersonsImpl) then) = __$$ListPersonsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    int? limit,
-    String? pageCursor,
-    bool? searchTitleOnly,
-    String? searchTerm,
-    PersonSortType? sort,
-    PersonListingType? type,
-  });
+  $Res call({int? limit, String? pageCursor, bool? searchTitleOnly, String? searchTerm, PersonSortType? sort, PersonListingType? type});
 }
 
 /// @nodoc
-class __$$ListPersonsImplCopyWithImpl<$Res>
-    extends _$ListPersonsCopyWithImpl<$Res, _$ListPersonsImpl>
-    implements _$$ListPersonsImplCopyWith<$Res> {
-  __$$ListPersonsImplCopyWithImpl(
-    _$ListPersonsImpl _value,
-    $Res Function(_$ListPersonsImpl) _then,
-  ) : super(_value, _then);
+class __$$ListPersonsImplCopyWithImpl<$Res> extends _$ListPersonsCopyWithImpl<$Res, _$ListPersonsImpl> implements _$$ListPersonsImplCopyWith<$Res> {
+  __$$ListPersonsImplCopyWithImpl(_$ListPersonsImpl _value, $Res Function(_$ListPersonsImpl) _then) : super(_value, _then);
 
   /// Create a copy of ListPersons
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? limit = freezed,
-    Object? pageCursor = freezed,
-    Object? searchTitleOnly = freezed,
-    Object? searchTerm = freezed,
-    Object? sort = freezed,
-    Object? type = freezed,
-  }) {
+  $Res call({Object? limit = freezed, Object? pageCursor = freezed, Object? searchTitleOnly = freezed, Object? searchTerm = freezed, Object? sort = freezed, Object? type = freezed}) {
     return _then(
       _$ListPersonsImpl(
         limit:
@@ -687,17 +557,9 @@ class __$$ListPersonsImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$ListPersonsImpl extends _ListPersons {
-  const _$ListPersonsImpl({
-    this.limit,
-    this.pageCursor,
-    this.searchTitleOnly,
-    this.searchTerm,
-    this.sort,
-    this.type,
-  }) : super._();
+  const _$ListPersonsImpl({this.limit, this.pageCursor, this.searchTitleOnly, this.searchTerm, this.sort, this.type}) : super._();
 
-  factory _$ListPersonsImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ListPersonsImplFromJson(json);
+  factory _$ListPersonsImpl.fromJson(Map<String, dynamic> json) => _$$ListPersonsImplFromJson(json);
 
   @override
   final int? limit;
@@ -723,35 +585,23 @@ class _$ListPersonsImpl extends _ListPersons {
         (other.runtimeType == runtimeType &&
             other is _$ListPersonsImpl &&
             (identical(other.limit, limit) || other.limit == limit) &&
-            (identical(other.pageCursor, pageCursor) ||
-                other.pageCursor == pageCursor) &&
-            (identical(other.searchTitleOnly, searchTitleOnly) ||
-                other.searchTitleOnly == searchTitleOnly) &&
-            (identical(other.searchTerm, searchTerm) ||
-                other.searchTerm == searchTerm) &&
+            (identical(other.pageCursor, pageCursor) || other.pageCursor == pageCursor) &&
+            (identical(other.searchTitleOnly, searchTitleOnly) || other.searchTitleOnly == searchTitleOnly) &&
+            (identical(other.searchTerm, searchTerm) || other.searchTerm == searchTerm) &&
             (identical(other.sort, sort) || other.sort == sort) &&
             (identical(other.type, type) || other.type == type));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    limit,
-    pageCursor,
-    searchTitleOnly,
-    searchTerm,
-    sort,
-    type,
-  );
+  int get hashCode => Object.hash(runtimeType, limit, pageCursor, searchTitleOnly, searchTerm, sort, type);
 
   /// Create a copy of ListPersons
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ListPersonsImplCopyWith<_$ListPersonsImpl> get copyWith =>
-      __$$ListPersonsImplCopyWithImpl<_$ListPersonsImpl>(this, _$identity);
+  _$$ListPersonsImplCopyWith<_$ListPersonsImpl> get copyWith => __$$ListPersonsImplCopyWithImpl<_$ListPersonsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -760,18 +610,11 @@ class _$ListPersonsImpl extends _ListPersons {
 }
 
 abstract class _ListPersons extends ListPersons {
-  const factory _ListPersons({
-    final int? limit,
-    final String? pageCursor,
-    final bool? searchTitleOnly,
-    final String? searchTerm,
-    final PersonSortType? sort,
-    final PersonListingType? type,
-  }) = _$ListPersonsImpl;
+  const factory _ListPersons({final int? limit, final String? pageCursor, final bool? searchTitleOnly, final String? searchTerm, final PersonSortType? sort, final PersonListingType? type}) =
+      _$ListPersonsImpl;
   const _ListPersons._() : super._();
 
-  factory _ListPersons.fromJson(Map<String, dynamic> json) =
-      _$ListPersonsImpl.fromJson;
+  factory _ListPersons.fromJson(Map<String, dynamic> json) = _$ListPersonsImpl.fromJson;
 
   @override
   int? get limit;
@@ -790,8 +633,7 @@ abstract class _ListPersons extends ListPersons {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ListPersonsImplCopyWith<_$ListPersonsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ListPersonsImplCopyWith<_$ListPersonsImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 ListPersonContent _$ListPersonContentFromJson(Map<String, dynamic> json) {
@@ -814,31 +656,18 @@ mixin _$ListPersonContent {
   /// Create a copy of ListPersonContent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ListPersonContentCopyWith<ListPersonContent> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ListPersonContentCopyWith<ListPersonContent> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ListPersonContentCopyWith<$Res> {
-  factory $ListPersonContentCopyWith(
-    ListPersonContent value,
-    $Res Function(ListPersonContent) then,
-  ) = _$ListPersonContentCopyWithImpl<$Res, ListPersonContent>;
+  factory $ListPersonContentCopyWith(ListPersonContent value, $Res Function(ListPersonContent) then) = _$ListPersonContentCopyWithImpl<$Res, ListPersonContent>;
   @useResult
-  $Res call({
-    int? limit,
-    String? pageCursor,
-    String? communityName,
-    int? communityId,
-    String? username,
-    int? personId,
-    PersonContentType? type,
-  });
+  $Res call({int? limit, String? pageCursor, String? communityName, int? communityId, String? username, int? personId, PersonContentType? type});
 }
 
 /// @nodoc
-class _$ListPersonContentCopyWithImpl<$Res, $Val extends ListPersonContent>
-    implements $ListPersonContentCopyWith<$Res> {
+class _$ListPersonContentCopyWithImpl<$Res, $Val extends ListPersonContent> implements $ListPersonContentCopyWith<$Res> {
   _$ListPersonContentCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -903,33 +732,16 @@ class _$ListPersonContentCopyWithImpl<$Res, $Val extends ListPersonContent>
 }
 
 /// @nodoc
-abstract class _$$ListPersonContentImplCopyWith<$Res>
-    implements $ListPersonContentCopyWith<$Res> {
-  factory _$$ListPersonContentImplCopyWith(
-    _$ListPersonContentImpl value,
-    $Res Function(_$ListPersonContentImpl) then,
-  ) = __$$ListPersonContentImplCopyWithImpl<$Res>;
+abstract class _$$ListPersonContentImplCopyWith<$Res> implements $ListPersonContentCopyWith<$Res> {
+  factory _$$ListPersonContentImplCopyWith(_$ListPersonContentImpl value, $Res Function(_$ListPersonContentImpl) then) = __$$ListPersonContentImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    int? limit,
-    String? pageCursor,
-    String? communityName,
-    int? communityId,
-    String? username,
-    int? personId,
-    PersonContentType? type,
-  });
+  $Res call({int? limit, String? pageCursor, String? communityName, int? communityId, String? username, int? personId, PersonContentType? type});
 }
 
 /// @nodoc
-class __$$ListPersonContentImplCopyWithImpl<$Res>
-    extends _$ListPersonContentCopyWithImpl<$Res, _$ListPersonContentImpl>
-    implements _$$ListPersonContentImplCopyWith<$Res> {
-  __$$ListPersonContentImplCopyWithImpl(
-    _$ListPersonContentImpl _value,
-    $Res Function(_$ListPersonContentImpl) _then,
-  ) : super(_value, _then);
+class __$$ListPersonContentImplCopyWithImpl<$Res> extends _$ListPersonContentCopyWithImpl<$Res, _$ListPersonContentImpl> implements _$$ListPersonContentImplCopyWith<$Res> {
+  __$$ListPersonContentImplCopyWithImpl(_$ListPersonContentImpl _value, $Res Function(_$ListPersonContentImpl) _then) : super(_value, _then);
 
   /// Create a copy of ListPersonContent
   /// with the given fields replaced by the non-null parameter values.
@@ -990,18 +802,9 @@ class __$$ListPersonContentImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$ListPersonContentImpl extends _ListPersonContent {
-  const _$ListPersonContentImpl({
-    this.limit,
-    this.pageCursor,
-    this.communityName,
-    this.communityId,
-    this.username,
-    this.personId,
-    this.type,
-  }) : super._();
+  const _$ListPersonContentImpl({this.limit, this.pageCursor, this.communityName, this.communityId, this.username, this.personId, this.type}) : super._();
 
-  factory _$ListPersonContentImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ListPersonContentImplFromJson(json);
+  factory _$ListPersonContentImpl.fromJson(Map<String, dynamic> json) => _$$ListPersonContentImplFromJson(json);
 
   @override
   final int? limit;
@@ -1029,42 +832,24 @@ class _$ListPersonContentImpl extends _ListPersonContent {
         (other.runtimeType == runtimeType &&
             other is _$ListPersonContentImpl &&
             (identical(other.limit, limit) || other.limit == limit) &&
-            (identical(other.pageCursor, pageCursor) ||
-                other.pageCursor == pageCursor) &&
-            (identical(other.communityName, communityName) ||
-                other.communityName == communityName) &&
-            (identical(other.communityId, communityId) ||
-                other.communityId == communityId) &&
-            (identical(other.username, username) ||
-                other.username == username) &&
-            (identical(other.personId, personId) ||
-                other.personId == personId) &&
+            (identical(other.pageCursor, pageCursor) || other.pageCursor == pageCursor) &&
+            (identical(other.communityName, communityName) || other.communityName == communityName) &&
+            (identical(other.communityId, communityId) || other.communityId == communityId) &&
+            (identical(other.username, username) || other.username == username) &&
+            (identical(other.personId, personId) || other.personId == personId) &&
             (identical(other.type, type) || other.type == type));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    limit,
-    pageCursor,
-    communityName,
-    communityId,
-    username,
-    personId,
-    type,
-  );
+  int get hashCode => Object.hash(runtimeType, limit, pageCursor, communityName, communityId, username, personId, type);
 
   /// Create a copy of ListPersonContent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ListPersonContentImplCopyWith<_$ListPersonContentImpl> get copyWith =>
-      __$$ListPersonContentImplCopyWithImpl<_$ListPersonContentImpl>(
-        this,
-        _$identity,
-      );
+  _$$ListPersonContentImplCopyWith<_$ListPersonContentImpl> get copyWith => __$$ListPersonContentImplCopyWithImpl<_$ListPersonContentImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1084,8 +869,7 @@ abstract class _ListPersonContent extends ListPersonContent {
   }) = _$ListPersonContentImpl;
   const _ListPersonContent._() : super._();
 
-  factory _ListPersonContent.fromJson(Map<String, dynamic> json) =
-      _$ListPersonContentImpl.fromJson;
+  factory _ListPersonContent.fromJson(Map<String, dynamic> json) = _$ListPersonContentImpl.fromJson;
 
   @override
   int? get limit;
@@ -1106,8 +890,7 @@ abstract class _ListPersonContent extends ListPersonContent {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ListPersonContentImplCopyWith<_$ListPersonContentImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ListPersonContentImplCopyWith<_$ListPersonContentImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 NotePerson _$NotePersonFromJson(Map<String, dynamic> json) {
@@ -1125,23 +908,18 @@ mixin _$NotePerson {
   /// Create a copy of NotePerson
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $NotePersonCopyWith<NotePerson> get copyWith =>
-      throw _privateConstructorUsedError;
+  $NotePersonCopyWith<NotePerson> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $NotePersonCopyWith<$Res> {
-  factory $NotePersonCopyWith(
-    NotePerson value,
-    $Res Function(NotePerson) then,
-  ) = _$NotePersonCopyWithImpl<$Res, NotePerson>;
+  factory $NotePersonCopyWith(NotePerson value, $Res Function(NotePerson) then) = _$NotePersonCopyWithImpl<$Res, NotePerson>;
   @useResult
   $Res call({int personId, String note});
 }
 
 /// @nodoc
-class _$NotePersonCopyWithImpl<$Res, $Val extends NotePerson>
-    implements $NotePersonCopyWith<$Res> {
+class _$NotePersonCopyWithImpl<$Res, $Val extends NotePerson> implements $NotePersonCopyWith<$Res> {
   _$NotePersonCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1173,25 +951,16 @@ class _$NotePersonCopyWithImpl<$Res, $Val extends NotePerson>
 }
 
 /// @nodoc
-abstract class _$$NotePersonImplCopyWith<$Res>
-    implements $NotePersonCopyWith<$Res> {
-  factory _$$NotePersonImplCopyWith(
-    _$NotePersonImpl value,
-    $Res Function(_$NotePersonImpl) then,
-  ) = __$$NotePersonImplCopyWithImpl<$Res>;
+abstract class _$$NotePersonImplCopyWith<$Res> implements $NotePersonCopyWith<$Res> {
+  factory _$$NotePersonImplCopyWith(_$NotePersonImpl value, $Res Function(_$NotePersonImpl) then) = __$$NotePersonImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int personId, String note});
 }
 
 /// @nodoc
-class __$$NotePersonImplCopyWithImpl<$Res>
-    extends _$NotePersonCopyWithImpl<$Res, _$NotePersonImpl>
-    implements _$$NotePersonImplCopyWith<$Res> {
-  __$$NotePersonImplCopyWithImpl(
-    _$NotePersonImpl _value,
-    $Res Function(_$NotePersonImpl) _then,
-  ) : super(_value, _then);
+class __$$NotePersonImplCopyWithImpl<$Res> extends _$NotePersonCopyWithImpl<$Res, _$NotePersonImpl> implements _$$NotePersonImplCopyWith<$Res> {
+  __$$NotePersonImplCopyWithImpl(_$NotePersonImpl _value, $Res Function(_$NotePersonImpl) _then) : super(_value, _then);
 
   /// Create a copy of NotePerson
   /// with the given fields replaced by the non-null parameter values.
@@ -1219,11 +988,9 @@ class __$$NotePersonImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$NotePersonImpl extends _NotePerson {
-  const _$NotePersonImpl({required this.personId, required this.note})
-    : super._();
+  const _$NotePersonImpl({required this.personId, required this.note}) : super._();
 
-  factory _$NotePersonImpl.fromJson(Map<String, dynamic> json) =>
-      _$$NotePersonImplFromJson(json);
+  factory _$NotePersonImpl.fromJson(Map<String, dynamic> json) => _$$NotePersonImplFromJson(json);
 
   @override
   final int personId;
@@ -1238,11 +1005,7 @@ class _$NotePersonImpl extends _NotePerson {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NotePersonImpl &&
-            (identical(other.personId, personId) ||
-                other.personId == personId) &&
-            (identical(other.note, note) || other.note == note));
+        (other.runtimeType == runtimeType && other is _$NotePersonImpl && (identical(other.personId, personId) || other.personId == personId) && (identical(other.note, note) || other.note == note));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -1254,8 +1017,7 @@ class _$NotePersonImpl extends _NotePerson {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$NotePersonImplCopyWith<_$NotePersonImpl> get copyWith =>
-      __$$NotePersonImplCopyWithImpl<_$NotePersonImpl>(this, _$identity);
+  _$$NotePersonImplCopyWith<_$NotePersonImpl> get copyWith => __$$NotePersonImplCopyWithImpl<_$NotePersonImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1264,14 +1026,10 @@ class _$NotePersonImpl extends _NotePerson {
 }
 
 abstract class _NotePerson extends NotePerson {
-  const factory _NotePerson({
-    required final int personId,
-    required final String note,
-  }) = _$NotePersonImpl;
+  const factory _NotePerson({required final int personId, required final String note}) = _$NotePersonImpl;
   const _NotePerson._() : super._();
 
-  factory _NotePerson.fromJson(Map<String, dynamic> json) =
-      _$NotePersonImpl.fromJson;
+  factory _NotePerson.fromJson(Map<String, dynamic> json) = _$NotePersonImpl.fromJson;
 
   @override
   int get personId;
@@ -1282,6 +1040,5 @@ abstract class _NotePerson extends NotePerson {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NotePersonImplCopyWith<_$NotePersonImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$NotePersonImplCopyWith<_$NotePersonImpl> get copyWith => throw _privateConstructorUsedError;
 }

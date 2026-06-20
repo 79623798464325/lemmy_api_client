@@ -22,34 +22,20 @@ LocalSiteRateLimit _$LocalSiteRateLimitFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$LocalSiteRateLimit {
   int get localSiteId => throw _privateConstructorUsedError; // v0.19.0
-  int get message =>
-      throw _privateConstructorUsedError; // v0.19.0 - messages per window
-  int get messagePerSecond =>
-      throw _privateConstructorUsedError; // v0.19.0 - window size
-  int get post =>
-      throw _privateConstructorUsedError; // v0.19.0 - posts per window
-  int get postPerSecond =>
-      throw _privateConstructorUsedError; // v0.19.0 - window size
-  int get register =>
-      throw _privateConstructorUsedError; // v0.19.0 - registrations per window
-  int get registerPerSecond =>
-      throw _privateConstructorUsedError; // v0.19.0 - window size
-  int get image =>
-      throw _privateConstructorUsedError; // v0.19.0 - image uploads per window
-  int get imagePerSecond =>
-      throw _privateConstructorUsedError; // v0.19.0 - window size
-  int get comment =>
-      throw _privateConstructorUsedError; // v0.19.0 - comments per window
-  int get commentPerSecond =>
-      throw _privateConstructorUsedError; // v0.19.0 - window size
-  int get search =>
-      throw _privateConstructorUsedError; // v0.19.0 - searches per window
-  int get searchPerSecond =>
-      throw _privateConstructorUsedError; // v0.19.0 - window size
-  int get importUserSettings =>
-      throw _privateConstructorUsedError; // v0.19.0 - imports per window
-  int get importUserSettingsPerSecond =>
-      throw _privateConstructorUsedError; // v0.19.0 - window size
+  int get message => throw _privateConstructorUsedError; // v0.19.0 - messages per window
+  int get messagePerSecond => throw _privateConstructorUsedError; // v0.19.0 - window size
+  int get post => throw _privateConstructorUsedError; // v0.19.0 - posts per window
+  int get postPerSecond => throw _privateConstructorUsedError; // v0.19.0 - window size
+  int get register => throw _privateConstructorUsedError; // v0.19.0 - registrations per window
+  int get registerPerSecond => throw _privateConstructorUsedError; // v0.19.0 - window size
+  int get image => throw _privateConstructorUsedError; // v0.19.0 - image uploads per window
+  int get imagePerSecond => throw _privateConstructorUsedError; // v0.19.0 - window size
+  int get comment => throw _privateConstructorUsedError; // v0.19.0 - comments per window
+  int get commentPerSecond => throw _privateConstructorUsedError; // v0.19.0 - window size
+  int get search => throw _privateConstructorUsedError; // v0.19.0 - searches per window
+  int get searchPerSecond => throw _privateConstructorUsedError; // v0.19.0 - window size
+  int get importUserSettings => throw _privateConstructorUsedError; // v0.19.0 - imports per window
+  int get importUserSettingsPerSecond => throw _privateConstructorUsedError; // v0.19.0 - window size
   DateTime get published => throw _privateConstructorUsedError; // v0.19.0
   DateTime? get updated => throw _privateConstructorUsedError;
 
@@ -59,16 +45,12 @@ mixin _$LocalSiteRateLimit {
   /// Create a copy of LocalSiteRateLimit
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $LocalSiteRateLimitCopyWith<LocalSiteRateLimit> get copyWith =>
-      throw _privateConstructorUsedError;
+  $LocalSiteRateLimitCopyWith<LocalSiteRateLimit> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $LocalSiteRateLimitCopyWith<$Res> {
-  factory $LocalSiteRateLimitCopyWith(
-    LocalSiteRateLimit value,
-    $Res Function(LocalSiteRateLimit) then,
-  ) = _$LocalSiteRateLimitCopyWithImpl<$Res, LocalSiteRateLimit>;
+  factory $LocalSiteRateLimitCopyWith(LocalSiteRateLimit value, $Res Function(LocalSiteRateLimit) then) = _$LocalSiteRateLimitCopyWithImpl<$Res, LocalSiteRateLimit>;
   @useResult
   $Res call({
     int localSiteId,
@@ -92,8 +74,7 @@ abstract class $LocalSiteRateLimitCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$LocalSiteRateLimitCopyWithImpl<$Res, $Val extends LocalSiteRateLimit>
-    implements $LocalSiteRateLimitCopyWith<$Res> {
+class _$LocalSiteRateLimitCopyWithImpl<$Res, $Val extends LocalSiteRateLimit> implements $LocalSiteRateLimitCopyWith<$Res> {
   _$LocalSiteRateLimitCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -218,12 +199,8 @@ class _$LocalSiteRateLimitCopyWithImpl<$Res, $Val extends LocalSiteRateLimit>
 }
 
 /// @nodoc
-abstract class _$$LocalSiteRateLimitImplCopyWith<$Res>
-    implements $LocalSiteRateLimitCopyWith<$Res> {
-  factory _$$LocalSiteRateLimitImplCopyWith(
-    _$LocalSiteRateLimitImpl value,
-    $Res Function(_$LocalSiteRateLimitImpl) then,
-  ) = __$$LocalSiteRateLimitImplCopyWithImpl<$Res>;
+abstract class _$$LocalSiteRateLimitImplCopyWith<$Res> implements $LocalSiteRateLimitCopyWith<$Res> {
+  factory _$$LocalSiteRateLimitImplCopyWith(_$LocalSiteRateLimitImpl value, $Res Function(_$LocalSiteRateLimitImpl) then) = __$$LocalSiteRateLimitImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({
@@ -248,13 +225,8 @@ abstract class _$$LocalSiteRateLimitImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$LocalSiteRateLimitImplCopyWithImpl<$Res>
-    extends _$LocalSiteRateLimitCopyWithImpl<$Res, _$LocalSiteRateLimitImpl>
-    implements _$$LocalSiteRateLimitImplCopyWith<$Res> {
-  __$$LocalSiteRateLimitImplCopyWithImpl(
-    _$LocalSiteRateLimitImpl _value,
-    $Res Function(_$LocalSiteRateLimitImpl) _then,
-  ) : super(_value, _then);
+class __$$LocalSiteRateLimitImplCopyWithImpl<$Res> extends _$LocalSiteRateLimitCopyWithImpl<$Res, _$LocalSiteRateLimitImpl> implements _$$LocalSiteRateLimitImplCopyWith<$Res> {
+  __$$LocalSiteRateLimitImplCopyWithImpl(_$LocalSiteRateLimitImpl _value, $Res Function(_$LocalSiteRateLimitImpl) _then) : super(_value, _then);
 
   /// Create a copy of LocalSiteRateLimit
   /// with the given fields replaced by the non-null parameter values.
@@ -395,8 +367,7 @@ class _$LocalSiteRateLimitImpl extends _LocalSiteRateLimit {
     this.updated,
   }) : super._();
 
-  factory _$LocalSiteRateLimitImpl.fromJson(Map<String, dynamic> json) =>
-      _$$LocalSiteRateLimitImplFromJson(json);
+  factory _$LocalSiteRateLimitImpl.fromJson(Map<String, dynamic> json) => _$$LocalSiteRateLimitImplFromJson(json);
 
   @override
   final int localSiteId;
@@ -459,37 +430,22 @@ class _$LocalSiteRateLimitImpl extends _LocalSiteRateLimit {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LocalSiteRateLimitImpl &&
-            (identical(other.localSiteId, localSiteId) ||
-                other.localSiteId == localSiteId) &&
+            (identical(other.localSiteId, localSiteId) || other.localSiteId == localSiteId) &&
             (identical(other.message, message) || other.message == message) &&
-            (identical(other.messagePerSecond, messagePerSecond) ||
-                other.messagePerSecond == messagePerSecond) &&
+            (identical(other.messagePerSecond, messagePerSecond) || other.messagePerSecond == messagePerSecond) &&
             (identical(other.post, post) || other.post == post) &&
-            (identical(other.postPerSecond, postPerSecond) ||
-                other.postPerSecond == postPerSecond) &&
-            (identical(other.register, register) ||
-                other.register == register) &&
-            (identical(other.registerPerSecond, registerPerSecond) ||
-                other.registerPerSecond == registerPerSecond) &&
+            (identical(other.postPerSecond, postPerSecond) || other.postPerSecond == postPerSecond) &&
+            (identical(other.register, register) || other.register == register) &&
+            (identical(other.registerPerSecond, registerPerSecond) || other.registerPerSecond == registerPerSecond) &&
             (identical(other.image, image) || other.image == image) &&
-            (identical(other.imagePerSecond, imagePerSecond) ||
-                other.imagePerSecond == imagePerSecond) &&
+            (identical(other.imagePerSecond, imagePerSecond) || other.imagePerSecond == imagePerSecond) &&
             (identical(other.comment, comment) || other.comment == comment) &&
-            (identical(other.commentPerSecond, commentPerSecond) ||
-                other.commentPerSecond == commentPerSecond) &&
+            (identical(other.commentPerSecond, commentPerSecond) || other.commentPerSecond == commentPerSecond) &&
             (identical(other.search, search) || other.search == search) &&
-            (identical(other.searchPerSecond, searchPerSecond) ||
-                other.searchPerSecond == searchPerSecond) &&
-            (identical(other.importUserSettings, importUserSettings) ||
-                other.importUserSettings == importUserSettings) &&
-            (identical(
-                  other.importUserSettingsPerSecond,
-                  importUserSettingsPerSecond,
-                ) ||
-                other.importUserSettingsPerSecond ==
-                    importUserSettingsPerSecond) &&
-            (identical(other.published, published) ||
-                other.published == published) &&
+            (identical(other.searchPerSecond, searchPerSecond) || other.searchPerSecond == searchPerSecond) &&
+            (identical(other.importUserSettings, importUserSettings) || other.importUserSettings == importUserSettings) &&
+            (identical(other.importUserSettingsPerSecond, importUserSettingsPerSecond) || other.importUserSettingsPerSecond == importUserSettingsPerSecond) &&
+            (identical(other.published, published) || other.published == published) &&
             (identical(other.updated, updated) || other.updated == updated));
   }
 
@@ -521,11 +477,7 @@ class _$LocalSiteRateLimitImpl extends _LocalSiteRateLimit {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$LocalSiteRateLimitImplCopyWith<_$LocalSiteRateLimitImpl> get copyWith =>
-      __$$LocalSiteRateLimitImplCopyWithImpl<_$LocalSiteRateLimitImpl>(
-        this,
-        _$identity,
-      );
+  _$$LocalSiteRateLimitImplCopyWith<_$LocalSiteRateLimitImpl> get copyWith => __$$LocalSiteRateLimitImplCopyWithImpl<_$LocalSiteRateLimitImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -555,8 +507,7 @@ abstract class _LocalSiteRateLimit extends LocalSiteRateLimit {
   }) = _$LocalSiteRateLimitImpl;
   const _LocalSiteRateLimit._() : super._();
 
-  factory _LocalSiteRateLimit.fromJson(Map<String, dynamic> json) =
-      _$LocalSiteRateLimitImpl.fromJson;
+  factory _LocalSiteRateLimit.fromJson(Map<String, dynamic> json) = _$LocalSiteRateLimitImpl.fromJson;
 
   @override
   int get localSiteId; // v0.19.0
@@ -597,6 +548,5 @@ abstract class _LocalSiteRateLimit extends LocalSiteRateLimit {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LocalSiteRateLimitImplCopyWith<_$LocalSiteRateLimitImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$LocalSiteRateLimitImplCopyWith<_$LocalSiteRateLimitImpl> get copyWith => throw _privateConstructorUsedError;
 }

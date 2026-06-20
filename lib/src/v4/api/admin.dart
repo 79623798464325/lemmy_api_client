@@ -161,11 +161,7 @@ class LeaveAdmin with _$LeaveAdmin implements LemmyApiQuery<GetSiteResponse> {
 @freezed
 class AdminAllowInstance with _$AdminAllowInstance implements LemmyApiQuery<SuccessResponse> {
   @apiSerde
-  const factory AdminAllowInstance({
-    required int instanceId,
-    required bool allow,
-    String? reason,
-  }) = _AdminAllowInstance;
+  const factory AdminAllowInstance({required int instanceId, required bool allow, String? reason}) = _AdminAllowInstance;
 
   const AdminAllowInstance._();
   factory AdminAllowInstance.fromJson(Map<String, dynamic> json) => _$AdminAllowInstanceFromJson(json);
@@ -184,12 +180,7 @@ class AdminAllowInstance with _$AdminAllowInstance implements LemmyApiQuery<Succ
 @freezed
 class AdminBlockInstance with _$AdminBlockInstance implements LemmyApiQuery<SuccessResponse> {
   @apiSerde
-  const factory AdminBlockInstance({
-    required int instanceId,
-    required bool block,
-    String? reason,
-    DateTime? expiresAt,
-  }) = _AdminBlockInstance;
+  const factory AdminBlockInstance({required int instanceId, required bool block, String? reason, DateTime? expiresAt}) = _AdminBlockInstance;
 
   const AdminBlockInstance._();
   factory AdminBlockInstance.fromJson(Map<String, dynamic> json) => _$AdminBlockInstanceFromJson(json);
@@ -208,12 +199,7 @@ class AdminBlockInstance with _$AdminBlockInstance implements LemmyApiQuery<Succ
 @freezed
 class AdminListUsers with _$AdminListUsers implements LemmyApiQuery<ListLocalUsersResponse> {
   @apiSerde
-  const factory AdminListUsers({
-    int? limit,
-    SortType? sort,
-    String? pageCursor,
-    bool? bannedOnly,
-  }) = _AdminListUsers;
+  const factory AdminListUsers({int? limit, SortType? sort, String? pageCursor, bool? bannedOnly}) = _AdminListUsers;
 
   const AdminListUsers._();
   factory AdminListUsers.fromJson(Map<String, dynamic> json) => _$AdminListUsersFromJson(json);
@@ -232,9 +218,7 @@ class AdminListUsers with _$AdminListUsers implements LemmyApiQuery<ListLocalUse
 @freezed
 class CreateTagline with _$CreateTagline implements LemmyApiQuery<TaglineResponse> {
   @apiSerde
-  const factory CreateTagline({
-    required String content,
-  }) = _CreateTagline;
+  const factory CreateTagline({required String content}) = _CreateTagline;
 
   const CreateTagline._();
   factory CreateTagline.fromJson(Map<String, dynamic> json) => _$CreateTaglineFromJson(json);
@@ -253,10 +237,7 @@ class CreateTagline with _$CreateTagline implements LemmyApiQuery<TaglineRespons
 @freezed
 class EditTagline with _$EditTagline implements LemmyApiQuery<TaglineResponse> {
   @apiSerde
-  const factory EditTagline({
-    required int id,
-    required String content,
-  }) = _EditTagline;
+  const factory EditTagline({required int id, required String content}) = _EditTagline;
 
   const EditTagline._();
   factory EditTagline.fromJson(Map<String, dynamic> json) => _$EditTaglineFromJson(json);
@@ -275,9 +256,7 @@ class EditTagline with _$EditTagline implements LemmyApiQuery<TaglineResponse> {
 @freezed
 class DeleteTagline with _$DeleteTagline implements LemmyApiQuery<SuccessResponse> {
   @apiSerde
-  const factory DeleteTagline({
-    required int id,
-  }) = _DeleteTagline;
+  const factory DeleteTagline({required int id}) = _DeleteTagline;
 
   const DeleteTagline._();
   factory DeleteTagline.fromJson(Map<String, dynamic> json) => _$DeleteTaglineFromJson(json);
@@ -296,10 +275,7 @@ class DeleteTagline with _$DeleteTagline implements LemmyApiQuery<SuccessRespons
 @freezed
 class ListTaglines with _$ListTaglines implements LemmyApiQuery<ListTaglinesResponse> {
   @apiSerde
-  const factory ListTaglines({
-    int? limit,
-    String? pageCursor,
-  }) = _ListTaglines;
+  const factory ListTaglines({int? limit, String? pageCursor}) = _ListTaglines;
 
   const ListTaglines._();
   factory ListTaglines.fromJson(Map<String, dynamic> json) => _$ListTaglinesFromJson(json);
@@ -318,9 +294,7 @@ class ListTaglines with _$ListTaglines implements LemmyApiQuery<ListTaglinesResp
 @freezed
 class GetRegistrationApplication with _$GetRegistrationApplication implements LemmyApiQuery<RegistrationApplicationResponse> {
   @apiSerde
-  const factory GetRegistrationApplication({
-    required int personId,
-  }) = _GetRegistrationApplication;
+  const factory GetRegistrationApplication({required int personId}) = _GetRegistrationApplication;
 
   const GetRegistrationApplication._();
   factory GetRegistrationApplication.fromJson(Map<String, dynamic> json) => _$GetRegistrationApplicationFromJson(json);
@@ -339,11 +313,7 @@ class GetRegistrationApplication with _$GetRegistrationApplication implements Le
 @freezed
 class ApproveRegistrationApplication with _$ApproveRegistrationApplication implements LemmyApiQuery<ApproveRegistrationApplicationResponse> {
   @apiSerde
-  const factory ApproveRegistrationApplication({
-    required int id,
-    required bool approve,
-    String? denyReason,
-  }) = _ApproveRegistrationApplication;
+  const factory ApproveRegistrationApplication({required int id, required bool approve, String? denyReason}) = _ApproveRegistrationApplication;
 
   const ApproveRegistrationApplication._();
   factory ApproveRegistrationApplication.fromJson(Map<String, dynamic> json) => _$ApproveRegistrationApplicationFromJson(json);
@@ -362,11 +332,7 @@ class ApproveRegistrationApplication with _$ApproveRegistrationApplication imple
 @freezed
 class ListRegistrationApplications with _$ListRegistrationApplications implements LemmyApiQuery<ListRegistrationApplicationsResponse> {
   @apiSerde
-  const factory ListRegistrationApplications({
-    int? limit,
-    String? pageCursor,
-    bool? unreadOnly,
-  }) = _ListRegistrationApplications;
+  const factory ListRegistrationApplications({int? limit, String? pageCursor, bool? unreadOnly}) = _ListRegistrationApplications;
 
   const ListRegistrationApplications._();
   factory ListRegistrationApplications.fromJson(Map<String, dynamic> json) => _$ListRegistrationApplicationsFromJson(json);

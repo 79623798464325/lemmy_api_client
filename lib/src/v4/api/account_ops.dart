@@ -19,11 +19,7 @@ part 'account_ops.g.dart';
 @freezed
 class ListPersonSaved with _$ListPersonSaved implements LemmyApiQuery<ListPersonContentResponse> {
   @apiSerde
-  const factory ListPersonSaved({
-    int? limit,
-    String? pageCursor,
-    PersonContentType? type,
-  }) = _ListPersonSaved;
+  const factory ListPersonSaved({int? limit, String? pageCursor, PersonContentType? type}) = _ListPersonSaved;
 
   const ListPersonSaved._();
   factory ListPersonSaved.fromJson(Map<String, dynamic> json) => _$ListPersonSavedFromJson(json);
@@ -42,11 +38,7 @@ class ListPersonSaved with _$ListPersonSaved implements LemmyApiQuery<ListPerson
 @freezed
 class ListPersonLiked with _$ListPersonLiked implements LemmyApiQuery<ListPersonContentResponse> {
   @apiSerde
-  const factory ListPersonLiked({
-    int? limit,
-    String? pageCursor,
-    LikeType? type,
-  }) = _ListPersonLiked;
+  const factory ListPersonLiked({int? limit, String? pageCursor, LikeType? type}) = _ListPersonLiked;
 
   const ListPersonLiked._();
   factory ListPersonLiked.fromJson(Map<String, dynamic> json) => _$ListPersonLikedFromJson(json);
@@ -65,11 +57,7 @@ class ListPersonLiked with _$ListPersonLiked implements LemmyApiQuery<ListPerson
 @freezed
 class ListPersonRead with _$ListPersonRead implements LemmyApiQuery<ListPersonContentResponse> {
   @apiSerde
-  const factory ListPersonRead({
-    int? limit,
-    String? pageCursor,
-    PersonContentType? type,
-  }) = _ListPersonRead;
+  const factory ListPersonRead({int? limit, String? pageCursor, PersonContentType? type}) = _ListPersonRead;
 
   const ListPersonRead._();
   factory ListPersonRead.fromJson(Map<String, dynamic> json) => _$ListPersonReadFromJson(json);
@@ -88,10 +76,7 @@ class ListPersonRead with _$ListPersonRead implements LemmyApiQuery<ListPersonCo
 @freezed
 class ListPersonHidden with _$ListPersonHidden implements LemmyApiQuery<ListPersonContentResponse> {
   @apiSerde
-  const factory ListPersonHidden({
-    int? limit,
-    String? pageCursor,
-  }) = _ListPersonHidden;
+  const factory ListPersonHidden({int? limit, String? pageCursor}) = _ListPersonHidden;
 
   const ListPersonHidden._();
   factory ListPersonHidden.fromJson(Map<String, dynamic> json) => _$ListPersonHiddenFromJson(json);
@@ -168,12 +153,7 @@ class SaveUserSettings with _$SaveUserSettings implements LemmyApiQuery<SuccessR
 @freezed
 class ChangePassword with _$ChangePassword implements LemmyApiQuery<LoginResponse> {
   @apiSerde
-  const factory ChangePassword({
-    required String newPassword,
-    required String newPasswordVerify,
-    required String oldPassword,
-    bool? stayLoggedIn,
-  }) = _ChangePassword;
+  const factory ChangePassword({required String newPassword, required String newPasswordVerify, required String oldPassword, bool? stayLoggedIn}) = _ChangePassword;
 
   const ChangePassword._();
   factory ChangePassword.fromJson(Map<String, dynamic> json) => _$ChangePasswordFromJson(json);
@@ -192,10 +172,7 @@ class ChangePassword with _$ChangePassword implements LemmyApiQuery<LoginRespons
 @freezed
 class DeleteAccount with _$DeleteAccount implements LemmyApiQuery<SuccessResponse> {
   @apiSerde
-  const factory DeleteAccount({
-    required String password,
-    bool? deleteContent,
-  }) = _DeleteAccount;
+  const factory DeleteAccount({required String password, bool? deleteContent}) = _DeleteAccount;
 
   const DeleteAccount._();
   factory DeleteAccount.fromJson(Map<String, dynamic> json) => _$DeleteAccountFromJson(json);
@@ -290,11 +267,7 @@ class ResetPassword with _$ResetPassword implements LemmyApiQuery<SuccessRespons
 @freezed
 class ChangePasswordAfterReset with _$ChangePasswordAfterReset implements LemmyApiQuery<SuccessResponse> {
   @apiSerde
-  const factory ChangePasswordAfterReset({
-    required String token,
-    required String password,
-    required String passwordVerify,
-  }) = _ChangePasswordAfterReset;
+  const factory ChangePasswordAfterReset({required String token, required String password, required String passwordVerify}) = _ChangePasswordAfterReset;
 
   const ChangePasswordAfterReset._();
   factory ChangePasswordAfterReset.fromJson(Map<String, dynamic> json) => _$ChangePasswordAfterResetFromJson(json);
