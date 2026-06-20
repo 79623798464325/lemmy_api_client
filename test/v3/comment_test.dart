@@ -25,7 +25,7 @@ void main() {
       group('MarkCommentAsRead', () {});
 
       group('SaveComment', () {
-        test('correctly saves', () => run(SaveComment(commentId: goodCommentId, save: true, auth: goodAuth)));
+        test('correctly saves', () => run(SaveComment(commentId: goodCommentId, save: true, auth: goodAuth)), skip: hasAuth ? null : 'Requires TEST_JWT');
 
         test('bad auth', () => lemmyThrows(const SaveComment(commentId: goodCommentId, save: true, auth: badAuth)));
 
@@ -33,7 +33,7 @@ void main() {
       });
 
       group('CreateCommentLike', () {
-        test('correctly likes', () => run(CreateCommentLike(commentId: goodCommentId, score: 1, auth: goodAuth)));
+        test('correctly likes', () => run(CreateCommentLike(commentId: goodCommentId, score: 1, auth: goodAuth)), skip: hasAuth ? null : 'Requires TEST_JWT');
 
         test('bad auth', () => lemmyThrows(const CreateCommentLike(commentId: goodCommentId, score: 1, auth: badAuth)));
 

@@ -13,7 +13,7 @@
 ///
 /// ```dart
 /// import 'package:lemmy_api_client2/v3.dart';  // For v0.19.x servers
-/// import 'package:lemmy_api_client2/v1.dart';  // For 1.0+ servers
+/// import 'package:lemmy_api_client2/v4.dart';  // For 1.0+ servers
 /// ```
 library;
 
@@ -22,7 +22,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 import 'src/shared/lemmy_api.dart';
-import 'src/v1/main.dart';
+import 'src/v4/main.dart';
 import 'src/v3/main.dart';
 
 export 'src/shared/exceptions.dart';
@@ -66,7 +66,7 @@ class LemmyApiFactory {
   /// Creates an appropriate API client based on the server version.
   ///
   /// Probes the server to detect its version and returns either:
-  /// - [LemmyApiV1] for servers running Lemmy 1.0+
+  /// - [LemmyApiV4] for servers running Lemmy 1.0+
   /// - [LemmyApiV3] for servers running Lemmy 0.19.x
   ///
   /// If version detection fails, defaults to [LemmyApiV3].
@@ -80,7 +80,7 @@ class LemmyApiFactory {
     final version = await detectVersion(host, client: client, timeout: timeout);
 
     if (version.major >= 1) {
-      return LemmyApiV1(host, client: client, timeout: timeout, maxRetries: maxRetries, retryDelay: retryDelay);
+      return LemmyApiV4(host, client: client, timeout: timeout, maxRetries: maxRetries, retryDelay: retryDelay);
     }
 
     return LemmyApiV3(host, client: client, timeout: timeout, maxRetries: maxRetries, retryDelay: retryDelay);

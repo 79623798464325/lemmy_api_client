@@ -30,6 +30,7 @@ void main() {
               auth: goodAuth,
             ),
           ),
+          skip: hasAuth ? null : 'Requires TEST_JWT',
         );
 
         test(
@@ -81,7 +82,7 @@ void main() {
       });
 
       group('MarkAllAsRead', () {
-        test('correctly fetches', () => run(MarkAllAsRead(auth: goodAuth)));
+        test('correctly fetches', () => run(MarkAllAsRead(auth: goodAuth)), skip: hasAuth ? null : 'Requires TEST_JWT');
 
         test('bad auth', () => lemmyThrows(const MarkAllAsRead(auth: badAuth)));
       });
@@ -91,13 +92,13 @@ void main() {
       group('BanPerson', () {});
 
       group('GetReplies', () {
-        test('correctly fetches', () => run(GetReplies(sort: CommentSortType.hot, unreadOnly: true, auth: goodAuth)));
+        test('correctly fetches', () => run(GetReplies(sort: CommentSortType.hot, unreadOnly: true, auth: goodAuth)), skip: hasAuth ? null : 'Requires TEST_JWT');
 
         test('bad auth', () => lemmyThrows(const GetReplies(sort: CommentSortType.hot, unreadOnly: true, auth: badAuth)));
       });
 
       group('GetPersonMentions', () {
-        test('correctly fetches', () => run(GetPersonMentions(sort: CommentSortType.hot, unreadOnly: true, auth: goodAuth)));
+        test('correctly fetches', () => run(GetPersonMentions(sort: CommentSortType.hot, unreadOnly: true, auth: goodAuth)), skip: hasAuth ? null : 'Requires TEST_JWT');
 
         test('bad auth', () => lemmyThrows(const GetPersonMentions(sort: CommentSortType.hot, unreadOnly: true, auth: badAuth)));
       });
@@ -119,7 +120,7 @@ void main() {
       group('MarkPrivateMessageAsRead', () {});
 
       group('GetPrivateMessages', () {
-        test('correctly fetches', () => run(GetPrivateMessages(unreadOnly: true, auth: goodAuth)));
+        test('correctly fetches', () => run(GetPrivateMessages(unreadOnly: true, auth: goodAuth)), skip: hasAuth ? null : 'Requires TEST_JWT');
 
         test('bad auth', () => lemmyThrows(const GetPrivateMessages(unreadOnly: true, auth: badAuth)));
       });
@@ -131,7 +132,7 @@ void main() {
       });
 
       group('GetUnreadCount', () {
-        test('correctly fetches', () => run(GetUnreadCount(auth: goodAuth)));
+        test('correctly fetches', () => run(GetUnreadCount(auth: goodAuth)), skip: hasAuth ? null : 'Requires TEST_JWT');
 
         test('bad auth', () => lemmyThrows(const GetUnreadCount(auth: badAuth)));
       });

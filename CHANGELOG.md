@@ -1,3 +1,15 @@
+## Unreleased
+
+### Fixed
+
+- Fixed `DELETE` operations not sending body data in LemmyApiV4 requests.
+- Corrected HTTP method and path for `DeletePost`, `DeleteComment`, and `DeletePrivateMessage` (switched from `POST` to `DELETE`) in v4.
+- Fixed `GetNodeinfo` bypassing the correct path.
+- Corrected pagination parameters for `ListNotifications` to use `pageCursor` instead of `page`.
+- Replaced non-existent v4 `GetPrivateMessages` and `MarkPrivateMessageAsRead` endpoints with the correct `CreatePrivateMessageReport` and `ResolvePrivateMessageReport` endpoints.
+- Added missing `HidePost`, `MarkPostAsRead`, `MarkManyPostsAsRead`, `GetCommentsSlim`, `ResetPassword`, `ChangePasswordAfterReset`, `ApproveRegistrationApplication`, and `ListRegistrationApplications` endpoints.
+- Applied `@modelSerde` and `ForceUtcDateTime` appropriately to fix serialization issues in v4.
+
 ## v0.67.0 - 2025-12-22
 
 ### Added

@@ -37,3 +37,4 @@ const badCommentId = -1;
 
 final goodAuth = Platform.environment['TEST_JWT'] ?? 'GUEST';
 const badAuth = 'dsa';
+final bool hasAuth = Platform.environment['TEST_JWT'] != null && Platform.environment['TEST_JWT']!.isNotEmpty;

@@ -1,12 +1,12 @@
 import 'package:lemmy_api_client2/lemmy.dart';
-import 'package:lemmy_api_client2/v1.dart' as v1;
+import 'package:lemmy_api_client2/v4.dart' as v4;
 import 'package:lemmy_api_client2/v3.dart' as v3;
 import 'package:test/test.dart';
 
 /// Tests for automatic API version detection.
 void main() {
   group('LemmyApiFactory Version Detection', () {
-    group('voyager.lemmy.ml (V1 API)', () {
+    group('voyager.lemmy.ml (V4 API)', () {
       test('detectVersion returns 1.x version', () async {
         final version = await LemmyApiFactory.detectVersion('voyager.lemmy.ml');
 
@@ -14,10 +14,10 @@ void main() {
         expect(version.toString(), startsWith('1.'));
       });
 
-      test('create returns LemmyApiV1 client', () async {
+      test('create returns LemmyApiV4 client', () async {
         final client = await LemmyApiFactory.create('voyager.lemmy.ml');
 
-        expect(client, isA<v1.LemmyApiV1>());
+        expect(client, isA<v4.LemmyApiV4>());
         expect(client.host, equals('voyager.lemmy.ml'));
       });
     });

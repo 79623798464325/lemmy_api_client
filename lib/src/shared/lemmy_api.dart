@@ -2,7 +2,7 @@ import 'query.dart';
 
 /// Abstract interface for Lemmy API clients.
 ///
-/// Both [LemmyApiV3] and [LemmyApiV1] implement this interface.
+/// Both [LemmyApiV3] and [LemmyApiV4] implement this interface.
 abstract class LemmyApi {
   /// The Lemmy instance host.
   String get host;

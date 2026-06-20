@@ -43,7 +43,7 @@ void main() {
       });
 
       group('CreatePostLike', () {
-        test('correctly likes', () => run(CreatePostLike(postId: goodPostId, score: -1, auth: goodAuth)));
+        test('correctly likes', () => run(CreatePostLike(postId: goodPostId, score: -1, auth: goodAuth)), skip: hasAuth ? null : 'Requires TEST_JWT');
 
         test('bad auth', () => lemmyThrows(const CreatePostLike(postId: goodPostId, score: -1, auth: badAuth)));
 
@@ -68,7 +68,7 @@ void main() {
       group('StickyPost', () {});
 
       group('SavePost', () {
-        test('correctly saves', () => run(SavePost(postId: goodPostId, save: true, auth: goodAuth)));
+        test('correctly saves', () => run(SavePost(postId: goodPostId, save: true, auth: goodAuth)), skip: hasAuth ? null : 'Requires TEST_JWT');
 
         test('bad auth', () => lemmyThrows(const SavePost(postId: goodPostId, save: true, auth: badAuth)));
 

@@ -64,7 +64,7 @@ void main() {
       });
 
       group('ResolveObject', () {
-        test('correctly fetches', () => run(ResolveObject(q: '!main@lemmy.ml', auth: goodAuth)));
+        test('correctly fetches', () => run(ResolveObject(q: '!main@lemmy.ml', auth: goodAuth)), skip: hasAuth ? null : 'Requires TEST_JWT');
 
         test('bad query', () => lemmyThrows(const ResolveObject(q: 'qpoqwewq91.asd', auth: badAuth)));
 
