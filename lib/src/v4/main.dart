@@ -33,12 +33,16 @@ class LemmyApiV4 implements LemmyApi {
   /// Base delay between retries. Uses exponential backoff.
   final Duration retryDelay;
 
+  /// JWT auth token. When non-null, requests send `Authorization: Bearer <token>`.
+  /// Mutable so a cached client can be re-tokenised after login/logout.
+  String? token;
+
   // Lemmy 1.0+ servers use the /api/v4 path.
   // The "V4" in this client refers to the Lemmy semantic version (1.x), not the API path version.
   static const extraPath = '/api/v4';
 
   /// Creates a new Lemmy API v4 client.
-  LemmyApiV4(this.host, {http.Client? client, this.timeout = const Duration(seconds: 30), this.maxRetries = 3, this.retryDelay = const Duration(milliseconds: 500)})
+  LemmyApiV4(this.host, {http.Client? client, this.token, this.timeout = const Duration(seconds: 30), this.maxRetries = 3, this.retryDelay = const Duration(milliseconds: 500)})
     : _client = client ?? http.Client();
 
   bool get _isLocalhost => host.contains('localhost');
@@ -54,8 +58,9 @@ class LemmyApiV4 implements LemmyApi {
     if (includeContentType) {
       headers['Content-Type'] = 'application/json';
     }
-    if (queryJson.containsKey('auth')) {
-      headers['Authorization'] = 'Bearer ${queryJson['auth']}';
+    final authToken = token ?? queryJson['auth'];
+    if (authToken != null) {
+      headers['Authorization'] = 'Bearer $authToken';
     }
     return headers;
   }
