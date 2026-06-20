@@ -6,7 +6,9 @@ part of 'person.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GetPersonDetailsImpl _$$GetPersonDetailsImplFromJson(Map<String, dynamic> json) => _$GetPersonDetailsImpl(
+_$GetPersonDetailsImpl _$$GetPersonDetailsImplFromJson(
+  Map<String, dynamic> json,
+) => _$GetPersonDetailsImpl(
   personId: (json['person_id'] as num?)?.toInt(),
   username: json['username'] as String?,
   sort: json['sort'] == null ? null : SortType.fromJson(json['sort']),
@@ -16,7 +18,9 @@ _$GetPersonDetailsImpl _$$GetPersonDetailsImplFromJson(Map<String, dynamic> json
   savedOnly: json['saved_only'] as bool?,
 );
 
-Map<String, dynamic> _$$GetPersonDetailsImplToJson(_$GetPersonDetailsImpl instance) => <String, dynamic>{
+Map<String, dynamic> _$$GetPersonDetailsImplToJson(
+  _$GetPersonDetailsImpl instance,
+) => <String, dynamic>{
   if (instance.personId case final value?) 'person_id': value,
   if (instance.username case final value?) 'username': value,
   if (instance.sort?.toJson() case final value?) 'sort': value,
@@ -26,11 +30,18 @@ Map<String, dynamic> _$$GetPersonDetailsImplToJson(_$GetPersonDetailsImpl instan
   if (instance.savedOnly case final value?) 'saved_only': value,
 };
 
-_$BlockPersonImpl _$$BlockPersonImplFromJson(Map<String, dynamic> json) => _$BlockPersonImpl(personId: (json['person_id'] as num).toInt(), block: json['block'] as bool);
+_$BlockPersonImpl _$$BlockPersonImplFromJson(Map<String, dynamic> json) =>
+    _$BlockPersonImpl(
+      personId: (json['person_id'] as num).toInt(),
+      block: json['block'] as bool,
+    );
 
-Map<String, dynamic> _$$BlockPersonImplToJson(_$BlockPersonImpl instance) => <String, dynamic>{'person_id': instance.personId, 'block': instance.block};
+Map<String, dynamic> _$$BlockPersonImplToJson(_$BlockPersonImpl instance) =>
+    <String, dynamic>{'person_id': instance.personId, 'block': instance.block};
 
-_$ListPersonsImpl _$$ListPersonsImplFromJson(Map<String, dynamic> json) => _$ListPersonsImpl(
+_$ListPersonsImpl _$$ListPersonsImplFromJson(
+  Map<String, dynamic> json,
+) => _$ListPersonsImpl(
   limit: (json['limit'] as num?)?.toInt(),
   pageCursor: json['page_cursor'] as String?,
   searchTitleOnly: json['search_title_only'] as bool?,
@@ -39,7 +50,9 @@ _$ListPersonsImpl _$$ListPersonsImplFromJson(Map<String, dynamic> json) => _$Lis
   type: json['type'] == null ? null : PersonListingType.fromJson(json['type']),
 );
 
-Map<String, dynamic> _$$ListPersonsImplToJson(_$ListPersonsImpl instance) => <String, dynamic>{
+Map<String, dynamic> _$$ListPersonsImplToJson(
+  _$ListPersonsImpl instance,
+) => <String, dynamic>{
   if (instance.limit case final value?) 'limit': value,
   if (instance.pageCursor case final value?) 'page_cursor': value,
   if (instance.searchTitleOnly case final value?) 'search_title_only': value,
@@ -48,7 +61,9 @@ Map<String, dynamic> _$$ListPersonsImplToJson(_$ListPersonsImpl instance) => <St
   if (instance.type?.toJson() case final value?) 'type': value,
 };
 
-_$ListPersonContentImpl _$$ListPersonContentImplFromJson(Map<String, dynamic> json) => _$ListPersonContentImpl(
+_$ListPersonContentImpl _$$ListPersonContentImplFromJson(
+  Map<String, dynamic> json,
+) => _$ListPersonContentImpl(
   limit: (json['limit'] as num?)?.toInt(),
   pageCursor: json['page_cursor'] as String?,
   communityName: json['community_name'] as String?,
@@ -58,7 +73,9 @@ _$ListPersonContentImpl _$$ListPersonContentImplFromJson(Map<String, dynamic> js
   type: json['type'] == null ? null : PersonContentType.fromJson(json['type']),
 );
 
-Map<String, dynamic> _$$ListPersonContentImplToJson(_$ListPersonContentImpl instance) => <String, dynamic>{
+Map<String, dynamic> _$$ListPersonContentImplToJson(
+  _$ListPersonContentImpl instance,
+) => <String, dynamic>{
   if (instance.limit case final value?) 'limit': value,
   if (instance.pageCursor case final value?) 'page_cursor': value,
   if (instance.communityName case final value?) 'community_name': value,
@@ -68,6 +85,11 @@ Map<String, dynamic> _$$ListPersonContentImplToJson(_$ListPersonContentImpl inst
   if (instance.type?.toJson() case final value?) 'type': value,
 };
 
-_$NotePersonImpl _$$NotePersonImplFromJson(Map<String, dynamic> json) => _$NotePersonImpl(personId: (json['person_id'] as num).toInt(), note: json['note'] as String);
+_$NotePersonImpl _$$NotePersonImplFromJson(Map<String, dynamic> json) =>
+    _$NotePersonImpl(
+      personId: (json['person_id'] as num).toInt(),
+      note: json['note'] as String,
+    );
 
-Map<String, dynamic> _$$NotePersonImplToJson(_$NotePersonImpl instance) => <String, dynamic>{'person_id': instance.personId, 'note': instance.note};
+Map<String, dynamic> _$$NotePersonImplToJson(_$NotePersonImpl instance) =>
+    <String, dynamic>{'person_id': instance.personId, 'note': instance.note};

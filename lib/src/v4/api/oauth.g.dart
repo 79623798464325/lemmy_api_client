@@ -6,7 +6,9 @@ part of 'oauth.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AuthenticateWithOAuthImpl _$$AuthenticateWithOAuthImplFromJson(Map<String, dynamic> json) => _$AuthenticateWithOAuthImpl(
+_$AuthenticateWithOAuthImpl _$$AuthenticateWithOAuthImplFromJson(
+  Map<String, dynamic> json,
+) => _$AuthenticateWithOAuthImpl(
   code: json['code'] as String,
   oauthProviderId: (json['oauth_provider_id'] as num).toInt(),
   redirectUri: json['redirect_uri'] as String,
@@ -17,7 +19,9 @@ _$AuthenticateWithOAuthImpl _$$AuthenticateWithOAuthImplFromJson(Map<String, dyn
   stayLoggedIn: json['stay_logged_in'] as bool?,
 );
 
-Map<String, dynamic> _$$AuthenticateWithOAuthImplToJson(_$AuthenticateWithOAuthImpl instance) => <String, dynamic>{
+Map<String, dynamic> _$$AuthenticateWithOAuthImplToJson(
+  _$AuthenticateWithOAuthImpl instance,
+) => <String, dynamic>{
   'code': instance.code,
   'oauth_provider_id': instance.oauthProviderId,
   'redirect_uri': instance.redirectUri,
@@ -28,7 +32,9 @@ Map<String, dynamic> _$$AuthenticateWithOAuthImplToJson(_$AuthenticateWithOAuthI
   if (instance.stayLoggedIn case final value?) 'stay_logged_in': value,
 };
 
-_$CreateOAuthProviderImpl _$$CreateOAuthProviderImplFromJson(Map<String, dynamic> json) => _$CreateOAuthProviderImpl(
+_$CreateOAuthProviderImpl _$$CreateOAuthProviderImplFromJson(
+  Map<String, dynamic> json,
+) => _$CreateOAuthProviderImpl(
   displayName: json['display_name'] as String,
   issuer: json['issuer'] as String,
   authorizationEndpoint: json['authorization_endpoint'] as String,
@@ -44,7 +50,9 @@ _$CreateOAuthProviderImpl _$$CreateOAuthProviderImplFromJson(Map<String, dynamic
   enabled: json['enabled'] as bool,
 );
 
-Map<String, dynamic> _$$CreateOAuthProviderImplToJson(_$CreateOAuthProviderImpl instance) => <String, dynamic>{
+Map<String, dynamic> _$$CreateOAuthProviderImplToJson(
+  _$CreateOAuthProviderImpl instance,
+) => <String, dynamic>{
   'display_name': instance.displayName,
   'issuer': instance.issuer,
   'authorization_endpoint': instance.authorizationEndpoint,
@@ -60,7 +68,9 @@ Map<String, dynamic> _$$CreateOAuthProviderImplToJson(_$CreateOAuthProviderImpl 
   'enabled': instance.enabled,
 };
 
-_$EditOAuthProviderImpl _$$EditOAuthProviderImplFromJson(Map<String, dynamic> json) => _$EditOAuthProviderImpl(
+_$EditOAuthProviderImpl _$$EditOAuthProviderImplFromJson(
+  Map<String, dynamic> json,
+) => _$EditOAuthProviderImpl(
   id: (json['id'] as num).toInt(),
   displayName: json['display_name'] as String,
   authorizationEndpoint: json['authorization_endpoint'] as String,
@@ -75,7 +85,9 @@ _$EditOAuthProviderImpl _$$EditOAuthProviderImplFromJson(Map<String, dynamic> js
   enabled: json['enabled'] as bool,
 );
 
-Map<String, dynamic> _$$EditOAuthProviderImplToJson(_$EditOAuthProviderImpl instance) => <String, dynamic>{
+Map<String, dynamic> _$$EditOAuthProviderImplToJson(
+  _$EditOAuthProviderImpl instance,
+) => <String, dynamic>{
   'id': instance.id,
   'display_name': instance.displayName,
   'authorization_endpoint': instance.authorizationEndpoint,
@@ -90,6 +102,10 @@ Map<String, dynamic> _$$EditOAuthProviderImplToJson(_$EditOAuthProviderImpl inst
   'enabled': instance.enabled,
 };
 
-_$DeleteOAuthProviderImpl _$$DeleteOAuthProviderImplFromJson(Map<String, dynamic> json) => _$DeleteOAuthProviderImpl(id: (json['id'] as num).toInt());
+_$DeleteOAuthProviderImpl _$$DeleteOAuthProviderImplFromJson(
+  Map<String, dynamic> json,
+) => _$DeleteOAuthProviderImpl(id: (json['id'] as num).toInt());
 
-Map<String, dynamic> _$$DeleteOAuthProviderImplToJson(_$DeleteOAuthProviderImpl instance) => <String, dynamic>{'id': instance.id};
+Map<String, dynamic> _$$DeleteOAuthProviderImplToJson(
+  _$DeleteOAuthProviderImpl instance,
+) => <String, dynamic>{'id': instance.id};

@@ -39,7 +39,10 @@ class GetMyUserResponse with _$GetMyUserResponse {
     required List<CommunityFollowerView> follows,
     required List<CommunityModeratorView> moderates,
     required List<CommunityBlockView> communityBlocks,
-    required List<InstanceBlockView> instanceBlocks,
+    /// Lemmy <1.0: instance_blocks. Lemmy 1.0+: split into instance_communities_blocks / instance_persons_blocks.
+    @JsonKey(name: 'instance_blocks') List<InstanceBlockView>? instanceBlocks,
+    @JsonKey(name: 'instance_communities_blocks') List<InstanceBlockView>? instanceCommunitiesBlocks,
+    @JsonKey(name: 'instance_persons_blocks') List<InstanceBlockView>? instancePersonsBlocks,
     required List<PersonBlockView> personBlocks,
     required List<int> discussionLanguages,
   }) = _GetMyUserResponse;

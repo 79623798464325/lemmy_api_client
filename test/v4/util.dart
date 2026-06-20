@@ -16,7 +16,7 @@ LemmyApiV4 createTestClient() => LemmyApiV4('voyager.lemmy.ml');
 LemmyApiV4? createAuthenticatedTestClient() {
   final jwt = v4Jwt;
   if (jwt == null || jwt.isEmpty) return null;
-  return LemmyApiV4('voyager.lemmy.ml');
+  return LemmyApiV4('voyager.lemmy.ml', token: jwt);
 }
 
 /// Whether authenticated tests should run (V4_JWT is set).

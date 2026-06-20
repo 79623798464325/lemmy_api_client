@@ -39,11 +39,10 @@ void main() {
         print('Skipping authenticated test: V4_JWT not set');
         return;
       }
-
-      // Create an authenticated request by making a custom run
-      // The V4 API uses auth token in headers, so we need to test this differently
-      // For now, we verify the endpoint exists and JWT is available
-      expect(testJwt, isNotNull);
+      final api = createAuthenticatedTestClient()!;
+      final me = await api.run(const GetMyUser());
+      expect(me, isA<GetMyUserResponse>());
+      expect(me.localUserView.person, isNotNull);
     });
   });
 }

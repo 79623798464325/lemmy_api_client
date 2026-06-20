@@ -27,11 +27,13 @@ mixin _$GetSite {
 
 /// @nodoc
 abstract class $GetSiteCopyWith<$Res> {
-  factory $GetSiteCopyWith(GetSite value, $Res Function(GetSite) then) = _$GetSiteCopyWithImpl<$Res, GetSite>;
+  factory $GetSiteCopyWith(GetSite value, $Res Function(GetSite) then) =
+      _$GetSiteCopyWithImpl<$Res, GetSite>;
 }
 
 /// @nodoc
-class _$GetSiteCopyWithImpl<$Res, $Val extends GetSite> implements $GetSiteCopyWith<$Res> {
+class _$GetSiteCopyWithImpl<$Res, $Val extends GetSite>
+    implements $GetSiteCopyWith<$Res> {
   _$GetSiteCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -45,12 +47,20 @@ class _$GetSiteCopyWithImpl<$Res, $Val extends GetSite> implements $GetSiteCopyW
 
 /// @nodoc
 abstract class _$$GetSiteImplCopyWith<$Res> {
-  factory _$$GetSiteImplCopyWith(_$GetSiteImpl value, $Res Function(_$GetSiteImpl) then) = __$$GetSiteImplCopyWithImpl<$Res>;
+  factory _$$GetSiteImplCopyWith(
+    _$GetSiteImpl value,
+    $Res Function(_$GetSiteImpl) then,
+  ) = __$$GetSiteImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$GetSiteImplCopyWithImpl<$Res> extends _$GetSiteCopyWithImpl<$Res, _$GetSiteImpl> implements _$$GetSiteImplCopyWith<$Res> {
-  __$$GetSiteImplCopyWithImpl(_$GetSiteImpl _value, $Res Function(_$GetSiteImpl) _then) : super(_value, _then);
+class __$$GetSiteImplCopyWithImpl<$Res>
+    extends _$GetSiteCopyWithImpl<$Res, _$GetSiteImpl>
+    implements _$$GetSiteImplCopyWith<$Res> {
+  __$$GetSiteImplCopyWithImpl(
+    _$GetSiteImpl _value,
+    $Res Function(_$GetSiteImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of GetSite
   /// with the given fields replaced by the non-null parameter values.
@@ -62,7 +72,8 @@ class __$$GetSiteImplCopyWithImpl<$Res> extends _$GetSiteCopyWithImpl<$Res, _$Ge
 class _$GetSiteImpl extends _GetSite {
   const _$GetSiteImpl() : super._();
 
-  factory _$GetSiteImpl.fromJson(Map<String, dynamic> json) => _$$GetSiteImplFromJson(json);
+  factory _$GetSiteImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetSiteImplFromJson(json);
 
   @override
   String toString() {
@@ -71,7 +82,8 @@ class _$GetSiteImpl extends _GetSite {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$GetSiteImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetSiteImpl);
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -105,18 +117,23 @@ mixin _$GetSiteMetadata {
   /// Create a copy of GetSiteMetadata
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $GetSiteMetadataCopyWith<GetSiteMetadata> get copyWith => throw _privateConstructorUsedError;
+  $GetSiteMetadataCopyWith<GetSiteMetadata> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GetSiteMetadataCopyWith<$Res> {
-  factory $GetSiteMetadataCopyWith(GetSiteMetadata value, $Res Function(GetSiteMetadata) then) = _$GetSiteMetadataCopyWithImpl<$Res, GetSiteMetadata>;
+  factory $GetSiteMetadataCopyWith(
+    GetSiteMetadata value,
+    $Res Function(GetSiteMetadata) then,
+  ) = _$GetSiteMetadataCopyWithImpl<$Res, GetSiteMetadata>;
   @useResult
   $Res call({String url});
 }
 
 /// @nodoc
-class _$GetSiteMetadataCopyWithImpl<$Res, $Val extends GetSiteMetadata> implements $GetSiteMetadataCopyWith<$Res> {
+class _$GetSiteMetadataCopyWithImpl<$Res, $Val extends GetSiteMetadata>
+    implements $GetSiteMetadataCopyWith<$Res> {
   _$GetSiteMetadataCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -143,16 +160,25 @@ class _$GetSiteMetadataCopyWithImpl<$Res, $Val extends GetSiteMetadata> implemen
 }
 
 /// @nodoc
-abstract class _$$GetSiteMetadataImplCopyWith<$Res> implements $GetSiteMetadataCopyWith<$Res> {
-  factory _$$GetSiteMetadataImplCopyWith(_$GetSiteMetadataImpl value, $Res Function(_$GetSiteMetadataImpl) then) = __$$GetSiteMetadataImplCopyWithImpl<$Res>;
+abstract class _$$GetSiteMetadataImplCopyWith<$Res>
+    implements $GetSiteMetadataCopyWith<$Res> {
+  factory _$$GetSiteMetadataImplCopyWith(
+    _$GetSiteMetadataImpl value,
+    $Res Function(_$GetSiteMetadataImpl) then,
+  ) = __$$GetSiteMetadataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String url});
 }
 
 /// @nodoc
-class __$$GetSiteMetadataImplCopyWithImpl<$Res> extends _$GetSiteMetadataCopyWithImpl<$Res, _$GetSiteMetadataImpl> implements _$$GetSiteMetadataImplCopyWith<$Res> {
-  __$$GetSiteMetadataImplCopyWithImpl(_$GetSiteMetadataImpl _value, $Res Function(_$GetSiteMetadataImpl) _then) : super(_value, _then);
+class __$$GetSiteMetadataImplCopyWithImpl<$Res>
+    extends _$GetSiteMetadataCopyWithImpl<$Res, _$GetSiteMetadataImpl>
+    implements _$$GetSiteMetadataImplCopyWith<$Res> {
+  __$$GetSiteMetadataImplCopyWithImpl(
+    _$GetSiteMetadataImpl _value,
+    $Res Function(_$GetSiteMetadataImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of GetSiteMetadata
   /// with the given fields replaced by the non-null parameter values.
@@ -177,7 +203,8 @@ class __$$GetSiteMetadataImplCopyWithImpl<$Res> extends _$GetSiteMetadataCopyWit
 class _$GetSiteMetadataImpl extends _GetSiteMetadata {
   const _$GetSiteMetadataImpl({required this.url}) : super._();
 
-  factory _$GetSiteMetadataImpl.fromJson(Map<String, dynamic> json) => _$$GetSiteMetadataImplFromJson(json);
+  factory _$GetSiteMetadataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetSiteMetadataImplFromJson(json);
 
   @override
   final String url;
@@ -189,7 +216,10 @@ class _$GetSiteMetadataImpl extends _GetSiteMetadata {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$GetSiteMetadataImpl && (identical(other.url, url) || other.url == url));
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSiteMetadataImpl &&
+            (identical(other.url, url) || other.url == url));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -201,7 +231,11 @@ class _$GetSiteMetadataImpl extends _GetSiteMetadata {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetSiteMetadataImplCopyWith<_$GetSiteMetadataImpl> get copyWith => __$$GetSiteMetadataImplCopyWithImpl<_$GetSiteMetadataImpl>(this, _$identity);
+  _$$GetSiteMetadataImplCopyWith<_$GetSiteMetadataImpl> get copyWith =>
+      __$$GetSiteMetadataImplCopyWithImpl<_$GetSiteMetadataImpl>(
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
@@ -210,10 +244,12 @@ class _$GetSiteMetadataImpl extends _GetSiteMetadata {
 }
 
 abstract class _GetSiteMetadata extends GetSiteMetadata {
-  const factory _GetSiteMetadata({required final String url}) = _$GetSiteMetadataImpl;
+  const factory _GetSiteMetadata({required final String url}) =
+      _$GetSiteMetadataImpl;
   const _GetSiteMetadata._() : super._();
 
-  factory _GetSiteMetadata.fromJson(Map<String, dynamic> json) = _$GetSiteMetadataImpl.fromJson;
+  factory _GetSiteMetadata.fromJson(Map<String, dynamic> json) =
+      _$GetSiteMetadataImpl.fromJson;
 
   @override
   String get url;
@@ -222,7 +258,8 @@ abstract class _GetSiteMetadata extends GetSiteMetadata {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetSiteMetadataImplCopyWith<_$GetSiteMetadataImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$GetSiteMetadataImplCopyWith<_$GetSiteMetadataImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 CreateSite _$CreateSiteFromJson(Map<String, dynamic> json) {
@@ -277,12 +314,16 @@ mixin _$CreateSite {
   /// Create a copy of CreateSite
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $CreateSiteCopyWith<CreateSite> get copyWith => throw _privateConstructorUsedError;
+  $CreateSiteCopyWith<CreateSite> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CreateSiteCopyWith<$Res> {
-  factory $CreateSiteCopyWith(CreateSite value, $Res Function(CreateSite) then) = _$CreateSiteCopyWithImpl<$Res, CreateSite>;
+  factory $CreateSiteCopyWith(
+    CreateSite value,
+    $Res Function(CreateSite) then,
+  ) = _$CreateSiteCopyWithImpl<$Res, CreateSite>;
   @useResult
   $Res call({
     String name,
@@ -328,7 +369,8 @@ abstract class $CreateSiteCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CreateSiteCopyWithImpl<$Res, $Val extends CreateSite> implements $CreateSiteCopyWith<$Res> {
+class _$CreateSiteCopyWithImpl<$Res, $Val extends CreateSite>
+    implements $CreateSiteCopyWith<$Res> {
   _$CreateSiteCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -585,8 +627,12 @@ class _$CreateSiteCopyWithImpl<$Res, $Val extends CreateSite> implements $Create
 }
 
 /// @nodoc
-abstract class _$$CreateSiteImplCopyWith<$Res> implements $CreateSiteCopyWith<$Res> {
-  factory _$$CreateSiteImplCopyWith(_$CreateSiteImpl value, $Res Function(_$CreateSiteImpl) then) = __$$CreateSiteImplCopyWithImpl<$Res>;
+abstract class _$$CreateSiteImplCopyWith<$Res>
+    implements $CreateSiteCopyWith<$Res> {
+  factory _$$CreateSiteImplCopyWith(
+    _$CreateSiteImpl value,
+    $Res Function(_$CreateSiteImpl) then,
+  ) = __$$CreateSiteImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({
@@ -633,8 +679,13 @@ abstract class _$$CreateSiteImplCopyWith<$Res> implements $CreateSiteCopyWith<$R
 }
 
 /// @nodoc
-class __$$CreateSiteImplCopyWithImpl<$Res> extends _$CreateSiteCopyWithImpl<$Res, _$CreateSiteImpl> implements _$$CreateSiteImplCopyWith<$Res> {
-  __$$CreateSiteImplCopyWithImpl(_$CreateSiteImpl _value, $Res Function(_$CreateSiteImpl) _then) : super(_value, _then);
+class __$$CreateSiteImplCopyWithImpl<$Res>
+    extends _$CreateSiteCopyWithImpl<$Res, _$CreateSiteImpl>
+    implements _$$CreateSiteImplCopyWith<$Res> {
+  __$$CreateSiteImplCopyWithImpl(
+    _$CreateSiteImpl _value,
+    $Res Function(_$CreateSiteImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of CreateSite
   /// with the given fields replaced by the non-null parameter values.
@@ -933,7 +984,8 @@ class _$CreateSiteImpl extends _CreateSite {
        _taglines = taglines,
        super._();
 
-  factory _$CreateSiteImpl.fromJson(Map<String, dynamic> json) => _$$CreateSiteImplFromJson(json);
+  factory _$CreateSiteImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CreateSiteImplFromJson(json);
 
   @override
   final String name;
@@ -972,7 +1024,8 @@ class _$CreateSiteImpl extends _CreateSite {
   List<int>? get discussionLanguages {
     final value = _discussionLanguages;
     if (value == null) return null;
-    if (_discussionLanguages is EqualUnmodifiableListView) return _discussionLanguages;
+    if (_discussionLanguages is EqualUnmodifiableListView)
+      return _discussionLanguages;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1018,7 +1071,8 @@ class _$CreateSiteImpl extends _CreateSite {
   List<String>? get allowedInstances {
     final value = _allowedInstances;
     if (value == null) return null;
-    if (_allowedInstances is EqualUnmodifiableListView) return _allowedInstances;
+    if (_allowedInstances is EqualUnmodifiableListView)
+      return _allowedInstances;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1028,7 +1082,8 @@ class _$CreateSiteImpl extends _CreateSite {
   List<String>? get blockedInstances {
     final value = _blockedInstances;
     if (value == null) return null;
-    if (_blockedInstances is EqualUnmodifiableListView) return _blockedInstances;
+    if (_blockedInstances is EqualUnmodifiableListView)
+      return _blockedInstances;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1058,43 +1113,106 @@ class _$CreateSiteImpl extends _CreateSite {
             other is _$CreateSiteImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.sidebar, sidebar) || other.sidebar == sidebar) &&
-            (identical(other.description, description) || other.description == description) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
             (identical(other.icon, icon) || other.icon == icon) &&
             (identical(other.banner, banner) || other.banner == banner) &&
-            (identical(other.enableDownvotes, enableDownvotes) || other.enableDownvotes == enableDownvotes) &&
-            (identical(other.enableNsfw, enableNsfw) || other.enableNsfw == enableNsfw) &&
-            (identical(other.communityCreationAdminOnly, communityCreationAdminOnly) || other.communityCreationAdminOnly == communityCreationAdminOnly) &&
-            (identical(other.requireEmailVerification, requireEmailVerification) || other.requireEmailVerification == requireEmailVerification) &&
-            (identical(other.applicationQuestion, applicationQuestion) || other.applicationQuestion == applicationQuestion) &&
-            (identical(other.privateInstance, privateInstance) || other.privateInstance == privateInstance) &&
-            (identical(other.defaultTheme, defaultTheme) || other.defaultTheme == defaultTheme) &&
-            (identical(other.defaultPostListingType, defaultPostListingType) || other.defaultPostListingType == defaultPostListingType) &&
-            (identical(other.legalInformation, legalInformation) || other.legalInformation == legalInformation) &&
-            (identical(other.applicationEmailAdmins, applicationEmailAdmins) || other.applicationEmailAdmins == applicationEmailAdmins) &&
-            (identical(other.hideModlogModNames, hideModlogModNames) || other.hideModlogModNames == hideModlogModNames) &&
-            const DeepCollectionEquality().equals(other._discussionLanguages, _discussionLanguages) &&
-            (identical(other.slurFilterRegex, slurFilterRegex) || other.slurFilterRegex == slurFilterRegex) &&
-            (identical(other.actorNameMaxLength, actorNameMaxLength) || other.actorNameMaxLength == actorNameMaxLength) &&
-            (identical(other.rateLimitMessage, rateLimitMessage) || other.rateLimitMessage == rateLimitMessage) &&
-            (identical(other.rateLimitMessagePerSecond, rateLimitMessagePerSecond) || other.rateLimitMessagePerSecond == rateLimitMessagePerSecond) &&
-            (identical(other.rateLimitPost, rateLimitPost) || other.rateLimitPost == rateLimitPost) &&
-            (identical(other.rateLimitPostPerSecond, rateLimitPostPerSecond) || other.rateLimitPostPerSecond == rateLimitPostPerSecond) &&
-            (identical(other.rateLimitRegister, rateLimitRegister) || other.rateLimitRegister == rateLimitRegister) &&
-            (identical(other.rateLimitRegisterPerSecond, rateLimitRegisterPerSecond) || other.rateLimitRegisterPerSecond == rateLimitRegisterPerSecond) &&
-            (identical(other.rateLimitImage, rateLimitImage) || other.rateLimitImage == rateLimitImage) &&
-            (identical(other.rateLimitImagePerSecond, rateLimitImagePerSecond) || other.rateLimitImagePerSecond == rateLimitImagePerSecond) &&
-            (identical(other.rateLimitComment, rateLimitComment) || other.rateLimitComment == rateLimitComment) &&
-            (identical(other.rateLimitCommentPerSecond, rateLimitCommentPerSecond) || other.rateLimitCommentPerSecond == rateLimitCommentPerSecond) &&
-            (identical(other.rateLimitSearch, rateLimitSearch) || other.rateLimitSearch == rateLimitSearch) &&
-            (identical(other.rateLimitSearchPerSecond, rateLimitSearchPerSecond) || other.rateLimitSearchPerSecond == rateLimitSearchPerSecond) &&
-            (identical(other.federationEnabled, federationEnabled) || other.federationEnabled == federationEnabled) &&
-            (identical(other.federationDebug, federationDebug) || other.federationDebug == federationDebug) &&
-            (identical(other.captchaEnabled, captchaEnabled) || other.captchaEnabled == captchaEnabled) &&
-            (identical(other.captchaDifficulty, captchaDifficulty) || other.captchaDifficulty == captchaDifficulty) &&
-            const DeepCollectionEquality().equals(other._allowedInstances, _allowedInstances) &&
-            const DeepCollectionEquality().equals(other._blockedInstances, _blockedInstances) &&
+            (identical(other.enableDownvotes, enableDownvotes) ||
+                other.enableDownvotes == enableDownvotes) &&
+            (identical(other.enableNsfw, enableNsfw) ||
+                other.enableNsfw == enableNsfw) &&
+            (identical(
+                  other.communityCreationAdminOnly,
+                  communityCreationAdminOnly,
+                ) ||
+                other.communityCreationAdminOnly ==
+                    communityCreationAdminOnly) &&
+            (identical(
+                  other.requireEmailVerification,
+                  requireEmailVerification,
+                ) ||
+                other.requireEmailVerification == requireEmailVerification) &&
+            (identical(other.applicationQuestion, applicationQuestion) ||
+                other.applicationQuestion == applicationQuestion) &&
+            (identical(other.privateInstance, privateInstance) ||
+                other.privateInstance == privateInstance) &&
+            (identical(other.defaultTheme, defaultTheme) ||
+                other.defaultTheme == defaultTheme) &&
+            (identical(other.defaultPostListingType, defaultPostListingType) ||
+                other.defaultPostListingType == defaultPostListingType) &&
+            (identical(other.legalInformation, legalInformation) ||
+                other.legalInformation == legalInformation) &&
+            (identical(other.applicationEmailAdmins, applicationEmailAdmins) ||
+                other.applicationEmailAdmins == applicationEmailAdmins) &&
+            (identical(other.hideModlogModNames, hideModlogModNames) ||
+                other.hideModlogModNames == hideModlogModNames) &&
+            const DeepCollectionEquality().equals(
+              other._discussionLanguages,
+              _discussionLanguages,
+            ) &&
+            (identical(other.slurFilterRegex, slurFilterRegex) ||
+                other.slurFilterRegex == slurFilterRegex) &&
+            (identical(other.actorNameMaxLength, actorNameMaxLength) ||
+                other.actorNameMaxLength == actorNameMaxLength) &&
+            (identical(other.rateLimitMessage, rateLimitMessage) ||
+                other.rateLimitMessage == rateLimitMessage) &&
+            (identical(
+                  other.rateLimitMessagePerSecond,
+                  rateLimitMessagePerSecond,
+                ) ||
+                other.rateLimitMessagePerSecond == rateLimitMessagePerSecond) &&
+            (identical(other.rateLimitPost, rateLimitPost) ||
+                other.rateLimitPost == rateLimitPost) &&
+            (identical(other.rateLimitPostPerSecond, rateLimitPostPerSecond) ||
+                other.rateLimitPostPerSecond == rateLimitPostPerSecond) &&
+            (identical(other.rateLimitRegister, rateLimitRegister) ||
+                other.rateLimitRegister == rateLimitRegister) &&
+            (identical(
+                  other.rateLimitRegisterPerSecond,
+                  rateLimitRegisterPerSecond,
+                ) ||
+                other.rateLimitRegisterPerSecond ==
+                    rateLimitRegisterPerSecond) &&
+            (identical(other.rateLimitImage, rateLimitImage) ||
+                other.rateLimitImage == rateLimitImage) &&
+            (identical(
+                  other.rateLimitImagePerSecond,
+                  rateLimitImagePerSecond,
+                ) ||
+                other.rateLimitImagePerSecond == rateLimitImagePerSecond) &&
+            (identical(other.rateLimitComment, rateLimitComment) ||
+                other.rateLimitComment == rateLimitComment) &&
+            (identical(
+                  other.rateLimitCommentPerSecond,
+                  rateLimitCommentPerSecond,
+                ) ||
+                other.rateLimitCommentPerSecond == rateLimitCommentPerSecond) &&
+            (identical(other.rateLimitSearch, rateLimitSearch) ||
+                other.rateLimitSearch == rateLimitSearch) &&
+            (identical(
+                  other.rateLimitSearchPerSecond,
+                  rateLimitSearchPerSecond,
+                ) ||
+                other.rateLimitSearchPerSecond == rateLimitSearchPerSecond) &&
+            (identical(other.federationEnabled, federationEnabled) ||
+                other.federationEnabled == federationEnabled) &&
+            (identical(other.federationDebug, federationDebug) ||
+                other.federationDebug == federationDebug) &&
+            (identical(other.captchaEnabled, captchaEnabled) ||
+                other.captchaEnabled == captchaEnabled) &&
+            (identical(other.captchaDifficulty, captchaDifficulty) ||
+                other.captchaDifficulty == captchaDifficulty) &&
+            const DeepCollectionEquality().equals(
+              other._allowedInstances,
+              _allowedInstances,
+            ) &&
+            const DeepCollectionEquality().equals(
+              other._blockedInstances,
+              _blockedInstances,
+            ) &&
             const DeepCollectionEquality().equals(other._taglines, _taglines) &&
-            (identical(other.registrationMode, registrationMode) || other.registrationMode == registrationMode));
+            (identical(other.registrationMode, registrationMode) ||
+                other.registrationMode == registrationMode));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -1147,7 +1265,8 @@ class _$CreateSiteImpl extends _CreateSite {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$CreateSiteImplCopyWith<_$CreateSiteImpl> get copyWith => __$$CreateSiteImplCopyWithImpl<_$CreateSiteImpl>(this, _$identity);
+  _$$CreateSiteImplCopyWith<_$CreateSiteImpl> get copyWith =>
+      __$$CreateSiteImplCopyWithImpl<_$CreateSiteImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1199,7 +1318,8 @@ abstract class _CreateSite extends CreateSite {
   }) = _$CreateSiteImpl;
   const _CreateSite._() : super._();
 
-  factory _CreateSite.fromJson(Map<String, dynamic> json) = _$CreateSiteImpl.fromJson;
+  factory _CreateSite.fromJson(Map<String, dynamic> json) =
+      _$CreateSiteImpl.fromJson;
 
   @override
   String get name;
@@ -1284,7 +1404,8 @@ abstract class _CreateSite extends CreateSite {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CreateSiteImplCopyWith<_$CreateSiteImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$CreateSiteImplCopyWith<_$CreateSiteImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 EditSite _$EditSiteFromJson(Map<String, dynamic> json) {
@@ -1339,12 +1460,14 @@ mixin _$EditSite {
   /// Create a copy of EditSite
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $EditSiteCopyWith<EditSite> get copyWith => throw _privateConstructorUsedError;
+  $EditSiteCopyWith<EditSite> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $EditSiteCopyWith<$Res> {
-  factory $EditSiteCopyWith(EditSite value, $Res Function(EditSite) then) = _$EditSiteCopyWithImpl<$Res, EditSite>;
+  factory $EditSiteCopyWith(EditSite value, $Res Function(EditSite) then) =
+      _$EditSiteCopyWithImpl<$Res, EditSite>;
   @useResult
   $Res call({
     String? name,
@@ -1390,7 +1513,8 @@ abstract class $EditSiteCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$EditSiteCopyWithImpl<$Res, $Val extends EditSite> implements $EditSiteCopyWith<$Res> {
+class _$EditSiteCopyWithImpl<$Res, $Val extends EditSite>
+    implements $EditSiteCopyWith<$Res> {
   _$EditSiteCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1647,8 +1771,12 @@ class _$EditSiteCopyWithImpl<$Res, $Val extends EditSite> implements $EditSiteCo
 }
 
 /// @nodoc
-abstract class _$$EditSiteImplCopyWith<$Res> implements $EditSiteCopyWith<$Res> {
-  factory _$$EditSiteImplCopyWith(_$EditSiteImpl value, $Res Function(_$EditSiteImpl) then) = __$$EditSiteImplCopyWithImpl<$Res>;
+abstract class _$$EditSiteImplCopyWith<$Res>
+    implements $EditSiteCopyWith<$Res> {
+  factory _$$EditSiteImplCopyWith(
+    _$EditSiteImpl value,
+    $Res Function(_$EditSiteImpl) then,
+  ) = __$$EditSiteImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({
@@ -1695,8 +1823,13 @@ abstract class _$$EditSiteImplCopyWith<$Res> implements $EditSiteCopyWith<$Res> 
 }
 
 /// @nodoc
-class __$$EditSiteImplCopyWithImpl<$Res> extends _$EditSiteCopyWithImpl<$Res, _$EditSiteImpl> implements _$$EditSiteImplCopyWith<$Res> {
-  __$$EditSiteImplCopyWithImpl(_$EditSiteImpl _value, $Res Function(_$EditSiteImpl) _then) : super(_value, _then);
+class __$$EditSiteImplCopyWithImpl<$Res>
+    extends _$EditSiteCopyWithImpl<$Res, _$EditSiteImpl>
+    implements _$$EditSiteImplCopyWith<$Res> {
+  __$$EditSiteImplCopyWithImpl(
+    _$EditSiteImpl _value,
+    $Res Function(_$EditSiteImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of EditSite
   /// with the given fields replaced by the non-null parameter values.
@@ -1995,7 +2128,8 @@ class _$EditSiteImpl extends _EditSite {
        _taglines = taglines,
        super._();
 
-  factory _$EditSiteImpl.fromJson(Map<String, dynamic> json) => _$$EditSiteImplFromJson(json);
+  factory _$EditSiteImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EditSiteImplFromJson(json);
 
   @override
   final String? name;
@@ -2034,7 +2168,8 @@ class _$EditSiteImpl extends _EditSite {
   List<int>? get discussionLanguages {
     final value = _discussionLanguages;
     if (value == null) return null;
-    if (_discussionLanguages is EqualUnmodifiableListView) return _discussionLanguages;
+    if (_discussionLanguages is EqualUnmodifiableListView)
+      return _discussionLanguages;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2080,7 +2215,8 @@ class _$EditSiteImpl extends _EditSite {
   List<String>? get allowedInstances {
     final value = _allowedInstances;
     if (value == null) return null;
-    if (_allowedInstances is EqualUnmodifiableListView) return _allowedInstances;
+    if (_allowedInstances is EqualUnmodifiableListView)
+      return _allowedInstances;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2090,7 +2226,8 @@ class _$EditSiteImpl extends _EditSite {
   List<String>? get blockedInstances {
     final value = _blockedInstances;
     if (value == null) return null;
-    if (_blockedInstances is EqualUnmodifiableListView) return _blockedInstances;
+    if (_blockedInstances is EqualUnmodifiableListView)
+      return _blockedInstances;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2120,43 +2257,106 @@ class _$EditSiteImpl extends _EditSite {
             other is _$EditSiteImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.sidebar, sidebar) || other.sidebar == sidebar) &&
-            (identical(other.description, description) || other.description == description) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
             (identical(other.icon, icon) || other.icon == icon) &&
             (identical(other.banner, banner) || other.banner == banner) &&
-            (identical(other.enableDownvotes, enableDownvotes) || other.enableDownvotes == enableDownvotes) &&
-            (identical(other.enableNsfw, enableNsfw) || other.enableNsfw == enableNsfw) &&
-            (identical(other.communityCreationAdminOnly, communityCreationAdminOnly) || other.communityCreationAdminOnly == communityCreationAdminOnly) &&
-            (identical(other.requireEmailVerification, requireEmailVerification) || other.requireEmailVerification == requireEmailVerification) &&
-            (identical(other.applicationQuestion, applicationQuestion) || other.applicationQuestion == applicationQuestion) &&
-            (identical(other.privateInstance, privateInstance) || other.privateInstance == privateInstance) &&
-            (identical(other.defaultTheme, defaultTheme) || other.defaultTheme == defaultTheme) &&
-            (identical(other.defaultPostListingType, defaultPostListingType) || other.defaultPostListingType == defaultPostListingType) &&
-            (identical(other.legalInformation, legalInformation) || other.legalInformation == legalInformation) &&
-            (identical(other.applicationEmailAdmins, applicationEmailAdmins) || other.applicationEmailAdmins == applicationEmailAdmins) &&
-            (identical(other.hideModlogModNames, hideModlogModNames) || other.hideModlogModNames == hideModlogModNames) &&
-            const DeepCollectionEquality().equals(other._discussionLanguages, _discussionLanguages) &&
-            (identical(other.slurFilterRegex, slurFilterRegex) || other.slurFilterRegex == slurFilterRegex) &&
-            (identical(other.actorNameMaxLength, actorNameMaxLength) || other.actorNameMaxLength == actorNameMaxLength) &&
-            (identical(other.rateLimitMessage, rateLimitMessage) || other.rateLimitMessage == rateLimitMessage) &&
-            (identical(other.rateLimitMessagePerSecond, rateLimitMessagePerSecond) || other.rateLimitMessagePerSecond == rateLimitMessagePerSecond) &&
-            (identical(other.rateLimitPost, rateLimitPost) || other.rateLimitPost == rateLimitPost) &&
-            (identical(other.rateLimitPostPerSecond, rateLimitPostPerSecond) || other.rateLimitPostPerSecond == rateLimitPostPerSecond) &&
-            (identical(other.rateLimitRegister, rateLimitRegister) || other.rateLimitRegister == rateLimitRegister) &&
-            (identical(other.rateLimitRegisterPerSecond, rateLimitRegisterPerSecond) || other.rateLimitRegisterPerSecond == rateLimitRegisterPerSecond) &&
-            (identical(other.rateLimitImage, rateLimitImage) || other.rateLimitImage == rateLimitImage) &&
-            (identical(other.rateLimitImagePerSecond, rateLimitImagePerSecond) || other.rateLimitImagePerSecond == rateLimitImagePerSecond) &&
-            (identical(other.rateLimitComment, rateLimitComment) || other.rateLimitComment == rateLimitComment) &&
-            (identical(other.rateLimitCommentPerSecond, rateLimitCommentPerSecond) || other.rateLimitCommentPerSecond == rateLimitCommentPerSecond) &&
-            (identical(other.rateLimitSearch, rateLimitSearch) || other.rateLimitSearch == rateLimitSearch) &&
-            (identical(other.rateLimitSearchPerSecond, rateLimitSearchPerSecond) || other.rateLimitSearchPerSecond == rateLimitSearchPerSecond) &&
-            (identical(other.federationEnabled, federationEnabled) || other.federationEnabled == federationEnabled) &&
-            (identical(other.federationDebug, federationDebug) || other.federationDebug == federationDebug) &&
-            (identical(other.captchaEnabled, captchaEnabled) || other.captchaEnabled == captchaEnabled) &&
-            (identical(other.captchaDifficulty, captchaDifficulty) || other.captchaDifficulty == captchaDifficulty) &&
-            const DeepCollectionEquality().equals(other._allowedInstances, _allowedInstances) &&
-            const DeepCollectionEquality().equals(other._blockedInstances, _blockedInstances) &&
+            (identical(other.enableDownvotes, enableDownvotes) ||
+                other.enableDownvotes == enableDownvotes) &&
+            (identical(other.enableNsfw, enableNsfw) ||
+                other.enableNsfw == enableNsfw) &&
+            (identical(
+                  other.communityCreationAdminOnly,
+                  communityCreationAdminOnly,
+                ) ||
+                other.communityCreationAdminOnly ==
+                    communityCreationAdminOnly) &&
+            (identical(
+                  other.requireEmailVerification,
+                  requireEmailVerification,
+                ) ||
+                other.requireEmailVerification == requireEmailVerification) &&
+            (identical(other.applicationQuestion, applicationQuestion) ||
+                other.applicationQuestion == applicationQuestion) &&
+            (identical(other.privateInstance, privateInstance) ||
+                other.privateInstance == privateInstance) &&
+            (identical(other.defaultTheme, defaultTheme) ||
+                other.defaultTheme == defaultTheme) &&
+            (identical(other.defaultPostListingType, defaultPostListingType) ||
+                other.defaultPostListingType == defaultPostListingType) &&
+            (identical(other.legalInformation, legalInformation) ||
+                other.legalInformation == legalInformation) &&
+            (identical(other.applicationEmailAdmins, applicationEmailAdmins) ||
+                other.applicationEmailAdmins == applicationEmailAdmins) &&
+            (identical(other.hideModlogModNames, hideModlogModNames) ||
+                other.hideModlogModNames == hideModlogModNames) &&
+            const DeepCollectionEquality().equals(
+              other._discussionLanguages,
+              _discussionLanguages,
+            ) &&
+            (identical(other.slurFilterRegex, slurFilterRegex) ||
+                other.slurFilterRegex == slurFilterRegex) &&
+            (identical(other.actorNameMaxLength, actorNameMaxLength) ||
+                other.actorNameMaxLength == actorNameMaxLength) &&
+            (identical(other.rateLimitMessage, rateLimitMessage) ||
+                other.rateLimitMessage == rateLimitMessage) &&
+            (identical(
+                  other.rateLimitMessagePerSecond,
+                  rateLimitMessagePerSecond,
+                ) ||
+                other.rateLimitMessagePerSecond == rateLimitMessagePerSecond) &&
+            (identical(other.rateLimitPost, rateLimitPost) ||
+                other.rateLimitPost == rateLimitPost) &&
+            (identical(other.rateLimitPostPerSecond, rateLimitPostPerSecond) ||
+                other.rateLimitPostPerSecond == rateLimitPostPerSecond) &&
+            (identical(other.rateLimitRegister, rateLimitRegister) ||
+                other.rateLimitRegister == rateLimitRegister) &&
+            (identical(
+                  other.rateLimitRegisterPerSecond,
+                  rateLimitRegisterPerSecond,
+                ) ||
+                other.rateLimitRegisterPerSecond ==
+                    rateLimitRegisterPerSecond) &&
+            (identical(other.rateLimitImage, rateLimitImage) ||
+                other.rateLimitImage == rateLimitImage) &&
+            (identical(
+                  other.rateLimitImagePerSecond,
+                  rateLimitImagePerSecond,
+                ) ||
+                other.rateLimitImagePerSecond == rateLimitImagePerSecond) &&
+            (identical(other.rateLimitComment, rateLimitComment) ||
+                other.rateLimitComment == rateLimitComment) &&
+            (identical(
+                  other.rateLimitCommentPerSecond,
+                  rateLimitCommentPerSecond,
+                ) ||
+                other.rateLimitCommentPerSecond == rateLimitCommentPerSecond) &&
+            (identical(other.rateLimitSearch, rateLimitSearch) ||
+                other.rateLimitSearch == rateLimitSearch) &&
+            (identical(
+                  other.rateLimitSearchPerSecond,
+                  rateLimitSearchPerSecond,
+                ) ||
+                other.rateLimitSearchPerSecond == rateLimitSearchPerSecond) &&
+            (identical(other.federationEnabled, federationEnabled) ||
+                other.federationEnabled == federationEnabled) &&
+            (identical(other.federationDebug, federationDebug) ||
+                other.federationDebug == federationDebug) &&
+            (identical(other.captchaEnabled, captchaEnabled) ||
+                other.captchaEnabled == captchaEnabled) &&
+            (identical(other.captchaDifficulty, captchaDifficulty) ||
+                other.captchaDifficulty == captchaDifficulty) &&
+            const DeepCollectionEquality().equals(
+              other._allowedInstances,
+              _allowedInstances,
+            ) &&
+            const DeepCollectionEquality().equals(
+              other._blockedInstances,
+              _blockedInstances,
+            ) &&
             const DeepCollectionEquality().equals(other._taglines, _taglines) &&
-            (identical(other.registrationMode, registrationMode) || other.registrationMode == registrationMode));
+            (identical(other.registrationMode, registrationMode) ||
+                other.registrationMode == registrationMode));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -2209,7 +2409,8 @@ class _$EditSiteImpl extends _EditSite {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$EditSiteImplCopyWith<_$EditSiteImpl> get copyWith => __$$EditSiteImplCopyWithImpl<_$EditSiteImpl>(this, _$identity);
+  _$$EditSiteImplCopyWith<_$EditSiteImpl> get copyWith =>
+      __$$EditSiteImplCopyWithImpl<_$EditSiteImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2261,7 +2462,8 @@ abstract class _EditSite extends EditSite {
   }) = _$EditSiteImpl;
   const _EditSite._() : super._();
 
-  factory _EditSite.fromJson(Map<String, dynamic> json) = _$EditSiteImpl.fromJson;
+  factory _EditSite.fromJson(Map<String, dynamic> json) =
+      _$EditSiteImpl.fromJson;
 
   @override
   String? get name;
@@ -2346,7 +2548,8 @@ abstract class _EditSite extends EditSite {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$EditSiteImplCopyWith<_$EditSiteImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$EditSiteImplCopyWith<_$EditSiteImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 UploadSiteIcon _$UploadSiteIconFromJson(Map<String, dynamic> json) {
@@ -2361,11 +2564,15 @@ mixin _$UploadSiteIcon {
 
 /// @nodoc
 abstract class $UploadSiteIconCopyWith<$Res> {
-  factory $UploadSiteIconCopyWith(UploadSiteIcon value, $Res Function(UploadSiteIcon) then) = _$UploadSiteIconCopyWithImpl<$Res, UploadSiteIcon>;
+  factory $UploadSiteIconCopyWith(
+    UploadSiteIcon value,
+    $Res Function(UploadSiteIcon) then,
+  ) = _$UploadSiteIconCopyWithImpl<$Res, UploadSiteIcon>;
 }
 
 /// @nodoc
-class _$UploadSiteIconCopyWithImpl<$Res, $Val extends UploadSiteIcon> implements $UploadSiteIconCopyWith<$Res> {
+class _$UploadSiteIconCopyWithImpl<$Res, $Val extends UploadSiteIcon>
+    implements $UploadSiteIconCopyWith<$Res> {
   _$UploadSiteIconCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -2379,12 +2586,20 @@ class _$UploadSiteIconCopyWithImpl<$Res, $Val extends UploadSiteIcon> implements
 
 /// @nodoc
 abstract class _$$UploadSiteIconImplCopyWith<$Res> {
-  factory _$$UploadSiteIconImplCopyWith(_$UploadSiteIconImpl value, $Res Function(_$UploadSiteIconImpl) then) = __$$UploadSiteIconImplCopyWithImpl<$Res>;
+  factory _$$UploadSiteIconImplCopyWith(
+    _$UploadSiteIconImpl value,
+    $Res Function(_$UploadSiteIconImpl) then,
+  ) = __$$UploadSiteIconImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$UploadSiteIconImplCopyWithImpl<$Res> extends _$UploadSiteIconCopyWithImpl<$Res, _$UploadSiteIconImpl> implements _$$UploadSiteIconImplCopyWith<$Res> {
-  __$$UploadSiteIconImplCopyWithImpl(_$UploadSiteIconImpl _value, $Res Function(_$UploadSiteIconImpl) _then) : super(_value, _then);
+class __$$UploadSiteIconImplCopyWithImpl<$Res>
+    extends _$UploadSiteIconCopyWithImpl<$Res, _$UploadSiteIconImpl>
+    implements _$$UploadSiteIconImplCopyWith<$Res> {
+  __$$UploadSiteIconImplCopyWithImpl(
+    _$UploadSiteIconImpl _value,
+    $Res Function(_$UploadSiteIconImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UploadSiteIcon
   /// with the given fields replaced by the non-null parameter values.
@@ -2396,7 +2611,8 @@ class __$$UploadSiteIconImplCopyWithImpl<$Res> extends _$UploadSiteIconCopyWithI
 class _$UploadSiteIconImpl extends _UploadSiteIcon {
   const _$UploadSiteIconImpl() : super._();
 
-  factory _$UploadSiteIconImpl.fromJson(Map<String, dynamic> json) => _$$UploadSiteIconImplFromJson(json);
+  factory _$UploadSiteIconImpl.fromJson(Map<String, dynamic> json) =>
+      _$$UploadSiteIconImplFromJson(json);
 
   @override
   String toString() {
@@ -2405,7 +2621,8 @@ class _$UploadSiteIconImpl extends _UploadSiteIcon {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$UploadSiteIconImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UploadSiteIconImpl);
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -2422,7 +2639,8 @@ abstract class _UploadSiteIcon extends UploadSiteIcon {
   const factory _UploadSiteIcon() = _$UploadSiteIconImpl;
   const _UploadSiteIcon._() : super._();
 
-  factory _UploadSiteIcon.fromJson(Map<String, dynamic> json) = _$UploadSiteIconImpl.fromJson;
+  factory _UploadSiteIcon.fromJson(Map<String, dynamic> json) =
+      _$UploadSiteIconImpl.fromJson;
 }
 
 DeleteSiteIcon _$DeleteSiteIconFromJson(Map<String, dynamic> json) {
@@ -2437,11 +2655,15 @@ mixin _$DeleteSiteIcon {
 
 /// @nodoc
 abstract class $DeleteSiteIconCopyWith<$Res> {
-  factory $DeleteSiteIconCopyWith(DeleteSiteIcon value, $Res Function(DeleteSiteIcon) then) = _$DeleteSiteIconCopyWithImpl<$Res, DeleteSiteIcon>;
+  factory $DeleteSiteIconCopyWith(
+    DeleteSiteIcon value,
+    $Res Function(DeleteSiteIcon) then,
+  ) = _$DeleteSiteIconCopyWithImpl<$Res, DeleteSiteIcon>;
 }
 
 /// @nodoc
-class _$DeleteSiteIconCopyWithImpl<$Res, $Val extends DeleteSiteIcon> implements $DeleteSiteIconCopyWith<$Res> {
+class _$DeleteSiteIconCopyWithImpl<$Res, $Val extends DeleteSiteIcon>
+    implements $DeleteSiteIconCopyWith<$Res> {
   _$DeleteSiteIconCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -2455,12 +2677,20 @@ class _$DeleteSiteIconCopyWithImpl<$Res, $Val extends DeleteSiteIcon> implements
 
 /// @nodoc
 abstract class _$$DeleteSiteIconImplCopyWith<$Res> {
-  factory _$$DeleteSiteIconImplCopyWith(_$DeleteSiteIconImpl value, $Res Function(_$DeleteSiteIconImpl) then) = __$$DeleteSiteIconImplCopyWithImpl<$Res>;
+  factory _$$DeleteSiteIconImplCopyWith(
+    _$DeleteSiteIconImpl value,
+    $Res Function(_$DeleteSiteIconImpl) then,
+  ) = __$$DeleteSiteIconImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$DeleteSiteIconImplCopyWithImpl<$Res> extends _$DeleteSiteIconCopyWithImpl<$Res, _$DeleteSiteIconImpl> implements _$$DeleteSiteIconImplCopyWith<$Res> {
-  __$$DeleteSiteIconImplCopyWithImpl(_$DeleteSiteIconImpl _value, $Res Function(_$DeleteSiteIconImpl) _then) : super(_value, _then);
+class __$$DeleteSiteIconImplCopyWithImpl<$Res>
+    extends _$DeleteSiteIconCopyWithImpl<$Res, _$DeleteSiteIconImpl>
+    implements _$$DeleteSiteIconImplCopyWith<$Res> {
+  __$$DeleteSiteIconImplCopyWithImpl(
+    _$DeleteSiteIconImpl _value,
+    $Res Function(_$DeleteSiteIconImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of DeleteSiteIcon
   /// with the given fields replaced by the non-null parameter values.
@@ -2472,7 +2702,8 @@ class __$$DeleteSiteIconImplCopyWithImpl<$Res> extends _$DeleteSiteIconCopyWithI
 class _$DeleteSiteIconImpl extends _DeleteSiteIcon {
   const _$DeleteSiteIconImpl() : super._();
 
-  factory _$DeleteSiteIconImpl.fromJson(Map<String, dynamic> json) => _$$DeleteSiteIconImplFromJson(json);
+  factory _$DeleteSiteIconImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DeleteSiteIconImplFromJson(json);
 
   @override
   String toString() {
@@ -2481,7 +2712,8 @@ class _$DeleteSiteIconImpl extends _DeleteSiteIcon {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$DeleteSiteIconImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$DeleteSiteIconImpl);
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -2498,7 +2730,8 @@ abstract class _DeleteSiteIcon extends DeleteSiteIcon {
   const factory _DeleteSiteIcon() = _$DeleteSiteIconImpl;
   const _DeleteSiteIcon._() : super._();
 
-  factory _DeleteSiteIcon.fromJson(Map<String, dynamic> json) = _$DeleteSiteIconImpl.fromJson;
+  factory _DeleteSiteIcon.fromJson(Map<String, dynamic> json) =
+      _$DeleteSiteIconImpl.fromJson;
 }
 
 UploadSiteBanner _$UploadSiteBannerFromJson(Map<String, dynamic> json) {
@@ -2513,11 +2746,15 @@ mixin _$UploadSiteBanner {
 
 /// @nodoc
 abstract class $UploadSiteBannerCopyWith<$Res> {
-  factory $UploadSiteBannerCopyWith(UploadSiteBanner value, $Res Function(UploadSiteBanner) then) = _$UploadSiteBannerCopyWithImpl<$Res, UploadSiteBanner>;
+  factory $UploadSiteBannerCopyWith(
+    UploadSiteBanner value,
+    $Res Function(UploadSiteBanner) then,
+  ) = _$UploadSiteBannerCopyWithImpl<$Res, UploadSiteBanner>;
 }
 
 /// @nodoc
-class _$UploadSiteBannerCopyWithImpl<$Res, $Val extends UploadSiteBanner> implements $UploadSiteBannerCopyWith<$Res> {
+class _$UploadSiteBannerCopyWithImpl<$Res, $Val extends UploadSiteBanner>
+    implements $UploadSiteBannerCopyWith<$Res> {
   _$UploadSiteBannerCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -2531,12 +2768,20 @@ class _$UploadSiteBannerCopyWithImpl<$Res, $Val extends UploadSiteBanner> implem
 
 /// @nodoc
 abstract class _$$UploadSiteBannerImplCopyWith<$Res> {
-  factory _$$UploadSiteBannerImplCopyWith(_$UploadSiteBannerImpl value, $Res Function(_$UploadSiteBannerImpl) then) = __$$UploadSiteBannerImplCopyWithImpl<$Res>;
+  factory _$$UploadSiteBannerImplCopyWith(
+    _$UploadSiteBannerImpl value,
+    $Res Function(_$UploadSiteBannerImpl) then,
+  ) = __$$UploadSiteBannerImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$UploadSiteBannerImplCopyWithImpl<$Res> extends _$UploadSiteBannerCopyWithImpl<$Res, _$UploadSiteBannerImpl> implements _$$UploadSiteBannerImplCopyWith<$Res> {
-  __$$UploadSiteBannerImplCopyWithImpl(_$UploadSiteBannerImpl _value, $Res Function(_$UploadSiteBannerImpl) _then) : super(_value, _then);
+class __$$UploadSiteBannerImplCopyWithImpl<$Res>
+    extends _$UploadSiteBannerCopyWithImpl<$Res, _$UploadSiteBannerImpl>
+    implements _$$UploadSiteBannerImplCopyWith<$Res> {
+  __$$UploadSiteBannerImplCopyWithImpl(
+    _$UploadSiteBannerImpl _value,
+    $Res Function(_$UploadSiteBannerImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of UploadSiteBanner
   /// with the given fields replaced by the non-null parameter values.
@@ -2548,7 +2793,8 @@ class __$$UploadSiteBannerImplCopyWithImpl<$Res> extends _$UploadSiteBannerCopyW
 class _$UploadSiteBannerImpl extends _UploadSiteBanner {
   const _$UploadSiteBannerImpl() : super._();
 
-  factory _$UploadSiteBannerImpl.fromJson(Map<String, dynamic> json) => _$$UploadSiteBannerImplFromJson(json);
+  factory _$UploadSiteBannerImpl.fromJson(Map<String, dynamic> json) =>
+      _$$UploadSiteBannerImplFromJson(json);
 
   @override
   String toString() {
@@ -2557,7 +2803,8 @@ class _$UploadSiteBannerImpl extends _UploadSiteBanner {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$UploadSiteBannerImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UploadSiteBannerImpl);
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -2574,7 +2821,8 @@ abstract class _UploadSiteBanner extends UploadSiteBanner {
   const factory _UploadSiteBanner() = _$UploadSiteBannerImpl;
   const _UploadSiteBanner._() : super._();
 
-  factory _UploadSiteBanner.fromJson(Map<String, dynamic> json) = _$UploadSiteBannerImpl.fromJson;
+  factory _UploadSiteBanner.fromJson(Map<String, dynamic> json) =
+      _$UploadSiteBannerImpl.fromJson;
 }
 
 DeleteSiteBanner _$DeleteSiteBannerFromJson(Map<String, dynamic> json) {
@@ -2589,11 +2837,15 @@ mixin _$DeleteSiteBanner {
 
 /// @nodoc
 abstract class $DeleteSiteBannerCopyWith<$Res> {
-  factory $DeleteSiteBannerCopyWith(DeleteSiteBanner value, $Res Function(DeleteSiteBanner) then) = _$DeleteSiteBannerCopyWithImpl<$Res, DeleteSiteBanner>;
+  factory $DeleteSiteBannerCopyWith(
+    DeleteSiteBanner value,
+    $Res Function(DeleteSiteBanner) then,
+  ) = _$DeleteSiteBannerCopyWithImpl<$Res, DeleteSiteBanner>;
 }
 
 /// @nodoc
-class _$DeleteSiteBannerCopyWithImpl<$Res, $Val extends DeleteSiteBanner> implements $DeleteSiteBannerCopyWith<$Res> {
+class _$DeleteSiteBannerCopyWithImpl<$Res, $Val extends DeleteSiteBanner>
+    implements $DeleteSiteBannerCopyWith<$Res> {
   _$DeleteSiteBannerCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -2607,12 +2859,20 @@ class _$DeleteSiteBannerCopyWithImpl<$Res, $Val extends DeleteSiteBanner> implem
 
 /// @nodoc
 abstract class _$$DeleteSiteBannerImplCopyWith<$Res> {
-  factory _$$DeleteSiteBannerImplCopyWith(_$DeleteSiteBannerImpl value, $Res Function(_$DeleteSiteBannerImpl) then) = __$$DeleteSiteBannerImplCopyWithImpl<$Res>;
+  factory _$$DeleteSiteBannerImplCopyWith(
+    _$DeleteSiteBannerImpl value,
+    $Res Function(_$DeleteSiteBannerImpl) then,
+  ) = __$$DeleteSiteBannerImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$DeleteSiteBannerImplCopyWithImpl<$Res> extends _$DeleteSiteBannerCopyWithImpl<$Res, _$DeleteSiteBannerImpl> implements _$$DeleteSiteBannerImplCopyWith<$Res> {
-  __$$DeleteSiteBannerImplCopyWithImpl(_$DeleteSiteBannerImpl _value, $Res Function(_$DeleteSiteBannerImpl) _then) : super(_value, _then);
+class __$$DeleteSiteBannerImplCopyWithImpl<$Res>
+    extends _$DeleteSiteBannerCopyWithImpl<$Res, _$DeleteSiteBannerImpl>
+    implements _$$DeleteSiteBannerImplCopyWith<$Res> {
+  __$$DeleteSiteBannerImplCopyWithImpl(
+    _$DeleteSiteBannerImpl _value,
+    $Res Function(_$DeleteSiteBannerImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of DeleteSiteBanner
   /// with the given fields replaced by the non-null parameter values.
@@ -2624,7 +2884,8 @@ class __$$DeleteSiteBannerImplCopyWithImpl<$Res> extends _$DeleteSiteBannerCopyW
 class _$DeleteSiteBannerImpl extends _DeleteSiteBanner {
   const _$DeleteSiteBannerImpl() : super._();
 
-  factory _$DeleteSiteBannerImpl.fromJson(Map<String, dynamic> json) => _$$DeleteSiteBannerImplFromJson(json);
+  factory _$DeleteSiteBannerImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DeleteSiteBannerImplFromJson(json);
 
   @override
   String toString() {
@@ -2633,7 +2894,8 @@ class _$DeleteSiteBannerImpl extends _DeleteSiteBanner {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$DeleteSiteBannerImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$DeleteSiteBannerImpl);
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -2650,5 +2912,6 @@ abstract class _DeleteSiteBanner extends DeleteSiteBanner {
   const factory _DeleteSiteBanner() = _$DeleteSiteBannerImpl;
   const _DeleteSiteBanner._() : super._();
 
-  factory _DeleteSiteBanner.fromJson(Map<String, dynamic> json) = _$DeleteSiteBannerImpl.fromJson;
+  factory _DeleteSiteBanner.fromJson(Map<String, dynamic> json) =
+      _$DeleteSiteBannerImpl.fromJson;
 }
