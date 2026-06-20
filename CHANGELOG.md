@@ -1,3 +1,21 @@
+## v0.69.0 - 2026-06-20
+
+### Added
+
+- `LemmyApiV4` now supports authenticated requests via a `token` field. Pass it
+  to the constructor (`LemmyApiV4(host, token: jwt)`) or set the mutable
+  `client.token` after login. When set, requests send `Authorization: Bearer
+  <token>`. Previously the v4 client could only make anonymous requests.
+
+### Fixed
+
+- Aligned `LocalUser` and `GetMyUserResponse` (returned by `GetMyUser`) with
+  the Lemmy 1.0 schema: required fields are now non-nullable, `VoteShow` is an
+  enum (replacing the old boolean), block-list element types match the spec
+  (`Community`, `Person`, and `Instance` for block lists), and the response now
+  exposes `keywordBlocks` and `multiCommunityFollows` fields that were
+  previously absent.
+
 ## v0.68.1 - 2026-06-20
 
 ### Fixed
