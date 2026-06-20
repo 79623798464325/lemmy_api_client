@@ -40,17 +40,13 @@ _$GetMyUserResponseImpl _$$GetMyUserResponseImplFromJson(
       (json['community_blocks'] as List<dynamic>)
           .map((e) => CommunityBlockView.fromJson(e as Map<String, dynamic>))
           .toList(),
-  instanceBlocks:
-      (json['instance_blocks'] as List<dynamic>?)
-          ?.map((e) => InstanceBlockView.fromJson(e as Map<String, dynamic>))
-          .toList(),
   instanceCommunitiesBlocks:
-      (json['instance_communities_blocks'] as List<dynamic>?)
-          ?.map((e) => InstanceBlockView.fromJson(e as Map<String, dynamic>))
+      (json['instance_communities_blocks'] as List<dynamic>)
+          .map((e) => Instance.fromJson(e as Map<String, dynamic>))
           .toList(),
   instancePersonsBlocks:
-      (json['instance_persons_blocks'] as List<dynamic>?)
-          ?.map((e) => InstanceBlockView.fromJson(e as Map<String, dynamic>))
+      (json['instance_persons_blocks'] as List<dynamic>)
+          .map((e) => Instance.fromJson(e as Map<String, dynamic>))
           .toList(),
   personBlocks:
       (json['person_blocks'] as List<dynamic>)
@@ -59,6 +55,14 @@ _$GetMyUserResponseImpl _$$GetMyUserResponseImplFromJson(
   discussionLanguages:
       (json['discussion_languages'] as List<dynamic>)
           .map((e) => (e as num).toInt())
+          .toList(),
+  keywordBlocks:
+      (json['keyword_blocks'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+  multiCommunityFollows:
+      (json['multi_community_follows'] as List<dynamic>)
+          .map((e) => MultiCommunityView.fromJson(e as Map<String, dynamic>))
           .toList(),
 );
 
@@ -69,13 +73,15 @@ Map<String, dynamic> _$$GetMyUserResponseImplToJson(
   'follows': instance.follows.map((e) => e.toJson()).toList(),
   'moderates': instance.moderates.map((e) => e.toJson()).toList(),
   'community_blocks': instance.communityBlocks.map((e) => e.toJson()).toList(),
-  'instance_blocks': instance.instanceBlocks?.map((e) => e.toJson()).toList(),
   'instance_communities_blocks':
-      instance.instanceCommunitiesBlocks?.map((e) => e.toJson()).toList(),
+      instance.instanceCommunitiesBlocks.map((e) => e.toJson()).toList(),
   'instance_persons_blocks':
-      instance.instancePersonsBlocks?.map((e) => e.toJson()).toList(),
+      instance.instancePersonsBlocks.map((e) => e.toJson()).toList(),
   'person_blocks': instance.personBlocks.map((e) => e.toJson()).toList(),
   'discussion_languages': instance.discussionLanguages,
+  'keyword_blocks': instance.keywordBlocks,
+  'multi_community_follows':
+      instance.multiCommunityFollows.map((e) => e.toJson()).toList(),
 };
 
 _$GetCaptchaResponseImpl _$$GetCaptchaResponseImplFromJson(

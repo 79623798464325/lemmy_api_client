@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../shared/utils/serde.dart';
+import '../enums/enums.dart';
 import 'source.dart';
 
 part 'account_views.freezed.dart';
@@ -10,7 +11,7 @@ part 'account_views.g.dart';
 @freezed
 class LocalUserView with _$LocalUserView {
   @modelSerde
-  const factory LocalUserView({required LocalUser localUser, required Person person, bool? banned, DateTime? banExpiresAt}) = _LocalUserView;
+  const factory LocalUserView({required LocalUser localUser, required Person person, required bool banned, DateTime? banExpiresAt}) = _LocalUserView;
   const LocalUserView._();
   factory LocalUserView.fromJson(Map<String, dynamic> json) => _$LocalUserViewFromJson(json);
 }
@@ -23,47 +24,44 @@ class LocalUser with _$LocalUser {
     required int id,
     required int personId,
     required bool showNsfw,
+    /// Optional theme name (null when unset).
     String? theme,
-    /// JSON key: default_post_sort_type (renamed from default_sort_type in Lemmy 1.0)
-    @JsonKey(name: 'default_post_sort_type') String? defaultPostSortType,
-    /// Kept for backward compat with older instances
-    @JsonKey(name: 'default_sort_type') String? defaultSortType,
+    /// Sensitive email address (optional).
+    String? email,
+    /// Optional invited-by user ID.
+    int? invitedByLocalUserId,
     required String defaultListingType,
     required String interfaceLanguage,
     required bool showAvatars,
     required bool sendNotificationsToEmail,
-    /// JSON key: show_score (renamed from show_scores in Lemmy 1.0)
-    @JsonKey(name: 'show_score') bool? showScore,
-    /// Kept for backward compat with older instances
-    @JsonKey(name: 'show_scores') bool? showScores,
     required bool showBotAccounts,
     required bool showReadPosts,
     required bool emailVerified,
     required bool acceptedApplication,
     required bool openLinksInNewTab,
     required bool blurNsfw,
-    bool? autoExpand,
     required bool infiniteScrollEnabled,
     required bool admin,
     required String postListingMode,
-    @JsonKey(name: 'totp_2fa_enabled') bool? totp2faEnabled,
-    bool? totpEnabled,
-    bool? enableKeyboardNavigation,
-    @JsonKey(name: 'animated_images_enabled') bool? animatedImagesEnabled,
-    bool? enableAnimatedImages,
     required bool collapseBotComments,
-    // Additional fields present in Lemmy 1.0+
-    DateTime? lastDonationNotificationAt,
-    bool? privateMessagesEnabled,
-    String? defaultCommentSortType,
-    bool? autoMarkFetchedPostsAsRead,
-    bool? hidePostsWithMedia,
-    bool? showUpvotes,
-    String? showDownvotes,
-    bool? showUpvotePercentage,
-    bool? showPersonVotes,
-    int? defaultItemsPerPage,
-    bool? showMedia,
+    // Lemmy 1.0 required fields
+    @JsonKey(name: 'default_post_sort_type') required PostSortType defaultPostSortType,
+    @JsonKey(name: 'show_score') required bool showScore,
+    @JsonKey(name: 'totp_2fa_enabled') required bool totp2faEnabled,
+    @JsonKey(name: 'animated_images_enabled') required bool animatedImagesEnabled,
+    @JsonKey(name: 'last_donation_notification_at') required String lastDonationNotificationAt,
+    required bool privateMessagesEnabled,
+    required CommentSortType defaultCommentSortType,
+    required bool autoMarkFetchedPostsAsRead,
+    required bool hidePostsWithMedia,
+    required bool showUpvotes,
+    required VoteShow showDownvotes,
+    required bool showUpvotePercentage,
+    required bool showPersonVotes,
+    required double defaultItemsPerPage,
+    required bool showMedia,
+    // Optional fields
+    double? defaultPostTimeRangeSeconds,
   }) = _LocalUser;
 
   const LocalUser._();

@@ -23,7 +23,7 @@ LocalUserView _$LocalUserViewFromJson(Map<String, dynamic> json) {
 mixin _$LocalUserView {
   LocalUser get localUser => throw _privateConstructorUsedError;
   Person get person => throw _privateConstructorUsedError;
-  bool? get banned => throw _privateConstructorUsedError;
+  bool get banned => throw _privateConstructorUsedError;
   DateTime? get banExpiresAt => throw _privateConstructorUsedError;
 
   /// Serializes this LocalUserView to a JSON map.
@@ -46,7 +46,7 @@ abstract class $LocalUserViewCopyWith<$Res> {
   $Res call({
     LocalUser localUser,
     Person person,
-    bool? banned,
+    bool banned,
     DateTime? banExpiresAt,
   });
 
@@ -71,7 +71,7 @@ class _$LocalUserViewCopyWithImpl<$Res, $Val extends LocalUserView>
   $Res call({
     Object? localUser = null,
     Object? person = null,
-    Object? banned = freezed,
+    Object? banned = null,
     Object? banExpiresAt = freezed,
   }) {
     return _then(
@@ -87,10 +87,10 @@ class _$LocalUserViewCopyWithImpl<$Res, $Val extends LocalUserView>
                     : person // ignore: cast_nullable_to_non_nullable
                         as Person,
             banned:
-                freezed == banned
+                null == banned
                     ? _value.banned
                     : banned // ignore: cast_nullable_to_non_nullable
-                        as bool?,
+                        as bool,
             banExpiresAt:
                 freezed == banExpiresAt
                     ? _value.banExpiresAt
@@ -134,7 +134,7 @@ abstract class _$$LocalUserViewImplCopyWith<$Res>
   $Res call({
     LocalUser localUser,
     Person person,
-    bool? banned,
+    bool banned,
     DateTime? banExpiresAt,
   });
 
@@ -160,7 +160,7 @@ class __$$LocalUserViewImplCopyWithImpl<$Res>
   $Res call({
     Object? localUser = null,
     Object? person = null,
-    Object? banned = freezed,
+    Object? banned = null,
     Object? banExpiresAt = freezed,
   }) {
     return _then(
@@ -176,10 +176,10 @@ class __$$LocalUserViewImplCopyWithImpl<$Res>
                 : person // ignore: cast_nullable_to_non_nullable
                     as Person,
         banned:
-            freezed == banned
+            null == banned
                 ? _value.banned
                 : banned // ignore: cast_nullable_to_non_nullable
-                    as bool?,
+                    as bool,
         banExpiresAt:
             freezed == banExpiresAt
                 ? _value.banExpiresAt
@@ -197,7 +197,7 @@ class _$LocalUserViewImpl extends _LocalUserView {
   const _$LocalUserViewImpl({
     required this.localUser,
     required this.person,
-    this.banned,
+    required this.banned,
     this.banExpiresAt,
   }) : super._();
 
@@ -209,7 +209,7 @@ class _$LocalUserViewImpl extends _LocalUserView {
   @override
   final Person person;
   @override
-  final bool? banned;
+  final bool banned;
   @override
   final DateTime? banExpiresAt;
 
@@ -254,7 +254,7 @@ abstract class _LocalUserView extends LocalUserView {
   const factory _LocalUserView({
     required final LocalUser localUser,
     required final Person person,
-    final bool? banned,
+    required final bool banned,
     final DateTime? banExpiresAt,
   }) = _$LocalUserViewImpl;
   const _LocalUserView._() : super._();
@@ -267,7 +267,7 @@ abstract class _LocalUserView extends LocalUserView {
   @override
   Person get person;
   @override
-  bool? get banned;
+  bool get banned;
   @override
   DateTime? get banExpiresAt;
 
@@ -288,58 +288,52 @@ mixin _$LocalUser {
   int get id => throw _privateConstructorUsedError;
   int get personId => throw _privateConstructorUsedError;
   bool get showNsfw => throw _privateConstructorUsedError;
+
+  /// Optional theme name (null when unset).
   String? get theme => throw _privateConstructorUsedError;
 
-  /// JSON key: default_post_sort_type (renamed from default_sort_type in Lemmy 1.0)
-  @JsonKey(name: 'default_post_sort_type')
-  String? get defaultPostSortType => throw _privateConstructorUsedError;
+  /// Sensitive email address (optional).
+  String? get email => throw _privateConstructorUsedError;
 
-  /// Kept for backward compat with older instances
-  @JsonKey(name: 'default_sort_type')
-  String? get defaultSortType => throw _privateConstructorUsedError;
+  /// Optional invited-by user ID.
+  int? get invitedByLocalUserId => throw _privateConstructorUsedError;
   String get defaultListingType => throw _privateConstructorUsedError;
   String get interfaceLanguage => throw _privateConstructorUsedError;
   bool get showAvatars => throw _privateConstructorUsedError;
   bool get sendNotificationsToEmail => throw _privateConstructorUsedError;
-
-  /// JSON key: show_score (renamed from show_scores in Lemmy 1.0)
-  @JsonKey(name: 'show_score')
-  bool? get showScore => throw _privateConstructorUsedError;
-
-  /// Kept for backward compat with older instances
-  @JsonKey(name: 'show_scores')
-  bool? get showScores => throw _privateConstructorUsedError;
   bool get showBotAccounts => throw _privateConstructorUsedError;
   bool get showReadPosts => throw _privateConstructorUsedError;
   bool get emailVerified => throw _privateConstructorUsedError;
   bool get acceptedApplication => throw _privateConstructorUsedError;
   bool get openLinksInNewTab => throw _privateConstructorUsedError;
   bool get blurNsfw => throw _privateConstructorUsedError;
-  bool? get autoExpand => throw _privateConstructorUsedError;
   bool get infiniteScrollEnabled => throw _privateConstructorUsedError;
   bool get admin => throw _privateConstructorUsedError;
   String get postListingMode => throw _privateConstructorUsedError;
-  @JsonKey(name: 'totp_2fa_enabled')
-  bool? get totp2faEnabled => throw _privateConstructorUsedError;
-  bool? get totpEnabled => throw _privateConstructorUsedError;
-  bool? get enableKeyboardNavigation => throw _privateConstructorUsedError;
-  @JsonKey(name: 'animated_images_enabled')
-  bool? get animatedImagesEnabled => throw _privateConstructorUsedError;
-  bool? get enableAnimatedImages => throw _privateConstructorUsedError;
   bool get collapseBotComments =>
-      throw _privateConstructorUsedError; // Additional fields present in Lemmy 1.0+
-  DateTime? get lastDonationNotificationAt =>
+      throw _privateConstructorUsedError; // Lemmy 1.0 required fields
+  @JsonKey(name: 'default_post_sort_type')
+  PostSortType get defaultPostSortType => throw _privateConstructorUsedError;
+  @JsonKey(name: 'show_score')
+  bool get showScore => throw _privateConstructorUsedError;
+  @JsonKey(name: 'totp_2fa_enabled')
+  bool get totp2faEnabled => throw _privateConstructorUsedError;
+  @JsonKey(name: 'animated_images_enabled')
+  bool get animatedImagesEnabled => throw _privateConstructorUsedError;
+  @JsonKey(name: 'last_donation_notification_at')
+  String get lastDonationNotificationAt => throw _privateConstructorUsedError;
+  bool get privateMessagesEnabled => throw _privateConstructorUsedError;
+  CommentSortType get defaultCommentSortType =>
       throw _privateConstructorUsedError;
-  bool? get privateMessagesEnabled => throw _privateConstructorUsedError;
-  String? get defaultCommentSortType => throw _privateConstructorUsedError;
-  bool? get autoMarkFetchedPostsAsRead => throw _privateConstructorUsedError;
-  bool? get hidePostsWithMedia => throw _privateConstructorUsedError;
-  bool? get showUpvotes => throw _privateConstructorUsedError;
-  String? get showDownvotes => throw _privateConstructorUsedError;
-  bool? get showUpvotePercentage => throw _privateConstructorUsedError;
-  bool? get showPersonVotes => throw _privateConstructorUsedError;
-  int? get defaultItemsPerPage => throw _privateConstructorUsedError;
-  bool? get showMedia => throw _privateConstructorUsedError;
+  bool get autoMarkFetchedPostsAsRead => throw _privateConstructorUsedError;
+  bool get hidePostsWithMedia => throw _privateConstructorUsedError;
+  bool get showUpvotes => throw _privateConstructorUsedError;
+  VoteShow get showDownvotes => throw _privateConstructorUsedError;
+  bool get showUpvotePercentage => throw _privateConstructorUsedError;
+  bool get showPersonVotes => throw _privateConstructorUsedError;
+  double get defaultItemsPerPage => throw _privateConstructorUsedError;
+  bool get showMedia => throw _privateConstructorUsedError; // Optional fields
+  double? get defaultPostTimeRangeSeconds => throw _privateConstructorUsedError;
 
   /// Serializes this LocalUser to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -361,41 +355,39 @@ abstract class $LocalUserCopyWith<$Res> {
     int personId,
     bool showNsfw,
     String? theme,
-    @JsonKey(name: 'default_post_sort_type') String? defaultPostSortType,
-    @JsonKey(name: 'default_sort_type') String? defaultSortType,
+    String? email,
+    int? invitedByLocalUserId,
     String defaultListingType,
     String interfaceLanguage,
     bool showAvatars,
     bool sendNotificationsToEmail,
-    @JsonKey(name: 'show_score') bool? showScore,
-    @JsonKey(name: 'show_scores') bool? showScores,
     bool showBotAccounts,
     bool showReadPosts,
     bool emailVerified,
     bool acceptedApplication,
     bool openLinksInNewTab,
     bool blurNsfw,
-    bool? autoExpand,
     bool infiniteScrollEnabled,
     bool admin,
     String postListingMode,
-    @JsonKey(name: 'totp_2fa_enabled') bool? totp2faEnabled,
-    bool? totpEnabled,
-    bool? enableKeyboardNavigation,
-    @JsonKey(name: 'animated_images_enabled') bool? animatedImagesEnabled,
-    bool? enableAnimatedImages,
     bool collapseBotComments,
-    DateTime? lastDonationNotificationAt,
-    bool? privateMessagesEnabled,
-    String? defaultCommentSortType,
-    bool? autoMarkFetchedPostsAsRead,
-    bool? hidePostsWithMedia,
-    bool? showUpvotes,
-    String? showDownvotes,
-    bool? showUpvotePercentage,
-    bool? showPersonVotes,
-    int? defaultItemsPerPage,
-    bool? showMedia,
+    @JsonKey(name: 'default_post_sort_type') PostSortType defaultPostSortType,
+    @JsonKey(name: 'show_score') bool showScore,
+    @JsonKey(name: 'totp_2fa_enabled') bool totp2faEnabled,
+    @JsonKey(name: 'animated_images_enabled') bool animatedImagesEnabled,
+    @JsonKey(name: 'last_donation_notification_at')
+    String lastDonationNotificationAt,
+    bool privateMessagesEnabled,
+    CommentSortType defaultCommentSortType,
+    bool autoMarkFetchedPostsAsRead,
+    bool hidePostsWithMedia,
+    bool showUpvotes,
+    VoteShow showDownvotes,
+    bool showUpvotePercentage,
+    bool showPersonVotes,
+    double defaultItemsPerPage,
+    bool showMedia,
+    double? defaultPostTimeRangeSeconds,
   });
 }
 
@@ -418,41 +410,38 @@ class _$LocalUserCopyWithImpl<$Res, $Val extends LocalUser>
     Object? personId = null,
     Object? showNsfw = null,
     Object? theme = freezed,
-    Object? defaultPostSortType = freezed,
-    Object? defaultSortType = freezed,
+    Object? email = freezed,
+    Object? invitedByLocalUserId = freezed,
     Object? defaultListingType = null,
     Object? interfaceLanguage = null,
     Object? showAvatars = null,
     Object? sendNotificationsToEmail = null,
-    Object? showScore = freezed,
-    Object? showScores = freezed,
     Object? showBotAccounts = null,
     Object? showReadPosts = null,
     Object? emailVerified = null,
     Object? acceptedApplication = null,
     Object? openLinksInNewTab = null,
     Object? blurNsfw = null,
-    Object? autoExpand = freezed,
     Object? infiniteScrollEnabled = null,
     Object? admin = null,
     Object? postListingMode = null,
-    Object? totp2faEnabled = freezed,
-    Object? totpEnabled = freezed,
-    Object? enableKeyboardNavigation = freezed,
-    Object? animatedImagesEnabled = freezed,
-    Object? enableAnimatedImages = freezed,
     Object? collapseBotComments = null,
-    Object? lastDonationNotificationAt = freezed,
-    Object? privateMessagesEnabled = freezed,
-    Object? defaultCommentSortType = freezed,
-    Object? autoMarkFetchedPostsAsRead = freezed,
-    Object? hidePostsWithMedia = freezed,
-    Object? showUpvotes = freezed,
-    Object? showDownvotes = freezed,
-    Object? showUpvotePercentage = freezed,
-    Object? showPersonVotes = freezed,
-    Object? defaultItemsPerPage = freezed,
-    Object? showMedia = freezed,
+    Object? defaultPostSortType = null,
+    Object? showScore = null,
+    Object? totp2faEnabled = null,
+    Object? animatedImagesEnabled = null,
+    Object? lastDonationNotificationAt = null,
+    Object? privateMessagesEnabled = null,
+    Object? defaultCommentSortType = null,
+    Object? autoMarkFetchedPostsAsRead = null,
+    Object? hidePostsWithMedia = null,
+    Object? showUpvotes = null,
+    Object? showDownvotes = null,
+    Object? showUpvotePercentage = null,
+    Object? showPersonVotes = null,
+    Object? defaultItemsPerPage = null,
+    Object? showMedia = null,
+    Object? defaultPostTimeRangeSeconds = freezed,
   }) {
     return _then(
       _value.copyWith(
@@ -476,16 +465,16 @@ class _$LocalUserCopyWithImpl<$Res, $Val extends LocalUser>
                     ? _value.theme
                     : theme // ignore: cast_nullable_to_non_nullable
                         as String?,
-            defaultPostSortType:
-                freezed == defaultPostSortType
-                    ? _value.defaultPostSortType
-                    : defaultPostSortType // ignore: cast_nullable_to_non_nullable
+            email:
+                freezed == email
+                    ? _value.email
+                    : email // ignore: cast_nullable_to_non_nullable
                         as String?,
-            defaultSortType:
-                freezed == defaultSortType
-                    ? _value.defaultSortType
-                    : defaultSortType // ignore: cast_nullable_to_non_nullable
-                        as String?,
+            invitedByLocalUserId:
+                freezed == invitedByLocalUserId
+                    ? _value.invitedByLocalUserId
+                    : invitedByLocalUserId // ignore: cast_nullable_to_non_nullable
+                        as int?,
             defaultListingType:
                 null == defaultListingType
                     ? _value.defaultListingType
@@ -506,16 +495,6 @@ class _$LocalUserCopyWithImpl<$Res, $Val extends LocalUser>
                     ? _value.sendNotificationsToEmail
                     : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
                         as bool,
-            showScore:
-                freezed == showScore
-                    ? _value.showScore
-                    : showScore // ignore: cast_nullable_to_non_nullable
-                        as bool?,
-            showScores:
-                freezed == showScores
-                    ? _value.showScores
-                    : showScores // ignore: cast_nullable_to_non_nullable
-                        as bool?,
             showBotAccounts:
                 null == showBotAccounts
                     ? _value.showBotAccounts
@@ -546,11 +525,6 @@ class _$LocalUserCopyWithImpl<$Res, $Val extends LocalUser>
                     ? _value.blurNsfw
                     : blurNsfw // ignore: cast_nullable_to_non_nullable
                         as bool,
-            autoExpand:
-                freezed == autoExpand
-                    ? _value.autoExpand
-                    : autoExpand // ignore: cast_nullable_to_non_nullable
-                        as bool?,
             infiniteScrollEnabled:
                 null == infiniteScrollEnabled
                     ? _value.infiniteScrollEnabled
@@ -566,91 +540,91 @@ class _$LocalUserCopyWithImpl<$Res, $Val extends LocalUser>
                     ? _value.postListingMode
                     : postListingMode // ignore: cast_nullable_to_non_nullable
                         as String,
-            totp2faEnabled:
-                freezed == totp2faEnabled
-                    ? _value.totp2faEnabled
-                    : totp2faEnabled // ignore: cast_nullable_to_non_nullable
-                        as bool?,
-            totpEnabled:
-                freezed == totpEnabled
-                    ? _value.totpEnabled
-                    : totpEnabled // ignore: cast_nullable_to_non_nullable
-                        as bool?,
-            enableKeyboardNavigation:
-                freezed == enableKeyboardNavigation
-                    ? _value.enableKeyboardNavigation
-                    : enableKeyboardNavigation // ignore: cast_nullable_to_non_nullable
-                        as bool?,
-            animatedImagesEnabled:
-                freezed == animatedImagesEnabled
-                    ? _value.animatedImagesEnabled
-                    : animatedImagesEnabled // ignore: cast_nullable_to_non_nullable
-                        as bool?,
-            enableAnimatedImages:
-                freezed == enableAnimatedImages
-                    ? _value.enableAnimatedImages
-                    : enableAnimatedImages // ignore: cast_nullable_to_non_nullable
-                        as bool?,
             collapseBotComments:
                 null == collapseBotComments
                     ? _value.collapseBotComments
                     : collapseBotComments // ignore: cast_nullable_to_non_nullable
                         as bool,
+            defaultPostSortType:
+                null == defaultPostSortType
+                    ? _value.defaultPostSortType
+                    : defaultPostSortType // ignore: cast_nullable_to_non_nullable
+                        as PostSortType,
+            showScore:
+                null == showScore
+                    ? _value.showScore
+                    : showScore // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            totp2faEnabled:
+                null == totp2faEnabled
+                    ? _value.totp2faEnabled
+                    : totp2faEnabled // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            animatedImagesEnabled:
+                null == animatedImagesEnabled
+                    ? _value.animatedImagesEnabled
+                    : animatedImagesEnabled // ignore: cast_nullable_to_non_nullable
+                        as bool,
             lastDonationNotificationAt:
-                freezed == lastDonationNotificationAt
+                null == lastDonationNotificationAt
                     ? _value.lastDonationNotificationAt
                     : lastDonationNotificationAt // ignore: cast_nullable_to_non_nullable
-                        as DateTime?,
+                        as String,
             privateMessagesEnabled:
-                freezed == privateMessagesEnabled
+                null == privateMessagesEnabled
                     ? _value.privateMessagesEnabled
                     : privateMessagesEnabled // ignore: cast_nullable_to_non_nullable
-                        as bool?,
+                        as bool,
             defaultCommentSortType:
-                freezed == defaultCommentSortType
+                null == defaultCommentSortType
                     ? _value.defaultCommentSortType
                     : defaultCommentSortType // ignore: cast_nullable_to_non_nullable
-                        as String?,
+                        as CommentSortType,
             autoMarkFetchedPostsAsRead:
-                freezed == autoMarkFetchedPostsAsRead
+                null == autoMarkFetchedPostsAsRead
                     ? _value.autoMarkFetchedPostsAsRead
                     : autoMarkFetchedPostsAsRead // ignore: cast_nullable_to_non_nullable
-                        as bool?,
+                        as bool,
             hidePostsWithMedia:
-                freezed == hidePostsWithMedia
+                null == hidePostsWithMedia
                     ? _value.hidePostsWithMedia
                     : hidePostsWithMedia // ignore: cast_nullable_to_non_nullable
-                        as bool?,
+                        as bool,
             showUpvotes:
-                freezed == showUpvotes
+                null == showUpvotes
                     ? _value.showUpvotes
                     : showUpvotes // ignore: cast_nullable_to_non_nullable
-                        as bool?,
+                        as bool,
             showDownvotes:
-                freezed == showDownvotes
+                null == showDownvotes
                     ? _value.showDownvotes
                     : showDownvotes // ignore: cast_nullable_to_non_nullable
-                        as String?,
+                        as VoteShow,
             showUpvotePercentage:
-                freezed == showUpvotePercentage
+                null == showUpvotePercentage
                     ? _value.showUpvotePercentage
                     : showUpvotePercentage // ignore: cast_nullable_to_non_nullable
-                        as bool?,
+                        as bool,
             showPersonVotes:
-                freezed == showPersonVotes
+                null == showPersonVotes
                     ? _value.showPersonVotes
                     : showPersonVotes // ignore: cast_nullable_to_non_nullable
-                        as bool?,
+                        as bool,
             defaultItemsPerPage:
-                freezed == defaultItemsPerPage
+                null == defaultItemsPerPage
                     ? _value.defaultItemsPerPage
                     : defaultItemsPerPage // ignore: cast_nullable_to_non_nullable
-                        as int?,
+                        as double,
             showMedia:
-                freezed == showMedia
+                null == showMedia
                     ? _value.showMedia
                     : showMedia // ignore: cast_nullable_to_non_nullable
-                        as bool?,
+                        as bool,
+            defaultPostTimeRangeSeconds:
+                freezed == defaultPostTimeRangeSeconds
+                    ? _value.defaultPostTimeRangeSeconds
+                    : defaultPostTimeRangeSeconds // ignore: cast_nullable_to_non_nullable
+                        as double?,
           )
           as $Val,
     );
@@ -671,41 +645,39 @@ abstract class _$$LocalUserImplCopyWith<$Res>
     int personId,
     bool showNsfw,
     String? theme,
-    @JsonKey(name: 'default_post_sort_type') String? defaultPostSortType,
-    @JsonKey(name: 'default_sort_type') String? defaultSortType,
+    String? email,
+    int? invitedByLocalUserId,
     String defaultListingType,
     String interfaceLanguage,
     bool showAvatars,
     bool sendNotificationsToEmail,
-    @JsonKey(name: 'show_score') bool? showScore,
-    @JsonKey(name: 'show_scores') bool? showScores,
     bool showBotAccounts,
     bool showReadPosts,
     bool emailVerified,
     bool acceptedApplication,
     bool openLinksInNewTab,
     bool blurNsfw,
-    bool? autoExpand,
     bool infiniteScrollEnabled,
     bool admin,
     String postListingMode,
-    @JsonKey(name: 'totp_2fa_enabled') bool? totp2faEnabled,
-    bool? totpEnabled,
-    bool? enableKeyboardNavigation,
-    @JsonKey(name: 'animated_images_enabled') bool? animatedImagesEnabled,
-    bool? enableAnimatedImages,
     bool collapseBotComments,
-    DateTime? lastDonationNotificationAt,
-    bool? privateMessagesEnabled,
-    String? defaultCommentSortType,
-    bool? autoMarkFetchedPostsAsRead,
-    bool? hidePostsWithMedia,
-    bool? showUpvotes,
-    String? showDownvotes,
-    bool? showUpvotePercentage,
-    bool? showPersonVotes,
-    int? defaultItemsPerPage,
-    bool? showMedia,
+    @JsonKey(name: 'default_post_sort_type') PostSortType defaultPostSortType,
+    @JsonKey(name: 'show_score') bool showScore,
+    @JsonKey(name: 'totp_2fa_enabled') bool totp2faEnabled,
+    @JsonKey(name: 'animated_images_enabled') bool animatedImagesEnabled,
+    @JsonKey(name: 'last_donation_notification_at')
+    String lastDonationNotificationAt,
+    bool privateMessagesEnabled,
+    CommentSortType defaultCommentSortType,
+    bool autoMarkFetchedPostsAsRead,
+    bool hidePostsWithMedia,
+    bool showUpvotes,
+    VoteShow showDownvotes,
+    bool showUpvotePercentage,
+    bool showPersonVotes,
+    double defaultItemsPerPage,
+    bool showMedia,
+    double? defaultPostTimeRangeSeconds,
   });
 }
 
@@ -727,41 +699,38 @@ class __$$LocalUserImplCopyWithImpl<$Res>
     Object? personId = null,
     Object? showNsfw = null,
     Object? theme = freezed,
-    Object? defaultPostSortType = freezed,
-    Object? defaultSortType = freezed,
+    Object? email = freezed,
+    Object? invitedByLocalUserId = freezed,
     Object? defaultListingType = null,
     Object? interfaceLanguage = null,
     Object? showAvatars = null,
     Object? sendNotificationsToEmail = null,
-    Object? showScore = freezed,
-    Object? showScores = freezed,
     Object? showBotAccounts = null,
     Object? showReadPosts = null,
     Object? emailVerified = null,
     Object? acceptedApplication = null,
     Object? openLinksInNewTab = null,
     Object? blurNsfw = null,
-    Object? autoExpand = freezed,
     Object? infiniteScrollEnabled = null,
     Object? admin = null,
     Object? postListingMode = null,
-    Object? totp2faEnabled = freezed,
-    Object? totpEnabled = freezed,
-    Object? enableKeyboardNavigation = freezed,
-    Object? animatedImagesEnabled = freezed,
-    Object? enableAnimatedImages = freezed,
     Object? collapseBotComments = null,
-    Object? lastDonationNotificationAt = freezed,
-    Object? privateMessagesEnabled = freezed,
-    Object? defaultCommentSortType = freezed,
-    Object? autoMarkFetchedPostsAsRead = freezed,
-    Object? hidePostsWithMedia = freezed,
-    Object? showUpvotes = freezed,
-    Object? showDownvotes = freezed,
-    Object? showUpvotePercentage = freezed,
-    Object? showPersonVotes = freezed,
-    Object? defaultItemsPerPage = freezed,
-    Object? showMedia = freezed,
+    Object? defaultPostSortType = null,
+    Object? showScore = null,
+    Object? totp2faEnabled = null,
+    Object? animatedImagesEnabled = null,
+    Object? lastDonationNotificationAt = null,
+    Object? privateMessagesEnabled = null,
+    Object? defaultCommentSortType = null,
+    Object? autoMarkFetchedPostsAsRead = null,
+    Object? hidePostsWithMedia = null,
+    Object? showUpvotes = null,
+    Object? showDownvotes = null,
+    Object? showUpvotePercentage = null,
+    Object? showPersonVotes = null,
+    Object? defaultItemsPerPage = null,
+    Object? showMedia = null,
+    Object? defaultPostTimeRangeSeconds = freezed,
   }) {
     return _then(
       _$LocalUserImpl(
@@ -785,16 +754,16 @@ class __$$LocalUserImplCopyWithImpl<$Res>
                 ? _value.theme
                 : theme // ignore: cast_nullable_to_non_nullable
                     as String?,
-        defaultPostSortType:
-            freezed == defaultPostSortType
-                ? _value.defaultPostSortType
-                : defaultPostSortType // ignore: cast_nullable_to_non_nullable
+        email:
+            freezed == email
+                ? _value.email
+                : email // ignore: cast_nullable_to_non_nullable
                     as String?,
-        defaultSortType:
-            freezed == defaultSortType
-                ? _value.defaultSortType
-                : defaultSortType // ignore: cast_nullable_to_non_nullable
-                    as String?,
+        invitedByLocalUserId:
+            freezed == invitedByLocalUserId
+                ? _value.invitedByLocalUserId
+                : invitedByLocalUserId // ignore: cast_nullable_to_non_nullable
+                    as int?,
         defaultListingType:
             null == defaultListingType
                 ? _value.defaultListingType
@@ -815,16 +784,6 @@ class __$$LocalUserImplCopyWithImpl<$Res>
                 ? _value.sendNotificationsToEmail
                 : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
                     as bool,
-        showScore:
-            freezed == showScore
-                ? _value.showScore
-                : showScore // ignore: cast_nullable_to_non_nullable
-                    as bool?,
-        showScores:
-            freezed == showScores
-                ? _value.showScores
-                : showScores // ignore: cast_nullable_to_non_nullable
-                    as bool?,
         showBotAccounts:
             null == showBotAccounts
                 ? _value.showBotAccounts
@@ -855,11 +814,6 @@ class __$$LocalUserImplCopyWithImpl<$Res>
                 ? _value.blurNsfw
                 : blurNsfw // ignore: cast_nullable_to_non_nullable
                     as bool,
-        autoExpand:
-            freezed == autoExpand
-                ? _value.autoExpand
-                : autoExpand // ignore: cast_nullable_to_non_nullable
-                    as bool?,
         infiniteScrollEnabled:
             null == infiniteScrollEnabled
                 ? _value.infiniteScrollEnabled
@@ -875,91 +829,91 @@ class __$$LocalUserImplCopyWithImpl<$Res>
                 ? _value.postListingMode
                 : postListingMode // ignore: cast_nullable_to_non_nullable
                     as String,
-        totp2faEnabled:
-            freezed == totp2faEnabled
-                ? _value.totp2faEnabled
-                : totp2faEnabled // ignore: cast_nullable_to_non_nullable
-                    as bool?,
-        totpEnabled:
-            freezed == totpEnabled
-                ? _value.totpEnabled
-                : totpEnabled // ignore: cast_nullable_to_non_nullable
-                    as bool?,
-        enableKeyboardNavigation:
-            freezed == enableKeyboardNavigation
-                ? _value.enableKeyboardNavigation
-                : enableKeyboardNavigation // ignore: cast_nullable_to_non_nullable
-                    as bool?,
-        animatedImagesEnabled:
-            freezed == animatedImagesEnabled
-                ? _value.animatedImagesEnabled
-                : animatedImagesEnabled // ignore: cast_nullable_to_non_nullable
-                    as bool?,
-        enableAnimatedImages:
-            freezed == enableAnimatedImages
-                ? _value.enableAnimatedImages
-                : enableAnimatedImages // ignore: cast_nullable_to_non_nullable
-                    as bool?,
         collapseBotComments:
             null == collapseBotComments
                 ? _value.collapseBotComments
                 : collapseBotComments // ignore: cast_nullable_to_non_nullable
                     as bool,
+        defaultPostSortType:
+            null == defaultPostSortType
+                ? _value.defaultPostSortType
+                : defaultPostSortType // ignore: cast_nullable_to_non_nullable
+                    as PostSortType,
+        showScore:
+            null == showScore
+                ? _value.showScore
+                : showScore // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        totp2faEnabled:
+            null == totp2faEnabled
+                ? _value.totp2faEnabled
+                : totp2faEnabled // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        animatedImagesEnabled:
+            null == animatedImagesEnabled
+                ? _value.animatedImagesEnabled
+                : animatedImagesEnabled // ignore: cast_nullable_to_non_nullable
+                    as bool,
         lastDonationNotificationAt:
-            freezed == lastDonationNotificationAt
+            null == lastDonationNotificationAt
                 ? _value.lastDonationNotificationAt
                 : lastDonationNotificationAt // ignore: cast_nullable_to_non_nullable
-                    as DateTime?,
+                    as String,
         privateMessagesEnabled:
-            freezed == privateMessagesEnabled
+            null == privateMessagesEnabled
                 ? _value.privateMessagesEnabled
                 : privateMessagesEnabled // ignore: cast_nullable_to_non_nullable
-                    as bool?,
+                    as bool,
         defaultCommentSortType:
-            freezed == defaultCommentSortType
+            null == defaultCommentSortType
                 ? _value.defaultCommentSortType
                 : defaultCommentSortType // ignore: cast_nullable_to_non_nullable
-                    as String?,
+                    as CommentSortType,
         autoMarkFetchedPostsAsRead:
-            freezed == autoMarkFetchedPostsAsRead
+            null == autoMarkFetchedPostsAsRead
                 ? _value.autoMarkFetchedPostsAsRead
                 : autoMarkFetchedPostsAsRead // ignore: cast_nullable_to_non_nullable
-                    as bool?,
+                    as bool,
         hidePostsWithMedia:
-            freezed == hidePostsWithMedia
+            null == hidePostsWithMedia
                 ? _value.hidePostsWithMedia
                 : hidePostsWithMedia // ignore: cast_nullable_to_non_nullable
-                    as bool?,
+                    as bool,
         showUpvotes:
-            freezed == showUpvotes
+            null == showUpvotes
                 ? _value.showUpvotes
                 : showUpvotes // ignore: cast_nullable_to_non_nullable
-                    as bool?,
+                    as bool,
         showDownvotes:
-            freezed == showDownvotes
+            null == showDownvotes
                 ? _value.showDownvotes
                 : showDownvotes // ignore: cast_nullable_to_non_nullable
-                    as String?,
+                    as VoteShow,
         showUpvotePercentage:
-            freezed == showUpvotePercentage
+            null == showUpvotePercentage
                 ? _value.showUpvotePercentage
                 : showUpvotePercentage // ignore: cast_nullable_to_non_nullable
-                    as bool?,
+                    as bool,
         showPersonVotes:
-            freezed == showPersonVotes
+            null == showPersonVotes
                 ? _value.showPersonVotes
                 : showPersonVotes // ignore: cast_nullable_to_non_nullable
-                    as bool?,
+                    as bool,
         defaultItemsPerPage:
-            freezed == defaultItemsPerPage
+            null == defaultItemsPerPage
                 ? _value.defaultItemsPerPage
                 : defaultItemsPerPage // ignore: cast_nullable_to_non_nullable
-                    as int?,
+                    as double,
         showMedia:
-            freezed == showMedia
+            null == showMedia
                 ? _value.showMedia
                 : showMedia // ignore: cast_nullable_to_non_nullable
-                    as bool?,
+                    as bool,
+        defaultPostTimeRangeSeconds:
+            freezed == defaultPostTimeRangeSeconds
+                ? _value.defaultPostTimeRangeSeconds
+                : defaultPostTimeRangeSeconds // ignore: cast_nullable_to_non_nullable
+                    as double?,
       ),
     );
   }
@@ -974,41 +928,40 @@ class _$LocalUserImpl extends _LocalUser {
     required this.personId,
     required this.showNsfw,
     this.theme,
-    @JsonKey(name: 'default_post_sort_type') this.defaultPostSortType,
-    @JsonKey(name: 'default_sort_type') this.defaultSortType,
+    this.email,
+    this.invitedByLocalUserId,
     required this.defaultListingType,
     required this.interfaceLanguage,
     required this.showAvatars,
     required this.sendNotificationsToEmail,
-    @JsonKey(name: 'show_score') this.showScore,
-    @JsonKey(name: 'show_scores') this.showScores,
     required this.showBotAccounts,
     required this.showReadPosts,
     required this.emailVerified,
     required this.acceptedApplication,
     required this.openLinksInNewTab,
     required this.blurNsfw,
-    this.autoExpand,
     required this.infiniteScrollEnabled,
     required this.admin,
     required this.postListingMode,
-    @JsonKey(name: 'totp_2fa_enabled') this.totp2faEnabled,
-    this.totpEnabled,
-    this.enableKeyboardNavigation,
-    @JsonKey(name: 'animated_images_enabled') this.animatedImagesEnabled,
-    this.enableAnimatedImages,
     required this.collapseBotComments,
-    this.lastDonationNotificationAt,
-    this.privateMessagesEnabled,
-    this.defaultCommentSortType,
-    this.autoMarkFetchedPostsAsRead,
-    this.hidePostsWithMedia,
-    this.showUpvotes,
-    this.showDownvotes,
-    this.showUpvotePercentage,
-    this.showPersonVotes,
-    this.defaultItemsPerPage,
-    this.showMedia,
+    @JsonKey(name: 'default_post_sort_type') required this.defaultPostSortType,
+    @JsonKey(name: 'show_score') required this.showScore,
+    @JsonKey(name: 'totp_2fa_enabled') required this.totp2faEnabled,
+    @JsonKey(name: 'animated_images_enabled')
+    required this.animatedImagesEnabled,
+    @JsonKey(name: 'last_donation_notification_at')
+    required this.lastDonationNotificationAt,
+    required this.privateMessagesEnabled,
+    required this.defaultCommentSortType,
+    required this.autoMarkFetchedPostsAsRead,
+    required this.hidePostsWithMedia,
+    required this.showUpvotes,
+    required this.showDownvotes,
+    required this.showUpvotePercentage,
+    required this.showPersonVotes,
+    required this.defaultItemsPerPage,
+    required this.showMedia,
+    this.defaultPostTimeRangeSeconds,
   }) : super._();
 
   factory _$LocalUserImpl.fromJson(Map<String, dynamic> json) =>
@@ -1020,18 +973,18 @@ class _$LocalUserImpl extends _LocalUser {
   final int personId;
   @override
   final bool showNsfw;
+
+  /// Optional theme name (null when unset).
   @override
   final String? theme;
 
-  /// JSON key: default_post_sort_type (renamed from default_sort_type in Lemmy 1.0)
+  /// Sensitive email address (optional).
   @override
-  @JsonKey(name: 'default_post_sort_type')
-  final String? defaultPostSortType;
+  final String? email;
 
-  /// Kept for backward compat with older instances
+  /// Optional invited-by user ID.
   @override
-  @JsonKey(name: 'default_sort_type')
-  final String? defaultSortType;
+  final int? invitedByLocalUserId;
   @override
   final String defaultListingType;
   @override
@@ -1040,16 +993,6 @@ class _$LocalUserImpl extends _LocalUser {
   final bool showAvatars;
   @override
   final bool sendNotificationsToEmail;
-
-  /// JSON key: show_score (renamed from show_scores in Lemmy 1.0)
-  @override
-  @JsonKey(name: 'show_score')
-  final bool? showScore;
-
-  /// Kept for backward compat with older instances
-  @override
-  @JsonKey(name: 'show_scores')
-  final bool? showScores;
   @override
   final bool showBotAccounts;
   @override
@@ -1063,54 +1006,56 @@ class _$LocalUserImpl extends _LocalUser {
   @override
   final bool blurNsfw;
   @override
-  final bool? autoExpand;
-  @override
   final bool infiniteScrollEnabled;
   @override
   final bool admin;
   @override
   final String postListingMode;
   @override
+  final bool collapseBotComments;
+  // Lemmy 1.0 required fields
+  @override
+  @JsonKey(name: 'default_post_sort_type')
+  final PostSortType defaultPostSortType;
+  @override
+  @JsonKey(name: 'show_score')
+  final bool showScore;
+  @override
   @JsonKey(name: 'totp_2fa_enabled')
-  final bool? totp2faEnabled;
-  @override
-  final bool? totpEnabled;
-  @override
-  final bool? enableKeyboardNavigation;
+  final bool totp2faEnabled;
   @override
   @JsonKey(name: 'animated_images_enabled')
-  final bool? animatedImagesEnabled;
+  final bool animatedImagesEnabled;
   @override
-  final bool? enableAnimatedImages;
+  @JsonKey(name: 'last_donation_notification_at')
+  final String lastDonationNotificationAt;
   @override
-  final bool collapseBotComments;
-  // Additional fields present in Lemmy 1.0+
+  final bool privateMessagesEnabled;
   @override
-  final DateTime? lastDonationNotificationAt;
+  final CommentSortType defaultCommentSortType;
   @override
-  final bool? privateMessagesEnabled;
+  final bool autoMarkFetchedPostsAsRead;
   @override
-  final String? defaultCommentSortType;
+  final bool hidePostsWithMedia;
   @override
-  final bool? autoMarkFetchedPostsAsRead;
+  final bool showUpvotes;
   @override
-  final bool? hidePostsWithMedia;
+  final VoteShow showDownvotes;
   @override
-  final bool? showUpvotes;
+  final bool showUpvotePercentage;
   @override
-  final String? showDownvotes;
+  final bool showPersonVotes;
   @override
-  final bool? showUpvotePercentage;
+  final double defaultItemsPerPage;
   @override
-  final bool? showPersonVotes;
+  final bool showMedia;
+  // Optional fields
   @override
-  final int? defaultItemsPerPage;
-  @override
-  final bool? showMedia;
+  final double? defaultPostTimeRangeSeconds;
 
   @override
   String toString() {
-    return 'LocalUser(id: $id, personId: $personId, showNsfw: $showNsfw, theme: $theme, defaultPostSortType: $defaultPostSortType, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, interfaceLanguage: $interfaceLanguage, showAvatars: $showAvatars, sendNotificationsToEmail: $sendNotificationsToEmail, showScore: $showScore, showScores: $showScores, showBotAccounts: $showBotAccounts, showReadPosts: $showReadPosts, emailVerified: $emailVerified, acceptedApplication: $acceptedApplication, openLinksInNewTab: $openLinksInNewTab, blurNsfw: $blurNsfw, autoExpand: $autoExpand, infiniteScrollEnabled: $infiniteScrollEnabled, admin: $admin, postListingMode: $postListingMode, totp2faEnabled: $totp2faEnabled, totpEnabled: $totpEnabled, enableKeyboardNavigation: $enableKeyboardNavigation, animatedImagesEnabled: $animatedImagesEnabled, enableAnimatedImages: $enableAnimatedImages, collapseBotComments: $collapseBotComments, lastDonationNotificationAt: $lastDonationNotificationAt, privateMessagesEnabled: $privateMessagesEnabled, defaultCommentSortType: $defaultCommentSortType, autoMarkFetchedPostsAsRead: $autoMarkFetchedPostsAsRead, hidePostsWithMedia: $hidePostsWithMedia, showUpvotes: $showUpvotes, showDownvotes: $showDownvotes, showUpvotePercentage: $showUpvotePercentage, showPersonVotes: $showPersonVotes, defaultItemsPerPage: $defaultItemsPerPage, showMedia: $showMedia)';
+    return 'LocalUser(id: $id, personId: $personId, showNsfw: $showNsfw, theme: $theme, email: $email, invitedByLocalUserId: $invitedByLocalUserId, defaultListingType: $defaultListingType, interfaceLanguage: $interfaceLanguage, showAvatars: $showAvatars, sendNotificationsToEmail: $sendNotificationsToEmail, showBotAccounts: $showBotAccounts, showReadPosts: $showReadPosts, emailVerified: $emailVerified, acceptedApplication: $acceptedApplication, openLinksInNewTab: $openLinksInNewTab, blurNsfw: $blurNsfw, infiniteScrollEnabled: $infiniteScrollEnabled, admin: $admin, postListingMode: $postListingMode, collapseBotComments: $collapseBotComments, defaultPostSortType: $defaultPostSortType, showScore: $showScore, totp2faEnabled: $totp2faEnabled, animatedImagesEnabled: $animatedImagesEnabled, lastDonationNotificationAt: $lastDonationNotificationAt, privateMessagesEnabled: $privateMessagesEnabled, defaultCommentSortType: $defaultCommentSortType, autoMarkFetchedPostsAsRead: $autoMarkFetchedPostsAsRead, hidePostsWithMedia: $hidePostsWithMedia, showUpvotes: $showUpvotes, showDownvotes: $showDownvotes, showUpvotePercentage: $showUpvotePercentage, showPersonVotes: $showPersonVotes, defaultItemsPerPage: $defaultItemsPerPage, showMedia: $showMedia, defaultPostTimeRangeSeconds: $defaultPostTimeRangeSeconds)';
   }
 
   @override
@@ -1124,10 +1069,9 @@ class _$LocalUserImpl extends _LocalUser {
             (identical(other.showNsfw, showNsfw) ||
                 other.showNsfw == showNsfw) &&
             (identical(other.theme, theme) || other.theme == theme) &&
-            (identical(other.defaultPostSortType, defaultPostSortType) ||
-                other.defaultPostSortType == defaultPostSortType) &&
-            (identical(other.defaultSortType, defaultSortType) ||
-                other.defaultSortType == defaultSortType) &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.invitedByLocalUserId, invitedByLocalUserId) ||
+                other.invitedByLocalUserId == invitedByLocalUserId) &&
             (identical(other.defaultListingType, defaultListingType) ||
                 other.defaultListingType == defaultListingType) &&
             (identical(other.interfaceLanguage, interfaceLanguage) ||
@@ -1139,10 +1083,6 @@ class _$LocalUserImpl extends _LocalUser {
                   sendNotificationsToEmail,
                 ) ||
                 other.sendNotificationsToEmail == sendNotificationsToEmail) &&
-            (identical(other.showScore, showScore) ||
-                other.showScore == showScore) &&
-            (identical(other.showScores, showScores) ||
-                other.showScores == showScores) &&
             (identical(other.showBotAccounts, showBotAccounts) ||
                 other.showBotAccounts == showBotAccounts) &&
             (identical(other.showReadPosts, showReadPosts) ||
@@ -1155,28 +1095,21 @@ class _$LocalUserImpl extends _LocalUser {
                 other.openLinksInNewTab == openLinksInNewTab) &&
             (identical(other.blurNsfw, blurNsfw) ||
                 other.blurNsfw == blurNsfw) &&
-            (identical(other.autoExpand, autoExpand) ||
-                other.autoExpand == autoExpand) &&
             (identical(other.infiniteScrollEnabled, infiniteScrollEnabled) ||
                 other.infiniteScrollEnabled == infiniteScrollEnabled) &&
             (identical(other.admin, admin) || other.admin == admin) &&
             (identical(other.postListingMode, postListingMode) ||
                 other.postListingMode == postListingMode) &&
-            (identical(other.totp2faEnabled, totp2faEnabled) ||
-                other.totp2faEnabled == totp2faEnabled) &&
-            (identical(other.totpEnabled, totpEnabled) ||
-                other.totpEnabled == totpEnabled) &&
-            (identical(
-                  other.enableKeyboardNavigation,
-                  enableKeyboardNavigation,
-                ) ||
-                other.enableKeyboardNavigation == enableKeyboardNavigation) &&
-            (identical(other.animatedImagesEnabled, animatedImagesEnabled) ||
-                other.animatedImagesEnabled == animatedImagesEnabled) &&
-            (identical(other.enableAnimatedImages, enableAnimatedImages) ||
-                other.enableAnimatedImages == enableAnimatedImages) &&
             (identical(other.collapseBotComments, collapseBotComments) ||
                 other.collapseBotComments == collapseBotComments) &&
+            (identical(other.defaultPostSortType, defaultPostSortType) ||
+                other.defaultPostSortType == defaultPostSortType) &&
+            (identical(other.showScore, showScore) ||
+                other.showScore == showScore) &&
+            (identical(other.totp2faEnabled, totp2faEnabled) ||
+                other.totp2faEnabled == totp2faEnabled) &&
+            (identical(other.animatedImagesEnabled, animatedImagesEnabled) ||
+                other.animatedImagesEnabled == animatedImagesEnabled) &&
             (identical(
                   other.lastDonationNotificationAt,
                   lastDonationNotificationAt,
@@ -1206,7 +1139,13 @@ class _$LocalUserImpl extends _LocalUser {
             (identical(other.defaultItemsPerPage, defaultItemsPerPage) ||
                 other.defaultItemsPerPage == defaultItemsPerPage) &&
             (identical(other.showMedia, showMedia) ||
-                other.showMedia == showMedia));
+                other.showMedia == showMedia) &&
+            (identical(
+                  other.defaultPostTimeRangeSeconds,
+                  defaultPostTimeRangeSeconds,
+                ) ||
+                other.defaultPostTimeRangeSeconds ==
+                    defaultPostTimeRangeSeconds));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -1217,30 +1156,26 @@ class _$LocalUserImpl extends _LocalUser {
     personId,
     showNsfw,
     theme,
-    defaultPostSortType,
-    defaultSortType,
+    email,
+    invitedByLocalUserId,
     defaultListingType,
     interfaceLanguage,
     showAvatars,
     sendNotificationsToEmail,
-    showScore,
-    showScores,
     showBotAccounts,
     showReadPosts,
     emailVerified,
     acceptedApplication,
     openLinksInNewTab,
     blurNsfw,
-    autoExpand,
     infiniteScrollEnabled,
     admin,
     postListingMode,
-    totp2faEnabled,
-    totpEnabled,
-    enableKeyboardNavigation,
-    animatedImagesEnabled,
-    enableAnimatedImages,
     collapseBotComments,
+    defaultPostSortType,
+    showScore,
+    totp2faEnabled,
+    animatedImagesEnabled,
     lastDonationNotificationAt,
     privateMessagesEnabled,
     defaultCommentSortType,
@@ -1252,6 +1187,7 @@ class _$LocalUserImpl extends _LocalUser {
     showPersonVotes,
     defaultItemsPerPage,
     showMedia,
+    defaultPostTimeRangeSeconds,
   ]);
 
   /// Create a copy of LocalUser
@@ -1274,41 +1210,41 @@ abstract class _LocalUser extends LocalUser {
     required final int personId,
     required final bool showNsfw,
     final String? theme,
-    @JsonKey(name: 'default_post_sort_type') final String? defaultPostSortType,
-    @JsonKey(name: 'default_sort_type') final String? defaultSortType,
+    final String? email,
+    final int? invitedByLocalUserId,
     required final String defaultListingType,
     required final String interfaceLanguage,
     required final bool showAvatars,
     required final bool sendNotificationsToEmail,
-    @JsonKey(name: 'show_score') final bool? showScore,
-    @JsonKey(name: 'show_scores') final bool? showScores,
     required final bool showBotAccounts,
     required final bool showReadPosts,
     required final bool emailVerified,
     required final bool acceptedApplication,
     required final bool openLinksInNewTab,
     required final bool blurNsfw,
-    final bool? autoExpand,
     required final bool infiniteScrollEnabled,
     required final bool admin,
     required final String postListingMode,
-    @JsonKey(name: 'totp_2fa_enabled') final bool? totp2faEnabled,
-    final bool? totpEnabled,
-    final bool? enableKeyboardNavigation,
-    @JsonKey(name: 'animated_images_enabled') final bool? animatedImagesEnabled,
-    final bool? enableAnimatedImages,
     required final bool collapseBotComments,
-    final DateTime? lastDonationNotificationAt,
-    final bool? privateMessagesEnabled,
-    final String? defaultCommentSortType,
-    final bool? autoMarkFetchedPostsAsRead,
-    final bool? hidePostsWithMedia,
-    final bool? showUpvotes,
-    final String? showDownvotes,
-    final bool? showUpvotePercentage,
-    final bool? showPersonVotes,
-    final int? defaultItemsPerPage,
-    final bool? showMedia,
+    @JsonKey(name: 'default_post_sort_type')
+    required final PostSortType defaultPostSortType,
+    @JsonKey(name: 'show_score') required final bool showScore,
+    @JsonKey(name: 'totp_2fa_enabled') required final bool totp2faEnabled,
+    @JsonKey(name: 'animated_images_enabled')
+    required final bool animatedImagesEnabled,
+    @JsonKey(name: 'last_donation_notification_at')
+    required final String lastDonationNotificationAt,
+    required final bool privateMessagesEnabled,
+    required final CommentSortType defaultCommentSortType,
+    required final bool autoMarkFetchedPostsAsRead,
+    required final bool hidePostsWithMedia,
+    required final bool showUpvotes,
+    required final VoteShow showDownvotes,
+    required final bool showUpvotePercentage,
+    required final bool showPersonVotes,
+    required final double defaultItemsPerPage,
+    required final bool showMedia,
+    final double? defaultPostTimeRangeSeconds,
   }) = _$LocalUserImpl;
   const _LocalUser._() : super._();
 
@@ -1321,18 +1257,18 @@ abstract class _LocalUser extends LocalUser {
   int get personId;
   @override
   bool get showNsfw;
+
+  /// Optional theme name (null when unset).
   @override
   String? get theme;
 
-  /// JSON key: default_post_sort_type (renamed from default_sort_type in Lemmy 1.0)
+  /// Sensitive email address (optional).
   @override
-  @JsonKey(name: 'default_post_sort_type')
-  String? get defaultPostSortType;
+  String? get email;
 
-  /// Kept for backward compat with older instances
+  /// Optional invited-by user ID.
   @override
-  @JsonKey(name: 'default_sort_type')
-  String? get defaultSortType;
+  int? get invitedByLocalUserId;
   @override
   String get defaultListingType;
   @override
@@ -1341,16 +1277,6 @@ abstract class _LocalUser extends LocalUser {
   bool get showAvatars;
   @override
   bool get sendNotificationsToEmail;
-
-  /// JSON key: show_score (renamed from show_scores in Lemmy 1.0)
-  @override
-  @JsonKey(name: 'show_score')
-  bool? get showScore;
-
-  /// Kept for backward compat with older instances
-  @override
-  @JsonKey(name: 'show_scores')
-  bool? get showScores;
   @override
   bool get showBotAccounts;
   @override
@@ -1364,49 +1290,50 @@ abstract class _LocalUser extends LocalUser {
   @override
   bool get blurNsfw;
   @override
-  bool? get autoExpand;
-  @override
   bool get infiniteScrollEnabled;
   @override
   bool get admin;
   @override
   String get postListingMode;
   @override
+  bool get collapseBotComments; // Lemmy 1.0 required fields
+  @override
+  @JsonKey(name: 'default_post_sort_type')
+  PostSortType get defaultPostSortType;
+  @override
+  @JsonKey(name: 'show_score')
+  bool get showScore;
+  @override
   @JsonKey(name: 'totp_2fa_enabled')
-  bool? get totp2faEnabled;
-  @override
-  bool? get totpEnabled;
-  @override
-  bool? get enableKeyboardNavigation;
+  bool get totp2faEnabled;
   @override
   @JsonKey(name: 'animated_images_enabled')
-  bool? get animatedImagesEnabled;
+  bool get animatedImagesEnabled;
   @override
-  bool? get enableAnimatedImages;
+  @JsonKey(name: 'last_donation_notification_at')
+  String get lastDonationNotificationAt;
   @override
-  bool get collapseBotComments; // Additional fields present in Lemmy 1.0+
+  bool get privateMessagesEnabled;
   @override
-  DateTime? get lastDonationNotificationAt;
+  CommentSortType get defaultCommentSortType;
   @override
-  bool? get privateMessagesEnabled;
+  bool get autoMarkFetchedPostsAsRead;
   @override
-  String? get defaultCommentSortType;
+  bool get hidePostsWithMedia;
   @override
-  bool? get autoMarkFetchedPostsAsRead;
+  bool get showUpvotes;
   @override
-  bool? get hidePostsWithMedia;
+  VoteShow get showDownvotes;
   @override
-  bool? get showUpvotes;
+  bool get showUpvotePercentage;
   @override
-  String? get showDownvotes;
+  bool get showPersonVotes;
   @override
-  bool? get showUpvotePercentage;
+  double get defaultItemsPerPage;
   @override
-  bool? get showPersonVotes;
+  bool get showMedia; // Optional fields
   @override
-  int? get defaultItemsPerPage;
-  @override
-  bool? get showMedia;
+  double? get defaultPostTimeRangeSeconds;
 
   /// Create a copy of LocalUser
   /// with the given fields replaced by the non-null parameter values.

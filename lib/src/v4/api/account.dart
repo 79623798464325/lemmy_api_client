@@ -30,7 +30,7 @@ class LoginResponse with _$LoginResponse {
   factory LoginResponse.fromJson(Map<String, dynamic> json) => _$LoginResponseFromJson(json);
 }
 
-/// Response from GetMyUser endpoint.
+/// Response from GetMyUser endpoint (MyUserInfo).
 @freezed
 class GetMyUserResponse with _$GetMyUserResponse {
   @modelSerde
@@ -39,12 +39,12 @@ class GetMyUserResponse with _$GetMyUserResponse {
     required List<CommunityFollowerView> follows,
     required List<CommunityModeratorView> moderates,
     required List<CommunityBlockView> communityBlocks,
-    /// Lemmy <1.0: instance_blocks. Lemmy 1.0+: split into instance_communities_blocks / instance_persons_blocks.
-    @JsonKey(name: 'instance_blocks') List<InstanceBlockView>? instanceBlocks,
-    @JsonKey(name: 'instance_communities_blocks') List<InstanceBlockView>? instanceCommunitiesBlocks,
-    @JsonKey(name: 'instance_persons_blocks') List<InstanceBlockView>? instancePersonsBlocks,
+    required List<Instance> instanceCommunitiesBlocks,
+    required List<Instance> instancePersonsBlocks,
     required List<PersonBlockView> personBlocks,
     required List<int> discussionLanguages,
+    required List<String> keywordBlocks,
+    required List<MultiCommunityView> multiCommunityFollows,
   }) = _GetMyUserResponse;
 
   const GetMyUserResponse._();

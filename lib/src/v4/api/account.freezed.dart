@@ -248,19 +248,15 @@ mixin _$GetMyUserResponse {
       throw _privateConstructorUsedError;
   List<CommunityBlockView> get communityBlocks =>
       throw _privateConstructorUsedError;
-
-  /// Lemmy <1.0: instance_blocks. Lemmy 1.0+: split into instance_communities_blocks / instance_persons_blocks.
-  @JsonKey(name: 'instance_blocks')
-  List<InstanceBlockView>? get instanceBlocks =>
+  List<Instance> get instanceCommunitiesBlocks =>
       throw _privateConstructorUsedError;
-  @JsonKey(name: 'instance_communities_blocks')
-  List<InstanceBlockView>? get instanceCommunitiesBlocks =>
-      throw _privateConstructorUsedError;
-  @JsonKey(name: 'instance_persons_blocks')
-  List<InstanceBlockView>? get instancePersonsBlocks =>
+  List<Instance> get instancePersonsBlocks =>
       throw _privateConstructorUsedError;
   List<PersonBlockView> get personBlocks => throw _privateConstructorUsedError;
   List<int> get discussionLanguages => throw _privateConstructorUsedError;
+  List<String> get keywordBlocks => throw _privateConstructorUsedError;
+  List<MultiCommunityView> get multiCommunityFollows =>
+      throw _privateConstructorUsedError;
 
   /// Serializes this GetMyUserResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -284,13 +280,12 @@ abstract class $GetMyUserResponseCopyWith<$Res> {
     List<CommunityFollowerView> follows,
     List<CommunityModeratorView> moderates,
     List<CommunityBlockView> communityBlocks,
-    @JsonKey(name: 'instance_blocks') List<InstanceBlockView>? instanceBlocks,
-    @JsonKey(name: 'instance_communities_blocks')
-    List<InstanceBlockView>? instanceCommunitiesBlocks,
-    @JsonKey(name: 'instance_persons_blocks')
-    List<InstanceBlockView>? instancePersonsBlocks,
+    List<Instance> instanceCommunitiesBlocks,
+    List<Instance> instancePersonsBlocks,
     List<PersonBlockView> personBlocks,
     List<int> discussionLanguages,
+    List<String> keywordBlocks,
+    List<MultiCommunityView> multiCommunityFollows,
   });
 
   $LocalUserViewCopyWith<$Res> get localUserView;
@@ -315,11 +310,12 @@ class _$GetMyUserResponseCopyWithImpl<$Res, $Val extends GetMyUserResponse>
     Object? follows = null,
     Object? moderates = null,
     Object? communityBlocks = null,
-    Object? instanceBlocks = freezed,
-    Object? instanceCommunitiesBlocks = freezed,
-    Object? instancePersonsBlocks = freezed,
+    Object? instanceCommunitiesBlocks = null,
+    Object? instancePersonsBlocks = null,
     Object? personBlocks = null,
     Object? discussionLanguages = null,
+    Object? keywordBlocks = null,
+    Object? multiCommunityFollows = null,
   }) {
     return _then(
       _value.copyWith(
@@ -343,21 +339,16 @@ class _$GetMyUserResponseCopyWithImpl<$Res, $Val extends GetMyUserResponse>
                     ? _value.communityBlocks
                     : communityBlocks // ignore: cast_nullable_to_non_nullable
                         as List<CommunityBlockView>,
-            instanceBlocks:
-                freezed == instanceBlocks
-                    ? _value.instanceBlocks
-                    : instanceBlocks // ignore: cast_nullable_to_non_nullable
-                        as List<InstanceBlockView>?,
             instanceCommunitiesBlocks:
-                freezed == instanceCommunitiesBlocks
+                null == instanceCommunitiesBlocks
                     ? _value.instanceCommunitiesBlocks
                     : instanceCommunitiesBlocks // ignore: cast_nullable_to_non_nullable
-                        as List<InstanceBlockView>?,
+                        as List<Instance>,
             instancePersonsBlocks:
-                freezed == instancePersonsBlocks
+                null == instancePersonsBlocks
                     ? _value.instancePersonsBlocks
                     : instancePersonsBlocks // ignore: cast_nullable_to_non_nullable
-                        as List<InstanceBlockView>?,
+                        as List<Instance>,
             personBlocks:
                 null == personBlocks
                     ? _value.personBlocks
@@ -368,6 +359,16 @@ class _$GetMyUserResponseCopyWithImpl<$Res, $Val extends GetMyUserResponse>
                     ? _value.discussionLanguages
                     : discussionLanguages // ignore: cast_nullable_to_non_nullable
                         as List<int>,
+            keywordBlocks:
+                null == keywordBlocks
+                    ? _value.keywordBlocks
+                    : keywordBlocks // ignore: cast_nullable_to_non_nullable
+                        as List<String>,
+            multiCommunityFollows:
+                null == multiCommunityFollows
+                    ? _value.multiCommunityFollows
+                    : multiCommunityFollows // ignore: cast_nullable_to_non_nullable
+                        as List<MultiCommunityView>,
           )
           as $Val,
     );
@@ -398,13 +399,12 @@ abstract class _$$GetMyUserResponseImplCopyWith<$Res>
     List<CommunityFollowerView> follows,
     List<CommunityModeratorView> moderates,
     List<CommunityBlockView> communityBlocks,
-    @JsonKey(name: 'instance_blocks') List<InstanceBlockView>? instanceBlocks,
-    @JsonKey(name: 'instance_communities_blocks')
-    List<InstanceBlockView>? instanceCommunitiesBlocks,
-    @JsonKey(name: 'instance_persons_blocks')
-    List<InstanceBlockView>? instancePersonsBlocks,
+    List<Instance> instanceCommunitiesBlocks,
+    List<Instance> instancePersonsBlocks,
     List<PersonBlockView> personBlocks,
     List<int> discussionLanguages,
+    List<String> keywordBlocks,
+    List<MultiCommunityView> multiCommunityFollows,
   });
 
   @override
@@ -429,11 +429,12 @@ class __$$GetMyUserResponseImplCopyWithImpl<$Res>
     Object? follows = null,
     Object? moderates = null,
     Object? communityBlocks = null,
-    Object? instanceBlocks = freezed,
-    Object? instanceCommunitiesBlocks = freezed,
-    Object? instancePersonsBlocks = freezed,
+    Object? instanceCommunitiesBlocks = null,
+    Object? instancePersonsBlocks = null,
     Object? personBlocks = null,
     Object? discussionLanguages = null,
+    Object? keywordBlocks = null,
+    Object? multiCommunityFollows = null,
   }) {
     return _then(
       _$GetMyUserResponseImpl(
@@ -457,21 +458,16 @@ class __$$GetMyUserResponseImplCopyWithImpl<$Res>
                 ? _value._communityBlocks
                 : communityBlocks // ignore: cast_nullable_to_non_nullable
                     as List<CommunityBlockView>,
-        instanceBlocks:
-            freezed == instanceBlocks
-                ? _value._instanceBlocks
-                : instanceBlocks // ignore: cast_nullable_to_non_nullable
-                    as List<InstanceBlockView>?,
         instanceCommunitiesBlocks:
-            freezed == instanceCommunitiesBlocks
+            null == instanceCommunitiesBlocks
                 ? _value._instanceCommunitiesBlocks
                 : instanceCommunitiesBlocks // ignore: cast_nullable_to_non_nullable
-                    as List<InstanceBlockView>?,
+                    as List<Instance>,
         instancePersonsBlocks:
-            freezed == instancePersonsBlocks
+            null == instancePersonsBlocks
                 ? _value._instancePersonsBlocks
                 : instancePersonsBlocks // ignore: cast_nullable_to_non_nullable
-                    as List<InstanceBlockView>?,
+                    as List<Instance>,
         personBlocks:
             null == personBlocks
                 ? _value._personBlocks
@@ -482,6 +478,16 @@ class __$$GetMyUserResponseImplCopyWithImpl<$Res>
                 ? _value._discussionLanguages
                 : discussionLanguages // ignore: cast_nullable_to_non_nullable
                     as List<int>,
+        keywordBlocks:
+            null == keywordBlocks
+                ? _value._keywordBlocks
+                : keywordBlocks // ignore: cast_nullable_to_non_nullable
+                    as List<String>,
+        multiCommunityFollows:
+            null == multiCommunityFollows
+                ? _value._multiCommunityFollows
+                : multiCommunityFollows // ignore: cast_nullable_to_non_nullable
+                    as List<MultiCommunityView>,
       ),
     );
   }
@@ -496,22 +502,21 @@ class _$GetMyUserResponseImpl extends _GetMyUserResponse {
     required final List<CommunityFollowerView> follows,
     required final List<CommunityModeratorView> moderates,
     required final List<CommunityBlockView> communityBlocks,
-    @JsonKey(name: 'instance_blocks')
-    final List<InstanceBlockView>? instanceBlocks,
-    @JsonKey(name: 'instance_communities_blocks')
-    final List<InstanceBlockView>? instanceCommunitiesBlocks,
-    @JsonKey(name: 'instance_persons_blocks')
-    final List<InstanceBlockView>? instancePersonsBlocks,
+    required final List<Instance> instanceCommunitiesBlocks,
+    required final List<Instance> instancePersonsBlocks,
     required final List<PersonBlockView> personBlocks,
     required final List<int> discussionLanguages,
+    required final List<String> keywordBlocks,
+    required final List<MultiCommunityView> multiCommunityFollows,
   }) : _follows = follows,
        _moderates = moderates,
        _communityBlocks = communityBlocks,
-       _instanceBlocks = instanceBlocks,
        _instanceCommunitiesBlocks = instanceCommunitiesBlocks,
        _instancePersonsBlocks = instancePersonsBlocks,
        _personBlocks = personBlocks,
        _discussionLanguages = discussionLanguages,
+       _keywordBlocks = keywordBlocks,
+       _multiCommunityFollows = multiCommunityFollows,
        super._();
 
   factory _$GetMyUserResponseImpl.fromJson(Map<String, dynamic> json) =>
@@ -543,42 +548,22 @@ class _$GetMyUserResponseImpl extends _GetMyUserResponse {
     return EqualUnmodifiableListView(_communityBlocks);
   }
 
-  /// Lemmy <1.0: instance_blocks. Lemmy 1.0+: split into instance_communities_blocks / instance_persons_blocks.
-  final List<InstanceBlockView>? _instanceBlocks;
-
-  /// Lemmy <1.0: instance_blocks. Lemmy 1.0+: split into instance_communities_blocks / instance_persons_blocks.
+  final List<Instance> _instanceCommunitiesBlocks;
   @override
-  @JsonKey(name: 'instance_blocks')
-  List<InstanceBlockView>? get instanceBlocks {
-    final value = _instanceBlocks;
-    if (value == null) return null;
-    if (_instanceBlocks is EqualUnmodifiableListView) return _instanceBlocks;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<InstanceBlockView>? _instanceCommunitiesBlocks;
-  @override
-  @JsonKey(name: 'instance_communities_blocks')
-  List<InstanceBlockView>? get instanceCommunitiesBlocks {
-    final value = _instanceCommunitiesBlocks;
-    if (value == null) return null;
+  List<Instance> get instanceCommunitiesBlocks {
     if (_instanceCommunitiesBlocks is EqualUnmodifiableListView)
       return _instanceCommunitiesBlocks;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
+    return EqualUnmodifiableListView(_instanceCommunitiesBlocks);
   }
 
-  final List<InstanceBlockView>? _instancePersonsBlocks;
+  final List<Instance> _instancePersonsBlocks;
   @override
-  @JsonKey(name: 'instance_persons_blocks')
-  List<InstanceBlockView>? get instancePersonsBlocks {
-    final value = _instancePersonsBlocks;
-    if (value == null) return null;
+  List<Instance> get instancePersonsBlocks {
     if (_instancePersonsBlocks is EqualUnmodifiableListView)
       return _instancePersonsBlocks;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
+    return EqualUnmodifiableListView(_instancePersonsBlocks);
   }
 
   final List<PersonBlockView> _personBlocks;
@@ -598,9 +583,26 @@ class _$GetMyUserResponseImpl extends _GetMyUserResponse {
     return EqualUnmodifiableListView(_discussionLanguages);
   }
 
+  final List<String> _keywordBlocks;
+  @override
+  List<String> get keywordBlocks {
+    if (_keywordBlocks is EqualUnmodifiableListView) return _keywordBlocks;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_keywordBlocks);
+  }
+
+  final List<MultiCommunityView> _multiCommunityFollows;
+  @override
+  List<MultiCommunityView> get multiCommunityFollows {
+    if (_multiCommunityFollows is EqualUnmodifiableListView)
+      return _multiCommunityFollows;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_multiCommunityFollows);
+  }
+
   @override
   String toString() {
-    return 'GetMyUserResponse(localUserView: $localUserView, follows: $follows, moderates: $moderates, communityBlocks: $communityBlocks, instanceBlocks: $instanceBlocks, instanceCommunitiesBlocks: $instanceCommunitiesBlocks, instancePersonsBlocks: $instancePersonsBlocks, personBlocks: $personBlocks, discussionLanguages: $discussionLanguages)';
+    return 'GetMyUserResponse(localUserView: $localUserView, follows: $follows, moderates: $moderates, communityBlocks: $communityBlocks, instanceCommunitiesBlocks: $instanceCommunitiesBlocks, instancePersonsBlocks: $instancePersonsBlocks, personBlocks: $personBlocks, discussionLanguages: $discussionLanguages, keywordBlocks: $keywordBlocks, multiCommunityFollows: $multiCommunityFollows)';
   }
 
   @override
@@ -620,10 +622,6 @@ class _$GetMyUserResponseImpl extends _GetMyUserResponse {
               _communityBlocks,
             ) &&
             const DeepCollectionEquality().equals(
-              other._instanceBlocks,
-              _instanceBlocks,
-            ) &&
-            const DeepCollectionEquality().equals(
               other._instanceCommunitiesBlocks,
               _instanceCommunitiesBlocks,
             ) &&
@@ -638,6 +636,14 @@ class _$GetMyUserResponseImpl extends _GetMyUserResponse {
             const DeepCollectionEquality().equals(
               other._discussionLanguages,
               _discussionLanguages,
+            ) &&
+            const DeepCollectionEquality().equals(
+              other._keywordBlocks,
+              _keywordBlocks,
+            ) &&
+            const DeepCollectionEquality().equals(
+              other._multiCommunityFollows,
+              _multiCommunityFollows,
             ));
   }
 
@@ -649,11 +655,12 @@ class _$GetMyUserResponseImpl extends _GetMyUserResponse {
     const DeepCollectionEquality().hash(_follows),
     const DeepCollectionEquality().hash(_moderates),
     const DeepCollectionEquality().hash(_communityBlocks),
-    const DeepCollectionEquality().hash(_instanceBlocks),
     const DeepCollectionEquality().hash(_instanceCommunitiesBlocks),
     const DeepCollectionEquality().hash(_instancePersonsBlocks),
     const DeepCollectionEquality().hash(_personBlocks),
     const DeepCollectionEquality().hash(_discussionLanguages),
+    const DeepCollectionEquality().hash(_keywordBlocks),
+    const DeepCollectionEquality().hash(_multiCommunityFollows),
   );
 
   /// Create a copy of GetMyUserResponse
@@ -679,14 +686,12 @@ abstract class _GetMyUserResponse extends GetMyUserResponse {
     required final List<CommunityFollowerView> follows,
     required final List<CommunityModeratorView> moderates,
     required final List<CommunityBlockView> communityBlocks,
-    @JsonKey(name: 'instance_blocks')
-    final List<InstanceBlockView>? instanceBlocks,
-    @JsonKey(name: 'instance_communities_blocks')
-    final List<InstanceBlockView>? instanceCommunitiesBlocks,
-    @JsonKey(name: 'instance_persons_blocks')
-    final List<InstanceBlockView>? instancePersonsBlocks,
+    required final List<Instance> instanceCommunitiesBlocks,
+    required final List<Instance> instancePersonsBlocks,
     required final List<PersonBlockView> personBlocks,
     required final List<int> discussionLanguages,
+    required final List<String> keywordBlocks,
+    required final List<MultiCommunityView> multiCommunityFollows,
   }) = _$GetMyUserResponseImpl;
   const _GetMyUserResponse._() : super._();
 
@@ -701,21 +706,18 @@ abstract class _GetMyUserResponse extends GetMyUserResponse {
   List<CommunityModeratorView> get moderates;
   @override
   List<CommunityBlockView> get communityBlocks;
-
-  /// Lemmy <1.0: instance_blocks. Lemmy 1.0+: split into instance_communities_blocks / instance_persons_blocks.
   @override
-  @JsonKey(name: 'instance_blocks')
-  List<InstanceBlockView>? get instanceBlocks;
+  List<Instance> get instanceCommunitiesBlocks;
   @override
-  @JsonKey(name: 'instance_communities_blocks')
-  List<InstanceBlockView>? get instanceCommunitiesBlocks;
-  @override
-  @JsonKey(name: 'instance_persons_blocks')
-  List<InstanceBlockView>? get instancePersonsBlocks;
+  List<Instance> get instancePersonsBlocks;
   @override
   List<PersonBlockView> get personBlocks;
   @override
   List<int> get discussionLanguages;
+  @override
+  List<String> get keywordBlocks;
+  @override
+  List<MultiCommunityView> get multiCommunityFollows;
 
   /// Create a copy of GetMyUserResponse
   /// with the given fields replaced by the non-null parameter values.
