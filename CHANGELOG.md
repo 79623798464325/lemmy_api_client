@@ -15,6 +15,21 @@
   (`Community`, `Person`, and `Instance` for block lists), and the response now
   exposes `keywordBlocks` and `multiCommunityFollows` fields that were
   previously absent.
+- Made v4 deserialization robust against real Lemmy 1.0 responses, which
+  previously threw `Bad state: No element` or type-cast errors on authenticated
+  data:
+  - `SubscribedType.fromJson` now accepts Lemmy 1.0 `community_actions.follow_state`
+    values (`accepted`/`pending`/`approval_required`) as well as the legacy
+    `Subscribed`/`NotSubscribed`/`Pending`, and falls back to `notSubscribed` for
+    unknown values instead of throwing.
+  - `PostCommentCombinedView.fromJson` parses the real `/person/content` response
+    shape.
+  - `SearchResponse.fromJson` reads the `persons` key (Lemmy 1.0) with a `users`
+    fallback; `ResolveObjectResponse.fromJson` handles the flat `type_`-discriminated
+    union response.
+  - `UnreadCountsResponse.fromJson` accepts the Lemmy 1.0 `notification_count`
+    shape; `ListNotificationsResponse.fromJson` reads the `items` key with a
+    `notifications` fallback.
 
 ## v0.68.1 - 2026-06-20
 

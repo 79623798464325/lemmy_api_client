@@ -24,10 +24,13 @@ class LocalUser with _$LocalUser {
     required int id,
     required int personId,
     required bool showNsfw,
+
     /// Theme name (required per spec).
     required String theme,
+
     /// Sensitive email address (optional).
     String? email,
+
     /// Optional invited-by user ID.
     int? invitedByLocalUserId,
     required String defaultListingType,
@@ -77,4 +80,3 @@ class CommunityFollowerView with _$CommunityFollowerView {
   const CommunityFollowerView._();
   factory CommunityFollowerView.fromJson(Map<String, dynamic> json) => _$CommunityFollowerViewFromJson(json);
 }
-

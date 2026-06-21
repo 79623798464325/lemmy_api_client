@@ -26,13 +26,8 @@ void main() {
       expect(response.privateMessages, 0);
     });
 
-    test('still parses original spec format (replies/mentions/private_messages)',
-        () {
-      final json = <String, dynamic>{
-        'replies': 3,
-        'mentions': 1,
-        'private_messages': 2,
-      };
+    test('still parses original spec format (replies/mentions/private_messages)', () {
+      final json = <String, dynamic>{'replies': 3, 'mentions': 1, 'private_messages': 2};
       final response = UnreadCountsResponse.fromJson(json);
       expect(response.replies, 3);
       expect(response.mentions, 1);
@@ -72,10 +67,7 @@ void main() {
 
     test('prefers "items" over "notifications" when both present', () {
       // "items" takes priority (it's what Lemmy 1.0 sends)
-      final json = <String, dynamic>{
-        'items': <dynamic>[],
-        'notifications': <dynamic>[],
-      };
+      final json = <String, dynamic>{'items': <dynamic>[], 'notifications': <dynamic>[]};
       final response = ListNotificationsResponse.fromJson(json);
       expect(response.notifications, isEmpty);
     });
