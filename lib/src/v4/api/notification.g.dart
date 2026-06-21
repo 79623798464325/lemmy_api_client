@@ -72,13 +72,17 @@ Map<String, dynamic> _$$NotificationViewImplToJson(
 
 _$ListNotificationsResponseImpl _$$ListNotificationsResponseImplFromJson(
   Map<String, dynamic> json,
-) => _$ListNotificationsResponseImpl(
-  notifications:
-      (json['notifications'] as List<dynamic>)
-          .map((e) => NotificationView.fromJson(e as Map<String, dynamic>))
-          .toList(),
-  nextPage: json['next_page'] as String?,
-);
+) {
+  // PATCHED: Lemmy 1.0 (v4) real API returns "items" key; generated code expected "notifications".
+  // Try "items" first (Lemmy 1.0 nightly), fall back to "notifications" for spec-based builds.
+  final rawList = (json['items'] ?? json['notifications']) as List<dynamic>? ?? const [];
+  return _$ListNotificationsResponseImpl(
+    notifications: rawList
+        .map((e) => NotificationView.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    nextPage: json['next_page'] as String?,
+  );
+}
 
 Map<String, dynamic> _$$ListNotificationsResponseImplToJson(
   _$ListNotificationsResponseImpl instance,

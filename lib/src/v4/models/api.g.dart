@@ -1002,11 +1002,25 @@ Map<String, dynamic> _$$ListPersonContentResponseImplToJson(
 
 _$UnreadCountsResponseImpl _$$UnreadCountsResponseImplFromJson(
   Map<String, dynamic> json,
-) => _$UnreadCountsResponseImpl(
-  replies: (json['replies'] as num).toInt(),
-  mentions: (json['mentions'] as num).toInt(),
-  privateMessages: (json['private_messages'] as num).toInt(),
-);
+) {
+  // PATCHED: Lemmy 1.0 (v4) real API returned a unified "notification_count" (nightly 2026-06-21).
+  // Spec originally had separate replies/mentions/private_messages fields.
+  // If "notification_count" is present, use it as "replies" (total); fall back to 0 for others.
+  // If the original separate fields are present, use them directly.
+  if (json.containsKey('notification_count')) {
+    final total = (json['notification_count'] as num?)?.toInt() ?? 0;
+    return _$UnreadCountsResponseImpl(
+      replies: total,
+      mentions: 0,
+      privateMessages: 0,
+    );
+  }
+  return _$UnreadCountsResponseImpl(
+    replies: (json['replies'] as num?)?.toInt() ?? 0,
+    mentions: (json['mentions'] as num?)?.toInt() ?? 0,
+    privateMessages: (json['private_messages'] as num?)?.toInt() ?? 0,
+  );
+}
 
 Map<String, dynamic> _$$UnreadCountsResponseImplToJson(
   _$UnreadCountsResponseImpl instance,
