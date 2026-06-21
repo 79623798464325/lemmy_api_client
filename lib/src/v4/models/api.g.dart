@@ -709,8 +709,10 @@ _$SearchResponseImpl _$$SearchResponseImplFromJson(Map<String, dynamic> json) =>
               ?.map((e) => CommunityView.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
+      // Lemmy 1.0 real API returns "persons" key; generated code expected "users".
+      // Try "persons" first (v4 nightly), fall back to "users" for any older builds.
       users:
-          (json['users'] as List<dynamic>?)
+          ((json['persons'] ?? json['users']) as List<dynamic>?)
               ?.map((e) => PersonView.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
@@ -727,24 +729,40 @@ Map<String, dynamic> _$$SearchResponseImplToJson(
 
 _$ResolveObjectResponseImpl _$$ResolveObjectResponseImplFromJson(
   Map<String, dynamic> json,
-) => _$ResolveObjectResponseImpl(
-  comment:
-      json['comment'] == null
-          ? null
-          : CommentView.fromJson(json['comment'] as Map<String, dynamic>),
-  post:
-      json['post'] == null
-          ? null
-          : PostView.fromJson(json['post'] as Map<String, dynamic>),
-  community:
-      json['community'] == null
-          ? null
-          : CommunityView.fromJson(json['community'] as Map<String, dynamic>),
-  person:
-      json['person'] == null
-          ? null
-          : PersonView.fromJson(json['person'] as Map<String, dynamic>),
-);
+) {
+  // Lemmy 1.0 (v4) real API: the response IS the view object, discriminated by
+  // "type_". Each view's fields (e.g., community, can_mod, tags) are at the top
+  // level — not nested under a "community" key. Pass the whole json to the
+  // appropriate View.fromJson based on type_, with null checks for safety.
+  final type = json['type_'] as String?;
+  if (type != null) {
+    return _$ResolveObjectResponseImpl(
+      comment: type == 'comment' ? CommentView.fromJson(json) : null,
+      post: type == 'post' ? PostView.fromJson(json) : null,
+      community: type == 'community' ? CommunityView.fromJson(json) : null,
+      person: type == 'person' ? PersonView.fromJson(json) : null,
+    );
+  }
+  // Fallback: v3-style response with nested view objects
+  return _$ResolveObjectResponseImpl(
+    comment:
+        json['comment'] == null
+            ? null
+            : CommentView.fromJson(json['comment'] as Map<String, dynamic>),
+    post:
+        json['post'] == null
+            ? null
+            : PostView.fromJson(json['post'] as Map<String, dynamic>),
+    community:
+        json['community'] == null
+            ? null
+            : CommunityView.fromJson(json['community'] as Map<String, dynamic>),
+    person:
+        json['person'] == null
+            ? null
+            : PersonView.fromJson(json['person'] as Map<String, dynamic>),
+  );
+}
 
 Map<String, dynamic> _$$ResolveObjectResponseImplToJson(
   _$ResolveObjectResponseImpl instance,
