@@ -924,18 +924,36 @@ Map<String, dynamic> _$$ListPersonsResponseImplToJson(
   'next_page': instance.nextPage,
 };
 
+// PATCHED: The v4 ListPersonContent API returns items where each item IS a
+// CommentView or PostView (with all nested fields at the top level), plus a
+// 'type_' discriminator. The generated code incorrectly expected json['post']
+// to be a PostView map — but json['post'] is a raw Post object. Instead we
+// detect the type and pass the full item JSON to the appropriate fromJson.
 _$PostCommentCombinedViewImpl _$$PostCommentCombinedViewImplFromJson(
   Map<String, dynamic> json,
-) => _$PostCommentCombinedViewImpl(
-  post:
-      json['post'] == null
-          ? null
-          : PostView.fromJson(json['post'] as Map<String, dynamic>),
-  comment:
-      json['comment'] == null
-          ? null
-          : CommentView.fromJson(json['comment'] as Map<String, dynamic>),
-);
+) {
+  final type = json['type_'] as String?;
+  if (type == 'comment') {
+    return _$PostCommentCombinedViewImpl(
+      comment: CommentView.fromJson(json),
+      post: null,
+    );
+  } else if (type == 'post') {
+    return _$PostCommentCombinedViewImpl(
+      post: PostView.fromJson(json),
+      comment: null,
+    );
+  }
+  // Fallback for unknown types or missing type_ field.
+  return _$PostCommentCombinedViewImpl(
+    post: json['post'] != null && json['creator'] != null
+        ? PostView.fromJson(json)
+        : null,
+    comment: json['comment'] != null && json['creator'] != null
+        ? CommentView.fromJson(json)
+        : null,
+  );
+}
 
 Map<String, dynamic> _$$PostCommentCombinedViewImplToJson(
   _$PostCommentCombinedViewImpl instance,
